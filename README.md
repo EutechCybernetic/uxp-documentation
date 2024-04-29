@@ -10,8 +10,8 @@ User Experience Portal (UXP) is a robust visualization tool crafted to innovate 
 
 ## Versions 
 
-| Version | Summary |
-|---|---|
-|[v2.0.0](./releases/v2.md) | Releasing version 2.0.0|
-|[v1.0.0](./releases/v1.md) | Releasing version 1.0.0|
+| Version | Summary | Documentation |
+|---|---|---|
+|[v2.0.0](./releases/v2.md) | Releasing version 2.0.0| [View](https://help.iviva.com/uxp/v/v2.0.0) |
+|[v1.0.0](./releases/v1.md) | Releasing version 1.0.0| [View](https://help.iviva.com/uxp) |
 
