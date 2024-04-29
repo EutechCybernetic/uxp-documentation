@@ -37,6 +37,8 @@ import {HorizontalScrollList} from 'uxp/components';
 |renderItem|(item: any, key: number) => JSX.Element|render method for an item given above |
 |scrollStep|number|number of items to scroll when click on controller buttons |
 |className|string|additional css class names |
+|infinite|boolean||
+|autoScroll|{ enable: boolean, interval?: number // default 5000 (equals to 5s/5000ms) }||
 ### items
 
 
@@ -93,3 +95,29 @@ additional css class names
 |type|
 |-|
 |string|
+### infinite
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|boolean|
+### autoScroll
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|{ enable: boolean, interval?: number // default 5000 (equals to 5s/5000ms) }|

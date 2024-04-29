@@ -9,7 +9,7 @@ A simple callback function
 
 
 ```tsx
-type ICallback = ()=>void;
+type ICallback = () => void;
 ```
 
 ## Usage

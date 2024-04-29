@@ -2,10 +2,7 @@
 
 
 
-
-
-
-This component is used to render a search box.
+A searchbox component
 
 
 
@@ -15,28 +12,6 @@ This component is used to render a search box.
 
 ```tsx
 import {SearchBox} from 'uxp/components';
-```
-
-## Examples
-
-
-
-```tsx
-<SearchBox
-     value={inputValue}
-     onChange={(newValue) => { setInputValue(newValue) }}
- />
-```
-
-
-
-```tsx
-<SearchBox
-     value={inputValue}
-     onChange={(newValue) => { setInputValue(newValue) }}
-     collapsed
-     position="right"
- />
 ```
 
 ## Properties

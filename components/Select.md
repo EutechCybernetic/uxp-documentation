@@ -67,13 +67,15 @@ import {Select} from 'uxp/components';
 |options|IOption[] \| any[]|List of items to select from. Each option has a label which is displayed and a value which is what we actually select. also you can pass any object as options, then specify the labelField, valueField props |
 |labelField|string|Name of the field you want to display as label If not given default(label) will be used |
 |valueField|string|Name of the field you want to return as value If not given default(value) will be used |
+|iconField|string|Name if the field to use as icon if a value is passed icon will be displayed. |
 |selected|string|The currently selected value |
 |onChange|(value: string, option?: IOption \| any) => void|Gets called whenever the selection changes. The value parameter has the newly selected value option parameter has the complete option/ object that you passed |
 |placeholder|string|Text to show when no value is selected |
 |className|string|Any extra css classes to add to the component |
 |isValid|boolean|Set this to false to indicate the field doesn't have a valid value |
 |showEndOfContent|boolean||
-|disableSearch|boolean||
+|renderOption|(item: any, key: number) => JSX.Element|A function that will be responsible for rendering each individual option of the list. |
+|addNewValues|{ enable: boolean, title: string, loadingTitle: string, onAddNewValue?: (value: string) => Promise<any> }||
 ### options
 
 
@@ -115,6 +117,21 @@ If not given default(label) will be used
 
 Name of the field you want to return  as value
 If not given default(value) will be used
+
+
+|type|
+|-|
+|string|
+### iconField
+
+
+
+---
+
+
+
+Name if the field to use as icon
+if a value is passed icon will be displayed.
 
 
 |type|
@@ -205,7 +222,34 @@ Set this to false to indicate the field doesn't have a valid value
 |type|
 |-|
 |boolean|
-### disableSearch
+### renderOption
+
+
+
+---
+
+
+
+A function that will be responsible for rendering each individual option of the list.
+
+
+
+|type|
+|-|
+|(item: any, key: number) => JSX.Element|
+
+
+```tsx
+renderItem={(option,key)=><div>{option.label}</div>}
+```
+
+
+
+```tsx
+renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
+```
+
+### addNewValues
 
 
 
@@ -217,4 +261,4 @@ Set this to false to indicate the field doesn't have a valid value
 
 |type|
 |-|
-|boolean|
+|{ enable: boolean, title: string, loadingTitle: string, onAddNewValue?: (value: string) => Promise<any> }|

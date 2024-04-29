@@ -9,7 +9,7 @@ Determines the behaviour of the input field
 
 
 ```tsx
-type IInputType = "text"| "password"| "number"|  "email";
+type IInputType = "text" | "password" | "number" | "email";
 ```
 
 ## Usage

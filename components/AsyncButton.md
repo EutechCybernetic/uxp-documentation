@@ -35,13 +35,17 @@ import {AsyncButton} from 'uxp/components';
 |Name|Type|Description|
 |-|-|-|
 |title|string|The caption for the button |
-|icon|string|The url of an icon to show on the button |
+|icon|string|Button icon. you can either use a url or fontawesome icon Here is a example for using fontawesome icons icon={'fas save'} |
+|iconPosition|'left' \| 'right'|icon position |
 |className|string|Any extra css classes to add to the button |
 |onClick|() => Promise<any>|The callback that gets invoked when the button is clicked. It must return a Promise |
 |active|boolean|Set button to active state when true |
 |disabled|boolean|Set button to disabled state when true |
 |loadingTitle|string|Text to show when in loading state |
 |onError|(e: any) => void|a callback function to call on error |
+|styles|React.CSSProperties|any custom inline styles to the button |
+|iconStyles|React.CSSProperties|any custom inline styles for the icon container |
+|useLoadingSpinner|boolean|show loading spinners in place of icons (even if the icon is not there it will show the spinner on the left sides) when the button is in loading state, |
 ### title
 
 
@@ -64,12 +68,30 @@ The caption for the button
 
 
 
-The url of an icon to show on the button
+Button icon.
+you can either use a url or fontawesome icon
+
+Here is a example for using fontawesome icons
+icon={'fas save'}
 
 
 |type|
 |-|
 |string|
+### iconPosition
+
+
+
+---
+
+
+
+icon position
+
+
+|type|
+|-|
+|'left' \| 'right'|
 ### className
 
 
@@ -155,3 +177,45 @@ a callback function to call on error
 |type|
 |-|
 |(e: any) => void|
+### styles
+
+
+
+---
+
+
+
+any custom inline styles to the button
+
+
+|type|
+|-|
+|React.CSSProperties|
+### iconStyles
+
+
+
+---
+
+
+
+any custom inline styles for the icon container
+
+
+|type|
+|-|
+|React.CSSProperties|
+### useLoadingSpinner
+
+
+
+---
+
+
+
+show loading spinners in place of icons (even if the icon is not there it will show the spinner on the left sides)  when the button is in loading state,
+
+
+|type|
+|-|
+|boolean|

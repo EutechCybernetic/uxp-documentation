@@ -40,6 +40,22 @@ interface IDatePickerProps {
      */
     disableInput?: boolean,
 
+    /**
+     * this will hide the labels in the placeholder (calendar icon)
+     */
+    hideLabels?: boolean
+    /**
+     * hide the input box
+     */
+    hideInput?: boolean,
+    
+    /**
+     * show the full month name in the month selector dropdown
+     * default is true 
+     * 
+     * if value is false it will show the short name "Jan" ,"Feb" and ect
+     */
+     showFullMonthName?: boolean
 }
 ```
 

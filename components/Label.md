@@ -30,6 +30,7 @@ import {Label} from 'uxp/components';
 |labelFor|string||
 |className|string||
 |inline|boolean||
+|styles|React.CSSProperties||
 ### labelFor
 
 
@@ -69,3 +70,16 @@ import {Label} from 'uxp/components';
 |type|
 |-|
 |boolean|
+### styles
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|React.CSSProperties|

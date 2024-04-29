@@ -87,6 +87,21 @@ interface IGaugeProps {
      * if the given values is higher than the max value, max values will be used
      */
     smallTick?: number
+    /**
+     * backbround color of the gauge 
+     * default is white
+     */
+    backgroundColor?: string,
+    /**
+     * color of the labels 
+     * default is #424242
+     */
+    labelColor?: string,
+    /**
+     * color of the needle 
+     * default is gray
+     */
+    needleColor?: string
 }
 ```
 

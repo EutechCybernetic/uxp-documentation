@@ -26,6 +26,11 @@ interface ISelectProps {
      */
     valueField?: string,
     /**
+     * Name if the field to use as icon 
+     * if a value is passed icon will be displayed. 
+     */
+    iconField?: string
+    /**
      * The  currently selected value
      */
     selected: string,
@@ -54,9 +59,30 @@ interface ISelectProps {
     /**
      * show hide end of content message
      */
-    showEndOfContent?: boolean
+    showEndOfContent?: boolean,
+    /**
+     * A function that will be responsible for rendering each individual option of the list.
+     * 
+     * @example
+     * 
+     * ```
+     * renderItem={(option,key)=><div>{option.label}</div>}
+     * ```
+     * 
+     * @example
+     * ```
+     * renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
+     * ```
+     */
+    renderOption?: (item: any, key: number) => JSX.Element,
 
-    disableSearch?: boolean
+    addNewValues?: {
+        enable: boolean,
+        title: string,
+        loadingTitle: string,
+        onAddNewValue?: (value: string) => Promise<any>
+    }
+
 }
 ```
 

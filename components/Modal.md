@@ -51,6 +51,7 @@ import {Modal} from 'uxp/components';
 |animation|[IAnimation](types/IAnimation)|Animation to use when opening/closing a modal |
 |backdropStyles|any|additional styles for backdrop |
 |renderAdditionalContent|() => JSX.Element|additional content to render |
+|autoSize|boolean||
 ### show
 
 
@@ -236,3 +237,16 @@ additional content to render
 |type|
 |-|
 |() => JSX.Element|
+### autoSize
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|boolean|

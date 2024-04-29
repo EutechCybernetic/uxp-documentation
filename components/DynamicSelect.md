@@ -46,8 +46,9 @@ import {DynamicSelect} from 'uxp/components';
 |className|string|Any extra css classes to add to the button |
 |isValid|boolean|set to valid state if true |
 |pageSize|number|page size for pagination |
-|renderOption|(item: any, key: number) => JSX.Element|A function that will be responsible for rendering each individual option of the list. It is common to return `ItemCard` component from here. |
+|renderOption|(item: any, key: number) => JSX.Element|A function that will be responsible for rendering each individual option of the list. |
 |labelField|string|name of the field to display |
+|iconField|string|Name if the field to use as icon if a value is passed icon will be displayed. |
 |timeout|number|number of milliseconds to delay send the request on change query default is 500 |
 |type|"search-box" \| "select-box"||
 |showEndOfContent|boolean|show hide end of content message |
@@ -161,7 +162,6 @@ page size for pagination
 
 
 A function that will be responsible for rendering each individual option of the list.
-It is common to return  `ItemCard` component from here.
 
 
 
@@ -189,6 +189,21 @@ renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
 
 
 name of the field to display
+
+
+|type|
+|-|
+|string|
+### iconField
+
+
+
+---
+
+
+
+Name if the field to use as icon
+if a value is passed icon will be displayed.
 
 
 |type|

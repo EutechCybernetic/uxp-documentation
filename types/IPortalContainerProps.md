@@ -28,7 +28,8 @@ interface IPortalContainerProps {
      * disabled the scrolling of main content block if true
      * default value is true
      */
-    disableScroll?: boolean
+    disableScroll?: boolean,
+    className?: string
 }
 ```
 

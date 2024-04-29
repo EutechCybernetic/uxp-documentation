@@ -52,6 +52,9 @@ import {DatePicker} from 'uxp/components';
 |closeOnSelect|boolean|Called when the calendar popup is closed |
 |options|[IDatePickerOptions](types/IDatePickerOptions)|Additional options to control behavior |
 |disableInput|boolean|Set to true to prevent a user from typing in a date |
+|hideLabels|boolean|this will hide the labels in the placeholder (calendar icon) |
+|hideInput|boolean|hide the input box |
+|showFullMonthName|boolean|show the full month name in the month selector dropdown default is true if value is false it will show the short name "Jan" ,"Feb" and ect |
 ### title
 
 
@@ -131,6 +134,51 @@ Additional options to control behavior
 
 
 Set to true to prevent a user from typing in a date
+
+
+|type|
+|-|
+|boolean|
+### hideLabels
+
+
+
+---
+
+
+
+this will hide the labels in the placeholder (calendar icon)
+
+
+|type|
+|-|
+|boolean|
+### hideInput
+
+
+
+---
+
+
+
+hide the input box
+
+
+|type|
+|-|
+|boolean|
+### showFullMonthName
+
+
+
+---
+
+
+
+show the full month name in the month selector dropdown
+default is true
+
+if value is false it will show the short name "Jan" ,"Feb" and ect
 
 
 |type|

@@ -67,12 +67,18 @@ import {MultiSelect} from 'uxp/components';
 |options|IOption[] \| any[]|List of items to select from. Each option has a label which is displayed and a value which is what we actually select. also you can pass any object as options, then specify the labelField, valueField props |
 |labelField|string|Name of the field you want to display as label If not given default(label) will be used |
 |valueField|string|Name of the field you want to return as value If not given default(value) will be used |
+|iconField|string|Name if the field to use as icon if a value is passed icon will be displayed. |
 |selected|string[]|The currently selected value ['option1', 'option2'] |
 |onChange|(values: string[], options?: IOption[] \| any[]) => void|Gets called whenever the selection changes. The value parameter has the newly selected value option parameter has the complete option/ object that you passed |
 |placeholder|string|Text to show when no value is selected |
 |className|string|Any extra css classes to add to the component |
 |isValid|boolean|Set this to false to indicate the field doesn't have a valid value |
 |showEndOfContent|boolean||
+|renderOption|(item: any, key: number) => JSX.Element|A function that will be responsible for rendering each individual option of the list. |
+|wrapSelectedItemsToOneLine|boolean||
+|selectAllOnLoad|boolean||
+|hideClearButton|boolean||
+|hideDoneButton|boolean||
 ### options
 
 
@@ -114,6 +120,21 @@ If not given default(label) will be used
 
 Name of the field you want to return  as value
 If not given default(value) will be used
+
+
+|type|
+|-|
+|string|
+### iconField
+
+
+
+---
+
+
+
+Name if the field to use as icon
+if a value is passed icon will be displayed.
 
 
 |type|
@@ -194,6 +215,85 @@ Set this to false to indicate the field doesn't have a valid value
 |-|
 |boolean|
 ### showEndOfContent
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|boolean|
+### renderOption
+
+
+
+---
+
+
+
+A function that will be responsible for rendering each individual option of the list.
+
+
+
+|type|
+|-|
+|(item: any, key: number) => JSX.Element|
+
+
+```tsx
+renderItem={(option,key)=><div>{option.label}</div>}
+```
+
+
+
+```tsx
+renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
+```
+
+### wrapSelectedItemsToOneLine
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|boolean|
+### selectAllOnLoad
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|boolean|
+### hideClearButton
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|boolean|
+### hideDoneButton
 
 
 

@@ -26,6 +26,11 @@ interface IMultiSelectProps {
      */
     valueField?: string,
     /**
+     * Name if the field to use as icon 
+     * if a value is passed icon will be displayed. 
+     */
+    iconField?: string
+    /**
      * The  currently selected value
      * 
      * ['option1', 'option2']
@@ -57,7 +62,25 @@ interface IMultiSelectProps {
      * show hide end of content message
      */
     showEndOfContent?: boolean
-
+    /**
+         * A function that will be responsible for rendering each individual option of the list.
+         * 
+         * @example
+         * 
+         * ```
+         * renderItem={(option,key)=><div>{option.label}</div>}
+         * ```
+         * 
+         * @example
+         * ```
+         * renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
+         * ```
+         */
+    renderOption?: (item: any, key: number) => JSX.Element,
+    wrapSelectedItemsToOneLine?: boolean,
+    selectAllOnLoad?: boolean,
+    hideClearButton?: boolean
+    hideDoneButton?: boolean
 }
 ```
 

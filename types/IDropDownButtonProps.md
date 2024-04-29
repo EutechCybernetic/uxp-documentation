@@ -31,6 +31,12 @@ interface IDropDownButtonProps {
      */
     showOnHover?: boolean
 
+    /**
+     * this will open the dropdown on hover and keep open even if user takes the mouse away
+     * Click on outside to close the dropdown
+     */
+    keepShowingOnHover?: boolean,
+
     className?: string,
 
     /**
@@ -46,6 +52,18 @@ interface IDropDownButtonProps {
      */
     forceClose?: boolean
 
+    /**
+     * disable scroll on open dropdown 
+     * true by default
+     */
+    disableScroll?: boolean,
+
+    /**
+     * if this is enabled drop down will be automatically positionsed within the view. 
+     * better to use this option- it has been improved 
+     * if enabled it will ignore the position param 
+     */
+    autoPosition?: boolean
 }
 ```
 

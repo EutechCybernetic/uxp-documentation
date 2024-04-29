@@ -114,6 +114,7 @@ Using other props
 |scrollStep|number|mun of rows to scroll |
 |showEndOfContent|boolean|show/hide end of content message |
 |onItemsLoad|(total: number, loaded: number) => void|this function will be called every time list get updated this will return total number of items (function should return the total count) and loaded items count |
+|renderNoItems|() => JSX.Element||
 ### data
 
 
@@ -270,3 +271,16 @@ this will return total number of items (function should return the total count) 
 |type|
 |-|
 |(total: number, loaded: number) => void|
+### renderNoItems
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|() => JSX.Element|

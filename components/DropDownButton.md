@@ -73,10 +73,13 @@ Dropdown button example with forceClose
 |content|() => JSX.Element|The content to show inside the Dropdown |
 |position|[IDropDownButtonPosition](types/IDropDownButtonPosition)|Where the dropdown should be placed relative to the element it is being displayed for default is right |
 |showOnHover|boolean|If this is true dropdown will show on mouse over & hide n mouse out If this is false dropdown ill show on click |
+|keepShowingOnHover|boolean|this will open the dropdown on hover and keep open even if user takes the mouse away Click on outside to close the dropdown |
 |className|string||
 |onOpen|() => void|callback function when the popup is open |
 |onClose|() => void|callback function when the popup is closed |
 |forceClose|boolean|an option to force close a popup |
+|disableScroll|boolean|disable scroll on open dropdown true by default |
+|autoPosition|boolean|if this is enabled drop down will be automatically positionsed within the view. better to use this option- it has been improved if enabled it will ignore the position param |
 ### content
 
 
@@ -122,6 +125,21 @@ default is right
 
 If this is true dropdown will show on mouse over & hide n mouse out
 If this is false dropdown ill show on click
+
+
+|type|
+|-|
+|boolean|
+### keepShowingOnHover
+
+
+
+---
+
+
+
+this will open the dropdown on hover and keep open even if user takes the mouse away
+Click on outside to close the dropdown
 
 
 |type|
@@ -177,6 +195,37 @@ callback function when the popup is closed
 
 
 an option to force close a popup
+
+
+|type|
+|-|
+|boolean|
+### disableScroll
+
+
+
+---
+
+
+
+disable scroll on open dropdown
+true by default
+
+
+|type|
+|-|
+|boolean|
+### autoPosition
+
+
+
+---
+
+
+
+if this is enabled drop down will be automatically positionsed within the view.
+better to use this option- it has been improved
+if enabled it will ignore the position param
 
 
 |type|
