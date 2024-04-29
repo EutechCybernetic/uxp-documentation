@@ -1,21 +1,6 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: false
-  outline:
-    visible: false
-  pagination:
-    visible: false
----
-
 # Releases
 
 User Experience Portal (UXP) is a robust visualization tool crafted to innovate dashboard creation and customization. UXP equips developers with a wide list of reusable components and functionalities, enabling them to effortlessly construct dynamic widgets and visualizations in mere minutes.
-
 
 
 {% hint style="info" %}
