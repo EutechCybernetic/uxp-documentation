@@ -131,7 +131,7 @@ Additional options to control behavior
 
 |type|
 |-|
-|[IDatePickerOptions](/types/IDatePickerOptions.md)|
+|[IDatePickerOptions](../types/IDatePickerOptions.md)|
 
 
 ### disableInput
