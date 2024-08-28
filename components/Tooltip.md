@@ -20,6 +20,8 @@ import {Tooltip} from 'uxp/components';
 |-|-|-|
 |content|string \| IContentFunction|The content to show inside the tooltip This can be either a string or a JSX element |
 |position|[ITooltipPosition](types/ITooltipPosition)|Where the tooltip should be placed relative to the element it is being displayed for <Tooltip position="left" content="There are many like it but this one's mine" /> |
+
+
 ### content
 
 
@@ -35,6 +37,8 @@ This can be either a string or a JSX element
 |type|
 |-|
 |string \| IContentFunction|
+
+
 
 
 ```tsx
@@ -62,3 +66,5 @@ Where the tooltip should be placed relative to the element it is being displayed
 |type|
 |-|
 |[ITooltipPosition](types/ITooltipPosition)|
+
+

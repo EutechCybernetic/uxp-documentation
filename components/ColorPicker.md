@@ -26,6 +26,8 @@ import {ColorPicker} from 'uxp/components';
 |closeOnSelect|boolean|close the picker on select a color default is true |
 |displayFormat|[IColorTypes](types/IColorTypes)|change display format |
 |returnFormat|[IColorTypes](types/IColorTypes)|change return format |
+
+
 ### color
 
 
@@ -40,6 +42,8 @@ import {ColorPicker} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
 ### onChange
 
 
@@ -54,6 +58,8 @@ callback on select a color
 |type|
 |-|
 |(color: string) => void|
+
+
 ### position
 
 
@@ -68,6 +74,8 @@ picker position.  default is left
 |type|
 |-|
 |[IColorPickerPosition](types/IColorPickerPosition)|
+
+
 ### className
 
 
@@ -82,6 +90,8 @@ class name for additional styles
 |type|
 |-|
 |string|
+
+
 ### closeOnSelect
 
 
@@ -97,6 +107,8 @@ default is true
 |type|
 |-|
 |boolean|
+
+
 ### displayFormat
 
 
@@ -111,6 +123,8 @@ change display format
 |type|
 |-|
 |[IColorTypes](types/IColorTypes)|
+
+
 ### returnFormat
 
 
@@ -125,3 +139,5 @@ change return format
 |type|
 |-|
 |[IColorTypes](types/IColorTypes)|
+
+

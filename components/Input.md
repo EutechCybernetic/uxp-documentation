@@ -29,6 +29,8 @@ import {Input} from 'uxp/components';
 |inputAttr|{ [key: string]: string \| boolean }||
 |placeholder|string||
 |inline|boolean||
+
+
 ### type
 
 
@@ -43,6 +45,8 @@ Determines if the input field accepts a password, email address, number or just 
 |type|
 |-|
 |[IInputType](types/IInputType)|
+
+
 ### value
 
 
@@ -57,6 +61,8 @@ The actual text
 |type|
 |-|
 |string|
+
+
 ### onChange
 
 
@@ -71,6 +77,8 @@ This function is called whenever the text changes. The new text value is passed 
 |type|
 |-|
 |(value: string) => void|
+
+
 ### className
 
 
@@ -85,6 +93,8 @@ Any additional class names to be included for the input field
 |type|
 |-|
 |string|
+
+
 ### hasIndicator
 
 
@@ -99,6 +109,8 @@ Determines if an indicator should be shown at the end of the input.
 |type|
 |-|
 |boolean|
+
+
 ### indicatorColor
 
 
@@ -113,6 +125,8 @@ The color of the indicator icon (relevant only if hasIndicator is true)
 |type|
 |-|
 |string|
+
+
 ### isValid
 
 
@@ -126,6 +140,8 @@ The color of the indicator icon (relevant only if hasIndicator is true)
 |type|
 |-|
 |boolean|
+
+
 ### inputAttr
 
 
@@ -139,6 +155,8 @@ The color of the indicator icon (relevant only if hasIndicator is true)
 |type|
 |-|
 |{ [key: string]: string \| boolean }|
+
+
 ### placeholder
 
 
@@ -152,6 +170,8 @@ The color of the indicator icon (relevant only if hasIndicator is true)
 |type|
 |-|
 |string|
+
+
 ### inline
 
 
@@ -165,3 +185,5 @@ The color of the indicator icon (relevant only if hasIndicator is true)
 |type|
 |-|
 |boolean|
+
+

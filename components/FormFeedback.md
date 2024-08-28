@@ -34,6 +34,8 @@ FormFeedback validInput>Form feedback ( valid )</FormFeedback>
 |-|-|-|
 |validInput|boolean||
 |className|string||
+
+
 ### validInput
 
 
@@ -47,6 +49,8 @@ FormFeedback validInput>Form feedback ( valid )</FormFeedback>
 |type|
 |-|
 |boolean|
+
+
 ### className
 
 
@@ -60,3 +64,5 @@ FormFeedback validInput>Form feedback ( valid )</FormFeedback>
 |type|
 |-|
 |string|
+
+

@@ -33,6 +33,8 @@ import {Popover} from 'uxp/components';
 |title|string \| IContentFunction|title of the popup bubble This can be either a string or a JSX element |
 |content|string \| IContentFunction|the content to show within the bubble This can be either a string or a JSX element * |
 |position|[IPopoverPosition](types/IPopoverPosition)|Where the bubble should be positioned relative to the element |
+
+
 ### title
 
 
@@ -48,6 +50,8 @@ title of the popup bubble
 |type|
 |-|
 |string \| IContentFunction|
+
+
 
 
 ```tsx
@@ -81,6 +85,8 @@ the content to show within the bubble
 |string \| IContentFunction|
 
 
+
+
 ```tsx
 content="Popover Content"
 ```
@@ -108,3 +114,5 @@ Where the bubble should be positioned relative to the element
 |type|
 |-|
 |[IPopoverPosition](types/IPopoverPosition)|
+
+

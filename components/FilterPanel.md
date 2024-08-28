@@ -50,6 +50,8 @@ import {FilterPanel} from 'uxp/components';
 |fillContainer|React.RefObject<HTMLElement>||
 |className|string|Any extra css classes to add to the filter panel |
 |enableClear|boolean|Enabled the clear button on the panel |
+
+
 ### onOpen
 
 
@@ -64,6 +66,8 @@ Called whenever the panel is opened
 |type|
 |-|
 |[ICallback](types/ICallback)|
+
+
 ### onClose
 
 
@@ -78,6 +82,8 @@ Called whenever the panel gets dismissed
 |type|
 |-|
 |[ICallback](types/ICallback)|
+
+
 ### onClear
 
 
@@ -92,6 +98,8 @@ Called whenever the clear button on the panel is pressed. This button is availab
 |type|
 |-|
 |[ICallback](types/ICallback)|
+
+
 ### fillContainer
 
 
@@ -105,6 +113,8 @@ Called whenever the clear button on the panel is pressed. This button is availab
 |type|
 |-|
 |React.RefObject<HTMLElement>|
+
+
 ### className
 
 
@@ -119,6 +129,8 @@ Any extra css classes to add to the filter panel
 |type|
 |-|
 |string|
+
+
 ### enableClear
 
 
@@ -133,3 +145,5 @@ Enabled the clear button on the panel
 |type|
 |-|
 |boolean|
+
+

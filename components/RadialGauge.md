@@ -73,6 +73,8 @@ import {RadialGauge} from 'uxp/components';
 |thickness|number|thickness of the gauge This value is defend on the radius default is radius * 0.11 max value is radius * 0.25 if you pass a higher value than the max value, max value will be used |
 |largeTick|number|thickness of the large ticks default is 4 min value is 1 max value is 6 if the given value is higher than the max value, max values will be used |
 |smallTick|number|thickness of the small ticks default is 1 min values is 1 max values is 3 if the given values is higher than the max value, max values will be used |
+
+
 ### min
 
 
@@ -87,6 +89,8 @@ min value of the gauge
 |type|
 |-|
 |number|
+
+
 ### max
 
 
@@ -101,6 +105,8 @@ max value of the gauge
 |type|
 |-|
 |number|
+
+
 ### value
 
 
@@ -115,6 +121,8 @@ value of the gauge
 |type|
 |-|
 |number|
+
+
 ### colors
 
 
@@ -133,6 +141,8 @@ default is blue, green, yellow, red colors at equal length
 |type|
 |-|
 |Array<{ color: string, stopAt: number }>|
+
+
 ### label
 
 
@@ -148,6 +158,8 @@ no default value
 |type|
 |-|
 |() => JSX.Element|
+
+
 ### legend
 
 
@@ -163,6 +175,8 @@ default is false
 |type|
 |-|
 |boolean|
+
+
 ### tickColor
 
 
@@ -178,6 +192,8 @@ default is white
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -192,6 +208,8 @@ class name(s) for additional styling
 |type|
 |-|
 |string|
+
+
 ### styles
 
 
@@ -206,6 +224,8 @@ additional inline styles
 |type|
 |-|
 |React.CSSProperties|
+
+
 ### gradient
 
 
@@ -221,6 +241,8 @@ default is false
 |type|
 |-|
 |boolean|
+
+
 ### thickness
 
 
@@ -240,6 +262,8 @@ if you pass a higher value than the max value, max value will be used
 |type|
 |-|
 |number|
+
+
 ### largeTick
 
 
@@ -259,6 +283,8 @@ if the given value is higher than the max value, max values will be used
 |type|
 |-|
 |number|
+
+
 ### smallTick
 
 
@@ -278,3 +304,5 @@ if the given values is higher than the max value, max values will be used
 |type|
 |-|
 |number|
+
+

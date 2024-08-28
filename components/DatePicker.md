@@ -52,6 +52,8 @@ import {DatePicker} from 'uxp/components';
 |closeOnSelect|boolean|Called when the calendar popup is closed |
 |options|[IDatePickerOptions](types/IDatePickerOptions)|Additional options to control behavior |
 |disableInput|boolean|Set to true to prevent a user from typing in a date |
+
+
 ### title
 
 
@@ -66,6 +68,8 @@ The title
 |type|
 |-|
 |string|
+
+
 ### date
 
 
@@ -80,6 +84,8 @@ The currently selected date. Either a Date object or an ISO8601 string represent
 |type|
 |-|
 |string \| Date|
+
+
 ### onChange
 
 
@@ -94,6 +100,8 @@ Callback that gets executed whenever a date is selected/changed in the date pick
 |type|
 |-|
 |(date: Date) => void|
+
+
 ### closeOnSelect
 
 
@@ -108,6 +116,8 @@ Called when the calendar popup is closed
 |type|
 |-|
 |boolean|
+
+
 ### options
 
 
@@ -122,6 +132,8 @@ Additional options to control behavior
 |type|
 |-|
 |[IDatePickerOptions](types/IDatePickerOptions)|
+
+
 ### disableInput
 
 
@@ -136,3 +148,5 @@ Set to true to prevent a user from typing in a date
 |type|
 |-|
 |boolean|
+
+

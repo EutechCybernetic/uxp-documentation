@@ -50,6 +50,8 @@ import {SearchBox} from 'uxp/components';
 |position|[IPosition](types/IPosition)|position of search box |
 |placeholder|string|placeholder value |
 |autoFocus|boolean|input will be auto focused if true |
+
+
 ### value
 
 
@@ -64,6 +66,8 @@ Default value
 |type|
 |-|
 |string|
+
+
 ### onChange
 
 
@@ -78,6 +82,8 @@ This function is called whenever the text changes. The new text value is passed 
 |type|
 |-|
 |(newValue: string) => void|
+
+
 ### className
 
 
@@ -92,6 +98,8 @@ Any additional class names to be included for the input field
 |type|
 |-|
 |string|
+
+
 ### collapsed
 
 
@@ -106,6 +114,8 @@ show only a icon button when true. When click on the button it will show the act
 |type|
 |-|
 |boolean|
+
+
 ### position
 
 
@@ -120,6 +130,8 @@ position of search box
 |type|
 |-|
 |[IPosition](types/IPosition)|
+
+
 ### placeholder
 
 
@@ -134,6 +146,8 @@ placeholder value
 |type|
 |-|
 |string|
+
+
 ### autoFocus
 
 
@@ -148,3 +162,5 @@ input will be auto focused if true
 |type|
 |-|
 |boolean|
+
+

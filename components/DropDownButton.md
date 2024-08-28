@@ -77,6 +77,8 @@ Dropdown button example with forceClose
 |onOpen|() => void|callback function when the popup is open |
 |onClose|() => void|callback function when the popup is closed |
 |forceClose|boolean|an option to force close a popup |
+
+
 ### content
 
 
@@ -91,6 +93,8 @@ The content to show inside the Dropdown
 |type|
 |-|
 |() => JSX.Element|
+
+
 
 
 ```tsx
@@ -112,6 +116,8 @@ default is right
 |type|
 |-|
 |[IDropDownButtonPosition](types/IDropDownButtonPosition)|
+
+
 ### showOnHover
 
 
@@ -127,6 +133,8 @@ If this is false dropdown ill show on click
 |type|
 |-|
 |boolean|
+
+
 ### className
 
 
@@ -140,6 +148,8 @@ If this is false dropdown ill show on click
 |type|
 |-|
 |string|
+
+
 ### onOpen
 
 
@@ -154,6 +164,8 @@ callback function when the popup is open
 |type|
 |-|
 |() => void|
+
+
 ### onClose
 
 
@@ -168,6 +180,8 @@ callback function when the popup is closed
 |type|
 |-|
 |() => void|
+
+
 ### forceClose
 
 
@@ -182,3 +196,5 @@ an option to force close a popup
 |type|
 |-|
 |boolean|
+
+

@@ -33,6 +33,8 @@ import {WidgetWrapper} from 'uxp/components';
 |Name|Type|Description|
 |-|-|-|
 |className|string|Any extra css class names to add to the widget wrapper |
+
+
 ### className
 
 
@@ -47,3 +49,5 @@ Any extra css class names to add to the widget wrapper
 |type|
 |-|
 |string|
+
+

@@ -23,6 +23,8 @@ import {ToggleFilter} from 'uxp/components';
 |value|string|The current value (selected item) |
 |onChange|(newValue: string) => void|Called whenever an option is selected |
 |className|string|Any additional css classes to include |
+
+
 ### options
 
 
@@ -37,6 +39,8 @@ The list of possible options to choose from
 |type|
 |-|
 |IToggleOption[]|
+
+
 ### value
 
 
@@ -51,6 +55,8 @@ The current value (selected item)
 |type|
 |-|
 |string|
+
+
 ### onChange
 
 
@@ -65,6 +71,8 @@ Called whenever an option is selected
 |type|
 |-|
 |(newValue: string) => void|
+
+
 ### className
 
 
@@ -79,3 +87,5 @@ Any additional css classes to include
 |type|
 |-|
 |string|
+
+

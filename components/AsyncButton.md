@@ -42,6 +42,8 @@ import {AsyncButton} from 'uxp/components';
 |disabled|boolean|Set button to disabled state when true |
 |loadingTitle|string|Text to show when in loading state |
 |onError|(e: any) => void|a callback function to call on error |
+
+
 ### title
 
 
@@ -56,6 +58,8 @@ The caption for the button
 |type|
 |-|
 |string|
+
+
 ### icon
 
 
@@ -70,6 +74,8 @@ The url of an icon to show on the button
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -84,6 +90,8 @@ Any extra css classes to add to the button
 |type|
 |-|
 |string|
+
+
 ### onClick
 
 
@@ -99,6 +107,8 @@ It must return a Promise
 |type|
 |-|
 |() => Promise<any>|
+
+
 ### active
 
 
@@ -113,6 +123,8 @@ Set button to active state when true
 |type|
 |-|
 |boolean|
+
+
 ### disabled
 
 
@@ -127,6 +139,8 @@ Set button to disabled state when true
 |type|
 |-|
 |boolean|
+
+
 ### loadingTitle
 
 
@@ -141,6 +155,8 @@ Text to show when in loading state
 |type|
 |-|
 |string|
+
+
 ### onError
 
 
@@ -155,3 +171,5 @@ a callback function to call on error
 |type|
 |-|
 |(e: any) => void|
+
+

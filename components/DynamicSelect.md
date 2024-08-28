@@ -51,6 +51,8 @@ import {DynamicSelect} from 'uxp/components';
 |timeout|number|number of milliseconds to delay send the request on change query default is 500 |
 |type|"search-box" \| "select-box"||
 |showEndOfContent|boolean|show hide end of content message |
+
+
 ### options
 
 
@@ -68,6 +70,8 @@ The function expects 2 parameters - max and last and returns a promise that will
 |type|
 |-|
 |[IDynamicSelectDataFunction](types/IDynamicSelectDataFunction)|
+
+
 ### selected
 
 
@@ -82,6 +86,8 @@ selected option label
 |type|
 |-|
 |string|
+
+
 ### onChange
 
 
@@ -96,6 +102,8 @@ Callback that gets executed whenever a option is selected/changed
 |type|
 |-|
 |(value: any) => void|
+
+
 ### placeholder
 
 
@@ -110,6 +118,8 @@ placeholder text
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -124,6 +134,8 @@ Any extra css classes to add to the button
 |type|
 |-|
 |string|
+
+
 ### isValid
 
 
@@ -138,6 +150,8 @@ set to valid state if true
 |type|
 |-|
 |boolean|
+
+
 ### pageSize
 
 
@@ -152,6 +166,8 @@ page size for pagination
 |type|
 |-|
 |number|
+
+
 ### renderOption
 
 
@@ -168,6 +184,8 @@ It is common to return  `ItemCard` component from here.
 |type|
 |-|
 |(item: any, key: number) => JSX.Element|
+
+
 
 
 ```tsx
@@ -194,6 +212,8 @@ name of the field to display
 |type|
 |-|
 |string|
+
+
 ### timeout
 
 
@@ -210,6 +230,8 @@ default is 500
 |type|
 |-|
 |number|
+
+
 ### type
 
 
@@ -223,6 +245,8 @@ default is 500
 |type|
 |-|
 |"search-box" \| "select-box"|
+
+
 ### showEndOfContent
 
 
@@ -237,3 +261,5 @@ show hide end of content message
 |type|
 |-|
 |boolean|
+
+

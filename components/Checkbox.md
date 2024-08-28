@@ -52,6 +52,8 @@ import {Checkbox} from 'uxp/components';
 |inputAttr|{ [key: string]: string \| boolean }|Any additional html attributes to pass to the underlying input field |
 |type|[ICheckboxType](types/ICheckboxType)|Determines how the checkbox looks, visually |
 |className|string|additional styles |
+
+
 ### onChange
 
 
@@ -66,6 +68,8 @@ Called when the checkbox is checked or unchecked by clicking on it
 |type|
 |-|
 |(checked: boolean) => void|
+
+
 ### checked
 
 
@@ -80,6 +84,8 @@ Get or set the current state of the checkbox
 |type|
 |-|
 |boolean|
+
+
 ### label
 
 
@@ -94,6 +100,8 @@ Any additional text to show next to the checkbox
 |type|
 |-|
 |string|
+
+
 ### isValid
 
 
@@ -108,6 +116,8 @@ If set to 'false' the checkbox will show in an 'invalid' state - neither true no
 |type|
 |-|
 |boolean|
+
+
 ### inputAttr
 
 
@@ -122,6 +132,8 @@ Any additional html attributes to pass to the underlying input field
 |type|
 |-|
 |{ [key: string]: string \| boolean }|
+
+
 ### type
 
 
@@ -136,6 +148,8 @@ Determines how the checkbox looks, visually
 |type|
 |-|
 |[ICheckboxType](types/ICheckboxType)|
+
+
 ### className
 
 
@@ -150,3 +164,5 @@ additional styles
 |type|
 |-|
 |string|
+
+

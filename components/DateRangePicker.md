@@ -41,6 +41,8 @@ import {DateRangePicker} from 'uxp/components';
 |closeOnSelect|boolean|Called when the calendar popup is closed |
 |disableInput|boolean|Set to true to prevent a user from typing in a date |
 |options|{ /** * The minimum selectable date. Either a Date object an an ISO8601 date string */ minDate?: string \| Date, /** * The maximum selectable date. Either a Date object an an ISO8601 date string */ maxDate?: string \| Date, /** * If set to `true`, you cannot select a weekend date */ disableWeekEnds?: boolean, /** * An array of specific dates that the user cannot select */ disableDates?: Array<Date \| String> }|Additional options to control behavior |
+
+
 ### title
 
 
@@ -54,6 +56,8 @@ import {DateRangePicker} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
 ### startDate
 
 
@@ -68,6 +72,8 @@ start date of the range. Either a Date object or an ISO8601 string representatio
 |type|
 |-|
 |string \| Date|
+
+
 ### endDate
 
 
@@ -82,6 +88,8 @@ end date of the range. Either a Date object or an ISO8601 string representation 
 |type|
 |-|
 |string \| Date|
+
+
 ### onChange
 
 
@@ -96,6 +104,8 @@ Callback that gets executed whenever a date range is selected/changed in the dat
 |type|
 |-|
 |(newStartDate: Date, newEndDate: Date) => void|
+
+
 ### closeOnSelect
 
 
@@ -110,6 +120,8 @@ Called when the calendar popup is closed
 |type|
 |-|
 |boolean|
+
+
 ### disableInput
 
 
@@ -124,6 +136,8 @@ Set to true to prevent a user from typing in a date
 |type|
 |-|
 |boolean|
+
+
 ### options
 
 
@@ -138,3 +152,5 @@ Additional options to control behavior
 |type|
 |-|
 |{ /** * The minimum selectable date. Either a Date object an an ISO8601 date string */ minDate?: string \| Date, /** * The maximum selectable date. Either a Date object an an ISO8601 date string */ maxDate?: string \| Date, /** * If set to `true`, you cannot select a weekend date */ disableWeekEnds?: boolean, /** * An array of specific dates that the user cannot select */ disableDates?: Array<Date \| String> }|
+
+

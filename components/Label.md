@@ -30,6 +30,8 @@ import {Label} from 'uxp/components';
 |labelFor|string||
 |className|string||
 |inline|boolean||
+
+
 ### labelFor
 
 
@@ -43,6 +45,8 @@ import {Label} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -56,6 +60,8 @@ import {Label} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
 ### inline
 
 
@@ -69,3 +75,5 @@ import {Label} from 'uxp/components';
 |type|
 |-|
 |boolean|
+
+

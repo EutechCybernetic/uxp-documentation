@@ -114,6 +114,8 @@ Using other props
 |scrollStep|number|mun of rows to scroll |
 |showEndOfContent|boolean|show/hide end of content message |
 |onItemsLoad|(total: number, loaded: number) => void|this function will be called every time list get updated this will return total number of items (function should return the total count) and loaded items count |
+
+
 ### data
 
 
@@ -130,6 +132,8 @@ If you supply a function then pagination will be supported. The function expects
 |type|
 |-|
 |Array<any> \| IDataFunction|
+
+
 ### renderItem
 
 
@@ -146,6 +150,8 @@ It is common to return  `ItemCard` component from here.
 |type|
 |-|
 |(item: any, key: number) => JSX.Element|
+
+
 
 
 ```tsx
@@ -172,6 +178,8 @@ The number of items to fetch in each page. This gets passed to the data function
 |type|
 |-|
 |number|
+
+
 ### args
 
 
@@ -185,6 +193,8 @@ The number of items to fetch in each page. This gets passed to the data function
 |type|
 |-|
 |any|
+
+
 ### renderLoading
 
 
@@ -199,6 +209,8 @@ This function renders a loading animation. If not specified, the default loading
 |type|
 |-|
 |() => JSX.Element|
+
+
 ### className
 
 
@@ -213,6 +225,8 @@ Any extra class names to be added to the component
 |type|
 |-|
 |string|
+
+
 ### showFooter
 
 
@@ -227,6 +241,8 @@ show/hide footer (scroll buttons)
 |type|
 |-|
 |boolean|
+
+
 ### scrollStep
 
 
@@ -241,6 +257,8 @@ mun of rows to scroll
 |type|
 |-|
 |number|
+
+
 ### showEndOfContent
 
 
@@ -255,6 +273,8 @@ show/hide end of content message
 |type|
 |-|
 |boolean|
+
+
 ### onItemsLoad
 
 
@@ -270,3 +290,5 @@ this will return total number of items (function should return the total count) 
 |type|
 |-|
 |(total: number, loaded: number) => void|
+
+

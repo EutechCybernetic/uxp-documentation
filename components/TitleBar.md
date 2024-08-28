@@ -34,6 +34,8 @@ import {TitleBar} from 'uxp/components';
 |title|string|The title to show for the widget |
 |icon|string|The url for an icon to be shown next to the title on the top left corner. |
 |className|string||
+
+
 ### title
 
 
@@ -48,6 +50,8 @@ The title to show for the widget
 |type|
 |-|
 |string|
+
+
 ### icon
 
 
@@ -62,6 +66,8 @@ The url for an icon to be shown next to the title on the top left corner.
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -75,3 +81,5 @@ The url for an icon to be shown next to the title on the top left corner.
 |type|
 |-|
 |string|
+
+

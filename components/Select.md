@@ -74,6 +74,8 @@ import {Select} from 'uxp/components';
 |isValid|boolean|Set this to false to indicate the field doesn't have a valid value |
 |showEndOfContent|boolean||
 |disableSearch|boolean||
+
+
 ### options
 
 
@@ -90,6 +92,8 @@ also you can pass any object as options, then specify the labelField, valueField
 |type|
 |-|
 |IOption[] \| any[]|
+
+
 ### labelField
 
 
@@ -105,6 +109,8 @@ If not given default(label) will be used
 |type|
 |-|
 |string|
+
+
 ### valueField
 
 
@@ -120,6 +126,8 @@ If not given default(value) will be used
 |type|
 |-|
 |string|
+
+
 ### selected
 
 
@@ -134,6 +142,8 @@ The  currently selected value
 |type|
 |-|
 |string|
+
+
 ### onChange
 
 
@@ -150,6 +160,8 @@ option parameter has the complete option/ object that you passed
 |type|
 |-|
 |(value: string, option?: IOption \| any) => void|
+
+
 ### placeholder
 
 
@@ -164,6 +176,8 @@ Text to show when no value is selected
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -178,6 +192,8 @@ Any extra css classes to add to the component
 |type|
 |-|
 |string|
+
+
 ### isValid
 
 
@@ -192,6 +208,8 @@ Set this to false to indicate the field doesn't have a valid value
 |type|
 |-|
 |boolean|
+
+
 ### showEndOfContent
 
 
@@ -205,6 +223,8 @@ Set this to false to indicate the field doesn't have a valid value
 |type|
 |-|
 |boolean|
+
+
 ### disableSearch
 
 
@@ -218,3 +238,5 @@ Set this to false to indicate the field doesn't have a valid value
 |type|
 |-|
 |boolean|
+
+
