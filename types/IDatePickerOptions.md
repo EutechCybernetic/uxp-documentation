@@ -29,6 +29,10 @@ interface IDatePickerOptions {
      * An array of specific dates that the user cannot select
      */
     disableDates?: Array<Date | String>
+
+    specialDates?: ISpecialDate[],
+    specialDateBackgroundColor?: string
+    specialDateTextColor?: string
 }
 ```
 
