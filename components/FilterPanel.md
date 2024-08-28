@@ -44,9 +44,9 @@ import {FilterPanel} from 'uxp/components';
 
 |Name|Type|Description|
 |-|-|-|
-|onOpen|[ICallback](types/ICallback)|Called whenever the panel is opened |
-|onClose|[ICallback](types/ICallback)|Called whenever the panel gets dismissed |
-|onClear|[ICallback](types/ICallback)|Called whenever the clear button on the panel is pressed. This button is available only when `enableClear` is set to `true1` |
+|onOpen|[ICallback](types/ICallback.md)|Called whenever the panel is opened |
+|onClose|[ICallback](types/ICallback.md)|Called whenever the panel gets dismissed |
+|onClear|[ICallback](types/ICallback.md)|Called whenever the clear button on the panel is pressed. This button is available only when `enableClear` is set to `true1` |
 |fillContainer|React.RefObject<HTMLElement>||
 |className|string|Any extra css classes to add to the filter panel |
 |enableClear|boolean|Enabled the clear button on the panel |
@@ -65,7 +65,7 @@ Called whenever the panel is opened
 
 |type|
 |-|
-|[ICallback](types/ICallback)|
+|[ICallback](types/ICallback.md)|
 
 
 ### onClose
@@ -81,7 +81,7 @@ Called whenever the panel gets dismissed
 
 |type|
 |-|
-|[ICallback](types/ICallback)|
+|[ICallback](types/ICallback.md)|
 
 
 ### onClear
@@ -97,7 +97,7 @@ Called whenever the clear button on the panel is pressed. This button is availab
 
 |type|
 |-|
-|[ICallback](types/ICallback)|
+|[ICallback](types/ICallback.md)|
 
 
 ### fillContainer

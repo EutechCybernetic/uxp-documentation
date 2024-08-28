@@ -24,7 +24,7 @@ import {ProfileImage} from 'uxp/components';
 |bgColor|string||
 |textColor|string||
 |className|string||
-|size|[ISize](types/ISize)||
+|size|[ISize](types/ISize.md)||
 
 
 ### image
@@ -118,6 +118,6 @@ and a background color will be chosen. Background colors are random but consiste
 
 |type|
 |-|
-|[ISize](types/ISize)|
+|[ISize](types/ISize.md)|
 
 

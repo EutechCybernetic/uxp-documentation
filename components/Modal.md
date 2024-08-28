@@ -48,7 +48,7 @@ import {Modal} from 'uxp/components';
 |headerContent|JSX.Element|Any custom content to include in the modal header. If this is set, then the `title` property will not be used. |
 |backgroundDismiss|boolean|Set to true to allow the dialog to be closed by clicking outside of it |
 |showCloseButton|boolean|Set this to 'true' to show the close button in the dialog |
-|animation|[IAnimation](types/IAnimation)|Animation to use when opening/closing a modal |
+|animation|[IAnimation](types/IAnimation.md)|Animation to use when opening/closing a modal |
 |backdropStyles|any|additional styles for backdrop |
 |renderAdditionalContent|() => JSX.Element|additional content to render |
 
@@ -229,7 +229,7 @@ Animation to use when opening/closing a modal
 
 |type|
 |-|
-|[IAnimation](types/IAnimation)|
+|[IAnimation](types/IAnimation.md)|
 
 
 ### backdropStyles

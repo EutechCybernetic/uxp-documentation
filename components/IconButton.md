@@ -33,12 +33,12 @@ import {IconButton} from 'uxp/components';
 
 |Name|Type|Description|
 |-|-|-|
-|type|[IButtonType](types/IButtonType)|button type |
+|type|[IButtonType](types/IButtonType.md)|button type |
 |active|boolean|Set button to active state when true |
 |disabled|boolean|Set button to disabled state when true |
 |onClick|() => void|The callback that gets invoked when the button is clicked. |
 |className|string|Any extra css classes to apply |
-|size|[IButtonSize](types/IButtonSize)|button size. Can be either 'large' or 'small' |
+|size|[IButtonSize](types/IButtonSize.md)|button size. Can be either 'large' or 'small' |
 |borderless|boolean|set to `true` to prevent a border from being shown for the button |
 
 
@@ -55,7 +55,7 @@ button type
 
 |type|
 |-|
-|[IButtonType](types/IButtonType)|
+|[IButtonType](types/IButtonType.md)|
 
 
 ### active
@@ -135,7 +135,7 @@ button size. Can be either 'large' or 'small'
 
 |type|
 |-|
-|[IButtonSize](types/IButtonSize)|
+|[IButtonSize](types/IButtonSize.md)|
 
 
 ### borderless

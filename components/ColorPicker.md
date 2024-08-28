@@ -21,11 +21,11 @@ import {ColorPicker} from 'uxp/components';
 |-|-|-|
 |color|string| default color |
 |onChange|(color: string) => void|callback on select a color |
-|position|[IColorPickerPosition](types/IColorPickerPosition)|picker position. default is left |
+|position|[IColorPickerPosition](types/IColorPickerPosition.md)|picker position. default is left |
 |className|string|class name for additional styles |
 |closeOnSelect|boolean|close the picker on select a color default is true |
-|displayFormat|[IColorTypes](types/IColorTypes)|change display format |
-|returnFormat|[IColorTypes](types/IColorTypes)|change return format |
+|displayFormat|[IColorTypes](types/IColorTypes.md)|change display format |
+|returnFormat|[IColorTypes](types/IColorTypes.md)|change return format |
 
 
 ### color
@@ -73,7 +73,7 @@ picker position.  default is left
 
 |type|
 |-|
-|[IColorPickerPosition](types/IColorPickerPosition)|
+|[IColorPickerPosition](types/IColorPickerPosition.md)|
 
 
 ### className
@@ -122,7 +122,7 @@ change display format
 
 |type|
 |-|
-|[IColorTypes](types/IColorTypes)|
+|[IColorTypes](types/IColorTypes.md)|
 
 
 ### returnFormat
@@ -138,6 +138,6 @@ change return format
 
 |type|
 |-|
-|[IColorTypes](types/IColorTypes)|
+|[IColorTypes](types/IColorTypes.md)|
 
 

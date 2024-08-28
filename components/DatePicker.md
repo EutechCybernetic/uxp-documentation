@@ -50,7 +50,7 @@ import {DatePicker} from 'uxp/components';
 |date|string \| Date|The currently selected date. Either a Date object or an ISO8601 string representation of a date |
 |onChange|(date: Date) => void|Callback that gets executed whenever a date is selected/changed in the date picker |
 |closeOnSelect|boolean|Called when the calendar popup is closed |
-|options|[IDatePickerOptions](types/IDatePickerOptions)|Additional options to control behavior |
+|options|[IDatePickerOptions](types/IDatePickerOptions.md)|Additional options to control behavior |
 |disableInput|boolean|Set to true to prevent a user from typing in a date |
 
 
@@ -131,7 +131,7 @@ Additional options to control behavior
 
 |type|
 |-|
-|[IDatePickerOptions](types/IDatePickerOptions)|
+|[IDatePickerOptions](types/IDatePickerOptions.md)|
 
 
 ### disableInput
