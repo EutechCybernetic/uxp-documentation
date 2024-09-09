@@ -40,7 +40,7 @@ import {DateRangePicker} from 'uxp/components';
 |onChange|(newStartDate: Date, newEndDate: Date) => void|Callback that gets executed whenever a date range is selected/changed in the date picker |
 |closeOnSelect|boolean|Called when the calendar popup is closed |
 |disableInput|boolean|Set to true to prevent a user from typing in a date |
-|options|[IDatePickerOptions](types/IDatePickerOptions.md)|Additional options to control behavior |
+|options|[IDatePickerOptions](../types/IDatePickerOptions.md)|Additional options to control behavior |
 |hideLabels|boolean|this will hide the labels in the placeholder (calendar icon and text) |
 |hideInput|boolean|hide the input box |
 |showFullMonthName|boolean|show the full month name in the month selector dropdown default is true if value is false it will show the short name "Jan" ,"Feb" and ect |
@@ -155,7 +155,7 @@ Additional options to control behavior
 
 |type|
 |-|
-|[IDatePickerOptions](types/IDatePickerOptions.md)|
+|[IDatePickerOptions](../types/IDatePickerOptions.md)|
 
 
 ### hideLabels

@@ -71,7 +71,7 @@ Dropdown button example with forceClose
 |Name|Type|Description|
 |-|-|-|
 |content|() => JSX.Element|The content to show inside the Dropdown |
-|position|[IDropDownButtonPosition](types/IDropDownButtonPosition.md)|Where the dropdown should be placed relative to the element it is being displayed for default is right |
+|position|[IDropDownButtonPosition](../types/IDropDownButtonPosition.md)|Where the dropdown should be placed relative to the element it is being displayed for default is right |
 |showOnHover|boolean|If this is true dropdown will show on mouse over & hide n mouse out If this is false dropdown ill show on click |
 |keepShowingOnHover|boolean|this will open the dropdown on hover and keep open even if user takes the mouse away Click on outside to close the dropdown |
 |className|string||
@@ -118,7 +118,7 @@ default is right
 
 |type|
 |-|
-|[IDropDownButtonPosition](types/IDropDownButtonPosition.md)|
+|[IDropDownButtonPosition](../types/IDropDownButtonPosition.md)|
 
 
 ### showOnHover

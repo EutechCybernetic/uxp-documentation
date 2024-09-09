@@ -24,7 +24,7 @@ import {Checkbox} from 'uxp/components';
 |label|string|Any additional text to show next to the checkbox |
 |isValid|boolean|If set to 'false' the checkbox will show in an 'invalid' state - neither true nor false |
 |inputAttr|{ [key: string]: string \| boolean }|Any additional html attributes to pass to the underlying input field |
-|type|[ICheckboxType](types/ICheckboxType.md)|Determines how the checkbox looks, visually |
+|type|[ICheckboxType](../types/ICheckboxType.md)|Determines how the checkbox looks, visually |
 |className|string|additional styles |
 |labelStyles|React.CSSProperties|additional styles to pass to the label |
 |tabIndex|number|tab index. default is 0 |
@@ -124,7 +124,7 @@ Determines how the checkbox looks, visually
 
 |type|
 |-|
-|[ICheckboxType](types/ICheckboxType.md)|
+|[ICheckboxType](../types/ICheckboxType.md)|
 
 
 ### className
