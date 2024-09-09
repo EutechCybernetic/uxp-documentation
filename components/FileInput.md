@@ -27,6 +27,8 @@ import {FileInput} from 'uxp/components';
 |className|string||
 |dropAreaIcon|IconProp||
 |dropAreaLabel|string||
+
+
 ### value
 
 
@@ -40,6 +42,8 @@ import {FileInput} from 'uxp/components';
 |type|
 |-|
 |File \| string|
+
+
 ### onChange
 
 
@@ -53,6 +57,8 @@ import {FileInput} from 'uxp/components';
 |type|
 |-|
 |(file: File, isValid: boolean) => void|
+
+
 ### allowedTypes
 
 
@@ -66,6 +72,8 @@ import {FileInput} from 'uxp/components';
 |type|
 |-|
 |string[]|
+
+
 ### preview
 
 
@@ -79,6 +87,8 @@ import {FileInput} from 'uxp/components';
 |type|
 |-|
 |{ showName?: boolean // default false, showPreview?: boolean // default true }|
+
+
 ### className
 
 
@@ -92,6 +102,8 @@ import {FileInput} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
 ### dropAreaIcon
 
 
@@ -105,6 +117,8 @@ import {FileInput} from 'uxp/components';
 |type|
 |-|
 |IconProp|
+
+
 ### dropAreaLabel
 
 
@@ -118,3 +132,5 @@ import {FileInput} from 'uxp/components';
 |type|
 |-|
 |string|
+
+

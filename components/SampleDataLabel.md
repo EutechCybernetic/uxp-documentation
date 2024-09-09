@@ -31,6 +31,8 @@ import {SampleDataLabel} from 'uxp/components';
 |Name|Type|Description|
 |-|-|-|
 |show|boolean||
+
+
 ### show
 
 
@@ -44,3 +46,5 @@ import {SampleDataLabel} from 'uxp/components';
 |type|
 |-|
 |boolean|
+
+

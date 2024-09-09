@@ -27,6 +27,8 @@ import {NotificationBlock} from 'uxp/components';
 |message|string| Message to show when showing |
 |class|string|Any extra css classes to apply |
 |styles|any|any extra styles |
+
+
 ### message
 
 
@@ -41,6 +43,8 @@ import {NotificationBlock} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
 ### class
 
 
@@ -55,6 +59,8 @@ Any extra css classes to apply
 |type|
 |-|
 |string|
+
+
 ### styles
 
 
@@ -69,3 +75,5 @@ any extra styles
 |type|
 |-|
 |any|
+
+

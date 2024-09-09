@@ -71,7 +71,7 @@ Dropdown button example with forceClose
 |Name|Type|Description|
 |-|-|-|
 |content|() => JSX.Element|The content to show inside the Dropdown |
-|position|[IDropDownButtonPosition](types/IDropDownButtonPosition)|Where the dropdown should be placed relative to the element it is being displayed for default is right |
+|position|[IDropDownButtonPosition](../types/IDropDownButtonPosition.md)|Where the dropdown should be placed relative to the element it is being displayed for default is right |
 |showOnHover|boolean|If this is true dropdown will show on mouse over & hide n mouse out If this is false dropdown ill show on click |
 |keepShowingOnHover|boolean|this will open the dropdown on hover and keep open even if user takes the mouse away Click on outside to close the dropdown |
 |className|string||
@@ -80,6 +80,8 @@ Dropdown button example with forceClose
 |forceClose|boolean|an option to force close a popup |
 |disableScroll|boolean|disable scroll on open dropdown true by default |
 |autoPosition|boolean|if this is enabled drop down will be automatically positionsed within the view. better to use this option- it has been improved if enabled it will ignore the position param |
+
+
 ### content
 
 
@@ -94,6 +96,8 @@ The content to show inside the Dropdown
 |type|
 |-|
 |() => JSX.Element|
+
+
 
 
 ```tsx
@@ -114,7 +118,9 @@ default is right
 
 |type|
 |-|
-|[IDropDownButtonPosition](types/IDropDownButtonPosition)|
+|[IDropDownButtonPosition](../types/IDropDownButtonPosition.md)|
+
+
 ### showOnHover
 
 
@@ -130,6 +136,8 @@ If this is false dropdown ill show on click
 |type|
 |-|
 |boolean|
+
+
 ### keepShowingOnHover
 
 
@@ -145,6 +153,8 @@ Click on outside to close the dropdown
 |type|
 |-|
 |boolean|
+
+
 ### className
 
 
@@ -158,6 +168,8 @@ Click on outside to close the dropdown
 |type|
 |-|
 |string|
+
+
 ### onOpen
 
 
@@ -172,6 +184,8 @@ callback function when the popup is open
 |type|
 |-|
 |() => void|
+
+
 ### onClose
 
 
@@ -186,6 +200,8 @@ callback function when the popup is closed
 |type|
 |-|
 |() => void|
+
+
 ### forceClose
 
 
@@ -200,6 +216,8 @@ an option to force close a popup
 |type|
 |-|
 |boolean|
+
+
 ### disableScroll
 
 
@@ -215,6 +233,8 @@ true by default
 |type|
 |-|
 |boolean|
+
+
 ### autoPosition
 
 
@@ -231,3 +251,5 @@ if enabled it will ignore the position param
 |type|
 |-|
 |boolean|
+
+

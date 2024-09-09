@@ -64,6 +64,8 @@ const TrendData: ITrendSeries[] = [
 |data|ITrendSeries[]|The series to plot. More than one can be visualized. |
 |onShowTooltip|(data: any) => JSX.Element|Use this to render a custom tooltip that will appear when the user hovers over a data point. The data being hovered over is passed as a parameter. |
 |onClick|(data: any) => JSX.Element|Called whenever a data point is clicked on. The data point being clicked on is passed as a parameter to the function |
+
+
 ### data
 
 
@@ -78,6 +80,8 @@ The series to plot. More than one can be visualized.
 |type|
 |-|
 |ITrendSeries[]|
+
+
 ### onShowTooltip
 
 
@@ -94,6 +98,8 @@ The data being hovered over is passed as a parameter.
 |type|
 |-|
 |(data: any) => JSX.Element|
+
+
 
 
 ```tsx
@@ -114,3 +120,5 @@ Called whenever a data point is clicked on. The data point being clicked on is p
 |type|
 |-|
 |(data: any) => JSX.Element|
+
+

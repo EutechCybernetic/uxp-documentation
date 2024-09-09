@@ -22,6 +22,8 @@ import {ColorPallet} from 'uxp/components';
 |color|string||
 |onChange|(color: string) => void||
 |onCancel|() => void||
+
+
 ### color
 
 
@@ -35,6 +37,8 @@ import {ColorPallet} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
 ### onChange
 
 
@@ -48,6 +52,8 @@ import {ColorPallet} from 'uxp/components';
 |type|
 |-|
 |(color: string) => void|
+
+
 ### onCancel
 
 
@@ -61,3 +67,5 @@ import {ColorPallet} from 'uxp/components';
 |type|
 |-|
 |() => void|
+
+

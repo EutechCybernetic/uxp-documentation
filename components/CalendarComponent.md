@@ -25,6 +25,8 @@ import {CalendarComponent} from 'uxp/components';
 |minDate|Date|min date |
 |maxDate|Date|max date |
 |className|string|class name to use custom styles |
+
+
 ### dates
 
 
@@ -39,6 +41,8 @@ array of dates
 |type|
 |-|
 |Date[]|
+
+
 ### onSelectDate
 
 
@@ -54,6 +58,8 @@ ill return the clicked date
 |type|
 |-|
 |(date: Date) => void|
+
+
 ### disableWeekEnds
 
 
@@ -68,6 +74,8 @@ disable weekends
 |type|
 |-|
 |boolean|
+
+
 ### disableDates
 
 
@@ -82,6 +90,8 @@ list of dates to disable
 |type|
 |-|
 |Array<Date>|
+
+
 ### minDate
 
 
@@ -96,6 +106,8 @@ min date
 |type|
 |-|
 |Date|
+
+
 ### maxDate
 
 
@@ -110,6 +122,8 @@ max date
 |type|
 |-|
 |Date|
+
+
 ### className
 
 
@@ -124,3 +138,5 @@ class name to use custom styles
 |type|
 |-|
 |string|
+
+

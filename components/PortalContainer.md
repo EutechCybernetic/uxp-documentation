@@ -49,6 +49,8 @@ import {PortalContainer} from 'uxp/components';
 |backdropStyles|any|additional styles to backdrop |
 |disableScroll|boolean|disabled the scrolling of main content block if true default value is true |
 |className|string||
+
+
 ### hasBackdrop
 
 
@@ -63,6 +65,8 @@ create a backdrop if true
 |type|
 |-|
 |boolean|
+
+
 ### onClickBackdrop
 
 
@@ -77,6 +81,8 @@ callback function to click on backdrop
 |type|
 |-|
 |() => void|
+
+
 ### backdropStyles
 
 
@@ -91,6 +97,8 @@ additional styles to backdrop
 |type|
 |-|
 |any|
+
+
 ### disableScroll
 
 
@@ -106,6 +114,8 @@ default value is true
 |type|
 |-|
 |boolean|
+
+
 ### className
 
 
@@ -119,3 +129,5 @@ default value is true
 |type|
 |-|
 |string|
+
+
