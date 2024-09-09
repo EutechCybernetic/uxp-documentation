@@ -19,7 +19,7 @@ import {Input} from 'uxp/components';
 
 |Name|Type|Description|
 |-|-|-|
-|type|[IInputType](types/IInputType.md)|Determines if the input field accepts a password, email address, number or just text. Default is 'text' |
+|type|[IInputType](../types/IInputType.md)|Determines if the input field accepts a password, email address, number or just text. Default is 'text' |
 |value|string|The actual text |
 |onChange|(value: string) => void|This function is called whenever the text changes. The new text value is passed as a parameter |
 |className|string|Any additional class names to be included for the input field |
@@ -44,7 +44,7 @@ Determines if the input field accepts a password, email address, number or just 
 
 |type|
 |-|
-|[IInputType](types/IInputType.md)|
+|[IInputType](../types/IInputType.md)|
 
 
 ### value

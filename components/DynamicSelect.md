@@ -39,7 +39,7 @@ import {DynamicSelect} from 'uxp/components';
 
 |Name|Type|Description|
 |-|-|-|
-|options|[IDynamicSelectDataFunction](types/IDynamicSelectDataFunction.md)|List of options to render. This a function that will generate the array of objects. pagination will be supported. The function expects 2 parameters - max and last and returns a promise that will resolve to the list of objects. max specifies the maximum number of items to be returned. |
+|options|[IDynamicSelectDataFunction](../types/IDynamicSelectDataFunction.md)|List of options to render. This a function that will generate the array of objects. pagination will be supported. The function expects 2 parameters - max and last and returns a promise that will resolve to the list of objects. max specifies the maximum number of items to be returned. |
 |selected|string|selected option label |
 |onChange|(value: any) => void|Callback that gets executed whenever a option is selected/changed |
 |placeholder|string|placeholder text |
@@ -69,7 +69,7 @@ The function expects 2 parameters - max and last and returns a promise that will
 
 |type|
 |-|
-|[IDynamicSelectDataFunction](types/IDynamicSelectDataFunction.md)|
+|[IDynamicSelectDataFunction](../types/IDynamicSelectDataFunction.md)|
 
 
 ### selected
