@@ -35,6 +35,8 @@ code: 'uxp-core.text.save'
 |useGoogleTranslate|boolean||
 |beforeOpen|() => boolean||
 |className|string||
+
+
 ### code
 
 
@@ -48,6 +50,8 @@ code: 'uxp-core.text.save'
 |type|
 |-|
 |string|
+
+
 ### useGoogleTranslate
 
 
@@ -61,6 +65,8 @@ code: 'uxp-core.text.save'
 |type|
 |-|
 |boolean|
+
+
 ### beforeOpen
 
 
@@ -74,6 +80,8 @@ code: 'uxp-core.text.save'
 |type|
 |-|
 |() => boolean|
+
+
 ### className
 
 
@@ -87,3 +95,5 @@ code: 'uxp-core.text.save'
 |type|
 |-|
 |string|
+
+

@@ -77,6 +77,8 @@ import {ItemCard} from 'uxp/components';
 |name|string||
 |title|string||
 |subTitle|string||
+
+
 ### item
 
 
@@ -91,6 +93,8 @@ A reference to the data to be rendered as a card.
 |type|
 |-|
 |any|
+
+
 ### imageField
 
 
@@ -105,6 +109,8 @@ The name of the field within the `item` that has the url of an image to be shown
 |type|
 |-|
 |string|
+
+
 ### titleField
 
 
@@ -119,6 +125,8 @@ The name of the field within `item` that has the title of the object
 |type|
 |-|
 |string|
+
+
 ### subTitleField
 
 
@@ -133,6 +141,8 @@ The name of the field within 'item' that holds the subtitle of the object
 |type|
 |-|
 |string|
+
+
 ### nameField
 
 
@@ -148,6 +158,8 @@ This property is used only if the imageField value is not set. The name is abbre
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -162,6 +174,8 @@ Any extra css classes to biind to the card.
 |type|
 |-|
 |string|
+
+
 ### image
 
 
@@ -177,6 +191,8 @@ Using these, users/developers will be able to provide static values
 |type|
 |-|
 |string|
+
+
 ### name
 
 
@@ -190,6 +206,8 @@ Using these, users/developers will be able to provide static values
 |type|
 |-|
 |string|
+
+
 ### title
 
 
@@ -203,6 +221,8 @@ Using these, users/developers will be able to provide static values
 |type|
 |-|
 |string|
+
+
 ### subTitle
 
 
@@ -216,3 +236,5 @@ Using these, users/developers will be able to provide static values
 |type|
 |-|
 |string|
+
+

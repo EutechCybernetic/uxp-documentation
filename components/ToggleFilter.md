@@ -28,6 +28,8 @@ import {ToggleFilter} from 'uxp/components';
 |selectedBackgroundColor|string|background color for the selected tab default is white with box shadow |
 |selectedTextColor|string|text color for the selected tab/fill default is #424242 |
 |disableShadow|boolean|this will disable the box shadow from the selected tab/fill |
+
+
 ### options
 
 
@@ -42,6 +44,8 @@ The list of possible options to choose from
 |type|
 |-|
 |IToggleOption[]|
+
+
 ### value
 
 
@@ -56,6 +60,8 @@ The current value (selected item)
 |type|
 |-|
 |string|
+
+
 ### onChange
 
 
@@ -70,6 +76,8 @@ Called whenever an option is selected
 |type|
 |-|
 |(newValue: string) => void|
+
+
 ### className
 
 
@@ -84,6 +92,8 @@ Any additional css classes to include
 |type|
 |-|
 |string|
+
+
 ### backgroundColor
 
 
@@ -99,6 +109,8 @@ default is white
 |type|
 |-|
 |string|
+
+
 ### textColor
 
 
@@ -114,6 +126,8 @@ default is #424242
 |type|
 |-|
 |string|
+
+
 ### selectedBackgroundColor
 
 
@@ -129,6 +143,8 @@ default is white with box shadow
 |type|
 |-|
 |string|
+
+
 ### selectedTextColor
 
 
@@ -144,6 +160,8 @@ default is #424242
 |type|
 |-|
 |string|
+
+
 ### disableShadow
 
 
@@ -158,3 +176,5 @@ this will disable the box shadow from the selected tab/fill
 |type|
 |-|
 |boolean|
+
+

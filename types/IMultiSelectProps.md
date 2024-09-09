@@ -81,6 +81,8 @@ interface IMultiSelectProps {
     selectAllOnLoad?: boolean,
     hideClearButton?: boolean
     hideDoneButton?: boolean
+
+    dropdownClassname?: string
 }
 ```
 

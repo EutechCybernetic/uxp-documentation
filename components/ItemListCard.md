@@ -69,6 +69,8 @@ import {ItemListCard} from 'uxp/components';
 |renderField|(object: any, field: string, key: number) => JSX.Element|An optional function to control rendering of each field. It takes the item as a parameter along with the name of the field being rendered. You can choose to render whatever you want here |
 |backgroundColor|string|Any background tint to apply to the card. This must be in #RRGGBB hexadecimal format. |
 |className|string|Any additional css classes to apply to the component |
+
+
 ### title
 
 
@@ -83,6 +85,8 @@ The title to show on the card
 |type|
 |-|
 |string|
+
+
 ### renderSubTitle
 
 
@@ -97,6 +101,8 @@ Any optional subtitle content to render. This should be a function that returns 
 |type|
 |-|
 |() => JSX.Element|
+
+
 ### item
 
 
@@ -111,6 +117,8 @@ The object to render in the card
 |type|
 |-|
 |any|
+
+
 ### fields
 
 
@@ -126,6 +134,8 @@ For each field in this list - one line gets rendered on the card
 |type|
 |-|
 |string[]|
+
+
 ### renderField
 
 
@@ -141,6 +151,8 @@ You can choose to render whatever you want here
 |type|
 |-|
 |(object: any, field: string, key: number) => JSX.Element|
+
+
 ### backgroundColor
 
 
@@ -155,6 +167,8 @@ Any background tint to apply to the card. This must be in #RRGGBB hexadecimal fo
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -169,3 +183,5 @@ Any additional css classes to apply to the component
 |type|
 |-|
 |string|
+
+

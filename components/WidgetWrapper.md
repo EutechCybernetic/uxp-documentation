@@ -61,6 +61,8 @@ then you can write css to make the widgets resposive
 |cssBreakPoints|{ width?: { default: string, [key: number]: string }, height?: { default: string, [key: number]: string } }||
 |instanceId|string|this will be used to get the widget props this will be used to access the name and description of the widget |
 |sampleData|{ /** * toggle sample data label */ showLabel?: boolean, /** * this will be shown in the popup */ description?: string, /** * this is deprecated - use product ids instead * link to buy from spaceworx * if not provided button will not be shown */ link?: string, /** * prouct ids to show on spaceworx */ productIds?: string[] }|sample data label |
+
+
 ### className
 
 
@@ -75,6 +77,8 @@ Any extra css class names to add to the widget wrapper
 |type|
 |-|
 |string|
+
+
 ### cssBreakPoints
 
 
@@ -88,6 +92,8 @@ Any extra css class names to add to the widget wrapper
 |type|
 |-|
 |{ width?: { default: string, [key: number]: string }, height?: { default: string, [key: number]: string } }|
+
+
 ### instanceId
 
 
@@ -103,6 +109,8 @@ this will be used to access the name and description of the widget
 |type|
 |-|
 |string|
+
+
 ### sampleData
 
 
@@ -117,3 +125,5 @@ sample data label
 |type|
 |-|
 |{ /** * toggle sample data label */ showLabel?: boolean, /** * this will be shown in the popup */ description?: string, /** * this is deprecated - use product ids instead * link to buy from spaceworx * if not provided button will not be shown */ link?: string, /** * prouct ids to show on spaceworx */ productIds?: string[] }|
+
+

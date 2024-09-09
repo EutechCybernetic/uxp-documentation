@@ -50,6 +50,8 @@ hide default details and logout button
 |hideDetails|boolean||
 |hideLogout|boolean||
 |className|string||
+
+
 ### hideDetails
 
 
@@ -63,6 +65,8 @@ hide default details and logout button
 |type|
 |-|
 |boolean|
+
+
 ### hideLogout
 
 
@@ -76,6 +80,8 @@ hide default details and logout button
 |type|
 |-|
 |boolean|
+
+
 ### className
 
 
@@ -89,3 +95,5 @@ hide default details and logout button
 |type|
 |-|
 |string|
+
+

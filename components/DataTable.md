@@ -91,6 +91,8 @@ import {DataTable} from 'uxp/components';
 |renderHeaders|boolean|this will toggle the headers default is true |
 |onClickRow|(item: any) => void|callback function to trigger on click a table row |
 |activeClass|string|active table row styles default is 'active' an has some styles if you give a class here it will be applied |
+
+
 ### data
 
 
@@ -107,6 +109,8 @@ If you supply a function then pagination will be supported. The function expects
 |type|
 |-|
 |Array<any> \| IDataFunction|
+
+
 ### columns
 
 
@@ -125,6 +129,8 @@ column contains three(3) params
 |type|
 |-|
 |IDataTableColumn[]|
+
+
 
 
 ```tsx
@@ -162,6 +168,8 @@ The number of items to fetch in each page. This gets passed to the data function
 |type|
 |-|
 |number|
+
+
 ### args
 
 
@@ -175,6 +183,8 @@ The number of items to fetch in each page. This gets passed to the data function
 |type|
 |-|
 |any|
+
+
 ### renderLoading
 
 
@@ -189,6 +199,8 @@ This function renders a loading animation. If not specified, the default loading
 |type|
 |-|
 |() => JSX.Element|
+
+
 ### className
 
 
@@ -203,6 +215,8 @@ Any extra class names to be added to the component
 |type|
 |-|
 |string|
+
+
 ### showFooter
 
 
@@ -217,6 +231,8 @@ show/hide footer (scroll buttons)
 |type|
 |-|
 |boolean|
+
+
 ### scrollStep
 
 
@@ -231,6 +247,8 @@ mun of rows to scroll
 |type|
 |-|
 |number|
+
+
 ### showEndOfContent
 
 
@@ -245,6 +263,8 @@ show/hide end of content message
 |type|
 |-|
 |boolean|
+
+
 ### onItemsLoad
 
 
@@ -260,6 +280,8 @@ this will return total number of items (function should return the total count) 
 |type|
 |-|
 |(total: number, loaded: number) => void|
+
+
 ### renderHeaders
 
 
@@ -275,6 +297,8 @@ default is true
 |type|
 |-|
 |boolean|
+
+
 ### onClickRow
 
 
@@ -289,6 +313,8 @@ callback function to trigger on click a table row
 |type|
 |-|
 |(item: any) => void|
+
+
 ### activeClass
 
 
@@ -305,3 +331,5 @@ if you give a class here it will be applied
 |type|
 |-|
 |string|
+
+
