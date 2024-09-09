@@ -40,6 +40,8 @@ import {LinkWidgetContainer} from 'uxp/components';
 |title|any|The title set in the title bar of the container |
 |className|string|Any extra css classes to apply |
 |toolbarContent|any|Any custom content to include in the container toolbar. |
+
+
 ### show
 
 
@@ -54,6 +56,8 @@ import {LinkWidgetContainer} from 'uxp/components';
 |type|
 |-|
 |boolean|
+
+
 ### onOpen
 
 
@@ -68,6 +72,8 @@ Called whenever the container is opened
 |type|
 |-|
 |any|
+
+
 ### onClose
 
 
@@ -82,6 +88,8 @@ Called when the container gets closed
 |type|
 |-|
 |any|
+
+
 ### title
 
 
@@ -96,6 +104,8 @@ The title set in the title bar of the container
 |type|
 |-|
 |any|
+
+
 ### className
 
 
@@ -110,6 +120,8 @@ Any extra css classes to apply
 |type|
 |-|
 |string|
+
+
 ### toolbarContent
 
 
@@ -124,3 +136,5 @@ Any custom content to include in the container toolbar.
 |type|
 |-|
 |any|
+
+

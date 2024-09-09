@@ -24,7 +24,9 @@ import {ProfileImage} from 'uxp/components';
 |bgColor|string||
 |textColor|string||
 |className|string||
-|size|[ISize](types/ISize)||
+|size|[ISize](types/ISize.md)||
+
+
 ### image
 
 
@@ -39,6 +41,8 @@ The url for the image to be shown
 |type|
 |-|
 |string|
+
+
 ### name
 
 
@@ -55,6 +59,8 @@ and a background color will be chosen. Background colors are random but consiste
 |type|
 |-|
 |string|
+
+
 ### bgColor
 
 
@@ -68,6 +74,8 @@ and a background color will be chosen. Background colors are random but consiste
 |type|
 |-|
 |string|
+
+
 ### textColor
 
 
@@ -81,6 +89,8 @@ and a background color will be chosen. Background colors are random but consiste
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -94,6 +104,8 @@ and a background color will be chosen. Background colors are random but consiste
 |type|
 |-|
 |string|
+
+
 ### size
 
 
@@ -106,4 +118,6 @@ and a background color will be chosen. Background colors are random but consiste
 
 |type|
 |-|
-|[ISize](types/ISize)|
+|[ISize](types/ISize.md)|
+
+

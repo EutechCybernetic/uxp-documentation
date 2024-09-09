@@ -31,6 +31,8 @@ import {SpaceworxDescriptionTag} from 'uxp/components';
 |-|-|-|
 |className|string||
 |styles|React.CSSProperties||
+
+
 ### className
 
 
@@ -44,6 +46,8 @@ import {SpaceworxDescriptionTag} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
 ### styles
 
 
@@ -57,3 +61,5 @@ import {SpaceworxDescriptionTag} from 'uxp/components';
 |type|
 |-|
 |React.CSSProperties|
+
+

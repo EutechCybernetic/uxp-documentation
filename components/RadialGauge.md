@@ -76,6 +76,8 @@ import {RadialGauge} from 'uxp/components';
 |backgroundColor|string|backbround color of the gauge default is white |
 |labelColor|string|color of the labels default is #424242 |
 |needleColor|string|color of the needle default is gray |
+
+
 ### min
 
 
@@ -90,6 +92,8 @@ min value of the gauge
 |type|
 |-|
 |number|
+
+
 ### max
 
 
@@ -104,6 +108,8 @@ max value of the gauge
 |type|
 |-|
 |number|
+
+
 ### value
 
 
@@ -118,6 +124,8 @@ value of the gauge
 |type|
 |-|
 |number|
+
+
 ### colors
 
 
@@ -136,6 +144,8 @@ default is blue, green, yellow, red colors at equal length
 |type|
 |-|
 |Array<{ color: string, stopAt: number }>|
+
+
 ### label
 
 
@@ -151,6 +161,8 @@ no default value
 |type|
 |-|
 |() => JSX.Element|
+
+
 ### legend
 
 
@@ -166,6 +178,8 @@ default is false
 |type|
 |-|
 |boolean|
+
+
 ### tickColor
 
 
@@ -181,6 +195,8 @@ default is white
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -195,6 +211,8 @@ class name(s) for additional styling
 |type|
 |-|
 |string|
+
+
 ### styles
 
 
@@ -209,6 +227,8 @@ additional inline styles
 |type|
 |-|
 |React.CSSProperties|
+
+
 ### gradient
 
 
@@ -224,6 +244,8 @@ default is false
 |type|
 |-|
 |boolean|
+
+
 ### thickness
 
 
@@ -243,6 +265,8 @@ if you pass a higher value than the max value, max value will be used
 |type|
 |-|
 |number|
+
+
 ### largeTick
 
 
@@ -262,6 +286,8 @@ if the given value is higher than the max value, max values will be used
 |type|
 |-|
 |number|
+
+
 ### smallTick
 
 
@@ -281,6 +307,8 @@ if the given values is higher than the max value, max values will be used
 |type|
 |-|
 |number|
+
+
 ### backgroundColor
 
 
@@ -296,6 +324,8 @@ default is white
 |type|
 |-|
 |string|
+
+
 ### labelColor
 
 
@@ -311,6 +341,8 @@ default is #424242
 |type|
 |-|
 |string|
+
+
 ### needleColor
 
 
@@ -326,3 +358,5 @@ default is gray
 |type|
 |-|
 |string|
+
+

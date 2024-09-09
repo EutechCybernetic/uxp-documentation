@@ -39,7 +39,7 @@ import {DynamicSelect} from 'uxp/components';
 
 |Name|Type|Description|
 |-|-|-|
-|options|[IDynamicSelectDataFunction](types/IDynamicSelectDataFunction)|List of options to render. This a function that will generate the array of objects. pagination will be supported. The function expects 2 parameters - max and last and returns a promise that will resolve to the list of objects. max specifies the maximum number of items to be returned. |
+|options|[IDynamicSelectDataFunction](types/IDynamicSelectDataFunction.md)|List of options to render. This a function that will generate the array of objects. pagination will be supported. The function expects 2 parameters - max and last and returns a promise that will resolve to the list of objects. max specifies the maximum number of items to be returned. |
 |selected|string|selected option label |
 |onChange|(value: any) => void|Callback that gets executed whenever a option is selected/changed |
 |placeholder|string|placeholder text |
@@ -52,6 +52,8 @@ import {DynamicSelect} from 'uxp/components';
 |timeout|number|number of milliseconds to delay send the request on change query default is 500 |
 |type|"search-box" \| "select-box"||
 |showEndOfContent|boolean|show hide end of content message |
+
+
 ### options
 
 
@@ -68,7 +70,9 @@ The function expects 2 parameters - max and last and returns a promise that will
 
 |type|
 |-|
-|[IDynamicSelectDataFunction](types/IDynamicSelectDataFunction)|
+|[IDynamicSelectDataFunction](types/IDynamicSelectDataFunction.md)|
+
+
 ### selected
 
 
@@ -83,6 +87,8 @@ selected option label
 |type|
 |-|
 |string|
+
+
 ### onChange
 
 
@@ -97,6 +103,8 @@ Callback that gets executed whenever a option is selected/changed
 |type|
 |-|
 |(value: any) => void|
+
+
 ### placeholder
 
 
@@ -111,6 +119,8 @@ placeholder text
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -125,6 +135,8 @@ Any extra css classes to add to the button
 |type|
 |-|
 |string|
+
+
 ### isValid
 
 
@@ -139,6 +151,8 @@ set to valid state if true
 |type|
 |-|
 |boolean|
+
+
 ### pageSize
 
 
@@ -153,6 +167,8 @@ page size for pagination
 |type|
 |-|
 |number|
+
+
 ### renderOption
 
 
@@ -168,6 +184,8 @@ A function that will be responsible for rendering each individual option of the 
 |type|
 |-|
 |(item: any, key: number) => JSX.Element|
+
+
 
 
 ```tsx
@@ -194,6 +212,8 @@ name of the field to display
 |type|
 |-|
 |string|
+
+
 ### iconField
 
 
@@ -209,6 +229,8 @@ if a value is passed icon will be displayed.
 |type|
 |-|
 |string|
+
+
 ### timeout
 
 
@@ -225,6 +247,8 @@ default is 500
 |type|
 |-|
 |number|
+
+
 ### type
 
 
@@ -238,6 +262,8 @@ default is 500
 |type|
 |-|
 |"search-box" \| "select-box"|
+
+
 ### showEndOfContent
 
 
@@ -252,3 +278,5 @@ show hide end of content message
 |type|
 |-|
 |boolean|
+
+

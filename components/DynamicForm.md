@@ -27,6 +27,8 @@ import {DynamicForm} from 'uxp/components';
 |submitButtonLabel|string||
 |cancelButtonLabel|string||
 |hideCancelButton|boolean||
+
+
 ### formStructure
 
 
@@ -40,6 +42,8 @@ import {DynamicForm} from 'uxp/components';
 |type|
 |-|
 |IDynamicFormFieldProps[]|
+
+
 ### onSubmit
 
 
@@ -53,6 +57,8 @@ import {DynamicForm} from 'uxp/components';
 |type|
 |-|
 |(data: { [key: string]: string \| number \| boolean }) => void|
+
+
 ### onCancel
 
 
@@ -66,6 +72,8 @@ import {DynamicForm} from 'uxp/components';
 |type|
 |-|
 |() => void|
+
+
 ### type
 
 
@@ -79,6 +87,8 @@ import {DynamicForm} from 'uxp/components';
 |type|
 |-|
 |IFormType|
+
+
 ### widget
 
 
@@ -92,6 +102,8 @@ import {DynamicForm} from 'uxp/components';
 |type|
 |-|
 |IWidgetInstance|
+
+
 ### submitButtonLabel
 
 
@@ -105,6 +117,8 @@ import {DynamicForm} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
 ### cancelButtonLabel
 
 
@@ -118,6 +132,8 @@ import {DynamicForm} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
 ### hideCancelButton
 
 
@@ -131,3 +147,5 @@ import {DynamicForm} from 'uxp/components';
 |type|
 |-|
 |boolean|
+
+

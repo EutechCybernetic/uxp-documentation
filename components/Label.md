@@ -31,6 +31,8 @@ import {Label} from 'uxp/components';
 |className|string||
 |inline|boolean||
 |styles|React.CSSProperties||
+
+
 ### labelFor
 
 
@@ -44,6 +46,8 @@ import {Label} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -57,6 +61,8 @@ import {Label} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
 ### inline
 
 
@@ -70,6 +76,8 @@ import {Label} from 'uxp/components';
 |type|
 |-|
 |boolean|
+
+
 ### styles
 
 
@@ -83,3 +91,5 @@ import {Label} from 'uxp/components';
 |type|
 |-|
 |React.CSSProperties|
+
+

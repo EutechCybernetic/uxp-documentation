@@ -44,6 +44,8 @@ TODO: More Examples
 |inline|boolean|Set this to true to have multiple fields in a single horizontal line |
 |className|string|Any extra css classes to attach to the field |
 |backgroundColor|string|A background color to set for the field |
+
+
 ### inline
 
 
@@ -58,6 +60,8 @@ Set this to true to have multiple fields in a single horizontal line
 |type|
 |-|
 |boolean|
+
+
 ### className
 
 
@@ -72,6 +76,8 @@ Any extra css classes to attach to the field
 |type|
 |-|
 |string|
+
+
 ### backgroundColor
 
 
@@ -86,3 +92,5 @@ A background color to set for the field
 |type|
 |-|
 |string|
+
+

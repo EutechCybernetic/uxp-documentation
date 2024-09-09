@@ -48,10 +48,12 @@ import {Modal} from 'uxp/components';
 |headerContent|JSX.Element|Any custom content to include in the modal header. If this is set, then the `title` property will not be used. |
 |backgroundDismiss|boolean|Set to true to allow the dialog to be closed by clicking outside of it |
 |showCloseButton|boolean|Set this to 'true' to show the close button in the dialog |
-|animation|[IAnimation](types/IAnimation)|Animation to use when opening/closing a modal |
+|animation|[IAnimation](types/IAnimation.md)|Animation to use when opening/closing a modal |
 |backdropStyles|any|additional styles for backdrop |
 |renderAdditionalContent|() => JSX.Element|additional content to render |
 |autoSize|boolean||
+
+
 ### show
 
 
@@ -66,6 +68,8 @@ Set this to true to make the modal visible
 |type|
 |-|
 |boolean|
+
+
 ### onOpen
 
 
@@ -80,6 +84,8 @@ Called whenever the modal is opened
 |type|
 |-|
 |() => void|
+
+
 ### onClose
 
 
@@ -94,6 +100,8 @@ Called when the modal gets closed
 |type|
 |-|
 |() => void|
+
+
 ### title
 
 
@@ -109,6 +117,8 @@ If the `headerContent` attribute is set, then this value will not be used.
 |type|
 |-|
 |string|
+
+
 ### closeButton
 
 
@@ -124,6 +134,8 @@ If a value is not provided and `showCloseButton` is set to true, the default clo
 |type|
 |-|
 |JSX.Element|
+
+
 ### styles
 
 
@@ -138,6 +150,8 @@ Any extra css styles to apply
 |type|
 |-|
 |any|
+
+
 ### className
 
 
@@ -152,6 +166,8 @@ Any extra css classes to apply
 |type|
 |-|
 |string|
+
+
 ### headerContent
 
 
@@ -167,6 +183,8 @@ If this is set, then the `title` property will not be used.
 |type|
 |-|
 |JSX.Element|
+
+
 ### backgroundDismiss
 
 
@@ -181,6 +199,8 @@ Set to true to allow the dialog to be closed by clicking outside of it
 |type|
 |-|
 |boolean|
+
+
 ### showCloseButton
 
 
@@ -195,6 +215,8 @@ Set this to 'true' to show the close button in the dialog
 |type|
 |-|
 |boolean|
+
+
 ### animation
 
 
@@ -208,7 +230,9 @@ Animation to use when opening/closing a modal
 
 |type|
 |-|
-|[IAnimation](types/IAnimation)|
+|[IAnimation](types/IAnimation.md)|
+
+
 ### backdropStyles
 
 
@@ -223,6 +247,8 @@ additional styles for backdrop
 |type|
 |-|
 |any|
+
+
 ### renderAdditionalContent
 
 
@@ -237,6 +263,8 @@ additional content to render
 |type|
 |-|
 |() => JSX.Element|
+
+
 ### autoSize
 
 
@@ -250,3 +278,5 @@ additional content to render
 |type|
 |-|
 |boolean|
+
+

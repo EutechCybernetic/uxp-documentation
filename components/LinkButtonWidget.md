@@ -35,6 +35,8 @@ import {LinkButtonWidget} from 'uxp/components';
 |target|"_self" \| "_blank" \| "_parent"|target for link default is _self |
 |icon|string|icon to show |
 |label|string|label for link |
+
+
 ### link
 
 
@@ -49,6 +51,8 @@ link url
 |type|
 |-|
 |string|
+
+
 ### target
 
 
@@ -64,6 +68,8 @@ default is _self
 |type|
 |-|
 |"_self" \| "_blank" \| "_parent"|
+
+
 ### icon
 
 
@@ -78,6 +84,8 @@ icon to show
 |type|
 |-|
 |string|
+
+
 ### label
 
 
@@ -92,3 +100,5 @@ label for link
 |type|
 |-|
 |string|
+
+

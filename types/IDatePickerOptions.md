@@ -29,6 +29,20 @@ interface IDatePickerOptions {
      * An array of specific dates that the user cannot select
      */
     disableDates?: Array<Date | String>
+
+    /**
+     * A list of spacial dates. you can use this to highlight the dates and show a tooltip on hover over it
+     */
+    specialDates?: (string | Date | ISpecialDate)[],
+
+    /**
+     * Default background color for all spacial dates. This can be overridden for individual days if required.  
+     */
+    specialDateBackgroundColor?: string
+    /**
+     * Default text color for all spacial dates. This can be overridden for individual days if required.  
+     */
+    specialDateTextColor?: string
 }
 ```
 

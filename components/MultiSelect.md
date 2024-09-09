@@ -79,6 +79,9 @@ import {MultiSelect} from 'uxp/components';
 |selectAllOnLoad|boolean||
 |hideClearButton|boolean||
 |hideDoneButton|boolean||
+|dropdownClassname|string||
+
+
 ### options
 
 
@@ -95,6 +98,8 @@ also you can pass any object as options, then specify the labelField, valueField
 |type|
 |-|
 |IOption[] \| any[]|
+
+
 ### labelField
 
 
@@ -110,6 +115,8 @@ If not given default(label) will be used
 |type|
 |-|
 |string|
+
+
 ### valueField
 
 
@@ -125,6 +132,8 @@ If not given default(value) will be used
 |type|
 |-|
 |string|
+
+
 ### iconField
 
 
@@ -140,6 +149,8 @@ if a value is passed icon will be displayed.
 |type|
 |-|
 |string|
+
+
 ### selected
 
 
@@ -156,6 +167,8 @@ The  currently selected value
 |type|
 |-|
 |string[]|
+
+
 ### onChange
 
 
@@ -172,6 +185,8 @@ option parameter has the complete option/ object that you passed
 |type|
 |-|
 |(values: string[], options?: IOption[] \| any[]) => void|
+
+
 ### placeholder
 
 
@@ -186,6 +201,8 @@ Text to show when no value is selected
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -200,6 +217,8 @@ Any extra css classes to add to the component
 |type|
 |-|
 |string|
+
+
 ### isValid
 
 
@@ -214,6 +233,8 @@ Set this to false to indicate the field doesn't have a valid value
 |type|
 |-|
 |boolean|
+
+
 ### showEndOfContent
 
 
@@ -227,6 +248,8 @@ Set this to false to indicate the field doesn't have a valid value
 |type|
 |-|
 |boolean|
+
+
 ### renderOption
 
 
@@ -242,6 +265,8 @@ A function that will be responsible for rendering each individual option of the 
 |type|
 |-|
 |(item: any, key: number) => JSX.Element|
+
+
 
 
 ```tsx
@@ -267,6 +292,8 @@ renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
 |type|
 |-|
 |boolean|
+
+
 ### selectAllOnLoad
 
 
@@ -280,6 +307,8 @@ renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
 |type|
 |-|
 |boolean|
+
+
 ### hideClearButton
 
 
@@ -293,6 +322,8 @@ renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
 |type|
 |-|
 |boolean|
+
+
 ### hideDoneButton
 
 
@@ -306,3 +337,20 @@ renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
 |type|
 |-|
 |boolean|
+
+
+### dropdownClassname
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|string|
+
+

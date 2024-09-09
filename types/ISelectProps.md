@@ -83,6 +83,7 @@ interface ISelectProps {
         onAddNewValue?: (value: string) => Promise<any>
     }
 
+    dropdownClassname?: string
 }
 ```
 

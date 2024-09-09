@@ -46,6 +46,8 @@ import {AsyncButton} from 'uxp/components';
 |styles|React.CSSProperties|any custom inline styles to the button |
 |iconStyles|React.CSSProperties|any custom inline styles for the icon container |
 |useLoadingSpinner|boolean|show loading spinners in place of icons (even if the icon is not there it will show the spinner on the left sides) when the button is in loading state, |
+
+
 ### title
 
 
@@ -60,6 +62,8 @@ The caption for the button
 |type|
 |-|
 |string|
+
+
 ### icon
 
 
@@ -78,6 +82,8 @@ icon={'fas save'}
 |type|
 |-|
 |string|
+
+
 ### iconPosition
 
 
@@ -92,6 +98,8 @@ icon position
 |type|
 |-|
 |'left' \| 'right'|
+
+
 ### className
 
 
@@ -106,6 +114,8 @@ Any extra css classes to add to the button
 |type|
 |-|
 |string|
+
+
 ### onClick
 
 
@@ -121,6 +131,8 @@ It must return a Promise
 |type|
 |-|
 |() => Promise<any>|
+
+
 ### active
 
 
@@ -135,6 +147,8 @@ Set button to active state when true
 |type|
 |-|
 |boolean|
+
+
 ### disabled
 
 
@@ -149,6 +163,8 @@ Set button to disabled state when true
 |type|
 |-|
 |boolean|
+
+
 ### loadingTitle
 
 
@@ -163,6 +179,8 @@ Text to show when in loading state
 |type|
 |-|
 |string|
+
+
 ### onError
 
 
@@ -177,6 +195,8 @@ a callback function to call on error
 |type|
 |-|
 |(e: any) => void|
+
+
 ### styles
 
 
@@ -191,6 +211,8 @@ any custom inline styles to the button
 |type|
 |-|
 |React.CSSProperties|
+
+
 ### iconStyles
 
 
@@ -205,6 +227,8 @@ any custom inline styles for the icon container
 |type|
 |-|
 |React.CSSProperties|
+
+
 ### useLoadingSpinner
 
 
@@ -219,3 +243,5 @@ show loading spinners in place of icons (even if the icon is not there it will s
 |type|
 |-|
 |boolean|
+
+

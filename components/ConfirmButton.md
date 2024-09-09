@@ -41,6 +41,8 @@ import {ConfirmButton} from 'uxp/components';
 |loadingTitle|string|The caption to show on the button when its in loading state |
 |active|boolean||
 |disabled|boolean||
+
+
 ### title
 
 
@@ -55,6 +57,8 @@ The caption for the button
 |type|
 |-|
 |string|
+
+
 ### icon
 
 
@@ -69,6 +73,8 @@ The url of an icon to show on the button
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -83,6 +89,8 @@ Any extra css classes to add to the button
 |type|
 |-|
 |string|
+
+
 ### onConfirm
 
 
@@ -97,6 +105,8 @@ The callback that gets invoked when the confirm button is clicked
 |type|
 |-|
 |() => Promise<any>|
+
+
 ### onCancel
 
 
@@ -111,6 +121,8 @@ The callback that gets invoked when the cancel button is clicked
 |type|
 |-|
 |() => void|
+
+
 ### loading
 
 
@@ -126,6 +138,8 @@ In this state, an animation will be shown indicating that work is going on and t
 |type|
 |-|
 |boolean|
+
+
 ### loadingTitle
 
 
@@ -140,6 +154,8 @@ The caption to show on the button when its in loading state
 |type|
 |-|
 |string|
+
+
 ### active
 
 
@@ -153,6 +169,8 @@ The caption to show on the button when its in loading state
 |type|
 |-|
 |boolean|
+
+
 ### disabled
 
 
@@ -166,3 +184,5 @@ The caption to show on the button when its in loading state
 |type|
 |-|
 |boolean|
+
+

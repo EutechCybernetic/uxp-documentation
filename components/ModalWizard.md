@@ -70,6 +70,8 @@ import {ModalWizard} from 'uxp/components';
 |onComplete|()=>Promise<any>|This action executes after they hit 'next' on the final page. |
 |completionText|string|Text to show on the 'next' button in the final stage. |
 |className|string||
+
+
 ### show
 
 
@@ -84,6 +86,8 @@ Set this to true to show the dialog. False to hide it
 |type|
 |-|
 |boolean|
+
+
 ### onClose
 
 
@@ -98,6 +102,8 @@ Call this to close the dialog
 |type|
 |-|
 |()=>void|
+
+
 ### title
 
 
@@ -112,6 +118,8 @@ The title to show on the top
 |type|
 |-|
 |string|
+
+
 ### icon
 
 
@@ -126,6 +134,8 @@ An optional icon to show
 |type|
 |-|
 |string|
+
+
 ### onRenderHeader
 
 
@@ -140,6 +150,8 @@ A method to render a subheader just below the title area.
 |type|
 |-|
 |(currentStep:IModalWizardStepProps)=> JSX.Element|
+
+
 ### steps
 
 
@@ -154,6 +166,8 @@ The list of steps that this wizard consists of.
 |type|
 |-|
 |IModalWizardStep[]|
+
+
 ### onComplete
 
 
@@ -168,6 +182,8 @@ This action executes after they hit 'next' on the final page.
 |type|
 |-|
 |()=>Promise<any>|
+
+
 ### completionText
 
 
@@ -182,6 +198,8 @@ Text to show on the 'next' button in the final stage.
 |type|
 |-|
 |string|
+
+
 ### className
 
 
@@ -195,3 +213,5 @@ Text to show on the 'next' button in the final stage.
 |type|
 |-|
 |string|
+
+

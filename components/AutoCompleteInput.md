@@ -93,6 +93,8 @@ Also you can pass a set of items instead of custom auto fill.
 |placeholder|string|placeholder |
 |optionClassName|string|this will be used to bind the keybaord inputs. once you add the class you will be able to navigate trhough the options using arrow keys (up and down) you need to add the same classname to the options default is 'uxp-select-option-container' you can use the default class in the drop down option and you will get the default styles <div classname="uxp-select-option-container" ...> a</div> if you pass a custom class name you need write some styles to indicate the selected items in styles (.scss file) -------------------- .<custom-class-name> { &.highlighted { background-color: #52c4c94a; color: #424242; } } |
 |tabIndex|number|tab index. default is 0 |
+
+
 ### value
 
 
@@ -107,6 +109,8 @@ value for the
 |type|
 |-|
 |string|
+
+
 ### onChange
 
 
@@ -121,6 +125,8 @@ callback on value change
 |type|
 |-|
 |(val: string) => void|
+
+
 ### options
 
 
@@ -135,6 +141,8 @@ options to auto generate the dropdown list
 |type|
 |-|
 |string[]|
+
+
 ### autoFill
 
 
@@ -149,6 +157,8 @@ render auto complete dropdown
 |type|
 |-|
 |() => JSX.Element|
+
+
 ### className
 
 
@@ -163,6 +173,8 @@ additional class name
 |type|
 |-|
 |string|
+
+
 ### isValid
 
 
@@ -177,6 +189,8 @@ indicate the if the value is valid or not
 |type|
 |-|
 |boolean|
+
+
 ### placeholder
 
 
@@ -191,6 +205,8 @@ placeholder
 |type|
 |-|
 |string|
+
+
 ### optionClassName
 
 
@@ -225,6 +241,8 @@ in styles (.scss file)
 |string|
 
 
+
+
 ```tsx
 function renderAutoFill() {
 return <div>
@@ -254,3 +272,5 @@ tab index. default is 0
 |type|
 |-|
 |number|
+
+
