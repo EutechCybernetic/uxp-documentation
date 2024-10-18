@@ -19,14 +19,15 @@ import {DynamicForm} from 'uxp/components';
 
 |Name|Type|Description|
 |-|-|-|
-|formStructure|IDynamicFormFieldProps[]||
-|onSubmit|(data: { [key: string]: string \| number \| boolean }) => void||
+|formStructure|FormSectionProps[]||
+|beforeSubmit|(data: IFormData) => Promise<IFormData>||
+|onSubmit|(data: IFormData) => Promise<void>||
 |onCancel|() => void||
-|type|IFormType||
-|widget|IWidgetInstance||
 |submitButtonLabel|string||
+|submitButtonLoadingLabel|string||
 |cancelButtonLabel|string||
 |hideCancelButton|boolean||
+|isLoading|boolean||
 
 
 ### formStructure
@@ -41,7 +42,22 @@ import {DynamicForm} from 'uxp/components';
 
 |type|
 |-|
-|IDynamicFormFieldProps[]|
+|FormSectionProps[]|
+
+
+### beforeSubmit
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|(data: IFormData) => Promise<IFormData>|
 
 
 ### onSubmit
@@ -56,7 +72,7 @@ import {DynamicForm} from 'uxp/components';
 
 |type|
 |-|
-|(data: { [key: string]: string \| number \| boolean }) => void|
+|(data: IFormData) => Promise<void>|
 
 
 ### onCancel
@@ -74,37 +90,22 @@ import {DynamicForm} from 'uxp/components';
 |() => void|
 
 
-### type
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|IFormType|
-
-
-### widget
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|IWidgetInstance|
-
-
 ### submitButtonLabel
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|string|
+
+
+### submitButtonLoadingLabel
 
 
 
@@ -135,6 +136,21 @@ import {DynamicForm} from 'uxp/components';
 
 
 ### hideCancelButton
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|boolean|
+
+
+### isLoading
 
 
 

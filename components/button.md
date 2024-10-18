@@ -65,6 +65,7 @@ import {Button} from 'uxp/components';
 |styles|React.CSSProperties|any custom inline styles to the button |
 |iconStyles|React.CSSProperties|any custom inline styles for the icon container |
 |useLoadingSpinner|boolean|show loading spinners in place of icons (even if the icon is not there it will show the spinner on the left sides) when the button is in loading state, |
+|type|"button" \| "submit" \| "reset"||
 
 
 ### title
@@ -263,5 +264,20 @@ show loading spinners in place of icons (even if the icon is not there it will s
 |type|
 |-|
 |boolean|
+
+
+### type
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|"button" \| "submit" \| "reset"|
 
 
