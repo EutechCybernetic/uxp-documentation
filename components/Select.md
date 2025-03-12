@@ -73,10 +73,16 @@ import {Select} from 'uxp/components';
 |placeholder|string|Text to show when no value is selected |
 |className|string|Any extra css classes to add to the component |
 |isValid|boolean|Set this to false to indicate the field doesn't have a valid value |
-|showEndOfContent|boolean||
+|showEndOfContent|boolean|show hide end of content message |
 |renderOption|(item: any, key: number) => JSX.Element|A function that will be responsible for rendering each individual option of the list. |
-|addNewValues|{ enable: boolean, title: string, loadingTitle: string, onAddNewValue?: (value: string) => Promise<any> }||
-|dropdownClassname|string||
+|addNewValues|{ enable: boolean, title: string, loadingTitle: string, onAddNewValue?: (value: string) => Promise<any> }|Option to add a new value if not available. You can enable this option and handle how you want to save the new item |
+|dropdownClassname|string|Option to add a classname for the dropdown |
+|spacingMode|SpacingMode|Spacing mode |
+|onClear|() => void|Option to unselect |
+|renderCustomDropdownContent|(closeDropdown: () => void) => React.ReactNode|This will replace the content in the dropdown. If this is enabled, above options (value, onChange , etc) will not work. You have to handle everything You will need to handle the value and onChange options. and once you select an option, to close the dropdown, call the closeDropdown function |
+|renderPlaceholder|{ /** * render input as a pill * work with default select dropdown */ renderAsPill?: { minWidth?: number, maxWidth?: number }, /** * for custom renders */ renderCustomPill?: (onClear: () => void) => React.ReactNode }|Option to custom render the placeholder |
+|dropdownMinWidth|number||
+|dropdownMinHeight|number||
 
 
 ### options
@@ -238,6 +244,7 @@ Set this to false to indicate the field doesn't have a valid value
 
 
 
+show hide end of content message
 
 
 |type|
@@ -282,6 +289,8 @@ renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
 
 
 
+Option to add a new value if not available.
+You can enable this option and handle how you want to save the new item
 
 
 |type|
@@ -297,10 +306,108 @@ renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
 
 
 
+Option to add a classname for the dropdown
 
 
 |type|
 |-|
 |string|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+Spacing mode
+
+
+|type|
+|-|
+|SpacingMode|
+
+
+### onClear
+
+
+
+---
+
+
+
+Option to unselect
+
+
+|type|
+|-|
+|() => void|
+
+
+### renderCustomDropdownContent
+
+
+
+---
+
+
+
+This will replace the content in the dropdown.
+If this is enabled, above options (value, onChange , etc) will not work. You have to handle everything
+You will need to handle the value and onChange options.
+and once you select an option, to close the dropdown, call the closeDropdown function
+
+
+|type|
+|-|
+|(closeDropdown: () => void) => React.ReactNode|
+
+
+### renderPlaceholder
+
+
+
+---
+
+
+
+Option to custom render the placeholder
+
+
+|type|
+|-|
+|{ /** * render input as a pill * work with default select dropdown */ renderAsPill?: { minWidth?: number, maxWidth?: number }, /** * for custom renders */ renderCustomPill?: (onClear: () => void) => React.ReactNode }|
+
+
+### dropdownMinWidth
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|number|
+
+
+### dropdownMinHeight
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|number|
 
 

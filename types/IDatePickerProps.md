@@ -55,7 +55,9 @@ interface IDatePickerProps {
      * 
      * if value is false it will show the short name "Jan" ,"Feb" and ect
      */
-    showFullMonthName?: boolean
+    showFullMonthName?: boolean,
+
+    spacingMode?: SpacingMode
 }
 ```
 

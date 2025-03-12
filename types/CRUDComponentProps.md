@@ -42,7 +42,11 @@ interface CRUDComponentProps {
     /**
      * name of the entit, this will be used in notifications 
      */
-    entityName?: string
+    entityName?: string,
+    /**
+     * custom class name
+     */
+    className?:string 
 }
 ```
 

@@ -9,7 +9,7 @@
 
 ```tsx
 interface IDateRangePickerProps {
-    title: string,
+    title?: string,
     /**
      * start date of the range. Either a Date object or an ISO8601 string representation of a date
      */
@@ -18,10 +18,15 @@ interface IDateRangePickerProps {
      * end date of the range. Either a Date object or an ISO8601 string representation of a date
      */
     endDate: string | Date,
+
+    /**
+     * Option to pass selected preset
+     */
+    preset?: string
     /**
      * Callback that gets executed whenever a date range is selected/changed in the date picker
      */
-    onChange: (newStartDate: Date, newEndDate: Date) => void,
+    onChange: (newStartDate: string | Date, newEndDate: string | Date, preset?: string) => void,
     /**
      * Called when the calendar popup is closed
      */
@@ -55,6 +60,20 @@ interface IDateRangePickerProps {
      * this will set the max width and show a compact picker
      */
     compact?: boolean
+
+    spacingMode?: SpacingMode,
+
+    renderAsPill?: {
+        minWidth?: number,
+        maxWidth?: number
+    },
+
+    presets?: {
+        enable: boolean
+        customPresets?: DateRangePreset[],
+        renderPreset?: (preset: DateRangePreset, index: number, onSelectPreset: (preset: string) => void) => React.ReactNode,
+        parseRelativeDatesOnSelect?: boolean // if this is set to true, relative dates will be parsed to dates 
+    }
 }
 ```
 

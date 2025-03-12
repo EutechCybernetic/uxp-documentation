@@ -44,6 +44,7 @@ TODO: More Examples
 |inline|boolean|Set this to true to have multiple fields in a single horizontal line |
 |className|string|Any extra css classes to attach to the field |
 |backgroundColor|string|A background color to set for the field |
+|spacingMode|SpacingMode||
 
 
 ### inline
@@ -92,5 +93,20 @@ A background color to set for the field
 |type|
 |-|
 |string|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|SpacingMode|
 
 

@@ -29,6 +29,7 @@ import {Checkbox} from 'uxp/components';
 |labelStyles|React.CSSProperties|additional styles to pass to the label |
 |tabIndex|number|tab index. default is 0 |
 |readonly|boolean|mark as readonly |
+|spacingMode|SpacingMode||
 
 
 ### checked
@@ -189,5 +190,20 @@ mark as readonly
 |type|
 |-|
 |boolean|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|SpacingMode|
 
 

@@ -28,6 +28,8 @@ import {ToggleFilter} from 'uxp/components';
 |selectedBackgroundColor|string|background color for the selected tab default is white with box shadow |
 |selectedTextColor|string|text color for the selected tab/fill default is #424242 |
 |disableShadow|boolean|this will disable the box shadow from the selected tab/fill |
+|spacingMode|SpacingMode|Spacing mode |
+|renderAsDropdown|{ minWidth: number, renderAsPill?: { minWidth?: number, maxWidth?: number } }|This will render the dropdown if the width is less than the min width |
 
 
 ### options
@@ -176,5 +178,37 @@ this will disable the box shadow from the selected tab/fill
 |type|
 |-|
 |boolean|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+Spacing mode
+
+
+|type|
+|-|
+|SpacingMode|
+
+
+### renderAsDropdown
+
+
+
+---
+
+
+
+This will render the dropdown if the width is less than the min width
+
+
+|type|
+|-|
+|{ minWidth: number, renderAsPill?: { minWidth?: number, maxWidth?: number } }|
 
 

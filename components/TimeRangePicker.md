@@ -38,6 +38,7 @@ import {TimeRangePicker} from 'uxp/components';
 |endTime|string \| Date|End time . Either a Date object or an time string (Ex: 01:10:00 pm) |
 |onChange|(start: Date, end: Date) => void|Callback that gets executed whenever a time range is selected/changed in the time picker |
 |disableInput|boolean|Set to true to prevent a user from typing in a time |
+|spacingMode|SpacingMode||
 
 
 ### title
@@ -117,5 +118,20 @@ Set to true to prevent a user from typing in a time
 |type|
 |-|
 |boolean|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|SpacingMode|
 
 

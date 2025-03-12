@@ -44,7 +44,8 @@ interface FormProps {
     /**
      * callback function after saving 
      */
-    afterSave?: (savedRecord?: any) => void
+    afterSave?: (savedRecord?: any) => void,
+    formContainerStyles?: React.CSSProperties
 }
 ```
 

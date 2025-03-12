@@ -34,6 +34,7 @@ FormFeedback validInput>Form feedback ( valid )</FormFeedback>
 |-|-|-|
 |validInput|boolean||
 |className|string||
+|spacingMode|SpacingMode||
 
 
 ### validInput
@@ -64,5 +65,20 @@ FormFeedback validInput>Form feedback ( valid )</FormFeedback>
 |type|
 |-|
 |string|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|SpacingMode|
 
 

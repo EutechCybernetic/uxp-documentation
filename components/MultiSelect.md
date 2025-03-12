@@ -80,6 +80,7 @@ import {MultiSelect} from 'uxp/components';
 |hideClearButton|boolean||
 |hideDoneButton|boolean||
 |dropdownClassname|string||
+|spacingMode|SpacingMode||
 
 
 ### options
@@ -352,5 +353,20 @@ renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
 |type|
 |-|
 |string|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|SpacingMode|
 
 

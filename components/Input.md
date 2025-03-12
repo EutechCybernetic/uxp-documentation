@@ -35,6 +35,7 @@ import {Input} from 'uxp/components';
 |styles|React.CSSProperties|additional styles |
 |readOnly|boolean|mark input as read only |
 |tabIndex|number|tab index. default is 0 |
+|spacingMode|SpacingMode||
 
 
 ### type
@@ -291,5 +292,20 @@ tab index. default is 0
 |type|
 |-|
 |number|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|SpacingMode|
 
 

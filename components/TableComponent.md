@@ -48,6 +48,8 @@ const data = [
 |editColumn|{ enable: boolean, label?: string, renderColumn?: (item: any) => React.ReactNode, onEdit?: (item: any) => void, }|this adds a edit column in to the table |
 |deleteColumn|{ enable: boolean, label?: string, renderColumn?: (item: any) => React.ReactNode, onDelete?: (item: any) => Promise<void>, }|this adds a edit column in to the table |
 |minCellWidth|number||
+|onClickRow|(e: React.MouseEvent<HTMLDivElement>, item: any) => void||
+|onClickColumn|(e: React.MouseEvent<HTMLDivElement>, item: any, column: Column) => void||
 
 
 ### data
@@ -193,5 +195,35 @@ this adds a edit column in to the table
 |type|
 |-|
 |number|
+
+
+### onClickRow
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|(e: React.MouseEvent<HTMLDivElement>, item: any) => void|
+
+
+### onClickColumn
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|(e: React.MouseEvent<HTMLDivElement>, item: any, column: Column) => void|
 
 

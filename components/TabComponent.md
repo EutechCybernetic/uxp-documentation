@@ -39,6 +39,8 @@ import {TabComponent} from 'uxp/components';
 |tabs|Tab[]|tabs |
 |selected|string|selected tab id |
 |onChangeTab|(tab: string) => void|on change tab |
+|direction|'vertical' \| 'horizontal'|direction of tabs |
+|position|'top' \| 'bottom' \| 'left' \| 'right'|position of tabs |
 |styles|[TabComponentStyles](../types/TabComponentStyles.md)|tab component styles |
 
 
@@ -88,6 +90,38 @@ on change tab
 |type|
 |-|
 |(tab: string) => void|
+
+
+### direction
+
+
+
+---
+
+
+
+direction of tabs
+
+
+|type|
+|-|
+|'vertical' \| 'horizontal'|
+
+
+### position
+
+
+
+---
+
+
+
+position of tabs
+
+
+|type|
+|-|
+|'top' \| 'bottom' \| 'left' \| 'right'|
 
 
 ### styles

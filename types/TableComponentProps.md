@@ -53,7 +53,9 @@ interface TableComponentProps {
         renderColumn?: (item: any) => React.ReactNode,
         onDelete?: (item: any) => Promise<void>,
     }
-    minCellWidth?: number
+    minCellWidth?: number,
+    onClickRow?: (e: React.MouseEvent<HTMLDivElement>, item: any) => void
+    onClickColumn?: (e: React.MouseEvent<HTMLDivElement>, item: any, column: Column) => void
 }
 ```
 

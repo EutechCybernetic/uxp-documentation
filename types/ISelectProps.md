@@ -55,7 +55,7 @@ interface ISelectProps {
      * Set this to false to indicate the field doesn't have a valid value
      */
     isValid?: boolean,
-    // inputAttr?: any
+
     /**
      * show hide end of content message
      */
@@ -76,14 +76,58 @@ interface ISelectProps {
      */
     renderOption?: (item: any, key: number) => JSX.Element,
 
+    /**
+      * Option to add a new value if not available. 
+      * You can enable this option and handle how you want to save the new item
+      */
     addNewValues?: {
         enable: boolean,
         title: string,
         loadingTitle: string,
         onAddNewValue?: (value: string) => Promise<any>
     }
-
+    /**
+     * Option to add a classname for the dropdown 
+     */
     dropdownClassname?: string
+    /**
+     * Spacing mode 
+     */
+    spacingMode?: SpacingMode,
+
+    /**
+   * Option to unselect 
+   */
+    onClear?: () => void
+
+    /**
+    * This will replace the content in the dropdown. 
+    * If this is enabled, above options (value, onChange , etc) will not work. You have to handle everything 
+    * You will need to handle the value and onChange options. 
+    * and once you select an option, to close the dropdown, call the closeDropdown function 
+    */
+    renderCustomDropdownContent?: (closeDropdown: () => void) => React.ReactNode
+
+    /**
+     * Option to custom render the placeholder 
+     */
+    renderPlaceholder?: {
+        /**
+         * render input as a pill 
+         * work with default select dropdown
+         */
+        renderAsPill?: {
+            minWidth?: number,
+            maxWidth?: number
+        },
+        /**
+         * for custom renders 
+         */
+        renderCustomPill?: (onClear: () => void) => React.ReactNode
+    }
+
+    dropdownMinWidth?: number,
+    dropdownMinHeight?: number
 }
 ```
 

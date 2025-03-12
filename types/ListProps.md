@@ -9,13 +9,14 @@
 
 ```tsx
 interface ListProps {
-    title: string,
+    title: string | React.ReactNode,
     columns: Column[],
     defaultPageSize: number,
     data: {
         isPaginated?: boolean // getData function will return paginated data. Therefore that function will handle searching filtering and sorting etc. 
         getData: any[] | ((page?: number, pageSize?: number, query?: string, filters?: any) => Promise<{ items: any[] }>)
         getTotal?: (query?: string, filters?: any) => Promise<number>
+        isLoading?: boolean
     },
     search?: {
         enabled: boolean
@@ -33,7 +34,9 @@ interface ListProps {
         color?: string
     },
     onDeleteItem?: (item: any) => Promise<ActionResponse>,
-    minCellWidth?: number
+    minCellWidth?: number,
+    onClickRow?: (e: React.MouseEvent<HTMLDivElement>, item: any) => void
+    onClickColumn?: (e: React.MouseEvent<HTMLDivElement>, item: any, column: Column) => void
 }
 ```
 

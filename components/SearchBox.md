@@ -25,6 +25,7 @@ import {SearchBox} from 'uxp/components';
 |position|[IPosition](../types/IPosition.md)|position of search box |
 |placeholder|string|placeholder value |
 |autoFocus|boolean|input will be auto focused if true |
+|spacingMode|SpacingMode||
 
 
 ### value
@@ -137,5 +138,20 @@ input will be auto focused if true
 |type|
 |-|
 |boolean|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|SpacingMode|
 
 

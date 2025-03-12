@@ -55,6 +55,7 @@ import {DatePicker} from 'uxp/components';
 |hideLabels|boolean|this will hide the labels in the placeholder (calendar icon) |
 |hideInput|boolean|hide the input box |
 |showFullMonthName|boolean|show the full month name in the month selector dropdown default is true if value is false it will show the short name "Jan" ,"Feb" and ect |
+|spacingMode|SpacingMode||
 
 
 ### title
@@ -202,5 +203,20 @@ if value is false it will show the short name "Jan" ,"Feb" and ect
 |type|
 |-|
 |boolean|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|SpacingMode|
 
 

@@ -26,6 +26,7 @@ import {CRUDComponent} from 'uxp/components';
 |renderCustomEditView|[RenderCustomFormView](../types/RenderCustomFormView.md)|option to render a custom edit view |
 |disableViews|{ add?: boolean; edit?: boolean; delete?: boolean; }|option to disable views |
 |entityName|string|name of the entit, this will be used in notifications |
+|className|string|custom class name |
 
 
 ### list
@@ -133,6 +134,22 @@ option to disable views
 
 
 name of the entit, this will be used in notifications
+
+
+|type|
+|-|
+|string|
+
+
+### className
+
+
+
+---
+
+
+
+custom class name
 
 
 |type|

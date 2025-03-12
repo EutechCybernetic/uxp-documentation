@@ -28,6 +28,11 @@ import {SideBar} from 'uxp/components';
 |onToggleSidebar|() => void||
 |onHoverSidebar|(expanded: boolean) => void||
 |className|string||
+|logo|string||
+|collapsedLogo|string||
+|renderLogoWithNewStyles|boolean||
+|styles|React.CSSProperties||
+|loading|boolean||
 
 
 ### items
@@ -163,5 +168,80 @@ import {SideBar} from 'uxp/components';
 |type|
 |-|
 |string|
+
+
+### logo
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|string|
+
+
+### collapsedLogo
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|string|
+
+
+### renderLogoWithNewStyles
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|boolean|
+
+
+### styles
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|React.CSSProperties|
+
+
+### loading
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|boolean|
 
 

@@ -28,6 +28,8 @@ import {DynamicForm} from 'uxp/components';
 |cancelButtonLabel|string||
 |hideCancelButton|boolean||
 |isLoading|boolean||
+|formContainerStyles|React.CSSProperties||
+|renderOptions|{ renderStyle: 'standard' \| 'tabs' \| 'wizard', direction?: 'vertical' \| 'horizontal' // only applicable to tabs and wizard tabBackgroundColor?: string, tabTextColor?: string, activeTabBackgroundColor?: string, activeTabTextColor?: string, errorTabBackgroundColor?: string, errorTabTextColor?: string, disabledTabBackgroundColor?: string, disabledTabTextColor?: string, previousButtonLabel?: string, nextButtonLabel?: string }||
 
 
 ### formStructure
@@ -163,5 +165,35 @@ import {DynamicForm} from 'uxp/components';
 |type|
 |-|
 |boolean|
+
+
+### formContainerStyles
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|React.CSSProperties|
+
+
+### renderOptions
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|{ renderStyle: 'standard' \| 'tabs' \| 'wizard', direction?: 'vertical' \| 'horizontal' // only applicable to tabs and wizard tabBackgroundColor?: string, tabTextColor?: string, activeTabBackgroundColor?: string, activeTabTextColor?: string, errorTabBackgroundColor?: string, errorTabTextColor?: string, disabledTabBackgroundColor?: string, disabledTabTextColor?: string, previousButtonLabel?: string, nextButtonLabel?: string }|
 
 

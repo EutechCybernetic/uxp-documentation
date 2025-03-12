@@ -2,7 +2,7 @@
 
 
 
-This is a custom hook to get the debounced values
+A custom hook that returns a debounced value and a function to update it programmatically.
 
 
 
@@ -19,16 +19,13 @@ import {useDebounce} from 'uxp/components';
 
 
 ```tsx
-let [query, setQuery] = useState("")
- let debouncedQuery = useDebounce(query)
+const [debounced, updateValue] = useDebounceAdvanced(query);
 ```
 
 
 
 ```tsx
-with timeout
-
- let [query, setQuery] = useState("")
- let debouncedQuery = useDebounce(query, 500)
+const [debounced, updateValue] = useDebounceAdvanced(query, 500);
+updateValue('manually set value');
 ```
 

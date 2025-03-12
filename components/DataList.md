@@ -113,7 +113,7 @@ Using other props
 |showFooter|boolean|show/hide footer (scroll buttons) |
 |scrollStep|number|mun of rows to scroll |
 |showEndOfContent|boolean|show/hide end of content message |
-|onItemsLoad|(total: number, loaded: number) => void|this function will be called every time list get updated this will return total number of items (function should return the total count) and loaded items count |
+|onItemsLoad|(total: number, loaded: number, items?: any[]) => void|this function will be called every time list get updated this will return total number of items (function should return the total count) and loaded items count |
 |renderNoItems|() => JSX.Element||
 
 
@@ -290,7 +290,7 @@ this will return total number of items (function should return the total count) 
 
 |type|
 |-|
-|(total: number, loaded: number) => void|
+|(total: number, loaded: number, items?: any[]) => void|
 
 
 ### renderNoItems

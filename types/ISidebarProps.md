@@ -17,7 +17,12 @@ interface ISidebarProps {
     expanded: boolean,
     onToggleSidebar: () => void,
     onHoverSidebar: (expanded: boolean) => void,
-    className?:string
+    className?: string
+    logo?: string,
+    collapsedLogo?: string,
+    renderLogoWithNewStyles?: boolean,
+    styles?: React.CSSProperties,
+    loading?: boolean
 }
 ```
 

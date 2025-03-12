@@ -83,6 +83,8 @@ interface IMultiSelectProps {
     hideDoneButton?: boolean
 
     dropdownClassname?: string
+
+    spacingMode?: SpacingMode
 }
 ```
 

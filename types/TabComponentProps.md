@@ -21,6 +21,17 @@ interface TabComponentProps {
      * on change tab 
      */
     onChangeTab: (tab: string) => void,
+
+    /**
+     * direction of tabs 
+     */
+    direction?: 'vertical' | 'horizontal',
+
+    /**
+     * position of tabs 
+     */
+    position?: 'top' | 'bottom' | 'left' | 'right'
+
     /**
      * tab component styles 
      */

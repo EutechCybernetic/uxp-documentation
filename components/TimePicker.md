@@ -38,6 +38,7 @@ import {TimePicker} from 'uxp/components';
 |onChange|(date: Date) => void|Callback that gets executed whenever a time is selected/changed in the time picker |
 |disableInput|boolean|Set to true to prevent a user from typing in a date |
 |hideLabels|boolean|hide the clock icon |
+|spacingMode|SpacingMode||
 
 
 ### title
@@ -118,5 +119,20 @@ hide the clock icon
 |type|
 |-|
 |boolean|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|SpacingMode|
 
 

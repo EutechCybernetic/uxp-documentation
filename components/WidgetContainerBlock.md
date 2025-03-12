@@ -27,6 +27,14 @@ import {WidgetContainerBlock} from 'uxp/components';
 |openMenu|() => void||
 |toolbarItems|IToolbarItem[]||
 |minWidth|number||
+|numberOfColumns|number||
+|onGridResize|(width: number, height: number, cellWidth: number, margin: [number, number]) => void||
+|margin|number||
+|padding|number||
+|hideDefaultEditToolbar|boolean||
+|onWidgetPropsChange|(id: string, props: any) => void||
+|onResizeStart|() => void||
+|onResizeEnd|() => void||
 
 
 ### widgets
@@ -147,5 +155,125 @@ import {WidgetContainerBlock} from 'uxp/components';
 |type|
 |-|
 |number|
+
+
+### numberOfColumns
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|number|
+
+
+### onGridResize
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|(width: number, height: number, cellWidth: number, margin: [number, number]) => void|
+
+
+### margin
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|number|
+
+
+### padding
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|number|
+
+
+### hideDefaultEditToolbar
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|boolean|
+
+
+### onWidgetPropsChange
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|(id: string, props: any) => void|
+
+
+### onResizeStart
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|() => void|
+
+
+### onResizeEnd
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|() => void|
 
 

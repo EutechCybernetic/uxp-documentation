@@ -30,6 +30,7 @@ import {TextArea} from 'uxp/components';
 |tabIndex|number|tab index. default is 0 |
 |rows|number|number of rows |
 |cols|number|number of cols |
+|spacingMode|SpacingMode||
 
 
 ### value
@@ -206,5 +207,20 @@ number of cols
 |type|
 |-|
 |number|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|SpacingMode|
 
 

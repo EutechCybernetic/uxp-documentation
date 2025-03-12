@@ -31,6 +31,8 @@ import {Label} from 'uxp/components';
 |className|string||
 |inline|boolean||
 |styles|React.CSSProperties||
+|spacingMode|SpacingMode||
+|icon|string||
 
 
 ### labelFor
@@ -91,5 +93,35 @@ import {Label} from 'uxp/components';
 |type|
 |-|
 |React.CSSProperties|
+
+
+### spacingMode
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|SpacingMode|
+
+
+### icon
+
+
+
+---
+
+
+
+
+
+|type|
+|-|
+|string|
 
 
