@@ -1,354 +1,192 @@
-# Migrating to V5: From XML Views to React/UXP
+# V5 App Architecture
 
-This guide explains how to migrate your old XML-based views to the new React/UXP v5 architecture.
-
----
-
-## Overview
-
-In v5, views are no longer defined in XML files. Instead, you create React components that are registered via configuration. This provides:
-
-- **Type safety** with TypeScript
-- **Reusable components** with modern React patterns
-- **Better developer experience** with hot reload and modern tooling
-- **Consistent UI** using UXP component library
+Understanding how v5 apps work: folder structure, routing, navigation, and configuration.
 
 ---
 
-## 1. Creating a New V5 App Project
+## Folder Structure
 
-> **Note:** This section is a work in progress. Instructions for scaffolding a new v5 app will be added soon.
-
-Once you have your v5 app project scaffolded, you'll have a `Resources/views` folder. This is where all your React code lives.
-
----
-
-## 2. Folder Structure
-
-Your v5 app should follow this standard structure (based on the Location 5.0 app):
+Your app's `Resources/views/` folder structure:
 
 ```
 Resources/views/
 ├── src/
-│   ├── views/              # Main view components (pages)
+│   ├── views/                      # View components (pages)
 │   │   ├── portfolio/
-│   │   │   ├── PortfolioView.tsx
-│   │   │   └── PortfolioView.scss
-│   │   ├── dashboard/
+│   │   │   └── PortfolioView.tsx
 │   │   ├── details/
+│   │   │   └── DetailsView.tsx
 │   │   └── settings/
+│   │       └── SettingsView.tsx
 │   │
-│   ├── components/         # Reusable components
-│   │   ├── location-details/
-│   │   ├── site-summary/
-│   │   └── settings/
+│   ├── components/                 # Reusable components
+│   │   ├── location-card/
+│   │   └── location-summary/
 │   │
-│   ├── forms/             # Form components
-│   │   ├── location-form/
-│   │   ├── holiday-form/
-│   │   └── document-uploader/
+│   ├── forms/                      # Form components
+│   │   └── location-form/
 │   │
-│   ├── services.ts        # API service configurations
-│   ├── index.tsx          # Registration entry point
-│   ├── utils.ts           # Utility functions
-│   ├── types.ts           # TypeScript types
-│   ├── uxp.ts             # UXP re-exports
-│   └── global.scss        # Global styles
+│   ├── services.ts                 # API service configurations
+│   ├── types.ts                    # TypeScript types
+│   ├── utils.ts                    # Utility functions
+│   └── index.tsx                   # Registration entry point
 │
-├── dist/                  # Build output
-├── package.json           # Dependencies and scripts
-├── webpack.config.js      # Build configuration
-├── tsconfig.json          # TypeScript configuration
-├── bundle.json            # Bundle metadata
-└── localization.json      # Translation strings
+├── dist/                           # Build output
+├── bundle.json                     # Bundle metadata
+├── package.json                    # Dependencies
+└── index.html                      # Development environment
 ```
 
-### Key Files
-
-- **src/views/** - Each subdirectory is a complete view (page) with its own component and styles
-- **src/components/** - Shared components used across multiple views
-- **src/forms/** - Form components (often used in modals/slide-ins)
-- **src/services.ts** - Centralized API service configurations (see [data-fetching.md](./data-fetching.md))
-- **src/index.tsx** - Where you register all views and widgets
+**Note:** `index.html` is only needed for standalone local development/testing. When developing apps, components are rendered through the iviva application.
 
 ---
 
-## 3. Creating a View
+## How V5 Apps Work
 
-A view is a React component that represents a full page in your app.
+### 1. Registration (src/index.tsx)
 
-### Example: Portfolio View
-
-```typescript
-// src/views/portfolio/PortfolioView.tsx
-import React, { FunctionComponent } from "react";
-import { useUXPContext, ObjectSearchComponent } from "uxp/components";
-import { LocationServices } from "../../services";
-import './PortfolioView.scss';
-
-interface PortfolioViewProps {
-    uxpContext?: IContextProvider;
-}
-
-export const PortfolioView: FunctionComponent<PortfolioViewProps> = (props) => {
-    const uxpContext = useUXPContext();
-
-    const getAll = async (page, pageSize, query, filters, sort) => {
-        const { data } = await executeConfig(
-            uxpContext,
-            LocationServices.getAll({ page, pageSize, q: query, ...filters })
-        );
-        return { items: data || [] };
-    };
-
-    return (
-        <div className="portfolio-view">
-            <ObjectSearchComponent
-                data={getAll}
-                idField="LocationKey"
-                columns={[/* column definitions */]}
-                pageSize={50}
-            />
-        </div>
-    );
-};
-```
-
-### View Conventions
-
-- Each view goes in its own folder under `src/views/`
-- Name the component file after the view (e.g., `PortfolioView.tsx`)
-- Include a styles file (e.g., `PortfolioView.scss`)
-- Export the component so it can be registered
-- Use `useUXPContext()` hook to access UXP context
-
----
-
-## 4. Creating Components
-
-Components are reusable pieces that can be used across multiple views.
-
-```typescript
-// src/components/site-summary/SiteSummary.tsx
-import React, { FunctionComponent } from "react";
-import { InfoCardGroup, useExecuteRequest } from "uxp/components";
-import { LocationTypeServices } from "../../services";
-
-interface SiteSummaryProps {
-    locationKey?: string;
-}
-
-export const SiteSummaryComponent: FunctionComponent<SiteSummaryProps> = (props) => {
-    const { data: stats, loading } = useExecuteRequest(
-        LocationTypeServices.getAllWithCounts()
-    );
-
-    if (loading) return <div>Loading...</div>;
-
-    return (
-        <InfoCardGroup
-            cards={stats.map(s => ({
-                label: s.LocationType,
-                value: s.Count
-            }))}
-        />
-    );
-};
-```
-
----
-
-## 5. Registering Views & Widgets
-
-All views and widgets must be registered in `src/index.tsx`.
+Register your views as UI components:
 
 ```typescript
 // src/index.tsx
-import { registerUI, registerWidget, enableLocalization } from './uxp';
-import { DashboardView } from './views/dashboard/DashboardView';
-import { PortfolioView } from './views/portfolio/PortfolioView';
-import { DetailsView } from './views/details/DetailsView';
-import { SettingsView } from './views/settings/SettingsView';
-import './global.scss';
+import PortfolioView from './views/portfolio/PortfolioView';
+import DetailsView from './views/details/DetailsView';
 
-// Register views (pages)
+// Register views as UI
 registerUI({
-    id: "dashboard-view",
-    component: DashboardView
-});
-
-registerUI({
-    id: "portfolio-view",
+    id: "location-portfolio",
     component: PortfolioView
 });
 
 registerUI({
-    id: "details-view",
+    id: "location-details",
     component: DetailsView
 });
-
-registerUI({
-    id: "settings-view",
-    component: SettingsView
-});
-
-// Register dashboard widgets (optional)
-registerWidget({
-    id: 'location-map',
-    widget: LocationMapWidget
-});
-
-// Enable localization
-enableLocalization();
 ```
 
-**Key Points:**
-- Use `registerUI()` for full-page views
-- Use `registerWidget()` for dashboard widgets
-- The `id` is used to reference the view in `Configuration.yml`
-- Call `enableLocalization()` to enable the `$L()` function
+### 2. Configuration (configuration.yml)
 
----
-
-## 6. Configuration.yml
-
-The `Configuration.yml` file connects your registered views to routes and navigation.
+Create `configuration.yml` in your **app root folder** (e.g., `/apps/iviva.dx/Location/5.0/configuration.yml`):
 
 ```yaml
-# Location/5.0/Configuration.yml
-
+# App Metadata
 appId: Location
 bundleId: iviva-location-app
 bundleJsonPath: /Resources/views/bundle.json
 scripts:
   - "/Resources/views/dist/main.js"
-baseRoute: /location
+baseRoute: /location # base route, this will generate view/location as the final route
 
+# navigation links for the app, these will show on the header
 navigationLinks:
   - label: Dashboard
     icon: ""
-    link: /dashboard
-    pageId: ui/dashboard-view    # References registerUI id
+    link: /dashboard # route (view/location/dashobard)
     userGroups: []
     appRoles: []
+    pageId: ui/dashboard-view # component to render when navigate to the above route (format <type>/<component id>. type is either widget or ui based on how you registered the component. component id is the id you registed the component with)
     children: []
 
   - label: Portfolios
     icon: ""
     link: /portfolios
-    pageId: ui/portfolio-view
     userGroups: []
     appRoles: []
     children: []
+    pageId: ui/portfolio-view
+
+  - label: Holidays
+    icon: ""
+    link: /holidays
+    userGroups: []
+    appRoles: []
+    children: []
+    pageId: ui/holiday-view
+
+  - label: Reports
+    icon: ""
+    link: /reports
+    userGroups: []
+    appRoles: []
+    children: []
+    pageId: ui/reports-view
+
+  - label: Documents
+    icon: ""
+    link: /documents
+    userGroups: []
+    appRoles: []
+    children: []
+    pageId: ui/document-view
 
   - label: Settings
     icon: ""
     link: /settings
-    pageId: ui/settings-view
     userGroups: []
     appRoles: []
     children: []
+    pageId: ui/settings-view
 
+# other routes that not going to the navigation. Like details pages, etc.
 otherRoutes:
-  "/details/:locationKey":
-    pageId: ui/details-view
+  "/details/:locationKey": # route (view/location/details/1) 
+    pageId: ui/details-view # same as in navigation links, component to render when navigate to the route
     userGroups: []
     appRoles: []
     title: ":name"
-
+  "/layout/:layoutKey":
+    pageId: ui/layout-view
+    userGroups: []
+    appRoles: []
+    title: ":name"
   "/":
-    redirectTo: "/dashboard"
+    redirectTo: "/dashboard" # to redirect view/location to view/location/dashboard
 ```
-
-### Configuration Structure
-
-**Top-level properties:**
-- `appId` - Your app identifier
-- `bundleId` - Bundle identifier for the app
-- `bundleJsonPath` - Path to bundle.json
-- `scripts` - JavaScript files to load (your webpack output)
-- `baseRoute` - Base URL path for your app (e.g., `/location`)
-
-**navigationLinks:**
-- Creates sidebar navigation items
-- `pageId` format: `ui/{id}` where `{id}` matches your `registerUI()` id
-- `link` is relative to `baseRoute`
-- `userGroups` and `appRoles` control access permissions
-- Supports nested `children` for hierarchical navigation
-
-**otherRoutes:**
-- Define routes that don't appear in navigation (like details pages)
-- Supports dynamic parameters (`:locationKey`)
-- Use `redirectTo` for default route redirects
 
 ---
 
-## 7. How Routes & Rendering Work
+## How Routing Works
 
-Here's a simplified flow of how v5 routes and renders your views:
+When you navigate to a URL, the framework:
 
-1. **User navigates** to `/view/location/portfolios`
+1. Matches the URL against routes from `navigationLinks` and `otherRoutes` in `configuration.yml` (combined with `baseRoute`)
+2. Finds the `pageId` from the matched route
+3. Looks up the component registered with that ID (format: `<type>/<component-id>`)
+4. Renders the component with URL parameters passed as props
 
-2. **Framework matches route:**
-   - Looks at `Configuration.yml`
-   - Finds `baseRoute: /location`
-   - Matches `/portfolios` to navigation link
-   - Gets `pageId: ui/portfolio-view`
-
-3. **Framework loads component:**
-   - Looks for registered UI with id `portfolio-view`
-   - Finds `PortfolioView` component registered in `index.tsx`
-   - Loads required scripts if not already loaded
-
-4. **Framework renders:**
-   - Renders `BaseLayout` with header and sidebar
-   - Passes `uxpContext` to your component
-   - Injects route parameters as props
-   - Your component renders with full access to UXP components and context
-
-**Dynamic Routes:**
-
-For routes like `/details/:locationKey`:
-- Parameters are extracted from URL (e.g., `locationKey: "123"`)
-- Passed to your component as props
-- Accessible via `useRouterContext()` hook
+**Example:**
+- URL: `/view/location/details/LOC-123`
+- Route: `baseRoute: /location` + `otherRoutes["/details/:locationKey"]`
+- pageId: `ui/details-view`
+- Renders: Component registered as `window.registerUI({ id: "details-view", ... })`
+- Props: `{ uxpContext, locationKey: "LOC-123" }`
 
 ---
 
-## 8. Building Your App
+## How Navigation Works
 
-```bash
-# Development build with watch
-npm run watch
+Navigation links from `configuration.yml` render in the **header** (horizontal navigation).
 
-# Production build
-npm run build
+```yaml
+navigationLinks:
+  - label: Dashboard
+    link: /dashboard
+    pageId: ui/dashboard-view
 ```
 
-The output goes to `dist/main.js`, which is referenced in `Configuration.yml`.
+These appear as navigation items in the header middle section. Clicking navigates to the link and renders the component specified by `pageId`.
+
+Use `userGroups` and `appRoles` to control visibility based on permissions.
+
+---
+
+**See Location 5.0 app** (`/apps/iviva.dx/Location/5.0/`) for complete configuration.yml example and implementation.
 
 ---
 
 ## Next Steps
 
-- **[Data Fetching](./data-fetching.md)** - Learn how to fetch data using service configurations
-- **UXP Component Library** - Explore available components (ObjectSearchComponent, DataGrid, Forms, etc.)
-- **Theming** - Access theme colors via `uxpContext.theme`
-- **Localization** - Use `uxpContext.$L('key')` for translations
-
----
-
-## Quick Migration Checklist
-
-- [ ] Create v5 app project structure
-- [ ] Define folder structure (views, components, forms)
-- [ ] Create service configurations in `services.ts`
-- [ ] Build view components
-- [ ] Register views in `index.tsx`
-- [ ] Configure routes in `Configuration.yml`
-- [ ] Add navigation links
-- [ ] Build and test
-
----
-
-**Remember:** Start small. Migrate one view at a time. Use the Location app as a reference example.
+- [Core Components](./core-components.md) - UXP components for building views
+- [Data Fetching](./data-fetching.md) - Service configurations for API calls
+- [Events & Synchronization](./events-and-synchronization.md) - Keep views synchronized
+- [Building & Deployment](./building-deployment.md) - Deploy your app

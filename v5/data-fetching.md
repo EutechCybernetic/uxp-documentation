@@ -1,37 +1,31 @@
-# Data Fetching in UXP v5
+# Data Fetching
 
-New hooks and functions for executing API requests with centralized service configurations.
+Centralized service configurations with hooks for executing API requests.
 
 ---
 
-## Why Use This Pattern?
+## Why This Pattern?
 
-Instead of writing this in every component:
+Instead of manual state management in every component:
 ```typescript
 const [loading, setLoading] = useState(false);
 const [data, setData] = useState([]);
 const [error, setError] = useState(null);
-// ... manual API calls and state management
+// ... manual API calls
 ```
 
-You write this:
+Use this:
 ```typescript
 const { loading, data, error } = useExecuteRequest(LocationServices.getAll());
 ```
 
-**Benefits:**
-- **DRY:** Define API calls once, use everywhere
-- **Type-safe:** Full TypeScript support with generics
-- **Auto state management:** Loading, data, error handled automatically
-- **Built-in features:** Debouncing, polling, caching, data transformation
-- **Centralized:** All API definitions in one place
-- **Testable:** Easy to mock service configurations
+**Benefits:** DRY, type-safe, auto state management, built-in debouncing/polling
 
 ---
 
-## Creating Service Configurations
+## Service Configurations
 
-Create a `services.ts` file to define all your API calls:
+Define all API calls in `services.ts`:
 
 ```typescript
 // src/services.ts
@@ -45,80 +39,74 @@ export const LocationServices = {
     parameters: params,
     options: { json: true },
     defaultValue: []
-  }),
+  })
+};
 
-  getDetails: (key: string): ExecuteServiceConfig => ({
+export const LocationTypeServices = {
+  getAll: (): ExecuteServiceConfig => ({
     type: 'service',
     app: 'Location',
-    service: 'Location:Details',
-    parameters: { key },
+    service: 'LocationType:All',
+    parameters: {
+      __sort__: 'SortOrderValue',
+      __sortorder__: 'asc'
+    },
     options: { json: true },
-    extractData: [0],           // Extract first item
-    defaultValue: null
+    defaultValue: []
   }),
 
-  create: (location): ExecuteServiceConfig => ({
+  create: (locationType: string): ExecuteServiceConfig => ({
     type: 'service',
     app: 'Location',
-    service: 'Location:Create',
-    parameters: location,
+    service: 'LocationType:Create',
+    parameters: { LocationType: locationType },
     options: { json: true }
-  })
-};
+  }),
 
-export const StaticDataServices = {
-  getTimeZones: (): ExecuteServiceConfig => ({
+  update: (locationType: LocationType): ExecuteServiceConfig => ({
     type: 'service',
-    app: 'System',
-    service: 'GetStaticDataFromApp',
-    parameters: { app: 'System', key: 'Timezones' },
-    options: { json: true },
-    defaultValue: [],
-    transformData: (data) => toJSON(data, [])  // Parse JSON
+    app: 'Location',
+    service: 'LocationType:Update',
+    parameters: {
+      LocationTypeKey: locationType.LocationTypeKey,
+      LocationType: locationType.LocationType
+    },
+    options: { json: true }
+  }),
+
+  delete: (locationType: LocationType): ExecuteServiceConfig => ({
+    type: 'service',
+    app: 'Location',
+    service: 'LocationType:DeleteEx',
+    parameters: {
+      LocationTypeKey: locationType.LocationTypeKey
+    },
+    options: {}
   })
 };
 ```
 
-### Configuration Types
+### Config Types
 
-| Type | Use For | Example |
-|------|---------|---------|
-| `service` | Lucy services | `app: 'Location', service: 'Location:GetAll'` |
-| `action` | Lucy model actions | `model: 'Location', action: 'GetAll'` |
-| `microservice` | Microservice calls | `serviceName: 'analytics', route: '/metrics'` |
-| `api` | Direct HTTP calls | `url: 'https://api.example.com/data'` |
-| `query` | Lucy queries | `query: 'SELECT * FROM Locations'` |
-| `collection` | Lucy collections | `model: 'Location', collection: 'All'` |
+| Type | Use For |
+|------|---------|
+| `service` | Lucy services: `app: 'Location', service: 'Location:GetAll'` |
+| `action` | Model actions: `model: 'Location', action: 'GetAll'` |
+| `microservice` | Microservices: `serviceName: 'analytics', route: '/metrics'` |
+| `api` | Direct HTTP: `url: 'https://api.example.com/data'` |
 
-### Key Configuration Options
+### Key Options
 
-**`defaultValue`** - Fallback when data is null or on error
-```typescript
-defaultValue: []      // For arrays
-defaultValue: null    // For single objects
-defaultValue: 0       // For numbers
-```
-
-**`extractData`** - Extract specific data from response
-```typescript
-extractData: 'locations'              // response.locations
-extractData: [0]                      // response[0]
-extractData: [0, 'items']             // response[0].items
-extractData: 'result.data'            // response.result.data
-extractData: (data) => data?.result   // Custom function
-```
-
-**`transformData`** - Transform data after extraction
-```typescript
-transformData: (data) => toJSON(data, [])
-transformData: (data) => data.map(item => ({ ...item, parsed: toJSON(item.config, {}) }))
-```
+- **defaultValue** - Fallback when data is null or error
+- **extractData** - Extract specific data: `[0]`, `'items'`, `[0, 'items']`
+- **transformData** - Transform data after extraction
 
 ---
 
-## Three Ways to Execute Configs
+## Three Ways to Execute
 
 ### 1. useExecuteRequest Hook
+
 **Use when:** Component needs loading/data/error state
 
 ```typescript
@@ -128,25 +116,25 @@ const { loading, data, error } = useExecuteRequest(
 );
 
 // Execute when dependency changes
-const { loading, data } = useExecuteRequest(
-  LocationServices.getDetails(locationKey),
-  { dependencies: [locationKey] }
+const { loading, data: locationTypes } = useExecuteRequest(
+  LocationTypeServices.getAll(),
+  { dependencies: [] }
 );
 
-// Manual execution with state updates
+// Manual execution
 const { loading, execute } = useExecuteRequest(
-  LocationServices.create({}),
+  LocationTypeServices.create(''),
   { autoExecute: false }
 );
-await execute(formData, true);  // true = update state
+await execute({ LocationType: 'Building' }, true);
 
-// Debouncing for search
+// With debouncing
 const { data } = useExecuteRequest(
   LocationServices.getAll({ q: searchQuery }),
   { dependencies: [searchQuery], debounce: 500 }
 );
 
-// Polling
+// With polling
 const { data } = useExecuteRequest(
   MetricsServices.getCurrent(),
   { polling: 5000 }  // Refresh every 5s
@@ -154,121 +142,64 @@ const { data } = useExecuteRequest(
 ```
 
 ### 2. executeConfig Function
-**Use when:** Callbacks, event handlers, no state management needed
+
+**Use when:** Callbacks, event handlers, no state needed
 
 ```typescript
 import { executeConfig, useUXPContext } from 'uxp/components';
 
 const context = useUXPContext();
 
-// In ObjectSearchComponent callback
+// ObjectSearchComponent callback
 const getAll = async (page, pageSize, query, filters) => {
   const { data, error } = await executeConfig(
     context,
     LocationServices.getAll({ page, pageSize, q: query, ...filters })
   );
 
-  if (error) {
-    console.error('Failed:', error);
-    return { items: [] };
-  }
-
+  if (error) return { items: [] };
   return { items: data || [] };
 };
 
-// In event handler
-const handleDelete = async (key) => {
-  const result = await executeConfig(
+// Event handler
+const handleDelete = async (item) => {
+  const { error } = await executeConfig(
     context,
-    LocationServices.delete(key)
+    LocationTypeServices.delete(item)
   );
-
-  if (result.error) {
-    toast.error(result.errorMessage);
-    return;
+  if (error) {
+    toast.error('Failed to delete');
+  } else {
+    toast.success('Deleted successfully');
   }
-
-  toast.success('Deleted successfully!');
 };
 ```
 
 ### 3. useExecuteRequestCallback Hook
-**Use when:** Need stable callback function with dynamic parameters
+
+**Use when:** Need stable callback with dynamic parameters
 
 ```typescript
-// For autocomplete/search components
+// For search/autocomplete
 const searchLocations = useExecuteRequestCallback(
-  LocationServices.getAll({ page: 1, pageSize: 50 })
+  LocationServices.getAll()
 );
 
 const handleSearch = async (query) => {
-  const { data, error } = await searchLocations({ q: query });
+  const { data } = await searchLocations({ q: query });
   return data || [];
 };
-
-// For processing with custom logic
-const loadStats = useExecuteRequestCallback(
-  LocationTypeServices.getAllWithCounts()
-);
-
-const processStats = useCallback(async () => {
-  setLoading(true);
-  const { data: stats } = await loadStats();
-  // Process stats...
-  setLoading(false);
-}, []);
 ```
 
 ---
 
 ## Quick Reference
 
-| Tool | Returns | State Updates | Use Case |
-|------|---------|---------------|----------|
-| `useExecuteRequest` | `{ loading, data, error, execute, refresh, reset }` | ✅ Automatic | Component data loading |
-| `executeConfig` | `Promise<{ data, error, errorMessage }>` | ❌ None | Callbacks, event handlers |
-| `useExecuteRequestCallback` | `(params) => Promise<{ data, error }>` | ❌ None | Stable callbacks with dynamic params |
-
-### When to Use What
-
-```typescript
-// ✅ Component data loading
-const { loading, data } = useExecuteRequest(LocationServices.getAll());
-
-// ✅ ObjectSearchComponent callback
-const getData = async (page, size) => {
-  const { data } = await executeConfig(context, LocationServices.getAll({ page, size }));
-  return { items: data };
-};
-
-// ✅ Search/autocomplete with dynamic params
-const search = useExecuteRequestCallback(LocationServices.search());
-const results = await search({ q: 'query' });
-```
-
----
-
-## Override at Runtime
-
-Override service-level configs when needed:
-
-```typescript
-const { data } = useExecuteRequest(
-  LocationServices.getAll(),
-  {
-    extractData: 'customPath',           // Override extractData
-    transformData: (d) => customFormat(d), // Override transformData
-    defaultValue: []                      // Override defaultValue
-  }
-);
-
-// Same for executeConfig
-const { data } = await executeConfig(
-  context,
-  LocationServices.getAll(),
-  { extractData: 'custom', transformData: formatter }
-);
-```
+| Tool | State Updates | Use Case |
+|------|---------------|----------|
+| `useExecuteRequest` | ✅ Auto | Component data loading |
+| `executeConfig` | ❌ None | Callbacks, event handlers |
+| `useExecuteRequestCallback` | ❌ None | Stable callbacks with params |
 
 ---
 
@@ -276,35 +207,24 @@ const { data } = await executeConfig(
 
 ```typescript
 import { useExecuteRequest, executeConfig, useUXPContext } from 'uxp/components';
-import { LocationServices } from './services';
+import { LocationTypeServices } from './services';
 
-function LocationManager() {
+function LocationTypeManager() {
   const context = useUXPContext();
 
   // Auto-load on mount
-  const { loading, data: locations, refresh } = useExecuteRequest(
-    LocationServices.getAll()
+  const { loading, data: locationTypes, refresh } = useExecuteRequest(
+    LocationTypeServices.getAll()
   );
-
-  // Manual execution
-  const { execute: createLocation } = useExecuteRequest(
-    LocationServices.create({}),
-    { autoExecute: false }
-  );
-
-  // Create handler
-  const handleCreate = async (formData) => {
-    const result = await createLocation(formData, true);
-    if (!result.error) {
-      toast.success('Created!');
-      refresh(true);
-    }
-  };
 
   // Delete handler
-  const handleDelete = async (key) => {
-    const result = await executeConfig(context, LocationServices.delete(key));
-    if (!result.error) {
+  const handleDelete = async (item) => {
+    const { error } = await executeConfig(
+      context,
+      LocationTypeServices.delete(item)
+    );
+
+    if (!error) {
       toast.success('Deleted!');
       refresh(true);
     }
@@ -314,10 +234,12 @@ function LocationManager() {
 
   return (
     <div>
-      {locations?.map(loc => (
-        <div key={loc.LocationKey}>
-          {loc.LocationName}
-          <button onClick={() => handleDelete(loc.LocationKey)}>Delete</button>
+      {locationTypes?.map(type => (
+        <div key={type.LocationTypeKey}>
+          {type.LocationType}
+          <button onClick={() => handleDelete(type)}>
+            Delete
+          </button>
         </div>
       ))}
     </div>
@@ -327,4 +249,12 @@ function LocationManager() {
 
 ---
 
-That's it! Define your services once, use them everywhere with type safety and automatic state management. 🚀
+**See Location 5.0 app** (`/apps/iviva.dx/Location/5.0/Resources/views/src/services.ts`) for complete service configuration examples.
+
+---
+
+## Next Steps
+
+- [Core Components](./core-components.md) - ObjectSearchComponent and other UXP components
+- [Events & Synchronization](./events-and-synchronization.md) - Keep views synchronized
+- [Using External Components](./using-external-components.md) - Use components from other apps
