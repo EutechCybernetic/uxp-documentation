@@ -1,157 +1,47 @@
 # SearchBox
 
-
-
 A searchbox component
 
 
 
 ## Installation
 
+```tsx
+import { SearchBox } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {SearchBox} from 'uxp/components';
+const SearchBox: React.ForwardRefExoticComponent<React.RefAttributes<ISearchBoxInstanceProps> & ISearchBoxProps>
 ```
 
 ## Properties
 
-|Name|Type|Description|
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|value|string|Yes|-|-|
+|onChange|(newValue: string) => void|Yes|-|-|
+|className|string|No|-|-|
+|collapsed|boolean|No|-|-|
+|position|[IPosition](../types/IPosition.md)|No|-|-|
+|placeholder|string|No|-|-|
+|autoFocus|boolean|No|-|-|
+|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
+
+## Ref Handlers
+
+Available methods through ref:
+
+|Method|Type|Description|
 |-|-|-|
-|value|string|Default value |
-|onChange|(newValue: string) => void|This function is called whenever the text changes. The new text value is passed as a parameter |
-|className|string|Any additional class names to be included for the input field |
-|collapsed|boolean|show only a icon button when true. When click on the button it will show the actual search box |
-|position|[IPosition](../types/IPosition.md)|position of search box |
-|placeholder|string|placeholder value |
-|autoFocus|boolean|input will be auto focused if true |
-|spacingMode|SpacingMode||
-
-
-### value
-
-
-
----
-
-
-
-Default value
-
-
-|type|
-|-|
-|string|
-
-
-### onChange
-
-
-
----
-
-
-
-This function is called whenever the text changes. The new text value is passed as a parameter
-
-
-|type|
-|-|
-|(newValue: string) => void|
-
-
-### className
-
-
-
----
-
-
-
-Any additional class names to be included for the input field
-
-
-|type|
-|-|
-|string|
-
-
-### collapsed
-
-
-
----
-
-
-
-show only a icon button when true. When click on the button it will show the actual search box
-
-
-|type|
-|-|
-|boolean|
-
-
-### position
-
-
-
----
-
-
-
-position of search box
-
-
-|type|
-|-|
-|[IPosition](../types/IPosition.md)|
-
-
-### placeholder
-
-
-
----
-
-
-
-placeholder value
-
-
-|type|
-|-|
-|string|
-
-
-### autoFocus
-
-
-
----
-
-
-
-input will be auto focused if true
-
-
-|type|
-|-|
-|boolean|
-
-
-### spacingMode
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|SpacingMode|
-
+|focusInput|() => void|-|
+|getInputElement|() => React.MutableRefObject<HTMLInputElement>|-|
+
+## Related Types
+
+- [ISearchBoxProps](../types/ISearchBoxProps.md)
+- [IPosition](../types/IPosition.md)
+- [SpacingMode](../types/SpacingMode.md)
+- [ISearchBoxInstanceProps](../types/ISearchBoxInstanceProps.md)
 

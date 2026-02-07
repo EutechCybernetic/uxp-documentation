@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 export interface TreeNode {
@@ -21,6 +19,16 @@ export interface TreeNode {
      * Optional icon for the node
      */
     icon?: string,
+
+    /**
+     * path of the node 
+     */
+    path: string
+    /**
+     * Optional path for display 
+     */
+    displayPath?: string
+
     /**
      * Function to render custom label content
      */
@@ -58,17 +66,34 @@ export interface TreeNode {
      */
     enableChildNode?: boolean,
 
+    /**
+     * toggle option to add child nodes
+     */
     enableAddChildren?: boolean,
+
+    /**
+     * toggle option to edit node
+     */
     enableEditNode?: boolean,
+
+    /**
+     * toggle option to delete node
+     */
     enableDeleteNode?: boolean
+
+    // for any arbitory data 
+    [key: string]: any
+
+    /**
+     * Original dataset 
+     */
+    original?: any
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {TreeNode} from 'uxp/components';
+import { TreeNode } from 'uxp/components';
 ```
 

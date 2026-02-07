@@ -4,9 +4,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 type IUseEffectWithPolling = (
@@ -35,9 +33,7 @@ type IUseEffectWithPolling = (
 
 ## Usage
 
-
-
 ```tsx
-import {IUseEffectWithPolling} from 'uxp/components';
+import { IUseEffectWithPolling } from 'uxp/components';
 ```
 

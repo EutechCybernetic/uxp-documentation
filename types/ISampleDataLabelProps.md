@@ -4,9 +4,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface ISampleDataLabelProps {
@@ -17,9 +15,7 @@ interface ISampleDataLabelProps {
 
 ## Usage
 
-
-
 ```tsx
-import {ISampleDataLabelProps} from 'uxp/components';
+import { ISampleDataLabelProps } from 'uxp/components';
 ```
 

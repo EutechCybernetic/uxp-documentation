@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface ISpaceworxDescriptionTagProps {
@@ -16,9 +14,7 @@ interface ISpaceworxDescriptionTagProps {
 
 ## Usage
 
-
-
 ```tsx
-import {ISpaceworxDescriptionTagProps} from 'uxp/components';
+import { ISpaceworxDescriptionTagProps } from 'uxp/components';
 ```
 

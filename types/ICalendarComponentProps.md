@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface ICalendarComponentProps {
@@ -43,9 +41,7 @@ interface ICalendarComponentProps {
 
 ## Usage
 
-
-
 ```tsx
-import {ICalendarComponentProps} from 'uxp/components';
+import { ICalendarComponentProps } from 'uxp/components';
 ```
 

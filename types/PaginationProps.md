@@ -2,12 +2,10 @@
 
 
 
-
-
 pagination component props
 
 
-
+## Definition
 
 ```tsx
 interface PaginationProps {
@@ -30,15 +28,16 @@ interface PaginationProps {
     /**
      * Callback fucntion when page changes 
      */
-    onPageChange: (page: number) => void
+    onPageChange: (page: number) => void,
+    children?: React.ReactNode
+
+    loading?: boolean
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {PaginationProps} from 'uxp/components';
+import { PaginationProps } from 'uxp/components';
 ```
 

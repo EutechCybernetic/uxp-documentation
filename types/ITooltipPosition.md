@@ -1,11 +1,9 @@
-# ITooltipPosition
+# undefined
 
 
 
 
-
-
-
+## Definition
 
 ```tsx
 type ITooltipPosition = "top" | "bottom" | "left" | "right";
@@ -13,9 +11,7 @@ type ITooltipPosition = "top" | "bottom" | "left" | "right";
 
 ## Usage
 
-
-
 ```tsx
-import {ITooltipPosition} from 'uxp/components';
+import { undefined } from 'uxp/components';
 ```
 

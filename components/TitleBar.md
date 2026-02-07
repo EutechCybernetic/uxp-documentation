@@ -1,7 +1,5 @@
 # TitleBar
 
-
-
 Use this to show a title area on widgets. You can set a title on the left side
 and any arbitrary content on the right side - typically you would use a {@component FilterPanel} there.
 The content that appears on the right side go as children of this component.
@@ -11,15 +9,17 @@ The content that appears on the right side go as children of this component.
 
 ## Installation
 
+```tsx
+import { TitleBar } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {TitleBar} from 'uxp/components';
+const TitleBar: React.FunctionComponent<IWidgetTitleBarProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <TitleBar title='My Test Widget'>
@@ -29,57 +29,14 @@ import {TitleBar} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|title|string|The title to show for the widget |
-|icon|string|The url for an icon to be shown next to the title on the top left corner. |
-|className|string||
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|title|string|Yes|-|-|
+|icon|string|No|-|-|
+|className|string|No|-|-|
+|children|React.ReactNode|No|-|-|
 
+## Related Types
 
-### title
-
-
-
----
-
-
-
-The title to show for the widget
-
-
-|type|
-|-|
-|string|
-
-
-### icon
-
-
-
----
-
-
-
-The url for an icon to be shown next to the title on the top left corner.
-
-
-|type|
-|-|
-|string|
-
-
-### className
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
+- [IWidgetTitleBarProps](../types/IWidgetTitleBarProps.md)
 

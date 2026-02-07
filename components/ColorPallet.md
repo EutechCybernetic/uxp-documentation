@@ -2,70 +2,30 @@
 
 
 
-
-
 Color pallet
 
 
 ## Installation
 
+```tsx
+import { ColorPallet } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {ColorPallet} from 'uxp/components';
+const ColorPallet: React.FunctionComponent<IColorPalletProps>
 ```
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|color|string||
-|onChange|(color: string) => void||
-|onCancel|() => void||
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|color|string|Yes|-|-|
+|onChange|(color: string) => void|Yes|-|-|
+|onCancel|() => void|Yes|-|-|
 
+## Related Types
 
-### color
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### onChange
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|(color: string) => void|
-
-
-### onCancel
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|() => void|
-
+- [IColorPalletProps](../types/IColorPalletProps.md)
 

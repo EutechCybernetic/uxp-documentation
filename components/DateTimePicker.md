@@ -3,23 +3,23 @@
 
 
 
-
-
 This component is used to select a datetime.
 
 
 
 ## Installation
 
+```tsx
+import { DateTimePicker } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {DateTimePicker} from 'uxp/components';
+const DateTimePicker: React.FunctionComponent<IDateTimePickerProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <DateTimePicker
@@ -30,161 +30,22 @@ import {DateTimePicker} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|title|string||
-|datetime|string \| Date|The currently selected datetime. Either a Date object or an ISO8601 string representation of a date |
-|onChange|(date: Date) => void|Callback that gets executed whenever a datetime is selected/changed in the datetime picker |
-|disableInput|boolean|Set to true to prevent a user from typing in a datetime |
-|options|[IDatePickerOptions](../types/IDatePickerOptions.md)|Additional options to control behavior |
-|hideLabels|boolean|this will hide the labels in the placeholder (icons and text) |
-|hideDateInput|boolean|hide the input box |
-|showFullMonthName|boolean|show the full month name in the month selector dropdown default is true if value is false it will show the short name "Jan" ,"Feb" and ect |
-|spacingMode|SpacingMode||
-
-
-### title
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### datetime
-
-
-
----
-
-
-
-The currently selected datetime. Either a Date object or an ISO8601 string representation of a date
-
-
-|type|
-|-|
-|string \| Date|
-
-
-### onChange
-
-
-
----
-
-
-
-Callback that gets executed whenever a datetime is selected/changed in the datetime picker
-
-
-|type|
-|-|
-|(date: Date) => void|
-
-
-### disableInput
-
-
-
----
-
-
-
-Set to true to prevent a user from typing in a datetime
-
-
-|type|
-|-|
-|boolean|
-
-
-### options
-
-
-
----
-
-
-
-Additional options to control behavior
-
-
-|type|
-|-|
-|[IDatePickerOptions](../types/IDatePickerOptions.md)|
-
-
-### hideLabels
-
-
-
----
-
-
-
-this will hide the labels in the placeholder (icons and text)
-
-
-|type|
-|-|
-|boolean|
-
-
-### hideDateInput
-
-
-
----
-
-
-
-hide the input box
-
-
-|type|
-|-|
-|boolean|
-
-
-### showFullMonthName
-
-
-
----
-
-
-
-show the full month name in the month selector dropdown
-default is true
-
-if value is false it will show the short name "Jan" ,"Feb" and ect
-
-
-|type|
-|-|
-|boolean|
-
-
-### spacingMode
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|SpacingMode|
-
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|title|string|Yes|-|-|
+|datetime|string \| Date|Yes|-|-|
+|onChange|(date: Date) => void|Yes|-|-|
+|disableInput|boolean|No|-|-|
+|options|[IDatePickerOptions](../types/IDatePickerOptions.md)|No|-|-|
+|hideLabels|boolean|No|-|-|
+|hideDateInput|boolean|No|-|-|
+|showFullMonthName|boolean|No|-|-|
+|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
+
+## Related Types
+
+- [IDateTimePickerProps](../types/IDateTimePickerProps.md)
+- [IDatePickerOptions](../types/IDatePickerOptions.md)
+- [ISpecialDate](../types/ISpecialDate.md)
+- [SpacingMode](../types/SpacingMode.md)
 

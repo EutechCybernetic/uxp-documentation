@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface IPopoverProps {
@@ -79,14 +77,18 @@ interface IPopoverProps {
      * ```
      * 
      */
+    children?:React.ReactNode
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {IPopoverProps} from 'uxp/components';
+import { IPopoverProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [IContentFunction](../types/IContentFunction.md)
+- [IPopoverPosition](../types/IPopoverPosition.md)
 

@@ -1,7 +1,5 @@
 # ItemListCard
 
-
-
 Show a card with a list of fields in it. You need to provide an object as the `item` prop and then a list of fields from within the object to be rendered.
 You can also provide an optional `renderField` function to customize how fields are rendered.
 
@@ -10,15 +8,17 @@ You can also provide an optional `renderField` function to customize how fields 
 
 ## Installation
 
+```tsx
+import { ItemListCard } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {ItemListCard} from 'uxp/components';
+const ItemListCard: React.FunctionComponent<IItemListCardProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <ItemListCard
@@ -60,128 +60,17 @@ import {ItemListCard} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|title|string|The title to show on the card |
-|renderSubTitle|() => JSX.Element|Any optional subtitle content to render. This should be a function that returns a react node |
-|item|any|The object to render in the card |
-|fields|string[]|The list of fields from within the object that should be shown. For each field in this list - one line gets rendered on the card |
-|renderField|(object: any, field: string, key: number) => JSX.Element|An optional function to control rendering of each field. It takes the item as a parameter along with the name of the field being rendered. You can choose to render whatever you want here |
-|backgroundColor|string|Any background tint to apply to the card. This must be in #RRGGBB hexadecimal format. |
-|className|string|Any additional css classes to apply to the component |
-
-
-### title
-
-
-
----
-
-
-
-The title to show on the card
-
-
-|type|
-|-|
-|string|
-
-
-### renderSubTitle
-
-
-
----
-
-
-
-Any optional subtitle content to render. This should be a function that returns a react node
-
-
-|type|
-|-|
-|() => JSX.Element|
-
-
-### item
-
-
-
----
-
-
-
-The object to render in the card
-
-
-|type|
-|-|
-|any|
-
-
-### fields
-
-
-
----
-
-
-
-The list of fields from within the object that should be shown.
-For each field in this list - one line gets rendered on the card
-
-
-|type|
-|-|
-|string[]|
-
-
-### renderField
-
-
-
----
-
-
-
-An optional function to control rendering of each field. It takes the item as a parameter along with the name of the field being rendered.
-You can choose to render whatever you want here
-
-
-|type|
-|-|
-|(object: any, field: string, key: number) => JSX.Element|
-
-
-### backgroundColor
-
-
-
----
-
-
-
-Any background tint to apply to the card. This must be in #RRGGBB hexadecimal format.
-
-
-|type|
-|-|
-|string|
-
-
-### className
-
-
-
----
-
-
-
-Any additional css classes to apply to the component
-
-
-|type|
-|-|
-|string|
-
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|title|string|Yes|-|-|
+|renderSubTitle|() => JSX.Element|No|-|-|
+|item|any|Yes|-|-|
+|fields|string[]|Yes|-|-|
+|renderField|(object: any, field: string, key: number) => JSX.Element|No|-|-|
+|backgroundColor|string|No|-|-|
+|className|string|No|-|-|
+
+## Related Types
+
+- [IItemListCardProps](../types/IItemListCardProps.md)
 

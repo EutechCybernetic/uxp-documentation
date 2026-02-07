@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 type FieldsHook = (fields:any) =>[any,{[field:string]:(s:any)=>void},any,(s:any)=>void] ;
@@ -13,9 +11,7 @@ type FieldsHook = (fields:any) =>[any,{[field:string]:(s:any)=>void},any,(s:any)
 
 ## Usage
 
-
-
 ```tsx
-import {FieldsHook} from 'uxp/components';
+import { FieldsHook } from 'uxp/components';
 ```
 

@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface TreeViewSelectInputInstanceProps {
@@ -15,9 +13,7 @@ interface TreeViewSelectInputInstanceProps {
 
 ## Usage
 
-
-
 ```tsx
-import {TreeViewSelectInputInstanceProps} from 'uxp/components';
+import { TreeViewSelectInputInstanceProps } from 'uxp/components';
 ```
 

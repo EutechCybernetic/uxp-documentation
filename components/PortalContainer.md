@@ -3,8 +3,6 @@
 
 
 
-
-
 This component is used to create a react portal.
 
 
@@ -12,23 +10,23 @@ This component is used to create a react portal.
 
 ## Installation
 
+```tsx
+import { PortalContainer } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {PortalContainer} from 'uxp/components';
+const PortalContainer: React.FunctionComponent<IPortalContainerProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <PortalContainer >
      {your content}
  </PortalContainer>
 ```
-
-
 
 ```tsx
 <PortalContainer
@@ -42,92 +40,16 @@ import {PortalContainer} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|hasBackdrop|boolean|create a backdrop if true |
-|onClickBackdrop|() => void|callback function to click on backdrop |
-|backdropStyles|any|additional styles to backdrop |
-|disableScroll|boolean|disabled the scrolling of main content block if true default value is true |
-|className|string||
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|hasBackdrop|boolean|No|-|-|
+|onClickBackdrop|(e?: React.MouseEvent<HTMLDivElement>) => void|No|-|-|
+|backdropStyles|any|No|-|-|
+|disableScroll|boolean|No|-|-|
+|className|string|No|-|-|
+|children|React.ReactNode|No|-|-|
 
+## Related Types
 
-### hasBackdrop
-
-
-
----
-
-
-
-create a backdrop if true
-
-
-|type|
-|-|
-|boolean|
-
-
-### onClickBackdrop
-
-
-
----
-
-
-
-callback function to click on backdrop
-
-
-|type|
-|-|
-|() => void|
-
-
-### backdropStyles
-
-
-
----
-
-
-
-additional styles to backdrop
-
-
-|type|
-|-|
-|any|
-
-
-### disableScroll
-
-
-
----
-
-
-
-disabled the scrolling of main content block if true
-default value is true
-
-
-|type|
-|-|
-|boolean|
-
-
-### className
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
+- [IPortalContainerProps](../types/IPortalContainerProps.md)
 

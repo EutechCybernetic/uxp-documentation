@@ -1,22 +1,22 @@
 # AutoCompleteInput
 
-
-
 This component allows you to create a custom autocomplete component.
 
 
 
 ## Installation
 
+```tsx
+import { AutoCompleteInput } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {AutoCompleteInput} from 'uxp/components';
+const AutoCompleteInput: React.ForwardRefExoticComponent<React.RefAttributes<IAutoCompleteInputInstanceProps> & IAutoCompleteInputProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 let [val, setVal] = useState('')
@@ -66,8 +66,6 @@ let [val, setVal] = useState('')
  </div>
 ```
 
-
-
 ```tsx
 Also you can pass a set of items instead of custom auto fill.
  Component will create a the auto fill
@@ -82,195 +80,32 @@ Also you can pass a set of items instead of custom auto fill.
 
 ## Properties
 
-|Name|Type|Description|
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|value|string|Yes|-|-|
+|onChange|(val: string) => void|Yes|-|-|
+|options|string[]|No|-|-|
+|autoFill|() => JSX.Element|No|-|-|
+|className|string|No|-|-|
+|isValid|boolean|No|-|-|
+|placeholder|string|No|-|-|
+|optionClassName|string|No|-|* ```|
+|tabIndex|number|No|-|-|
+
+## Ref Handlers
+
+Available methods through ref:
+
+|Method|Type|Description|
 |-|-|-|
-|value|string|value for the |
-|onChange|(val: string) => void|callback on value change |
-|options|string[]|options to auto generate the dropdown list |
-|autoFill|() => JSX.Element|render auto complete dropdown |
-|className|string|additional class name |
-|isValid|boolean|indicate the if the value is valid or not |
-|placeholder|string|placeholder |
-|optionClassName|string|this will be used to bind the keybaord inputs. once you add the class you will be able to navigate trhough the options using arrow keys (up and down) you need to add the same classname to the options default is 'uxp-select-option-container' you can use the default class in the drop down option and you will get the default styles <div classname="uxp-select-option-container" ...> a</div> if you pass a custom class name you need write some styles to indicate the selected items in styles (.scss file) -------------------- .<custom-class-name> { &.highlighted { background-color: #52c4c94a; color: #424242; } } |
-|tabIndex|number|tab index. default is 0 |
-
-
-### value
-
-
-
----
-
-
-
-value for the
-
-
-|type|
-|-|
-|string|
-
-
-### onChange
-
-
-
----
-
-
-
-callback on value change
-
-
-|type|
-|-|
-|(val: string) => void|
-
-
-### options
-
-
-
----
-
-
-
-options to auto generate the dropdown list
-
-
-|type|
-|-|
-|string[]|
-
-
-### autoFill
-
-
-
----
-
-
-
-render auto complete dropdown
-
-
-|type|
-|-|
-|() => JSX.Element|
-
-
-### className
-
-
-
----
-
-
-
-additional class name
-
-
-|type|
-|-|
-|string|
-
-
-### isValid
-
-
-
----
-
-
-
-indicate the if the value is valid or not
-
-
-|type|
-|-|
-|boolean|
-
-
-### placeholder
-
-
-
----
-
-
-
-placeholder
-
-
-|type|
-|-|
-|string|
-
-
-### optionClassName
-
-
-
----
-
-
-
-this will be used to bind the keybaord inputs.
-once you add the class you will be able to navigate trhough the options using arrow keys (up and down)
-you need to add the same classname to the options
-
-default is 'uxp-select-option-container'
-you can use the default class in the drop down option and you will get the default styles
-<div classname="uxp-select-option-container" ...> a</div>
-
-if you pass a custom class name you need write some styles to indicate the selected items
-
-in styles (.scss file)
---------------------
-.<custom-class-name> {
-  &.highlighted {
-         background-color: #52c4c94a;
-         color: #424242;
- }
-}
-
-
-
-|type|
-|-|
-|string|
-
-
-
-
-```tsx
-function renderAutoFill() {
-return <div>
-     <div classname="custom-class-name" ...> a</div>
-     <div classname="custom-class-name" ...> b</div>
-     <div classname="custom-class-name" ...> c</div>
-</div>
-}
-<AtutoCompleteInput
-...
-optionClassName={'custom-class-name'}
-autoFill={renderAutoFill()}
-/>
-```
-
-### tabIndex
-
-
-
----
-
-
-
-tab index. default is 0
-
-
-|type|
-|-|
-|number|
-
+|open|() => void|this will open the picker |
+|close|() => void|this will close the picker |
+|focus|() => void|this will focus the input |
+|getInputElement|() => React.MutableRefObject<HTMLInputElement>|This will return the input element |
+|appendAtCursor|(value: string) => void|This will append the passed value at the cursor if a selection has made it will be replaced by the passed value |
+
+## Related Types
+
+- [IAutoCompleteInputProps](../types/IAutoCompleteInputProps.md)
+- [IAutoCompleteInputInstanceProps](../types/IAutoCompleteInputInstanceProps.md)
 

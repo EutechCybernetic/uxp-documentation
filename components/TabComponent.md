@@ -3,23 +3,23 @@
 
 
 
-
-
 Tab layout component
 
 
 
 ## Installation
 
+```tsx
+import { TabComponent } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {TabComponent} from 'uxp/components';
+const TabComponent: React.FunctionComponent<TabComponentProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <TabComponent
@@ -34,109 +34,19 @@ import {TabComponent} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|tabs|Tab[]|tabs |
-|selected|string|selected tab id |
-|onChangeTab|(tab: string) => void|on change tab |
-|direction|'vertical' \| 'horizontal'|direction of tabs |
-|position|'top' \| 'bottom' \| 'left' \| 'right'|position of tabs |
-|styles|[TabComponentStyles](../types/TabComponentStyles.md)|tab component styles |
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|tabs|[Tab[]](../types/Tab.md)|Yes|-|-|
+|selected|string|Yes|-|-|
+|onChangeTab|(tab: string) => void|Yes|-|-|
+|direction|'vertical' \| 'horizontal'|No|-|-|
+|position|'top' \| 'bottom' \| 'left' \| 'right'|No|-|-|
+|styles|[TabComponentStyles](../types/TabComponentStyles.md)|No|-|-|
+|className|string|No|-|-|
 
+## Related Types
 
-### tabs
-
-
-
----
-
-
-
-tabs
-
-
-|type|
-|-|
-|Tab[]|
-
-
-### selected
-
-
-
----
-
-
-
-selected tab id
-
-
-|type|
-|-|
-|string|
-
-
-### onChangeTab
-
-
-
----
-
-
-
-on change tab
-
-
-|type|
-|-|
-|(tab: string) => void|
-
-
-### direction
-
-
-
----
-
-
-
-direction of tabs
-
-
-|type|
-|-|
-|'vertical' \| 'horizontal'|
-
-
-### position
-
-
-
----
-
-
-
-position of tabs
-
-
-|type|
-|-|
-|'top' \| 'bottom' \| 'left' \| 'right'|
-
-
-### styles
-
-
-
----
-
-
-
-tab component styles
-
-
-|type|
-|-|
-|[TabComponentStyles](../types/TabComponentStyles.md)|
-
+- [TabComponentProps](../types/TabComponentProps.md)
+- [Tab](../types/Tab.md)
+- [TabComponentStyles](../types/TabComponentStyles.md)
 

@@ -3,23 +3,23 @@
 
 
 
-
-
 This component is used to select a time range.
 
 
 
 ## Installation
 
+```tsx
+import { TimeRangePicker } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {TimeRangePicker} from 'uxp/components';
+const TimeRangePicker: React.FunctionComponent<ITimeRangePickerProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <TimeRangePicker
@@ -31,107 +31,17 @@ import {TimeRangePicker} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|title|string||
-|startTime|string \| Date|Start time . Either a Date object or an time string (Ex: 01:10:00 pm) |
-|endTime|string \| Date|End time . Either a Date object or an time string (Ex: 01:10:00 pm) |
-|onChange|(start: Date, end: Date) => void|Callback that gets executed whenever a time range is selected/changed in the time picker |
-|disableInput|boolean|Set to true to prevent a user from typing in a time |
-|spacingMode|SpacingMode||
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|title|string|Yes|-|-|
+|startTime|string \| Date|Yes|-|-|
+|endTime|string \| Date|Yes|-|-|
+|onChange|(start: Date, end: Date) => void|Yes|-|-|
+|disableInput|boolean|No|-|-|
+|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
 
+## Related Types
 
-### title
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### startTime
-
-
-
----
-
-
-
-Start time . Either a Date object or an time string (Ex: 01:10:00 pm)
-
-
-|type|
-|-|
-|string \| Date|
-
-
-### endTime
-
-
-
----
-
-
-
-End time . Either a Date object or an time string (Ex: 01:10:00 pm)
-
-
-|type|
-|-|
-|string \| Date|
-
-
-### onChange
-
-
-
----
-
-
-
-Callback that gets executed whenever a time range is selected/changed in the time picker
-
-
-|type|
-|-|
-|(start: Date, end: Date) => void|
-
-
-### disableInput
-
-
-
----
-
-
-
-Set to true to prevent a user from typing in a time
-
-
-|type|
-|-|
-|boolean|
-
-
-### spacingMode
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|SpacingMode|
-
+- [ITimeRangePickerProps](../types/ITimeRangePickerProps.md)
+- [SpacingMode](../types/SpacingMode.md)
 

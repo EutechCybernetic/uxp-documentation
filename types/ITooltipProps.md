@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface ITooltipProps {
@@ -57,15 +55,19 @@ interface ITooltipProps {
      *  </Tooltip>
      * ```
      * 
-     */
+     */,
+    children?: React.ReactNode
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {ITooltipProps} from 'uxp/components';
+import { ITooltipProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [IContentFunction](../types/IContentFunction.md)
+- [ITooltipPosition](../types/ITooltipPosition.md)
 

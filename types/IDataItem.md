@@ -1,12 +1,10 @@
 # IDataItem
 
 
-
-
 An individual pie chart slice
 
 
-
+## Definition
 
 ```tsx
 interface IDataItem { name: string, value: number, color?: string }
@@ -14,9 +12,7 @@ interface IDataItem { name: string, value: number, color?: string }
 
 ## Usage
 
-
-
 ```tsx
-import {IDataItem} from 'uxp/components';
+import { IDataItem } from 'uxp/components';
 ```
 

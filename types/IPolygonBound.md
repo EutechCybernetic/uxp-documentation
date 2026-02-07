@@ -1,21 +1,18 @@
-# IPolygonBound
+# undefined
 
 
+Polygon or rectangle bounds definition
 
 
-
-
-
+## Definition
 
 ```tsx
-type IPolygonBound = LatLngExpression[] | LatLngExpression[][];
+export type IPolygonBound = LatLngExpression[] | LatLngExpression[][];
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {IPolygonBound} from 'uxp/components';
+import { undefined } from 'uxp/components';
 ```
 

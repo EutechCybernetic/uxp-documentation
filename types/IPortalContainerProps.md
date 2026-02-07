@@ -1,12 +1,10 @@
 # IPortalContainerProps
 
 
-
-
 Options that can be passed to a portal container component
 
 
-
+## Definition
 
 ```tsx
 interface IPortalContainerProps {
@@ -18,7 +16,7 @@ interface IPortalContainerProps {
     /**
      * callback function to click on backdrop
      */
-    onClickBackdrop?: () => void,
+    onClickBackdrop?: (e?: React.MouseEvent<HTMLDivElement>) => void,
 
     /**
      * additional styles to backdrop
@@ -27,17 +25,17 @@ interface IPortalContainerProps {
     /**
      * disabled the scrolling of main content block if true
      * default value is true
+     * DEPRECATED
      */
     disableScroll?: boolean,
-    className?: string
+    className?: string;
+    children?: React.ReactNode;
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {IPortalContainerProps} from 'uxp/components';
+import { IPortalContainerProps } from 'uxp/components';
 ```
 

@@ -1,25 +1,24 @@
 # IconButton
 
+Icon button component with set of default icons and options to render any icon
 
 
-
-
-
-Default set of buttons with icons
 
 
 
 ## Installation
 
+```tsx
+import { IconButton } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {IconButton} from 'uxp/components';
+const IconButton: React.FunctionComponent<IIconButtonProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <IconButton
@@ -29,128 +28,35 @@ import {IconButton} from 'uxp/components';
  />
 ```
 
+```tsx
+<IconButton
+     icon="fas search"
+     ...
+ />
+```
+
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|type|[IButtonType](../types/IButtonType.md)|button type |
-|active|boolean|Set button to active state when true |
-|disabled|boolean|Set button to disabled state when true |
-|onClick|() => void|The callback that gets invoked when the button is clicked. |
-|className|string|Any extra css classes to apply |
-|size|[IButtonSize](../types/IButtonSize.md)|button size. Can be either 'large' or 'small' |
-|borderless|boolean|set to `true` to prevent a border from being shown for the button |
-
-
-### type
-
-
-
----
-
-
-
-button type
-
-
-|type|
-|-|
-|[IButtonType](../types/IButtonType.md)|
-
-
-### active
-
-
-
----
-
-
-
-Set button to active state when true
-
-
-|type|
-|-|
-|boolean|
-
-
-### disabled
-
-
-
----
-
-
-
-Set button to disabled state when true
-
-
-|type|
-|-|
-|boolean|
-
-
-### onClick
-
-
-
----
-
-
-
-The callback that gets invoked when the button is clicked.
-
-
-|type|
-|-|
-|() => void|
-
-
-### className
-
-
-
----
-
-
-
-Any extra css classes to apply
-
-
-|type|
-|-|
-|string|
-
-
-### size
-
-
-
----
-
-
-
-button size. Can be either 'large' or 'small'
-
-
-|type|
-|-|
-|[IButtonSize](../types/IButtonSize.md)|
-
-
-### borderless
-
-
-
----
-
-
-
-set to `true` to prevent a border from being shown for the button
-
-
-|type|
-|-|
-|boolean|
-
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|icon|[ButtonIcon](../types/ButtonIcon.md)|No|-|-|
+|type|[IButtonType](../types/IButtonType.md)|No|-|-|
+|active|boolean|No|-|-|
+|disabled|boolean|No|-|-|
+|onClick|(e?: React.MouseEvent<HTMLButtonElement>) => void \| Promise<void>|No|-|-|
+|onError|(e: React.MouseEvent<HTMLButtonElement>) => void|No|-|-|
+|className|string|No|-|-|
+|borderless|boolean|No|-|-|
+|buttonType|"button" \| "submit" \| "reset"|No|-|-|
+|variant|'primary' \| 'secondary' \| 'danger'|No|-|-|
+|size|[IButtonSize](../types/IButtonSize.md)|No|-|-|
+
+## Related Types
+
+- [IIconButtonProps](../types/IIconButtonProps.md)
+- [ButtonIcon](../types/ButtonIcon.md)
+- [PHIconProp](../types/PHIconProp.md)
+- [PHIconPrefix](../types/PHIconPrefix.md)
+- [IButtonType](../types/IButtonType.md)
+- [IButtonSize](../types/IButtonSize.md)
 

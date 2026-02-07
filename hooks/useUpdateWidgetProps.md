@@ -1,7 +1,5 @@
 # useUpdateWidgetProps
 
-
-
 This hook is used to update the default props of a given widget instance.
 This returns a function  (instanceId : string, props : any ) => void
 instanceId: widget instance. can access this from props of the widget
@@ -16,9 +14,17 @@ This function will update the default props. But it won't re-render your widget.
 
 ## Installation
 
+```tsx
+import { useUpdateWidgetProps } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {useUpdateWidgetProps} from 'uxp/components';
+function useUpdateWidgetProps(): IUseUpdateWidgetProps
 ```
+
+## Related Types
+
+- [IUseUpdateWidgetProps](../types/IUseUpdateWidgetProps.md)
 

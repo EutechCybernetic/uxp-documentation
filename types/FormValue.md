@@ -1,21 +1,17 @@
-# FormValue
+# undefined
 
 
 
 
-
-
-
+## Definition
 
 ```tsx
-type FormValue = string | number | boolean | null
+export type FormValue = string | number | boolean | null | any
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {FormValue} from 'uxp/components';
+import { undefined } from 'uxp/components';
 ```
 

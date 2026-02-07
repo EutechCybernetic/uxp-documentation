@@ -1,11 +1,9 @@
-# IColorPickerPosition
+# undefined
 
 
 
 
-
-
-
+## Definition
 
 ```tsx
 type IColorPickerPosition = 'left' | 'right'
@@ -13,9 +11,7 @@ type IColorPickerPosition = 'left' | 'right'
 
 ## Usage
 
-
-
 ```tsx
-import {IColorPickerPosition} from 'uxp/components';
+import { undefined } from 'uxp/components';
 ```
 

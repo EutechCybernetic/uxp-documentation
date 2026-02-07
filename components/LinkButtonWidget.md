@@ -1,22 +1,22 @@
 # LinkButtonWidget
 
-
-
 This widget will give a simple widget with configurable option to create a link button
 
 
 
 ## Installation
 
+```tsx
+import { LinkButtonWidget } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {LinkButtonWidget} from 'uxp/components';
+const LinkButtonWidget: React.FunctionComponent<ILinkButtonWidgetProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <LinkButtonWidget
@@ -29,76 +29,14 @@ import {LinkButtonWidget} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|link|string|link url |
-|target|"_self" \| "_blank" \| "_parent"|target for link default is _self |
-|icon|string|icon to show |
-|label|string|label for link |
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|link|string|Yes|-|-|
+|target|"_self" \| "_blank" \| "_parent"|No|-|-|
+|icon|string|Yes|-|-|
+|label|string|Yes|-|-|
 
+## Related Types
 
-### link
-
-
-
----
-
-
-
-link url
-
-
-|type|
-|-|
-|string|
-
-
-### target
-
-
-
----
-
-
-
-target for link
-default is _self
-
-
-|type|
-|-|
-|"_self" \| "_blank" \| "_parent"|
-
-
-### icon
-
-
-
----
-
-
-
-icon to show
-
-
-|type|
-|-|
-|string|
-
-
-### label
-
-
-
----
-
-
-
-label for link
-
-
-|type|
-|-|
-|string|
-
+- [ILinkButtonWidgetProps](../types/ILinkButtonWidgetProps.md)
 

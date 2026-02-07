@@ -1,15 +1,13 @@
 # IHeatmapPoint
 
 
+Represents a single point on the heatmap with coordinates and intensity
 
 
-
-
-
+## Definition
 
 ```tsx
-interface IHeatmapPoint {
-
+export interface IHeatmapPoint {
     /**
      * The latitude of the point
      */
@@ -21,7 +19,7 @@ interface IHeatmapPoint {
     longitude: number;
 
     /**
-     * The intensity of the point
+     * The intensity of the point (0-1 recommended)
      */
     intensity: number;
 }
@@ -29,9 +27,18 @@ interface IHeatmapPoint {
 
 ## Usage
 
+```tsx
+import { IHeatmapPoint } from 'uxp/components';
+```
 
+## Examples
 
 ```tsx
-import {IHeatmapPoint} from 'uxp/components';
+tsx
+{
+  latitude: 1.29,
+  longitude: 103.85,
+  intensity: 0.8
+}
 ```
 

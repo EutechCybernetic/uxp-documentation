@@ -1,0 +1,95 @@
+# ObjectSearchComponent
+
+
+A component for searching, filtering, and displaying tabular data with support for pagination, views, and details panels.
+
+
+
+## Installation
+
+```tsx
+import { ObjectSearchComponent } from 'uxp/components';
+```
+
+## Signature
+
+```tsx
+const ObjectSearchComponent: React.MemoExoticComponent<React.ForwardRefExoticComponent<React.RefAttributes<ObjectSearchComponentHandlers> & ObjectSearchComponentProps>>
+```
+
+## Examples
+
+```tsx
+<ObjectSearchComponent
+  title="Users"
+  data={[{ id: '1', name: 'John' }, { id: '2', name: 'Jane' }]}
+  columns={[{ id: 'name', label: 'Name' }]}
+  pageSize={10}
+  total={2}
+  idField="id"
+/>
+```
+
+```tsx
+<ObjectSearchComponent
+  title="Users"
+  data={async (page, pageSize, query, filters, sort) => {
+    return { items: [{ id: '1', name: 'John' }] };
+  }}
+  columns={[{ id: 'name', label: 'Name', isSortable: true, exportLabel: 'User Name' }]}
+  pageSize={10}
+  total={async () => 100}
+  idField="id"
+  filters={{ formFields: [{ name: 'name', label: 'Name', type: 'text' }] }}
+  views={{ listId: 'users', defaultViews: [{ id: 'default', name: 'Default View' }], allowToMangeCustomViews: true }}
+  defaultActionColumns={{
+    selectColumn: { enable: true },
+    actionsColumn: { enable: true, headerActions: { sort: true, customiseColumns: true } }
+  }}
+  search={{ enable: true, fields: ['name'] }}
+  detailsPanel={{ renderDetails: (id, onClose) => <div>Details for {id}</div> }}
+  collapsedWidth="40%"
+  appendToURL={true}
+  onSelect={(selected) => console.log('Selected rows:', selected)}
+/>
+```
+
+## Properties
+
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|title|string \| ReactNode|No|-|-|
+|filters|[FilterConfig](../types/FilterConfig.md)|No|-|-|
+|views|[ViewsConfig](../types/ViewsConfig.md)|No|-|-|
+|data|RowData[] \| ((page: number, pageSize: number, query?: string, filters?: Filters, sort?: Sort) => Promise<{ items: RowData[] }>)|Yes|-|-|
+|columns|[OSCColumn[]](../types/OSCColumn.md)|Yes|-|-|
+|defaultActionColumns|[DefaultActionColumnsConfig](../types/DefaultActionColumnsConfig.md)|No|-|-|
+|pageSize|number|Yes|-|-|
+|total|number \| ((query?: string, filters?: Filters) => Promise<number>)|Yes|-|-|
+|loading|boolean|No|-|-|
+|noItemsMessage|string \| ReactNode|No|-|-|
+|minCellWidth|number|No|-|-|
+|onClickRow|(e: MouseEvent<HTMLDivElement>, item: any) => void|No|-|-|
+|detailsPanel|DefaultDetailsPanelProps \| CustomDetailsPanelProps|No|-|-|
+|idField|string|Yes|-|-|
+|actionButtons|ReactNode|No|-|-|
+|bulkActionButtons|ReactNode|No|-|-|
+|selected|[RowData[]](../types/RowData.md)|No|-|-|
+|onSelect|(selected: RowData[]) => void|No|-|-|
+|renderChildren|(childRows: RowData[], rowProps: TableRowBasicProps) => ReactNode|No|-|-|
+|summaryContent|ReactNode|No|-|-|
+|search|{ /** * Enables the search box. */ enable: boolean; /** * Fields in the data to use for text search (required for static data arrays). */ fields?: string[]; /** * If true, collapses the search box by default. */ collapsed?: boolean; }|No|-|-|
+|collapsedWidth|string \| number|No|-|-|
+|appendToURL|boolean|No|-|-|
+|className|string|No|-|-|
+
+## Ref Handlers
+
+Available methods through ref:
+
+|Method|Type|Description|
+|-|-|-|
+|export|() => void|Triggers export of the current view's data. |
+|getDetails|() => ObjectSearchDetailsResponse|Retrieves details of the current search state. |
+|refreshCurrentPage|() => void|-|
+

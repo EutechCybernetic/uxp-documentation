@@ -2,158 +2,57 @@
 
 
 
-
-
 CRUD component
 
 
 ## Installation
 
+```tsx
+import { CRUDComponent } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {CRUDComponent} from 'uxp/components';
+const CRUDComponent: React.ForwardRefExoticComponent<React.RefAttributes<CRUDComponentInstanceProps> & CRUDComponentProps>
 ```
 
 ## Properties
 
-|Name|Type|Description|
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|list|[ListProps](../types/ListProps.md)|Yes|-|-|
+|add|[FormProps](../types/FormProps.md)|No|-|-|
+|renderCustomAddView|[RenderCustomFormView](../types/RenderCustomFormView.md)|No|-|-|
+|edit|[ExtendedFormProps](../types/ExtendedFormProps.md)|No|-|-|
+|renderCustomEditView|[RenderCustomFormView](../types/RenderCustomFormView.md)|No|-|-|
+|disableViews|{ add?: boolean; edit?: boolean; delete?: boolean; }|No|-|-|
+|entityName|string|No|-|-|
+|className|string|No|-|-|
+
+## Ref Handlers
+
+Available methods through ref:
+
+|Method|Type|Description|
 |-|-|-|
-|list|[ListProps](../types/ListProps.md)|list view props |
-|add|[FormProps](../types/FormProps.md)|add view props |
-|renderCustomAddView|[RenderCustomFormView](../types/RenderCustomFormView.md)|option to render a custom add view |
-|edit|[ExtendedFormProps](../types/ExtendedFormProps.md)|edit view props |
-|renderCustomEditView|[RenderCustomFormView](../types/RenderCustomFormView.md)|option to render a custom edit view |
-|disableViews|{ add?: boolean; edit?: boolean; delete?: boolean; }|option to disable views |
-|entityName|string|name of the entit, this will be used in notifications |
-|className|string|custom class name |
-
-
-### list
-
-
-
----
-
-
-
-list view props
-
-
-|type|
-|-|
-|[ListProps](../types/ListProps.md)|
-
-
-### add
-
-
-
----
-
-
-
-add view props
-
-
-|type|
-|-|
-|[FormProps](../types/FormProps.md)|
-
-
-### renderCustomAddView
-
-
-
----
-
-
-
-option to render a custom add  view
-
-
-|type|
-|-|
-|[RenderCustomFormView](../types/RenderCustomFormView.md)|
-
-
-### edit
-
-
-
----
-
-
-
-edit view props
-
-
-|type|
-|-|
-|[ExtendedFormProps](../types/ExtendedFormProps.md)|
-
-
-### renderCustomEditView
-
-
-
----
-
-
-
-option to render a custom edit view
-
-
-|type|
-|-|
-|[RenderCustomFormView](../types/RenderCustomFormView.md)|
-
-
-### disableViews
-
-
-
----
-
-
-
-option to disable views
-
-
-|type|
-|-|
-|{ add?: boolean; edit?: boolean; delete?: boolean; }|
-
-
-### entityName
-
-
-
----
-
-
-
-name of the entit, this will be used in notifications
-
-
-|type|
-|-|
-|string|
-
-
-### className
-
-
-
----
-
-
-
-custom class name
-
-
-|type|
-|-|
-|string|
-
+|refreshList|() => void|option to refresh the list |
+
+## Related Types
+
+- [CRUDComponentProps](../types/CRUDComponentProps.md)
+- [ListProps](../types/ListProps.md)
+- [TableColumn](../types/TableColumn.md)
+- [Column](../types/Column.md)
+- [ActionResponse](../types/ActionResponse.md)
+- [FormProps](../types/FormProps.md)
+- [DynamicFormProps](../types/DynamicFormProps.md)
+- [FormSectionProps](../types/FormSectionProps.md)
+- [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
+- [FormValue](../types/FormValue.md)
+- [IFormData](../types/IFormData.md)
+- [CustomValidateResponse](../types/CustomValidateResponse.md)
+- [RenderCustomFormView](../types/RenderCustomFormView.md)
+- [ExtendedFormProps](../types/ExtendedFormProps.md)
+- [CRUDComponentInstanceProps](../types/CRUDComponentInstanceProps.md)
 

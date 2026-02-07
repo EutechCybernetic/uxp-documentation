@@ -1,13 +1,11 @@
 # ITextAreaInstanceProps
 
 
-
-
 Events/Callbacks to controll the behaviour of the component
 
 
 
-
+## Definition
 
 ```tsx
 interface ITextAreaInstanceProps {
@@ -32,15 +30,11 @@ interface ITextAreaInstanceProps {
 
 ## Usage
 
-
-
 ```tsx
-import {ITextAreaInstanceProps} from 'uxp/components';
+import { ITextAreaInstanceProps } from 'uxp/components';
 ```
 
 ## Examples
-
-
 
 ```tsx
 // create a ref

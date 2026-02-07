@@ -1,7 +1,5 @@
 # ItemCard
 
-
-
 This component is used to render some item in a standard card form.
 This includes a profile pic, a title, a subtitle and a list of fields and values.
 
@@ -10,15 +8,17 @@ This includes a profile pic, a title, a subtitle and a list of fields and values
 
 ## Installation
 
+```tsx
+import { ItemCard } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {ItemCard} from 'uxp/components';
+const ItemCard: React.FunctionComponent<IItemCardProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <ItemCard
@@ -34,8 +34,6 @@ import {ItemCard} from 'uxp/components';
      className="data-table-item"
  />
 ```
-
-
 
 ```tsx
 <ItemCard
@@ -53,8 +51,6 @@ import {ItemCard} from 'uxp/components';
 *
 ```
 
-
-
 ```tsx
 <ItemCard
      image="https://avatars.dicebear.com/api/male/john.svg?background=%230000ff"
@@ -65,176 +61,24 @@ import {ItemCard} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|item|any|A reference to the data to be rendered as a card. |
-|imageField|string|The name of the field within the `item` that has the url of an image to be shown |
-|titleField|string|The name of the field within `item` that has the title of the object |
-|subTitleField|string|The name of the field within 'item' that holds the subtitle of the object |
-|nameField|string|This name of the field within `item` that contains any 'name' associated with the object. This property is used only if the imageField value is not set. The name is abbreviated and set as the profile image. |
-|className|string|Any extra css classes to biind to the card. |
-|image|string|These parameres will enable option to pass a value for each fields inseat of the field name. Using these, users/developers will be able to provide static values |
-|name|string||
-|title|string||
-|subTitle|string||
-
-
-### item
-
-
-
----
-
-
-
-A reference to the data to be rendered as a card.
-
-
-|type|
-|-|
-|any|
-
-
-### imageField
-
-
-
----
-
-
-
-The name of the field within the `item` that has the url of an image to be shown
-
-
-|type|
-|-|
-|string|
-
-
-### titleField
-
-
-
----
-
-
-
-The name of the field within `item` that has the title of the object
-
-
-|type|
-|-|
-|string|
-
-
-### subTitleField
-
-
-
----
-
-
-
-The name of the field within 'item' that holds the subtitle of the object
-
-
-|type|
-|-|
-|string|
-
-
-### nameField
-
-
-
----
-
-
-
-This name of the field within `item` that contains any 'name' associated with the object.
-This property is used only if the imageField value is not set. The name is abbreviated and set as the profile image.
-
-
-|type|
-|-|
-|string|
-
-
-### className
-
-
-
----
-
-
-
-Any extra css classes to biind to the card.
-
-
-|type|
-|-|
-|string|
-
-
-### image
-
-
-
----
-
-
-
-These parameres will enable option to pass a value for each fields inseat of the field name.
-Using these, users/developers will be able to provide static values
-
-
-|type|
-|-|
-|string|
-
-
-### name
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### title
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### subTitle
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|item|any|No|-|-|
+|imageField|string|No|-|-|
+|titleField|string|No|-|-|
+|subTitleField|string|No|-|-|
+|nameField|string|No|-|-|
+|className|string|No|-|-|
+|image|string|No|-|-|
+|name|string|No|-|-|
+|title|string|No|-|-|
+|subTitle|string|No|-|-|
+|size|[Size](../types/Size.md)|No|-|-|
+|shape|[Shape](../types/Shape.md)|No|-|-|
+
+## Related Types
+
+- [IItemCardProps](../types/IItemCardProps.md)
+- [Size](../types/Size.md)
+- [Shape](../types/Shape.md)
 

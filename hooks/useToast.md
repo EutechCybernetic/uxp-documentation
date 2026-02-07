@@ -1,7 +1,5 @@
 # useToast
 
-
-
 This hook allows you to popup notifications on the bottom right corner of the screen
 (also known as toasts)
 
@@ -9,36 +7,32 @@ This hook allows you to popup notifications on the bottom right corner of the sc
 
 ## Installation
 
+```tsx
+import { useToast } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {useToast} from 'uxp/components';
+function useToast(): IToastResult
 ```
 
 ## Examples
-
-
 
 ```tsx
 let toast = useToast();
  toast.success("Item has been added");
 ```
 
-
-
 ```tsx
 let toast = useToast();
  toast.success({title:'Info',content:'Item has been added'});
 ```
 
-
-
 ```tsx
 let toast = useToast();
  toast.error({title:'Failed!',content:'Failed to add item',closeAfter:5,onClose:()=>{console.log('toast closed')}});
 ```
-
-
 
 ```tsx
 With custom icon
@@ -47,16 +41,12 @@ With custom icon
  toast.success({icon: "path/to/your/image", content: "Toast with custom icon"});
 ```
 
-
-
 ```tsx
 Custom toast example
 ```
  let toast = useToast();
  toast.custom({content: "Custom Toast message"});
 ```
-
-
 
 ```tsx
 Custom toast example
@@ -68,4 +58,12 @@ Custom toast example
          </div>
  );
 ```
+
+## Related Types
+
+- [IToastResult](../types/IToastResult.md)
+- [IToastFunction](../types/IToastFunction.md)
+- [IPartialContent](../types/IPartialContent.md)
+- [IToastContent](../types/IToastContent.md)
+- [IRemoveFunction](../types/IRemoveFunction.md)
 

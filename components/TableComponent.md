@@ -1,229 +1,97 @@
 # TableComponent
 
 
-
-
-
-Table component with pagination
+TableComponent displays tabular data with optional pagination, edit/delete actions, and custom columns.
+Supports inline editing mode with built-in save/cancel/delete actions.
 
 
 
 ## Installation
 
+```tsx
+import { TableComponent } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {TableComponent} from 'uxp/components';
+const TableComponent: React.MemoExoticComponent<React.FunctionComponent<TableComponentProps>>
 ```
 
 ## Examples
 
-
+```tsx
+tsx
+// Basic table with static data
+<TableComponent
+  data={[{ id: 1, name: 'Item 1' }]}
+  columns={[{ id: 'name', label: 'Name' }]}
+  pageSize={10}
+  total={1}
+/>
+```
 
 ```tsx
-const data = [
-  {RegNo: 1, Name: 'Jane',...}
-  {RegNo: 2, Name: 'John',...}
-  {RegNo: 3, Name: 'Andy',...}
-]
+tsx
+// Table with async data fetching
+<TableComponent
+  data={(page, pageSize) => fetch(`/api/items?page=${page}&size=${pageSize}`).then(res => res.json())}
+  columns={[{ id: 'name', label: 'Name' }]}
+  pageSize={20}
+  total={() => fetch('/api/items/count').then(res => res.json())}
+  editColumn={{ enable: true, onEdit: (item) => console.log(item) }}
+  deleteColumn={{ enable: true, onDelete: async (item) => console.log(item) }}
+/>
+```
 
- <TableComponent
-  data={data}
-  columns={[ {id: 'RegNo', label: 'Registration Number' }, {id: 'Name', label: 'User Name'}  ]}
+```tsx
+tsx
+// Table with inline editing mode
+<TableComponent
+  data={users}
+  columns={[
+    {
+      id: 'name',
+      label: 'Name',
+      renderEditItem: (item, update) => (
+        <input value={item.name} onChange={e => update({...item, name: e.target.value})} />
+      )
+    },
+    { id: 'email', label: 'Email' }
+  ]}
   pageSize={10}
-  total={25}
- />
+  total={users.length}
+  editable={{
+    onAddItem: async (index, item) => { await api.create(item); return true; },
+    onUpdateItem: async (index, item) => { await api.update(item); return true; },
+    onDeleteItem: async (index, item) => { await api.delete(item); return true; }
+  }}
+/>
 ```
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|data|any[] \| ((page: number, pageSize: number) => Promise<{ items: any[] }>)|data for the table can pass a plat list of data or a function that will support pagination |
-|columns|Column[]|columns definitions |
-|pageSize|number|initial page size , can be change from the pagination component |
-|total|number \| (() => Promise<number>)|total number of records |
-|loading|boolean|loading state if require |
-|noItemsMessage|string \| React.ReactNode|messge to show when no items found |
-|editColumn|{ enable: boolean, label?: string, renderColumn?: (item: any) => React.ReactNode, onEdit?: (item: any) => void, }|this adds a edit column in to the table |
-|deleteColumn|{ enable: boolean, label?: string, renderColumn?: (item: any) => React.ReactNode, onDelete?: (item: any) => Promise<void>, }|this adds a edit column in to the table |
-|minCellWidth|number||
-|onClickRow|(e: React.MouseEvent<HTMLDivElement>, item: any) => void||
-|onClickColumn|(e: React.MouseEvent<HTMLDivElement>, item: any, column: Column) => void||
-
-
-### data
-
-
-
----
-
-
-
-data for the table
-can pass a plat list of data or a function that will support pagination
-
-
-|type|
-|-|
-|any[] \| ((page: number, pageSize: number) => Promise<{ items: any[] }>)|
-
-
-### columns
-
-
-
----
-
-
-
-columns definitions
-
-
-|type|
-|-|
-|Column[]|
-
-
-### pageSize
-
-
-
----
-
-
-
-initial page size , can be change from the pagination component
-
-
-|type|
-|-|
-|number|
-
-
-### total
-
-
-
----
-
-
-
-total number of records
-
-
-|type|
-|-|
-|number \| (() => Promise<number>)|
-
-
-### loading
-
-
-
----
-
-
-
-loading state if require
-
-
-|type|
-|-|
-|boolean|
-
-
-### noItemsMessage
-
-
-
----
-
-
-
-messge to show when no items found
-
-
-|type|
-|-|
-|string \| React.ReactNode|
-
-
-### editColumn
-
-
-
----
-
-
-
-this adds a edit column in to the table
-
-
-|type|
-|-|
-|{ enable: boolean, label?: string, renderColumn?: (item: any) => React.ReactNode, onEdit?: (item: any) => void, }|
-
-
-### deleteColumn
-
-
-
----
-
-
-
-this adds a edit column in to the table
-
-
-
-|type|
-|-|
-|{ enable: boolean, label?: string, renderColumn?: (item: any) => React.ReactNode, onDelete?: (item: any) => Promise<void>, }|
-
-
-### minCellWidth
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|number|
-
-
-### onClickRow
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|(e: React.MouseEvent<HTMLDivElement>, item: any) => void|
-
-
-### onClickColumn
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|(e: React.MouseEvent<HTMLDivElement>, item: any, column: Column) => void|
-
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|data|RowData[] \| ((page: number, pageSize: number) => Promise<{ items: RowData[] }>)|Yes|-|-|
+|columns|[TableColumn[]](../types/TableColumn.md)|Yes|-|-|
+|pageSize|number|Yes|-|-|
+|total|number \| (() => Promise<number>)|Yes|-|-|
+|loading|boolean|No|-|-|
+|noItemsMessage|string \| React.ReactNode|No|-|-|
+|editColumn|{ enable: boolean; label?: string; renderColumn?: (item: RowData) => React.ReactNode; onEdit?: (item: RowData) => void; }|No|-|-|
+|deleteColumn|{ enable: boolean; label?: string; renderColumn?: (item: RowData) => React.ReactNode; onDelete?: (item: RowData) => Promise<void>; }|No|-|-|
+|minCellWidth|number|No|-|-|
+|onClickRow|(e: React.MouseEvent<HTMLDivElement>, item: RowData) => void|No|-|-|
+|onClickColumn|(e: React.MouseEvent<HTMLDivElement>, item: RowData, column: TableColumn) => void|No|-|-|
+|disablePagination|boolean|No|-|-|
+|editable|[EditableConfig](../types/EditableConfig.md)|No|-|-|
+
+## Related Types
+
+- [TableComponentProps](../types/TableComponentProps.md)
+- [RowData](../types/RowData.md)
+- [TableColumn](../types/TableColumn.md)
+- [Column](../types/Column.md)
+- [EditableConfig](../types/EditableConfig.md)
 

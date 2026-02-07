@@ -1,11 +1,9 @@
-# IPosition
+# undefined
 
 
 
 
-
-
-
+## Definition
 
 ```tsx
 type IPosition = "left" | "right";
@@ -13,9 +11,7 @@ type IPosition = "left" | "right";
 
 ## Usage
 
-
-
 ```tsx
-import {IPosition} from 'uxp/components';
+import { undefined } from 'uxp/components';
 ```
 

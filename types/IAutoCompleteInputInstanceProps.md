@@ -1,13 +1,11 @@
 # IAutoCompleteInputInstanceProps
 
 
-
-
 Events/Callbacks to controll the behaviour of the component
 
 
 
-
+## Definition
 
 ```tsx
 interface IAutoCompleteInputInstanceProps {
@@ -56,15 +54,11 @@ interface IAutoCompleteInputInstanceProps {
 
 ## Usage
 
-
-
 ```tsx
-import {IAutoCompleteInputInstanceProps} from 'uxp/components';
+import { IAutoCompleteInputInstanceProps } from 'uxp/components';
 ```
 
 ## Examples
-
-
 
 ```tsx
 // create a ref

@@ -4,9 +4,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 type IEventSubscriber = (instanceId: string, eventName: string, callback: (data?: { [key: string]: any }) => void) => void
@@ -14,9 +12,7 @@ type IEventSubscriber = (instanceId: string, eventName: string, callback: (data?
 
 ## Usage
 
-
-
 ```tsx
-import {IEventSubscriber} from 'uxp/components';
+import { IEventSubscriber } from 'uxp/components';
 ```
 

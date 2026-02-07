@@ -1,12 +1,10 @@
 # IDropDownButtonProps
 
 
-
-
 Dropdown button props
 
 
-
+## Definition
 
 ```tsx
 interface IDropDownButtonProps {
@@ -63,15 +61,18 @@ interface IDropDownButtonProps {
      * better to use this option- it has been improved 
      * if enabled it will ignore the position param 
      */
-    autoPosition?: boolean
+    autoPosition?: boolean,
+    children?: React.ReactNode;
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {IDropDownButtonProps} from 'uxp/components';
+import { IDropDownButtonProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [IDropDownButtonPosition](../types/IDropDownButtonPosition.md)
 

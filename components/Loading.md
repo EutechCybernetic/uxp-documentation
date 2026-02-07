@@ -1,16 +1,18 @@
 # Loading
 
-
-
 Show a simple loading animation indicator
 
 
 
 ## Installation
 
+```tsx
+import { Loading } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {Loading} from 'uxp/components';
+const Loading: React.FunctionComponent<{}>
 ```
 

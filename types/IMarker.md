@@ -1,14 +1,13 @@
 # IMarker
 
 
-
-Represents an individual marker
-
+Represents an individual marker on the map
 
 
+## Definition
 
 ```tsx
-interface IMarker extends MarkerEvents, LeafletMarkerOptions {
+export interface IMarker extends LeafletMarkerOptions {
     /**
      * latitude
      */
@@ -39,26 +38,38 @@ interface IMarker extends MarkerEvents, LeafletMarkerOptions {
      */
     imageCoordinates?: boolean,
 
+    onclick?: (event: LeafletMouseEvent) => void,
+    ondragstart?: (event: LeafletEvent) => void,
+    ondragend?: (event: DragEndEvent) => void,
+
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {IMarker} from 'uxp/components';
+import { IMarker } from 'uxp/components';
 ```
 
 ## Examples
 
-
-
 ```tsx
+tsx
 {
-     latitude:0,
-     longitude:23.2,
-     data:{'name':'FooBar'}
- }
+  latitude: 1.29,
+  longitude: 103.85,
+  data: { name: 'Singapore' },
+  customHTMLIcon: {
+    className: 'custom-marker',
+    html: '<div style="background: red; width: 20px; height: 20px;"></div>'
+  },
+  draggable: true
+}
 ```
+
+## Related Types
+
+- [IDivIconInterface](../types/IDivIconInterface.md)
+- [IRenderMarkerPopup](../types/IRenderMarkerPopup.md)
+- [IRenderMarkerTooltip](../types/IRenderMarkerTooltip.md)
 

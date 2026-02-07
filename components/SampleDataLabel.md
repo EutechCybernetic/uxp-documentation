@@ -2,23 +2,23 @@
 
 
 
-
-
 This component will be used to add a label to a widget to show that it's being rendered using sample data
 
 
 
 ## Installation
 
+```tsx
+import { SampleDataLabel } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {SampleDataLabel} from 'uxp/components';
+const SampleDataLabel: React.FunctionComponent<ISampleDataLabelProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <SampleDataLabel
@@ -28,23 +28,11 @@ import {SampleDataLabel} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|show|boolean||
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|show|boolean|No|-|-|
 
+## Related Types
 
-### show
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
+- [ISampleDataLabelProps](../types/ISampleDataLabelProps.md)
 

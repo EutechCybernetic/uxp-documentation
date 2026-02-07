@@ -1,8 +1,6 @@
 # MultiSelect
 
 
-
-
 A select control to select multiple items from a list of items
 
 
@@ -10,15 +8,17 @@ A select control to select multiple items from a list of items
 
 ## Installation
 
+```tsx
+import { MultiSelect } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {MultiSelect} from 'uxp/components';
+const MultiSelect: React.MemoExoticComponent<React.FunctionComponent<IMultiSelectProps>>
 ```
 
 ## Examples
-
-
 
 ```tsx
 // options
@@ -37,8 +37,6 @@ import {MultiSelect} from 'uxp/components';
      }}
  />
 ```
-
-
 
 ```tsx
 // options
@@ -62,311 +60,36 @@ import {MultiSelect} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|options|IOption[] \| any[]|List of items to select from. Each option has a label which is displayed and a value which is what we actually select. also you can pass any object as options, then specify the labelField, valueField props |
-|labelField|string|Name of the field you want to display as label If not given default(label) will be used |
-|valueField|string|Name of the field you want to return as value If not given default(value) will be used |
-|iconField|string|Name if the field to use as icon if a value is passed icon will be displayed. |
-|selected|string[]|The currently selected value ['option1', 'option2'] |
-|onChange|(values: string[], options?: IOption[] \| any[]) => void|Gets called whenever the selection changes. The value parameter has the newly selected value option parameter has the complete option/ object that you passed |
-|placeholder|string|Text to show when no value is selected |
-|className|string|Any extra css classes to add to the component |
-|isValid|boolean|Set this to false to indicate the field doesn't have a valid value |
-|showEndOfContent|boolean||
-|renderOption|(item: any, key: number) => JSX.Element|A function that will be responsible for rendering each individual option of the list. |
-|wrapSelectedItemsToOneLine|boolean||
-|selectAllOnLoad|boolean||
-|hideClearButton|boolean||
-|hideDoneButton|boolean||
-|dropdownClassname|string||
-|spacingMode|SpacingMode||
-
-
-### options
-
-
-
----
-
-
-
-List of items to select from.
-Each option has a label which is displayed and a value which is what we actually select.
-also you can pass any object as options, then specify the labelField, valueField props
-
-
-|type|
-|-|
-|IOption[] \| any[]|
-
-
-### labelField
-
-
-
----
-
-
-
-Name of the field you want to display as label
-If not given default(label) will be used
-
-
-|type|
-|-|
-|string|
-
-
-### valueField
-
-
-
----
-
-
-
-Name of the field you want to return  as value
-If not given default(value) will be used
-
-
-|type|
-|-|
-|string|
-
-
-### iconField
-
-
-
----
-
-
-
-Name if the field to use as icon
-if a value is passed icon will be displayed.
-
-
-|type|
-|-|
-|string|
-
-
-### selected
-
-
-
----
-
-
-
-The  currently selected value
-
-['option1', 'option2']
-
-
-|type|
-|-|
-|string[]|
-
-
-### onChange
-
-
-
----
-
-
-
-Gets called whenever the selection changes.
-The value parameter has the newly selected value
-option parameter has the complete option/ object that you passed
-
-
-|type|
-|-|
-|(values: string[], options?: IOption[] \| any[]) => void|
-
-
-### placeholder
-
-
-
----
-
-
-
-Text to show when no value is selected
-
-
-|type|
-|-|
-|string|
-
-
-### className
-
-
-
----
-
-
-
-Any extra css classes to add to the component
-
-
-|type|
-|-|
-|string|
-
-
-### isValid
-
-
-
----
-
-
-
-Set this to false to indicate the field doesn't have a valid value
-
-
-|type|
-|-|
-|boolean|
-
-
-### showEndOfContent
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### renderOption
-
-
-
----
-
-
-
-A function that will be responsible for rendering each individual option of the list.
-
-
-
-|type|
-|-|
-|(item: any, key: number) => JSX.Element|
-
-
-
-
-```tsx
-renderItem={(option,key)=><div>{option.label}</div>}
-```
-
-
-
-```tsx
-renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
-```
-
-### wrapSelectedItemsToOneLine
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### selectAllOnLoad
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### hideClearButton
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### hideDoneButton
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### dropdownClassname
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### spacingMode
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|SpacingMode|
-
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|options|IOption[] \| any[] \| IDataFunction|Yes|-|-|
+|labelField|string|No|-|-|
+|valueField|string|No|-|-|
+|iconField|string|No|-|-|
+|selected|string[]|Yes|-|-|
+|selectedLabels|string[] \| ((selected: string[]) => Promise<any[]>)|No|-|-|
+|onChange|(values: string[], options?: IOption[] \| any[]) => void|Yes|-|-|
+|placeholder|string|No|-|-|
+|className|string|No|-|-|
+|isValid|boolean|No|-|-|
+|showEndOfContent|boolean|No|-|-|
+|renderOption|(item: any, key: number) => JSX.Element|No|-|*|
+|wrapSelectedItemsToOneLine|boolean|No|-|-|
+|selectAllOnLoad|boolean|No|-|-|
+|hideClearButton|boolean|No|-|-|
+|hideDoneButton|boolean|No|-|-|
+|dropdownClassname|string|No|-|-|
+|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
+|dropdownMinWidth|number|No|-|-|
+|dropdownMinHeight|number|No|-|-|
+|pageSize|number|No|-|-|
+|renderCustomDropdownContent|(closeDropdown: () => void) => React.ReactNode|No|-|-|
+|renderPlaceholder|{ /** * render input as a pill * work with default select dropdown */ renderAsPill?: { minWidth?: number, maxWidth?: number }, /** * for custom renders */ renderCustomPill?: (onRemove: (e: React.MouseEvent<HTMLElement>, opt: any) => void) => React.ReactNode }|No|-|-|
+
+## Related Types
+
+- [IMultiSelectProps](../types/IMultiSelectProps.md)
+- [IOption](../types/IOption.md)
+- [IDataFunction](../types/IDataFunction.md)
+- [SpacingMode](../types/SpacingMode.md)
 

@@ -1,25 +1,23 @@
 # IModalWizardStep
 
 
-
-
 An individual step in a modal wizard
 
 
-
+## Definition
 
 ```tsx
 interface IModalWizardStep {
     /**
      * This function returns the contents of the main area of the wizard
      */
-    render:(props:IModalWizardStepProps) => JSX.Element;
+    render: (props: IModalWizardStepProps) => JSX.Element;
 
     /**
      * This function renders the status section on the left sidebar. This will be rendered only if the `showStatus` property is not false.
      * You can return null from this function to prevent the side bar status from being rendered.
      */
-    renderStatus:() => JSX.Element;
+    renderStatus: () => JSX.Element;
 
     /**
      * This is called just before the user tries to advance to the next stage. You can use this to validate the current stage.
@@ -28,12 +26,12 @@ interface IModalWizardStep {
      * a number - to indicate the index of the next step to be taken
      * undefined or null - to indicate it should stay on the current step
      */
-    onValidateStep?:() =>string|number|undefined|null|boolean;
+    onValidateStep?: () => string | number | undefined | null | boolean;
 
     /**
      * An optional id for this step. This is used by the onValidateStep function to address a specific step to jump to
      */
-    id?:string;
+    id?: string;
 
     /**
      * The title of this step. Currently this is used only in the sidebar to show the status of that stage.
@@ -46,26 +44,28 @@ interface IModalWizardStep {
     showNext?: boolean;
 
 
-    nextTitle?:string;
+    nextTitle?: string;
 
     /**
      * Set to false to prevent the status sidebar from being shown at this stage
      */
-    showStatus?:boolean;
+    showStatus?: boolean;
 
     /**
      * Render a sub-header below the main dialog header 
      * 
      */
-    renderSubHeader?:()=>JSX.Element;
+    renderSubHeader?: () => JSX.Element;
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {IModalWizardStep} from 'uxp/components';
+import { IModalWizardStep } from 'uxp/components';
 ```
+
+## Related Types
+
+- [IModalWizardStepProps](../types/IModalWizardStepProps.md)
 

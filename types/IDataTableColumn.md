@@ -1,12 +1,10 @@
 # IDataTableColumn
 
 
-
-
 Options that can be passed to a date picker field
 
 
-
+## Definition
 
 ```tsx
 interface IDataTableColumn {
@@ -18,9 +16,11 @@ interface IDataTableColumn {
 
 ## Usage
 
-
-
 ```tsx
-import {IDataTableColumn} from 'uxp/components';
+import { IDataTableColumn } from 'uxp/components';
 ```
+
+## Related Types
+
+- [ITitleFunc](../types/ITitleFunc.md)
 

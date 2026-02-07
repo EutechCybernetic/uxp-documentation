@@ -3,42 +3,28 @@
 
 
 
-
-Form section properties
-
-
-
+## Definition
 
 ```tsx
-interface FormSectionProps {
-    /**
-     * form fields
-     */
+export interface FormSectionProps {
     fields: DynamicFormFieldProps[]
-    /**
-     * options to arrange form fields to columns  
-     */
-    columns?: 1 | 2 | 3,
-    /**
-     * option to dynamically show/hide a section
-     */
+    columns?: 1 | 2 | 3, // default is 1
     show?: (data: IFormData) => boolean
-    /**
-     * title for the section 
-     */
     title?: string,
-    /**
-     * option to show a separator at the bottom of the section
-     */
     seperator?: boolean
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {FormSectionProps} from 'uxp/components';
+import { FormSectionProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
+- [FormValue](../types/FormValue.md)
+- [IFormData](../types/IFormData.md)
+- [CustomValidateResponse](../types/CustomValidateResponse.md)
 

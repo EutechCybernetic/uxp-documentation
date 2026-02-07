@@ -1,13 +1,11 @@
 # MessageBusHook
 
 
-
-
 React Hook for using the Message Bus
 
 
 
-
+## Definition
 
 ```tsx
 type MessageBusHook = (context:IContextProvider,channel:string,callback:(payload:string,channel:string)=>string) => void;
@@ -15,9 +13,7 @@ type MessageBusHook = (context:IContextProvider,channel:string,callback:(payload
 
 ## Usage
 
-
-
 ```tsx
-import {MessageBusHook} from 'uxp/components';
+import { MessageBusHook } from 'uxp/components';
 ```
 

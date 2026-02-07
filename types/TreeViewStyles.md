@@ -1,12 +1,10 @@
 # TreeViewStyles
 
 
-
-
 Styles configuration for the TreeView component
 
 
-
+## Definition
 
 ```tsx
 interface TreeViewStyles {
@@ -79,9 +77,7 @@ interface TreeViewStyles {
 
 ## Usage
 
-
-
 ```tsx
-import {TreeViewStyles} from 'uxp/components';
+import { TreeViewStyles } from 'uxp/components';
 ```
 

@@ -3,23 +3,23 @@
 
 
 
-
-
 TreeView component renders a hierarchical structure of nodes with optional icons, labels, and selectable functionality.
 
 
 
 ## Installation
 
+```tsx
+import { TreeView } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {TreeView} from 'uxp/components';
+const TreeView: React.ForwardRefExoticComponent<React.RefAttributes<TreeViewHandle> & TreeViewProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <TreeView
@@ -38,351 +38,62 @@ import {TreeView} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|items|[TreeNode[]](../types/TreeNode.md)|Yes|-|-|
+|noItemsMessage|string|No|-|-|
+|showPath|boolean|No|-|-|
+|renderRootNodesHorizontally|boolean|No|-|-|
+|multiSelect|boolean|No|-|-|
+|selected|TreeNode \| TreeNode[]|No|-|-|
+|onSelect|(selected: TreeNode \| TreeNode[]) => void|No|-|-|
+|styles|[TreeViewStyles](../types/TreeViewStyles.md)|No|-|-|
+|showHeader|boolean|No|-|-|
+|title|string \| React.ReactNode|No|-|-|
+|enableSearch|boolean|No|-|-|
+|onSearch|(query: string) => void|No|-|-|
+|expandAllNodes|boolean|No|-|-|
+|enableAdd|boolean|No|-|-|
+|addButtonLabel|string|No|-|-|
+|enableEdit|boolean|No|-|-|
+|enableDelete|boolean|No|-|-|
+|onAdd|(parentNode?: ExtendedTreeNode) => void|No|-|-|
+|onEdit|(node: ExtendedTreeNode) => void|No|-|-|
+|onDelete|(id: string) => void|No|-|-|
+|customActions|(node: ExtendedTreeNode) => CustomActionButton[]|No|-|-|
+|showActionButtonOnlyOnHover|boolean|No|-|-|
+|actionButtonsPosition|'inline' \| 'end'|No|-|-|
+|renderLabel|(node: TreeNode) => React.ReactNode|No|-|-|
+|renderDetails|(node: TreeNode) => React.ReactNode|No|-|-|
+|loading|boolean|No|-|-|
+|enableDrag|boolean|No|-|-|
+|enableDrop|boolean|No|-|-|
+|enableReordering|boolean|No|-|-|
+|enableHierarchyChange|boolean|No|-|-|
+|maxDepth|number|No|-|-|
+|reorderLoading|boolean|No|-|-|
+|onReorder|(reorderedNodes: TreeNode[], draggedNode: TreeNode, newIndex: number, parentId?: string) => Promise<boolean>|No|-|-|
+|onHierarchyChange|(movedNode: TreeNode, newParentId: string \| null, newIndex: number) => void \| Promise<void>|No|-|-|
+|disableInternalDndContext|boolean|No|-|-|
+|externalDragState|[DragState](../types/DragState.md)|No|-|-|
+|idPrefixForComparison|string|No|-|-|
+
+## Ref Handlers
+
+Available methods through ref:
+
+|Method|Type|Description|
 |-|-|-|
-|items|TreeNode[]|Array of root nodes in the tree |
-|noItemsMessage|string|Message to display when no items are available |
-|showPath|boolean|If true, show connecting paths between nodes |
-|renderRootNodesHorizontally|boolean|If true, render the root nodes horizontally |
-|multiSelect|boolean|If true, allows multiple nodes to be selected |
-|selected|TreeNode \| TreeNode[]|Currently selected node or nodes |
-|onSelect|(selected: TreeNode \| TreeNode[]) => void|Callback function triggered when a node is selected |
-|styles|[TreeViewStyles](../types/TreeViewStyles.md)|Custom styles for the TreeView component |
-|showHeader|boolean||
-|title|string \| React.ReactNode||
-|enableSearch|boolean||
-|onSearch|(query: string) => void||
-|expandAllNodes|boolean||
-|enableAdd|boolean||
-|addButtonLabel|string||
-|enableEdit|boolean||
-|enableDelete|boolean||
-|onAdd|(parentId?: string, parentPath?: string) => void||
-|onEdit|(node: ExtendedTreeNode) => void||
-|onDelete|(id: string) => void||
-|showActionButtonOnlyOnHover|boolean||
-
-
-### items
-
-
-
----
-
-
-
-Array of root nodes in the tree
-
-
-|type|
-|-|
-|TreeNode[]|
-
-
-### noItemsMessage
-
-
-
----
-
-
-
-Message to display when no items are available
-
-
-|type|
-|-|
-|string|
-
-
-### showPath
-
-
-
----
-
-
-
-If true, show connecting paths between nodes
-
-
-|type|
-|-|
-|boolean|
-
-
-### renderRootNodesHorizontally
-
-
-
----
-
-
-
-If true, render the root nodes horizontally
-
-
-|type|
-|-|
-|boolean|
-
-
-### multiSelect
-
-
-
----
-
-
-
-If true, allows multiple nodes to be selected
-
-
-|type|
-|-|
-|boolean|
-
-
-### selected
-
-
-
----
-
-
-
-Currently selected node or nodes
-
-
-|type|
-|-|
-|TreeNode \| TreeNode[]|
-
-
-### onSelect
-
-
-
----
-
-
-
-Callback function triggered when a node is selected
-
-
-|type|
-|-|
-|(selected: TreeNode \| TreeNode[]) => void|
-
-
-### styles
-
-
-
----
-
-
-
-Custom styles for the TreeView component
-
-
-|type|
-|-|
-|[TreeViewStyles](../types/TreeViewStyles.md)|
-
-
-### showHeader
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### title
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string \| React.ReactNode|
-
-
-### enableSearch
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### onSearch
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|(query: string) => void|
-
-
-### expandAllNodes
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### enableAdd
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### addButtonLabel
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### enableEdit
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### enableDelete
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### onAdd
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|(parentId?: string, parentPath?: string) => void|
-
-
-### onEdit
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|(node: ExtendedTreeNode) => void|
-
-
-### onDelete
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|(id: string) => void|
-
-
-### showActionButtonOnlyOnHover
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
+|triggerDrop|(sourceNodeId: string, targetNodeId: string, dropPosition: DropPosition) => Promise<void>|Programmatically trigger a drop operation |
+
+## Related Types
+
+- [TreeViewProps](../types/TreeViewProps.md)
+- [TreeNode](../types/TreeNode.md)
+- [TreeViewStyles](../types/TreeViewStyles.md)
+- [ExtendedTreeNode](../types/ExtendedTreeNode.md)
+- [CustomActionButton](../types/CustomActionButton.md)
+- [DragState](../types/DragState.md)
+- [DropPosition](../types/DropPosition.md)
+- [TreeViewHandle](../types/TreeViewHandle.md)
 

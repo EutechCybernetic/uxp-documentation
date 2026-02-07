@@ -2,17 +2,15 @@
 
 
 
-
-
 Custom html marker
 refer https://docs.eegeo.com/eegeo.js/v0.1.780/docs/leaflet/L.DivIcon/
 
 
 
-
+## Definition
 
 ```tsx
-interface IDivIconInterface {
+export interface IDivIconInterface {
     /**
      * A custom class name to assign to the icon.
      */
@@ -40,15 +38,11 @@ interface IDivIconInterface {
 
 ## Usage
 
-
-
 ```tsx
-import {IDivIconInterface} from 'uxp/components';
+import { IDivIconInterface } from 'uxp/components';
 ```
 
 ## Examples
-
-
 
 ```tsx
 {

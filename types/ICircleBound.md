@@ -1,14 +1,13 @@
 # ICircleBound
 
 
+Circle bounds definition
 
 
-
-
-
+## Definition
 
 ```tsx
-interface ICircleBound {
+export interface ICircleBound {
     /**
      * center of the circle
      */
@@ -22,9 +21,17 @@ interface ICircleBound {
 
 ## Usage
 
+```tsx
+import { ICircleBound } from 'uxp/components';
+```
 
+## Examples
 
 ```tsx
-import {ICircleBound} from 'uxp/components';
+tsx
+{
+  center: [1.29, 103.85],
+  radius: 2000
+}
 ```
 

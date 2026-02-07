@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface ILocalisationFormModalInstanceProps {
@@ -16,9 +14,7 @@ interface ILocalisationFormModalInstanceProps {
 
 ## Usage
 
-
-
 ```tsx
-import {ILocalisationFormModalInstanceProps} from 'uxp/components';
+import { ILocalisationFormModalInstanceProps } from 'uxp/components';
 ```
 

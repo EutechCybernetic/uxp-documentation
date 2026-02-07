@@ -4,9 +4,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface IColorPalletProps {
@@ -18,9 +16,7 @@ interface IColorPalletProps {
 
 ## Usage
 
-
-
 ```tsx
-import {IColorPalletProps} from 'uxp/components';
+import { IColorPalletProps } from 'uxp/components';
 ```
 

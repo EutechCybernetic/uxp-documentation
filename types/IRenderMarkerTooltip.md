@@ -1,21 +1,19 @@
 # IRenderMarkerTooltip
 
 
-
-
 Render tooltip for marker
 
 
-
+## Definition
 
 ```tsx
-interface IRenderMarkerTooltip {
+export interface IRenderMarkerTooltip {
     /**
      * content to show in tooltip
      */
     content: () => JSX.Element,
     /**
-     * direction 
+     * direction
      * default is auto
      */
     direction?: 'top' | 'bottom' | 'left' | 'right' | 'center' | 'auto',
@@ -29,9 +27,18 @@ interface IRenderMarkerTooltip {
 
 ## Usage
 
+```tsx
+import { IRenderMarkerTooltip } from 'uxp/components';
+```
 
+## Examples
 
 ```tsx
-import {IRenderMarkerTooltip} from 'uxp/components';
+tsx
+renderTooltip={{
+  content: () => <div>Tooltip text</div>,
+  direction: 'top',
+  keepShowing: true
+}}
 ```
 

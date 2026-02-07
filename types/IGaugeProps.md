@@ -1,12 +1,10 @@
 # IGaugeProps
 
 
-
-
 Options that can be passed to a date picker field
 
 
-
+## Definition
 
 ```tsx
 interface IGaugeProps {
@@ -107,9 +105,7 @@ interface IGaugeProps {
 
 ## Usage
 
-
-
 ```tsx
-import {IGaugeProps} from 'uxp/components';
+import { IGaugeProps } from 'uxp/components';
 ```
 

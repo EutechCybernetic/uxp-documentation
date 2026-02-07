@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 type IContentFunction = () => JSX.Element;
@@ -13,9 +11,7 @@ type IContentFunction = () => JSX.Element;
 
 ## Usage
 
-
-
 ```tsx
-import {IContentFunction} from 'uxp/components';
+import { IContentFunction } from 'uxp/components';
 ```
 

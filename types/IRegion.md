@@ -1,15 +1,13 @@
 # IRegion
 
 
+Region overlay for maps (polygon, rectangle, or circle)
 
 
-Region data for maps
-
-
-
+## Definition
 
 ```tsx
-interface IRegion {
+export interface IRegion {
     /**
      * region type,
      * default is polygon
@@ -48,9 +46,26 @@ interface IRegion {
 
 ## Usage
 
+```tsx
+import { IRegion } from 'uxp/components';
+```
 
+## Examples
 
 ```tsx
-import {IRegion} from 'uxp/components';
+tsx
+{
+  type: 'polygon',
+  bounds: [[1.29, 103.85], [1.30, 103.86], [1.31, 103.87]],
+  color: 'blue',
+  fillColor: 'lightblue',
+  data: { name: 'Central Area' },
+  tooltipContent: (data) => <div>{data.name}</div>
+}
 ```
+
+## Related Types
+
+- [IPolygonBound](../types/IPolygonBound.md)
+- [ICircleBound](../types/ICircleBound.md)
 

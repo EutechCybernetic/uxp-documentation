@@ -3,55 +3,69 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
-interface DynamicFormFieldProps {
+export interface DynamicFormFieldProps {
     name: string,
     label: string,
-    type: 'text' | 'password' | 'number' | 'email' | 'checkbox' | 'toggle' | 'select' | 'date' | 'time' | 'datetime' | 'hidden' | 'textarea' | 'json',
+    type: 'text' | 'password' | 'number' | 'email' | 'checkbox' | 'toggle' | 'select' | 'date' | 'time' | 'datetime' | 'daterange' | 'timerange' | 'timerangeslider' | 'hidden' | 'textarea' | 'json' | 'readonly',
     value?: FormValue,
     placeholder?: string,
+    icon?: string,
 
     renderField?: (data: IFormData, onValueChange: (value: any) => void) => React.ReactNode
 
     // show hide fields
     show?: (data: IFormData) => boolean
 
+    /**
+     * Optional: Explicit list of field names this field depends on.
+     * If provided, field only re-renders when these fields change.
+     * If omitted, dependencies are auto-detected from show/getOptions/validate functions.
+     * Use this for performance optimization or when auto-detection fails.
+     */
+    dependsOn?: string[]
 
     // for select
-    options?: Array<{ label: string | number, value: string | number }>,
-    getOptions?: (data: IFormData) => Array<{ label: string | number, value: string | number }>
+    options?: Array<{ label: string | number, value: string | number }> | Array<any>,
+    getOptions?: (data: IFormData) => (Array<{ label: string | number, value: string | number }> | Array<any>)
+    getPaginatedOptions?: (data: IFormData, max: number, lastPageToken: string, args?: any) => Promise<{ items: Array<any>, pageToken: string, total?: number }>
+    selectedOptionLabel?: string | ((data: IFormData, selected: string) => Promise<any>)
+    labelField?: string
+    valueField?: string
 
-    // for numbers 
+    // for numbers
     allowZero?: boolean
     allowNegative?: boolean,
 
-    // a formatter function on value change 
+    // a formatter function on value change
     formatter?: (value: any) => any
 
     validate?: {
-        required?: boolean // default is false 
-        allowEmptyString?: boolean // trim value. only for string values 
+        required?: boolean // default is false
+        allowEmptyString?: boolean // trim value. only for string values
         minLength?: number
         maxLength?: number
         regExp?: RegExp
-        allowZero?: boolean // only applicable to numbers 
+        allowZero?: boolean // only applicable to numbers
         allowNegative?: boolean,
         minVal?: number
         maxVal?: number
-        customValidateFunction?: (value: any, data: IFormData) => { valid: boolean, error?: string }// this is to give a custom validate function, which takes the value and return a boolean indicating value is valid or not
+        customValidateFunction?: (value: any, data: IFormData) => CustomValidateResponse | Promise<CustomValidateResponse>// this is to give a custom validate function, which takes the value and return a boolean indicating value is valid or not
     },
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {DynamicFormFieldProps} from 'uxp/components';
+import { DynamicFormFieldProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [FormValue](../types/FormValue.md)
+- [IFormData](../types/IFormData.md)
+- [CustomValidateResponse](../types/CustomValidateResponse.md)
 

@@ -3,35 +3,43 @@
 
 
 
-
-
-
-
+## Definition
 
 ```tsx
 interface IThemeChangerProps {
     /**
-     * option to pass current theme
+     * The currently selected theme name.
+     * If not provided, the context's current theme is used.
      */
-    themeName?: string,
+    themeName?: string;
+
     /**
-     * 
-     * callback on theme change
+     * Callback that is executed whenever a new theme is selected.
+     * themeName - The newly selected theme
      */
-    onChangeTheme?: (themeName: string) => void
+    onChangeTheme?: (themeName: string) => void;
+
     /**
-     * pass a element id to apply theme changes to that element and children 
-     *
+     * The ID of the root element where theme variables should be applied.
+     * Defaults to the global root if not provided.
      */
-    rootElementId?: string
+    rootElementId?: string;
+
+    /**
+     * The dropdown menu position relative to the trigger button.
+     * Defaults to `'bottom-right'`.
+     */
+    position?: Position;
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {IThemeChangerProps} from 'uxp/components';
+import { IThemeChangerProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [Position](../types/Position.md)
 

@@ -1,8 +1,6 @@
 # DataList
 
 
-
-
 A infinite-scrollable list that supports paging in of items
 
 
@@ -13,15 +11,17 @@ A infinite-scrollable list that supports paging in of items
 
 ## Installation
 
+```tsx
+import { DataList } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {DataList} from 'uxp/components';
+const DataList: React.MemoExoticComponent<React.ForwardRefExoticComponent<React.RefAttributes<IDataListInstanceProps> & IDataListProps>>
 ```
 
 ## Examples
-
-
 
 ```tsx
 Using array
@@ -54,8 +54,6 @@ Using array
  />
 ```
 
-
-
 ```tsx
 Using IDataFunction
  async function getData(max:number, last: string, args: any) {
@@ -85,8 +83,6 @@ Using IDataFunction
  />
 ```
 
-
-
 ```tsx
 Using other props
 
@@ -102,209 +98,26 @@ Using other props
 
 ## Properties
 
-|Name|Type|Description|
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|data|Array<any> \| IDataFunction|Yes|-|-|
+|renderItem|(item: any, key: number) => JSX.Element|Yes|-|*|
+|pageSize|number|Yes|-|-|
+|args|any|No|-|-|
+|renderLoading|() => JSX.Element|No|-|-|
+|className|string|No|-|-|
+|showFooter|boolean|No|-|-|
+|scrollStep|number|No|-|-|
+|showEndOfContent|boolean|No|-|-|
+|onItemsLoad|(total: number, loaded: number, items?: any[]) => void|No|-|-|
+|renderNoItems|() => JSX.Element|No|-|-|
+
+## Ref Handlers
+
+Available methods through ref:
+
+|Method|Type|Description|
 |-|-|-|
-|data|Array<any> \| IDataFunction|List of items to render. This can either be an array of objects or a function that will generate the array of objects. If you supply a function then pagination will be supported. The function expects 2 parameters - `max` and `last` and returns a promise that will resolve to the list of objects. `max` specifies the maximum number of items to be returned. |
-|renderItem|(item: any, key: number) => JSX.Element|A function that will be responsible for rendering each individual element of the list. It is common to return `ItemCard` component from here. |
-|pageSize|number|The number of items to fetch in each page. This gets passed to the data function as the `max` parameter |
-|args|any||
-|renderLoading|() => JSX.Element|This function renders a loading animation. If not specified, the default loading animation will be used. |
-|className|string|Any extra class names to be added to the component |
-|showFooter|boolean|show/hide footer (scroll buttons) |
-|scrollStep|number|mun of rows to scroll |
-|showEndOfContent|boolean|show/hide end of content message |
-|onItemsLoad|(total: number, loaded: number, items?: any[]) => void|this function will be called every time list get updated this will return total number of items (function should return the total count) and loaded items count |
-|renderNoItems|() => JSX.Element||
-
-
-### data
-
-
-
----
-
-
-
-List of items to render. This can either be an array of objects or a function that will generate the array of objects.
-If you supply a function then pagination will be supported. The function expects 2 parameters - `max` and `last` and returns a promise that will resolve to the list of objects.
-`max` specifies the maximum number of items to be returned.
-
-
-|type|
-|-|
-|Array<any> \| IDataFunction|
-
-
-### renderItem
-
-
-
----
-
-
-
-A function that will be responsible for rendering each individual element of the list.
-It is common to return  `ItemCard` component from here.
-
-
-
-|type|
-|-|
-|(item: any, key: number) => JSX.Element|
-
-
-
-
-```tsx
-renderItem={(item,key)=><div>{'Item:' + JSON.stringify(item)}}</div>}
-```
-
-
-
-```tsx
-renderItem={(item,key)=><ItemCard data={item} titleField='Name' />}
-```
-
-### pageSize
-
-
-
----
-
-
-
-The number of items to fetch in each page. This gets passed to the data function as the `max` parameter
-
-
-|type|
-|-|
-|number|
-
-
-### args
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|any|
-
-
-### renderLoading
-
-
-
----
-
-
-
-This function renders a loading animation. If not specified, the default loading animation will be used.
-
-
-|type|
-|-|
-|() => JSX.Element|
-
-
-### className
-
-
-
----
-
-
-
-Any extra class names to be added to the component
-
-
-|type|
-|-|
-|string|
-
-
-### showFooter
-
-
-
----
-
-
-
-show/hide footer (scroll buttons)
-
-
-|type|
-|-|
-|boolean|
-
-
-### scrollStep
-
-
-
----
-
-
-
-mun of rows to scroll
-
-
-|type|
-|-|
-|number|
-
-
-### showEndOfContent
-
-
-
----
-
-
-
-show/hide end of content message
-
-
-|type|
-|-|
-|boolean|
-
-
-### onItemsLoad
-
-
-
----
-
-
-
-this function will be called every time list get updated
-this will return total number of items (function should return the total count) and loaded items count
-
-
-|type|
-|-|
-|(total: number, loaded: number, items?: any[]) => void|
-
-
-### renderNoItems
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|() => JSX.Element|
-
+|updateItem|(key: number, item: any) => void|-|
+|removeItem|(key: number) => void|-|
 

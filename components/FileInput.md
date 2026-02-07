@@ -1,8 +1,6 @@
 # FileInput
 
 
-
-
 This component gives you a file input component.
 
 
@@ -10,127 +8,30 @@ This component gives you a file input component.
 
 ## Installation
 
+```tsx
+import { FileInput } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {FileInput} from 'uxp/components';
+const FileInput: React.ForwardRefExoticComponent<React.RefAttributes<IFileInputInstanceProps> & IFileInputProps>
 ```
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|value|File \| string||
-|onChange|(file: File, isValid: boolean) => void||
-|allowedTypes|string[]||
-|preview|{ showName?: boolean // default false, showPreview?: boolean // default true }||
-|className|string||
-|dropAreaIcon|IconProp||
-|dropAreaLabel|string||
-
-
-### value
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|File \| string|
-
-
-### onChange
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|(file: File, isValid: boolean) => void|
-
-
-### allowedTypes
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string[]|
-
-
-### preview
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|{ showName?: boolean // default false, showPreview?: boolean // default true }|
-
-
-### className
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### dropAreaIcon
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|IconProp|
-
-
-### dropAreaLabel
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|value|File \| string|Yes|-|-|
+|onChange|(file: File, isValid: boolean) => void|Yes|-|-|
+|allowedTypes|string[]|No|-|-|
+|preview|{ showName?: boolean // default false, showPreview?: boolean // default true }|No|-|-|
+|className|string|No|-|-|
+|dropAreaIcon|IconProp|No|-|-|
+|dropAreaLabel|string|No|-|-|
+
+## Related Types
+
+- [IFileInputProps](../types/IFileInputProps.md)
+- [IFileInputInstanceProps](../types/IFileInputInstanceProps.md)
 

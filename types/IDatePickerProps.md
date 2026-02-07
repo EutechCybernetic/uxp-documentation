@@ -4,9 +4,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface IDatePickerProps {
@@ -63,9 +61,13 @@ interface IDatePickerProps {
 
 ## Usage
 
-
-
 ```tsx
-import {IDatePickerProps} from 'uxp/components';
+import { IDatePickerProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [IDatePickerOptions](../types/IDatePickerOptions.md)
+- [ISpecialDate](../types/ISpecialDate.md)
+- [SpacingMode](../types/SpacingMode.md)
 

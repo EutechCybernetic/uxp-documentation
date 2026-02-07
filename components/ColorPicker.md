@@ -2,142 +2,36 @@
 
 
 
-
-
 Color picker input field
 
 
 ## Installation
 
+```tsx
+import { ColorPicker } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {ColorPicker} from 'uxp/components';
+const ColorPicker: React.FunctionComponent<IColorPickerProps>
 ```
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|color|string| default color |
-|onChange|(color: string) => void|callback on select a color |
-|position|[IColorPickerPosition](../types/IColorPickerPosition.md)|picker position. default is left |
-|className|string|class name for additional styles |
-|closeOnSelect|boolean|close the picker on select a color default is true |
-|displayFormat|[IColorTypes](../types/IColorTypes.md)|change display format |
-|returnFormat|[IColorTypes](../types/IColorTypes.md)|change return format |
-
-
-### color
-
-
-
----
-
-
-
- default color
-
-
-|type|
-|-|
-|string|
-
-
-### onChange
-
-
-
----
-
-
-
-callback on select a color
-
-
-|type|
-|-|
-|(color: string) => void|
-
-
-### position
-
-
-
----
-
-
-
-picker position.  default is left
-
-
-|type|
-|-|
-|[IColorPickerPosition](../types/IColorPickerPosition.md)|
-
-
-### className
-
-
-
----
-
-
-
-class name for additional styles
-
-
-|type|
-|-|
-|string|
-
-
-### closeOnSelect
-
-
-
----
-
-
-
-close the picker on select a color
-default is true
-
-
-|type|
-|-|
-|boolean|
-
-
-### displayFormat
-
-
-
----
-
-
-
-change display format
-
-
-|type|
-|-|
-|[IColorTypes](../types/IColorTypes.md)|
-
-
-### returnFormat
-
-
-
----
-
-
-
-change return format
-
-
-|type|
-|-|
-|[IColorTypes](../types/IColorTypes.md)|
-
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|color|string|Yes|-|-|
+|onChange|(color: string) => void|Yes|-|-|
+|position|[IColorPickerPosition](../types/IColorPickerPosition.md)|No|-|-|
+|className|string|No|-|-|
+|closeOnSelect|boolean|No|-|-|
+|displayFormat|[IColorTypes](../types/IColorTypes.md)|No|-|-|
+|returnFormat|[IColorTypes](../types/IColorTypes.md)|No|-|-|
+
+## Related Types
+
+- [IColorPickerProps](../types/IColorPickerProps.md)
+- [IColorPickerPosition](../types/IColorPickerPosition.md)
+- [IColorTypes](../types/IColorTypes.md)
 

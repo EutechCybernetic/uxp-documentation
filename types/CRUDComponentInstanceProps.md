@@ -2,12 +2,10 @@
 
 
 
-
-
 CRUD component instannce props
 
 
-
+## Definition
 
 ```tsx
 interface CRUDComponentInstanceProps {
@@ -20,9 +18,7 @@ interface CRUDComponentInstanceProps {
 
 ## Usage
 
-
-
 ```tsx
-import {CRUDComponentInstanceProps} from 'uxp/components';
+import { CRUDComponentInstanceProps } from 'uxp/components';
 ```
 

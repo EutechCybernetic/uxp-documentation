@@ -2,8 +2,6 @@
 
 
 
-
-
 This component let's you to configure localisation messages for the enabled languages in iviva and it opens in a modal
 
 
@@ -11,15 +9,17 @@ This component let's you to configure localisation messages for the enabled lang
 
 ## Installation
 
+```tsx
+import { LocalizationFormModal } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {LocalizationFormModal} from 'uxp/components';
+const LocalizationFormModal: React.ForwardRefExoticComponent<React.RefAttributes<ILocalisationFormModalInstanceProps> & ILocalisationFormModalProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <LocalizationFormModal
@@ -29,71 +29,24 @@ code: 'uxp-core.text.save'
 
 ## Properties
 
-|Name|Type|Description|
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|code|string|Yes|-|-|
+|useGoogleTranslate|boolean|No|-|-|
+|beforeOpen|() => boolean|No|-|-|
+|className|string|No|-|-|
+
+## Ref Handlers
+
+Available methods through ref:
+
+|Method|Type|Description|
 |-|-|-|
-|code|string||
-|useGoogleTranslate|boolean||
-|beforeOpen|() => boolean||
-|className|string||
+|open|() => void|-|
+|close|() => void|-|
 
+## Related Types
 
-### code
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### useGoogleTranslate
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### beforeOpen
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|() => boolean|
-
-
-### className
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
+- [ILocalisationFormModalProps](../types/ILocalisationFormModalProps.md)
+- [ILocalisationFormModalInstanceProps](../types/ILocalisationFormModalInstanceProps.md)
 

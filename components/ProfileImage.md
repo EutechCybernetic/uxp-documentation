@@ -1,123 +1,41 @@
 # ProfileImage
 
-
-
-Display a profile picture. Alternatively you can specify a name and it will be shown in a colored background as initials
+Display a profile picture. Supports images (URLs), icons (FontAwesome, Phosphor patterns), and initials.
 
 
 
 
 ## Installation
 
+```tsx
+import { ProfileImage } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {ProfileImage} from 'uxp/components';
+const ProfileImage: React.FunctionComponent<IProfileImageProps>
 ```
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|image|string|The url for the image to be shown |
-|name|string|Any name to be dispayed. This is used only if the image is empty. 2 letters will be derived from the name (typically the first letter of the first 2 words in the name) and a background color will be chosen. Background colors are random but consistent. So a given `name` string will always have the same background |
-|bgColor|string||
-|textColor|string||
-|className|string||
-|size|[ISize](../types/ISize.md)||
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|image|string \| IconProp|No|-|-|
+|name|string|No|-|-|
+|bgColor|string|No|-|-|
+|textColor|string|No|-|-|
+|className|string|No|-|-|
+|style|React.CSSProperties|No|-|-|
+|size|[Size](../types/Size.md)|No|-|-|
+|shape|[Shape](../types/Shape.md)|No|-|-|
+|skipAcronym|boolean|No|-|-|
+|borderColor|string|No|-|-|
+|borderWidth|string|No|-|-|
 
+## Related Types
 
-### image
-
-
-
----
-
-
-
-The url for the image to be shown
-
-
-|type|
-|-|
-|string|
-
-
-### name
-
-
-
----
-
-
-
-Any name to be dispayed. This is used only if the image is empty.
-2 letters will be derived from the name (typically the first letter of the first 2 words in the name)
-and a background color will be chosen. Background colors are random but consistent. So a given `name` string will always have the same background
-
-
-|type|
-|-|
-|string|
-
-
-### bgColor
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### textColor
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### className
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### size
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|[ISize](../types/ISize.md)|
-
+- [IProfileImageProps](../types/IProfileImageProps.md)
+- [Size](../types/Size.md)
+- [Shape](../types/Shape.md)
 

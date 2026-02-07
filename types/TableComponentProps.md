@@ -1,69 +1,74 @@
 # TableComponentProps
 
 
+Props for the TableComponent.
 
 
-
-
-
+## Definition
 
 ```tsx
-interface TableComponentProps {
-    /**
-     * data for the table 
-     * can pass a plat list of data or a function that will support pagination 
-     */
-    data: any[] | ((page: number, pageSize: number) => Promise<{ items: any[] }>);
-    /**
-     * columns definitions
-     */
-    columns: Column[];
-    /**
-     * initial page size , can be change from the pagination component 
-     */
-    pageSize: number,
-    /**
-     * total number of records 
-     */
-    total: number | (() => Promise<number>)
-    /**
-     * loading state if require 
-     */
-    loading?: boolean,
-    /**
-     * messge to show when no items found 
-     */
-    noItemsMessage?: string | React.ReactNode,
-    /**
-     * this adds a edit column in to the table  
-     */
+export interface TableComponentProps {
+    /** Array of data objects or a function to fetch paginated data */
+    data: RowData[] | ((page: number, pageSize: number) => Promise<{ items: RowData[] }>);
+
+    /** List of columns to display */
+    columns: TableColumn[];
+
+    /** Number of rows per page */
+    pageSize: number;
+
+    /** Total number of items or a function returning the total */
+    total: number | (() => Promise<number>);
+
+    /** Loading state */
+    loading?: boolean;
+
+    /** Message to show when there are no items */
+    noItemsMessage?: string | React.ReactNode;
+
+    /** Edit column configuration */
     editColumn?: {
-        enable: boolean,
-        label?: string,
-        renderColumn?: (item: any) => React.ReactNode,
-        onEdit?: (item: any) => void,
-    },
-    /**
-     * this adds a edit column in to the table  
-     * 
-     */
+        enable: boolean;
+        label?: string;
+        renderColumn?: (item: RowData) => React.ReactNode;
+        onEdit?: (item: RowData) => void;
+    };
+
+    /** Delete column configuration */
     deleteColumn?: {
-        enable: boolean,
-        label?: string,
-        renderColumn?: (item: any) => React.ReactNode,
-        onDelete?: (item: any) => Promise<void>,
-    }
-    minCellWidth?: number,
-    onClickRow?: (e: React.MouseEvent<HTMLDivElement>, item: any) => void
-    onClickColumn?: (e: React.MouseEvent<HTMLDivElement>, item: any, column: Column) => void
+        enable: boolean;
+        label?: string;
+        renderColumn?: (item: RowData) => React.ReactNode;
+        onDelete?: (item: RowData) => Promise<void>;
+    };
+
+    /** Minimum width for any table cell */
+    minCellWidth?: number;
+
+    /** Callback when a row is clicked */
+    onClickRow?: (e: React.MouseEvent<HTMLDivElement>, item: RowData) => void;
+
+    /** Callback when a cell/column is clicked */
+    onClickColumn?: (e: React.MouseEvent<HTMLDivElement>, item: RowData, column: TableColumn) => void;
+
+    /** Disable pagination and show all items */
+    disablePagination?: boolean;
+
+    /** Enable inline editing mode with callbacks */
+    editable?: EditableConfig;
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {TableComponentProps} from 'uxp/components';
+import { TableComponentProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [RowData](../types/RowData.md)
+- [TableColumn](../types/TableColumn.md)
+- [Column](../types/Column.md)
+- [EditableConfig](../types/EditableConfig.md)
 

@@ -3,12 +3,10 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
-interface TabComponentStyles {
+export interface TabComponentStyles {
     /**
      * alignment of the tabs
      * default -left
@@ -119,6 +117,8 @@ interface TabComponentStyles {
      * default - 50%
      */
     indicatorWidth?: string,
+
+    indicatorColor?:string
     /**
      * border radius of the indicator 
      * default - 0
@@ -147,9 +147,7 @@ interface TabComponentStyles {
 
 ## Usage
 
-
-
 ```tsx
-import {TabComponentStyles} from 'uxp/components';
+import { TabComponentStyles } from 'uxp/components';
 ```
 

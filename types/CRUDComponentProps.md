@@ -2,12 +2,10 @@
 
 
 
-
-
 CRUD component props
 
 
-
+## Definition
 
 ```tsx
 interface CRUDComponentProps {
@@ -46,15 +44,29 @@ interface CRUDComponentProps {
     /**
      * custom class name
      */
-    className?:string 
+    className?: string
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {CRUDComponentProps} from 'uxp/components';
+import { CRUDComponentProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [ListProps](../types/ListProps.md)
+- [TableColumn](../types/TableColumn.md)
+- [Column](../types/Column.md)
+- [ActionResponse](../types/ActionResponse.md)
+- [FormProps](../types/FormProps.md)
+- [DynamicFormProps](../types/DynamicFormProps.md)
+- [FormSectionProps](../types/FormSectionProps.md)
+- [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
+- [FormValue](../types/FormValue.md)
+- [IFormData](../types/IFormData.md)
+- [CustomValidateResponse](../types/CustomValidateResponse.md)
+- [RenderCustomFormView](../types/RenderCustomFormView.md)
+- [ExtendedFormProps](../types/ExtendedFormProps.md)
 

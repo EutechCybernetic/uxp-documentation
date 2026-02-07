@@ -1,12 +1,10 @@
 # ResizeEffectHook
 
-
-
 The react hook for resize effect
 
 
 
-
+## Definition
 
 ```tsx
 type ResizeEffectHook = (instanceId: string) => boolean
@@ -14,9 +12,7 @@ type ResizeEffectHook = (instanceId: string) => boolean
 
 ## Usage
 
-
-
 ```tsx
-import {ResizeEffectHook} from 'uxp/components';
+import { ResizeEffectHook } from 'uxp/components';
 ```
 

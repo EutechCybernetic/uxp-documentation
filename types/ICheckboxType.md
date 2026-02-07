@@ -1,12 +1,9 @@
-# ICheckboxType
-
-
-
+# undefined
 
 Determines how a checkbox field looks
 
 
-
+## Definition
 
 ```tsx
 type ICheckboxType = "default" | "bordered" | "change-icon" | "switch-line" | "switch-box";
@@ -14,9 +11,7 @@ type ICheckboxType = "default" | "bordered" | "change-icon" | "switch-line" | "s
 
 ## Usage
 
-
-
 ```tsx
-import {ICheckboxType} from 'uxp/components';
+import { undefined } from 'uxp/components';
 ```
 

@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface IModalWizardProps {
@@ -18,7 +16,7 @@ interface IModalWizardProps {
     /**
      * Call this to close the dialog
      */
-    onClose:()=>void;
+    onClose: () => void;
 
     /**
      * The title to show on the top
@@ -33,7 +31,7 @@ interface IModalWizardProps {
     /**
      * A method to render a subheader just below the title area.
      */
-    onRenderHeader?:(currentStep:IModalWizardStepProps)=> JSX.Element;
+    onRenderHeader?: (currentStep: IModalWizardStepProps) => JSX.Element;
 
     /**
      * The list of steps that this wizard consists of.
@@ -43,21 +41,24 @@ interface IModalWizardProps {
     /**
      * This action executes after they hit 'next' on the final page.
      */
-    onComplete:()=>Promise<any>;
+    onComplete: () => Promise<any>;
 
     /**
      * Text to show on the 'next' button in the final stage.
      */
     completionText?: string;
-    className?:string;
+    className?: string;
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {IModalWizardProps} from 'uxp/components';
+import { IModalWizardProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [IModalWizardStepProps](../types/IModalWizardStepProps.md)
+- [IModalWizardStep](../types/IModalWizardStep.md)
 

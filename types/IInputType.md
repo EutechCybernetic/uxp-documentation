@@ -1,12 +1,10 @@
-# IInputType
-
-
+# undefined
 
 Determines the behaviour of the input field
 
 
 
-
+## Definition
 
 ```tsx
 type IInputType = "text" | "password" | "number" | "email";
@@ -14,9 +12,7 @@ type IInputType = "text" | "password" | "number" | "email";
 
 ## Usage
 
-
-
 ```tsx
-import {IInputType} from 'uxp/components';
+import { undefined } from 'uxp/components';
 ```
 

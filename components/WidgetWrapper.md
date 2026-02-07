@@ -3,8 +3,6 @@
 
 
 
-
-
 This is a standard wrapper for widgets.
 It provides basic visual styling for common widgets. You should generally wrap all your widgets in this.
 
@@ -12,23 +10,23 @@ It provides basic visual styling for common widgets. You should generally wrap a
 
 ## Installation
 
+```tsx
+import { WidgetWrapper } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {WidgetWrapper} from 'uxp/components';
+const WidgetWrapper: React.FunctionComponent<IWidgetWrapperProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <WidgetWrapper>
  <Label>My custom widget</Label>
 </WidgetWrapper>
 ```
-
-
 
 ```tsx
 You can define custom break points for the widget and use css to make the widget responsive
@@ -55,75 +53,15 @@ then you can write css to make the widgets resposive
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|className|string|Any extra css class names to add to the widget wrapper |
-|cssBreakPoints|{ width?: { default: string, [key: number]: string }, height?: { default: string, [key: number]: string } }||
-|instanceId|string|this will be used to get the widget props this will be used to access the name and description of the widget |
-|sampleData|{ /** * toggle sample data label */ showLabel?: boolean, /** * this will be shown in the popup */ description?: string, /** * this is deprecated - use product ids instead * link to buy from spaceworx * if not provided button will not be shown */ link?: string, /** * prouct ids to show on spaceworx */ productIds?: string[] }|sample data label |
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|className|string|No|-|-|
+|cssBreakPoints|{ width?: { default: string, [key: number]: string }, height?: { default: string, [key: number]: string } }|No|-|-|
+|instanceId|string|No|-|-|
+|sampleData|{ /** * toggle sample data label */ showLabel?: boolean, /** * this will be shown in the popup */ description?: string, /** * this is deprecated - use product ids instead * link to buy from spaceworx * if not provided button will not be shown */ link?: string, /** * prouct ids to show on spaceworx */ productIds?: string[] }|No|-|-|
+|children|React.ReactNode|No|-|-|
 
+## Related Types
 
-### className
-
-
-
----
-
-
-
-Any extra css class names to add to the widget wrapper
-
-
-|type|
-|-|
-|string|
-
-
-### cssBreakPoints
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|{ width?: { default: string, [key: number]: string }, height?: { default: string, [key: number]: string } }|
-
-
-### instanceId
-
-
-
----
-
-
-
-this will be used to get the widget props
-this will be used to access the name and description of the widget
-
-
-|type|
-|-|
-|string|
-
-
-### sampleData
-
-
-
----
-
-
-
-sample data label
-
-
-|type|
-|-|
-|{ /** * toggle sample data label */ showLabel?: boolean, /** * this will be shown in the popup */ description?: string, /** * this is deprecated - use product ids instead * link to buy from spaceworx * if not provided button will not be shown */ link?: string, /** * prouct ids to show on spaceworx */ productIds?: string[] }|
-
+- [IWidgetWrapperProps](../types/IWidgetWrapperProps.md)
 

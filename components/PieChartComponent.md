@@ -1,74 +1,32 @@
 # PieChartComponent
 
 
-
-
 Display a pie chart visualization
 
 
 
 ## Installation
 
+```tsx
+import { PieChartComponent } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {PieChartComponent} from 'uxp/components';
+const PieChartComponent: React.FunctionComponent<IPieChartProps>
 ```
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|data|IDataItem[]|A list of items that the pie chart is comprised of |
-|fillColor|string|TODO |
-|showLegend|boolean|Set to `true` to show the chart legend |
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|data|[IDataItem[]](../types/IDataItem.md)|Yes|-|-|
+|fillColor|string|Yes|-|-|
+|showLegend|boolean|No|-|-|
 
+## Related Types
 
-### data
-
-
-
----
-
-
-
-A list of items that the pie chart is comprised of
-
-
-|type|
-|-|
-|IDataItem[]|
-
-
-### fillColor
-
-
-
----
-
-
-
-TODO
-
-
-|type|
-|-|
-|string|
-
-
-### showLegend
-
-
-
----
-
-
-
-Set to `true` to show the chart legend
-
-
-|type|
-|-|
-|boolean|
-
+- [IPieChartProps](../types/IPieChartProps.md)
+- [IDataItem](../types/IDataItem.md)
 

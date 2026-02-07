@@ -1,13 +1,11 @@
 # IInputInstanceProps
 
 
-
-
 Events/Callbacks to controll the behaviour of the component
 
 
 
-
+## Definition
 
 ```tsx
 interface IInputInstanceProps {
@@ -32,15 +30,11 @@ interface IInputInstanceProps {
 
 ## Usage
 
-
-
 ```tsx
-import {IInputInstanceProps} from 'uxp/components';
+import { IInputInstanceProps } from 'uxp/components';
 ```
 
 ## Examples
-
-
 
 ```tsx
 // create a ref

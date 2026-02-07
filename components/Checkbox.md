@@ -1,209 +1,70 @@
 # Checkbox
 
 
-
-
-Checkbox component
+A checkbox component that can render boolean and intermediate states in multiple visual styles.
 
 
 
 ## Installation
 
+```tsx
+import { Checkbox } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {Checkbox} from 'uxp/components';
+const Checkbox: React.ForwardRefExoticComponent<React.RefAttributes<ICheckboxInstanceProps> & ICheckboxProps>
+```
+
+## Examples
+
+```tsx
+<Checkbox
+    checked={checked}
+    onChange={(isChecked) => setChecked(isChecked)}
+    label='Are you sure'
+/>
+```
+
+```tsx
+<Checkbox
+    checked='intermediate'
+    onChange={(isChecked) => setChecked(isChecked)}
+    label='Partial selection'
+    type="switch-box"
+/>
 ```
 
 ## Properties
 
-|Name|Type|Description|
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|checked|[CheckboxState](../types/CheckboxState.md)|Yes|-|-|
+|onChange|(checked: boolean) => void|Yes|-|-|
+|label|string\| React.ReactNode|No|-|-|
+|isValid|boolean|No|-|-|
+|inputAttr|{ [key: string]: string \| boolean }|No|-|-|
+|type|[ICheckboxType](../types/ICheckboxType.md)|No|-|-|
+|className|string|No|-|-|
+|labelStyles|React.CSSProperties|No|-|-|
+|tabIndex|number|No|-|-|
+|readonly|boolean|No|-|-|
+|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
+
+## Ref Handlers
+
+Available methods through ref:
+
+|Method|Type|Description|
 |-|-|-|
-|checked|boolean|Get or set the current state of the checkbox |
-|onChange|(checked: boolean) => void|Called when the checkbox is checked or unchecked by clicking on it |
-|label|string|Any additional text to show next to the checkbox |
-|isValid|boolean|If set to 'false' the checkbox will show in an 'invalid' state - neither true nor false |
-|inputAttr|{ [key: string]: string \| boolean }|Any additional html attributes to pass to the underlying input field |
-|type|[ICheckboxType](../types/ICheckboxType.md)|Determines how the checkbox looks, visually |
-|className|string|additional styles |
-|labelStyles|React.CSSProperties|additional styles to pass to the label |
-|tabIndex|number|tab index. default is 0 |
-|readonly|boolean|mark as readonly |
-|spacingMode|SpacingMode||
-
-
-### checked
-
-
-
----
-
-
-
-Get or set the current state of the checkbox
-
-
-|type|
-|-|
-|boolean|
-
-
-### onChange
-
-
-
----
-
-
-
-Called when the checkbox is checked or unchecked by clicking on it
-
-
-|type|
-|-|
-|(checked: boolean) => void|
-
-
-### label
-
-
-
----
-
-
-
-Any additional text to show next to the checkbox
-
-
-|type|
-|-|
-|string|
-
-
-### isValid
-
-
-
----
-
-
-
-If set to 'false' the checkbox will show in an 'invalid' state - neither true nor false
-
-
-|type|
-|-|
-|boolean|
-
-
-### inputAttr
-
-
-
----
-
-
-
-Any additional html attributes to pass to the underlying input field
-
-
-|type|
-|-|
-|{ [key: string]: string \| boolean }|
-
-
-### type
-
-
-
----
-
-
-
-Determines how the checkbox looks, visually
-
-
-|type|
-|-|
-|[ICheckboxType](../types/ICheckboxType.md)|
-
-
-### className
-
-
-
----
-
-
-
-additional styles
-
-
-|type|
-|-|
-|string|
-
-
-### labelStyles
-
-
-
----
-
-
-
-additional styles to pass to the label
-
-
-|type|
-|-|
-|React.CSSProperties|
-
-
-### tabIndex
-
-
-
----
-
-
-
-tab index. default is 0
-
-
-|type|
-|-|
-|number|
-
-
-### readonly
-
-
-
----
-
-
-
-mark as readonly
-
-
-|type|
-|-|
-|boolean|
-
-
-### spacingMode
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|SpacingMode|
-
+|focus|() => void|-|
+
+## Related Types
+
+- [ICheckboxProps](../types/ICheckboxProps.md)
+- [CheckboxState](../types/CheckboxState.md)
+- [ICheckboxType](../types/ICheckboxType.md)
+- [SpacingMode](../types/SpacingMode.md)
+- [ICheckboxInstanceProps](../types/ICheckboxInstanceProps.md)
 

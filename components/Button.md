@@ -1,7 +1,6 @@
 # Button
 
 
-
 This is a basic button component.
 
 
@@ -9,15 +8,17 @@ This is a basic button component.
 
 ## Installation
 
+```tsx
+import { Button } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {Button} from 'uxp/components';
+const Button: React.FunctionComponent<ButtonProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <Button
@@ -26,258 +27,44 @@ import {Button} from 'uxp/components';
  />
 ```
 
-
-
 ```tsx
 <Button
      title="Click"
      onClick={() => {alert("Clicked")}}
-     icon="https://static.iviva.com/images/lucy-logo.svg"
+     leftIcon="https://static.iviva.com/images/lucy-logo.svg"
      loading={isLoading}
      loadingTitle="Loading..."
      className="custom-css-class"
 />
 ```
 
-
-
-```tsx
-<Button
-     title='Save'
-     loadingTitle='Saving...'
-     useLoadingSpinner={true}
-/>
-```
-
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|title|string|The caption for the button |
-|icon|string|Button icon. you can either use a url or fontawesome icon Here is a example for using fontawesome icons icon={'fas save'} |
-|iconPosition|'left' \| 'right'|position of the icon |
-|className|string|Any extra css classes to add to the button |
-|onClick|(e?: React.MouseEvent<HTMLButtonElement>) => void|The callback that gets invoked when the button is clicked |
-|loading|boolean|Set this to `true` to show the button in its 'loading...' state. In this state, an animation will be shown indicating that work is going on and the user will not be able to click the button |
-|loadingTitle|string|The caption to show on the button when its in loading state |
-|active|boolean|to mark the button as active this will highlight the button |
-|disabled|boolean|to disable the button |
-|styles|React.CSSProperties|any custom inline styles to the button |
-|iconStyles|React.CSSProperties|any custom inline styles for the icon container |
-|useLoadingSpinner|boolean|show loading spinners in place of icons (even if the icon is not there it will show the spinner on the left sides) when the button is in loading state, |
-|type|"button" \| "submit" \| "reset"||
-
-
-### title
-
-
-
----
-
-
-
-The caption for the button
-
-
-|type|
-|-|
-|string|
-
-
-### icon
-
-
-
----
-
-
-
-Button icon.
-you can either use a url or fontawesome icon
-
-Here is a example for using fontawesome icons
-icon={'fas save'}
-
-
-|type|
-|-|
-|string|
-
-
-### iconPosition
-
-
-
----
-
-
-
-position of the icon
-
-
-|type|
-|-|
-|'left' \| 'right'|
-
-
-### className
-
-
-
----
-
-
-
-Any extra css classes to add to the button
-
-
-|type|
-|-|
-|string|
-
-
-### onClick
-
-
-
----
-
-
-
-The callback that gets invoked when the button is clicked
-
-
-|type|
-|-|
-|(e?: React.MouseEvent<HTMLButtonElement>) => void|
-
-
-### loading
-
-
-
----
-
-
-
-Set this to `true` to show the button in its 'loading...' state.
-In this state, an animation will be shown indicating that work is going on and the user will not be able to click the button
-
-
-|type|
-|-|
-|boolean|
-
-
-### loadingTitle
-
-
-
----
-
-
-
-The caption to show on the button when its in loading state
-
-
-|type|
-|-|
-|string|
-
-
-### active
-
-
-
----
-
-
-
-to mark the button as active
-this will highlight the button
-
-
-|type|
-|-|
-|boolean|
-
-
-### disabled
-
-
-
----
-
-
-
-to disable the button
-
-
-|type|
-|-|
-|boolean|
-
-
-### styles
-
-
-
----
-
-
-
-any custom inline styles to the button
-
-
-|type|
-|-|
-|React.CSSProperties|
-
-
-### iconStyles
-
-
-
----
-
-
-
-any custom inline styles for the icon container
-
-
-|type|
-|-|
-|React.CSSProperties|
-
-
-### useLoadingSpinner
-
-
-
----
-
-
-
-show loading spinners in place of icons (even if the icon is not there it will show the spinner on the left sides)  when the button is in loading state,
-
-
-|type|
-|-|
-|boolean|
-
-
-### type
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|"button" \| "submit" \| "reset"|
-
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|title|string|No|-|-|
+|leftIcon|[ButtonIcon](../types/ButtonIcon.md)|No|-|-|
+|rightIcon|[ButtonIcon](../types/ButtonIcon.md)|No|-|-|
+|className|string|No|-|-|
+|onClick|(e?: React.MouseEvent<HTMLButtonElement>) => void \| Promise<void>|No|-|-|
+|onError|(e: React.MouseEvent<HTMLButtonElement>) => void|No|-|-|
+|loading|boolean|No|-|-|
+|loadingTitle|string|No|-|-|
+|active|boolean|No|-|-|
+|disabled|boolean|No|-|-|
+|styles|React.CSSProperties|No|-|-|
+|iconStyles|React.CSSProperties \| { leftIcon?: React.CSSProperties, rightIcon?: React.CSSProperties }|No|-|-|
+|type|"button" \| "submit" \| "reset"|No|-|-|
+|variant|'primary' \| 'secondary' \| 'danger'|No|-|-|
+|iconOnly|boolean|No|-|-|
+|icon|string|No|-|-|
+|iconPosition|'left' \| 'right'|No|-|-|
+|useLoadingSpinner|boolean|No|-|-|
+
+## Related Types
+
+- [ButtonProps](../types/ButtonProps.md)
+- [ButtonIcon](../types/ButtonIcon.md)
+- [PHIconProp](../types/PHIconProp.md)
+- [PHIconPrefix](../types/PHIconPrefix.md)
 

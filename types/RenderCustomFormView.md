@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 type RenderCustomFormView = (show: boolean, onClose: () => void, editInstance?: any) => React.ReactNode
@@ -13,9 +11,7 @@ type RenderCustomFormView = (show: boolean, onClose: () => void, editInstance?: 
 
 ## Usage
 
-
-
 ```tsx
-import {RenderCustomFormView} from 'uxp/components';
+import { RenderCustomFormView } from 'uxp/components';
 ```
 

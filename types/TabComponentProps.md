@@ -3,12 +3,10 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
-interface TabComponentProps {
+export interface TabComponentProps {
     /**
      * tabs 
      */
@@ -35,15 +33,22 @@ interface TabComponentProps {
     /**
      * tab component styles 
      */
-    styles?: TabComponentStyles
+    styles?: TabComponentStyles,
+    /**
+     * additional classname
+     */
+    className?: string
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {TabComponentProps} from 'uxp/components';
+import { TabComponentProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [Tab](../types/Tab.md)
+- [TabComponentStyles](../types/TabComponentStyles.md)
 

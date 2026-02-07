@@ -4,9 +4,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface IToggleOption {
@@ -24,9 +22,7 @@ interface IToggleOption {
 
 ## Usage
 
-
-
 ```tsx
-import {IToggleOption} from 'uxp/components';
+import { IToggleOption } from 'uxp/components';
 ```
 

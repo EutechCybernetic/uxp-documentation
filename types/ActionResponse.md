@@ -3,13 +3,11 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface ActionResponse {
-    status: 'done' | 'error',
+    status: 'done' | 'error' | 'no-change',
     message?: string,
     data?: any
 }
@@ -17,9 +15,7 @@ interface ActionResponse {
 
 ## Usage
 
-
-
 ```tsx
-import {ActionResponse} from 'uxp/components';
+import { ActionResponse } from 'uxp/components';
 ```
 

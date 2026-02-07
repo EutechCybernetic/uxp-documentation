@@ -5,9 +5,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface IFileInputProps {
@@ -26,9 +24,7 @@ interface IFileInputProps {
 
 ## Usage
 
-
-
 ```tsx
-import {IFileInputProps} from 'uxp/components';
+import { IFileInputProps } from 'uxp/components';
 ```
 

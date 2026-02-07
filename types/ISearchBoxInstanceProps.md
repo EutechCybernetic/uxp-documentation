@@ -3,13 +3,11 @@
 
 
 
-
-
 This component is used to render a search box.
 
 
 
-
+## Definition
 
 ```tsx
 interface ISearchBoxInstanceProps {
@@ -20,15 +18,11 @@ interface ISearchBoxInstanceProps {
 
 ## Usage
 
-
-
 ```tsx
-import {ISearchBoxInstanceProps} from 'uxp/components';
+import { ISearchBoxInstanceProps } from 'uxp/components';
 ```
 
 ## Examples
-
-
 
 ```tsx
 <SearchBox
@@ -36,8 +30,6 @@ import {ISearchBoxInstanceProps} from 'uxp/components';
      onChange={(newValue) => { setInputValue(newValue) }}
  />
 ```
-
-
 
 ```tsx
 <SearchBox

@@ -1,13 +1,11 @@
 # IWizardStepProps
 
 
-
-
 These props are passed to the render method of each wizard step.
 
 
 
-
+## Definition
 
 ```tsx
 interface IWizardStepProps {
@@ -25,9 +23,7 @@ interface IWizardStepProps {
 
 ## Usage
 
-
-
 ```tsx
-import {IWizardStepProps} from 'uxp/components';
+import { IWizardStepProps } from 'uxp/components';
 ```
 

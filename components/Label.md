@@ -1,7 +1,5 @@
 # Label
 
-
-
 A simple label. Usually used in conjunction with a FormField
 
 
@@ -9,15 +7,17 @@ A simple label. Usually used in conjunction with a FormField
 
 ## Installation
 
+```tsx
+import { Label } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {Label} from 'uxp/components';
+const Label: React.FunctionComponent<ILabelProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <Label>Name</Label>
@@ -25,103 +25,18 @@ import {Label} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|labelFor|string||
-|className|string||
-|inline|boolean||
-|styles|React.CSSProperties||
-|spacingMode|SpacingMode||
-|icon|string||
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|labelFor|string|No|-|-|
+|className|string|No|-|-|
+|inline|boolean|No|-|-|
+|styles|React.CSSProperties|No|-|-|
+|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
+|icon|string|No|-|-|
+|children|React.ReactNode|No|-|-|
 
+## Related Types
 
-### labelFor
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### className
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### inline
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### styles
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|React.CSSProperties|
-
-
-### spacingMode
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|SpacingMode|
-
-
-### icon
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
+- [ILabelProps](../types/ILabelProps.md)
+- [SpacingMode](../types/SpacingMode.md)
 

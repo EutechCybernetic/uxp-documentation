@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface IBuyOnSpaceworxButtonProps {
@@ -31,9 +29,7 @@ interface IBuyOnSpaceworxButtonProps {
 
 ## Usage
 
-
-
 ```tsx
-import {IBuyOnSpaceworxButtonProps} from 'uxp/components';
+import { IBuyOnSpaceworxButtonProps } from 'uxp/components';
 ```
 

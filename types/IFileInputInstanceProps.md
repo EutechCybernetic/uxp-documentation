@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface IFileInputInstanceProps {
@@ -15,9 +13,7 @@ interface IFileInputInstanceProps {
 
 ## Usage
 
-
-
 ```tsx
-import {IFileInputInstanceProps} from 'uxp/components';
+import { IFileInputInstanceProps } from 'uxp/components';
 ```
 

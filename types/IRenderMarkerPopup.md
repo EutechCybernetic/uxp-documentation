@@ -1,21 +1,19 @@
 # IRenderMarkerPopup
 
 
-
-
 Render a popup for marker
 
 
-
+## Definition
 
 ```tsx
-interface IRenderMarkerPopup {
+export interface IRenderMarkerPopup {
     /**
      * content to show in popup
      */
     content: () => JSX.Element,
     /**
-     * open the popup on load 
+     * open the popup on load
      */
     showOnLoad?: boolean
 }
@@ -23,9 +21,17 @@ interface IRenderMarkerPopup {
 
 ## Usage
 
+```tsx
+import { IRenderMarkerPopup } from 'uxp/components';
+```
 
+## Examples
 
 ```tsx
-import {IRenderMarkerPopup} from 'uxp/components';
+tsx
+renderPopup={{
+  content: () => <div>Popup content</div>,
+  showOnLoad: true
+}}
 ```
 

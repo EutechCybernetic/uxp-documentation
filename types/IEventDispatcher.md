@@ -4,9 +4,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 type IEventDispatcher = (instanceId: string, eventName: string, data?: { [key: string]: any }) => void
@@ -14,9 +12,7 @@ type IEventDispatcher = (instanceId: string, eventName: string, data?: { [key: s
 
 ## Usage
 
-
-
 ```tsx
-import {IEventDispatcher} from 'uxp/components';
+import { IEventDispatcher } from 'uxp/components';
 ```
 

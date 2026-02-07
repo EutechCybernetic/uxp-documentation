@@ -1,11 +1,9 @@
-# IButtonSize
+# undefined
 
 
 
 
-
-
-
+## Definition
 
 ```tsx
 type IButtonSize = "large" | "small";
@@ -13,9 +11,7 @@ type IButtonSize = "large" | "small";
 
 ## Usage
 
-
-
 ```tsx
-import {IButtonSize} from 'uxp/components';
+import { undefined } from 'uxp/components';
 ```
 

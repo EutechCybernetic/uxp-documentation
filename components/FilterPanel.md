@@ -1,7 +1,5 @@
 # FilterPanel
 
-
-
 Displays a filter button which, when clicked, opens a popup panel.
 Suitable for hiding filters for widgets or searches
 
@@ -10,15 +8,17 @@ Suitable for hiding filters for widgets or searches
 
 ## Installation
 
+```tsx
+import { FilterPanel } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {FilterPanel} from 'uxp/components';
+const FilterPanel: React.FunctionComponent<IFilterPanelProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <FilterPanel
@@ -42,108 +42,18 @@ import {FilterPanel} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|onOpen|[ICallback](../types/ICallback.md)|Called whenever the panel is opened |
-|onClose|[ICallback](../types/ICallback.md)|Called whenever the panel gets dismissed |
-|onClear|[ICallback](../types/ICallback.md)|Called whenever the clear button on the panel is pressed. This button is available only when `enableClear` is set to `true1` |
-|fillContainer|React.RefObject<HTMLElement>||
-|className|string|Any extra css classes to add to the filter panel |
-|enableClear|boolean|Enabled the clear button on the panel |
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|onOpen|[ICallback](../types/ICallback.md)|No|-|-|
+|onClose|[ICallback](../types/ICallback.md)|No|-|-|
+|onClear|[ICallback](../types/ICallback.md)|No|-|-|
+|fillContainer|React.RefObject<HTMLElement>|No|-|-|
+|className|string|No|-|-|
+|enableClear|boolean|No|-|-|
+|children|React.ReactNode|No|-|-|
 
+## Related Types
 
-### onOpen
-
-
-
----
-
-
-
-Called whenever the panel is opened
-
-
-|type|
-|-|
-|[ICallback](../types/ICallback.md)|
-
-
-### onClose
-
-
-
----
-
-
-
-Called whenever the panel gets dismissed
-
-
-|type|
-|-|
-|[ICallback](../types/ICallback.md)|
-
-
-### onClear
-
-
-
----
-
-
-
-Called whenever the clear button on the panel is pressed. This button is available only when `enableClear` is set to `true1`
-
-
-|type|
-|-|
-|[ICallback](../types/ICallback.md)|
-
-
-### fillContainer
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|React.RefObject<HTMLElement>|
-
-
-### className
-
-
-
----
-
-
-
-Any extra css classes to add to the filter panel
-
-
-|type|
-|-|
-|string|
-
-
-### enableClear
-
-
-
----
-
-
-
-Enabled the clear button on the panel
-
-
-|type|
-|-|
-|boolean|
-
+- [IFilterPanelProps](../types/IFilterPanelProps.md)
+- [ICallback](../types/ICallback.md)
 

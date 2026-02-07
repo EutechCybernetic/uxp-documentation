@@ -4,14 +4,12 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface IColorPickerProps {
     /**
-     *  default color 
+     *  default color
     */
     color: string,
     /**
@@ -44,9 +42,12 @@ interface IColorPickerProps {
 
 ## Usage
 
-
-
 ```tsx
-import {IColorPickerProps} from 'uxp/components';
+import { IColorPickerProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [IColorPickerPosition](../types/IColorPickerPosition.md)
+- [IColorTypes](../types/IColorTypes.md)
 

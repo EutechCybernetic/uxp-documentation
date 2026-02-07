@@ -1,9 +1,6 @@
 # UserProfile
 
 
-
-
-
 User Profile component
 
 This component can be used when building UI without the default header
@@ -12,88 +9,47 @@ This component can be used when building UI without the default header
 
 ## Installation
 
+```tsx
+import { UserProfile } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {UserProfile} from 'uxp/components';
+const UserProfile: React.FunctionComponent<ProfileProps>
 ```
 
 ## Examples
 
-
-
 ```tsx
-basic usage
-
- <UserProfile>
-     <your content >
- </UserProfile>
+Basic usage
+```tsx
+<UserProfile>
+  <your content>
+</UserProfile>
 ```
 
-
-
 ```tsx
-hide default details and logout button
-
- <UserProfile
-     hideDetails={true}
-     hideLogout={true}
- >
-     <your content >
- </UserProfile>
+Hide default details and logout button
+```tsx
+<UserProfile
+  hideDetails={true}
+  hideLogout={true}
+>
+  <your content>
+</UserProfile>
 ```
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|hideDetails|boolean||
-|hideLogout|boolean||
-|className|string||
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|hideDetails|boolean|No|-|-|
+|hideLogout|boolean|No|-|-|
+|className|string|No|-|-|
+|children|React.ReactNode|No|-|-|
 
+## Related Types
 
-### hideDetails
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### hideLogout
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|boolean|
-
-
-### className
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
+- [ProfileProps](../types/ProfileProps.md)
 

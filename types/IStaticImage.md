@@ -1,15 +1,13 @@
 # IStaticImage
 
 
+A static image to use instead of a map (e.g., floor plan, blueprint)
 
 
-A static image to load as the map.
-
-
-
+## Definition
 
 ```tsx
-interface IStaticImage {
+export interface IStaticImage {
     /**
      * The url of the image
      */
@@ -26,7 +24,6 @@ interface IStaticImage {
     /**
      * static image bounds
      * if not provided these will be calculated based on image width and height (NOTE: this may not be accurate)
-     * 
      */
     bounds?: [[number, number], [number, number]]
 }
@@ -34,9 +31,18 @@ interface IStaticImage {
 
 ## Usage
 
+```tsx
+import { IStaticImage } from 'uxp/components';
+```
 
+## Examples
 
 ```tsx
-import {IStaticImage} from 'uxp/components';
+tsx
+{
+  url: 'https://example.com/floorplan.png',
+  width: 623,
+  height: 431
+}
 ```
 

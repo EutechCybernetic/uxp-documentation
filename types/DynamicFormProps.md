@@ -3,20 +3,21 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
-interface DynamicFormProps {
+export interface DynamicFormProps {
     formStructure: FormSectionProps[],
     beforeSubmit?: (data: IFormData) => Promise<IFormData>
     onSubmit: (data: IFormData) => Promise<void>
     onCancel?: () => void,
     submitButtonLabel?: string,
     submitButtonLoadingLabel?: string,
+    submitButtonIcon?: string,
     cancelButtonLabel?: string,
+    cancelButtonIcon?: string,
     hideCancelButton?: boolean,
+    hideButtons?: boolean, // NEW: Hide internal buttons completely
     isLoading?: boolean,
     formContainerStyles?: React.CSSProperties,
     renderOptions?: {
@@ -38,9 +39,15 @@ interface DynamicFormProps {
 
 ## Usage
 
-
-
 ```tsx
-import {DynamicFormProps} from 'uxp/components';
+import { DynamicFormProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [FormSectionProps](../types/FormSectionProps.md)
+- [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
+- [FormValue](../types/FormValue.md)
+- [IFormData](../types/IFormData.md)
+- [CustomValidateResponse](../types/CustomValidateResponse.md)
 

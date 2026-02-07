@@ -2,15 +2,13 @@
 
 
 
-
-
 max: page size
 last : last page token
 args: any args to filter items
 args has a default option 'query'. when you type in the search box, search text ill be set to this 'query'
 
 
-
+## Definition
 
 ```tsx
 type IDynamicSelectDataFunction = (max: number, lastPageToken: string, args?: any) => Promise<{ items: Array<any>, pageToken: string }>
@@ -18,9 +16,7 @@ type IDynamicSelectDataFunction = (max: number, lastPageToken: string, args?: an
 
 ## Usage
 
-
-
 ```tsx
-import {IDynamicSelectDataFunction} from 'uxp/components';
+import { IDynamicSelectDataFunction } from 'uxp/components';
 ```
 

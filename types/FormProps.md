@@ -3,57 +3,29 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
-interface FormProps {
-    /**
-     * title of the form
-     */
-    title: string
-    /**
-     * form structure 
-     */
-    formStructure: FormSectionProps[],
-    /**
-     * submit function
-     */
+interface FormProps extends Omit<DynamicFormProps, 'renderOptions' | 'onSubmit'> {
+    title: string;
     onSubmit: (data: IFormData) => Promise<ActionResponse>
-    /**
-     * cancel fucnton 
-     */
-    onCancel?: () => void,
-    /**
-     * label for submit button 
-     */
-    submitButtonLabel?: string,
-    /**
-     * loading label for submit button
-     */
-    submitButtonLoadingLabel?: string,
-    /**
-     * label for cancel button
-     */
-    cancelButtonLabel?: string,
-    /**
-     * option to hide cancel button
-     */
-    hideCancelButton?: boolean,
-    /**
-     * callback function after saving 
-     */
-    afterSave?: (savedRecord?: any) => void,
-    formContainerStyles?: React.CSSProperties
+    afterSave?: (savedRecord?: any) => void;
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {FormProps} from 'uxp/components';
+import { FormProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [DynamicFormProps](../types/DynamicFormProps.md)
+- [FormSectionProps](../types/FormSectionProps.md)
+- [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
+- [FormValue](../types/FormValue.md)
+- [IFormData](../types/IFormData.md)
+- [CustomValidateResponse](../types/CustomValidateResponse.md)
+- [ActionResponse](../types/ActionResponse.md)
 

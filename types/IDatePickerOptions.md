@@ -1,12 +1,6 @@
 # IDatePickerOptions
 
-
-
-
-Options that can be passed to a date picker field
-
-
-
+## Definition
 
 ```tsx
 interface IDatePickerOptions {
@@ -48,9 +42,11 @@ interface IDatePickerOptions {
 
 ## Usage
 
-
-
 ```tsx
-import {IDatePickerOptions} from 'uxp/components';
+import { IDatePickerOptions } from 'uxp/components';
 ```
+
+## Related Types
+
+- [ISpecialDate](../types/ISpecialDate.md)
 

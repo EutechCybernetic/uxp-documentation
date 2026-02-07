@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface IDateRangePickerProps {
@@ -79,9 +77,15 @@ interface IDateRangePickerProps {
 
 ## Usage
 
-
-
 ```tsx
-import {IDateRangePickerProps} from 'uxp/components';
+import { IDateRangePickerProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [IDatePickerOptions](../types/IDatePickerOptions.md)
+- [ISpecialDate](../types/ISpecialDate.md)
+- [SpacingMode](../types/SpacingMode.md)
+- [DateRangePreset](../types/DateRangePreset.md)
+- [RelativeDate](../types/RelativeDate.md)
 

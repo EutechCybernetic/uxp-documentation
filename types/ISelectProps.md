@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface ISelectProps {
@@ -14,7 +12,7 @@ interface ISelectProps {
      * Each option has a label which is displayed and a value which is what we actually select.
      * also you can pass any object as options, then specify the labelField, valueField props 
      */
-    options: IOption[] | any[],
+    options: IOption[] | any[] | IDataFunction,
     /**
      * Name of the field you want to display as label
      * If not given default(label) will be used
@@ -34,6 +32,12 @@ interface ISelectProps {
      * The  currently selected value
      */
     selected: string,
+
+    /**
+     * When loading options dynamically (paginated), we need to pass the selected item label. 
+     * either you can pass the selected option label (you can get the selected option in onchange callback), or can pass a function that will accept the selected value as a params and return the selected option details 
+     */
+    selectedLabel?: string | ((selected: string) => Promise<any>)
 
     /**
      * Gets called whenever the selection changes. 
@@ -126,16 +130,30 @@ interface ISelectProps {
         renderCustomPill?: (onClear: () => void) => React.ReactNode
     }
 
+    /**
+     * Option to control the min width of the dropdown 
+     */
     dropdownMinWidth?: number,
-    dropdownMinHeight?: number
+    /**
+     * Option to control the min height of the dropdown 
+     */
+    dropdownMinHeight?: number,
+    /**
+     * Optional page size when using a function to load data
+     */
+    pageSize?: number
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {ISelectProps} from 'uxp/components';
+import { ISelectProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [IOption](../types/IOption.md)
+- [IDataFunction](../types/IDataFunction.md)
+- [SpacingMode](../types/SpacingMode.md)
 

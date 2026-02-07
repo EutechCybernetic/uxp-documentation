@@ -1,34 +1,30 @@
 # useAlert
 
-
-
 The react hook for creating alerts and confirm alerts
 
 
 
 ## Installation
 
+```tsx
+import { useAlert } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {useAlert} from 'uxp/components';
+function useAlert(): IAlertResult
 ```
 
 ## Examples
-
-
 
 ```tsx
 alerts.show("Item updated")
 ```
 
-
-
 ```tsx
 alerts.show({title: "Info", content: "Item updated", cancelButtonTitle: "Ok" })
 ```
-
-
 
 ```tsx
 Auto close an alert (disabled by default)
@@ -36,16 +32,12 @@ Auto close an alert (disabled by default)
 alerts.show({content: 'Item updated', autoClose: true, closeAfter: 2000})
 ```
 
-
-
 ```tsx
 wait until alert is closed
 
  await alerts.show("Item updated")
  ... execute the rest
 ```
-
-
 
 ```tsx
 let hasConfirmed = await alerts.confirm("Are you sure?")
@@ -55,8 +47,6 @@ let hasConfirmed = await alerts.confirm("Are you sure?")
  }
 ```
 
-
-
 ```tsx
 alerts.confirm("Are you sure?")
 .then(hasConfirmed => {
@@ -65,4 +55,18 @@ alerts.confirm("Are you sure?")
      }
 })
 ```
+
+## Related Types
+
+- [IAlertResult](../types/IAlertResult.md)
+- [IBaseAlertProps](../types/IBaseAlertProps.md)
+- [IAlertContent](../types/IAlertContent.md)
+- [IConfirmAlertProps](../types/IConfirmAlertProps.md)
+- [IFormAlertProps](../types/IFormAlertProps.md)
+- [IAlertFormField](../types/IAlertFormField.md)
+- [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
+- [FormValue](../types/FormValue.md)
+- [IFormData](../types/IFormData.md)
+- [CustomValidateResponse](../types/CustomValidateResponse.md)
+- [FormSectionProps](../types/FormSectionProps.md)
 

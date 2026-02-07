@@ -1,87 +1,44 @@
 # ThemeChanger
 
 
-
-
-
-This component allows us to switch themes in uxp
-
-
+A floating dropdown menu that allows users to change the active theme.
 
 
 
 ## Installation
 
+```tsx
+import { ThemeChanger } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {ThemeChanger} from 'uxp/components';
+const ThemeChanger: React.FunctionComponent<IThemeChangerProps>
 ```
 
 ## Examples
 
-
-
 ```tsx
-<ThemeChanger />
+tsx
+<ThemeChanger
+  themeName="dark"
+  onChangeTheme={(theme) => console.log("Theme changed:", theme)}
+  position="bottom-left"
+/>
 ```
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|themeName|string|option to pass current theme |
-|onChangeTheme|(themeName: string) => void| callback on theme change |
-|rootElementId|string|pass a element id to apply theme changes to that element and children |
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|themeName|string|No|-|-|
+|onChangeTheme|(themeName: string) => void|No|-|-|
+|rootElementId|string|No|-|-|
+|position|[Position](../types/Position.md)|No|-|-|
 
+## Related Types
 
-### themeName
-
-
-
----
-
-
-
-option to pass current theme
-
-
-|type|
-|-|
-|string|
-
-
-### onChangeTheme
-
-
-
----
-
-
-
-
-callback on theme change
-
-
-|type|
-|-|
-|(themeName: string) => void|
-
-
-### rootElementId
-
-
-
----
-
-
-
-pass a element id to apply theme changes to that element and children
-
-
-
-|type|
-|-|
-|string|
-
+- [IThemeChangerProps](../types/IThemeChangerProps.md)
+- [Position](../types/Position.md)
 

@@ -1,7 +1,5 @@
 # SpaceworxDescriptionTag
 
-
-
 This gives a pre defined component to used in configuration panels where we need to explain what is spaceworx is
 
 
@@ -11,15 +9,17 @@ This gives a pre defined component to used in configuration panels where we need
 
 ## Installation
 
+```tsx
+import { SpaceworxDescriptionTag } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {SpaceworxDescriptionTag} from 'uxp/components';
+const SpaceworxDescriptionTag: React.FunctionComponent<ISpaceworxDescriptionTagProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 <SpaceworxDescriptionTag />
@@ -27,39 +27,12 @@ import {SpaceworxDescriptionTag} from 'uxp/components';
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|className|string||
-|styles|React.CSSProperties||
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|className|string|No|-|-|
+|styles|React.CSSProperties|No|-|-|
 
+## Related Types
 
-### className
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|string|
-
-
-### styles
-
-
-
----
-
-
-
-
-
-|type|
-|-|
-|React.CSSProperties|
-
+- [ISpaceworxDescriptionTagProps](../types/ISpaceworxDescriptionTagProps.md)
 

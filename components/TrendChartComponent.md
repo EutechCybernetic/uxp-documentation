@@ -1,7 +1,5 @@
 # TrendChartComponent
 
-
-
 A component to show time series based trend or line visualizations
 
 
@@ -10,15 +8,17 @@ A component to show time series based trend or line visualizations
 
 ## Installation
 
+```tsx
+import { TrendChartComponent } from 'uxp/components';
+```
 
+## Signature
 
 ```tsx
-import {TrendChartComponent} from 'uxp/components';
+const TrendChartComponent: React.FunctionComponent<ITrendChartProps>
 ```
 
 ## Examples
-
-
 
 ```tsx
 const TrendData: ITrendSeries[] = [
@@ -59,66 +59,16 @@ const TrendData: ITrendSeries[] = [
 
 ## Properties
 
-|Name|Type|Description|
-|-|-|-|
-|data|ITrendSeries[]|The series to plot. More than one can be visualized. |
-|onShowTooltip|(data: any) => JSX.Element|Use this to render a custom tooltip that will appear when the user hovers over a data point. The data being hovered over is passed as a parameter. |
-|onClick|(data: any) => JSX.Element|Called whenever a data point is clicked on. The data point being clicked on is passed as a parameter to the function |
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|data|[ITrendSeries[]](../types/ITrendSeries.md)|Yes|-|-|
+|onShowTooltip|(data: any) => JSX.Element|No|-|* onShowTooltip={(data)=><div>{`Temperature: ${data.temp}`}</div>}|
+|onClick|(data: any) => JSX.Element|No|-|-|
 
+## Related Types
 
-### data
-
-
-
----
-
-
-
-The series to plot. More than one can be visualized.
-
-
-|type|
-|-|
-|ITrendSeries[]|
-
-
-### onShowTooltip
-
-
-
----
-
-
-
-Use this to render a custom tooltip that will appear when the user hovers over a data point.
-The data being hovered over is passed as a parameter.
-
-
-
-|type|
-|-|
-|(data: any) => JSX.Element|
-
-
-
-
-```tsx
-onShowTooltip={(data)=><div>{`Temperature: ${data.temp}`}</div>}
-```
-
-### onClick
-
-
-
----
-
-
-
-Called whenever a data point is clicked on. The data point being clicked on is passed as a parameter to the function
-
-
-|type|
-|-|
-|(data: any) => JSX.Element|
-
+- [ITrendChartProps](../types/ITrendChartProps.md)
+- [ITrendSeries](../types/ITrendSeries.md)
+- [ITrendSeriesType](../types/ITrendSeriesType.md)
+- [ITrendData](../types/ITrendData.md)
 

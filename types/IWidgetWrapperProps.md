@@ -3,9 +3,7 @@
 
 
 
-
-
-
+## Definition
 
 ```tsx
 interface IWidgetWrapperProps {
@@ -24,7 +22,7 @@ interface IWidgetWrapperProps {
         }
     },
     /**
-     * this will be used to get the widget props 
+     * this will be used to get the widget props
      * this will be used to access the name and description of the widget
      */
     instanceId?: string
@@ -52,14 +50,13 @@ interface IWidgetWrapperProps {
          */
         productIds?: string[]
     }
+    children?: React.ReactNode
 }
 ```
 
 ## Usage
 
-
-
 ```tsx
-import {IWidgetWrapperProps} from 'uxp/components';
+import { IWidgetWrapperProps } from 'uxp/components';
 ```
 
