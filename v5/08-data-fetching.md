@@ -249,12 +249,10 @@ function LocationTypeManager() {
 
 ---
 
-**See Location 5.0 app** (`/apps/iviva.dx/Location/5.0/Resources/views/src/services.ts`) for complete service configuration examples.
+**See Location 5.0 app** (`/Location/5.0/Resources/views/src/services.ts`) for complete service configuration examples.
 
 ---
 
 ## Next Steps
 
-- [Core Components](./core-components.md) - ObjectSearchComponent and other UXP components
-- [Events & Synchronization](./events-and-synchronization.md) - Keep views synchronized
-- [Using External Components](./using-external-components.md) - Use components from other apps
+- [Events & Synchronizations](./09-events.md) - Events & Synchronization

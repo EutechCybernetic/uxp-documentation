@@ -3,83 +3,48 @@
 ## V5 Development Guide
 
 ### Getting Started
-- [Setting Up Development Environment](v5/gettingstarted.md)
-- [Creating Your First V5 App](v5/migrating-to-v5.md#1-creating-a-new-v5-app-project)
-  - [Using lucy-xp CLI](v5/migrating-to-v5.md#install-the-cli)
-  - [Project Structure](v5/migrating-to-v5.md#2-folder-structure)
 
-### Understanding V5 Architecture
-- [How V5 Works](v5/migrating-to-v5.md#7-how-routes--rendering-work)
-  - [Routes and Navigation](v5/migrating-to-v5.md#6-configurationyml)
-  - [Widgets vs UI Components vs Pages](v5/migrating-to-v5.md#5-registering-views--widgets)
-  - [Component Registration](v5/migrating-to-v5.md#5-registering-views--widgets)
-  - [Configuration.yml Setup](v5/migrating-to-v5.md#6-configurationyml)
+- [Setup Development Environment](v5/01-setup-environment.md)
+- [Migration Setup](v5/02-migration-setup.md)
+- [Create Your First View](v5/03-first-view.md)
+- [Add Navigation and Validate](v5/04-first-navigation.md)
 
-### Building Components
-- [Creating Views](v5/migrating-to-v5.md#3-creating-a-view)
-- [Creating Reusable Components](v5/migrating-to-v5.md#4-creating-components)
-- [Core UXP Components](v5/core-components.md)
-  - [ObjectSearchComponent](v5/core-components.md#1-objectsearchcomponent)
-  - [Form Components](v5/core-components.md#2-form-components)
-  - [InfoCard & InfoCardGroup](v5/core-components.md#3-infocard--infocardgroup)
-  - [Dashboard & EmbeddedDashboard](v5/core-components.md#4-dashboard--embeddeddashboard)
+### Understanding V5 
 
-### Data & State Management
-- [Data Fetching in V5](v5/data-fetching.md)
-  - [Service Configurations](v5/data-fetching.md#creating-service-configurations)
-  - [useExecuteRequest Hook](v5/data-fetching.md#1-useexecuterequest-hook)
-  - [useExecuteRequestCallback](v5/data-fetching.md#2-useexecuterequestcallback-hook)
-  - [Direct Execution](v5/data-fetching.md#3-executeconfig-function)
+- [V5 Architecture](v5/05-architecture.md)
+- [Configuration Reference](v5/06-configuration-reference.md)
 
-### Events & Communication
-- [Events and Synchronization](v5/events-and-synchronization.md)
-  - [Event Bus](v5/events-and-synchronization.md#1-event-bus)
-  - [Real-Time Updates](v5/events-and-synchronization.md#2-signalr-real-time-updates)
-  - [Cross-Component Communication](v5/events-and-synchronization.md#practical-examples)
+### Building Apps 
 
-### Advanced Topics
-- [Using External Components](v5/using-external-components.md)
-  - [Attachment Uploader](v5/using-external-components.md#1-attachment-uploader)
-  - [Activity Log](v5/using-external-components.md#2-activity-log-timeline)
-  - [Components from Other Apps](v5/using-external-components.md)
-- [Pluggable Views](v5/pluggable-views.md)
-  - [Making Your App Customizable](v5/pluggable-views.md#concept)
-  - [View Overrides](v5/pluggable-views.md#how-it-works)
-  - [Use Cases](v5/pluggable-views.md#use-cases)
+- [Core UXP Components](v5/07-core-components.md)
+- [Data Fetching](v5/08-data-fetching.md)
+- [Events and Synchronization](v5/09-events.md)
+- [External Components](v5/10-external-components.md)
+- [Pluggable Views](v5/11-pluggable-views.md)
 
-### Styling & Theming
-- Theme Variables and Colors
-- Component Styling Patterns
-- SCSS Organization
-- Responsive Design
+### Styling & Localization 
 
-### Localization
-- Translation Strings (localization.json)
-- Using $L() Function
-- Multi-Language Support
-- RTL Support
+- [Styling and Theming](v5/12-styling.md)
+- [Localization](v5/13-localization.md)
 
-### Building & Deployment
-- [Building Your App](v5/migrating-to-v5.md#8-building-your-app)
-- Uploading to Lucy
-- Bundle Configuration
-- Version Management
+### Deployment
 
-### Migration
-- [Migrating from XML to V5](v5/migrating-to-v5.md)
-  - [Migration Checklist](v5/migrating-to-v5.md#quick-migration-checklist)
-  - [Common Patterns](v5/migrating-to-v5.md)
+- [Build and Deploy](v5/14-build-deploy.md)
+
+### Best Practices
+
+- [Best Practices](v5/15-best-practices.md)
 
 ---
 
-## Legacy Documentation
+## Widget & UI Development Guide
 
 ### Introduction
 - [Welcome](README.md)
 - [Understanding the Portal](portal.md)
-- [Getting Started (Legacy)](gettingstarted.md)
+- [Getting Started](gettingstarted.md)
 
-### Widget Development (Legacy)
+### Widget Development
 - [Releases](https://help.iviva.com/uxp-releases)
 - [Interface Types](uis.md)
   - [Widgets](widgets.md)
@@ -90,16 +55,16 @@
 - [Interacting with Lucy](lucy.md)
   - [Real-Time Communication](lucymessagebus.md)
 
-### Styling (Legacy)
+### Styling
 - [Interface Guidelines](hig.md)
 - [Custom Styles and CSS](styles.md)
 
-### Publishing (Legacy)
+### Publishing
 - [Publishing your UIs](publishing.md)
   - [Bundles](bundles.md)
 
 ### Tools
-- [lucy-xp CLI](lucyxp)
+- [lucy-xp CLI](lucyxp.md)
 
 ---
 

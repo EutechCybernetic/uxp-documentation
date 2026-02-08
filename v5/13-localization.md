@@ -132,46 +132,12 @@ Use hierarchical keys: `appname.category.message-id`
     }
 }
 ```
-
-**Categories:**
-- `text.*` - General text labels
-- `field.*` - Form field labels
-- `action.*` - Button/action labels
-- `status.*` - Status labels
-- `message.*` - User messages
-
 ---
 
-## RTL Support
-
-UXP automatically handles RTL for Arabic, Hebrew, etc.:
-
-```typescript
-const MyComponent = () => {
-    const uxpContext = useUXPContext();
-    const direction = uxpContext.textDirection; // 'ltr' or 'rtl'
-
-    return <div style={{ direction }}>{/* Content */}</div>;
-};
-```
-
-Use logical CSS properties:
-
-```scss
-.header {
-    margin-inline-start: 16px;  // Left in LTR, right in RTL
-    text-align: start;           // Left in LTR, right in RTL
-}
-```
-
----
-
-**See Location 5.0 app** (`/apps/iviva.dx/Location/5.0/Resources/views/localization.json`) for complete localization examples.
+**See Location 5.0 app** (`/Location/5.0/Resources/views/localization.json`) for complete localization examples.
 
 ---
 
 ## Next Steps
 
-- [Styling & Theming](./styling-theming.md) - Style your app
-- [Core Components](./core-components.md) - UXP components with localization support
-- [Building & Deployment](./building-deployment.md) - Deploy your localized app
+- [Building & Deployment](./14-buildi-deploy.md) - Deploy your app
