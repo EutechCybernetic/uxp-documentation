@@ -125,7 +125,9 @@ const PortfolioView = () => {
             page,
             pageSize,
             q: query,
-            ...filters?.filters  // Spread filter values into params
+            // Access filter values with type assertion
+            LocationType: (filters as any)?.LocationType || '',
+            Status: (filters as any)?.Status || ''
         };
         const { data } = await executeGetAll(params);
         return { items: data || [] };
@@ -148,30 +150,40 @@ const PortfolioView = () => {
         }
     ];
 
-    // Define filter fields
-    const filterFields: DynamicFormFieldProps[] = [
-        {
-            name: 'LocationType',
-            label: 'Location Type',
-            type: 'select',
-            value: '',
-            options: [
-                { label: 'Building', value: 'Building' },
-                { label: 'Floor', value: 'Floor' },
-                { label: 'Room', value: 'Room' }
-            ]
-        },
-        {
-            name: 'Status',
-            label: 'Status',
-            type: 'select',
-            value: '',
-            options: [
-                { label: 'Active', value: 'Active' },
-                { label: 'Inactive', value: 'Inactive' }
-            ]
-        }
-    ];
+    // Define filter configuration
+    const filterConfiguration: FilterConfig = {
+        formFields: [
+            {
+                title: '',
+                columns: 2,
+                fields: [
+                    {
+                        name: 'LocationType',
+                        label: 'Location Type',
+                        type: 'select',
+                        value: '',
+                        options: [
+                            { label: 'All', value: '' },
+                            { label: 'Building', value: 'Building' },
+                            { label: 'Floor', value: 'Floor' },
+                            { label: 'Room', value: 'Room' }
+                        ]
+                    },
+                    {
+                        name: 'Status',
+                        label: 'Status',
+                        type: 'select',
+                        value: '',
+                        options: [
+                            { label: 'All', value: '' },
+                            { label: 'Active', value: 'Active' },
+                            { label: 'Inactive', value: 'Inactive' }
+                        ]
+                    }
+                ]
+            }
+        ]
+    };
 
     return (
         <ObjectSearchComponent
@@ -179,9 +191,8 @@ const PortfolioView = () => {
             idField="Key"
             columns={columns}
             pageSize={50}
-            filters={{
-                fields: filterFields
-            }}
+            total={0}
+            filters={filterConfiguration}
         />
     );
 };
@@ -190,11 +201,15 @@ export default PortfolioView;
 ```
 
 **Filter Configuration:**
-- Field type `'select'` - Dropdown filter
-- Field type `'text'` - Text input filter
-- Field type `'date'` - Date picker filter
-- Field type `'checkbox'` - Checkbox filter
-- Filter values are automatically passed to your `getAll` function via `filters.filters` object
+- `FilterConfig` structure: `{ formFields: FormSectionProps[] }`
+- Each section has: `title`, `columns`, `fields: DynamicFormFieldProps[]`
+- Field types: `'select'`, `'text'`, `'date'`, `'checkbox'`, `'number'`, etc.
+- Filter values are passed to `getAll` via `filters` parameter
+- Access filter values: `(filters as any)?.fieldName`
+
+**Important Notes:**
+- ⚠️ `total` prop is **required** on ObjectSearchComponent (can be 0 if unknown)
+- ⚠️ Always verify exact prop names in `Resources/views/uxp.d.ts`
 
 ---
 
@@ -232,7 +247,7 @@ const PortfolioView = () => {
             page,
             pageSize,
             q: query,
-            ...filters?.filters,
+            LocationType: (filters as any)?.LocationType || '',
             ...sort
         };
         const { data } = await executeGetAll(params);
@@ -256,19 +271,28 @@ const PortfolioView = () => {
         }
     ];
 
-    const filterFields: DynamicFormFieldProps[] = [
-        {
-            name: 'LocationType',
-            label: 'Location Type',
-            type: 'select',
-            value: '',
-            options: [
-                { label: 'Building', value: 'Building' },
-                { label: 'Floor', value: 'Floor' },
-                { label: 'Room', value: 'Room' }
-            ]
-        }
-    ];
+    const filterConfiguration: FilterConfig = {
+        formFields: [
+            {
+                title: '',
+                columns: 1,
+                fields: [
+                    {
+                        name: 'LocationType',
+                        label: 'Location Type',
+                        type: 'select',
+                        value: '',
+                        options: [
+                            { label: 'All', value: '' },
+                            { label: 'Building', value: 'Building' },
+                            { label: 'Floor', value: 'Floor' },
+                            { label: 'Room', value: 'Room' }
+                        ]
+                    }
+                ]
+            }
+        ]
+    };
 
     // Define views
     const defaultViews: View[] = [

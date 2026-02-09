@@ -154,7 +154,13 @@ const context = useUXPContext();
 const getAll = async (page, pageSize, query, filters) => {
   const { data, error } = await executeConfig(
     context,
-    LocationServices.getAll({ page, pageSize, q: query, ...filters })
+    LocationServices.getAll({
+      page,
+      pageSize,
+      q: query,
+      LocationType: (filters as any)?.LocationType || '',
+      Status: (filters as any)?.Status || ''
+    })
   );
 
   if (error) return { items: [] };
