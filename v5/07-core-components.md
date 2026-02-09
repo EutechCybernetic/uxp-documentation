@@ -100,6 +100,7 @@ Add filters to let users narrow down results:
 import {
     ObjectSearchComponent,
     useExecuteRequestCallback,
+    hasValue,
     type OSCColumn,
     type RowData,
     type Filters,
@@ -121,14 +122,21 @@ const PortfolioView = () => {
         filters?: Filters,
         sort?: Sort
     ): Promise<{ items: RowData[] }> => {
-        const params = {
+        const params: any = {
             page,
             pageSize,
-            q: query,
-            // Access filter values with type assertion
-            LocationType: (filters as any)?.LocationType || '',
-            Status: (filters as any)?.Status || ''
+            q: query
         };
+
+        // IMPORTANT: Access filter values via filters.filters
+        if (filters?.filters) {
+            Object.entries(filters.filters).forEach(([key, value]) => {
+                if (hasValue(value)) {
+                    params[key] = value;
+                }
+            });
+        }
+
         const { data } = await executeGetAll(params);
         return { items: data || [] };
     };
@@ -205,10 +213,12 @@ export default PortfolioView;
 - Each section has: `title`, `columns`, `fields: DynamicFormFieldProps[]`
 - Field types: `'select'`, `'text'`, `'date'`, `'checkbox'`, `'number'`, etc.
 - Filter values are passed to `getAll` via `filters` parameter
-- Access filter values: `(filters as any)?.fieldName`
+- ⚠️ **Access filter values via `filters.filters.fieldName`** (note the double .filters)
 
 **Important Notes:**
 - ⚠️ `total` prop is **required** on ObjectSearchComponent (can be 0 if unknown)
+- ⚠️ Filter structure is `filters.filters.fieldName` NOT `filters.fieldName`
+- ⚠️ Use `hasValue()` to check if filter value exists before adding to params
 - ⚠️ Always verify exact prop names in `Resources/views/uxp.d.ts`
 
 ---
@@ -243,13 +253,22 @@ const PortfolioView = () => {
         filters?: Filters,
         sort?: Sort
     ): Promise<{ items: RowData[] }> => {
-        const params = {
+        const params: any = {
             page,
             pageSize,
             q: query,
-            LocationType: (filters as any)?.LocationType || '',
             ...sort
         };
+
+        // Access filter values via filters.filters
+        if (filters?.filters) {
+            Object.entries(filters.filters).forEach(([key, value]) => {
+                if (hasValue(value)) {
+                    params[key] = value;
+                }
+            });
+        }
+
         const { data } = await executeGetAll(params);
         return { items: data || [] };
     };
