@@ -35,12 +35,15 @@ tsx
 |value|string|No|-|-|
 |onChange|(value: string) => void|Yes|-|-|
 |label|string|No|-|-|
-|disabled|boolean|No|-|-|
 |className|string|No|-|-|
-|style|React.CSSProperties|No|-|-|
 |defaultViewMode|'compact' \| 'expanded'|No|-|-|
+|hideLabel|boolean|No|-|-|
+|compactMode|boolean|No|-|-|
+|placeholder|string|No|-|-|
 
 ## Related Types
 
 - [IconPickerProps](../types/IconPickerProps.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 

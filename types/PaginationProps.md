@@ -10,28 +10,44 @@ pagination component props
 ```tsx
 interface PaginationProps {
     /**
-     * Total nunmber of records 
+     * Total number of records
      */
     total: number;
+
     /**
-     * Page size. Expected values are 10, 25, 50, 100
+     * Page size
      */
     pageSize: number;
+
     /**
-     * Current page 
+     * Current page
      */
     page: number;
-    /**
-     * Callback function when page size changes 
-     */
-    onPageSizeChange: (pageSize: number) => void
-    /**
-     * Callback fucntion when page changes 
-     */
-    onPageChange: (page: number) => void,
-    children?: React.ReactNode
 
-    loading?: boolean
+    /**
+     * Callback function when page size changes
+     */
+    onPageSizeChange: (pageSize: number) => void;
+
+    /**
+     * Callback function when page changes
+     */
+    onPageChange: (page: number) => void;
+
+    /**
+     * Number of items on the current page (used for accurate count display)
+     */
+    dataLength?: number;
+
+    /**
+     * Show loading skeleton instead of controls
+     */
+    loading?: boolean;
+
+    /**
+     * Allow users to change page size via dropdown (default: true)
+     */
+    allowPageSizeChange?: boolean;
 }
 ```
 

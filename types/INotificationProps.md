@@ -4,9 +4,9 @@
 
 ```tsx
 interface INotificationProps {
-     /**
-     *  Message to show when showing
-     */
+    /**
+    *  Message to show when showing
+    */
     message: string,
     /**
      * Any extra css classes to apply

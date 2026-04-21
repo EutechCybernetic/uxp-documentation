@@ -42,10 +42,8 @@ tsx
 |onChange|(start: Date, end: Date) => void|Yes|-|-|
 |step|number|No|-|-|
 |disabled|boolean|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
 
 ## Related Types
 
 - [TimeRangeSliderPickerProps](../types/TimeRangeSliderPickerProps.md)
-- [SpacingMode](../types/SpacingMode.md)
 

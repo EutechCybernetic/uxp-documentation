@@ -7,7 +7,7 @@ Type for the button's visual variant.
 ## Definition
 
 ```tsx
-export type ButtonComponentVarient = 'primary' | 'secondary' | 'danger';
+export type ButtonComponentVarient = 'primary' | 'secondary' | 'danger' | 'warning' | 'info' | 'success';
 ```
 
 ## Usage

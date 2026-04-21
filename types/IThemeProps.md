@@ -5,6 +5,12 @@
 ```tsx
 export interface IThemeProps {
 
+    /**
+     * Optional logo URL — not a CSS variable.
+     * Accessed via context.theme.logo; skipped in the CSS var loop.
+     */
+    logo?: string,
+
     /** colors */
     /**
      * Primary color for the layout
@@ -13,6 +19,18 @@ export interface IThemeProps {
      */
     portalHeaderBGColor: string,
     portalHeaderTextColor: string,
+    portalSidebarHoverBGColor: string,
+    portalSidebarSelectedBGColor: string,
+
+    /**
+     * Navigation child items (dropdown menus)
+     * Colors for child navigation links that appear in dropdown menus
+     * These are separate from main sidebar colors as they appear on different backgrounds
+     */
+    navChildHoverBGColor: string,
+    navChildHoverTextColor: string,
+    navChildSelectedBGColor: string,
+    navChildSelectedTextColor: string,
 
     /**
      * background color of the page
@@ -62,7 +80,7 @@ export interface IThemeProps {
     secondaryTextColor: string,
 
     // item selection
-    selectedItemBGColor: string,
+    tableSelectedRowBGColor: string,
 
     // table
     tableHeaderBGColor: string,
@@ -100,6 +118,50 @@ export interface IThemeProps {
     dangerButtonActiveTextColor: string
     dangerButtonActiveBorderColor: string,
 
+    successButtonBGColor: string,
+    successButtonTextColor: string,
+    successButtonBorderColor: string,
+    successButtonHoverBGColor: string,
+    successButtonHoverTextColor: string,
+    successButtonHoverBorderColor: string,
+    successButtonActiveBGColor: string,
+    successButtonActiveTextColor: string,
+    successButtonActiveBorderColor: string,
+
+    warningButtonBGColor: string,
+    warningButtonTextColor: string,
+    warningButtonBorderColor: string,
+    warningButtonHoverBGColor: string,
+    warningButtonHoverTextColor: string,
+    warningButtonHoverBorderColor: string,
+    warningButtonActiveBGColor: string,
+    warningButtonActiveTextColor: string,
+    warningButtonActiveBorderColor: string,
+
+    infoButtonBGColor: string,
+    infoButtonTextColor: string,
+    infoButtonBorderColor: string,
+    infoButtonHoverBGColor: string,
+    infoButtonHoverTextColor: string,
+    infoButtonHoverBorderColor: string,
+    infoButtonActiveBGColor: string,
+    infoButtonActiveTextColor: string,
+    infoButtonActiveBorderColor: string,
+
+    /**
+     * Link colors
+     */
+    linkColor: string,
+    linkHoverColor: string,
+    linkVisitedColor: string,
+    linkActiveColor: string,
+
+    /**
+     * Focus ring colors
+     */
+    focusRingColor: string,
+    focusRingShadowColor: string,
+
     inputBGColor: string,
     inputTextColor: string,
     inputBorderColor: string,
@@ -112,6 +174,15 @@ export interface IThemeProps {
     inputInvalidBGColor: string
     inputInvalidTextColor: string
     inputInvalidBorderColor: string
+    inputFocusBGColor: string,
+    inputFocusTextColor: string,
+    inputFocusBorderColor: string,
+    inputHoverBGColor: string,
+    inputHoverBorderColor: string,
+    inputDisabledBGColor: string,
+    inputDisabledTextColor: string,
+    inputReadonlyBGColor: string,
+    inputReadonlyBorderColor: string,
 
     /**
      * Toast notifications
@@ -173,28 +244,49 @@ export interface IThemeProps {
     secondaryRowColor: string,
 
 
-    // status
-    newStatsuBGColor: string,
+    // status - unified system with BG, Text, and Border for all statuses
+    newStatusBGColor: string,
     newStatusTextColor: string,
-    modifiedStatsuBGColor: string,
+    newStatusBorderColor: string,
+    modifiedStatusBGColor: string,
     modifiedStatusTextColor: string,
-    onGoingStatsuBGColor: string,
+    modifiedStatusBorderColor: string,
+    onGoingStatusBGColor: string,
     onGoingStatusTextColor: string,
-    deletedStatsuBGColor: string,
+    onGoingStatusBorderColor: string,
+    deletedStatusBGColor: string,
     deletedStatusTextColor: string,
+    deletedStatusBorderColor: string,
 
     activeStatusBGColor: string,
     activeStatusTextColor: string,
+    activeStatusBorderColor: string,
     inactiveStatusBGColor: string,
     inactiveStatusTextColor: string,
+    inactiveStatusBorderColor: string,
 
-    pendingStatusColor: string,
-    onGoingStatusColor: string,
-    completedStatusColor: string,
-    approvedStatusColor: string,
-    rejectedStatusColor: string,
-    onHoldStatusColor: string,
-    parkedStatusColor: string,
+    pendingStatusBGColor: string,
+    pendingStatusTextColor: string,
+    pendingStatusBorderColor: string,
+    completedStatusBGColor: string,
+    completedStatusTextColor: string,
+    completedStatusBorderColor: string,
+    approvedStatusBGColor: string,
+    approvedStatusTextColor: string,
+    approvedStatusBorderColor: string,
+    rejectedStatusBGColor: string,
+    rejectedStatusTextColor: string,
+    rejectedStatusBorderColor: string,
+    onHoldStatusBGColor: string,
+    onHoldStatusTextColor: string,
+    onHoldStatusBorderColor: string,
+    parkedStatusBGColor: string,
+    parkedStatusTextColor: string,
+    parkedStatusBorderColor: string,
+
+    warningStatusBGColor: string,
+    warningStatusTextColor: string,
+    warningStatusBorderColor: string,
 
     // priority
     lowPriorityColor: string,
@@ -226,6 +318,11 @@ export interface IThemeProps {
     widgetDrawerTileHoverBGColor: string,
     widgetDrawerTileSelectedBGColor: string,
     widgetDrawerBadgeBGColor: string,
+
+    // Loader/Skeleton colors
+    loaderPrimaryColor: string,
+    loaderSecondaryColor: string,
+    loaderBackgroundColor: string,
 
 }
 ```

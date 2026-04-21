@@ -47,9 +47,10 @@ const IconButton: React.FunctionComponent<IIconButtonProps>
 |onError|(e: React.MouseEvent<HTMLButtonElement>) => void|No|-|-|
 |className|string|No|-|-|
 |borderless|boolean|No|-|-|
-|buttonType|"button" \| "submit" \| "reset"|No|-|-|
-|variant|'primary' \| 'secondary' \| 'danger'|No|-|-|
-|size|[IButtonSize](../types/IButtonSize.md)|No|-|-|
+|buttonType|[ButtonComponentType](../types/ButtonComponentType.md)|No|-|-|
+|variant|[ButtonComponentVarient](../types/ButtonComponentVarient.md)|No|-|-|
+|size|[ButtonComponentSize](../types/ButtonComponentSize.md)|No|-|-|
+|loading|boolean|No|-|-|
 
 ## Related Types
 
@@ -58,5 +59,7 @@ const IconButton: React.FunctionComponent<IIconButtonProps>
 - [PHIconProp](../types/PHIconProp.md)
 - [PHIconPrefix](../types/PHIconPrefix.md)
 - [IButtonType](../types/IButtonType.md)
-- [IButtonSize](../types/IButtonSize.md)
+- [ButtonComponentType](../types/ButtonComponentType.md)
+- [ButtonComponentVarient](../types/ButtonComponentVarient.md)
+- [ButtonComponentSize](../types/ButtonComponentSize.md)
 

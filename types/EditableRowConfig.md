@@ -18,6 +18,12 @@ export interface EditableRowConfig {
     onCancelEditing?: (row: RowData) => void;
     /** Callback when new row creation is cancelled */
     onCancelNewRow?: () => void;
+    /** Custom labels for action buttons */
+    labels?: {
+        delete?: string;
+        save?: string;
+        cancel?: string;
+    };
 }
 ```
 

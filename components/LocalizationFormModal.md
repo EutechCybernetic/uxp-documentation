@@ -2,8 +2,7 @@
 
 
 
-This component let's you to configure localisation messages for the enabled languages in iviva and it opens in a modal
-
+This component renders a trigger button that opens a modal for configuring localization messages.
 
 
 
@@ -16,14 +15,23 @@ import { LocalizationFormModal } from 'uxp/components';
 ## Signature
 
 ```tsx
-const LocalizationFormModal: React.ForwardRefExoticComponent<React.RefAttributes<ILocalisationFormModalInstanceProps> & ILocalisationFormModalProps>
+const LocalizationFormModal: React.FunctionComponent<ILocalisationFormModalProps>
 ```
 
 ## Examples
 
 ```tsx
+// Default usage with icon button
+<LocalizationFormModal code='uxp-core.text.save' />
+```
+
+```tsx
+// With custom trigger and deferred saving
 <LocalizationFormModal
-code: 'uxp-core.text.save'
+  code='uxp-core.auth.welcome-to'
+  useDoneButton={true}
+  onSave={handleMessagesUpdate}
+  trigger={<IconButton type="edit" />}
 />
 ```
 
@@ -35,18 +43,16 @@ code: 'uxp-core.text.save'
 |useGoogleTranslate|boolean|No|-|-|
 |beforeOpen|() => boolean|No|-|-|
 |className|string|No|-|-|
-
-## Ref Handlers
-
-Available methods through ref:
-
-|Method|Type|Description|
-|-|-|-|
-|open|() => void|-|
-|close|() => void|-|
+|onSave|(code: string, messages: LocalizationMessage[]) => Promise<{ success: boolean, error?: string }>|No|-|-|
+|submitButtonLabel|string|No|-|-|
+|cancelButtonLabel|string|No|-|-|
+|hideCancelButton|boolean|No|-|-|
+|trigger|React.ReactElement|No|-|-|
+|hideTrigger|boolean|No|-|-|
+|customMessages|Record<string, string>|No|-|-|
 
 ## Related Types
 
 - [ILocalisationFormModalProps](../types/ILocalisationFormModalProps.md)
-- [ILocalisationFormModalInstanceProps](../types/ILocalisationFormModalInstanceProps.md)
+- [LocalizationMessage](../types/LocalizationMessage.md)
 

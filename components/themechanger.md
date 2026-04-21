@@ -35,10 +35,10 @@ tsx
 |themeName|string|No|-|-|
 |onChangeTheme|(themeName: string) => void|No|-|-|
 |rootElementId|string|No|-|-|
-|position|[Position](../types/Position.md)|No|-|-|
+|position|[DropdownPosition](../types/DropdownPosition.md)|No|-|-|
 
 ## Related Types
 
 - [IThemeChangerProps](../types/IThemeChangerProps.md)
-- [Position](../types/Position.md)
+- [DropdownPosition](../types/DropdownPosition.md)
 

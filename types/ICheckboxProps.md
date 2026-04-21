@@ -3,7 +3,7 @@
 ## Definition
 
 ```tsx
-interface ICheckboxProps {
+interface ICheckboxProps extends InputSizeProps, InputStateProps {
     /**
      * Get or set the current state of the checkbox
      */
@@ -18,12 +18,7 @@ interface ICheckboxProps {
     /**
      * Any additional text to show next to the checkbox
      */
-    label?: string| React.ReactNode;
-
-    /**
-     * If set to 'false' the checkbox will show in an 'invalid' state
-     */
-    isValid?: boolean;
+    label?: string | React.ReactNode;
 
     /**
      * Any additional html attributes to pass to the underlying input field
@@ -36,12 +31,12 @@ interface ICheckboxProps {
     type?: ICheckboxType;
 
     /**
-     * Additional styles 
+     * Additional styles
      */
     className?: string;
 
     /**
-     * Additional styles to pass to the label 
+     * Additional styles to pass to the label
      */
     labelStyles?: React.CSSProperties;
 
@@ -49,13 +44,6 @@ interface ICheckboxProps {
      * Tab index. default is 0
      */
     tabIndex?: number;
-
-    /**
-     * Mark as readonly 
-     */
-    readonly?: boolean;
-
-    spacingMode?: SpacingMode
 }
 ```
 
@@ -67,7 +55,8 @@ import { ICheckboxProps } from 'uxp/components';
 
 ## Related Types
 
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [CheckboxState](../types/CheckboxState.md)
 - [ICheckboxType](../types/ICheckboxType.md)
-- [SpacingMode](../types/SpacingMode.md)
 

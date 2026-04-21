@@ -3,11 +3,11 @@
 ## Definition
 
 ```tsx
-interface ITimePickerProps {
+interface ITimePickerProps extends InputSizeProps, InputStateProps {
     /**
     * The title
     */
-    title: string
+    title?: string
     /**
      * The currently selected time. Either a Date object or an time string (Ex: 01:10:00 pm)
      */
@@ -17,15 +17,23 @@ interface ITimePickerProps {
     */
     onChange: (date: Date) => void,
     /**
-    * Set to true to prevent a user from typing in a date
+    * Set to true to prevent a user from typing in a time
     */
     disableInput?: boolean,
     /**
-     * hide the clock icon 
+     * hide the clock icon
      */
     hideLabels?: boolean,
 
-    spacingMode?: SpacingMode
+    /**
+     * Additional class name for the dropdown container
+     */
+    dropdownClassname?: string
+
+    /**
+     * Maximum width for the dropdown content
+     */
+    dropdownMaxWidth?: number | string
 }
 ```
 
@@ -37,5 +45,6 @@ import { ITimePickerProps } from 'uxp/components';
 
 ## Related Types
 
-- [SpacingMode](../types/SpacingMode.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 

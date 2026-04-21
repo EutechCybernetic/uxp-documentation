@@ -2,7 +2,7 @@
 
 
 
-gauge loader
+gauge loader - mimics RadialGauge component
 
 
 ## Installation

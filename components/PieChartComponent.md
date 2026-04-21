@@ -22,8 +22,9 @@ const PieChartComponent: React.FunctionComponent<IPieChartProps>
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |data|[IDataItem[]](../types/IDataItem.md)|Yes|-|-|
-|fillColor|string|Yes|-|-|
+|fillColor|string|No|-|-|
 |showLegend|boolean|No|-|-|
+|className|string|No|-|-|
 
 ## Related Types
 

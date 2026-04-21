@@ -25,8 +25,18 @@ export interface ToolbarItem {
 
     /**
      * Optional dropdown content to render when the toolbar item is clicked.
+     * Pass a `ReactNode` for fully custom content, or a `BaseAction[]` for a simple
+     * config-based action list (icon + label + onClick).
      */
-    renderOptionsDropdown?: React.ReactNode;
+    renderOptionsDropdown?: React.ReactNode | BaseAction[];
+
+    /**
+     * Optional function to control visibility of the toolbar item based on row data.
+     * If not provided, the toolbar item is always visible.
+     * @param item - The row data
+     * @returns true to show the toolbar item, false to hide it
+     */
+    visible?: (item: RowData) => boolean;
 }
 ```
 
@@ -39,4 +49,5 @@ import { ToolbarItem } from 'uxp/components';
 ## Related Types
 
 - [RowData](../types/RowData.md)
+- [BaseAction](../types/BaseAction.md)
 

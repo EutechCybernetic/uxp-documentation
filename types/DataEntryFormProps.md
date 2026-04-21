@@ -30,8 +30,10 @@ import { DataEntryFormProps } from 'uxp/components';
 
 - [DynamicFormProps](../types/DynamicFormProps.md)
 - [FormSectionProps](../types/FormSectionProps.md)
+- [SubSectionProps](../types/SubSectionProps.md)
 - [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
 - [FormValue](../types/FormValue.md)
 - [IFormData](../types/IFormData.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
+- [WizardState](../types/WizardState.md)
 

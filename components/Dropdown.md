@@ -3,6 +3,88 @@
 
 A component that displays a dropdown menu with customizable positioning and animation.
 
+## USAGE PATTERNS
+
+### 1. LEGACY MODE (Wrapped Trigger) - Backward Compatible
+The dropdown wraps and manages the trigger element. Use for simple cases and backwards compatibility.
+The dropdown handles all click logic automatically.
+
+```tsx
+<Dropdown
+  trigger={<button>Click me</button>}
+  content={<div>Dropdown content</div>}
+/>
+```
+
+**With triggerElementRef for precise click detection:**
+```tsx
+const buttonRef = useRef<HTMLButtonElement>(null);
+
+<Dropdown
+  trigger={
+    <div>
+      <button ref={buttonRef}>Toggle</button>
+      <span>Other content</span>
+    </div>
+  }
+  triggerElementRef={buttonRef}
+  content={<div>Only button clicks will toggle</div>}
+/>
+```
+
+### 2. EXTERNAL TRIGGER MODE (v5 Pattern) - Recommended for Inputs
+The trigger is a sibling of the dropdown, giving full styling control.
+Use for input components requiring base class styling.
+Parent handles trigger clicks, dropdown handles outside clicks automatically.
+
+```tsx
+const triggerRef = useRef<HTMLDivElement>(null);
+const [isOpen, setIsOpen] = useState(false);
+
+<div className="uxpcore_input uxp-form-select">
+  <div
+    ref={triggerRef}
+    className="uxpcore_input__trigger"
+    onClick={() => setIsOpen(!isOpen)}
+    tabIndex={0}
+  >
+    Select an option
+  </div>
+
+  <Dropdown
+    externalTriggerRef={triggerRef}
+    content={<div>Dropdown options</div>}
+    isOpen={isOpen}
+    onToggle={() => setIsOpen(!isOpen)}
+    matchTriggerWidth={true}
+  />
+</div>
+```
+
+## CLICK HANDLING BEHAVIOR
+
+### Legacy Mode
+- Dropdown wraps trigger and handles all clicks
+- Clicking trigger → Dropdown's internal handler toggles state
+- Clicking outside (backdrop) → Dropdown closes via backdrop handler
+- Can be controlled (isOpen + onToggle) or uncontrolled
+
+### External Trigger Mode
+- Trigger and dropdown are siblings (not parent-child)
+- Clicking trigger → Parent's onClick handler toggles state
+- Clicking outside (backdrop) → Dropdown's onToggle callback → Parent closes
+- MUST be controlled (isOpen + onToggle required)
+- **Click isolation guaranteed**: Trigger is in normal DOM, backdrop is in Portal
+
+## CLICK ISOLATION TECHNICAL DETAILS
+
+No double-firing occurs because:
+1. External trigger element is in normal DOM tree (parent component)
+2. Dropdown portal renders to document.body (via PortalContainer)
+3. Backdrop is rendered inside the portal
+4. Clicking trigger CANNOT trigger backdrop onClick (different DOM trees)
+5. Clicking backdrop calls onClickBackdrop → closes dropdown
+
 
 
 ## Installation
@@ -20,12 +102,7 @@ const Dropdown: React.ForwardRefExoticComponent<React.RefAttributes<DropdownHand
 ## Examples
 
 ```tsx
-<Dropdown
-  trigger={<button>Click me</button>}
-  content={<div>Dropdown content</div>}
-/>
-```
-
+Full featured legacy mode
 ```tsx
 <Dropdown
   trigger={<button>Menu</button>}
@@ -49,15 +126,20 @@ const Dropdown: React.ForwardRefExoticComponent<React.RefAttributes<DropdownHand
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |content|ReactNode|Yes|-|-|
-|trigger|ReactNode|Yes|-|-|
+|trigger|ReactNode|No|-|-|
 |triggerElementRef|React.MutableRefObject<HTMLDivElement>|No|-|-|
+|externalTriggerRef|React.RefObject<HTMLElement>|No|-|-|
 |className|string|No|-|-|
+|contentClassName|string|No|-|-|
 |position|[DropdownPosition](../types/DropdownPosition.md)|No|-|-|
 |duration|number|No|-|-|
 |isOpen|boolean|No|-|-|
 |preventOpening|boolean|No|-|-|
 |onToggle|() => void|No|-|-|
 |showAnchor|boolean|No|-|-|
+|matchTriggerWidth|boolean|No|-|-|
+|minWidth|number \| string|No|-|-|
+|maxWidth|number \| string|No|-|-|
 
 ## Ref Handlers
 

@@ -49,8 +49,12 @@ const Chip: React.FunctionComponent<ChipProps>
 |textColor|string|No|-|-|
 |onClick|(e: React.MouseEvent<HTMLDivElement>) => void|No|-|-|
 |additionalStyles|React.CSSProperties|No|-|-|
+|variant|[ChipVariant](../types/ChipVariant.md)|No|-|-|
+|size|[ChipSize](../types/ChipSize.md)|No|-|-|
 
 ## Related Types
 
 - [ChipProps](../types/ChipProps.md)
+- [ChipVariant](../types/ChipVariant.md)
+- [ChipSize](../types/ChipSize.md)
 

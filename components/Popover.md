@@ -1,8 +1,8 @@
 # Popover
 
 
-Show a popup bubble when clicking on an element.
-Wrap the element you want to target in the popup bubble.
+A component that displays a popover with a title and content when clicking on its child element.
+Uses the Dropdown component internally for positioning and click handling.
 
 
 
@@ -15,14 +15,47 @@ import { Popover } from 'uxp/components';
 ## Signature
 
 ```tsx
-const Popover: React.FunctionComponent<IPopoverProps>
+const Popover: React.FunctionComponent<PopoverProps>
 ```
 
 ## Examples
 
 ```tsx
-<Popover title='Details' content={'Name:' + props.name}>
-     <span>Click to see name</span>
+Basic popover
+```tsx
+<Popover
+  title="User Info"
+  content="John Doe - Software Engineer"
+>
+  <button>View Details</button>
+</Popover>
+```
+
+```tsx
+Custom position
+```tsx
+<Popover
+  title="Help"
+  content="This is helpful information"
+  position="right"
+>
+  <span>?</span>
+</Popover>
+```
+
+```tsx
+JSX content
+```tsx
+<Popover
+  title={() => <strong>Important</strong>}
+  content={() => (
+    <div>
+      <p>Line 1</p>
+      <p>Line 2</p>
+    </div>
+  )}
+>
+  <button>Show Info</button>
 </Popover>
 ```
 
@@ -30,14 +63,14 @@ const Popover: React.FunctionComponent<IPopoverProps>
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|title|string \| IContentFunction|Yes|-|*|
-|content|string \| IContentFunction|Yes|-|*|
-|position|[IPopoverPosition](../types/IPopoverPosition.md)|No|-|-|
-|children|React.ReactNode|No|-|*|
+|title|string \| (() => React.ReactNode)|Yes|-|* ```tsx|
+|content|string \| (() => React.ReactNode)|Yes|-|* ```tsx|
+|position|[DropdownPosition](../types/DropdownPosition.md)|No|-|-|
+|showArrow|boolean|No|-|-|
+|children|React.ReactNode|No|-|* ```tsx|
 
 ## Related Types
 
-- [IPopoverProps](../types/IPopoverProps.md)
-- [IContentFunction](../types/IContentFunction.md)
-- [IPopoverPosition](../types/IPopoverPosition.md)
+- [PopoverProps](../types/PopoverProps.md)
+- [DropdownPosition](../types/DropdownPosition.md)
 

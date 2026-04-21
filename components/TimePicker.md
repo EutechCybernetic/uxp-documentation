@@ -33,15 +33,17 @@ const TimePicker: React.FunctionComponent<ITimePickerProps>
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|title|string|Yes|-|-|
+|title|string|No|-|-|
 |time|string \| Date|Yes|-|-|
 |onChange|(date: Date) => void|Yes|-|-|
 |disableInput|boolean|No|-|-|
 |hideLabels|boolean|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
+|dropdownClassname|string|No|-|-|
+|dropdownMaxWidth|number \| string|No|-|-|
 
 ## Related Types
 
 - [ITimePickerProps](../types/ITimePickerProps.md)
-- [SpacingMode](../types/SpacingMode.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 

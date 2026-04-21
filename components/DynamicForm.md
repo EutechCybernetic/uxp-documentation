@@ -34,6 +34,7 @@ const DynamicForm: React.ForwardRefExoticComponent<React.RefAttributes<DynamicFo
 |hideButtons|boolean|No|-|-|
 |isLoading|boolean|No|-|-|
 |formContainerStyles|React.CSSProperties|No|-|-|
+|onWizardStateChange|(state: WizardState \| null) => void|No|-|-|
 |renderOptions|{ renderStyle: 'standard' \| 'tabs' \| 'wizard', direction?: 'vertical' \| 'horizontal' // only applicable to tabs and wizard tabBackgroundColor?: string, tabTextColor?: string, activeTabBackgroundColor?: string, activeTabTextColor?: string, errorTabBackgroundColor?: string, errorTabTextColor?: string, disabledTabBackgroundColor?: string, disabledTabTextColor?: string, previousButtonLabel?: string, nextButtonLabel?: string }|No|-|-|
 
 ## Ref Handlers
@@ -54,14 +55,17 @@ Available methods through ref:
 |isProcessing|() => boolean|-|
 |goToNext|() => void|-|
 |goToPrevious|() => void|-|
+|getWizardState|() => WizardState \| null|-|
 
 ## Related Types
 
 - [DynamicFormProps](../types/DynamicFormProps.md)
 - [FormSectionProps](../types/FormSectionProps.md)
+- [SubSectionProps](../types/SubSectionProps.md)
 - [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
 - [FormValue](../types/FormValue.md)
 - [IFormData](../types/IFormData.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
+- [WizardState](../types/WizardState.md)
 - [DynamicFormHandlers](../types/DynamicFormHandlers.md)
 

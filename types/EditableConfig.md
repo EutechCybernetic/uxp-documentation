@@ -20,6 +20,12 @@ export interface EditableConfig {
     onCancelItem?: () => void;
     /** Enable drag and drop row reordering */
     onReorderItems?: (reorderedData: RowData[]) => void;
+    /** Custom labels for action buttons */
+    labels?: {
+        delete?: string;
+        save?: string;
+        cancel?: string;
+    };
 }
 ```
 

@@ -8,7 +8,7 @@ second one is the timout. This is optional, default is 300(ms)
 ## Definition
 
 ```tsx
-type DebounceHook = (value: any, timeout?: number, returnUpdateFunction?: boolean) => any | [debouncedValue: any, updateValue: (value: any) => void]
+type DebounceHook = (value: any, timeout?: number, returnUpdateFunction?: boolean) => any | [debouncedValue: any, updateValue: (value: any) => void, immediateUpdate: (value: any) => void]
 ```
 
 ## Usage

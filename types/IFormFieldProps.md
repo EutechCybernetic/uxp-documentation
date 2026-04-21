@@ -15,7 +15,22 @@ interface IFormFieldProps {
      * A background color to set for the field
      */
     backgroundColor?: string,
-    spacingMode?: SpacingMode
+    /**
+     * Additional inline styles
+     */
+    style?: React.CSSProperties,
+    /**
+     * Remove padding from the field
+     */
+    noPadding?: boolean,
+    /**
+     * Remove margin from the field
+     */
+    noMargin?: boolean,
+    /**
+     * Remove all margins except bottom margin
+     */
+    marginBottomOnly?: boolean,
     children?: React.ReactNode;
 }
 ```
@@ -25,8 +40,4 @@ interface IFormFieldProps {
 ```tsx
 import { IFormFieldProps } from 'uxp/components';
 ```
-
-## Related Types
-
-- [SpacingMode](../types/SpacingMode.md)
 

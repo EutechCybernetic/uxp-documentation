@@ -1,12 +1,12 @@
 # Step 4: Add Navigation and Validate
 
-Configure routes in `configuration.yml` and add your view to navigation.
+Configure routes in `Configuration.yml` and add your view to navigation.
 
 ---
 
-## 1. Add App Metadata to configuration.yml
+## 1. Add App Metadata to Configuration.yml
 
-Open `configuration.yml` (in your app root folder) and add metadata:
+Open `Configuration.yml` (in your app root folder) and add metadata:
 
 ```yaml
 # App Metadata
@@ -66,14 +66,14 @@ navigationLinks:
 
 Ensure your `pageId` matches the ID you used when registering:
 
-**In configuration.yml:**
+**In Configuration.yml:**
 ```yaml
 pageId: ui/portfolio-view  # Format: ui/<id>
 ```
 
 **In src/index.tsx:**
 ```typescript
-window.registerUI({
+registerUI({
     id: "portfolio-view",  // Must match!
     component: PortfolioView
 });
@@ -113,7 +113,7 @@ You should see:
 
 **"Component not registered" error:**
 - Ensure `pageId` matches registration ID exactly
-- Check bundle script is loaded in `configuration.yml`
+- Check bundle script is loaded in `Configuration.yml`
 - Verify build succeeded (check `dist/main.js` exists)
 
 **Navigation link not visible:**

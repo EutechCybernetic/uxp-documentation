@@ -2,6 +2,9 @@
 
 
 A component that renders a slide-in panel with animated transitions and a backdrop.
+Supports two modes:
+- `full`: fills the main content area (default)
+- `modal`: centered overlay, auto-sized to content
 
 
 
@@ -20,6 +23,28 @@ const SlideInPanel: React.MemoExoticComponent<React.ForwardRefExoticComponent<Re
 ## Examples
 
 ```tsx
+// Full mode (default)
+<SlideInPanel isOpen={isOpen} onClose={() => setIsOpen(false)}>
+  <div>Panel Content</div>
+</SlideInPanel>
+```
+
+```tsx
+// Modal mode — auto-sized
+<SlideInPanel mode="modal" isOpen={isOpen} onClose={() => setIsOpen(false)}>
+  <div>Modal Content</div>
+</SlideInPanel>
+```
+
+```tsx
+// Modal mode — explicit size
+<SlideInPanel mode="modal" width="500px" height="400px" isOpen={isOpen} onClose={() => setIsOpen(false)}>
+  <div>Modal Content</div>
+</SlideInPanel>
+```
+
+```tsx
+// Full mode with containerRef
 const containerRef = useRef<HTMLDivElement>(null);
 const panelRef = useRef<SlideInPanelHandlers>(null);
 
@@ -44,7 +69,10 @@ const panelRef = useRef<SlideInPanelHandlers>(null);
 |children|ReactNode|Yes|-|-|
 |isOpen|boolean|Yes|-|-|
 |onClose|() => void|Yes|-|-|
+|mode|[SlideInPanelMode](../types/SlideInPanelMode.md)|No|-|-|
 |direction|[SlideInPanelDirection](../types/SlideInPanelDirection.md)|No|-|-|
+|width|string|No|-|-|
+|height|string|No|-|-|
 |className|string|No|-|-|
 |wrapperClassName|string|No|-|-|
 |unmountOnExit|boolean|No|-|-|

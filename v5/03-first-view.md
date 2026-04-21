@@ -10,32 +10,74 @@ Create your first view in `src/views/`:
 
 ```typescript
 // src/views/portfolio/PortfolioView.tsx
-import { ObjectSearchComponent, useExecuteRequestCallback,useUXPContext } from "uxp/components";
+import React, { FunctionComponent, memo, useCallback, useMemo } from "react";
+import {
+    ObjectSearchComponent,
+    useUXPContext,
+    useExecuteRequestCallback,
+    RowData,
+    Filters,
+    Sort,
+    OSCColumn
+} from "uxp/components";
 import { YourAppServices } from "../../services";
 
-const PortfolioView = ({ }) => {
+interface PortfolioViewProps {}
+
+const PortfolioViewBase: FunctionComponent<PortfolioViewProps> = (props) => {
     const uxpContext = useUXPContext();
+
+    // Use executeRequestCallback for service execution
     const executeGetAll = useExecuteRequestCallback(
-        YourAppServices.getAll()
+        YourAppServices.getAll(),
+        {
+            // Preview mode: Returns sampleData instead of making API calls
+            // Useful for development, testing, and showcasing components without backend
+            preview: {
+                isPreview: false,  // Set to true to use sample data
+                sampleData: []     // Provide mock data here
+            }
+        }
     );
 
-    const getAll = async (page, pageSize, query, filters, sort) => {
-        const params = { page, pageSize, q: query, ...filters };
-        const { data } = await executeGetAll(params);
-        return { items: data || [] };
-    };
-
-    const columns = [
-        {
-            id: 'Name',
-            label: 'Name',
-            isSortable: true
+    // Memoize data fetching function
+    const getAll = useCallback(
+        async (
+            page: number,
+            pageSize: number,
+            query?: string,
+            filters?: Filters,
+            sort?: Sort
+        ): Promise<{ items: RowData[] }> => {
+            const params = {
+                page,
+                pageSize,
+                q: query,
+                ...filters,
+                ...sort
+            };
+            const response = await executeGetAll(params);
+            return { items: response.data || [] };
         },
-        {
-            id: 'Status',
-            label: 'Status'
-        }
-    ];
+        [executeGetAll]
+    );
+
+    // Memoize columns array
+    const columns = useMemo((): OSCColumn[] => {
+        return [
+            {
+                id: 'Name',
+                label: 'Name',
+                isSortable: true,
+                isResizable: true
+            },
+            {
+                id: 'Status',
+                label: 'Status',
+                isResizable: true
+            }
+        ];
+    }, []);
 
     return (
         <ObjectSearchComponent
@@ -43,12 +85,34 @@ const PortfolioView = ({ }) => {
             idField="Key"
             columns={columns}
             pageSize={50}
+            total={0}
         />
     );
 };
 
-export default PortfolioView;
+export const PortfolioView = memo(PortfolioViewBase);
 ```
+
+### Performance Optimization
+
+This example uses React performance optimization patterns to prevent unnecessary re-renders:
+
+**`useCallback`** - Memoizes the `getAll` function so it maintains a stable reference across renders. Without it, a new function would be created on every render, causing `ObjectSearchComponent` to re-render unnecessarily.
+
+**`useMemo`** - Memoizes the `columns` array so it's only computed once. Arrays are recreated on every render by default, which would cause child components to re-render even when the data hasn't changed.
+
+**`React.memo`** - Wraps the component to prevent re-renders when props haven't changed. This is especially important for views that may be embedded in larger applications.
+
+**Benefits:**
+- Reduces unnecessary re-renders and improves performance
+- Prevents child components from re-rendering when parent updates
+- Maintains stable function/object references for dependency arrays
+- Essential for complex views with many components
+
+**Learn more:**
+- [useCallback](https://react.dev/reference/react/useCallback) - React Documentation
+- [useMemo](https://react.dev/reference/react/useMemo) - React Documentation
+- [memo](https://react.dev/reference/react/memo) - React Documentation
 
 ---
 
@@ -62,7 +126,7 @@ import { enableLocalization } from './uxp';
 import PortfolioView from './views/portfolio/PortfolioView';
 
 // Register as UI (RECOMMENDED for v5 views)
-window.registerUI({
+registerUI({
     id: "portfolio-view",
     component: PortfolioView
 });
@@ -77,7 +141,7 @@ enableLocalization();
 
 **Use `registerUI()` for views (pages):**
 ```typescript
-window.registerUI({
+registerUI({
     id: "portfolio-view",
     component: PortfolioView
 });
@@ -85,7 +149,7 @@ window.registerUI({
 
 **Use `registerWidget()` only for dashboard widgets:**
 ```typescript
-window.registerWidget({
+registerWidget({
     id: "stats-widget",
     widget: StatsWidget,
     moduleId: "com.yourapp.widgets"
@@ -123,9 +187,9 @@ Add your UI component to `bundle.json`:
 
 **Key Points:**
 - `id` - Bundle identifier (format: `iviva-<appname>-app`)
-- `uis` array - List all UI components registered with `window.registerUI()`
+- `uis` array - List all UI components registered with `registerUI()`
 - Each UI entry needs: `id`, `label`, `description`
-- The `id` must match the ID used in `window.registerUI()`
+- The `id` must match the ID used in `registerUI()`
 
 ---
 

@@ -15,18 +15,32 @@ export interface DropdownProps {
 
     /**
      * Element or component that triggers the dropdown when clicked.
+     * If externalTriggerRef is provided, this prop is optional (external trigger mode).
      */
-    trigger: ReactNode;
+    trigger?: ReactNode;
 
     /**
      * Optional ref to the trigger element for precise click detection.
+     * @deprecated Use externalTriggerRef instead for better control
      */
     triggerElementRef?: React.MutableRefObject<HTMLDivElement>;
+
+    /**
+     * External trigger reference (new v5 pattern).
+     * When provided, the dropdown will use this ref for positioning and click detection
+     * instead of wrapping the trigger element. This allows the trigger to be a sibling.
+     */
+    externalTriggerRef?: React.RefObject<HTMLElement>;
 
     /**
      * Additional class names to apply to the dropdown container.
      */
     className?: string;
+
+    /**
+     * Additional class names to apply to the dropdown content wrapper.
+     */
+    contentClassName?: string;
 
     /**
      * Position of the dropdown relative to the trigger. Defaults to 'bottom-left'.
@@ -57,6 +71,21 @@ export interface DropdownProps {
      * If true, shows an anchor element connecting the dropdown to the trigger. Defaults to false.
      */
     showAnchor?: boolean;
+
+    /**
+     * If true, makes the dropdown width match the trigger element width.
+     */
+    matchTriggerWidth?: boolean;
+
+    /**
+     * Minimum width for the dropdown. Can be number (px) or string (with units).
+     */
+    minWidth?: number | string;
+
+    /**
+     * Maximum width for the dropdown. Can be number (px) or string (with units).
+     */
+    maxWidth?: number | string;
 }
 ```
 

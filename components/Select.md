@@ -76,18 +76,22 @@ const Select: React.MemoExoticComponent<React.FunctionComponent<ISelectProps>>
 |renderOption|(item: any, key: number) => JSX.Element|No|-|*|
 |addNewValues|{ enable: boolean, title: string, loadingTitle: string, onAddNewValue?: (value: string) => Promise<any> }|No|-|-|
 |dropdownClassname|string|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
 |onClear|() => void|No|-|-|
 |renderCustomDropdownContent|(closeDropdown: () => void) => React.ReactNode|No|-|-|
+|prefix|React.ReactNode|No|-|-|
 |renderPlaceholder|{ /** * render input as a pill * work with default select dropdown */ renderAsPill?: { minWidth?: number, maxWidth?: number }, /** * for custom renders */ renderCustomPill?: (onClear: () => void) => React.ReactNode }|No|-|-|
-|dropdownMinWidth|number|No|-|-|
+|dropdownMinWidth|number \| string|No|-|-|
+|dropdownMaxWidth|number \| string|No|-|-|
 |dropdownMinHeight|number|No|-|-|
 |pageSize|number|No|-|-|
+|position|[DropdownPosition](../types/DropdownPosition.md)|No|-|-|
 
 ## Related Types
 
 - [ISelectProps](../types/ISelectProps.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [IOption](../types/IOption.md)
 - [IDataFunction](../types/IDataFunction.md)
-- [SpacingMode](../types/SpacingMode.md)
+- [DropdownPosition](../types/DropdownPosition.md)
 

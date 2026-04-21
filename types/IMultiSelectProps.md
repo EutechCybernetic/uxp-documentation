@@ -6,7 +6,7 @@
 ## Definition
 
 ```tsx
-interface IMultiSelectProps {
+interface IMultiSelectProps extends InputSizeProps, InputStateProps {
     /**
      * List of items to select from. 
      * Each option has a label which is displayed and a value which is what we actually select.
@@ -110,12 +110,14 @@ interface IMultiSelectProps {
     /**
      * Spacing mode 
      */
-    spacingMode?: SpacingMode,
-
     /**
-     * Option to control the min width of the dropdown 
+     * Option to control the min width of the dropdown
      */
-    dropdownMinWidth?: number,
+    dropdownMinWidth?: number | string,
+    /**
+     * Option to control the max width of the dropdown
+     */
+    dropdownMaxWidth?: number | string,
 
     /**
      * Option to control the min height of the dropdown 
@@ -136,7 +138,12 @@ interface IMultiSelectProps {
     renderCustomDropdownContent?: (closeDropdown: () => void) => React.ReactNode,
 
     /**
-     * Option to custom render the placeholder 
+     * Position of the dropdown relative to the trigger. Defaults to 'bottom-left'.
+     */
+    position?: DropdownPosition,
+
+    /**
+     * Option to custom render the placeholder
      */
     renderPlaceholder?: {
         /**
@@ -163,7 +170,9 @@ import { IMultiSelectProps } from 'uxp/components';
 
 ## Related Types
 
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [IOption](../types/IOption.md)
 - [IDataFunction](../types/IDataFunction.md)
-- [SpacingMode](../types/SpacingMode.md)
+- [DropdownPosition](../types/DropdownPosition.md)
 

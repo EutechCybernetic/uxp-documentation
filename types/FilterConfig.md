@@ -29,6 +29,7 @@ import { FilterConfig } from 'uxp/components';
 ## Related Types
 
 - [FormSectionProps](../types/FormSectionProps.md)
+- [SubSectionProps](../types/SubSectionProps.md)
 - [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
 - [FormValue](../types/FormValue.md)
 - [IFormData](../types/IFormData.md)

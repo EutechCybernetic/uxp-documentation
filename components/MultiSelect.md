@@ -79,17 +79,20 @@ const MultiSelect: React.MemoExoticComponent<React.FunctionComponent<IMultiSelec
 |hideClearButton|boolean|No|-|-|
 |hideDoneButton|boolean|No|-|-|
 |dropdownClassname|string|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
-|dropdownMinWidth|number|No|-|-|
+|dropdownMinWidth|number \| string|No|-|-|
+|dropdownMaxWidth|number \| string|No|-|-|
 |dropdownMinHeight|number|No|-|-|
 |pageSize|number|No|-|-|
 |renderCustomDropdownContent|(closeDropdown: () => void) => React.ReactNode|No|-|-|
+|position|[DropdownPosition](../types/DropdownPosition.md)|No|-|-|
 |renderPlaceholder|{ /** * render input as a pill * work with default select dropdown */ renderAsPill?: { minWidth?: number, maxWidth?: number }, /** * for custom renders */ renderCustomPill?: (onRemove: (e: React.MouseEvent<HTMLElement>, opt: any) => void) => React.ReactNode }|No|-|-|
 
 ## Related Types
 
 - [IMultiSelectProps](../types/IMultiSelectProps.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [IOption](../types/IOption.md)
 - [IDataFunction](../types/IDataFunction.md)
-- [SpacingMode](../types/SpacingMode.md)
+- [DropdownPosition](../types/DropdownPosition.md)
 

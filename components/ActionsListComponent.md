@@ -1,7 +1,7 @@
 # ActionsListComponent
 
 
-A component that renders a list of actions with support for nested dropdowns.
+A component that renders a list of actions with support for nested dropdowns and selected state.
 
 
 
@@ -20,6 +20,7 @@ const ActionsListComponent: React.FunctionComponent<ActionsListProps>
 ## Examples
 
 ```tsx
+// Basic usage
 <ActionsListComponent
   actions={[
     { label: 'Edit', icon: 'edit', onClick: async (item) => console.log('Edit', item) },
@@ -30,6 +31,18 @@ const ActionsListComponent: React.FunctionComponent<ActionsListProps>
 ```
 
 ```tsx
+// With selected state (e.g., theme selector)
+<ActionsListComponent
+  actions={[
+    { label: 'Light', value: 'light', onClick: () => setTheme('light') },
+    { label: 'Dark', value: 'dark', onClick: () => setTheme('dark') }
+  ]}
+  selectedValue="light"
+/>
+```
+
+```tsx
+// With nested dropdowns
 <ActionsListComponent
   actions={[
     { label: 'Edit', icon: 'edit', onClick: async (item) => console.log('Edit', item) },
@@ -52,7 +65,9 @@ const ActionsListComponent: React.FunctionComponent<ActionsListProps>
 |-|-|-|-|-|
 |actions|Action[] \| ((item?: any) => Action[] \| React.ReactNode)|Yes|-|-|
 |item|any|No|-|-|
+|selectedValue|any|No|-|-|
 |className|string|No|-|-|
+|parentDropdownRef|React.RefObject<DropdownHandlers>|No|-|-|
 
 ## Related Types
 
@@ -60,4 +75,5 @@ const ActionsListComponent: React.FunctionComponent<ActionsListProps>
 - [Action](../types/Action.md)
 - [BaseAction](../types/BaseAction.md)
 - [ActionWithChildren](../types/ActionWithChildren.md)
+- [DropdownHandlers](../types/DropdownHandlers.md)
 

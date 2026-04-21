@@ -52,6 +52,7 @@ import { DetailsPanelTab } from 'uxp/components';
 
 - [ToolbarItem](../types/ToolbarItem.md)
 - [RowData](../types/RowData.md)
+- [BaseAction](../types/BaseAction.md)
 - [ObjectInfoCardProps](../types/ObjectInfoCardProps.md)
 - [ObjectField](../types/ObjectField.md)
 - [DetailsContent](../types/DetailsContent.md)

@@ -23,15 +23,19 @@ const ColorPicker: React.FunctionComponent<IColorPickerProps>
 |-|-|-|-|-|
 |color|string|Yes|-|-|
 |onChange|(color: string) => void|Yes|-|-|
-|position|[IColorPickerPosition](../types/IColorPickerPosition.md)|No|-|-|
 |className|string|No|-|-|
-|closeOnSelect|boolean|No|-|-|
 |displayFormat|[IColorTypes](../types/IColorTypes.md)|No|-|-|
 |returnFormat|[IColorTypes](../types/IColorTypes.md)|No|-|-|
+|placeholder|string|No|-|-|
+|dropdownClassname|string|No|-|-|
+|dropdownMaxWidth|number \| string|No|-|-|
+|dropdownMinWidth|number \| string|No|-|-|
+|hideLabels|boolean|No|-|-|
 
 ## Related Types
 
 - [IColorPickerProps](../types/IColorPickerProps.md)
-- [IColorPickerPosition](../types/IColorPickerPosition.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [IColorTypes](../types/IColorTypes.md)
 

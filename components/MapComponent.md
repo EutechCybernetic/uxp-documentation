@@ -21,7 +21,7 @@ const MapComponent: React.FunctionComponent<IMapComponentProps>
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|mapUrl|string|Yes|-|* ```|
+|mapUrl|string|No|-|* ```|
 |staticImage|[IStaticImage](../types/IStaticImage.md)|No|-|* ```|
 |center|{ position: IMarker, renderMarker?: boolean }|No|-|-|
 |markers|[IMarker[]](../types/IMarker.md)|No|-|-|

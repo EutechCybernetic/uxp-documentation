@@ -42,15 +42,12 @@ const Checkbox: React.ForwardRefExoticComponent<React.RefAttributes<ICheckboxIns
 |-|-|-|-|-|
 |checked|[CheckboxState](../types/CheckboxState.md)|Yes|-|-|
 |onChange|(checked: boolean) => void|Yes|-|-|
-|label|string\| React.ReactNode|No|-|-|
-|isValid|boolean|No|-|-|
+|label|string \| React.ReactNode|No|-|-|
 |inputAttr|{ [key: string]: string \| boolean }|No|-|-|
 |type|[ICheckboxType](../types/ICheckboxType.md)|No|-|-|
 |className|string|No|-|-|
 |labelStyles|React.CSSProperties|No|-|-|
 |tabIndex|number|No|-|-|
-|readonly|boolean|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
 
 ## Ref Handlers
 
@@ -63,8 +60,9 @@ Available methods through ref:
 ## Related Types
 
 - [ICheckboxProps](../types/ICheckboxProps.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [CheckboxState](../types/CheckboxState.md)
 - [ICheckboxType](../types/ICheckboxType.md)
-- [SpacingMode](../types/SpacingMode.md)
 - [ICheckboxInstanceProps](../types/ICheckboxInstanceProps.md)
 

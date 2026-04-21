@@ -56,11 +56,11 @@ npm install
 
 ## 3. Create Configuration File
 
-Create `configuration.yml` in your **app root folder** (not in Resources/views/):
+Create `Configuration.yml` in your **app root folder** (not in Resources/views/):
 
 ```bash
-# Location: /apps/iviva.dx/YourApp/5.0/configuration.yml
-touch configuration.yml
+# Location: /apps/iviva.dx/YourApp/5.0/Configuration.yml
+touch Configuration.yml
 ```
 
 Leave it empty for now - we'll populate it in the next step.
@@ -86,7 +86,7 @@ Leave it empty for now - we'll populate it in the next step.
 
 ```
 /apps/YourApp/5.0/
-├── configuration.yml          # NEW: Routes & navigation config
+├── Configuration.yml          # NEW: Routes & navigation config
 ├── Resources/
 │   └── views/                 # NEW: React views
 │       ├── src/
@@ -109,8 +109,8 @@ Leave it empty for now - we'll populate it in the next step.
 | **Technology** | XML templates | React components |
 | **URL Format** | `/apps/yourapp/...` | `/view/yourapp/...` |
 | **Navigation** | Sidebar | Sidebar/Header (Configurable) |
-| **Configuration** | XML files | `configuration.yml` |
-| **Registration** | Automatic from XML | Explicit via `registerUI()` and `configuration.yml` |
+| **Configuration** | XML files | `Configuration.yml` |
+| **Registration** | Automatic from XML | Explicit via `registerUI()` and `Configuration.yml` |
 
 ---
 
@@ -130,7 +130,7 @@ You can migrate incrementally:
 In the following steps, we'll:
 1. Create a React view component
 2. Register it as a UI component
-3. Add it to navigation via `configuration.yml`
+3. Add it to navigation via `Configuration.yml`
 4. Test it works
 
 ---
@@ -140,7 +140,7 @@ In the following steps, we'll:
 ```
 /apps/YourApp/5.0/
 │
-├── configuration.yml          # App routes and navigation (Step 4)
+├── Configuration.yml          # App routes and navigation (Step 4)
 │
 ├── Resources/
 │   └── views/

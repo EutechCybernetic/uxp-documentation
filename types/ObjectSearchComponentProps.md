@@ -138,6 +138,16 @@ interface ObjectSearchComponentProps {
      */
     appendToURL?: boolean;
 
+    /**
+     * Allow users to change page size via dropdown (default: true)
+     */
+    allowPageSizeChange?: boolean;
+
+    /**
+     * Custom URL parameter names for this component instance. Useful for nested components to avoid param conflicts.
+     */
+    urlParams?: URLParamConfig;
+
     /** custom classname */
     className?: string
 }
@@ -153,6 +163,7 @@ import { ObjectSearchComponentProps } from 'uxp/components';
 
 - [FilterConfig](../types/FilterConfig.md)
 - [FormSectionProps](../types/FormSectionProps.md)
+- [SubSectionProps](../types/SubSectionProps.md)
 - [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
 - [FormValue](../types/FormValue.md)
 - [IFormData](../types/IFormData.md)
@@ -191,4 +202,5 @@ import { ObjectSearchComponentProps } from 'uxp/components';
 - [TableRowBasicProps](../types/TableRowBasicProps.md)
 - [ExtendedColumn](../types/ExtendedColumn.md)
 - [EditableRowConfig](../types/EditableRowConfig.md)
+- [URLParamConfig](../types/URLParamConfig.md)
 

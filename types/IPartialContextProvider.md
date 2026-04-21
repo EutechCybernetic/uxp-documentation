@@ -10,7 +10,7 @@ export interface IPartialContextProvider {
     fullAccountUrl: string;
     lucyUrl: string;
     apiKey: string;
-    onLogout?: () => void,
+    onAPIKeyChange?: (newApiKey: string) => void,
 
     language?: string
     enabledLanguages?: Language[]
@@ -21,9 +21,12 @@ export interface IPartialContextProvider {
     setTheme?: (name: string, config: IThemeProps, type: ThemeType) => void
     themeType?: ThemeType
 
+    authConfig?: any  // Auth page configuration (layout, colors, etc)
+
     userKey: string;
     loginType?: string,
     appRoles?: { [app: string]: string[] }
+    enabledApps?: string[]
     userDetails?: UserDetails;
     userSiteTimeZoneName?: string,
     userTimezoneCode?: string,
@@ -34,6 +37,12 @@ export interface IPartialContextProvider {
     userDataFormat?: string,
     userTimeFormat?: string,
     userCurrencyFormat?: string,
+    accountDisplayName?: string;
+    useGoogleTranslate?: boolean
+    hasTOS?: boolean
+    tosAgreed?: boolean
+    agreementAgreed?: boolean
+    hasAgreement?: boolean
 
     scriptFiles: Record<string, string[]>,
     navigationLinks: NavigationLink[],

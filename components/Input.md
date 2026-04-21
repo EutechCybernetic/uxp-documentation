@@ -14,30 +14,27 @@ import { Input } from 'uxp/components';
 ## Signature
 
 ```tsx
-const Input: React.ForwardRefExoticComponent<React.RefAttributes<IInputInstanceProps> & IInputProps>
+const Input: React.ForwardRefExoticComponent<React.RefAttributes<InputHandlers> & InputProps>
 ```
 
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|type|[IInputType](../types/IInputType.md)|No|-|-|
+|type|[InputType](../types/InputType.md)|No|-|-|
 |value|string|Yes|-|-|
 |onChange|(value: string) => void|Yes|-|-|
 |onFocus|() => void|No|-|-|
 |onBlur|(vale: string) => void|No|-|-|
 |onKeyDown|(e: React.KeyboardEvent<HTMLInputElement>, val: string) => void|No|-|-|
 |className|string|No|-|-|
-|hasIndicator|boolean|No|-|-|
-|indicatorColor|string|No|-|-|
-|isValid|boolean|No|-|-|
+|prefix|React.ReactNode|No|-|-|
+|suffix|React.ReactNode|No|-|-|
 |inputAttr|{ [key: string]: string \| boolean }|No|-|-|
 |placeholder|string|No|-|-|
 |inline|boolean|No|-|-|
-|styles|React.CSSProperties|No|-|-|
-|readOnly|boolean|No|-|-|
+|style|React.CSSProperties|No|-|-|
 |tabIndex|number|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
 
 ## Ref Handlers
 
@@ -50,8 +47,9 @@ Available methods through ref:
 
 ## Related Types
 
-- [IInputProps](../types/IInputProps.md)
-- [IInputType](../types/IInputType.md)
-- [SpacingMode](../types/SpacingMode.md)
-- [IInputInstanceProps](../types/IInputInstanceProps.md)
+- [InputProps](../types/InputProps.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
+- [InputType](../types/InputType.md)
+- [InputHandlers](../types/InputHandlers.md)
 

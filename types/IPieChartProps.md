@@ -10,14 +10,20 @@ interface IPieChartProps {
     data: IDataItem[],
 
     /**
-     * TODO
+     * Default fill color for pie slices. If not provided, theme chart colors will be used.
+     * Individual items can override this with their own color property.
      */
-    fillColor: string,
+    fillColor?: string,
 
     /**
      * Set to `true` to show the chart legend
      */
-    showLegend?: boolean
+    showLegend?: boolean,
+
+    /**
+     * Additional CSS classes for custom styling
+     */
+    className?: string
 }
 ```
 

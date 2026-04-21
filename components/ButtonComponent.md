@@ -77,6 +77,7 @@ Async button with loading
 |type|[ButtonComponentType](../types/ButtonComponentType.md)|No|-|-|
 |variant|[ButtonComponentVarient](../types/ButtonComponentVarient.md)|No|-|-|
 |iconOnly|boolean|No|-|-|
+|size|[ButtonComponentSize](../types/ButtonComponentSize.md)|No|-|-|
 
 ## Related Types
 
@@ -86,4 +87,5 @@ Async button with loading
 - [PHIconPrefix](../types/PHIconPrefix.md)
 - [ButtonComponentType](../types/ButtonComponentType.md)
 - [ButtonComponentVarient](../types/ButtonComponentVarient.md)
+- [ButtonComponentSize](../types/ButtonComponentSize.md)
 

@@ -51,6 +51,8 @@ tsx
 |columns|1 \| 2 \| 3|No|1|-|
 |separator|boolean|No|false|-|
 |show|(data: IFormData) => boolean|No|-|-|
+|collapsible|boolean|No|false|-|
+|defaultExpanded|boolean|No|true|-|
 |children|React.ReactNode|No|-|-|
 
 ## Related Types

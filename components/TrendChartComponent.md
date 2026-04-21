@@ -35,7 +35,7 @@ const TrendData: ITrendSeries[] = [
             ],
             type: "line"
         },
-        {
+        
             unit: "B",
             lineColor: "#413ea0",
             fillColor: "#8884d8",
@@ -49,8 +49,8 @@ const TrendData: ITrendSeries[] = [
                 { time: "2020/12/20", value: 90 }
             ],
             type: "area"
-        }
-    ]
+        
+    
 
  <TrendChartComponent
      data={TrendData}
@@ -64,6 +64,7 @@ const TrendData: ITrendSeries[] = [
 |data|[ITrendSeries[]](../types/ITrendSeries.md)|Yes|-|-|
 |onShowTooltip|(data: any) => JSX.Element|No|-|* onShowTooltip={(data)=><div>{`Temperature: ${data.temp}`}</div>}|
 |onClick|(data: any) => JSX.Element|No|-|-|
+|className|string|No|-|-|
 
 ## Related Types
 

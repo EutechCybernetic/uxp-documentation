@@ -10,6 +10,9 @@ export interface IRenderUIItemProps {
     component: any,
     uiProps?: any,
     title?: string,
+     /**
+     * @deprecated in V5 all UIs will be rendered within the base layout - all will have the header and sidebar
+     */
     showDefaultHeader?: boolean // default is true. hide the header if set to false
 }
 ```

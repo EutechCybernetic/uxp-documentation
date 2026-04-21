@@ -55,5 +55,6 @@ import { ButtonGroupProps } from 'uxp/components';
 - [PHIconPrefix](../types/PHIconPrefix.md)
 - [ButtonComponentType](../types/ButtonComponentType.md)
 - [ButtonComponentVarient](../types/ButtonComponentVarient.md)
+- [ButtonComponentSize](../types/ButtonComponentSize.md)
 - [DropdownPosition](../types/DropdownPosition.md)
 

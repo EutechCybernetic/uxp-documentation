@@ -27,12 +27,10 @@ const TextArea: React.ForwardRefExoticComponent<React.RefAttributes<ITextAreaIns
 |onBlur|(vale: string) => void|No|-|-|
 |onKeyDown|(e: React.KeyboardEvent<HTMLTextAreaElement>, val: string) => void|No|-|-|
 |className|string|No|-|-|
-|styles|React.CSSProperties|No|-|-|
-|readOnly|boolean|No|-|-|
+|style|React.CSSProperties|No|-|-|
 |tabIndex|number|No|-|-|
 |rows|number|No|-|-|
 |cols|number|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
 
 ## Ref Handlers
 
@@ -46,6 +44,7 @@ Available methods through ref:
 ## Related Types
 
 - [ITextAreaProps](../types/ITextAreaProps.md)
-- [SpacingMode](../types/SpacingMode.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [ITextAreaInstanceProps](../types/ITextAreaInstanceProps.md)
 

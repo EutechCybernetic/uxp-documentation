@@ -17,9 +17,9 @@ export interface WidgetDrawerConfig {
     excludeStatuses?: WidgetDrawerStatus[]
     buttonLabel?: string
     widgetsButtonLabel?: string
-    uisButtonLabel?: string    
+    uisButtonLabel?: string
     returnRawData?: boolean
-    enableUIs?: boolean 
+    enableUIs?: boolean
 }
 ```
 

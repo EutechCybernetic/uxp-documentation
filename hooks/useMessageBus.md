@@ -5,6 +5,7 @@ The hook takes care of initialization and unsubscribing after the component unmo
 
 
 
+
 ## Installation
 
 ```tsx
@@ -14,7 +15,7 @@ import { useMessageBus } from 'uxp/components';
 ## Signature
 
 ```tsx
-function useMessageBus(context: any, channel: any, callback: any): MessageBusHook
+function useMessageBus(context: any, channel: any, callback: any): IMessageBusHook
 ```
 
 ## Examples
@@ -23,13 +24,12 @@ function useMessageBus(context: any, channel: any, callback: any): MessageBusHoo
 useMessageBus(props.uxpContext, "visitor-arrival", (payload, channel) => {
      getVisitorArrivals();
      Toast.info("Your visitor is here")
-     return "updated"
-})
+ });
 ```
 
 ## Related Types
 
-- [MessageBusHook](../types/MessageBusHook.md)
+- [IMessageBusHook](../types/IMessageBusHook.md)
 - [IContextProvider](../types/IContextProvider.md)
 - [IPartialContextProvider](../types/IPartialContextProvider.md)
 - [Language](../types/Language.md)

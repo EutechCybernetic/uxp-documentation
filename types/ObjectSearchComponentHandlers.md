@@ -18,7 +18,23 @@ export interface ObjectSearchComponentHandlers {
      */
     getDetails: () => ObjectSearchDetailsResponse;
 
-    refreshCurrentPage: () => void
+    /** Refreshes current page data with loading state shown. */
+    refreshCurrentPage: () => void;
+
+    /** Refreshes current page data silently, without showing the loading state. */
+    silentRefreshCurrentPage: () => void;
+
+    /** Directly replaces the current page data with the provided array. No fetch is triggered. */
+    setPageData: (items: RowData[]) => void;
+
+    /** Returns the current page data (the visible rows). */
+    getCurrentPageData: () => RowData[];
+
+    /** Returns the currently applied filters. */
+    getFilters: () => Filters;
+
+    /** Sets filters programmatically. Must be a valid SimpleFilter: { filters: Record<string, any> }. Invalid input is ignored. */
+    applyFilters: (filters: Filters) => void;
 }
 ```
 
@@ -37,4 +53,5 @@ import { ObjectSearchComponentHandlers } from 'uxp/components';
 - [SimpleFilter](../types/SimpleFilter.md)
 - [Sort](../types/Sort.md)
 - [SortOrder](../types/SortOrder.md)
+- [RowData](../types/RowData.md)
 

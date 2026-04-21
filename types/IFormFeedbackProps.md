@@ -6,7 +6,6 @@
 interface IFormFeedbackProps {
     validInput?: boolean,
     className?: string
-    spacingMode?: SpacingMode,
     children?:React.ReactNode
 }
 ```
@@ -16,8 +15,4 @@ interface IFormFeedbackProps {
 ```tsx
 import { IFormFeedbackProps } from 'uxp/components';
 ```
-
-## Related Types
-
-- [SpacingMode](../types/SpacingMode.md)
 

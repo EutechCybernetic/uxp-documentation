@@ -31,6 +31,10 @@ interface PillComponentProps {
     onChangeFormatters?: (value: string) => void
     /** Callback when formatter UI is clicked */
     onClickFormatters?: () => void
+    /** Whether the input is disabled */
+    disabled?: boolean
+    /** Whether the input is readonly */
+    readOnly?: boolean
 }
 ```
 

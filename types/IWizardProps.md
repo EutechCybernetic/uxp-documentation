@@ -18,6 +18,11 @@ interface IWizardProps {
      * This callback is run whenever they hit the final 'completion' action on the last step. It should be async so we can show a loading animation on the button
      */
     onComplete?: () => Promise<void>;
+
+    /**
+     * Optional: Show/hide the step indicator. Default is true.
+     */
+    showStepIndicator?: boolean;
 }
 ```
 

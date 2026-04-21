@@ -51,6 +51,7 @@ import { IWidget } from 'uxp/components';
 - [IFormData](../types/IFormData.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
 - [FormSectionProps](../types/FormSectionProps.md)
+- [SubSectionProps](../types/SubSectionProps.md)
 - [IConfigPanelProps](../types/IConfigPanelProps.md)
 - [IContextProvider](../types/IContextProvider.md)
 - [IPartialContextProvider](../types/IPartialContextProvider.md)

@@ -7,7 +7,7 @@
 ## Definition
 
 ```tsx
-interface IColorPickerProps {
+interface IColorPickerProps extends InputSizeProps, InputStateProps {
     /**
      *  default color
     */
@@ -17,18 +17,9 @@ interface IColorPickerProps {
      */
     onChange: (color: string) => void,
     /**
-     * picker position.  default is left
-     */
-    position?: IColorPickerPosition,
-    /**
      * class name for additional styles
      */
     className?: string,
-    /**
-     * close the picker on select a color 
-     * default is true
-     */
-    closeOnSelect?: boolean,
     /**
      * change display format
      */
@@ -37,6 +28,31 @@ interface IColorPickerProps {
      * change return format
      */
     returnFormat?: IColorTypes
+
+    /**
+     * Text to show when no color is selected
+     */
+    placeholder?: string
+
+    /**
+     * Additional class name for the dropdown container
+     */
+    dropdownClassname?: string
+
+    /**
+     * Maximum width for the dropdown content
+     */
+    dropdownMaxWidth?: number | string
+
+    /**
+     * Minimum width for the dropdown content
+     */
+    dropdownMinWidth?: number | string
+
+    /**
+     * hide the color dot icon
+     */
+    hideLabels?: boolean
 }
 ```
 
@@ -48,6 +64,7 @@ import { IColorPickerProps } from 'uxp/components';
 
 ## Related Types
 
-- [IColorPickerPosition](../types/IColorPickerPosition.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [IColorTypes](../types/IColorTypes.md)
 

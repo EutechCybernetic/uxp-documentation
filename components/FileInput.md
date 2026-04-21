@@ -1,9 +1,8 @@
 # FileInput
 
 
-This component gives you a file input component.
-
-
+FileInput component - Drag and drop file upload with preview
+Follows v5 input pattern with theme support and accessibility
 
 
 ## Installation
@@ -25,7 +24,7 @@ const FileInput: React.ForwardRefExoticComponent<React.RefAttributes<IFileInputI
 |value|File \| string|Yes|-|-|
 |onChange|(file: File, isValid: boolean) => void|Yes|-|-|
 |allowedTypes|string[]|No|-|-|
-|preview|{ showName?: boolean // default false, showPreview?: boolean // default true }|No|-|-|
+|preview|{ showName?: boolean // default false showPreview?: boolean // default true }|No|-|-|
 |className|string|No|-|-|
 |dropAreaIcon|IconProp|No|-|-|
 |dropAreaLabel|string|No|-|-|
@@ -33,5 +32,7 @@ const FileInput: React.ForwardRefExoticComponent<React.RefAttributes<IFileInputI
 ## Related Types
 
 - [IFileInputProps](../types/IFileInputProps.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [IFileInputInstanceProps](../types/IFileInputInstanceProps.md)
 

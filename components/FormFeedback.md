@@ -32,11 +32,9 @@ FormFeedback validInput>Form feedback ( valid )</FormFeedback>
 |-|-|-|-|-|
 |validInput|boolean|No|-|-|
 |className|string|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
 |children|React.ReactNode|No|-|-|
 
 ## Related Types
 
 - [IFormFeedbackProps](../types/IFormFeedbackProps.md)
-- [SpacingMode](../types/SpacingMode.md)
 

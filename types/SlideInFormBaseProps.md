@@ -36,13 +36,30 @@ interface SlideInFormBaseProps {
     onCancel: () => void;
 
     /**
-     * Direction from which the panel slides in
+     * Rendering mode of the panel.
+     * - `full`: fills the main content area (default)
+     * - `modal`: centered overlay, auto-sized to content
+     */
+    mode?: SlideInPanelMode;
+
+    /**
+     * Direction from which the panel slides in. Only applies in `full` mode.
      * @default 'right'
      */
     direction?: 'left' | 'right' | 'top' | 'bottom';
 
     /**
-     * Reference to container element for portal mounting
+     * Explicit width for the panel. Applies in `modal` mode.
+     */
+    width?: string;
+
+    /**
+     * Explicit height for the panel. Applies in `modal` mode.
+     */
+    height?: string;
+
+    /**
+     * Reference to container element for portal mounting. Only applies in `full` mode.
      */
     containerRef?: React.RefObject<HTMLDivElement>;
 
@@ -89,4 +106,8 @@ interface SlideInFormBaseProps {
 ```tsx
 import { SlideInFormBaseProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [SlideInPanelMode](../types/SlideInPanelMode.md)
 

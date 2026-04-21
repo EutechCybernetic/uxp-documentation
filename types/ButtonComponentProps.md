@@ -87,6 +87,11 @@ export interface ButtonComponentProps {
      * If true, renders the button in icon-only mode.
      */
     iconOnly?: boolean;
+
+    /**
+     * Size of the button. Defaults to 'medium'.
+     */
+    size?: ButtonComponentSize;
 }
 ```
 
@@ -103,4 +108,5 @@ import { ButtonComponentProps } from 'uxp/components';
 - [PHIconPrefix](../types/PHIconPrefix.md)
 - [ButtonComponentType](../types/ButtonComponentType.md)
 - [ButtonComponentVarient](../types/ButtonComponentVarient.md)
+- [ButtonComponentSize](../types/ButtonComponentSize.md)
 

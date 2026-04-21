@@ -29,4 +29,5 @@ import { IFormAlertProps } from 'uxp/components';
 - [IFormData](../types/IFormData.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
 - [FormSectionProps](../types/FormSectionProps.md)
+- [SubSectionProps](../types/SubSectionProps.md)
 

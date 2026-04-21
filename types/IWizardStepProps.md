@@ -10,7 +10,7 @@ These props are passed to the render method of each wizard step.
 ```tsx
 interface IWizardStepProps {
     /**
-     * Triggers a request to go to the next step in the wizard. You can use this functional to programatically move to the next step (the user can also click the 'Next' action to do the same thing)
+     * Triggers a request to go to the next step in the wizard. You can use this function to programatically move to the next step (the user can also click the 'Next' action to do the same thing)
      */
     next: (id?: string) => void;
 

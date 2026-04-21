@@ -3,7 +3,7 @@
 ## Definition
 
 ```tsx
-interface ITimeRangePickerProps {
+interface ITimeRangePickerProps extends InputSizeProps, InputStateProps {
     title: string
     /**
      * Start time . Either a Date object or an time string (Ex: 01:10:00 pm)
@@ -22,7 +22,15 @@ interface ITimeRangePickerProps {
    */
     disableInput?: boolean,
 
-    spacingMode?: SpacingMode
+    /**
+     * Additional class name for the dropdown container
+     */
+    dropdownClassname?: string
+
+    /**
+     * Maximum width for the dropdown content
+     */
+    dropdownMaxWidth?: number | string
 }
 ```
 
@@ -34,5 +42,6 @@ import { ITimeRangePickerProps } from 'uxp/components';
 
 ## Related Types
 
-- [SpacingMode](../types/SpacingMode.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 

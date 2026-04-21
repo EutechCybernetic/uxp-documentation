@@ -68,17 +68,22 @@ interface ButtonProps {
     /**
      * Button type
      */
-    type?: "button" | "submit" | "reset",
+    type?: ButtonComponentType
 
     /**
-     * Button variation 
+     * Button variation
      */
-    variant?: 'primary' | 'secondary' | 'danger',
+    variant?: ButtonComponentVarient,
 
     /**
      * Icon only mode
      */
     iconOnly?: boolean,
+
+    /**
+     * Size of the button. Defaults to 'medium'.
+     */
+    size?: ButtonComponentSize,
 
 
     /**
@@ -120,4 +125,7 @@ import { ButtonProps } from 'uxp/components';
 - [ButtonIcon](../types/ButtonIcon.md)
 - [PHIconProp](../types/PHIconProp.md)
 - [PHIconPrefix](../types/PHIconPrefix.md)
+- [ButtonComponentType](../types/ButtonComponentType.md)
+- [ButtonComponentVarient](../types/ButtonComponentVarient.md)
+- [ButtonComponentSize](../types/ButtonComponentSize.md)
 

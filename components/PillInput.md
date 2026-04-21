@@ -16,7 +16,7 @@ import { PillInput } from 'uxp/components';
 ## Signature
 
 ```tsx
-const PillInput: React.ForwardRefExoticComponent<React.RefAttributes<any> & any>
+const PillInput: React.ForwardRefExoticComponent<React.RefAttributes<PillInputHandlers> & PillInputProps>
 ```
 
 ## Examples
@@ -66,4 +66,42 @@ const pillRef = useRef<PillInputRef>(null);
 // Insert value programmatically
 pillRef.current?.insertAtCursor("{new.value}");
 ```
+
+## Properties
+
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|value|string|Yes|-|-|
+|onChange|(value: string) => void|Yes|-|-|
+|placeholder|string|No|-|-|
+|contextDataSections|[ContextDatasection[]](../types/ContextDatasection.md)|Yes|-|-|
+|pillConfiguration|[PillConfiguration](../types/PillConfiguration.md)|No|-|-|
+|className|string|No|-|-|
+|onFocus|(event: Event) => void|No|-|-|
+|onBlur|() => void|No|-|-|
+|panelTitle|string|No|-|-|
+|typeIndex|number|No|-|-|
+|expressionMatcher|RegExp|No|-|-|
+|pillValuesSplitFn|(value: string) => string[]|No|-|-|
+|panelPosition|'left' \| 'right'|No|-|-|
+
+## Ref Handlers
+
+Available methods through ref:
+
+|Method|Type|Description|
+|-|-|-|
+|focus|() => void|Programmatically focus the input |
+|insertAtCursor|(value: string) => void|Insert text at current cursor position |
+
+## Related Types
+
+- [PillInputProps](../types/PillInputProps.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
+- [ContextDatasection](../types/ContextDatasection.md)
+- [PillOption](../types/PillOption.md)
+- [PillConfiguration](../types/PillConfiguration.md)
+- [PillTypeConfig](../types/PillTypeConfig.md)
+- [PillInputHandlers](../types/PillInputHandlers.md)
 

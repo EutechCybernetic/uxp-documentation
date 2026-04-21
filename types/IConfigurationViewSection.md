@@ -21,7 +21,10 @@ interface IConfigurationViewSection {
     content: React.ReactNode;
 
     /** Hides the header */
-    hideHeader?: boolean
+    hideHeader?: boolean;
+
+    /** Optional action buttons rendered on the right side of the content header */
+    actions?: React.ReactNode;
 }
 ```
 

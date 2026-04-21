@@ -35,7 +35,20 @@ export interface DataEntrySectionProps {
     show?: (data: IFormData) => boolean;
 
     /**
-     * DataEntryField components to render in this section
+     * If true, the section renders as a collapsible panel.
+     * @default false
+     */
+    collapsible?: boolean;
+
+    /**
+     * Whether the collapsible section is expanded by default.
+     * Only used when collapsible is true.
+     * @default true
+     */
+    defaultExpanded?: boolean;
+
+    /**
+     * DataEntryField or DataEntrySubSection components to render in this section
      */
     children?: React.ReactNode;
 }

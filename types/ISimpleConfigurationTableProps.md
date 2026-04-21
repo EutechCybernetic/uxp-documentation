@@ -30,13 +30,8 @@ export interface ISimpleConfigurationTableProps {
 
     /** Role-based permissions */
     roles?: {
-        /** Determines if user can add items */
         canAdd?: () => boolean;
-
-        /** Determines if user can edit items */
         canEdit?: () => boolean;
-
-        /** Determines if user can delete items */
         canDelete?: () => boolean;
     };
 

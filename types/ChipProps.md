@@ -42,6 +42,10 @@ interface ChipProps {
      * Additional CSS styles to apply to the chip.
      */
     additionalStyles?: React.CSSProperties;
+
+    variant?: ChipVariant,
+
+    size?: ChipSize
 }
 ```
 
@@ -50,4 +54,9 @@ interface ChipProps {
 ```tsx
 import { ChipProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [ChipVariant](../types/ChipVariant.md)
+- [ChipSize](../types/ChipSize.md)
 

@@ -1,6 +1,8 @@
 # Modal
 
+
 Display a modal dialog. The dialog will be placed in front of a invisible sheet above the main UI.
+
 
 
 ## Installation

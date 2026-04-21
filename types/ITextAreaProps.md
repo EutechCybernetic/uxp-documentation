@@ -3,9 +3,9 @@
 ## Definition
 
 ```tsx
-interface ITextAreaProps {
+interface ITextAreaProps extends InputSizeProps, InputStateProps {
     /**
-    * The actual text 
+    * The actual text
     */
     value: string,
     /**
@@ -13,7 +13,7 @@ interface ITextAreaProps {
      */
     onChange: (value: string) => void,
     /**
-     * callback function on focus 
+     * callback function on focus
      */
     onFocus?: () => void,
     /**
@@ -30,13 +30,9 @@ interface ITextAreaProps {
      */
     className?: string,
     /**
-      * additional styles 
+      * additional styles
       */
-    styles?: React.CSSProperties,
-    /**
-     * mark input as read only
-     */
-    readOnly?: boolean
+    style?: React.CSSProperties,
     /**
      * tab index. default is 0
      */
@@ -48,8 +44,7 @@ interface ITextAreaProps {
     /**
      * number of cols
      */
-    cols?: number,
-    spacingMode?: SpacingMode
+    cols?: number
 }
 ```
 
@@ -61,5 +56,6 @@ import { ITextAreaProps } from 'uxp/components';
 
 ## Related Types
 
-- [SpacingMode](../types/SpacingMode.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 

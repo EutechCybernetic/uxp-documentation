@@ -21,4 +21,5 @@ import { DataEntryFormHandlers } from 'uxp/components';
 - [DynamicFormHandlers](../types/DynamicFormHandlers.md)
 - [IFormData](../types/IFormData.md)
 - [FormValue](../types/FormValue.md)
+- [WizardState](../types/WizardState.md)
 

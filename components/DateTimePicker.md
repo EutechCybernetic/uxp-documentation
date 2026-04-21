@@ -23,6 +23,7 @@ const DateTimePicker: React.FunctionComponent<IDateTimePickerProps>
 
 ```tsx
 <DateTimePicker
+     title="Select Date & Time"
      datetime={date}
      onChange={(date) => { setDate(date); }}
  />
@@ -32,7 +33,7 @@ const DateTimePicker: React.FunctionComponent<IDateTimePickerProps>
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|title|string|Yes|-|-|
+|title|string|No|-|-|
 |datetime|string \| Date|Yes|-|-|
 |onChange|(date: Date) => void|Yes|-|-|
 |disableInput|boolean|No|-|-|
@@ -40,12 +41,16 @@ const DateTimePicker: React.FunctionComponent<IDateTimePickerProps>
 |hideLabels|boolean|No|-|-|
 |hideDateInput|boolean|No|-|-|
 |showFullMonthName|boolean|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
+|dropdownClassname|string|No|-|-|
+|dropdownMaxWidth|number \| string|No|-|-|
+|placeholder|string|No|-|-|
+|closeOnSelect|boolean|No|-|-|
 
 ## Related Types
 
 - [IDateTimePickerProps](../types/IDateTimePickerProps.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [IDatePickerOptions](../types/IDatePickerOptions.md)
 - [ISpecialDate](../types/ISpecialDate.md)
-- [SpacingMode](../types/SpacingMode.md)
 

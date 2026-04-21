@@ -9,7 +9,7 @@ Props for the TableComponent.
 ```tsx
 export interface TableComponentProps {
     /** Array of data objects or a function to fetch paginated data */
-    data: RowData[] | ((page: number, pageSize: number) => Promise<{ items: RowData[] }>);
+    data: RowData[] | ((page: number, pageSize: number, query?: string, filters?: Filters) => Promise<{ items: RowData[] }>);
 
     /** List of columns to display */
     columns: TableColumn[];
@@ -18,7 +18,7 @@ export interface TableComponentProps {
     pageSize: number;
 
     /** Total number of items or a function returning the total */
-    total: number | (() => Promise<number>);
+    total: number | ((query?: string, filters?: Filters) => Promise<number>);
 
     /** Loading state */
     loading?: boolean;
@@ -56,6 +56,22 @@ export interface TableComponentProps {
 
     /** Enable inline editing mode with callbacks */
     editable?: EditableConfig;
+
+    /** Search configuration */
+    search?: {
+        enable: boolean;
+        /** Fields to search (required for static array data) */
+        fields?: string[];
+    };
+
+    /** OSC-style filter panel configuration */
+    filters?: FilterConfig;
+
+    /** Custom action buttons rendered in the toolbar (right side) */
+    actionButtons?: ReactNode;
+
+    /** Content rendered as the last row inside the table card (e.g. "+ Add New") */
+    addNewRow?: ReactNode;
 }
 ```
 
@@ -68,7 +84,17 @@ import { TableComponentProps } from 'uxp/components';
 ## Related Types
 
 - [RowData](../types/RowData.md)
+- [Filters](../types/Filters.md)
+- [SimpleFilter](../types/SimpleFilter.md)
 - [TableColumn](../types/TableColumn.md)
 - [Column](../types/Column.md)
 - [EditableConfig](../types/EditableConfig.md)
+- [FilterConfig](../types/FilterConfig.md)
+- [FormSectionProps](../types/FormSectionProps.md)
+- [SubSectionProps](../types/SubSectionProps.md)
+- [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
+- [FormValue](../types/FormValue.md)
+- [IFormData](../types/IFormData.md)
+- [CustomValidateResponse](../types/CustomValidateResponse.md)
+- [FilterCustomRender](../types/FilterCustomRender.md)
 

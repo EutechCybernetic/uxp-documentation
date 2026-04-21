@@ -41,6 +41,21 @@ export type ObjectDetailsPanelBaseProps = {
      * If true, appends selected tab ID to URL as 'dt' parameter for deep linking and reload persistence.
      */
     appendToURL?: boolean;
+
+    /**
+     * Custom URL parameter names for tab navigation. Useful for nested panels to avoid param conflicts.
+     */
+    urlParams?: {
+        /**
+         * Parameter name for details tab (default: 'dt')
+         */
+        detailsTab?: string;
+
+        /**
+         * Parameter name for additional details tab (default: 'ad')
+         */
+        additionalDetailsTab?: string;
+    };
 } & (
         // New API: Use tabs (cannot use old toolbarItems/generalDetails)
         | {

@@ -2,7 +2,8 @@
 
 
 
-Pagination component
+Pagination controls — compact prev/next with a page-size dropdown.
+Renders as a flat set of controls; layout (left/right slots) is handled by the parent.
 
 
 
@@ -22,11 +23,11 @@ const PaginationComponent: React.FunctionComponent<PaginationProps>
 
 ```tsx
 <PaginationComponent
- total={total}
- pageSize={pageSize}
- page={page}
- onPageChange={setPage}
- onPageSizeChange={v => { setPageSize(v); setPage(1); }}
+  total={total}
+  pageSize={pageSize}
+  page={page}
+  onPageChange={setPage}
+  onPageSizeChange={ps => { setPageSize(ps); setPage(1); }}
 />
 ```
 
@@ -39,8 +40,9 @@ const PaginationComponent: React.FunctionComponent<PaginationProps>
 |page|number|Yes|-|-|
 |onPageSizeChange|(pageSize: number) => void|Yes|-|-|
 |onPageChange|(page: number) => void|Yes|-|-|
-|children|React.ReactNode|No|-|-|
+|dataLength|number|No|-|-|
 |loading|boolean|No|-|-|
+|allowPageSizeChange|boolean|No|-|-|
 
 ## Related Types
 

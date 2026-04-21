@@ -1,18 +1,18 @@
 # Configuration.yml Setup
 
-Complete reference for `configuration.yml` - the central configuration file for v5 apps.
+Complete reference for `Configuration.yml` - the central configuration file for v5 apps.
 
 ---
 
 ## Overview
 
-`configuration.yml` is located in your **app root folder** (not in Resources/views/). It defines:
+`Configuration.yml` is located in your **app root folder** (not in Resources/views/). It defines:
 - App metadata
 - Routes and navigation
 - Scripts and styles to load
 - Permission mappings
 
-**Location:** `/<Your App>/5.0/configuration.yml`
+**Location:** `/<Your App>/5.0/Configuration.yml`
 
 ---
 
@@ -44,6 +44,8 @@ otherRoutes:
     userGroups: []
     appRoles: []
     title: ":name"
+  "/": 
+    redirectTo: '/dashboard'
 ```
 
 
@@ -246,7 +248,7 @@ navigationLinks:
 
 ---
 
-**See Location 5.0 app** (`/Location/5.0/configuration.yml`) for complete working example.
+**See Location 5.0 app** (`/Location/5.0/Configuration.yml`) for complete working example.
 
 
 ## Validation Checklist
@@ -274,6 +276,24 @@ Before deploying, verify:
 5. **Use redirects for root** - Redirect `/` to default page
 6. **Consistent naming** - Match `pageId` to component purpose
 7. **Document permissions** - Comment who should access each route
+
+---
+
+## Common Mistakes
+
+These mistakes cause silent failures — the server skips the app with no visible error:
+
+| Mistake | Effect | Fix |
+|---------|--------|-----|
+| File named `configuration.yml` (lowercase c) | Server can't find file on Linux | Rename to `Configuration.yml` |
+| File placed inside `Resources/views/` | Server looks in app root, not here | Move to `<App>/<Version>/Configuration.yml` |
+| `appId` doesn't match folder name | App silently skipped | Use exact folder name, case-sensitive |
+| `bundleId` differs from `bundle.json` | Components not found, blank pages | Must be identical in both files |
+| `pageId` casing differs from `registerUI()` id | Blank page, no error | Use all-lowercase IDs everywhere |
+| `otherRoutes:` present but with no value | YAML parse fails, entire config dropped | Use `otherRoutes: {}` if no routes needed |
+| `otherRoutes:` omitted entirely | YAML parse fails, entire config dropped | Always include `otherRoutes:` |
+
+> See [Troubleshooting Guide](./17-troubleshooting.md) for full diagnostics.
 
 ---
 

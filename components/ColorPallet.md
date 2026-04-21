@@ -2,7 +2,7 @@
 
 
 
-Color pallet
+Color pallet - wrapper for @uiw/react-color-sketch
 
 
 ## Installation
@@ -23,7 +23,6 @@ const ColorPallet: React.FunctionComponent<IColorPalletProps>
 |-|-|-|-|-|
 |color|string|Yes|-|-|
 |onChange|(color: string) => void|Yes|-|-|
-|onCancel|() => void|Yes|-|-|
 
 ## Related Types
 

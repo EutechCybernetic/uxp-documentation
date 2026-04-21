@@ -1,6 +1,6 @@
 # NoInteractionMode
 
-No interaction mode - neither inline editing nor row interaction
+No interaction mode
 
 
 ## Definition

@@ -14,10 +14,34 @@ export interface Column {
     label: string | ReactNode;
     /** Custom renderer for column cell content */
     renderColumn?: (item: any, index?: number) => ReactNode;
-    /** Custom renderer for editing existing items (editable mode only) */
-    renderEditItem?: (item: any, update: (value: any) => void) => ReactNode;
-    /** Custom renderer for creating new items (editable mode only) */
-    renderNewItem?: (item: any, update: (value: any) => void) => ReactNode;
+    /**
+     * Custom renderer for editing existing items (editable mode only).
+     * The `update` callback expects the full updated item object.
+     * @example
+     * ```tsx
+     * renderEditItem: (item, update) => (
+     *   <Select
+     *     selected={item.type}
+     *     onChange={(newType) => update({ ...item, type: newType })}
+     *   />
+     * )
+     * ```
+     */
+    renderEditItem?: (item: any, update: (updatedItem: any) => void) => ReactNode;
+    /**
+     * Custom renderer for creating new items (editable mode only).
+     * The `update` callback expects the full updated item object.
+     * @example
+     * ```tsx
+     * renderNewItem: (item, update) => (
+     *   <ColorPicker
+     *     color={item.color}
+     *     onChange={(newColor) => update({ ...item, color: newColor })}
+     *   />
+     * )
+     * ```
+     */
+    renderNewItem?: (item: any, update: (updatedItem: any) => void) => ReactNode;
     /** Minimum width of the column in pixels */
     minWidth?: number;
     /** Maximum width of the column in pixels */

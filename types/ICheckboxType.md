@@ -6,7 +6,7 @@ Determines how a checkbox field looks
 ## Definition
 
 ```tsx
-type ICheckboxType = "default" | "bordered" | "change-icon" | "switch-line" | "switch-box";
+type ICheckboxType = "default" | "switch-line" | "switch-box" | "bordered";
 ```
 
 ## Usage

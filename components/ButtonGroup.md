@@ -77,5 +77,6 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps>
 - [PHIconPrefix](../types/PHIconPrefix.md)
 - [ButtonComponentType](../types/ButtonComponentType.md)
 - [ButtonComponentVarient](../types/ButtonComponentVarient.md)
+- [ButtonComponentSize](../types/ButtonComponentSize.md)
 - [DropdownPosition](../types/DropdownPosition.md)
 

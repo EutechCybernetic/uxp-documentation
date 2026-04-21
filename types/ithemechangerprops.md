@@ -29,7 +29,7 @@ interface IThemeChangerProps {
      * The dropdown menu position relative to the trigger button.
      * Defaults to `'bottom-right'`.
      */
-    position?: Position;
+    position?: DropdownPosition;
 }
 ```
 
@@ -41,5 +41,5 @@ import { IThemeChangerProps } from 'uxp/components';
 
 ## Related Types
 
-- [Position](../types/Position.md)
+- [DropdownPosition](../types/DropdownPosition.md)
 

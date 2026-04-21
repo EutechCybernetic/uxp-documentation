@@ -8,7 +8,6 @@ interface ILabelProps {
     className?: string,
     inline?: boolean,
     styles?: React.CSSProperties,
-    spacingMode?: SpacingMode,
     icon?: string;
     children?: React.ReactNode
 }
@@ -19,8 +18,4 @@ interface ILabelProps {
 ```tsx
 import { ILabelProps } from 'uxp/components';
 ```
-
-## Related Types
-
-- [SpacingMode](../types/SpacingMode.md)
 

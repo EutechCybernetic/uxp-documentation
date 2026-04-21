@@ -9,12 +9,14 @@
 export interface DynamicFormFieldProps {
     name: string,
     label: string,
-    type: 'text' | 'password' | 'number' | 'email' | 'checkbox' | 'toggle' | 'select' | 'date' | 'time' | 'datetime' | 'daterange' | 'timerange' | 'timerangeslider' | 'hidden' | 'textarea' | 'json' | 'readonly',
+    type: 'text' | 'password' | 'number' | 'email' | 'checkbox' | 'toggle' | 'select' | 'date' | 'time' | 'datetime' | 'daterange' | 'timerange' | 'timerangeslider' | 'hidden' | 'textarea' | 'json' | 'readonly' | 'spacer',
     value?: FormValue,
     placeholder?: string,
     icon?: string,
 
     renderField?: (data: IFormData, onValueChange: (value: any) => void) => React.ReactNode
+
+    info?: string | React.ReactNode | string[]
 
     // show hide fields
     show?: (data: IFormData) => boolean
@@ -54,6 +56,17 @@ export interface DynamicFormFieldProps {
         maxVal?: number
         customValidateFunction?: (value: any, data: IFormData) => CustomValidateResponse | Promise<CustomValidateResponse>// this is to give a custom validate function, which takes the value and return a boolean indicating value is valid or not
     },
+
+    checkboxLabel?: string
+
+    description?: string | React.ReactNode
+
+    /**
+     * Where to render the info button. Defaults to 'label'.
+     * - 'label': small borderless icon inline with the label
+     * - 'input': standard info button to the right of the input
+     */
+    infoPosition?: 'label' | 'input'
 }
 ```
 

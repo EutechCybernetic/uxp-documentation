@@ -4,11 +4,11 @@
 
 ```tsx
 type IAnimation =
-    | "m-slide-ftr"
-    | "m-slide-ftl"
-    | "m-slide-fbr"
-    | "m-slide-fbl"
-    | "m-zoom-fc";
+    | "zoom"
+    | "slide-from-top-right"
+    | "slide-from-top-left"
+    | "slide-from-bottom-right"
+    | "slide-from-bottom-left";
 ```
 
 ## Usage

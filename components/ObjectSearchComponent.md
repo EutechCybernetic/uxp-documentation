@@ -81,6 +81,8 @@ const ObjectSearchComponent: React.MemoExoticComponent<React.ForwardRefExoticCom
 |search|{ /** * Enables the search box. */ enable: boolean; /** * Fields in the data to use for text search (required for static data arrays). */ fields?: string[]; /** * If true, collapses the search box by default. */ collapsed?: boolean; }|No|-|-|
 |collapsedWidth|string \| number|No|-|-|
 |appendToURL|boolean|No|-|-|
+|allowPageSizeChange|boolean|No|-|-|
+|urlParams|[URLParamConfig](../types/URLParamConfig.md)|No|-|-|
 |className|string|No|-|-|
 
 ## Ref Handlers
@@ -91,5 +93,10 @@ Available methods through ref:
 |-|-|-|
 |export|() => void|Triggers export of the current view's data. |
 |getDetails|() => ObjectSearchDetailsResponse|Retrieves details of the current search state. |
-|refreshCurrentPage|() => void|-|
+|refreshCurrentPage|() => void|Refreshes current page data with loading state shown. |
+|silentRefreshCurrentPage|() => void|Refreshes current page data silently, without showing the loading state. |
+|setPageData|(items: RowData[]) => void|Directly replaces the current page data with the provided array. No fetch is triggered. |
+|getCurrentPageData|() => RowData[]|Returns the current page data (the visible rows). |
+|getFilters|() => Filters|Returns the currently applied filters. |
+|applyFilters|(filters: Filters) => void|Sets filters programmatically. Must be a valid SimpleFilter: { filters: Record<string, any> }. Invalid input is ignored. |
 

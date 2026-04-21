@@ -24,9 +24,28 @@ export interface SlideInPanelProps {
     onClose: () => void;
 
     /**
-     * Direction of the slide-in animation. Defaults to 'right'.
+     * Rendering mode of the panel.
+     * - `full`: fills the main content area (default)
+     * - `modal`: centered overlay auto-sized to content
+     */
+    mode?: SlideInPanelMode;
+
+    /**
+     * Direction of the slide-in animation. Only applies in `full` mode. Defaults to 'right'.
      */
     direction?: SlideInPanelDirection;
+
+    /**
+     * Explicit width for the panel. Applies in `modal` mode.
+     * Accepts any valid CSS width value (e.g. `'400px'`, `'50vw'`).
+     */
+    width?: string;
+
+    /**
+     * Explicit height for the panel. Applies in `modal` mode.
+     * Accepts any valid CSS height value (e.g. `'300px'`, `'80vh'`).
+     */
+    height?: string;
 
     /**
      * Additional CSS class names to apply to the panel content.
@@ -46,6 +65,7 @@ export interface SlideInPanelProps {
     /**
      * Reference to a container element to position the panel relative to.
      * If provided, the panel will match the size and position of this element.
+     * Only applies in `full` mode.
      */
     containerRef?: RefObject<HTMLElement>;
 }
@@ -59,5 +79,6 @@ import { SlideInPanelProps } from 'uxp/components';
 
 ## Related Types
 
+- [SlideInPanelMode](../types/SlideInPanelMode.md)
 - [SlideInPanelDirection](../types/SlideInPanelDirection.md)
 

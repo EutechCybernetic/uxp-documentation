@@ -1,8 +1,9 @@
 # FilterPanel
 
-Displays a filter button which, when clicked, opens a popup panel.
-Suitable for hiding filters for widgets or searches
 
+Displays a filter button which, when clicked, opens a popup panel.
+Suitable for hiding filters for widgets or searches.
+Uses Dropdown component for positioning with v5 styling patterns.
 
 
 
@@ -15,28 +16,56 @@ import { FilterPanel } from 'uxp/components';
 ## Signature
 
 ```tsx
-const FilterPanel: React.FunctionComponent<IFilterPanelProps>
+const FilterPanel: React.FunctionComponent<FilterPanelProps>
 ```
 
 ## Examples
 
 ```tsx
+Basic filter panel
+```tsx
+<FilterPanel>
+  <FormField>
+    <Label>Category</Label>
+    <Select options={categories} selected={category} onChange={setCategory} />
+  </FormField>
+</FilterPanel>
+```
+
+```tsx
+With clear functionality
+```tsx
 <FilterPanel
-                               enableClear={inputValue?.length > 0 || selected != null}
-                               onClear={() => { setInputValue(""); setSelected(null) }} >
-                               <FormField className="no-padding mb-only">
-                                   <Label>Sort By</Label>
-                                   <Select
-                                       selected={selected}
-                                       options={[
-                                           { label: "Name", value: "op-1" },
-                                           { label: "Date", value: "op-2" },
-                                       ]}
-                                       onChange={(value) => { setSelected(value) }}
-                                       placeholder=" -- select --"
-                                       isValid={selected ? selected?.length > 0 : null}
-                                   />
-                               </FormField>
+  enableClear={hasFilters}
+  onClear={() => {
+    setCategory(null);
+    setDateRange(null);
+  }}
+>
+  <FormField>
+    <Label>Sort By</Label>
+    <Select options={sortOptions} selected={sortBy} onChange={setSortBy} />
+  </FormField>
+  <FormField>
+    <Label>Date Range</Label>
+    <DateRangePicker value={dateRange} onChange={setDateRange} />
+  </FormField>
+</FilterPanel>
+```
+
+```tsx
+Custom position and icon
+```tsx
+<FilterPanel
+  position="bottom-left"
+  icon="sort"
+  enableClear={true}
+  onClear={handleClear}
+>
+  <FormField>
+    <Label>Status</Label>
+    <Select options={statusOptions} selected={status} onChange={setStatus} />
+  </FormField>
 </FilterPanel>
 ```
 
@@ -44,16 +73,17 @@ const FilterPanel: React.FunctionComponent<IFilterPanelProps>
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|onOpen|[ICallback](../types/ICallback.md)|No|-|-|
-|onClose|[ICallback](../types/ICallback.md)|No|-|-|
-|onClear|[ICallback](../types/ICallback.md)|No|-|-|
-|fillContainer|React.RefObject<HTMLElement>|No|-|-|
+|onOpen|() => void|No|-|-|
+|onClose|() => void|No|-|-|
+|onClear|() => void|No|-|-|
+|position|[DropdownPosition](../types/DropdownPosition.md)|No|-|-|
 |className|string|No|-|-|
 |enableClear|boolean|No|-|-|
-|children|React.ReactNode|No|-|-|
+|icon|string|No|-|-|
+|children|React.ReactNode|No|-|* ```tsx|
 
 ## Related Types
 
-- [IFilterPanelProps](../types/IFilterPanelProps.md)
-- [ICallback](../types/ICallback.md)
+- [FilterPanelProps](../types/FilterPanelProps.md)
+- [DropdownPosition](../types/DropdownPosition.md)
 

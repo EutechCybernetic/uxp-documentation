@@ -1,9 +1,5 @@
 # LinkWidgetContainer
 
-This is a extended version of modal. this covers the full UI.
-main purpose is to create a container for sidebar link widgets
-
-
 ## Installation
 
 ```tsx

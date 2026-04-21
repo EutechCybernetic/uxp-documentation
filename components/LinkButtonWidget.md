@@ -1,9 +1,5 @@
 # LinkButtonWidget
 
-This widget will give a simple widget with configurable option to create a link button
-
-
-
 ## Installation
 
 ```tsx

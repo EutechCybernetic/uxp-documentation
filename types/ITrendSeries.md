@@ -19,12 +19,13 @@ interface ITrendSeries {
     unit: string,
 
     /**
-     * The color to show the line
+     * The color to show the line. If not provided, theme chart colors will be used automatically.
      */
-    lineColor: string,
+    lineColor?: string,
 
     /**
-     * If the type of chart is an area chart - this would be the color of the fill area
+     * If the type of chart is an area chart - this would be the color of the fill area.
+     * If not provided, theme chart colors will be used automatically.
      */
     fillColor?: string,
 

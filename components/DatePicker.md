@@ -44,7 +44,7 @@ const DatePicker: React.FunctionComponent<IDatePickerProps>
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|title|string|Yes|-|-|
+|title|string|No|-|-|
 |date|string \| Date|Yes|-|-|
 |onChange|(date: Date) => void|Yes|-|-|
 |closeOnSelect|boolean|No|-|-|
@@ -52,13 +52,16 @@ const DatePicker: React.FunctionComponent<IDatePickerProps>
 |disableInput|boolean|No|-|-|
 |hideLabels|boolean|No|-|-|
 |hideInput|boolean|No|-|-|
+|placeholder|string|No|-|-|
 |showFullMonthName|boolean|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
+|dropdownClassname|string|No|-|-|
+|dropdownMaxWidth|number \| string|No|-|-|
 
 ## Related Types
 
 - [IDatePickerProps](../types/IDatePickerProps.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [IDatePickerOptions](../types/IDatePickerOptions.md)
 - [ISpecialDate](../types/ISpecialDate.md)
-- [SpacingMode](../types/SpacingMode.md)
 

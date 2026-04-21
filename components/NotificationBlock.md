@@ -15,7 +15,7 @@ const NotificationBlock: React.FunctionComponent<INotificationProps>
 ## Examples
 
 ```tsx
-<NotificationBlock message="-- End Of Content --" class="end-of-content" />
+<NotificationBlock message="-- End Of Content --" class="uxpcore_notification--end-of-content" />
 ```
 
 ## Properties

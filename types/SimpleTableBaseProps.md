@@ -1,8 +1,5 @@
 # SimpleTableBaseProps
 
-Base props shared by all variants
-
-
 ## Definition
 
 ```tsx
@@ -19,14 +16,17 @@ interface SimpleTableBaseProps {
     /** Disable pagination */
     disablePagination?: boolean;
 
-    /** Search configuration */
-    search?: SimpleTableSearch;
+    /** Search configuration — passed through to TableComponent */
+    search?: {
+        enable?: boolean;
+        fields?: string[];
+    };
 
-    /** Filter components to show in header */
-    filters?: React.ReactNode;
+    /** OSC-style filter panel — passed through to TableComponent */
+    filters?: FilterConfig;
 
-    /** Action buttons to show in header */
-    actions?: React.ReactNode;
+    /** Action buttons — passed through to TableComponent toolbar (right side) */
+    actions?: ReactNode;
 
     /** Initial loading state */
     loading?: boolean;
@@ -55,6 +55,15 @@ import { SimpleTableBaseProps } from 'uxp/components';
 
 - [TableColumn](../types/TableColumn.md)
 - [Column](../types/Column.md)
-- [SimpleTableSearch](../types/SimpleTableSearch.md)
+- [FilterConfig](../types/FilterConfig.md)
+- [FormSectionProps](../types/FormSectionProps.md)
+- [SubSectionProps](../types/SubSectionProps.md)
+- [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
+- [FormValue](../types/FormValue.md)
+- [IFormData](../types/IFormData.md)
+- [CustomValidateResponse](../types/CustomValidateResponse.md)
+- [FilterCustomRender](../types/FilterCustomRender.md)
+- [Filters](../types/Filters.md)
+- [SimpleFilter](../types/SimpleFilter.md)
 - [RowData](../types/RowData.md)
 

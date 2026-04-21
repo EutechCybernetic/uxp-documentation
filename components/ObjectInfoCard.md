@@ -50,6 +50,7 @@ const ObjectInfoCard: React.MemoExoticComponent<React.FunctionComponent<ObjectIn
 |valueAlign|'start' \| 'end'|No|-|-|
 |className|string|No|-|-|
 |loading|boolean|No|-|-|
+|title|string|No|-|-|
 
 ## Related Types
 

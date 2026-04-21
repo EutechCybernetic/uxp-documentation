@@ -19,9 +19,21 @@ export interface ActionsListProps {
     item?: any;
 
     /**
+     * Optional value to compare against action.value for highlighting selected state.
+     * When action.value === selectedValue, the action will be styled as selected.
+     */
+    selectedValue?: any;
+
+    /**
      * Additional CSS class names to apply to the actions list container.
      */
     className?: string;
+
+    /**
+     * Optional ref to the parent dropdown, used to close it after an action is clicked.
+     * @internal
+     */
+    parentDropdownRef?: React.RefObject<DropdownHandlers>;
 }
 ```
 
@@ -36,4 +48,5 @@ import { ActionsListProps } from 'uxp/components';
 - [Action](../types/Action.md)
 - [BaseAction](../types/BaseAction.md)
 - [ActionWithChildren](../types/ActionWithChildren.md)
+- [DropdownHandlers](../types/DropdownHandlers.md)
 

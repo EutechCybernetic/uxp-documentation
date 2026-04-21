@@ -8,23 +8,27 @@ interface IMapComponentProps {
      * The url of the tile server that will serve up map tiles.
      * This url should have the following placeholders in them:
      * `{x}`, `{y}` and `{z}`
-     * 
+     *
      * `{z}` represents the current zoom level
-     * 
+     *
+     * If not provided, automatically uses theme-aware default tiles:
+     * - Light themes: OpenStreetMap (light tiles)
+     * - Dark/Glass Dark themes: CartoDB Dark Matter (dark tiles)
+     *
      * @example
      * ```
      * mapUrl="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
      * ```
      */
-    mapUrl: string,
+    mapUrl?: string,
 
     /**
      * A static image to use instead of a map layout.
-     * If you are using a static image, specify `mapUrl` as an empty string.
-     * 
+     * If you are using a static image, omit `mapUrl` or set it to an empty string.
+     *
      * The static image consists of a url for the image and a width and height of the image.
-     * Note that the width and height values  be relative - just that the ratio should be accurate.
-     * 
+     * Note that the width and height values should be relative - just that the ratio should be accurate.
+     *
      * @example
      * ```
      * staticImage={{url:'https://myserver/floor-plan.png',width:200,height:400}}

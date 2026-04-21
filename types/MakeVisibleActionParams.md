@@ -34,6 +34,21 @@ export interface MakeVisibleActionParams {
     confirmMessage?: string;
 
     /**
+     * Custom success message
+     */
+    successMessage?: string;
+
+    /**
+     * Custom error title (string or function that receives error object)
+     */
+    errorTitle?: string | ((error: any) => string);
+
+    /**
+     * Custom error message (string or function that receives error object)
+     */
+    errorMessage?: string | ((error: any) => string);
+
+    /**
      * Callback on successful make visible
      */
     onSuccess?: () => void;

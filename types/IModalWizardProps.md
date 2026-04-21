@@ -24,11 +24,13 @@ interface IModalWizardProps {
     title: string;
 
     /**
+     * @deprecated Not used in v5 - Modal component doesn't support header icons
      * An optional icon to show
      */
     icon?: string;
 
     /**
+     * @deprecated Not used in v5 - Use Modal's headerContent prop directly if custom header needed
      * A method to render a subheader just below the title area.
      */
     onRenderHeader?: (currentStep: IModalWizardStepProps) => JSX.Element;

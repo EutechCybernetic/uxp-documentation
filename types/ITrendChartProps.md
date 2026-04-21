@@ -12,7 +12,7 @@ interface ITrendChartProps {
     /**
      * Use this to render a custom tooltip that will appear when the user hovers over a data point.
      * The data being hovered over is passed as a parameter.
-     * 
+     *
      * @example
      * onShowTooltip={(data)=><div>{`Temperature: ${data.temp}`}</div>}
      */
@@ -22,6 +22,11 @@ interface ITrendChartProps {
      * Called whenever a data point is clicked on. The data point being clicked on is passed as a parameter to the function
      */
     onClick?: (data: any) => JSX.Element
+
+    /**
+     * Additional CSS classes for custom styling
+     */
+    className?: string
 }
 ```
 

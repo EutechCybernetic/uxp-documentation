@@ -14,6 +14,7 @@ interface IModalWizardStep {
     render: (props: IModalWizardStepProps) => JSX.Element;
 
     /**
+     * @deprecated Not used in v5 - Visual step indication is now handled by WizardStepIndicator
      * This function renders the status section on the left sidebar. This will be rendered only if the `showStatus` property is not false.
      * You can return null from this function to prevent the side bar status from being rendered.
      */
@@ -21,7 +22,7 @@ interface IModalWizardStep {
 
     /**
      * This is called just before the user tries to advance to the next stage. You can use this to validate the current stage.
-     * You can return 
+     * You can return
      * a string - to indicate the id of the next step that should be taken.
      * a number - to indicate the index of the next step to be taken
      * undefined or null - to indicate it should stay on the current step
@@ -39,6 +40,7 @@ interface IModalWizardStep {
     title?: string;
 
     /**
+     * @deprecated Not used in v5 - Wizard component controls button visibility
      * Set this to false to prevent the 'next' button from being shown. If this is false you will have to manually render the 'next' button yourself
      */
     showNext?: boolean;
@@ -47,13 +49,15 @@ interface IModalWizardStep {
     nextTitle?: string;
 
     /**
+     * @deprecated Not used in v5 - Visual step indication is always shown via WizardStepIndicator
      * Set to false to prevent the status sidebar from being shown at this stage
      */
     showStatus?: boolean;
 
     /**
-     * Render a sub-header below the main dialog header 
-     * 
+     * @deprecated Not used in v5
+     * Render a sub-header below the main dialog header
+     *
      */
     renderSubHeader?: () => JSX.Element;
 }

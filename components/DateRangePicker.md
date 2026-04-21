@@ -46,16 +46,18 @@ const DateRangePicker: React.FunctionComponent<IDateRangePickerProps>
 |hideInput|boolean|No|-|-|
 |showFullMonthName|boolean|No|-|-|
 |compact|boolean|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
 |renderAsPill|{ minWidth?: number, maxWidth?: number }|No|-|-|
 |presets|{ enable: boolean customPresets?: DateRangePreset[], renderPreset?: (preset: DateRangePreset, index: number, onSelectPreset: (preset: string) => void) => React.ReactNode, parseRelativeDatesOnSelect?: boolean // if this is set to true, relative dates will be parsed to dates }|No|-|-|
+|dropdownClassname|string|No|-|-|
+|dropdownMaxWidth|number \| string|No|-|-|
 
 ## Related Types
 
 - [IDateRangePickerProps](../types/IDateRangePickerProps.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [IDatePickerOptions](../types/IDatePickerOptions.md)
 - [ISpecialDate](../types/ISpecialDate.md)
-- [SpacingMode](../types/SpacingMode.md)
 - [DateRangePreset](../types/DateRangePreset.md)
 - [RelativeDate](../types/RelativeDate.md)
 

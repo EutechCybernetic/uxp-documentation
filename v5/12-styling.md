@@ -4,6 +4,29 @@ UXP provides a theme system with CSS variables for styling your v5 apps.
 
 ---
 
+## ⚠️ Important: Use Standard Components First
+
+**Avoid custom styles as much as possible.** UXP provides a comprehensive set of pre-built components that handle styling, theming, and responsive behavior automatically.
+
+**Before writing custom styles:**
+1. Check if a standard UXP component exists for your use case (see [Step 7: Core Components](./07-core-components.md))
+2. Use component props and variants for customization
+3. Only add custom styles when absolutely necessary
+
+**Benefits of using standard components:**
+- ✅ Automatic theme support (light/dark mode)
+- ✅ Consistent look and feel across apps
+- ✅ Responsive and accessible by default
+- ✅ Maintained and updated by the core team
+- ✅ Less code to maintain
+
+**When custom styles ARE appropriate:**
+- App-specific layouts and containers
+- Brand-specific elements unique to your app
+- Minor tweaks to spacing/sizing for specific contexts
+
+---
+
 ## Theme System
 
 Access the current theme in your components:
@@ -191,7 +214,7 @@ import './global.scss';
 import { enableLocalization } from './uxp';
 import PortfolioView from './views/portfolio/PortfolioView';
 
-window.registerUI({
+registerUI({
     id: "portfolio-view",
     component: PortfolioView
 });

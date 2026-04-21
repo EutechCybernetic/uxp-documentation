@@ -42,11 +42,13 @@ TODO: More Examples
 |inline|boolean|No|-|-|
 |className|string|No|-|-|
 |backgroundColor|string|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
+|style|React.CSSProperties|No|-|-|
+|noPadding|boolean|No|-|-|
+|noMargin|boolean|No|-|-|
+|marginBottomOnly|boolean|No|-|-|
 |children|React.ReactNode|No|-|-|
 
 ## Related Types
 
 - [IFormFieldProps](../types/IFormFieldProps.md)
-- [SpacingMode](../types/SpacingMode.md)
 

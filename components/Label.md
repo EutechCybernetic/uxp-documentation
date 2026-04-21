@@ -31,12 +31,10 @@ const Label: React.FunctionComponent<ILabelProps>
 |className|string|No|-|-|
 |inline|boolean|No|-|-|
 |styles|React.CSSProperties|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
 |icon|string|No|-|-|
 |children|React.ReactNode|No|-|-|
 
 ## Related Types
 
 - [ILabelProps](../types/ILabelProps.md)
-- [SpacingMode](../types/SpacingMode.md)
 

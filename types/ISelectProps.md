@@ -6,7 +6,7 @@
 ## Definition
 
 ```tsx
-interface ISelectProps {
+interface ISelectProps extends InputSizeProps, InputStateProps {
     /**
      * List of items to select from. 
      * Each option has a label which is displayed and a value which is what we actually select.
@@ -91,33 +91,34 @@ interface ISelectProps {
         onAddNewValue?: (value: string) => Promise<any>
     }
     /**
-     * Option to add a classname for the dropdown 
+     * Option to add a classname for the dropdown
      */
     dropdownClassname?: string
-    /**
-     * Spacing mode 
-     */
-    spacingMode?: SpacingMode,
 
     /**
-   * Option to unselect 
+   * Option to unselect
    */
     onClear?: () => void
 
     /**
-    * This will replace the content in the dropdown. 
-    * If this is enabled, above options (value, onChange , etc) will not work. You have to handle everything 
-    * You will need to handle the value and onChange options. 
-    * and once you select an option, to close the dropdown, call the closeDropdown function 
+    * This will replace the content in the dropdown.
+    * If this is enabled, above options (value, onChange , etc) will not work. You have to handle everything
+    * You will need to handle the value and onChange options.
+    * and once you select an option, to close the dropdown, call the closeDropdown function
     */
     renderCustomDropdownContent?: (closeDropdown: () => void) => React.ReactNode
 
     /**
-     * Option to custom render the placeholder 
+     * Custom content to render on the left side of the input (e.g., "S-" prefix, icons)
+     */
+    prefix?: React.ReactNode,
+
+    /**
+     * Option to custom render the placeholder
      */
     renderPlaceholder?: {
         /**
-         * render input as a pill 
+         * render input as a pill
          * work with default select dropdown
          */
         renderAsPill?: {
@@ -125,23 +126,28 @@ interface ISelectProps {
             maxWidth?: number
         },
         /**
-         * for custom renders 
+         * for custom renders
          */
         renderCustomPill?: (onClear: () => void) => React.ReactNode
     }
 
     /**
-     * Option to control the min width of the dropdown 
+     * Option to control the min width of the dropdown
      */
-    dropdownMinWidth?: number,
+    dropdownMinWidth?: number | string,
     /**
-     * Option to control the min height of the dropdown 
+     * Option to control the max width of the dropdown
+     */
+    dropdownMaxWidth?: number | string,
+    /**
+     * Option to control the min height of the dropdown
      */
     dropdownMinHeight?: number,
     /**
      * Optional page size when using a function to load data
      */
-    pageSize?: number
+    pageSize?: number,
+    position?: DropdownPosition
 }
 ```
 
@@ -153,7 +159,9 @@ import { ISelectProps } from 'uxp/components';
 
 ## Related Types
 
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [IOption](../types/IOption.md)
 - [IDataFunction](../types/IDataFunction.md)
-- [SpacingMode](../types/SpacingMode.md)
+- [DropdownPosition](../types/DropdownPosition.md)
 

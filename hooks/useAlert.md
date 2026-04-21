@@ -69,4 +69,5 @@ alerts.confirm("Are you sure?")
 - [IFormData](../types/IFormData.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
 - [FormSectionProps](../types/FormSectionProps.md)
+- [SubSectionProps](../types/SubSectionProps.md)
 

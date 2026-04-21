@@ -25,7 +25,6 @@ interface TimeRangeSliderPickerProps {
      * Disable the slider
      */
     disabled?: boolean;
-    spacingMode?: SpacingMode;
 }
 ```
 
@@ -34,8 +33,4 @@ interface TimeRangeSliderPickerProps {
 ```tsx
 import { TimeRangeSliderPickerProps } from 'uxp/components';
 ```
-
-## Related Types
-
-- [SpacingMode](../types/SpacingMode.md)
 

@@ -35,13 +35,13 @@ src/
 
 ```typescript
 // ✅ Good - for page views
-window.registerUI({
+registerUI({
     id: "portfolio-view",
     component: PortfolioView
 });
 
 // ❌ Avoid - for page views
-window.registerWidget({
+registerWidget({
     id: "portfolio-widget",
     widget: PortfolioView
 });
@@ -175,7 +175,7 @@ const PortfolioView = ({ uxpContext, filter }: PortfolioViewProps) => {
 
 ## Configuration
 
-### Keep configuration.yml Clean
+### Keep Configuration.yml Clean
 
 ```yaml
 # ✅ Good - organized and clear
@@ -194,11 +194,11 @@ navigationLinks:
 
 ```typescript
 // ✅ Good - descriptive IDs
-window.registerUI({ id: "portfolio-view", component: PortfolioView });
-window.registerUI({ id: "details-view", component: DetailsView });
+registerUI({ id: "portfolio-view", component: PortfolioView });
+registerUI({ id: "details-view", component: DetailsView });
 
 // ❌ Avoid - generic IDs
-window.registerUI({ id: "view1", component: PortfolioView });
+registerUI({ id: "view1", component: PortfolioView });
 ```
 
 ---
@@ -317,7 +317,7 @@ Before committing code:
 - [ ] Loading and error states handled
 - [ ] TypeScript types defined
 - [ ] Components registered correctly
-- [ ] configuration.yml updated
+- [ ] Configuration.yml updated
 - [ ] Tested in actual iviva app
 
 ---
@@ -348,7 +348,7 @@ Follow these practices for clean, maintainable v5 apps:
 7. Handle all states (loading, error, success)
 8. Localize all text
 9. Test in actual iviva app
-10. Keep configuration.yml clean and organized
+10. Keep Configuration.yml clean and organized
 
 ---
 

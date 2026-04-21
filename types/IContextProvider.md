@@ -87,6 +87,10 @@ export interface IContextProvider extends Omit<IPartialContextProvider, "environ
     executeAPISafe: <T = any>(config: any, options?: CachingOptions) => Promise<ExecutionResult<T>>;
 
     /**
+     * Checks if an app is enabled/installed in the account. Equivalent to #{appexists.AppName} in v4 FormEngine.
+     */
+    hasApp: (appName: string) => boolean;
+    /**
      * Checks if the current user has to required app role. Use this to check permissions when executing or rendering content
      */
     hasAppRole: (app: string, role: string) => boolean;
@@ -94,6 +98,16 @@ export interface IContextProvider extends Omit<IPartialContextProvider, "environ
      * Checks if the current user has to required model role. Use this to check permissions when executing or rendering content
      */
     hasModelRole: (model: string, role: string) => boolean;
+
+    /**
+     * Update the API key and trigger parent re-render via onAPIKeyChange callback
+     */
+    updateAPIKey: (token: string) => void;
+
+    /**
+     * Set the login UI ref for auth helper modal
+     */
+    setLoginUIRef: (ref: React.MutableRefObject<{ show: () => void }>) => void;
 
     refreshViewOverrides: () => Promise<void>
 }

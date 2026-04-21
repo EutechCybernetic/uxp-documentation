@@ -20,6 +20,7 @@ export interface DynamicFormProps {
     hideButtons?: boolean, // NEW: Hide internal buttons completely
     isLoading?: boolean,
     formContainerStyles?: React.CSSProperties,
+    onWizardStateChange?: (state: WizardState | null) => void, // Callback when wizard state changes
     renderOptions?: {
         renderStyle: 'standard' | 'tabs' | 'wizard',
         direction?: 'vertical' | 'horizontal' // only applicable to tabs and wizard
@@ -46,8 +47,10 @@ import { DynamicFormProps } from 'uxp/components';
 ## Related Types
 
 - [FormSectionProps](../types/FormSectionProps.md)
+- [SubSectionProps](../types/SubSectionProps.md)
 - [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
 - [FormValue](../types/FormValue.md)
 - [IFormData](../types/IFormData.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
+- [WizardState](../types/WizardState.md)
 

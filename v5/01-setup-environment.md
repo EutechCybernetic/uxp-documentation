@@ -54,8 +54,8 @@ git checkout dev/dinesh
 Enable System and Location v5 apps:
 
 ```bash
-sdm <account> enabledapp System 5.0
-sdm <account> enabledapp Location 5.0
+sdm <account> enableapp System 5.0
+sdm <account> enableapp Location 5.0
 sdm <account> mergedb auto
 sdm <account> installviews
 ```

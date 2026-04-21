@@ -20,6 +20,7 @@ export interface DynamicFormHandlers {
     isProcessing: () => boolean,
     goToNext: () => void,
     goToPrevious: () => void,
+    getWizardState: () => WizardState | null,
 }
 ```
 
@@ -33,4 +34,5 @@ import { DynamicFormHandlers } from 'uxp/components';
 
 - [IFormData](../types/IFormData.md)
 - [FormValue](../types/FormValue.md)
+- [WizardState](../types/WizardState.md)
 

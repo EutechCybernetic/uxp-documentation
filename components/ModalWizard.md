@@ -1,7 +1,11 @@
 # ModalWizard
 
-This component is used to show a modal dialog that takes the user through as sequence of steps.
+This component is used to show a modal dialog that takes the user through a sequence of steps.
 You define how each step should render.
+
+**V5 Implementation**: ModalWizard is now a thin wrapper around Modal + Wizard components.
+It provides backward compatibility while leveraging the v5 architecture.
+
 
 
 
@@ -27,6 +31,7 @@ const ModalWizard: React.FunctionComponent<IModalWizardProps>
      steps={[
      {
          id: "step-1",
+         title: "Personal Details",
          render: (props) => <div>
              <FormField>
                  <Label>Name</Label>
@@ -37,19 +42,19 @@ const ModalWizard: React.FunctionComponent<IModalWizardProps>
                  <Input value={email} onChange={setEmail} />
              </FormField>
          </div>,
-         renderStatus: () => <div>Personal Details</div>,
-         onValidateStep: () => "step-2",
-         showStatus: true
+         renderStatus: () => null, // Ignored in v5
+         onValidateStep: () => "step-2"
      },
      {
          id: "step-2",
+         title: "Educational Details",
          render: (props) => <div>
              <FormField>
                  <Label>University</Label>
                  <Input value={school} onChange={setSchool} />
              </FormField>
          </div>,
-         renderStatus: () => <div>Educational Details</div>
+         renderStatus: () => null // Ignored in v5
      }
  ]}
  onClose={() => { setShow(false) }}

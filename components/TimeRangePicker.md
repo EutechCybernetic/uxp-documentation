@@ -38,10 +38,12 @@ const TimeRangePicker: React.FunctionComponent<ITimeRangePickerProps>
 |endTime|string \| Date|Yes|-|-|
 |onChange|(start: Date, end: Date) => void|Yes|-|-|
 |disableInput|boolean|No|-|-|
-|spacingMode|[SpacingMode](../types/SpacingMode.md)|No|-|-|
+|dropdownClassname|string|No|-|-|
+|dropdownMaxWidth|number \| string|No|-|-|
 
 ## Related Types
 
 - [ITimeRangePickerProps](../types/ITimeRangePickerProps.md)
-- [SpacingMode](../types/SpacingMode.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 

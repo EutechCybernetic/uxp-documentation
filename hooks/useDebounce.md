@@ -23,8 +23,8 @@ const [debounced, updateValue] = useDebounceAdvanced(query);
 ```
 
 ```tsx
-const [debounced, updateValue] = useDebounceAdvanced(query, 500);
-updateValue('manually set value');
+const [debounced, updateValue, immediateUpdate] = useDebounceAdvanced(query, 500);
+immediateUpdate('set without debounce delay');
 ```
 
 ## Related Types

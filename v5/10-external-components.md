@@ -89,14 +89,14 @@ const LocationDetails = ({ locationKey }) => {
 To find available external components:
 
 1. Check the app's module registration
-2. Look for `window.registerUI()` calls
+2. Look for `registerUI()` calls
 3. Note the `moduleId` and `componentId`
 
 Example from System app:
 
 ```typescript
 // System app registers
-window.registerUI({
+registerUI({
     id: "activity-log",
     moduleId: "iviva-system-app",
     UI: ActivityLogComponent
@@ -129,8 +129,8 @@ Pass props using `additionalProps`:
 
 ## Type: Widget vs UI
 
-- **type="widget"** - For dashboard widgets (registered with `window.registerWidget()`)
-- **type="ui"** - For UI components (registered with `window.registerUI()`)
+- **type="widget"** - For dashboard widgets (registered with `registerWidget()`)
+- **type="ui"** - For UI components (registered with `registerUI()`)
 
 ```typescript
 // For widgets

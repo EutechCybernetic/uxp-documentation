@@ -44,17 +44,22 @@ interface IIconButtonProps {
     /**
     * Button type
     */
-    buttonType?: "button" | "submit" | "reset",
+    buttonType?: ButtonComponentType
 
     /**
    * Button variation 
    */
-    variant?: 'primary' | 'secondary' | 'danger',
+    variant?: ButtonComponentVarient,
 
     /**
-   * @deprecated Use inline styles instead
-   */
-    size?: IButtonSize,
+     * Size of the button. Defaults to 'medium'.
+     */
+    size?: ButtonComponentSize,
+
+    /**
+     * If true, shows the button in a loading state.
+     */
+    loading?: boolean,
 }
 ```
 
@@ -70,5 +75,7 @@ import { IIconButtonProps } from 'uxp/components';
 - [PHIconProp](../types/PHIconProp.md)
 - [PHIconPrefix](../types/PHIconPrefix.md)
 - [IButtonType](../types/IButtonType.md)
-- [IButtonSize](../types/IButtonSize.md)
+- [ButtonComponentType](../types/ButtonComponentType.md)
+- [ButtonComponentVarient](../types/ButtonComponentVarient.md)
+- [ButtonComponentSize](../types/ButtonComponentSize.md)
 

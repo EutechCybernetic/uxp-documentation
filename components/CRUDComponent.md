@@ -2,8 +2,6 @@
 
 
 
-CRUD component
-
 
 ## Installation
 
@@ -48,10 +46,12 @@ Available methods through ref:
 - [FormProps](../types/FormProps.md)
 - [DynamicFormProps](../types/DynamicFormProps.md)
 - [FormSectionProps](../types/FormSectionProps.md)
+- [SubSectionProps](../types/SubSectionProps.md)
 - [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
 - [FormValue](../types/FormValue.md)
 - [IFormData](../types/IFormData.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
+- [WizardState](../types/WizardState.md)
 - [RenderCustomFormView](../types/RenderCustomFormView.md)
 - [ExtendedFormProps](../types/ExtendedFormProps.md)
 - [CRUDComponentInstanceProps](../types/CRUDComponentInstanceProps.md)

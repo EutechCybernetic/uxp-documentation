@@ -54,9 +54,10 @@ const Button: React.FunctionComponent<ButtonProps>
 |disabled|boolean|No|-|-|
 |styles|React.CSSProperties|No|-|-|
 |iconStyles|React.CSSProperties \| { leftIcon?: React.CSSProperties, rightIcon?: React.CSSProperties }|No|-|-|
-|type|"button" \| "submit" \| "reset"|No|-|-|
-|variant|'primary' \| 'secondary' \| 'danger'|No|-|-|
+|type|[ButtonComponentType](../types/ButtonComponentType.md)|No|-|-|
+|variant|[ButtonComponentVarient](../types/ButtonComponentVarient.md)|No|-|-|
 |iconOnly|boolean|No|-|-|
+|size|[ButtonComponentSize](../types/ButtonComponentSize.md)|No|-|-|
 |icon|string|No|-|-|
 |iconPosition|'left' \| 'right'|No|-|-|
 |useLoadingSpinner|boolean|No|-|-|
@@ -67,4 +68,7 @@ const Button: React.FunctionComponent<ButtonProps>
 - [ButtonIcon](../types/ButtonIcon.md)
 - [PHIconProp](../types/PHIconProp.md)
 - [PHIconPrefix](../types/PHIconPrefix.md)
+- [ButtonComponentType](../types/ButtonComponentType.md)
+- [ButtonComponentVarient](../types/ButtonComponentVarient.md)
+- [ButtonComponentSize](../types/ButtonComponentSize.md)
 

@@ -9,8 +9,7 @@
 ```tsx
 interface IColorPalletProps {
     color: string,
-    onChange: (color: string) => void,
-    onCancel: () => void
+    onChange: (color: string) => void
 }
 ```
 

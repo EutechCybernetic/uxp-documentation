@@ -3,7 +3,7 @@
 ## Definition
 
 ```tsx
-interface IToggleFilterProps {
+interface IToggleFilterProps extends InputSizeProps, InputStateProps {
     /**
      * The list of possible options to choose from
      */
@@ -25,37 +25,7 @@ interface IToggleFilterProps {
     className?: string,
 
     /**
-     * background color of the fill/tab
-     * default is white 
-     */
-    backgroundColor?: string,
-    /**
-     * text color of the tab/fill 
-     * default is #424242
-     */
-    textColor?: string,
-    /**
-     * background color for the selected tab
-     * default is white with box shadow 
-     */
-    selectedBackgroundColor?: string,
-    /**
-     * text color for the selected tab/fill 
-     * default is #424242
-     */
-    selectedTextColor?: string,
-    /**
-     * this will disable the box shadow from the selected tab/fill
-     */
-    disableShadow?: boolean,
-
-    /**
-     * Spacing mode
-     */
-    spacingMode?: SpacingMode
-
-    /**
-     * This will render the dropdown if the width is less than the min width 
+     * This will render the dropdown if the width is less than the min width
      */
     renderAsDropdown?: {
         minWidth: number,
@@ -76,6 +46,7 @@ import { IToggleFilterProps } from 'uxp/components';
 
 ## Related Types
 
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
 - [IToggleOption](../types/IToggleOption.md)
-- [SpacingMode](../types/SpacingMode.md)
 

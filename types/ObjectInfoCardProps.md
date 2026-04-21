@@ -37,7 +37,12 @@ export interface ObjectInfoCardProps {
      */
     className?: string;
 
-    loading?: boolean
+    loading?: boolean;
+
+    /**
+     * An optional title for the card container
+     */
+    title?: string;
 }
 ```
 

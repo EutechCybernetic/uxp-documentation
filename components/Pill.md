@@ -32,6 +32,8 @@ const Pill: React.FunctionComponent<PillComponentProps>
 |showFomatters|boolean|No|-|-|
 |onChangeFormatters|(value: string) => void|No|-|-|
 |onClickFormatters|() => void|No|-|-|
+|disabled|boolean|No|-|-|
+|readOnly|boolean|No|-|-|
 
 ## Related Types
 

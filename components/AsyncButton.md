@@ -45,8 +45,8 @@ const AsyncButton: React.FunctionComponent<AsyncButtonProps>
 |onError|(e: any) => void|No|-|-|
 |styles|React.CSSProperties|No|-|-|
 |iconStyles|React.CSSProperties|No|-|-|
-|type|"button" \| "submit" \| "reset"|No|-|-|
-|variant|'primary' \| 'secondary' \| 'danger'|No|-|-|
+|type|[ButtonComponentType](../types/ButtonComponentType.md)|No|-|-|
+|variant|[ButtonComponentVarient](../types/ButtonComponentVarient.md)|No|-|-|
 |iconOnly|boolean|No|-|-|
 |icon|string|No|-|-|
 |iconPosition|'left' \| 'right'|No|-|-|
@@ -58,4 +58,6 @@ const AsyncButton: React.FunctionComponent<AsyncButtonProps>
 - [ButtonIcon](../types/ButtonIcon.md)
 - [PHIconProp](../types/PHIconProp.md)
 - [PHIconPrefix](../types/PHIconPrefix.md)
+- [ButtonComponentType](../types/ButtonComponentType.md)
+- [ButtonComponentVarient](../types/ButtonComponentVarient.md)
 
