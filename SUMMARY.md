@@ -26,6 +26,7 @@
 
 - [Styling and Theming](v5/12-styling.md)
 - [Localization](v5/13-localization.md)
+- [Lint & Scoped CSS](v5/18-lint-and-scoped-css.md)
 
 ### Deployment
 
