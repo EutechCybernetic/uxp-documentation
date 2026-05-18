@@ -1,5 +1,14 @@
 # DateRangePicker
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-datetimepicker-daterangepicker--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DateRangePicker live demo"
+></iframe>
+
+
 
 
 
@@ -50,6 +59,7 @@ const DateRangePicker: React.FunctionComponent<IDateRangePickerProps>
 |presets|{ enable: boolean customPresets?: DateRangePreset[], renderPreset?: (preset: DateRangePreset, index: number, onSelectPreset: (preset: string) => void) => React.ReactNode, parseRelativeDatesOnSelect?: boolean // if this is set to true, relative dates will be parsed to dates }|No|-|-|
 |dropdownClassname|string|No|-|-|
 |dropdownMaxWidth|number \| string|No|-|-|
+|onClear|() => void|No|-|-|
 
 ## Related Types
 

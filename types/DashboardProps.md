@@ -105,6 +105,64 @@ export interface DashboardProps {
      * Force specific breakpoint for preview/editing (null = auto-responsive)
      */
     breakpointOverride?: string | null;
+
+    /**
+     * Render the dashboard as a transparent overlay.
+     * The container becomes pointer-events: none so clicks pass through to the
+     * content beneath, while individual widget items remain interactive.
+     * Implies allowOverlap=true, allowFreePositioning=true, isBounded=true,
+     * showSpacerWidget=false unless explicitly overridden.
+     */
+    overlayMode?: boolean;
+
+    /**
+     * Disable breakpoint override dimensions. When true, the container never gets
+     * a forced fixed width/height from the breakpoint preview feature. Use this for
+     * embedded mini-dashboards (e.g. WidgetPanel) where the container should always
+     * fill its available space.
+     */
+    disableOverrideDimensions?: boolean;
+
+    /**
+     * How items compact after a drag/resize. 'vertical' stacks downward,
+     * 'horizontal' packs leftward (use with maxRows=1 for a horizontal strip),
+     * null disables compaction. Default: 'vertical'.
+     */
+    compactType?: 'vertical' | 'horizontal' | null;
+
+    /**
+     * Maximum number of rows. Useful for horizontal orientation to prevent
+     * widgets from stacking vertically (e.g. maxRows=1 for a single-row strip).
+     */
+    maxRows?: number;
+
+    /**
+     * Extra props merged into every widget at render time (not init time).
+     * Use this for runtime context like URL params, event payloads, or global filters
+     * that should not trigger a full dashboard re-initialization when they change.
+     */
+    widgetPropsOverride?: Record<string, any>;
+
+    /**
+     * Show gridlines in edit mode based on cell size.
+     */
+    showGridlines?: boolean;
+
+    /**
+     * Optional layout orientation mode.
+     * - 'vertical': widgets stack full-width, scroll Y, height-only resize
+     * - 'horizontal': single-row strip using `rows` as the row count; widgets fill container
+     *   height, scroll X, grid grows rightward. `compactType`/`maxRows`/`resizeHandles` are
+     *   all derived from this — do not set them manually when using orientation.
+     */
+    orientation?: 'vertical' | 'horizontal';
+
+    /**
+     * Number of rows for horizontal orientation (default: 3).
+     * Row height = (containerHeight - margins) / rows (1:1 cells).
+     * Also sets maxRows so items can't spill below the strip.
+     */
+    rows?: number;
 }
 ```
 

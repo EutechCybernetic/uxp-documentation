@@ -23,7 +23,7 @@ interface RowInteractionMode {
     };
     onUpdateItem?: never;
     onDeleteItem?: never;
-    onReorderItems?: never;
+    onReorderItems?: (reorderedData: RowData[]) => Promise<{ success: boolean, error?: string }>;
     roles?: never;
     labels?: {
         add?: string;

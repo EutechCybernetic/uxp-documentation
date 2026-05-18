@@ -6,7 +6,7 @@
 export interface ResponsiveWidgetLayoutConfiguration {
     widgets: IWidgetInstance[],
     layouts: any,
-    installed: IWidgetInstance[] // keeping this for now to support old dashboards
+    installed?: IWidgetInstance[] // legacy v4 field — optional in v5
     // User-group-specific layouts (optional)
     userGroupLayouts?: {
         [userGroup: string]: {
@@ -14,6 +14,8 @@ export interface ResponsiveWidgetLayoutConfiguration {
             layouts: any;
         }
     };
+    backgroundConfig?: BackgroundConfig;
+    gridSettings?: GridSettings;
 }
 ```
 
@@ -58,4 +60,6 @@ import { ResponsiveWidgetLayoutConfiguration } from 'uxp/components';
 - [ExecuteConfigBase](../types/ExecuteConfigBase.md)
 - [LucyQueryResult](../types/LucyQueryResult.md)
 - [IWidgetPreloader](../types/IWidgetPreloader.md)
+- [BackgroundConfig](../types/BackgroundConfig.md)
+- [GridSettings](../types/GridSettings.md)
 

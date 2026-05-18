@@ -37,6 +37,12 @@ interface IconPickerProps extends InputSizeProps, InputStateProps {
      * Placeholder text when no icon is selected
      */
     placeholder?: string;
+
+    /**
+     * When provided, a clear (×) button is shown whenever an icon is selected.
+     * Clicking it calls this function — the parent is responsible for clearing the value.
+     */
+    onClear?: () => void;
 }
 ```
 

@@ -1,7 +1,17 @@
 # ConfigurationView
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=forms-configurationview--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ConfigurationView live demo"
+></iframe>
 
-Configuration view with sidebar navigation and section content
+
+
+Configuration view with sidebar navigation and section content.
+Use `mode='single'` for pages that have one section and need no sidebar.
 
 
 ## Installation
@@ -21,10 +31,11 @@ const ConfigurationView: React.FunctionComponent<IConfigurationViewProps>
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |uxpContext|[IContextProvider](../types/IContextProvider.md)|Yes|-|-|
-|title|string|Yes|-|-|
+|title|string|No|-|-|
 |sections|[IConfigurationViewSection[]](../types/IConfigurationViewSection.md)|Yes|-|-|
 |selected|string|No|-|-|
 |onChangeSection|(id: string) => void|No|-|-|
+|mode|'single' \| 'multiple'|No|-|-|
 
 ## Related Types
 

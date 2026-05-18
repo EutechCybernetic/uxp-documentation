@@ -10,6 +10,13 @@ interface SimpleTableBaseProps {
     /** Text to display when there is no data */
     noDataText?: string;
 
+    /**
+     * Suppress all internal toasts and alerts (add, save, delete, reorder).
+     * Useful when the table is embedded in a larger form and notifications would be misleading.
+     * @default false
+     */
+    disableNotifications?: boolean;
+
     /** Page size for pagination */
     pageSize?: number;
 

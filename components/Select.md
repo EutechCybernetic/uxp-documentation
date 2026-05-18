@@ -1,5 +1,14 @@
 # Select
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-select--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Select live demo"
+></iframe>
+
+
 
 A select control to select one item from a list of multiple items
 
@@ -73,7 +82,7 @@ const Select: React.MemoExoticComponent<React.FunctionComponent<ISelectProps>>
 |className|string|No|-|-|
 |isValid|boolean|No|-|-|
 |showEndOfContent|boolean|No|-|-|
-|renderOption|(item: any, key: number) => JSX.Element|No|-|*|
+|renderOption|(item: any, key: number, isHighlighted?: boolean, isSelected?: boolean) => JSX.Element|No|-|*|
 |addNewValues|{ enable: boolean, title: string, loadingTitle: string, onAddNewValue?: (value: string) => Promise<any> }|No|-|-|
 |dropdownClassname|string|No|-|-|
 |onClear|() => void|No|-|-|

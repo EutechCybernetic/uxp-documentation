@@ -23,6 +23,10 @@ export interface TreeViewCompareHandle {
         targetTree: Tree,
         dropPosition: DropPosition
     ) => Promise<void>;
+    expandLeft: () => void;
+    collapseLeft: () => void;
+    expandRight: () => void;
+    collapseRight: () => void;
 }
 ```
 

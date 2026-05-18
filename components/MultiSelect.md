@@ -1,5 +1,14 @@
 # MultiSelect
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-multiselect--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="MultiSelect live demo"
+></iframe>
+
+
 
 A select control to select multiple items from a list of items
 
@@ -73,7 +82,7 @@ const MultiSelect: React.MemoExoticComponent<React.FunctionComponent<IMultiSelec
 |className|string|No|-|-|
 |isValid|boolean|No|-|-|
 |showEndOfContent|boolean|No|-|-|
-|renderOption|(item: any, key: number) => JSX.Element|No|-|*|
+|renderOption|(item: any, key: number, isHighlighted?: boolean, isSelected?: boolean) => JSX.Element|No|-|*|
 |wrapSelectedItemsToOneLine|boolean|No|-|-|
 |selectAllOnLoad|boolean|No|-|-|
 |hideClearButton|boolean|No|-|-|

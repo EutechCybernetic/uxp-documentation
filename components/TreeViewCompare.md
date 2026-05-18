@@ -1,5 +1,14 @@
 # TreeViewCompare
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=list-treeview-treeviewcompare--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="TreeViewCompare live demo"
+></iframe>
+
+
 
 
 TreeViewCompare component provides drag-and-drop functionality between two TreeView components
@@ -100,6 +109,8 @@ tsx
 |onSelect|(selected: TreeNode \| TreeNode[], side: Tree) => void|No|-|-|
 |showActionButtonOnlyOnHover|boolean|No|-|-|
 |actionButtonsPosition|'inline' \| 'end'|No|-|-|
+|customActions|(node: ExtendedTreeNode) => CustomActionButton[]|No|-|-|
+|rightCustomActions|(node: ExtendedTreeNode) => CustomActionButton[]|No|-|-|
 
 ## Ref Handlers
 
@@ -108,6 +119,10 @@ Available methods through ref:
 |Method|Type|Description|
 |-|-|-|
 |triggerDrop|( sourceNodeId: string, targetNodeId: string, sourceTree: Tree, targetTree: Tree, dropPosition: DropPosition ) => Promise<void>|Programmatically trigger a cross-tree drop operation sourceNodeId - ID of the node being moved targetNodeId - ID of the target node sourceTree - Which tree the node came from ('left' \| 'right') targetTree - Which tree the node is being dropped into ('left' \| 'right') dropPosition - Where to drop relative to target ('before' \| 'after' \| 'child') |
+|expandLeft|() => void|-|
+|collapseLeft|() => void|-|
+|expandRight|() => void|-|
+|collapseRight|() => void|-|
 
 ## Related Types
 
@@ -115,6 +130,7 @@ Available methods through ref:
 - [TreeNode](../types/TreeNode.md)
 - [Tree](../types/Tree.md)
 - [ExtendedTreeNode](../types/ExtendedTreeNode.md)
+- [CustomActionButton](../types/CustomActionButton.md)
 - [TreeViewCompareHandle](../types/TreeViewCompareHandle.md)
 - [DropPosition](../types/DropPosition.md)
 

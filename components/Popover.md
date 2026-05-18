@@ -1,5 +1,14 @@
 # Popover
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=popups-popover--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Popover live demo"
+></iframe>
+
+
 
 A component that displays a popover with a title and content when clicking on its child element.
 Uses the Dropdown component internally for positioning and click handling.
@@ -20,9 +29,10 @@ const Popover: React.FunctionComponent<PopoverProps>
 
 ## Examples
 
+#### Basic popover
+
 ```tsx
-Basic popover
-```tsx
+tsx
 <Popover
   title="User Info"
   content="John Doe - Software Engineer"
@@ -31,9 +41,10 @@ Basic popover
 </Popover>
 ```
 
+#### Custom position
+
 ```tsx
-Custom position
-```tsx
+tsx
 <Popover
   title="Help"
   content="This is helpful information"
@@ -43,9 +54,10 @@ Custom position
 </Popover>
 ```
 
+#### JSX content
+
 ```tsx
-JSX content
-```tsx
+tsx
 <Popover
   title={() => <strong>Important</strong>}
   content={() => (

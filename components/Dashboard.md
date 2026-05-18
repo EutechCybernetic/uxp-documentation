@@ -1,5 +1,14 @@
 # Dashboard
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=dashboard--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Dashboard live demo"
+></iframe>
+
+
 
 
 
@@ -36,6 +45,14 @@ const Dashboard: React.FunctionComponent<DashboardProps>
 |transformScale|number|No|-|-|
 |onContainerMount|(ref: HTMLDivElement) => void|No|-|-|
 |breakpointOverride|string \| null|No|-|-|
+|overlayMode|boolean|No|-|-|
+|disableOverrideDimensions|boolean|No|-|-|
+|compactType|'vertical' \| 'horizontal' \| null|No|-|-|
+|maxRows|number|No|-|-|
+|widgetPropsOverride|Record<string, any>|No|-|-|
+|showGridlines|boolean|No|-|-|
+|orientation|'vertical' \| 'horizontal'|No|-|-|
+|rows|number|No|-|-|
 
 ## Related Types
 

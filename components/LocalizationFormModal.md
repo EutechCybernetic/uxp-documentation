@@ -20,20 +20,16 @@ const LocalizationFormModal: React.FunctionComponent<ILocalisationFormModalProps
 
 ## Examples
 
-```tsx
-// Default usage with icon button
+#### // Default usage with icon button
 <LocalizationFormModal code='uxp-core.text.save' />
-```
 
-```tsx
-// With custom trigger and deferred saving
+#### // With custom trigger and deferred saving
 <LocalizationFormModal
   code='uxp-core.auth.welcome-to'
   useDoneButton={true}
   onSave={handleMessagesUpdate}
   trigger={<IconButton type="edit" />}
 />
-```
 
 ## Properties
 

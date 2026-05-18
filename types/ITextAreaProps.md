@@ -45,6 +45,12 @@ interface ITextAreaProps extends InputSizeProps, InputStateProps {
      * number of cols
      */
     cols?: number
+
+    /**
+     * When provided, a clear (×) button appears in the top-right corner whenever there is text.
+     * Clicking it calls this function — the parent is responsible for clearing the value.
+     */
+    onClear?: () => void
 }
 ```
 

@@ -1,5 +1,14 @@
 # ToggleFilter
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-togglefilter--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ToggleFilter live demo"
+></iframe>
+
+
 This component presents a group of options from which one can be selected.
 Suitable to select a single item from a list where the list is very small. Most often used for filters.
 Follows v5 input pattern with theme support and keyboard navigation

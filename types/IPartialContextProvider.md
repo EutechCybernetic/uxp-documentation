@@ -24,6 +24,8 @@ export interface IPartialContextProvider {
     authConfig?: any  // Auth page configuration (layout, colors, etc)
 
     userKey: string;
+    /** True when the page was loaded without a real user session (public page). Immutable — not affected by setPublicCredentials. */
+    isPublicSession?: boolean;
     loginType?: string,
     appRoles?: { [app: string]: string[] }
     enabledApps?: string[]

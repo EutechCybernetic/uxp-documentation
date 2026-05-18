@@ -10,8 +10,8 @@ ConfigurationView component props
 interface IConfigurationViewProps {
     uxpContext: IContextProvider;
 
-    /** Settings panel title */
-    title: string;
+    /** Settings panel title — used in `multiple` mode outer header */
+    title?: string;
 
     /** Configuration sections with sidebar links and content */
     sections: IConfigurationViewSection[];
@@ -21,6 +21,15 @@ interface IConfigurationViewProps {
 
     /** Callback when section changes, receives section id */
     onChangeSection?: (id: string) => void;
+
+    /**
+     * Layout mode:
+     * - `'multiple'` (default) — sidebar navigation with multiple sections
+     * - `'single'` — no sidebar; first section fills the page. The section's
+     *   `title` becomes the page-level header and its `actions` render on the
+     *   right. Use `hideHeader: true` on the section to skip the header entirely.
+     */
+    mode?: 'single' | 'multiple';
 }
 ```
 

@@ -105,6 +105,13 @@ export interface IContextProvider extends Omit<IPartialContextProvider, "environ
     updateAPIKey: (token: string) => void;
 
     /**
+     * Swap credentials to a public user's apiKey/userKey (used by public dashboards so widgets
+     * make service calls on behalf of the public user rather than the anonymous visitor).
+     * Call with empty strings to restore anonymous state.
+     */
+    setPublicCredentials: (apiKey: string, userKey: string) => void;
+
+    /**
      * Set the login UI ref for auth helper modal
      */
     setLoginUIRef: (ref: React.MutableRefObject<{ show: () => void }>) => void;

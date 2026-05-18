@@ -216,6 +216,15 @@ export interface TreeViewCompareProps {
      * Position of action buttons relative to the label
      */
     actionButtonsPosition?: 'inline' | 'end';
+
+    /**
+     * Custom action buttons for left tree nodes (rendered with same hover mechanism as built-in actions)
+     */
+    customActions?: (node: ExtendedTreeNode) => CustomActionButton[];
+    /**
+     * Custom action buttons for right tree nodes (rendered with same hover mechanism as built-in actions)
+     */
+    rightCustomActions?: (node: ExtendedTreeNode) => CustomActionButton[];
 }
 ```
 
@@ -230,4 +239,5 @@ import { TreeViewCompareProps } from 'uxp/components';
 - [TreeNode](../types/TreeNode.md)
 - [Tree](../types/Tree.md)
 - [ExtendedTreeNode](../types/ExtendedTreeNode.md)
+- [CustomActionButton](../types/CustomActionButton.md)
 

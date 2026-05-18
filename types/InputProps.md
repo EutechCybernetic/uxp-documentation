@@ -5,67 +5,67 @@
 ```tsx
 interface InputProps extends InputSizeProps, InputStateProps {
     /**
-     * Determines if the input field accepts a password, email address, number or just text. Default is 'text'
+     * Input type — text, password, number, or email. Default is 'text'.
      */
     type?: InputType,
 
     /**
-     * The actual text
+     * The typed text value (controlled).
      */
     value: string,
 
     /**
-     * This function is called whenever the text changes. The new text value is passed as a parameter
+     * Called whenever the typed value or a prefix/suffix dropdown selection changes.
+     *
+     * - `value` — raw typed text (never pre-combined with prefix/suffix)
+     * - `prefix` — current prefix dropdown selection, or `undefined` for non-dropdown prefix
+     * - `suffix` — current suffix dropdown selection, or `undefined` for non-dropdown suffix
+     *
+     * @example
+     * ```tsx
+     * onChange={(val, prefix) => {
+     *     setValue(val);
+     *     if (prefix !== undefined) setCurrency(prefix);
+     * }}
+     * ```
      */
-    onChange: (value: string) => void,
-    /**
-     * callback function on focus
-     */
-    onFocus?: () => void,
-    /**
-     * callback function on blur
-     */
-    onBlur?: (vale: string) => void
-    /**
-     * callback function on key down
-     */
-    onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>, val: string) => void
+    onChange: (value: string, prefix?: string, suffix?: string) => void,
 
-    /**
-     * Any additional class names to be included for the input field
-     */
+    onFocus?: () => void,
+    onBlur?: (value: string) => void,
+    onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>, val: string) => void,
+
     className?: string,
 
     /**
-     * Custom content to render on the left side of the input (e.g., "S-" prefix, icons)
+     * Left-side slot. Accepts:
+     * - `ReactNode` — transparent, no separator (e.g. an icon)
+     * - `InputPrefixConfig` — `{ value, showSeparator? }` — opt-in separator
+     * - `InputAddonDropdown` — `{ options, selected }` — selectable dropdown with separator
      */
-    prefix?: React.ReactNode,
+    prefix?: InputPrefixSuffix,
 
     /**
-     * Custom content to render on the right side of the input (e.g., icons, buttons)
+     * Right-side slot. Same union type as `prefix`.
      */
-    suffix?: React.ReactNode,
+    suffix?: InputPrefixSuffix,
 
-    /**
-     * additional attributes that can be passed to a <input> tag
-     */
-    inputAttr?: { [key: string]: string | boolean }
-    /**
-     * placeholder value
-     */
+    inputAttr?: { [key: string]: string | boolean },
     placeholder?: string,
-    /**
-     * render inline
-     */
     inline?: boolean,
-    /**
-     * additional styles
-     */
     style?: React.CSSProperties,
+    tabIndex?: number,
+
     /**
-     * tab index. default is 0
+     * Called when the clear (×) button is clicked.
+     * If omitted, the button calls `onChange('')` automatically.
      */
-    tabIndex?: number
+    onClear?: () => void,
+
+    /**
+     * Hide the clear button entirely (e.g. for internal sub-inputs like Clock or ColorPicker hex field).
+     */
+    hideClear?: boolean,
 }
 ```
 
@@ -80,4 +80,8 @@ import { InputProps } from 'uxp/components';
 - [InputSizeProps](../types/InputSizeProps.md)
 - [InputStateProps](../types/InputStateProps.md)
 - [InputType](../types/InputType.md)
+- [InputPrefixSuffix](../types/InputPrefixSuffix.md)
+- [InputPrefixConfig](../types/InputPrefixConfig.md)
+- [InputAddonDropdown](../types/InputAddonDropdown.md)
+- [InputAddonOption](../types/InputAddonOption.md)
 

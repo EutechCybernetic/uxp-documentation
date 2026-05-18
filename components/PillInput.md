@@ -1,5 +1,14 @@
 # PillInput
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-pillinput--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="PillInput live demo"
+></iframe>
+
+
 
 PillInput component - a CodeMirror-based input that converts expressions to visual pills.
 Supports drag/drop, formatting, and contextual value selection.
@@ -21,9 +30,10 @@ const PillInput: React.ForwardRefExoticComponent<React.RefAttributes<PillInputHa
 
 ## Examples
 
+#### Basic usage with field options
+
 ```tsx
-Basic usage with field options
-```tsx
+tsx
 <PillInput
   value="Hello {user.name}!"
   onChange={setValue}
@@ -33,9 +43,10 @@ Basic usage with field options
 />
 ```
 
+#### With custom pill configuration
+
 ```tsx
-With custom pill configuration
-```tsx
+tsx
 <PillInput
   value="{field.date|number|2}"
   onChange={setValue}
@@ -51,9 +62,10 @@ With custom pill configuration
 />
 ```
 
+#### With ref for programmatic control
+
 ```tsx
-With ref for programmatic control
-```tsx
+tsx
 const pillRef = useRef<PillInputRef>(null);
 
 <PillInput
@@ -83,6 +95,7 @@ pillRef.current?.insertAtCursor("{new.value}");
 |typeIndex|number|No|-|-|
 |expressionMatcher|RegExp|No|-|-|
 |pillValuesSplitFn|(value: string) => string[]|No|-|-|
+|onClear|() => void|No|-|-|
 |panelPosition|'left' \| 'right'|No|-|-|
 
 ## Ref Handlers

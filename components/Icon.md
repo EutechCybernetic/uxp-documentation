@@ -1,5 +1,14 @@
 # Icon
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=icons-icon--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Icon live demo"
+></iframe>
+
+
 
 Universal Icon component that handles FontAwesome, Phosphor, URLs, and text/emoji icons
 Supports size and animations for all icon types
@@ -20,42 +29,42 @@ const Icon: React.FunctionComponent<IconProps>
 
 ## Examples
 
+#### FontAwesome with IconProp
+
 ```tsx
-FontAwesome with IconProp
-```
 <Icon icon={['fas', 'save']} size="2x" spin />
 ```
 
+#### FontAwesome with string
+
 ```tsx
-FontAwesome with string
-```
 <Icon icon="fas save" />
 <Icon icon="far trash" color="red" size="2x" spin />
 ```
 
+#### Phosphor with PHIconProp
+
 ```tsx
-Phosphor with PHIconProp
-```
 <Icon icon={['phb', 'house']} size="lg" />
 ```
 
+#### Phosphor with string
+
 ```tsx
-Phosphor with string
-```
 <Icon icon="phb house" />
 <Icon icon="phf heart" color="red" size="lg" beat />
 ```
 
+#### Images with size and animations
+
 ```tsx
-Images with size and animations
-```
 <Icon icon="https://example.com/logo.svg" size="2x" spin />
 <Icon icon="data:image/svg+xml;base64,..." width={50} height={50} />
 ```
 
+#### Text and emoji with size and animations
+
 ```tsx
-Text and emoji with size and animations
-```
 <Icon icon="×" fontSize="24px" />
 <Icon icon="💾" size="2x" bounce />
 ```

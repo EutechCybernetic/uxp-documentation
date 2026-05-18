@@ -31,6 +31,12 @@ interface ITimeRangePickerProps extends InputSizeProps, InputStateProps {
      * Maximum width for the dropdown content
      */
     dropdownMaxWidth?: number | string
+
+    /**
+     * When provided, a clear (×) button is shown whenever a time range is selected.
+     * Clicking it calls this function — the parent is responsible for clearing the value.
+     */
+    onClear?: () => void
 }
 ```
 

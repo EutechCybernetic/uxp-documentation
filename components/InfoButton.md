@@ -1,5 +1,14 @@
 # InfoButton
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=popups-infobutton--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="InfoButton live demo"
+></iframe>
+
+
 
 Displays a small circular info icon (ⓘ) that opens a popup on click.
 Supports plain text, a list of strings, or any ReactNode as content.

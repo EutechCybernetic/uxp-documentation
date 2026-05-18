@@ -11,7 +11,7 @@ interface NoInteractionMode {
     onClickColumn?: never;
     onUpdateItem?: never;
     onDeleteItem?: never;
-    onReorderItems?: never;
+    onReorderItems?: (reorderedData: RowData[]) => Promise<{ success: boolean, error?: string }>;
     roles?: never;
     labels?: {
         add?: string;
@@ -25,4 +25,8 @@ interface NoInteractionMode {
 ```tsx
 import { NoInteractionMode } from 'uxp/components';
 ```
+
+## Related Types
+
+- [RowData](../types/RowData.md)
 

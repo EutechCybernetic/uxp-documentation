@@ -5,9 +5,13 @@
 ```tsx
 interface INotificationProps {
     /**
-    *  Message to show when showing
-    */
+     * Message to show
+     */
     message: string,
+    /**
+     * Visual variant. Defaults to no variant (neutral style).
+     */
+    variant?: NotificationVariant,
     /**
      * Any extra css classes to apply
      */
@@ -24,4 +28,8 @@ interface INotificationProps {
 ```tsx
 import { INotificationProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [NotificationVariant](../types/NotificationVariant.md)
 

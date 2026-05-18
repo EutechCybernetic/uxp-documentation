@@ -78,7 +78,11 @@ interface ISelectProps extends InputSizeProps, InputStateProps {
      * renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
      * ```
      */
-    renderOption?: (item: any, key: number) => JSX.Element,
+    /**
+     * @param isHighlighted `true` when this item is the keyboard-focused option
+     * @param isSelected `true` when this item matches the current selection
+     */
+    renderOption?: (item: any, key: number, isHighlighted?: boolean, isSelected?: boolean) => JSX.Element,
 
     /**
       * Option to add a new value if not available. 

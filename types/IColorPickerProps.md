@@ -53,6 +53,12 @@ interface IColorPickerProps extends InputSizeProps, InputStateProps {
      * hide the color dot icon
      */
     hideLabels?: boolean
+
+    /**
+     * When provided, a clear (×) button is shown whenever a color is selected.
+     * Clicking it calls this function — the parent is responsible for clearing the value.
+     */
+    onClear?: () => void
 }
 ```
 

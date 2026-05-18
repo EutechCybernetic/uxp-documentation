@@ -1,5 +1,14 @@
 # UserInfoCard
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=list-userinfocard--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="UserInfoCard live demo"
+></iframe>
+
+
 
 A component that fetches and displays user information using InfoCard.
 Automatically constructs profile image URL from user data.
@@ -20,24 +29,24 @@ const UserInfoCard: React.FunctionComponent<UserInfoCardProps>
 
 ## Examples
 
+#### Basic usage (no dropdown)
+
 ```tsx
-Basic usage (no dropdown):
-```
 <UserInfoCard userKey={123} />
 ```
 
+#### Simple details with auto-generated labels (array)
+
 ```tsx
-Simple details with auto-generated labels (array):
-```
 <UserInfoCard
   userKey={123}
   details={['Phone', 'Email', 'UserType']}
 />
 ```
 
+#### Details with custom labels and icons (array with objects)
+
 ```tsx
-Details with custom labels and icons (array with objects):
-```
 <UserInfoCard
   userKey={123}
   details={[
@@ -48,9 +57,9 @@ Details with custom labels and icons (array with objects):
 />
 ```
 
+#### Full config with layout options (config object)
+
 ```tsx
-Full config with layout options (config object):
-```
 <UserInfoCard
   userKey={123}
   details={{
@@ -61,9 +70,9 @@ Full config with layout options (config object):
 />
 ```
 
+#### Custom details rendering (function)
+
 ```tsx
-Custom details rendering (function):
-```
 <UserInfoCard
   userKey={123}
   details={(user) => (
@@ -75,9 +84,9 @@ Custom details rendering (function):
 />
 ```
 
+#### Avatar variant with simple details
+
 ```tsx
-Avatar variant with simple details:
-```
 <UserInfoCard
   userKey={123}
   variant="avatar"

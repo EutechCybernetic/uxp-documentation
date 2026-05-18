@@ -1,5 +1,14 @@
 # ObjectSearchComponent
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=list-tables-object-search-objectsearchcomponent--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ObjectSearchComponent live demo"
+></iframe>
+
+
 
 A component for searching, filtering, and displaying tabular data with support for pagination, views, and details panels.
 

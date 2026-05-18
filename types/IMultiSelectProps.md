@@ -80,7 +80,11 @@ interface IMultiSelectProps extends InputSizeProps, InputStateProps {
      * renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
      * ```
      */
-    renderOption?: (item: any, key: number) => JSX.Element,
+    /**
+     * @param isHighlighted `true` when this item is the keyboard-focused option
+     * @param isSelected `true` when this item is currently selected
+     */
+    renderOption?: (item: any, key: number, isHighlighted?: boolean, isSelected?: boolean) => JSX.Element,
 
     /**
      * Option to wrap selected items to one line

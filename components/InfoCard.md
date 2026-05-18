@@ -1,8 +1,18 @@
 # InfoCard
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=list-infocard--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="InfoCard live demo"
+></iframe>
+
+
 
 A component that displays data in an ItemCard or ProfileImage with optional dropdown details.
 Supports both fetching data via useExecuteRequest or using already-fetched data.
+
 
 
 
@@ -20,9 +30,9 @@ const InfoCard: React.FunctionComponent<InfoCardProps>
 
 ## Examples
 
+#### With executeConfig (InfoCard fetches data)
+
 ```tsx
-With executeConfig (InfoCard fetches data):
-```
 <InfoCard
   data={{
     executeConfig: {
@@ -46,9 +56,9 @@ With executeConfig (InfoCard fetches data):
 />
 ```
 
+#### With direct data (already fetched)
+
 ```tsx
-With direct data (already fetched):
-```
 <InfoCard
   data={{
     avatar: 'https://example.com/avatar.jpg',
@@ -72,9 +82,9 @@ With direct data (already fetched):
 />
 ```
 
+#### Avatar variant (just profile image)
+
 ```tsx
-Avatar variant (just profile image):
-```
 <InfoCard
   data={{ avatar: 'https://example.com/avatar.jpg', name: 'John Doe' }}
   fields={{ image: 'avatar', name: 'name' }}

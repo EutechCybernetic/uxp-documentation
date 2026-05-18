@@ -1,5 +1,14 @@
 # DataGrid
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=list-datagrid--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DataGrid live demo"
+></iframe>
+
+
 
 
 Used to show data in a matrix or grid. You can give it a list of items and a function to render those items.

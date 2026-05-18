@@ -1,5 +1,14 @@
 # TableComponent
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=list-tables-tablecomponent--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="TableComponent live demo"
+></iframe>
+
+
 
 TableComponent displays tabular data with optional pagination, search, filters,
 action buttons, edit/delete actions, and inline editing mode.

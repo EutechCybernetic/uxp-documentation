@@ -1,5 +1,14 @@
 # ButtonComponent
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=buttons-buttoncomponent--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ButtonComponent live demo"
+></iframe>
+
+
 
 Enhanced Button component with multiple variants and icon support
 
@@ -19,15 +28,15 @@ const ButtonComponent: React.FunctionComponent<ButtonComponentProps>
 
 ## Examples
 
+#### Basic button
+
 ```tsx
-Basic button
-```
 <ButtonComponent title="Click me" onClick={() => console.log('clicked')} />
 ```
 
+#### Button with icons
+
 ```tsx
-Button with icons
-```
 <ButtonComponent
   title="Save"
   leftIcon="💾"
@@ -36,9 +45,9 @@ Button with icons
 />
 ```
 
+#### Icon only button
+
 ```tsx
-Icon only button
-```
 <ButtonComponent
   leftIcon="×"
   iconOnly
@@ -47,9 +56,9 @@ Icon only button
 />
 ```
 
+#### Async button with loading
+
 ```tsx
-Async button with loading
-```
 <ButtonComponent
   title="Submit"
   loadingTitle="Submitting..."

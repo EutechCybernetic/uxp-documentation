@@ -19,11 +19,9 @@ const LocalizationForm: React.FunctionComponent<ILocalisationFormProps>
 
 ## Examples
 
-```tsx
-<LocalizationForm
+#### <LocalizationForm
 code: 'uxp-core.text.save'
 />
-```
 
 ## Properties
 

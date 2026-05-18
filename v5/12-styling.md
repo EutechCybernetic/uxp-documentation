@@ -179,7 +179,7 @@ src/
 - **App Prefix** - Use your app prefix (e.g., `ilocapp_` for Location app) to avoid conflicts
 - **BEM Naming** - Follow BEM convention: `prefix_component__element--modifier`
 
-**Note:** CSS scoping will be added in future versions. For now, use app-specific prefixes to prevent style conflicts.
+**Note:** CSS class names are automatically scoped at build time using scoped CSS — no manual prefixes needed to prevent conflicts. See [Step 18: Lint & Scoped CSS](./18-lint-and-scoped-css.md) for setup.
 
 ---
 
@@ -399,3 +399,4 @@ Use logical CSS properties for RTL support:
 ## Next Steps
 
 - [Step 13: Localization](./13-localization.md) - Multi-language support
+- [Step 18: Lint & Scoped CSS](./18-lint-and-scoped-css.md) - Automatic style isolation and code quality tools

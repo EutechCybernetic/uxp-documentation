@@ -1,5 +1,14 @@
 # FilterPanel
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=popups-filterpanel--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="FilterPanel live demo"
+></iframe>
+
+
 
 Displays a filter button which, when clicked, opens a popup panel.
 Suitable for hiding filters for widgets or searches.
@@ -21,9 +30,10 @@ const FilterPanel: React.FunctionComponent<FilterPanelProps>
 
 ## Examples
 
+#### Basic filter panel
+
 ```tsx
-Basic filter panel
-```tsx
+tsx
 <FilterPanel>
   <FormField>
     <Label>Category</Label>
@@ -32,9 +42,10 @@ Basic filter panel
 </FilterPanel>
 ```
 
+#### With clear functionality
+
 ```tsx
-With clear functionality
-```tsx
+tsx
 <FilterPanel
   enableClear={hasFilters}
   onClear={() => {
@@ -53,9 +64,10 @@ With clear functionality
 </FilterPanel>
 ```
 
+#### Custom position and icon
+
 ```tsx
-Custom position and icon
-```tsx
+tsx
 <FilterPanel
   position="bottom-left"
   icon="sort"

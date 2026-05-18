@@ -15,6 +15,10 @@ export interface TreeViewHandle {
      * @param dropPosition - Where to drop relative to target ('before' | 'after' | 'child')
      */
     triggerDrop: (sourceNodeId: string, targetNodeId: string, dropPosition: DropPosition) => Promise<void>;
+    /** Expand all nodes in the tree */
+    expandAll: () => void;
+    /** Collapse all nodes in the tree */
+    collapseAll: () => void;
 }
 ```
 

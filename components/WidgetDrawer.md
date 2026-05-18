@@ -1,5 +1,14 @@
 # WidgetDrawer
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=dashboard-widget-drawer-widgetdrawer--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="WidgetDrawer live demo"
+></iframe>
+
+
 
 Widget drawer modal wrapper component that handles widget initialization internally
 
@@ -53,6 +62,7 @@ tsx
 |isBounded|boolean|No|-|-|
 |maxColumns|number|No|-|-|
 |config|[WidgetDrawerConfig](../types/WidgetDrawerConfig.md)|No|-|-|
+|orientation|'vertical' \| 'horizontal'|No|-|-|
 
 ## Related Types
 

@@ -22,9 +22,10 @@ const SlideInForm: React.MemoExoticComponent<React.ForwardRefExoticComponent<Rea
 
 ## Examples
 
+#### DataEntryForm (JSX declarative API)
+
 ```tsx
-DataEntryForm (JSX declarative API)
-```tsx
+tsx
 const formRef = useRef<SlideInFormHandlers>(null);
 
 <SlideInForm
@@ -45,9 +46,10 @@ const formRef = useRef<SlideInFormHandlers>(null);
 </SlideInForm>
 ```
 
+#### DynamicForm (config-driven API)
+
 ```tsx
-DynamicForm (config-driven API)
-```tsx
+tsx
 const formRef = useRef<SlideInFormHandlers>(null);
 
 <SlideInForm

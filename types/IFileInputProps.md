@@ -45,6 +45,11 @@ interface IFileInputProps extends InputSizeProps, InputStateProps {
      * Custom label for drop area
      */
     dropAreaLabel?: string
+
+    /**
+     * Compact mode — renders as a single input row (icon + label) instead of a tall drop-zone
+     */
+    compact?: boolean
 }
 ```
 

@@ -1,5 +1,14 @@
 # TreeView
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=list-treeview--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="TreeView live demo"
+></iframe>
+
+
 
 
 
@@ -85,6 +94,8 @@ Available methods through ref:
 |Method|Type|Description|
 |-|-|-|
 |triggerDrop|(sourceNodeId: string, targetNodeId: string, dropPosition: DropPosition) => Promise<void>|Programmatically trigger a drop operation |
+|expandAll|() => void|Expand all nodes in the tree |
+|collapseAll|() => void|Collapse all nodes in the tree |
 
 ## Related Types
 

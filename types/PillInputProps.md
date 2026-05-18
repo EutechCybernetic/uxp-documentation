@@ -33,8 +33,14 @@ export interface PillInputProps extends InputSizeProps, InputStateProps {
     /** Custom function to split pill values */
     pillValuesSplitFn?: (value: string) => string[];
     /**
-     * @deprecated 
-     * Position of the options panel relative to input 
+     * When provided, a clear (×) button is shown whenever there is a value.
+     * Clicking it calls this function — the parent is responsible for clearing the value.
+     * If not provided, the clear button calls onChange('') internally.
+     */
+    onClear?: () => void;
+    /**
+     * @deprecated
+     * Position of the options panel relative to input
      * */
     panelPosition?: 'left' | 'right'
 }

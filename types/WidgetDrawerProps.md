@@ -15,6 +15,7 @@ export interface WidgetDrawerProps {
     isBounded?: boolean
     maxColumns?: number
     config?: WidgetDrawerConfig
+    orientation?: 'vertical' | 'horizontal'
 }
 ```
 

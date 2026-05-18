@@ -1,5 +1,14 @@
 # DeleteAction
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=deleteaction--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DeleteAction live demo"
+></iframe>
+
+
 
 Declarative component wrapper for delete actions
 
@@ -22,9 +31,10 @@ const DeleteAction: React.FunctionComponent<DeleteActionProps>
 
 ## Examples
 
+#### Basic usage with button
+
 ```tsx
-Basic usage with button
-```tsx
+tsx
 <DeleteAction
   model="Location.Location"
   objectKey={locationKey}
@@ -41,9 +51,10 @@ Basic usage with button
 </DeleteAction>
 ```
 
+#### With custom title and messages
+
 ```tsx
-With custom title and messages
-```tsx
+tsx
 <DeleteAction
   model="User.User"
   objectKey={userId}
@@ -57,9 +68,10 @@ With custom title and messages
 </DeleteAction>
 ```
 
+#### In an action list
+
 ```tsx
-In an action list
-```tsx
+tsx
 <ActionList>
   <DeleteAction
     model="Equipment.Equipment"

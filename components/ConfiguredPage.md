@@ -19,12 +19,10 @@ const ConfiguredPage: React.MemoExoticComponent<React.FunctionComponent<Configur
 
 ## Examples
 
-```tsx
-<ConfiguredPage
+#### <ConfiguredPage
   pageId="com.example.module/widget/LocationDetails"
   additionalProps={{ LocationKey: 100 }}
 />
-```
 
 ## Properties
 

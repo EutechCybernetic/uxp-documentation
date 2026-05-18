@@ -1,5 +1,14 @@
 # InfoCardGroup
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=list-infocardgroup--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="InfoCardGroup live demo"
+></iframe>
+
+
 
 A component that displays a group of profile images stacked horizontally with overlap.
 Shows a "+N" badge for remaining items when maxVisible limit is reached.
@@ -23,9 +32,9 @@ const InfoCardGroup: React.FunctionComponent<InfoCardGroupProps>
 
 ## Examples
 
+#### Basic usage
+
 ```tsx
-Basic usage:
-```
 <InfoCardGroup
   items={[
     { avatar: 'https://example.com/1.jpg', name: 'John Doe', email: 'john@example.com' },
@@ -36,9 +45,9 @@ Basic usage:
 />
 ```
 
+#### With details
+
 ```tsx
-With details:
-```
 <InfoCardGroup
   items={users}
   fields={{ image: 'avatar', name: 'name', title: 'name', subtitle: 'email' }}

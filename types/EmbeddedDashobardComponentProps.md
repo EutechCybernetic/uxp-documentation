@@ -12,14 +12,17 @@ export interface EmbeddedDashobardComponentProps {
      * List of dashboard IDs to try loading in priority order.
      * The component will use the first ID that has a record in the database.
      *
-     * Example: For an equipment details page:
-     * - First check equipment-specific: "ibms/equipment/<equipmentKey>"
-     * - Then check type-specific: "ibms/equipment/<equipmentType>"
-     * - Finally fallback to generic: "ibms/equipment"
+     * Accepts plain strings or { id, label } objects — use label to show a
+     * human-readable name in the dashboard selector dropdown.
      *
-     * Pass as: ["ibms/equipment/1", "ibms/equipment/fcu", "ibms/equipment"]
+     * Example:
+     *   ids={[
+     *     { id: `ibms/equipment/${equipmentKey}`, label: equipmentName },
+     *     { id: `ibms/equipment/${equipmentType}`, label: equipmentType },
+     *     { id: "ibms/equipment", label: "Default" }
+     *   ]}
      */
-    ids: string[];
+    ids: DashboardIdEntry[];
 
     /**
      * Default configuration to use when no database record exists for any of the IDs.
@@ -42,6 +45,35 @@ export interface EmbeddedDashobardComponentProps {
      * Enable responsive breakpoint selection
      */
     enableResponsiveLayouts?: boolean;
+
+    /**
+     * Render the dashboard as a transparent overlay over a background component.
+     * Widgets remain interactive; clicking empty areas passes through.
+     */
+    overlayMode?: boolean;
+
+    /**
+     * The object type context (e.g. 'Location', 'Asset').
+     * Used for background surface compatibility filtering.
+     */
+    objectType?: string;
+
+    /**
+     * Enable background surface selection in edit mode.
+     */
+    enableBackgroundConfig?: boolean;
+
+    /**
+     * Additional props to pass through to all widgets.
+     * Use this to forward global filters (e.g. URL params, event-driven context) from the parent.
+     */
+    autoPassedProps?: Record<string, any>;
+
+    /**
+     * Global dashboard settings fetched once by App.tsx (breakpoints + global defaults).
+     * Used to show global default placeholders in the behavior settings panel.
+     */
+    globalDashboardSettings?: UXPGlobalDashboardSettings | null;
 }
 ```
 
@@ -53,6 +85,7 @@ import { EmbeddedDashobardComponentProps } from 'uxp/components';
 
 ## Related Types
 
+- [DashboardIdEntry](../types/DashboardIdEntry.md)
 - [ResponsiveWidgetLayoutConfiguration](../types/ResponsiveWidgetLayoutConfiguration.md)
 - [IWidgetInstance](../types/IWidgetInstance.md)
 - [ILayout](../types/ILayout.md)
@@ -87,4 +120,7 @@ import { EmbeddedDashobardComponentProps } from 'uxp/components';
 - [ExecuteConfigBase](../types/ExecuteConfigBase.md)
 - [LucyQueryResult](../types/LucyQueryResult.md)
 - [IWidgetPreloader](../types/IWidgetPreloader.md)
+- [BackgroundConfig](../types/BackgroundConfig.md)
+- [GridSettings](../types/GridSettings.md)
+- [UXPGlobalDashboardSettings](../types/UXPGlobalDashboardSettings.md)
 

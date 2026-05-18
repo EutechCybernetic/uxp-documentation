@@ -1,5 +1,14 @@
 # ObjectDetailsPanel
 
+<iframe
+  src="https://uxp-components.vercel.app/iframe.html?id=list-tables-object-search-objectdetailspanel--default&viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ObjectDetailsPanel live demo"
+></iframe>
+
+
 
 A component that displays a details panel for a selected row, with a title, toolbar, and main/additional details sections.
 
