@@ -324,6 +324,6 @@ window.registerBackgroundSurface({
 
 ## Next Steps
 
-- [Core Components Reference](./07-core-components.md) — widget components available for your dashboards
-- [Data Fetching](./08-data-fetching.md) — how widgets call backend services
-- [Events](./09-events.md) — real-time event bus used by overlay mode
+- [Core Components Reference](./core-components.md) — widget components available for your dashboards
+- [Data Fetching](./data-fetching.md) — how widgets call backend services
+- [Events](./events.md) — real-time event bus used by overlay mode

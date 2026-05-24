@@ -406,6 +406,6 @@ const LocationDetails = ({ locationKey, location, reload }) => {
 
 ## Next Steps
 
-- [Pluggable Views](./11-pluggable-views.md) — Make your app customizable
-- [Events & Synchronization](./09-events.md) — Keep views in sync after mutations
-- [Core Components](./07-core-components.md) — UXP built-in components
+- [Pluggable Views](./pluggable-views.md) — Make your app customizable
+- [Events & Synchronization](./events.md) — Keep views in sync after mutations
+- [Core Components](./core-components.md) — UXP built-in components

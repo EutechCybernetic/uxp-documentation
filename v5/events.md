@@ -118,4 +118,4 @@ useMessageBus('location-created', handleCreated);
 
 ## Next Steps
 
-- [Using External Components](./10-external-components.md) - Use components from other apps
+- [Using External Components](./external-components.md) - Use components from other apps

@@ -131,4 +131,4 @@ You should see:
 
 Your first view is working! Continue to:
 
-- [Step 5: Understanding V5 Architecture](./05-architecture.md) - Learn how v5 works under the hood
+- [Step 5: Understanding V5 Architecture](./architecture.md) - Learn how v5 works under the hood

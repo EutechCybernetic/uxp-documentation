@@ -1,7 +1,9 @@
 # isWidget
 
 
-Returns true if the given id belongs to a widget (id format: "moduleId/widget/componentId")
+Returns true if the given id belongs to a widget.
+Handles both 3-part legacy IDs ("moduleId/widget/componentId") and
+2-part unified IDs ("moduleId/componentId") from the unified component registry.
 
 
 ## Installation

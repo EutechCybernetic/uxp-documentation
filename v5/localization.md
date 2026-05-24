@@ -140,4 +140,4 @@ Use hierarchical keys: `appname.category.message-id`
 
 ## Next Steps
 
-- [Building & Deployment](./14-buildi-deploy.md) - Deploy your app
+- [Building & Deployment](./build-deploy.md) - Deploy your app

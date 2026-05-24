@@ -208,4 +208,4 @@ Your view is now compiled to `dist/main.js`.
 
 Your view is created but not yet accessible. Continue to:
 
-- [Step 4: Add Navigation](./04-first-navigation.md) - Configure routes and add to navigation
+- [Step 4: Add Navigation](./first-navigation.md) - Configure routes and add to navigation

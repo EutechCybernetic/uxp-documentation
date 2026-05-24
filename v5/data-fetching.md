@@ -211,4 +211,4 @@ const handleSearch = async (query) => {
 
 ## Next Steps
 
-- [Events & Synchronizations](./09-events.md) - Events & Synchronization
+- [Events & Synchronizations](./events.md) - Events & Synchronization

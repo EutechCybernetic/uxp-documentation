@@ -58,10 +58,10 @@ https://your-account.lucy-server.com/view/<baseroute>
 | Routes return 404 after enableapp | DB not updated | Run `mergedb auto` + `installviews` |
 | Config changes not reflected | Redis cache (24h TTL) | Restart server |
 
-> See [Troubleshooting Guide](./17-troubleshooting.md) for full diagnostics.
+> See [Troubleshooting Guide](./troubleshooting.md) for full diagnostics.
 
 ---
 
 ## Next Steps
 
-- [Best Practices](./15-best-practices.md) - Best Practices 
+- [Best Practices](./best-practices.md) - Best Practices 

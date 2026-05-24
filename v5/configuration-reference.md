@@ -293,7 +293,7 @@ These mistakes cause silent failures — the server skips the app with no visibl
 | `otherRoutes:` present but with no value | YAML parse fails, entire config dropped | Use `otherRoutes: {}` if no routes needed |
 | `otherRoutes:` omitted entirely | YAML parse fails, entire config dropped | Always include `otherRoutes:` |
 
-> See [Troubleshooting Guide](./17-troubleshooting.md) for full diagnostics.
+> See [Troubleshooting Guide](./troubleshooting.md) for full diagnostics.
 
 ---
 
@@ -301,4 +301,4 @@ These mistakes cause silent failures — the server skips the app with no visibl
 
 Let's check the components:
 
-- [Step 7: Components](./07-core-components.md) - Introduction to v5 components
+- [Step 7: Components](./core-components.md) - Introduction to v5 components

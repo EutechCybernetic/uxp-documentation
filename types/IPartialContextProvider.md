@@ -73,6 +73,10 @@ export interface IPartialContextProvider {
     // view overrides for pluggable views
     viewOverrides?: Record<string, ViewOverride>
     setViewOverrides?: (overrides: Record<string, ViewOverride>) => void
+
+    // object tab injections
+    objectTabs?: Record<string, ObjectTab[]>
+    setObjectTabs?: (tabs: Record<string, ObjectTab[]>) => void
 }
 ```
 
@@ -95,4 +99,6 @@ import { IPartialContextProvider } from 'uxp/components';
 - [ComponentType](../types/ComponentType.md)
 - [IUXPFunctions](../types/IUXPFunctions.md)
 - [ViewOverride](../types/ViewOverride.md)
+- [ObjectTab](../types/ObjectTab.md)
+- [ObjectTabComponent](../types/ObjectTabComponent.md)
 

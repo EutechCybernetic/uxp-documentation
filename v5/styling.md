@@ -9,7 +9,7 @@ UXP provides a theme system with CSS variables for styling your v5 apps.
 **Avoid custom styles as much as possible.** UXP provides a comprehensive set of pre-built components that handle styling, theming, and responsive behavior automatically.
 
 **Before writing custom styles:**
-1. Check if a standard UXP component exists for your use case (see [Step 7: Core Components](./07-core-components.md))
+1. Check if a standard UXP component exists for your use case (see [Step 7: Core Components](./core-components.md))
 2. Use component props and variants for customization
 3. Only add custom styles when absolutely necessary
 
@@ -179,7 +179,7 @@ src/
 - **App Prefix** - Use your app prefix (e.g., `ilocapp_` for Location app) to avoid conflicts
 - **BEM Naming** - Follow BEM convention: `prefix_component__element--modifier`
 
-**Note:** CSS class names are automatically scoped at build time using scoped CSS — no manual prefixes needed to prevent conflicts. See [Step 18: Lint & Scoped CSS](./18-lint-and-scoped-css.md) for setup.
+**Note:** CSS class names are automatically scoped at build time using scoped CSS — no manual prefixes needed to prevent conflicts. See [Step 18: Lint & Scoped CSS](./lint-and-scoped-css.md) for setup.
 
 ---
 
@@ -398,5 +398,5 @@ Use logical CSS properties for RTL support:
 
 ## Next Steps
 
-- [Step 13: Localization](./13-localization.md) - Multi-language support
-- [Step 18: Lint & Scoped CSS](./18-lint-and-scoped-css.md) - Automatic style isolation and code quality tools
+- [Step 13: Localization](./localization.md) - Multi-language support
+- [Step 18: Lint & Scoped CSS](./lint-and-scoped-css.md) - Automatic style isolation and code quality tools

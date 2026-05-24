@@ -4,41 +4,43 @@
 
 ### Getting Started
 
-- [Setup Development Environment](v5/01-setup-environment.md)
-- [Migration Setup](v5/02-migration-setup.md)
-- [Create Your First View](v5/03-first-view.md)
-- [Add Navigation and Validate](v5/04-first-navigation.md)
+- [Setup Development Environment](v5/setup-environment.md)
+- [Migration Setup](v5/migration-setup.md)
+- [Create Your First View](v5/first-view.md)
+- [Add Navigation and Validate](v5/first-navigation.md)
 
 ### Understanding V5 
 
-- [V5 Architecture](v5/05-architecture.md)
-- [Configuration Reference](v5/06-configuration-reference.md)
+- [V5 Architecture](v5/architecture.md)
+- [Configuration Reference](v5/configuration-reference.md)
 
 ### Building Apps 
 
-- [Core UXP Components](v5/07-core-components.md)
-- [Data Fetching](v5/08-data-fetching.md)
-- [Events and Synchronization](v5/09-events.md)
-- [External Components](v5/10-external-components.md)
-- [Pluggable Views](v5/11-pluggable-views.md)
+- [Core UXP Components](v5/core-components.md)
+- [Data Fetching](v5/data-fetching.md)
+- [Events and Synchronization](v5/events.md)
+- [External Components](v5/external-components.md)
+- [Pluggable Views](v5/pluggable-views.md)
+- [Injected Detail Tabs](v5/injected-tabs.md)
+- [Unified Component Registry](v5/unified-components.md)
 
 ### Styling & Localization 
 
-- [Styling and Theming](v5/12-styling.md)
-- [Localization](v5/13-localization.md)
-- [Lint & Scoped CSS](v5/18-lint-and-scoped-css.md)
+- [Styling and Theming](v5/styling.md)
+- [Localization](v5/localization.md)
+- [Lint & Scoped CSS](v5/lint-and-scoped-css.md)
 
 ### Deployment
 
-- [Build and Deploy](v5/14-build-deploy.md)
+- [Build and Deploy](v5/build-deploy.md)
 
 ### Best Practices
 
-- [Best Practices](v5/15-best-practices.md)
+- [Best Practices](v5/best-practices.md)
 
 ### Troubleshooting
 
-- [Troubleshooting Guide](v5/17-troubleshooting.md)
+- [Troubleshooting Guide](v5/troubleshooting.md)
 
 ---
 
@@ -98,7 +100,6 @@
     - [Collapse](components/Collapse.md)
     - [ColorPallet](components/ColorPallet.md)
     - [ColorPicker](components/ColorPicker.md)
-    - [ComponentRenderer](components/ComponentRenderer.md)
     - [ConfigurationView](components/ConfigurationView.md)
     - [ConfigurationViewContent](components/ConfigurationViewContent.md)
     - [ConfigurationViewHeader](components/ConfigurationViewHeader.md)
@@ -238,6 +239,7 @@
     - [useResizeEffect](hooks/useResizeEffect.md)
     - [useRouterContext](hooks/useRouterContext.md)
     - [useSearchParams](hooks/useSearchParams.md)
+    - [useTabInjection](hooks/useTabInjection.md)
     - [useToast](hooks/useToast.md)
     - [useUXPContext](hooks/useUXPContext.md)
     - [useUpdateWidgetProps](hooks/useUpdateWidgetProps.md)
@@ -284,8 +286,11 @@
     - [ColorGroup](types/ColorGroup.md)
     - [ColorProperty](types/ColorProperty.md)
     - [Column](types/Column.md)
-    - [ComponentRendererProps](types/ComponentRendererProps.md)
+    - [ComponentConfigs](types/ComponentConfigs.md)
+    - [ComponentInstance](types/ComponentInstance.md)
+    - [ComponentPreloader](types/ComponentPreloader.md)
     - [ComponentType](types/ComponentType.md)
+    - [ConfigPanelProps](types/ConfigPanelProps.md)
     - [ConfigurationViewContentProps](types/ConfigurationViewContentProps.md)
     - [ConfigurationViewHeaderProps](types/ConfigurationViewHeaderProps.md)
     - [ConfiguredPage](types/ConfiguredPage.md)
@@ -387,7 +392,6 @@
     - [IColorPalletProps](types/IColorPalletProps.md)
     - [IColorPickerProps](types/IColorPickerProps.md)
     - [IColorTypes](types/IColorTypes.md)
-    - [IConfigPanelProps](types/IConfigPanelProps.md)
     - [IConfigurationViewProps](types/IConfigurationViewProps.md)
     - [IConfigurationViewSection](types/IConfigurationViewSection.md)
     - [IConfirmAlertProps](types/IConfirmAlertProps.md)
@@ -484,8 +488,6 @@
     - [IUseUpdateWidgetProps](types/IUseUpdateWidgetProps.md)
     - [IWidget](types/IWidget.md)
     - [IWidgetConfigs](types/IWidgetConfigs.md)
-    - [IWidgetInstance](types/IWidgetInstance.md)
-    - [IWidgetPreloader](types/IWidgetPreloader.md)
     - [IWidgetPreloaderLoaderProps](types/IWidgetPreloaderLoaderProps.md)
     - [IWidgetTitleBarProps](types/IWidgetTitleBarProps.md)
     - [IWidgetWrapperProps](types/IWidgetWrapperProps.md)
@@ -534,6 +536,8 @@
     - [ObjectSearchComponentHandlers](types/ObjectSearchComponentHandlers.md)
     - [ObjectSearchComponentProps](types/ObjectSearchComponentProps.md)
     - [ObjectSearchDetailsResponse](types/ObjectSearchDetailsResponse.md)
+    - [ObjectTab](types/ObjectTab.md)
+    - [ObjectTabComponent](types/ObjectTabComponent.md)
     - [PHIconPrefix](types/PHIconPrefix.md)
     - [PHIconProp](types/PHIconProp.md)
     - [PHIconWeight](types/PHIconWeight.md)
@@ -599,6 +603,8 @@
     - [Tab](types/Tab.md)
     - [TabComponentProps](types/TabComponentProps.md)
     - [TabComponentStyles](types/TabComponentStyles.md)
+    - [TabInjection](types/TabInjection.md)
+    - [TabInjectionComponent](types/TabInjectionComponent.md)
     - [TableCellProps](types/TableCellProps.md)
     - [TableColumn](types/TableColumn.md)
     - [TableComponentProps](types/TableComponentProps.md)

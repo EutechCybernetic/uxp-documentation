@@ -6,6 +6,7 @@
 interface ConfiguredPageComponentProps {
     pageId: string;
     additionalProps?: any;
+    configuredProps?: Record<string, any>;
     notFoundMessage?: string | React.ReactNode;
 }
 ```

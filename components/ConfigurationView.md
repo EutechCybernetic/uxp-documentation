@@ -53,6 +53,8 @@ const ConfigurationView: React.FunctionComponent<IConfigurationViewProps>
 - [ComponentType](../types/ComponentType.md)
 - [IUXPFunctions](../types/IUXPFunctions.md)
 - [ViewOverride](../types/ViewOverride.md)
+- [ObjectTab](../types/ObjectTab.md)
+- [ObjectTabComponent](../types/ObjectTabComponent.md)
 - [Environment](../types/Environment.md)
 - [ExecutionOptions](../types/ExecutionOptions.md)
 - [CachingOptions](../types/CachingOptions.md)

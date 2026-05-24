@@ -174,4 +174,4 @@ uxp-lint --ci
 
 ## Next Steps
 
-- [Step 12: Styling](./12-styling.md) - Theme system, CSS variables, SCSS structure
+- [Step 12: Styling](./styling.md) - Theme system, CSS variables, SCSS structure

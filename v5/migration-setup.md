@@ -173,4 +173,4 @@ In the following steps, we'll:
 
 Your app is now ready for v5 development. Continue to:
 
-- [Step 3: Create Your First View](./03-first-view.md) - Create and register a React view component
+- [Step 3: Create Your First View](./first-view.md) - Create and register a React view component

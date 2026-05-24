@@ -179,7 +179,7 @@ For complete type definitions, see the [Types Documentation](../types.md).
 
 ## Next Steps
 
-- **[Step 8: Data Fetching](./08-data-fetching.md)** - Learn how to fetch and manage data in your views
+- **[Step 8: Data Fetching](./data-fetching.md)** - Learn how to fetch and manage data in your views
 - **[Components Documentation](../components.md)** - Browse all 120+ components with detailed props and examples
 - **[Hooks Documentation](../hooks.md)** - Complete reference for all UXP hooks
 - **[Types Documentation](../types.md)** - TypeScript type definitions and interfaces
@@ -190,4 +190,4 @@ For complete type definitions, see the [Types Documentation](../types.md).
 
 - All component names link to auto-generated documentation with complete prop specifications, TypeScript signatures, and usage examples
 - The auto-generated docs are updated with each build via `npm run build:docs`
-- For architectural context and integration patterns, refer to [Step 5: Architecture](./05-architecture.md)
+- For architectural context and integration patterns, refer to [Step 5: Architecture](./architecture.md)

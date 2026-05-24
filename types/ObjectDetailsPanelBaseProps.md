@@ -28,6 +28,18 @@ export type ObjectDetailsPanelBaseProps = {
     additionlDetails?: AdditionaDetails[];
 
     /**
+     * Object type identifier (e.g. "location", "asset"). When provided, tabs contributed
+     * by other apps via registerTabInjection() are automatically appended to
+     * additionlDetails. The host app does not need to know which tabs are injected.
+     */
+    objectType?: string;
+
+    /**
+     * Key of the object being viewed. Passed to all injected tab components as objectKey.
+     */
+    objectKey?: string;
+
+    /**
      * Whether to show a close button on the panel. Defaults to true.
      */
     showCloseButton?: boolean;

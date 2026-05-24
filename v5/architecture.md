@@ -98,4 +98,4 @@ When you navigate to a URL:
 
 Deep dive in to configurations:
 
-- [Step 6: Configuration Reference](./06-configuration-reference.md) - Complete Configuration.yml guide
+- [Step 6: Configuration Reference](./configuration-reference.md) - Complete Configuration.yml guide

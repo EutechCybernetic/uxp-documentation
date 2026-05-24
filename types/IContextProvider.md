@@ -117,6 +117,11 @@ export interface IContextProvider extends Omit<IPartialContextProvider, "environ
     setLoginUIRef: (ref: React.MutableRefObject<{ show: () => void }>) => void;
 
     refreshViewOverrides: () => Promise<void>
+
+    // object tab injections
+    objectTabs?: Record<string, ObjectTab[]>
+    setObjectTabs?: (tabs: Record<string, ObjectTab[]>) => void
+    refreshObjectTabs: () => Promise<void>
 }
 ```
 
@@ -140,6 +145,8 @@ import { IContextProvider } from 'uxp/components';
 - [ComponentType](../types/ComponentType.md)
 - [IUXPFunctions](../types/IUXPFunctions.md)
 - [ViewOverride](../types/ViewOverride.md)
+- [ObjectTab](../types/ObjectTab.md)
+- [ObjectTabComponent](../types/ObjectTabComponent.md)
 - [Environment](../types/Environment.md)
 - [ExecutionOptions](../types/ExecutionOptions.md)
 - [CachingOptions](../types/CachingOptions.md)

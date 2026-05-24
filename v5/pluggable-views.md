@@ -2,6 +2,8 @@
 
 Make parts of your app customizable without modifying core code.
 
+> **Related:** If you need to push tabs into another app's object detail panel (rather than letting admins replace a slot in your own app), see [Injected Detail Tabs](./injected-tabs.md).
+
 ---
 
 ## Concept
@@ -83,4 +85,4 @@ const DetailsView = ({ locationKey }) => {
 
 ## Next Steps
 
-- [Styling](./12-styling.md) - Styling your components
+- [Styling](./styling.md) - Styling your components
