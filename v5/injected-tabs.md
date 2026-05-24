@@ -19,7 +19,7 @@ This differs from [Pluggable Views](./pluggable-views.md), which is a **pull mod
 
 ## How It Works
 
-1. **Contributing app** calls `useTabInjection()` in a mounted component to declare: "I provide a tab for `objectType='location'`".
+1. **Contributing app** calls `registerTabInjection()` once at module load time in `index.tsx` to declare: "I provide a tab for `objectType='location'`".
 2. **Host app** passes `objectType="location"` to `<ObjectDetailsPanel>`. No other changes needed.
 3. **UXP** reads the admin-configured tabs for `"location"` from context, renders each as a right-gutter icon + slide-out panel using the contributing app's components.
 4. **Admins** configure which injections are active and customise their appearance and access via the Page Editor (global floating edit button).
@@ -107,7 +107,7 @@ Changes are saved to `AccountObjectTabs` in the database and apply to all users 
 ## Authorization
 
 Access to an injected tab is controlled by:
-1. **Default roles/groups** declared in `useTabInjection` (injection defaults)
+1. **Default roles/groups** declared in `registerTabInjection` (injection defaults)
 2. **Admin override** — per-injection appRoles and userGroups set in the Tab Editor
 
 If either `appRoles` or `userGroups` match the current user, the tab is shown. Both empty = visible to all.
