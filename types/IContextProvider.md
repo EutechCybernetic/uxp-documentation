@@ -122,6 +122,33 @@ export interface IContextProvider extends Omit<IPartialContextProvider, "environ
     objectTabs?: Record<string, ObjectTab[]>
     setObjectTabs?: (tabs: Record<string, ObjectTab[]>) => void
     refreshObjectTabs: () => Promise<void>
+
+    /**
+     * Publish or update an in-app notification.
+     * Creates the notification if the notificationId is new; updates it otherwise.
+     * The notification center refreshes automatically via the real-time MessageBus.
+     */
+    publishNotification: (params: PublishNotificationParams) => Promise<ExecutionResult<{ notificationID: string; created: boolean }>>;
+
+    /**
+     * Mark an in-app notification as resolved.
+     * The notification will appear in the resolved section of the notification center.
+     */
+    resolveNotification: (notificationId: string, objectType: string) => Promise<ExecutionResult<{ notificationID: string }>>;
+
+    /**
+     * Bulk-mark NEW notifications as resolved, filtered by any combination of
+     * notification IDs, object type, and/or object key (filters are AND-combined).
+     * At least one filter is required.
+     */
+    resolveNotifications: (filters: ResolveNotificationsFilters) => Promise<ExecutionResult<{ resolvedCount: number }>>;
+
+    /**
+     * Clear this browser's client-side data caches (localStorage `lucy_cache_*`,
+     * the in-flight request dedupe map, and in-memory widget caches). Lets a user
+     * force fresh data without a server reset; callers typically reload afterwards.
+     */
+    clearFrontendCache: () => void;
 }
 ```
 
@@ -154,6 +181,8 @@ import { IContextProvider } from 'uxp/components';
 - [QueryParams](../types/QueryParams.md)
 - [ExecutionResult](../types/ExecutionResult.md)
 - [ExecuteMicroserviceConfig](../types/ExecuteMicroserviceConfig.md)
-- [ExecuteConfigBase](../types/ExecuteConfigBase.md)
 - [LucyQueryResult](../types/LucyQueryResult.md)
+- [PublishNotificationParams](../types/PublishNotificationParams.md)
+- [NotificationSeverity](../types/NotificationSeverity.md)
+- [ResolveNotificationsFilters](../types/ResolveNotificationsFilters.md)
 

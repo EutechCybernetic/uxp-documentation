@@ -36,6 +36,7 @@ code: 'uxp-core.text.save'
 |cancelButtonLabel|string|No|-|-|
 |hideCancelButton|boolean|No|-|-|
 |customMessages|Record<string, string>|No|-|-|
+|allowCodeEdit|boolean|No|-|-|
 
 ## Related Types
 

@@ -14,6 +14,8 @@ export interface PillOption {
     value: string;
     /** Optional formatters applied to the value */
     formatters?: string[]
+    /** Optional help text shown under the pill in option panels */
+    description?: string;
 }
 ```
 

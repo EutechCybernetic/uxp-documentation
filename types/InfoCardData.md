@@ -3,7 +3,7 @@
 ## Definition
 
 ```tsx
-type InfoCardData = ExecuteRequestConfig | Record<string, any>
+type InfoCardData = ExecuteRequestConfig | Record<string, any>;
 ```
 
 ## Usage

@@ -57,7 +57,7 @@ tsx
 |allowZero|boolean|No|false|-|
 |allowNegative|boolean|No|false|-|
 |formatter|(value: any) => any|No|-|-|
-|required|boolean|No|false|-|
+|required|boolean \| ((data: IFormData) => boolean)|No|false|-|
 |allowEmptyString|boolean|No|false|-|
 |minLength|number|No|-|-|
 |maxLength|number|No|-|-|

@@ -65,11 +65,14 @@ tsx
 |onChange|(tags: string[]) => void|Yes|-|-|
 |options|string[] \| ((text: string) => Promise<string[]>)|No|-|-|
 |placeholder|string|No|-|-|
+|delimiters|string[]|No|[',']|-|
 |className|string|No|-|-|
+|addNewValues|[IAddNewValues](../types/IAddNewValues.md)|No|-|* ```tsx|
 
 ## Related Types
 
 - [TagInputProps](../types/TagInputProps.md)
 - [InputSizeProps](../types/InputSizeProps.md)
 - [InputStateProps](../types/InputStateProps.md)
+- [IAddNewValues](../types/IAddNewValues.md)
 

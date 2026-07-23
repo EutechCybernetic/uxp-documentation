@@ -7,7 +7,7 @@ Props for the UserInfoCard component
 ## Definition
 
 ```tsx
-interface UserInfoCardProps {
+export interface UserInfoCardProps {
     /**
      * User key to fetch user details
      */

@@ -67,4 +67,25 @@ const FilterView: React.MemoExoticComponent<React.FunctionComponent<FilterViewPr
 |onChange|(filters: Filters) => void|Yes|-|-|
 |formFields|[FormSectionProps[]](../types/FormSectionProps.md)|Yes|-|-|
 |renderCustom|[FilterCustomRender](../types/FilterCustomRender.md)|No|-|-|
+|getFilterCount|(filters: Filters) => number|No|-|-|
+|filterMode|'simple' \| 'advanced'|No|-|-|
+|onFilterModeChange|(mode: 'simple' \| 'advanced') => void|No|-|-|
+|advancedConfig|{ baseDataSource: string }|No|-|-|
+|advancedQuestion|string|No|-|-|
+|onAdvancedQuestionChange|(q: string) => void|No|-|-|
+|onAdvancedSubmit|() => void|No|-|-|
+|advancedLoading|boolean|No|-|-|
+|hasActivePipeline|boolean|No|-|-|
+|advancedError|string|No|-|-|
+|activePipeline|any|No|-|-|
+|onEditRefinement|() => void|No|-|-|
+|pipelineRefined|boolean|No|-|-|
+|hasOriginalPipeline|boolean|No|-|-|
+|onRestoreOriginalPipeline|() => void|No|-|-|
+|predefinedQueries|[PredefinedQuery[]](../types/PredefinedQuery.md)|No|-|-|
+|predefinedLoading|boolean|No|-|-|
+|onPickPredefined|(q: PredefinedQuery) => void|No|-|-|
+|selectedPredefinedId|string|No|-|-|
+|predefinedQueryName|string|No|-|-|
+|predefinedUnavailable|{ name?: string } \| null|No|-|-|
 

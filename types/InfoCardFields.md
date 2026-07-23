@@ -1,31 +1,16 @@
 # InfoCardFields
 
 
-Field mappings for ItemCard display
+Field mappings for InfoCard display — maps data property names to display roles.
 
 
 ## Definition
 
 ```tsx
 export interface InfoCardFields {
-    /**
-     * Field name for image URL or icon pattern
-     */
     image?: string;
-
-    /**
-     * Field name for title text
-     */
     title?: string;
-
-    /**
-     * Field name for subtitle text
-     */
     subtitle?: string;
-
-    /**
-     * Field name for name (used for initials if no image)
-     */
     name?: string;
 }
 ```

@@ -81,18 +81,23 @@ const ObjectSearchComponent: React.MemoExoticComponent<React.ForwardRefExoticCom
 |onClickRow|(e: MouseEvent<HTMLDivElement>, item: any) => void|No|-|-|
 |detailsPanel|DefaultDetailsPanelProps \| CustomDetailsPanelProps|No|-|-|
 |idField|string|Yes|-|-|
+|nameField|string|No|-|-|
+|typeField|string|No|-|-|
 |actionButtons|ReactNode|No|-|-|
 |bulkActionButtons|ReactNode|No|-|-|
 |selected|[RowData[]](../types/RowData.md)|No|-|-|
 |onSelect|(selected: RowData[]) => void|No|-|-|
 |renderChildren|(childRows: RowData[], rowProps: TableRowBasicProps) => ReactNode|No|-|-|
+|renderCell|(row: RowData, column: ExtendedOSCColumn) => ReactNode|No|-|-|
 |summaryContent|ReactNode|No|-|-|
 |search|{ /** * Enables the search box. */ enable: boolean; /** * Fields in the data to use for text search (required for static data arrays). */ fields?: string[]; /** * If true, collapses the search box by default. */ collapsed?: boolean; }|No|-|-|
 |collapsedWidth|string \| number|No|-|-|
 |appendToURL|boolean|No|-|-|
+|clearParamsOnSelect|string[]|No|-|-|
 |allowPageSizeChange|boolean|No|-|-|
 |urlParams|[URLParamConfig](../types/URLParamConfig.md)|No|-|-|
 |className|string|No|-|-|
+|onFilterPanelToggle|(isOpen: boolean) => void|No|-|-|
 
 ## Ref Handlers
 
@@ -100,7 +105,7 @@ Available methods through ref:
 
 |Method|Type|Description|
 |-|-|-|
-|export|() => void|Triggers export of the current view's data. |
+|export|() => Promise<void>|Triggers export of the current view's data. Resolves when the export finishes so the caller can reflect an in-progress/loading state. |
 |getDetails|() => ObjectSearchDetailsResponse|Retrieves details of the current search state. |
 |refreshCurrentPage|() => void|Refreshes current page data with loading state shown. |
 |silentRefreshCurrentPage|() => void|Refreshes current page data silently, without showing the loading state. |
@@ -108,4 +113,5 @@ Available methods through ref:
 |getCurrentPageData|() => RowData[]|Returns the current page data (the visible rows). |
 |getFilters|() => Filters|Returns the currently applied filters. |
 |applyFilters|(filters: Filters) => void|Sets filters programmatically. Must be a valid SimpleFilter: { filters: Record<string, any> }. Invalid input is ignored. |
+|isFilterPanelOpen|() => boolean|Returns whether the filter panel is currently open. |
 

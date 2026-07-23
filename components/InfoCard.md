@@ -10,9 +10,9 @@
 
 
 
-A component that displays data in an ItemCard or ProfileImage with optional dropdown details.
-Supports both fetching data via useExecuteRequest or using already-fetched data.
-
+Renders a data item as a horizontal identity card with avatar, title, subtitle, extra fields, badges, and actions.
+Supports both data-fetching (via executeConfig) and pre-fetched data.
+Use `layout="collapsed"` for the compact details-panel sidebar variant (image on right).
 
 
 
@@ -30,70 +30,38 @@ const InfoCard: React.FunctionComponent<InfoCardProps>
 
 ## Examples
 
-#### With executeConfig (InfoCard fetches data)
+#### Users row
 
 ```tsx
+tsx
 <InfoCard
-  data={{
-    executeConfig: {
-      type: 'action',
-      model: 'User',
-      action: 'GetDetails',
-      parameters: { id: '123' }
-    }
-  }}
-  fields={{
-    image: 'avatar',
-    title: 'name',
-    subtitle: 'email'
-  }}
-  details={(item) => ({
-    fields: [
-      { label: 'Phone', value: item.phone },
-      { label: 'Department', value: item.department }
-    ]
-  })}
+  data={user}
+  fields={{ image: 'avatar', name: 'fullName', title: 'fullName', subtitle: 'email' }}
+  badges={<Chip label="Active" variant="success" />}
 />
 ```
 
-#### With direct data (already fetched)
+#### Locations row with extra fields
 
 ```tsx
+tsx
 <InfoCard
-  data={{
-    avatar: 'https://example.com/avatar.jpg',
-    name: 'John Doe',
-    email: 'john@example.com',
-    phone: '123-456-7890',
-    department: 'Engineering'
-  }}
-  fields={{
-    image: 'avatar',
-    title: 'name',
-    subtitle: 'email'
-  }}
-  details={(item) => (
-    <div>
-      <p>Phone: {item.phone}</p>
-      <p>Department: {item.department}</p>
-    </div>
-  )}
-  dropdownPosition="bottom-right"
+  data={location}
+  fields={{ image: 'thumbnail', title: 'name', subtitle: 'type' }}
+  extraFields={[{ value: location.address, style: 'muted' }]}
+  badges={<Chip label={location.status} variant="success" />}
 />
 ```
 
-#### Avatar variant (just profile image)
+#### Collapsed sidebar variant
 
 ```tsx
+tsx
 <InfoCard
-  data={{ avatar: 'https://example.com/avatar.jpg', name: 'John Doe' }}
-  fields={{ image: 'avatar', name: 'name' }}
-  variant="avatar"
-  size="large"
-  shape="circle"
-  details={(item) => (
-    <div>User: {item.name}</div>
-  )}
+  data={location}
+  fields={{ image: 'thumbnail', name: 'name', title: 'name', subtitle: 'type' }}
+  badges={<Chip label="Active" variant="success" />}
+  layout="collapsed"
 />
 ```
 
@@ -103,11 +71,18 @@ const InfoCard: React.FunctionComponent<InfoCardProps>
 |-|-|-|-|-|
 |data|[InfoCardData](../types/InfoCardData.md)|Yes|-|-|
 |fields|[InfoCardFields](../types/InfoCardFields.md)|No|-|-|
+|extraFields|[InfoCardExtraField[]](../types/InfoCardExtraField.md)|No|-|-|
 |details|[InfoCardDetailsContent](../types/InfoCardDetailsContent.md)|No|-|-|
 |variant|'card' \| 'avatar'|No|-|-|
 |size|[Size](../types/Size.md)|No|-|-|
 |shape|[Shape](../types/Shape.md)|No|-|-|
 |dropdownPosition|[DropdownPosition](../types/DropdownPosition.md)|No|-|-|
+|layout|'default' \| 'collapsed'|No|-|-|
+|titleStyle|[InfoCardFieldStyle](../types/InfoCardFieldStyle.md)|No|-|-|
+|onTitleClick|() => void|No|-|-|
+|subtitleStyle|[InfoCardFieldStyle](../types/InfoCardFieldStyle.md)|No|-|-|
+|badges|React.ReactNode|No|-|-|
+|actions|React.ReactNode|No|-|-|
 |className|string|No|-|-|
 |style|React.CSSProperties|No|-|-|
 
@@ -129,6 +104,8 @@ const InfoCard: React.FunctionComponent<InfoCardProps>
 - [ExecuteCollectionConfig](../types/ExecuteCollectionConfig.md)
 - [UseExecuteOptions](../types/UseExecuteOptions.md)
 - [InfoCardFields](../types/InfoCardFields.md)
+- [InfoCardExtraField](../types/InfoCardExtraField.md)
+- [InfoCardFieldStyle](../types/InfoCardFieldStyle.md)
 - [InfoCardDetailsContent](../types/InfoCardDetailsContent.md)
 - [DetailsContent](../types/DetailsContent.md)
 - [RowData](../types/RowData.md)

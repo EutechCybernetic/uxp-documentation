@@ -51,6 +51,10 @@ otherRoutes:
 
 ## Navigation Links
 
+> **→ See [Navigation Configuration](./navigation.md)** for the full reference — link types,
+> the sidebar/header split, access guardrails (`protected`/`lockAccess`/`isPublic`),
+> `replaceChildrenWith`, dynamic menus, syncing, and SDM commands.
+
 ### Basic Link
 
 ```yaml
@@ -75,6 +79,16 @@ navigationLinks:
 | `userGroups` | array | User groups allowed (empty = all) |
 | `appRoles` | array | App roles allowed (empty = all) |
 | `children` | array | Nested navigation links (optional) |
+| `type` | string | `view` \| `dashboard` \| `externalLink` \| `embeddedDashboard` \| `dynamic` (usually inferred) |
+| `id` | string | Stable node id (auto-derived if omitted) |
+| `isPublic` | bool | Reachable without a session (not inherited) |
+| `replaceChildrenWith` | string | App id whose `navigationLinks` are spliced in as children |
+| `protected` | bool | Cannot be deleted from the master list; cascades to children |
+| `lockAccess` | bool | Access system-managed (never public, roles/groups read-only); cascades |
+| `metadata` | object | Free-form; holds `dynamic.execute` config for `type: dynamic` |
+| `configuredProps` | object | Props passed to the rendered component |
+
+> Details, semantics, and examples for these fields: **[Navigation Configuration](./navigation.md)**.
 
 ---
 

@@ -131,10 +131,10 @@ export interface DataEntryFieldProps {
     // ========== Validation ==========
 
     /**
-     * Mark field as required
+     * Mark field as required. Accepts a boolean or a function that receives the current form data and returns a boolean.
      * @default false
      */
-    required?: boolean;
+    required?: boolean | ((data: IFormData) => boolean);
 
     /**
      * Allow empty strings for required string fields (after trim)

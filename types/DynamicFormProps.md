@@ -16,6 +16,7 @@ export interface DynamicFormProps {
     submitButtonIcon?: string,
     cancelButtonLabel?: string,
     cancelButtonIcon?: string,
+    buttonSize?: 'smaller' | 'small' | 'medium' | 'large',
     hideCancelButton?: boolean,
     hideButtons?: boolean, // NEW: Hide internal buttons completely
     isLoading?: boolean,
@@ -51,6 +52,8 @@ import { DynamicFormProps } from 'uxp/components';
 - [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
 - [FormValue](../types/FormValue.md)
 - [IFormData](../types/IFormData.md)
+- [SearchModalConfig](../types/SearchModalConfig.md)
+- [ForwardedObjectSearchProps](../types/ForwardedObjectSearchProps.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
 - [WizardState](../types/WizardState.md)
 

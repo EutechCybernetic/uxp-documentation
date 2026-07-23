@@ -27,6 +27,18 @@ export interface AdditionaDetails {
      * Content to display in the additional details tab, either static or a function of row data.
      */
     content: DetailsContent;
+
+    /**
+     * Whether to show a refresh button in the tab header. Defaults to false.
+     * Injected tabs (registered via registerTabInjection) are refreshable by default.
+     */
+    refreshable?: boolean;
+
+    /**
+     * Event names (fired via eventDispatcher) that automatically refresh this tab's content.
+     * Injected tabs can declare these in their TabInjection registration.
+     */
+    events?: string[];
 }
 ```
 

@@ -33,6 +33,12 @@ interface IIconButtonProps {
     onError?: (e: React.MouseEvent<HTMLButtonElement>) => void
 
     /**
+     * Native (HTML `title`) hover tooltip. Icon buttons have no visible caption,
+     * so set this to describe the action; it is also used as the `aria-label`.
+     */
+    tooltip?: string,
+
+    /**
     * Any extra css classes to apply
     */
     className?: string,
@@ -60,6 +66,12 @@ interface IIconButtonProps {
      * If true, shows the button in a loading state.
      */
     loading?: boolean,
+
+    /**
+     * Rendering mode. Defaults to 'transparent' — no background/border,
+     * variant BG color as the icon color. Set to 'filled' for the classic look.
+     */
+    mode?: ButtonComponentMode,
 }
 ```
 
@@ -78,4 +90,5 @@ import { IIconButtonProps } from 'uxp/components';
 - [ButtonComponentType](../types/ButtonComponentType.md)
 - [ButtonComponentVarient](../types/ButtonComponentVarient.md)
 - [ButtonComponentSize](../types/ButtonComponentSize.md)
+- [ButtonComponentMode](../types/ButtonComponentMode.md)
 

@@ -81,6 +81,27 @@ id |This is the unique id for your widget. It is the _same_ id you used in the `
 title|A title for the widget. This is displayed in the widget gallery when users browse for widgets to add to their dashboard
 description | A slightly expanded description of what your widget does. It appears in widget gallery
 tags | A list of tags associated with this widget. Used for searching for widgets in the gallery
+appRoles | Optional. A list of app roles required to see and render this widget, in the qualified `"App:role"` format (e.g. `"Organization:canopenapp"`). A user needs any one of the listed roles. Empty or absent means visible to everyone
+userGroups | Optional. A list of user group **keys** (not names) allowed to see and render this widget. Checked with OR semantics alongside `appRoles`
+
+### Widget Permissions (appRoles / userGroups)
+
+If either `appRoles` or `userGroups` is set, users who don't match cannot see the widget in the widget gallery, and any already-placed instance renders a "not authorized" message instead of the widget.
+
+**bundle.json is the only place to declare permissions** — do not set them in your `registerWidget()` call. Your project's `uxp.ts` wrapper merges the bundle.json entry into the registration automatically at build time, so the values flow to the framework with no code changes:
+
+```json
+{
+    "id": "helloworld",
+    "title": "Hello World Widget",
+    "appRoles": ["Organization:canopenapp"],
+    "userGroups": []
+}
+```
+
+Because bundle.json is compiled into your javascript bundle, changing permissions requires rebuilding and republishing the bundle.
+
+> **Note:** this is client-side UI gating, not a security boundary. Any data your widget fetches must still be protected by server-side role checks in the APIs/services it calls.
 
 
 

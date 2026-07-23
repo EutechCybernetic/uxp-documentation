@@ -1,7 +1,13 @@
 # useExportData
 
 
-Custom hook for streaming data to a CSV file with progress tracking and cancellation support
+Custom hook for streaming table data to a CSV file with progress tracking
+and cancellation.
+
+The download starts immediately when the export begins and streams as data
+is fetched; the export keeps running while the user navigates within the
+app (a "don't refresh" banner shows meanwhile). A hard page reload cancels
+a running export.
 
 
 
@@ -23,24 +29,17 @@ function useExportData(): ExportResponse
 tsx
 const { exportData, abortExport } = useExportData();
 
-// Start export
 <button onClick={() => exportData({
-  data: async (page, pageSize) => ({
-    items: await fetchData(page, pageSize),
-    totalCount: await fetchTotal()
-  }),
+  data: async (page, pageSize) => ({ items: await fetchData(page, pageSize) }),
   total: async () => await fetchTotal(),
   columns: [
     { id: 'name', label: 'Name' },
-    { id: 'date', label: 'Date', formatter: (value) => format(new Date(value), 'yyyy-MM-dd') }
+    { id: 'status', label: 'Status', formatter: (v) => v == '0' ? 'Active' : 'Inactive' }
   ],
-  pageSize: 100,
-  fileName: 'data_export',
-  showNamePrompt: true,
-  onProgress: (progress) => console.log(`Progress: ${progress.progress}%`)
+  pageSize: 500,
+  fileName: 'data_export'
 })}>Export Data</button>
 
-// Cancel export
 <button onClick={abortExport}>Cancel Export</button>
 ```
 

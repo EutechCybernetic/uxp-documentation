@@ -1,31 +1,18 @@
 # ExecuteMicroserviceConfig
 
-Configuration for executing a microservice call.
+Configuration for microservice execution
 
 
 ## Definition
 
 ```tsx
-export interface ExecuteMicroserviceConfig extends ExecuteConfigBase {
-    /** Execution type discriminator */
-    type: 'microservice';
-    /** Microservice configuration */
-    config: {
-        /** Microservice name */
-        serviceName: string;
-        /** API route path */
-        route: string;
-        /** HTTP method */
-        method: 'get' | 'post' | 'put' | 'patch' | 'delete';
-        /** URL parameters */
-        params?: any;
-        /** Request body data */
-        data?: any;
-        /** Additional configurations */
-        configurations?: any;
-    };
-    /** Caching options */
-    options?: CachingOptions;
+export interface ExecuteMicroserviceConfig {
+    serviceName: string;
+    route: string;
+    method: 'get' | 'post' | 'put' | 'patch' | 'delete';
+    params?: any;
+    data?: any;
+    configurations?: any;
 }
 ```
 
@@ -34,9 +21,4 @@ export interface ExecuteMicroserviceConfig extends ExecuteConfigBase {
 ```tsx
 import { ExecuteMicroserviceConfig } from 'uxp/components';
 ```
-
-## Related Types
-
-- [ExecuteConfigBase](../types/ExecuteConfigBase.md)
-- [CachingOptions](../types/CachingOptions.md)
 

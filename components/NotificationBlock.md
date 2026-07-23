@@ -27,14 +27,23 @@ const NotificationBlock: React.FunctionComponent<INotificationProps>
 <NotificationBlock message="-- End Of Content --" class="uxpcore_notification--end-of-content" />
  <NotificationBlock message="Something went wrong" variant="danger" />
  <NotificationBlock message="Saved successfully" variant="success" />
+ <NotificationBlock variant="info" mode="compact" layout="bordered" title="Access is locked">
+     <div>App Roles: System:canopenapp</div>
+ </NotificationBlock>
+ <NotificationBlock variant="warning" message="Permissions changed" action={<button onClick={reload}>Refresh</button>} />
 ```
 
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|message|string|Yes|-|-|
+|message|string|No|-|-|
+|title|string|No|-|-|
+|children|React.ReactNode|No|-|-|
 |variant|[NotificationVariant](../types/NotificationVariant.md)|No|-|-|
+|mode|[NotificationMode](../types/NotificationMode.md)|No|-|-|
+|layout|[NotificationLayout](../types/NotificationLayout.md)|No|-|-|
+|action|React.ReactNode|No|-|-|
 |class|string|No|-|-|
 |styles|any|No|-|-|
 
@@ -42,4 +51,6 @@ const NotificationBlock: React.FunctionComponent<INotificationProps>
 
 - [INotificationProps](../types/INotificationProps.md)
 - [NotificationVariant](../types/NotificationVariant.md)
+- [NotificationMode](../types/NotificationMode.md)
+- [NotificationLayout](../types/NotificationLayout.md)
 

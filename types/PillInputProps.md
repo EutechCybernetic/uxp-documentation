@@ -28,7 +28,13 @@ export interface PillInputProps extends InputSizeProps, InputStateProps {
     panelTitle?: string;
     /** Index in split value to determine pill type */
     typeIndex?: number,
-    /** Regex to match expressions that become pills */
+    /**
+     * Built-in expression syntax — `'uxp-expression'` for `{$.param}`, `'iviva-expression'`
+     * for `#{param}`. Also supplies a default `placeholder`. An explicit `expressionMatcher`
+     * takes precedence. Omit both to keep the historical `{...}` behaviour.
+     */
+    expressionPreset?: ExpressionPreset;
+    /** Regex to match expressions that become pills. Overrides `expressionPreset`. */
     expressionMatcher?: RegExp;
     /** Custom function to split pill values */
     pillValuesSplitFn?: (value: string) => string[];
@@ -43,6 +49,16 @@ export interface PillInputProps extends InputSizeProps, InputStateProps {
      * Position of the options panel relative to input
      * */
     panelPosition?: 'left' | 'right'
+    /** Show/hide formatter controls on pills (default: true) */
+    showFormatters?: boolean;
+    /** Show raw value below the editor for debugging */
+    inspect?: boolean;
+    /** Allow multiple lines and soft-wrap long text. When false (default), newlines are blocked. */
+    multiline?: boolean;
+    /** Multiline only: minimum visible rows. The editor starts this tall and grows. Default 3. */
+    rows?: number;
+    /** Multiline only: cap the height at this many rows, then scroll. Unbounded if omitted. */
+    maxRows?: number;
 }
 ```
 
@@ -60,4 +76,5 @@ import { PillInputProps } from 'uxp/components';
 - [PillOption](../types/PillOption.md)
 - [PillConfiguration](../types/PillConfiguration.md)
 - [PillTypeConfig](../types/PillTypeConfig.md)
+- [ExpressionPreset](../types/ExpressionPreset.md)
 

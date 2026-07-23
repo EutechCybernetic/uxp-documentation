@@ -57,6 +57,7 @@ const AsyncButton: React.FunctionComponent<AsyncButtonProps>
 |type|[ButtonComponentType](../types/ButtonComponentType.md)|No|-|-|
 |variant|[ButtonComponentVarient](../types/ButtonComponentVarient.md)|No|-|-|
 |iconOnly|boolean|No|-|-|
+|textMode|[ButtonComponentTextMode](../types/ButtonComponentTextMode.md)|No|-|-|
 |icon|string|No|-|-|
 |iconPosition|'left' \| 'right'|No|-|-|
 |useLoadingSpinner|boolean|No|-|-|
@@ -69,4 +70,5 @@ const AsyncButton: React.FunctionComponent<AsyncButtonProps>
 - [PHIconPrefix](../types/PHIconPrefix.md)
 - [ButtonComponentType](../types/ButtonComponentType.md)
 - [ButtonComponentVarient](../types/ButtonComponentVarient.md)
+- [ButtonComponentTextMode](../types/ButtonComponentTextMode.md)
 

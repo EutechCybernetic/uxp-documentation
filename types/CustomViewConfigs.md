@@ -7,7 +7,9 @@ export interface CustomViewConfigs {
     filters?: Filters,
     columns?: string[],
     sort?: Sort,
-    pageSize?: number
+    pageSize?: number,
+    filterMode?: 'simple' | 'advanced',
+    advancedFilter?: AdvancedFilterState,
 }
 ```
 
@@ -23,4 +25,5 @@ import { CustomViewConfigs } from 'uxp/components';
 - [SimpleFilter](../types/SimpleFilter.md)
 - [Sort](../types/Sort.md)
 - [SortOrder](../types/SortOrder.md)
+- [AdvancedFilterState](../types/AdvancedFilterState.md)
 

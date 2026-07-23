@@ -1,4 +1,4 @@
-# TableRow
+# TableRowBase
 
 
 Individual table row component that renders a single row with cells.
@@ -10,13 +10,13 @@ Can display expandable child rows and handle selection state.
 ## Installation
 
 ```tsx
-import { TableRow } from 'uxp/components';
+import { TableRowBase } from 'uxp/components';
 ```
 
 ## Signature
 
 ```tsx
-const TableRow: React.FunctionComponent<TableRowProps>
+const TableRowBase: React.FunctionComponent<TableRowProps>
 ```
 
 ## Examples

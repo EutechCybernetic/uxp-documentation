@@ -7,7 +7,7 @@ Configuration for a single column in the export
 
 ```tsx
 export interface ExportColumn {
-    /** Unique identifier for the column */
+    /** Unique identifier for the column (row field name) */
     id: string;
     /** Display label for the column in the CSV header */
     label: string;

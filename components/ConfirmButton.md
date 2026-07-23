@@ -42,6 +42,7 @@ const ConfirmButton: React.FunctionComponent<IConfirmButtonProps>
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |title|string|Yes|-|-|
+|textMode|[ButtonComponentTextMode](../types/ButtonComponentTextMode.md)|No|-|-|
 |icon|string|No|-|-|
 |className|string|No|-|-|
 |onConfirm|() => Promise<any>|Yes|-|-|
@@ -54,4 +55,5 @@ const ConfirmButton: React.FunctionComponent<IConfirmButtonProps>
 ## Related Types
 
 - [IConfirmButtonProps](../types/IConfirmButtonProps.md)
+- [ButtonComponentTextMode](../types/ButtonComponentTextMode.md)
 

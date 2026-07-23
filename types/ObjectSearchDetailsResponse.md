@@ -64,4 +64,5 @@ import { ObjectSearchDetailsResponse } from 'uxp/components';
 - [SimpleFilter](../types/SimpleFilter.md)
 - [Sort](../types/Sort.md)
 - [SortOrder](../types/SortOrder.md)
+- [AdvancedFilterState](../types/AdvancedFilterState.md)
 

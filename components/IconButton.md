@@ -54,12 +54,14 @@ const IconButton: React.FunctionComponent<IIconButtonProps>
 |disabled|boolean|No|-|-|
 |onClick|(e?: React.MouseEvent<HTMLButtonElement>) => void \| Promise<void>|No|-|-|
 |onError|(e: React.MouseEvent<HTMLButtonElement>) => void|No|-|-|
+|tooltip|string|No|-|-|
 |className|string|No|-|-|
 |borderless|boolean|No|-|-|
 |buttonType|[ButtonComponentType](../types/ButtonComponentType.md)|No|-|-|
 |variant|[ButtonComponentVarient](../types/ButtonComponentVarient.md)|No|-|-|
 |size|[ButtonComponentSize](../types/ButtonComponentSize.md)|No|-|-|
 |loading|boolean|No|-|-|
+|mode|[ButtonComponentMode](../types/ButtonComponentMode.md)|No|-|-|
 
 ## Related Types
 
@@ -71,4 +73,5 @@ const IconButton: React.FunctionComponent<IIconButtonProps>
 - [ButtonComponentType](../types/ButtonComponentType.md)
 - [ButtonComponentVarient](../types/ButtonComponentVarient.md)
 - [ButtonComponentSize](../types/ButtonComponentSize.md)
+- [ButtonComponentMode](../types/ButtonComponentMode.md)
 

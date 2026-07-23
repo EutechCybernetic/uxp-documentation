@@ -49,6 +49,7 @@ tsx
 |-|-|-|-|-|
 |title|string|No|-|-|
 |columns|1 \| 2 \| 3|No|1|-|
+|maxColumnWidth|string|No|-|maxColumnWidth="100%"|
 |separator|boolean|No|false|-|
 |show|(data: IFormData) => boolean|No|-|-|
 |collapsible|boolean|No|false|-|

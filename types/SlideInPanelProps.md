@@ -68,6 +68,14 @@ export interface SlideInPanelProps {
      * Only applies in `full` mode.
      */
     containerRef?: RefObject<HTMLElement>;
+
+    /**
+     * Override the panel's border radius. Accepts any valid CSS
+     * border-radius value (e.g. `'0'`, `'0.5rem'`). When omitted, the
+     * SCSS default applies (rounded top-start corner in `full` mode,
+     * fully rounded in `modal` mode).
+     */
+    borderRadius?: string;
 }
 ```
 

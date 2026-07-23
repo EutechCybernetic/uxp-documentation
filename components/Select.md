@@ -83,7 +83,7 @@ const Select: React.MemoExoticComponent<React.FunctionComponent<ISelectProps>>
 |isValid|boolean|No|-|-|
 |showEndOfContent|boolean|No|-|-|
 |renderOption|(item: any, key: number, isHighlighted?: boolean, isSelected?: boolean) => JSX.Element|No|-|*|
-|addNewValues|{ enable: boolean, title: string, loadingTitle: string, onAddNewValue?: (value: string) => Promise<any> }|No|-|-|
+|addNewValues|[IAddNewValues](../types/IAddNewValues.md)|No|-|-|
 |dropdownClassname|string|No|-|-|
 |onClear|() => void|No|-|-|
 |renderCustomDropdownContent|(closeDropdown: () => void) => React.ReactNode|No|-|-|
@@ -94,6 +94,7 @@ const Select: React.MemoExoticComponent<React.FunctionComponent<ISelectProps>>
 |dropdownMinHeight|number|No|-|-|
 |pageSize|number|No|-|-|
 |position|[DropdownPosition](../types/DropdownPosition.md)|No|-|-|
+|searchModal|[SearchModalConfig](../types/SearchModalConfig.md)|No|-|-|
 
 ## Related Types
 
@@ -102,5 +103,8 @@ const Select: React.MemoExoticComponent<React.FunctionComponent<ISelectProps>>
 - [InputStateProps](../types/InputStateProps.md)
 - [IOption](../types/IOption.md)
 - [IDataFunction](../types/IDataFunction.md)
+- [IAddNewValues](../types/IAddNewValues.md)
 - [DropdownPosition](../types/DropdownPosition.md)
+- [SearchModalConfig](../types/SearchModalConfig.md)
+- [ForwardedObjectSearchProps](../types/ForwardedObjectSearchProps.md)
 

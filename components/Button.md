@@ -67,6 +67,7 @@ const Button: React.FunctionComponent<ButtonProps>
 |variant|[ButtonComponentVarient](../types/ButtonComponentVarient.md)|No|-|-|
 |iconOnly|boolean|No|-|-|
 |size|[ButtonComponentSize](../types/ButtonComponentSize.md)|No|-|-|
+|textMode|[ButtonComponentTextMode](../types/ButtonComponentTextMode.md)|No|-|-|
 |icon|string|No|-|-|
 |iconPosition|'left' \| 'right'|No|-|-|
 |useLoadingSpinner|boolean|No|-|-|
@@ -80,4 +81,5 @@ const Button: React.FunctionComponent<ButtonProps>
 - [ButtonComponentType](../types/ButtonComponentType.md)
 - [ButtonComponentVarient](../types/ButtonComponentVarient.md)
 - [ButtonComponentSize](../types/ButtonComponentSize.md)
+- [ButtonComponentTextMode](../types/ButtonComponentTextMode.md)
 

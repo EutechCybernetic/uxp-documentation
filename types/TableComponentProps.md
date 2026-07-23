@@ -42,6 +42,9 @@ export interface TableComponentProps {
         onDelete?: (item: RowData) => Promise<void>;
     };
 
+    /** Enable expandable rows — a chevron appears on any row whose data has a `children` array. */
+    expandColumn?: { enable: boolean; label?: string; width?: number };
+
     /** Minimum width for any table cell */
     minCellWidth?: number;
 
@@ -95,6 +98,8 @@ import { TableComponentProps } from 'uxp/components';
 - [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
 - [FormValue](../types/FormValue.md)
 - [IFormData](../types/IFormData.md)
+- [SearchModalConfig](../types/SearchModalConfig.md)
+- [ForwardedObjectSearchProps](../types/ForwardedObjectSearchProps.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
 - [FilterCustomRender](../types/FilterCustomRender.md)
 

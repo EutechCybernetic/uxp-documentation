@@ -30,7 +30,7 @@ const FileInput: React.ForwardRefExoticComponent<React.RefAttributes<IFileInputI
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|value|File \| string|Yes|-|-|
+|value|File \| string|No|-|-|
 |onChange|(file: File, isValid: boolean) => void|Yes|-|-|
 |allowedTypes|string[]|No|-|-|
 |preview|{ showName?: boolean // default false showPreview?: boolean // default true }|No|-|-|
@@ -38,6 +38,19 @@ const FileInput: React.ForwardRefExoticComponent<React.RefAttributes<IFileInputI
 |dropAreaIcon|IconProp|No|-|-|
 |dropAreaLabel|string|No|-|-|
 |compact|boolean|No|-|-|
+|hidden|boolean|No|-|-|
+|allowUrl|boolean|No|-|-|
+|urlPlaceholder|string|No|-|-|
+|onUrlChange|(url: string) => void|No|-|-|
+|previewObjectFit|React.CSSProperties['objectFit']|No|-|-|
+
+## Ref Handlers
+
+Available methods through ref:
+
+|Method|Type|Description|
+|-|-|-|
+|open|() => void|Opens the file picker programmatically (headless/hidden mode trigger) |
 
 ## Related Types
 

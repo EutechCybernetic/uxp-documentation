@@ -113,6 +113,7 @@ tsx
 |renderHeader|(columns: { [id: string]: ExtendedColumn }, handleResize: (id: string, width: number) => void) => React.ReactNode|No|-|-|
 |renderRow|(tableRowProps: TableRowProps) => React.ReactNode|No|-|-|
 |renderChildRows|(childRows: RowData[], rowProps: TableRowBasicProps) => React.ReactNode|No|-|-|
+|renderCell|(row: RowData, column: ExtendedColumn) => React.ReactNode|No|-|-|
 |onClickRow|(e: React.MouseEvent<HTMLDivElement>, item: RowData) => void|No|-|-|
 |isRowSelected|(item: RowData) => boolean|No|-|-|
 |onSelectRow|(item: RowData) => void|No|-|-|

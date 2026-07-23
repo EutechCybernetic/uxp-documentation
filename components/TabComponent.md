@@ -52,6 +52,7 @@ const TabComponent: React.FunctionComponent<TabComponentProps>
 |position|'top' \| 'bottom' \| 'left' \| 'right'|No|-|-|
 |styles|[TabComponentStyles](../types/TabComponentStyles.md)|No|-|-|
 |className|string|No|-|-|
+|rightContent|React.ReactNode|No|-|-|
 
 ## Related Types
 

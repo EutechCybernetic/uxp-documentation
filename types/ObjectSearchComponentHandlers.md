@@ -9,9 +9,10 @@ Handlers exposed by the ObjectSearchComponent for external control.
 ```tsx
 export interface ObjectSearchComponentHandlers {
     /**
-     * Triggers export of the current view's data.
+     * Triggers export of the current view's data. Resolves when the export
+     * finishes so the caller can reflect an in-progress/loading state.
      */
-    export: () => void;
+    export: () => Promise<void>;
 
     /**
      * Retrieves details of the current search state.
@@ -35,6 +36,9 @@ export interface ObjectSearchComponentHandlers {
 
     /** Sets filters programmatically. Must be a valid SimpleFilter: { filters: Record<string, any> }. Invalid input is ignored. */
     applyFilters: (filters: Filters) => void;
+
+    /** Returns whether the filter panel is currently open. */
+    isFilterPanelOpen: () => boolean;
 }
 ```
 
@@ -53,5 +57,6 @@ import { ObjectSearchComponentHandlers } from 'uxp/components';
 - [SimpleFilter](../types/SimpleFilter.md)
 - [Sort](../types/Sort.md)
 - [SortOrder](../types/SortOrder.md)
+- [AdvancedFilterState](../types/AdvancedFilterState.md)
 - [RowData](../types/RowData.md)
 

@@ -16,6 +16,10 @@ export interface TabInjection {
     components: TabInjectionComponent[];
     appRoles?: string[];
     userGroups?: string[];
+    /** Whether the tab content can be manually refreshed. Defaults to true when not set. */
+    refreshable?: boolean;
+    /** Event names (from eventDispatcher) that automatically refresh this tab's content. */
+    events?: string[];
 }
 ```
 

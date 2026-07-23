@@ -10,6 +10,11 @@ interface IConfirmButtonProps {
     title: string,
 
     /**
+     * Casing applied to the label. Defaults to 'sentence'.
+     */
+    textMode?: ButtonComponentTextMode,
+
+    /**
      * The url of an icon to show on the button
      */
     icon?: string,
@@ -48,4 +53,8 @@ interface IConfirmButtonProps {
 ```tsx
 import { IConfirmButtonProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [ButtonComponentTextMode](../types/ButtonComponentTextMode.md)
 

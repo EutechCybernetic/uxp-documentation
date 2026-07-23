@@ -46,7 +46,9 @@ publishMessage(props.uxpContext, "visitor-arrival", JSON.stringify({ visitorId: 
 - [QueryParams](../types/QueryParams.md)
 - [ExecutionResult](../types/ExecutionResult.md)
 - [ExecuteMicroserviceConfig](../types/ExecuteMicroserviceConfig.md)
-- [ExecuteConfigBase](../types/ExecuteConfigBase.md)
 - [LucyQueryResult](../types/LucyQueryResult.md)
+- [PublishNotificationParams](../types/PublishNotificationParams.md)
+- [NotificationSeverity](../types/NotificationSeverity.md)
+- [ResolveNotificationsFilters](../types/ResolveNotificationsFilters.md)
 - [IPublishMessage](../types/IPublishMessage.md)
 

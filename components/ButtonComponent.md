@@ -71,6 +71,7 @@ const ButtonComponent: React.FunctionComponent<ButtonComponentProps>
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |title|string|No|-|-|
+|tooltip|string|No|-|-|
 |leftIcon|[ButtonIcon](../types/ButtonIcon.md)|No|-|-|
 |rightIcon|[ButtonIcon](../types/ButtonIcon.md)|No|-|-|
 |className|string|No|-|-|
@@ -87,6 +88,8 @@ const ButtonComponent: React.FunctionComponent<ButtonComponentProps>
 |variant|[ButtonComponentVarient](../types/ButtonComponentVarient.md)|No|-|-|
 |iconOnly|boolean|No|-|-|
 |size|[ButtonComponentSize](../types/ButtonComponentSize.md)|No|-|-|
+|mode|[ButtonComponentMode](../types/ButtonComponentMode.md)|No|-|-|
+|textMode|[ButtonComponentTextMode](../types/ButtonComponentTextMode.md)|No|-|-|
 
 ## Related Types
 
@@ -97,4 +100,6 @@ const ButtonComponent: React.FunctionComponent<ButtonComponentProps>
 - [ButtonComponentType](../types/ButtonComponentType.md)
 - [ButtonComponentVarient](../types/ButtonComponentVarient.md)
 - [ButtonComponentSize](../types/ButtonComponentSize.md)
+- [ButtonComponentMode](../types/ButtonComponentMode.md)
+- [ButtonComponentTextMode](../types/ButtonComponentTextMode.md)
 

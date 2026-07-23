@@ -1,8 +1,5 @@
 # ExportColumnFormatter
 
-Formatter function for export column values
-
-
 ## Definition
 
 ```tsx

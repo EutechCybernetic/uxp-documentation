@@ -1,7 +1,7 @@
 # undefined
 
 
-Type for details content - can be static, function returning ReactNode, or function returning ObjectInfoCardProps
+Type for details content — static, function returning ReactNode, or function returning ObjectInfoCardProps.
 
 
 ## Definition

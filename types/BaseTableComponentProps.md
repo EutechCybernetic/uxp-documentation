@@ -26,6 +26,8 @@ export interface BaseTableComponentProps {
     renderRow?: (tableRowProps: TableRowProps) => React.ReactNode;
     /** Custom renderer for child/nested rows */
     renderChildRows?: (childRows: RowData[], rowProps: TableRowBasicProps) => React.ReactNode
+    /** Custom cell renderer — replaces the default TableCell output for every cell */
+    renderCell?: (row: RowData, column: ExtendedColumn) => React.ReactNode;
     /** Callback when a row is clicked */
     onClickRow?: (e: React.MouseEvent<HTMLDivElement>, item: RowData) => void;
     /** Function to determine if a row is selected */

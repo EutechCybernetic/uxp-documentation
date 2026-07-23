@@ -15,8 +15,9 @@ interface ChipProps {
 
     /**
      * The label content to display in the chip. Can be a string or a React node.
+     * Omit or pass an empty string to render icon-only (circle) mode.
      */
-    label: string | ReactNode;
+    label?: string | ReactNode;
 
     /**
      * Position of the icon relative to the label. Defaults to 'left'.

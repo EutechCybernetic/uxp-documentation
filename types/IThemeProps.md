@@ -324,6 +324,14 @@ export interface IThemeProps {
     loaderSecondaryColor: string,
     loaderBackgroundColor: string,
 
+    // Typography weights
+    fontWeightLight: string,
+    fontWeightRegular: string,
+    fontWeightMedium: string,
+    fontWeightSemibold: string,
+    fontWeightBold: string,
+    fontWeightBlack: string,
+
 }
 ```
 

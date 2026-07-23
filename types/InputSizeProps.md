@@ -33,6 +33,22 @@ export interface InputSizeProps {
      * Useful for inline forms or flex layouts.
      */
     fullWidth?: boolean;
+
+    /**
+     * Explicit height. Can be number (converted to rem) or CSS string (e.g. '300px', '50%').
+     * Takes precedence over minHeight/maxHeight if provided.
+     */
+    height?: number | string;
+
+    /**
+     * Custom minimum height. Can be number (converted to rem) or CSS string.
+     */
+    minHeight?: number | string;
+
+    /**
+     * Custom maximum height. Can be number (converted to rem) or CSS string.
+     */
+    maxHeight?: number | string;
 }
 ```
 

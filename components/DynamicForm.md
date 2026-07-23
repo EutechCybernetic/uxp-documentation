@@ -39,6 +39,7 @@ const DynamicForm: React.ForwardRefExoticComponent<React.RefAttributes<DynamicFo
 |submitButtonIcon|string|No|-|-|
 |cancelButtonLabel|string|No|-|-|
 |cancelButtonIcon|string|No|-|-|
+|buttonSize|'smaller' \| 'small' \| 'medium' \| 'large'|No|-|-|
 |hideCancelButton|boolean|No|-|-|
 |hideButtons|boolean|No|-|-|
 |isLoading|boolean|No|-|-|
@@ -74,6 +75,8 @@ Available methods through ref:
 - [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
 - [FormValue](../types/FormValue.md)
 - [IFormData](../types/IFormData.md)
+- [SearchModalConfig](../types/SearchModalConfig.md)
+- [ForwardedObjectSearchProps](../types/ForwardedObjectSearchProps.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
 - [WizardState](../types/WizardState.md)
 - [DynamicFormHandlers](../types/DynamicFormHandlers.md)

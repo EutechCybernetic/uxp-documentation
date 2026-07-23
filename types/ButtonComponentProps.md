@@ -14,6 +14,13 @@ export interface ButtonComponentProps {
     title?: string;
 
     /**
+     * Native (HTML `title`) hover tooltip. When omitted it falls back to
+     * `title`, so every button has a tooltip by default. For icon-only buttons
+     * this value is also used as the `aria-label` for screen readers.
+     */
+    tooltip?: string;
+
+    /**
      * Left side icon - supports FontAwesome, Phosphor, image URL, text/emoji, or React element
      */
     leftIcon?: ButtonIcon;
@@ -92,6 +99,17 @@ export interface ButtonComponentProps {
      * Size of the button. Defaults to 'medium'.
      */
     size?: ButtonComponentSize;
+
+    /**
+     * Rendering mode for icon-only buttons. Defaults to 'transparent'.
+     * Ignored when the button is not icon-only.
+     */
+    mode?: ButtonComponentMode;
+
+    /**
+     * Casing applied to the label. Defaults to 'sentence'.
+     */
+    textMode?: ButtonComponentTextMode;
 }
 ```
 
@@ -109,4 +127,6 @@ import { ButtonComponentProps } from 'uxp/components';
 - [ButtonComponentType](../types/ButtonComponentType.md)
 - [ButtonComponentVarient](../types/ButtonComponentVarient.md)
 - [ButtonComponentSize](../types/ButtonComponentSize.md)
+- [ButtonComponentMode](../types/ButtonComponentMode.md)
+- [ButtonComponentTextMode](../types/ButtonComponentTextMode.md)
 

@@ -4,14 +4,7 @@
 
 ```tsx
 interface ExecuteRequestConfig {
-    /**
-    * Execution configuration for data fetching (action, service, microservice, etc.)
-     */
     executeConfig: ExecuteConfig;
-
-    /**
-     * Optional execution options (autoExecute, debounce, polling, dependencies, etc.)
-     */
     executeOptions?: UseExecuteOptions;
 }
 ```

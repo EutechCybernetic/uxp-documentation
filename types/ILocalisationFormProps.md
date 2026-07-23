@@ -27,6 +27,11 @@ interface ILocalisationFormProps {
      * Format: { [languageCode]: message }
      */
     customMessages?: Record<string, string>,
+    /**
+     * Render an editable message-code field. Use when creating a new message
+     * (pass an empty code); the typed code is passed to onSave.
+     */
+    allowCodeEdit?: boolean,
 }
 ```
 

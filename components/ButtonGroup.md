@@ -87,5 +87,7 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps>
 - [ButtonComponentType](../types/ButtonComponentType.md)
 - [ButtonComponentVarient](../types/ButtonComponentVarient.md)
 - [ButtonComponentSize](../types/ButtonComponentSize.md)
+- [ButtonComponentMode](../types/ButtonComponentMode.md)
+- [ButtonComponentTextMode](../types/ButtonComponentTextMode.md)
 - [DropdownPosition](../types/DropdownPosition.md)
 

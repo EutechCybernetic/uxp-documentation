@@ -79,6 +79,19 @@ interface ObjectSearchComponentProps {
     idField: string;
 
     /**
+     * Optional field in row data whose value is appended to the URL as the `objectName` param
+     * (or the custom name from `urlParams.name`) when a row is selected, and removed on close.
+     * Useful when the details panel needs both the ID and a human-readable name for data fetching.
+     */
+    nameField?: string;
+
+    /**
+     * Optional field in row data whose value is appended to the URL as the `objectType` param
+     * (or the custom name from `urlParams.type`) when a row is selected, and removed on close.
+     */
+    typeField?: string;
+
+    /**
      * Custom action buttons or components for the header area.
      */
     actionButtons?: ReactNode;
@@ -102,6 +115,12 @@ interface ObjectSearchComponentProps {
      * Custom renderer for nested child rows.
      */
     renderChildren?: (childRows: RowData[], rowProps: TableRowBasicProps) => ReactNode;
+
+    /**
+     * Optional custom cell renderer. When provided, replaces the default TableCell output for every
+     * data cell. Use this to add inline editing or custom display logic per cell.
+     */
+    renderCell?: (row: RowData, column: ExtendedOSCColumn) => ReactNode;
 
     /**
      * Content to render in the summary area between the header and table.
@@ -139,6 +158,12 @@ interface ObjectSearchComponentProps {
     appendToURL?: boolean;
 
     /**
+     * URL params to remove when a new row is selected. Useful for clearing
+     * sub-panel state (e.g. method, editMethod) when the parent row changes.
+     */
+    clearParamsOnSelect?: string[];
+
+    /**
      * Allow users to change page size via dropdown (default: true)
      */
     allowPageSizeChange?: boolean;
@@ -150,6 +175,12 @@ interface ObjectSearchComponentProps {
 
     /** custom classname */
     className?: string
+
+    /**
+     * Fired whenever the filter panel opens or closes. Use this to pause auto-refresh
+     * while the user is editing filters.
+     */
+    onFilterPanelToggle?: (isOpen: boolean) => void;
 }
 ```
 
@@ -167,6 +198,8 @@ import { ObjectSearchComponentProps } from 'uxp/components';
 - [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
 - [FormValue](../types/FormValue.md)
 - [IFormData](../types/IFormData.md)
+- [SearchModalConfig](../types/SearchModalConfig.md)
+- [ForwardedObjectSearchProps](../types/ForwardedObjectSearchProps.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
 - [FilterCustomRender](../types/FilterCustomRender.md)
 - [Filters](../types/Filters.md)
@@ -176,6 +209,7 @@ import { ObjectSearchComponentProps } from 'uxp/components';
 - [CustomViewConfigs](../types/CustomViewConfigs.md)
 - [Sort](../types/Sort.md)
 - [SortOrder](../types/SortOrder.md)
+- [AdvancedFilterState](../types/AdvancedFilterState.md)
 - [RowData](../types/RowData.md)
 - [OSCColumn](../types/OSCColumn.md)
 - [Column](../types/Column.md)
@@ -202,5 +236,6 @@ import { ObjectSearchComponentProps } from 'uxp/components';
 - [TableRowBasicProps](../types/TableRowBasicProps.md)
 - [ExtendedColumn](../types/ExtendedColumn.md)
 - [EditableRowConfig](../types/EditableRowConfig.md)
+- [ExtendedOSCColumn](../types/ExtendedOSCColumn.md)
 - [URLParamConfig](../types/URLParamConfig.md)
 

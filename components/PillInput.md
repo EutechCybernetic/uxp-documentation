@@ -43,42 +43,6 @@ tsx
 />
 ```
 
-#### With custom pill configuration
-
-```tsx
-tsx
-<PillInput
-  value="{field.date|number|2}"
-  onChange={setValue}
-  contextDataSections={sections}
-  pillConfiguration={{
-    field: {
-      valueIndex: 1,
-      icon: "fas calendar",
-      backgroundColor: "#007bff",
-      textColor: "#fff"
-    }
-  }}
-/>
-```
-
-#### With ref for programmatic control
-
-```tsx
-tsx
-const pillRef = useRef<PillInputRef>(null);
-
-<PillInput
-  ref={pillRef}
-  value={text}
-  onChange={setText}
-  contextDataSections={sections}
-/>
-
-// Insert value programmatically
-pillRef.current?.insertAtCursor("{new.value}");
-```
-
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
@@ -93,10 +57,16 @@ pillRef.current?.insertAtCursor("{new.value}");
 |onBlur|() => void|No|-|-|
 |panelTitle|string|No|-|-|
 |typeIndex|number|No|-|-|
+|expressionPreset|[ExpressionPreset](../types/ExpressionPreset.md)|No|-|-|
 |expressionMatcher|RegExp|No|-|-|
 |pillValuesSplitFn|(value: string) => string[]|No|-|-|
 |onClear|() => void|No|-|-|
 |panelPosition|'left' \| 'right'|No|-|-|
+|showFormatters|boolean|No|-|-|
+|inspect|boolean|No|-|-|
+|multiline|boolean|No|-|-|
+|rows|number|No|-|-|
+|maxRows|number|No|-|-|
 
 ## Ref Handlers
 
@@ -116,5 +86,6 @@ Available methods through ref:
 - [PillOption](../types/PillOption.md)
 - [PillConfiguration](../types/PillConfiguration.md)
 - [PillTypeConfig](../types/PillTypeConfig.md)
+- [ExpressionPreset](../types/ExpressionPreset.md)
 - [PillInputHandlers](../types/PillInputHandlers.md)
 

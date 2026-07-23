@@ -22,6 +22,14 @@ export interface DataEntrySectionProps {
     columns?: 1 | 2 | 3;
 
     /**
+     * Maximum width of each column in the section grid.
+     * Passed to the underlying DynamicForm FormRow.
+     * Use '100%' to make fields fill the full available width.
+     * @example maxColumnWidth="100%"
+     */
+    maxColumnWidth?: string;
+
+    /**
      * Show a separator line below the section
      * @default false
      */

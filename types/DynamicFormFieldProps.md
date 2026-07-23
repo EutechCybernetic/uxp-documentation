@@ -37,6 +37,13 @@ export interface DynamicFormFieldProps {
     labelField?: string
     valueField?: string
 
+    // select adornments (v4 dynamiclist parity) — single-select only
+    /* pinboard parked — see internals/pinboard-picker.md
+    pinboard?: { objectType: string, objectTypeLabel?: string }
+    */
+    /** Enable the search-list modal button (ObjectSearchComponent config). */
+    searchModal?: SearchModalConfig
+
     // for numbers
     allowZero?: boolean
     allowNegative?: boolean,
@@ -45,7 +52,7 @@ export interface DynamicFormFieldProps {
     formatter?: (value: any) => any
 
     validate?: {
-        required?: boolean // default is false
+        required?: boolean | ((data: IFormData) => boolean) // default is false
         allowEmptyString?: boolean // trim value. only for string values
         minLength?: number
         maxLength?: number
@@ -80,5 +87,7 @@ import { DynamicFormFieldProps } from 'uxp/components';
 
 - [FormValue](../types/FormValue.md)
 - [IFormData](../types/IFormData.md)
+- [SearchModalConfig](../types/SearchModalConfig.md)
+- [ForwardedObjectSearchProps](../types/ForwardedObjectSearchProps.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
 

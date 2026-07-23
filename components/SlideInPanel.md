@@ -86,6 +86,7 @@ const panelRef = useRef<SlideInPanelHandlers>(null);
 |wrapperClassName|string|No|-|-|
 |unmountOnExit|boolean|No|-|-|
 |containerRef|RefObject<HTMLElement>|No|-|-|
+|borderRadius|string|No|-|-|
 
 ## Ref Handlers
 

@@ -46,6 +46,7 @@ const LocalizationFormModal: React.FunctionComponent<ILocalisationFormModalProps
 |trigger|React.ReactElement|No|-|-|
 |hideTrigger|boolean|No|-|-|
 |customMessages|Record<string, string>|No|-|-|
+|allowCodeEdit|boolean|No|-|-|
 
 ## Related Types
 

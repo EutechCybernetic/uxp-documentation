@@ -66,6 +66,7 @@ tsx
 |noItemsMessage|string \| React.ReactNode|No|-|-|
 |editColumn|{ enable: boolean; label?: string; renderColumn?: (item: RowData) => React.ReactNode; onEdit?: (item: RowData) => void; }|No|-|-|
 |deleteColumn|{ enable: boolean; label?: string; renderColumn?: (item: RowData) => React.ReactNode; onDelete?: (item: RowData) => Promise<void>; }|No|-|-|
+|expandColumn|{ enable: boolean; label?: string; width?: number }|No|-|-|
 |minCellWidth|number|No|-|-|
 |onClickRow|(e: React.MouseEvent<HTMLDivElement>, item: RowData) => void|No|-|-|
 |onClickColumn|(e: React.MouseEvent<HTMLDivElement>, item: RowData, column: TableColumn) => void|No|-|-|
@@ -91,6 +92,8 @@ tsx
 - [DynamicFormFieldProps](../types/DynamicFormFieldProps.md)
 - [FormValue](../types/FormValue.md)
 - [IFormData](../types/IFormData.md)
+- [SearchModalConfig](../types/SearchModalConfig.md)
+- [ForwardedObjectSearchProps](../types/ForwardedObjectSearchProps.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
 - [FilterCustomRender](../types/FilterCustomRender.md)
 

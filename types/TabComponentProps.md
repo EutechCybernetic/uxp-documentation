@@ -31,13 +31,19 @@ export interface TabComponentProps {
     position?: 'top' | 'bottom' | 'left' | 'right'
 
     /**
-     * tab component styles 
+     * tab component styles
      */
     styles?: TabComponentStyles,
     /**
      * additional classname
      */
-    className?: string
+    className?: string,
+
+    /**
+     * Optional content rendered on the far (inline-end) side of the tab header row,
+     * e.g. an action button or a dropdown aligned opposite the tab labels.
+     */
+    rightContent?: React.ReactNode
 }
 ```
 

@@ -60,6 +60,9 @@ navigationLinks:
 - `appRoles` - App role restrictions (empty = all users)
 - `children` - Nested navigation items (optional)
 
+> For all options — link types, permissions, guardrails (`protected`/`lockAccess`), the
+> sidebar/header split, and syncing — see [Navigation Configuration](./navigation.md).
+
 ---
 
 ## 3. Verify Registration Matches

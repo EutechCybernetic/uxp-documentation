@@ -1,26 +1,20 @@
-# loadAllScriptsByModuleId
+# saveLocalizations
 
-
-Loads all scripts associated with a module ID
+Save localization messages (handles both create and update).
+This matches the onSave prop signature in LocalisationForm.
 
 
 
 ## Installation
 
 ```tsx
-import { loadAllScriptsByModuleId } from 'uxp/components';
+import { saveLocalizations } from 'uxp/components';
 ```
 
 ## Signature
 
 ```tsx
-function loadAllScriptsByModuleId(context: IContextProvider, moduleId: string): Promise<void>
-```
-
-## Examples
-
-```tsx
-await loadAllScriptsByModuleId(context, 'dashboard-module');
+function saveLocalizations(uxpContext: IContextProvider, code: string, messages: LocalizationMessage[]): Promise<{ success: boolean, error?: string }>
 ```
 
 ## Related Types
@@ -47,6 +41,8 @@ await loadAllScriptsByModuleId(context, 'dashboard-module');
 - [QueryParams](../types/QueryParams.md)
 - [ExecutionResult](../types/ExecutionResult.md)
 - [ExecuteMicroserviceConfig](../types/ExecuteMicroserviceConfig.md)
-- [ExecuteConfigBase](../types/ExecuteConfigBase.md)
 - [LucyQueryResult](../types/LucyQueryResult.md)
+- [PublishNotificationParams](../types/PublishNotificationParams.md)
+- [NotificationSeverity](../types/NotificationSeverity.md)
+- [ResolveNotificationsFilters](../types/ResolveNotificationsFilters.md)
 

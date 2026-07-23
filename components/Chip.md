@@ -52,7 +52,7 @@ const Chip: React.FunctionComponent<ChipProps>
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |icon|string|No|-|-|
-|label|string \| ReactNode|Yes|-|-|
+|label|string \| ReactNode|No|-|-|
 |iconPosition|'left' \| 'right'|No|-|-|
 |backgroundColor|string|No|-|-|
 |textColor|string|No|-|-|

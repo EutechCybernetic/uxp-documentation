@@ -85,6 +85,11 @@ interface ButtonProps {
      */
     size?: ButtonComponentSize,
 
+    /**
+     * Casing applied to the label. Defaults to 'sentence'.
+     */
+    textMode?: ButtonComponentTextMode,
+
 
     /**
      * BELOW PROPS ARE DEPRECATED
@@ -128,4 +133,5 @@ import { ButtonProps } from 'uxp/components';
 - [ButtonComponentType](../types/ButtonComponentType.md)
 - [ButtonComponentVarient](../types/ButtonComponentVarient.md)
 - [ButtonComponentSize](../types/ButtonComponentSize.md)
+- [ButtonComponentTextMode](../types/ButtonComponentTextMode.md)
 

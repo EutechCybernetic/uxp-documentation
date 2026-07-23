@@ -22,6 +22,12 @@ export interface DataEntrySubSectionProps {
     columns?: 1 | 2 | 3;
 
     /**
+     * Maximum width of each column in the section grid.
+     * Use '100%' to make fields fill the full available width.
+     */
+    maxColumnWidth?: string;
+
+    /**
      * Show a separator line below the sub-section
      * @default false
      */

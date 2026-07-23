@@ -36,6 +36,7 @@ export interface IPartialContextProvider {
     userSiteKey?: string,
     userSiteName?: string,
     userSiteImageKey?: string,
+    userSiteImageUrl?: string,
     userDataFormat?: string,
     userTimeFormat?: string,
     userCurrencyFormat?: string,
@@ -49,6 +50,8 @@ export interface IPartialContextProvider {
     scriptFiles: Record<string, string[]>,
     navigationLinks: NavigationLink[],
     routes: Routes,
+    /** Path patterns of routes the backend filtered out for this user — used to show "not authorised" instead of 404 */
+    restrictedRoutes?: string[],
     configuredPages: ConfiguredPage[]
 
     isLoading?: boolean,

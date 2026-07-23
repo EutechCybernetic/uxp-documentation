@@ -85,15 +85,11 @@ interface ISelectProps extends InputSizeProps, InputStateProps {
     renderOption?: (item: any, key: number, isHighlighted?: boolean, isSelected?: boolean) => JSX.Element,
 
     /**
-      * Option to add a new value if not available. 
-      * You can enable this option and handle how you want to save the new item
+      * Option to add a new value if not available.
+      * You can enable this option and handle how you want to save the new item.
+      * Supports two scenarios — see {@link IAddNewValues}.
       */
-    addNewValues?: {
-        enable: boolean,
-        title: string,
-        loadingTitle: string,
-        onAddNewValue?: (value: string) => Promise<any>
-    }
+    addNewValues?: IAddNewValues
     /**
      * Option to add a classname for the dropdown
      */
@@ -151,7 +147,21 @@ interface ISelectProps extends InputSizeProps, InputStateProps {
      * Optional page size when using a function to load data
      */
     pageSize?: number,
-    position?: DropdownPosition
+    position?: DropdownPosition,
+
+    /* pinboard parked — see internals/pinboard-picker.md
+    pinboard?: {
+        objectType: string,
+        objectTypeLabel?: string
+    },
+    */
+
+    /**
+     * Enable the search-list modal button. When set, a search button is shown in the suffix
+     * that opens a large filterable list picker (ObjectSearchComponent). Config is the
+     * ObjectSearchComponent props (data, columns, total, idField, pageSize, search, filters, ...).
+     */
+    searchModal?: SearchModalConfig
 }
 ```
 
@@ -167,5 +177,8 @@ import { ISelectProps } from 'uxp/components';
 - [InputStateProps](../types/InputStateProps.md)
 - [IOption](../types/IOption.md)
 - [IDataFunction](../types/IDataFunction.md)
+- [IAddNewValues](../types/IAddNewValues.md)
 - [DropdownPosition](../types/DropdownPosition.md)
+- [SearchModalConfig](../types/SearchModalConfig.md)
+- [ForwardedObjectSearchProps](../types/ForwardedObjectSearchProps.md)
 

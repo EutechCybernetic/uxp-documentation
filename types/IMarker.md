@@ -7,7 +7,7 @@ Represents an individual marker on the map
 ## Definition
 
 ```tsx
-export interface IMarker extends LeafletMarkerOptions {
+export interface IMarker extends Omit<LeafletMarkerOptions, 'icon'> {
     /**
      * latitude
      */
@@ -20,6 +20,26 @@ export interface IMarker extends LeafletMarkerOptions {
      * any data to return when click on the marker
      */
     data?: any,
+    /**
+     * colour for the built-in teardrop pin (any CSS colour). Ignored when
+     * `customHTMLIcon` is set. Defaults to the theme accent colour.
+     */
+    color?: string,
+    /**
+     * icon to render inside the built-in pin instead of the dot — a uxp icon
+     * string, e.g. 'fas bell', 'fal coffee', 'phb house'. Ignored when
+     * `customHTMLIcon` is set.
+     */
+    icon?: string,
+    /**
+     * colour of the `icon` inside the pin (any CSS colour). Defaults to white.
+     */
+    iconColor?: string,
+    /**
+     * pin height in pixels (width scales to keep the 2:3 shape). Ignored when
+     * `customHTMLIcon` is set. Defaults to 36.
+     */
+    size?: number,
     /**
      * custom HTML marker
      */
