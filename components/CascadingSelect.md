@@ -35,7 +35,8 @@ const CascadingSelect: React.FunctionComponent<CascadingSelectProps>
 
 ## Examples
 
-#### // Static primary, service-backed paginated secondary. The loader receives the
+```tsx
+// Static primary, service-backed paginated secondary. The loader receives the
 // selected primary directly, plus args.query (the debounced search text).
 const [app, setApp] = useState('');
 const [role, setRole] = useState('');
@@ -54,8 +55,10 @@ const [role, setRole] = useState('');
     selectedSecondary={role}
     onChange={(p, s) => { setApp(p); setRole(s); }}
 />
+```
 
-#### // Static secondary as a function of the primary — no service needed.
+```tsx
+// Static secondary as a function of the primary — no service needed.
 <CascadingSelect
     primary={{ options: COUNTRIES, placeholder: 'Country' }}
     secondary={{ options: (country) => CITIES[country] || [], placeholder: 'City' }}
@@ -63,8 +66,10 @@ const [role, setRole] = useState('');
     selectedSecondary={city}
     onChange={(p, s) => { setCountry(p); setCity(s); }}
 />
+```
 
-#### // Hydrated saved values: pass selectedLabel per level so the triggers can show
+```tsx
+// Hydrated saved values: pass selectedLabel per level so the triggers can show
 // labels for values that were saved earlier — loaded pages may not contain them.
 // (Values the user picks in-session display without this.)
 <CascadingSelect
@@ -80,6 +85,7 @@ const [role, setRole] = useState('');
     selectedSecondary={savedRole}
     onChange={(p, s) => { setSavedApp(p); setSavedRole(s); }}
 />
+```
 
 ## Properties
 
