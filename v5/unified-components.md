@@ -309,7 +309,7 @@ iviva reads `bundle.json` at module upload time — **not the compiled JS**. Fie
 | `id` | ✅ source of truth | ✅ used for lookup |
 | `name` | ✅ | — |
 | `description` | ✅ | — |
-| `modes` | ✅ | ✅ optional — code takes precedence |
+| `modes` | ✅ | ✅ optional — bundle.json wins if both are set |
 | `isTemplate` | ✅ | — |
 | `tags` | ✅ | — |
 | `vendor` | ✅ | — |
@@ -320,7 +320,9 @@ iviva reads `bundle.json` at module upload time — **not the compiled JS**. Fie
 | `configs.configPanel` | — | ✅ React component |
 | `defaultProps` | — | ✅ |
 
-`registerComponent` merges the two at runtime: bundle.json supplies the base, code spreads on top. The fully-qualified id (`bundleId/componentId`) is always written last.
+`registerComponent` merges the two at runtime: code supplies the base, **bundle.json metadata wins** — the same precedence `registerWidget` and `registerUI` have always had. Since bundle.json is what the server indexes at upload time, this keeps the widget drawer and the running app from ever disagreeing. The fully-qualified id (`bundleId/componentId`) is always written last.
+
+A component missing from `components[]` still registers and works — it just logs an error, because one forgotten entry should not stop every registration after it in `index.tsx`.
 
 ---
 
@@ -524,7 +526,7 @@ These fields cannot be serialised to JSON — they contain React references or f
 |---|---|---|---|
 | `id` | `string` | ✅ | Must match the `id` in bundle.json |
 | `component` | `React.FC` | ✅ | The React component to render |
-| `modes` | `Array<'widget' \| 'ui' \| 'background-surface'>` | | Optional override — code takes precedence over bundle.json |
+| `modes` | `Array<'widget' \| 'ui' \| 'background-surface'>` | | Optional — bundle.json wins if the same field is set there |
 | `configs.layout` | `ILayout` | | Default grid size (`w`, `h`, `minW`, `minH`, etc.) |
 | `configs.props` | `IWidgetPropConfig[]` | | Fields shown in the settings panel (may contain functions) |
 | `configs.configPanel` | `React.FC` | | Custom settings panel component |
@@ -558,5 +560,6 @@ A component can support more than one mode — register once, usable in multiple
 
 ## Next Steps
 
-- [Step 7: Core Components Reference](./core-components.md) — available UXP components to use inside your widgets and views
-- [Step 14: Build & Deploy](./build-deploy.md) — how to build your bundle and register it with Lucy
+- [Building Pages & Dashboards](./building-pages.md) — where a registered component becomes a page
+- [Core Components Reference](./core-components.md) — available UXP components to use inside your widgets and views
+- [Build & Deploy](./build-deploy.md) — how to build your bundle and register it with Lucy

@@ -64,6 +64,9 @@ const TrendData: ITrendSeries[] = [
 |data|[ITrendSeries[]](../types/ITrendSeries.md)|Yes|-|-|
 |onShowTooltip|(data: any) => JSX.Element|No|-|* onShowTooltip={(data)=><div>{`Temperature: ${data.temp}`}</div>}|
 |onClick|(data: any) => JSX.Element|No|-|-|
+|showLegend|boolean|No|-|-|
+|formatXAxis|(value: string) => string|No|-|-|
+|showGrid|boolean|No|-|-|
 |className|string|No|-|-|
 
 ## Related Types

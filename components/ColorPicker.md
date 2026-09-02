@@ -41,6 +41,12 @@ const ColorPicker: React.FunctionComponent<IColorPickerProps>
 |dropdownMinWidth|number \| string|No|-|-|
 |hideLabels|boolean|No|-|-|
 |onClear|() => void|No|-|-|
+|mode|'simple' \| 'complex'|No|-|-|
+|enableDefaultPresets|boolean|No|-|-|
+|presets|string[]|No|-|-|
+|enableThemeVariables|boolean|No|-|-|
+|defaultTab|[ColorPickerTab](../types/ColorPickerTab.md)|No|-|-|
+|inputRows|number|No|-|-|
 
 ## Related Types
 
@@ -48,4 +54,5 @@ const ColorPicker: React.FunctionComponent<IColorPickerProps>
 - [InputSizeProps](../types/InputSizeProps.md)
 - [InputStateProps](../types/InputStateProps.md)
 - [IColorTypes](../types/IColorTypes.md)
+- [ColorPickerTab](../types/ColorPickerTab.md)
 

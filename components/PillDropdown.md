@@ -28,6 +28,8 @@ const PillDropdown: React.FunctionComponent<PillDropdownProps>
 |pillValuesSplitFn|(value: string) => string[]|No|-|-|
 |expressionMatcher|RegExp|No|-|-|
 |className|string|No|-|-|
+|autoHeight|boolean|No|-|-|
+|showSectionHeaders|boolean|No|-|-|
 
 ## Related Types
 

@@ -61,6 +61,13 @@ export interface DataEntryFieldProps {
      */
     show?: (data: IFormData) => boolean;
 
+    /**
+     * Explicit list of field names this field depends on (re-renders when they
+     * change). Use when auto-detection can't see the dependency — e.g. a custom
+     * render function that passes form data through a helper, or minified code.
+     */
+    dependsOn?: string[];
+
     // ========== Select Field Options ==========
 
     /**

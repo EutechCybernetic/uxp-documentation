@@ -1,4 +1,4 @@
-# Step 7: Core UXP Components Reference
+# Core UXP Components Reference
 
 Reference guide for core components, hooks, and types used in UXP v5 applications.
 
@@ -48,6 +48,8 @@ For complete type definitions, see the [Types Documentation](../types.md).
 | [TimeRangePicker](../components/TimeRangePicker.md) | Time range selection component. |
 | [ColorPicker](../components/ColorPicker.md) | Color selection component with palette support. |
 | [FileInput](../components/FileInput.md) | File upload component with drag-and-drop support. |
+| [MediaPicker](./media-picker.md) | Media field for images, icons, documents, video and audio — media library, image gallery, font icons, upload and URL. |
+| [ImagePicker](./media-picker.md) | Image URL input with a browse button onto the image gallery. A MediaPicker wrapper. |
 | [IconPicker](../components/IconPicker.md) | Icon selection component supporting FontAwesome and Phosphor icons. |
 | [PillInput](../components/PillInput.md) | Tag/pill input for multiple value entry with formatters. |
 | [InfoCardGroupInput](../components/InfoCardGroupInput.md) | Select/input using InfoCard format for better UX with complex object selection. |
@@ -179,7 +181,7 @@ For complete type definitions, see the [Types Documentation](../types.md).
 
 ## Next Steps
 
-- **[Step 8: Data Fetching](./data-fetching.md)** - Learn how to fetch and manage data in your views
+- **[Data Fetching](./data-fetching.md)** - Learn how to fetch and manage data in your views
 - **[Components Documentation](../components.md)** - Browse all 120+ components with detailed props and examples
 - **[Hooks Documentation](../hooks.md)** - Complete reference for all UXP hooks
 - **[Types Documentation](../types.md)** - TypeScript type definitions and interfaces
@@ -190,4 +192,4 @@ For complete type definitions, see the [Types Documentation](../types.md).
 
 - All component names link to auto-generated documentation with complete prop specifications, TypeScript signatures, and usage examples
 - The auto-generated docs are updated with each build via `npm run build:docs`
-- For architectural context and integration patterns, refer to [Step 5: Architecture](./architecture.md)
+- For architectural context and integration patterns, refer to [Architecture](./architecture.md)

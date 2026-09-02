@@ -51,7 +51,7 @@ const AsyncButton: React.FunctionComponent<AsyncButtonProps>
 |active|boolean|No|-|-|
 |disabled|boolean|No|-|-|
 |loadingTitle|string|No|-|-|
-|onError|(e: any) => void|No|-|-|
+|onError|(e?: React.MouseEvent<HTMLButtonElement>, error?: unknown) => void|No|-|-|
 |styles|React.CSSProperties|No|-|-|
 |iconStyles|React.CSSProperties|No|-|-|
 |type|[ButtonComponentType](../types/ButtonComponentType.md)|No|-|-|

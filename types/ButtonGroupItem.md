@@ -24,6 +24,12 @@ interface ButtonGroupItem extends Omit<ButtonComponentProps, 'variant' | 'active
     dropdownPosition?: DropdownPosition;
 
     /**
+     * Extra css class for the dropdown popup content (the popup renders in a
+     * portal, so callers can't reach it by nesting selectors).
+     */
+    dropdownContentClassName?: string;
+
+    /**
      * If true, shows an anchor connecting the dropdown to the button.
      */
     showAnchor?: boolean;

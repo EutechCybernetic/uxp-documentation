@@ -38,6 +38,10 @@ interface ITextAreaProps extends InputSizeProps, InputStateProps {
      */
     tabIndex?: number
     /**
+     * placeholder text shown while the field is empty
+     */
+    placeholder?: string,
+    /**
      * number of rows
      */
     rows?: number,

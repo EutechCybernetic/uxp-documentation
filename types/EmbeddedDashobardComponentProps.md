@@ -74,6 +74,13 @@ export interface EmbeddedDashobardComponentProps {
      * Used to show global default placeholders in the behavior settings panel.
      */
     globalDashboardSettings?: UXPGlobalDashboardSettings | null;
+
+    /**
+     * Called when a widget of this dashboard changes its filters (see `useDashboardFilters`).
+     * The dashboard owns the filter state; this only lets the host observe it, e.g. to keep a
+     * details-panel header in sync or to seed another dashboard with the same values.
+     */
+    onFiltersChange?: (filters: DashboardFilters) => void;
 }
 ```
 
@@ -104,4 +111,5 @@ import { EmbeddedDashobardComponentProps } from 'uxp/components';
 - [BackgroundConfig](../types/BackgroundConfig.md)
 - [GridSettings](../types/GridSettings.md)
 - [UXPGlobalDashboardSettings](../types/UXPGlobalDashboardSettings.md)
+- [DashboardFilters](../types/DashboardFilters.md)
 

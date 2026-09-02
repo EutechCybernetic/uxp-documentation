@@ -14,6 +14,8 @@ export interface ObjectTab {
     userGroups: string;
     status?: 'Active' | 'Disabled';
     components: ObjectTabComponent[];
+    /** When denied: `true` shows the not-authorised error; `false`/absent hides (tab default). */
+    showUnauthorizedError?: boolean;
 }
 ```
 

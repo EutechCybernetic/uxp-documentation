@@ -186,7 +186,48 @@ In overlay mode, `autoPassedProps` is also merged with payloads from `dt-view-ch
 
 ---
 
-## Step 8: Background Surfaces
+## Step 8: Dashboard Filters
+
+A filter widget needs to drive the other widgets on its dashboard — and only those. With a page dashboard and a details panel open over it, a single shared filter would have the two fighting each other.
+
+`useDashboardFilters()` reads and writes the filter state of whichever dashboard the widget is rendered in. Each `EmbeddedDashboard` owns its own.
+
+```typescript
+// In a widget on the dashboard
+import { useDashboardFilters } from "uxp/components";
+
+const { filters, setFilters, resetFilters } = useDashboardFilters();
+
+<DateRangePicker
+    startDate={filters.startDate}
+    endDate={filters.endDate}
+    onChange={(startDate, endDate, preset) =>
+        setFilters(f => ({ ...f, startDate, endDate, preset }))}
+/>
+```
+
+Whatever you put in `filters` is merged into every widget's props on that dashboard — after `autoPassedProps`, so a filter overrides the context the host passed down. No event bus, no wiring between widgets.
+
+```typescript
+// Every other widget on this dashboard now receives: { startDate, endDate, preset, ... }
+```
+
+The host can observe the filters without owning them:
+
+```typescript
+<EmbeddedDashboard
+    ids={["analytics"]}
+    onFiltersChange={filters => setHeaderRange(filters)}
+/>
+```
+
+Use it to keep something outside the dashboard in step — a details-panel header, say — or to seed another dashboard with the same values. The dashboard remains the owner; this is a notification, not a handover.
+
+> **Embedded dashboards only.** `EmbeddedDashboard` is currently the only provider of this context. In a standard `/dashboard/<id>` dashboard the hook returns an inert value — reading gives `{}`, writing does nothing, and no error is raised. Support there is planned. Outside a dashboard entirely (a plain page component) the same inert value applies, so a widget can be reused anywhere without knowing where it is mounted.
+
+---
+
+## Step 9: Background Surfaces
 
 Background surfaces let you render a configurable component **behind** the widget grid. Enable it with `enableBackgroundConfig` and provide the `objectType` for compatibility filtering.
 
@@ -300,11 +341,13 @@ window.registerBackgroundSurface({
 | `defaultConfiguration` | `ResponsiveWidgetLayoutConfiguration` | — | Fallback layout when no DB record exists |
 | `allowToConfigure` | `boolean` | `false` | Show edit mode / floating action toolbar |
 | `enableUserGroupLayouts` | `boolean` | `false` | Enable per-user-group layouts |
-| `enableResponsiveLayouts` | `boolean` | `false` | Enable responsive breakpoint selector |
+| `enableResponsiveLayouts` | `boolean` | `true` | Enable responsive breakpoint selector |
 | `overlayMode` | `boolean` | `false` | Transparent overlay; empty areas are click-through |
 | `objectType` | `string` | — | Object type context for background compatibility filtering |
 | `enableBackgroundConfig` | `boolean` | `false` | Show background config button in edit mode |
 | `autoPassedProps` | `Record<string, any>` | — | Props merged into every widget at render time |
+| `onFiltersChange` | `(filters: DashboardFilters) => void` | — | Called when a widget changes this dashboard's filters (see [Step 8](#step-8-dashboard-filters)) |
+| `globalDashboardSettings` | `UXPGlobalDashboardSettings \| null` | — | Global breakpoints and defaults, normally supplied by the framework |
 
 ---
 
@@ -326,4 +369,6 @@ window.registerBackgroundSurface({
 
 - [Core Components Reference](./core-components.md) — widget components available for your dashboards
 - [Data Fetching](./data-fetching.md) — how widgets call backend services
+- [Dashboard Page Walkthrough](./dashboard-page-walkthrough.md) — a complete page built on this component: drill-downs, filters, shipped layouts
+- [Building Pages & Dashboards](./building-pages.md) — how this fits against coded pages and standard dashboards
 - [Events](./events.md) — real-time event bus used by overlay mode

@@ -28,9 +28,9 @@ interface IIconButtonProps {
     onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>,
 
     /**
-     * a callback function to call on error
+     * a callback function to call on error — receives the click event and the thrown error
      */
-    onError?: (e: React.MouseEvent<HTMLButtonElement>) => void
+    onError?: (e?: React.MouseEvent<HTMLButtonElement>, error?: unknown) => void
 
     /**
      * Native (HTML `title`) hover tooltip. Icon buttons have no visible caption,

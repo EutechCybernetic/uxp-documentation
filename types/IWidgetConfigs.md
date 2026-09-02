@@ -1,5 +1,9 @@
 # IWidgetConfigs
 
+
+Backwards-compat alias for {@link ComponentConfigs} (v4 widget configs).
+
+
 ## Definition
 
 ```tsx

@@ -57,6 +57,9 @@ tsx
 |label|string|Yes|-|-|
 |loading|boolean|No|-|-|
 |small|boolean|No|-|-|
+|badge|React.ReactNode|No|-|-|
+|className|string|No|-|-|
+|note|string|No|-|-|
 
 ## Related Types
 

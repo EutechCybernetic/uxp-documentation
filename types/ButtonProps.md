@@ -31,9 +31,9 @@ interface ButtonProps {
     onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>,
 
     /**
-     * a callback function to call on error
+     * a callback function to call on error — receives the click event and the thrown error
      */
-    onError?: (e: React.MouseEvent<HTMLButtonElement>) => void
+    onError?: (e?: React.MouseEvent<HTMLButtonElement>, error?: unknown) => void
 
     /**
      * Set this to `true` to show the button in its 'loading...' state.

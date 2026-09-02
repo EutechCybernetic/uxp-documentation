@@ -1,4 +1,4 @@
-# Step 2: Migration Setup
+# Migration Setup
 
 Setup your app for migrating from XML-based views to v5 React-based views.
 
@@ -140,12 +140,12 @@ In the following steps, we'll:
 ```
 /apps/YourApp/5.0/
 │
-├── Configuration.yml          # App routes and navigation (Step 4)
+├── Configuration.yml          # App routes and navigation (First Navigation)
 │
 ├── Resources/
 │   └── views/
 │       ├── src/
-│       │   ├── views/         # Your view components (Step 3)
+│       │   ├── views/         # Your view components (First View)
 │       │   │   ├── portfolio/
 │       │   │   │   └── PortfolioView.tsx
 │       │   │   └── details/
@@ -155,7 +155,7 @@ In the following steps, we'll:
 │       │   ├── forms/         # Form components
 │       │   ├── services.ts    # API service configs
 │       │   ├── types.ts       # TypeScript types
-│       │   └── index.tsx      # Registration (Step 3)
+│       │   └── index.tsx      # Registration (First View)
 │       │
 │       ├── dist/              # Build output
 │       │   └── main.js        # Compiled bundle
@@ -173,4 +173,4 @@ In the following steps, we'll:
 
 Your app is now ready for v5 development. Continue to:
 
-- [Step 3: Create Your First View](./first-view.md) - Create and register a React view component
+- [Create Your First View](./first-view.md) - Create and register a React view component

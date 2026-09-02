@@ -22,6 +22,8 @@ interface IconPickerProps extends InputSizeProps, InputStateProps {
     className?: string;
     /**
      * Default view mode for the modal
+     * @deprecated No longer read — the icons preview always shows every
+     * variant. Kept so existing callers still compile.
      */
     defaultViewMode?: 'compact' | 'expanded';
     /**
@@ -43,6 +45,24 @@ interface IconPickerProps extends InputSizeProps, InputStateProps {
      * Clicking it calls this function — the parent is responsible for clearing the value.
      */
     onClear?: () => void;
+
+    /**
+     * Turn individual sources on/off. All of icons, library, upload and URL are
+     * on by default — an icon field accepts an image just as well as a glyph.
+     */
+    sources?: Partial<Record<MediaPickerSource, boolean>>;
+
+    /**
+     * FileInput-style MIME/extension restrictions for uploads.
+     * Defaults to images only.
+     */
+    allowedTypes?: string[];
+
+    /**
+     * Source the dialog opens on.
+     * @default 'icons'
+     */
+    defaultSource?: MediaPickerSource;
 }
 ```
 
@@ -56,4 +76,5 @@ import { IconPickerProps } from 'uxp/components';
 
 - [InputSizeProps](../types/InputSizeProps.md)
 - [InputStateProps](../types/InputStateProps.md)
+- [MediaPickerSource](../types/MediaPickerSource.md)
 

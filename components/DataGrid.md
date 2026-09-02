@@ -99,6 +99,7 @@ let GridData = [
 |data|Array<any>|Yes|-|-|
 |renderItem|(item: any, key: number) => JSX.Element|Yes|-|*|
 |columns|number|Yes|-|-|
+|borders|'cells' \| 'dividers' \| 'none'|No|-|-|
 |className|string|No|-|-|
 
 ## Related Types

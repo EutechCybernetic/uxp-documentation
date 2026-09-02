@@ -40,6 +40,11 @@ export interface ComponentDefinition {
     // Do not set manually in register calls; bundle.json is the single authoring place.
     appRoles?: string[];    // qualified "App:role" strings — empty/absent = visible to everyone
     userGroups?: string[];  // user group keys
+    /**
+     * When the user lacks the roles above: `false` hides the component; `true`/absent shows
+     * the not-authorised error (the default for components). Authored in bundle.json.
+     */
+    showUnauthorizedError?: boolean;
 }
 ```
 

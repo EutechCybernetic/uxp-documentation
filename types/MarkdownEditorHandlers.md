@@ -10,12 +10,12 @@ Methods exposed by the MarkdownEditor component via ref.
 export interface MarkdownEditorHandlers {
     /** Programmatically focus the editor */
     focus: () => void;
-    /** Switch to a specific tab */
-    setTab: (tab: 'write' | 'preview') => void;
-    /** Toggle between write and preview tabs */
+    /** Switch to a specific tab (see {@link MarkdownEditorTab} for the per-mode mapping) */
+    setTab: (tab: MarkdownEditorTab) => void;
+    /** Toggle between the two tabs of the current mode */
     toggleTab: () => void;
-    /** Returns the currently active tab */
-    getTab: () => 'write' | 'preview';
+    /** Returns the currently active tab ('write'/'preview' in markdown mode, 'editor'/'markdown' in rich mode) */
+    getTab: () => MarkdownEditorTab;
 }
 ```
 
@@ -24,4 +24,8 @@ export interface MarkdownEditorHandlers {
 ```tsx
 import { MarkdownEditorHandlers } from 'uxp/components';
 ```
+
+## Related Types
+
+- [MarkdownEditorTab](../types/MarkdownEditorTab.md)
 

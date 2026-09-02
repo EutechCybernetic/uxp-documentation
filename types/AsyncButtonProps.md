@@ -47,9 +47,9 @@ interface AsyncButtonProps {
     loadingTitle?: string,
 
     /**
-     * a callback function to call on error
+     * a callback function to call on error — receives the click event and the thrown error
      */
-    onError?: (e: any) => void,
+    onError?: (e?: React.MouseEvent<HTMLButtonElement>, error?: unknown) => void,
 
     /**
      * any custom inline styles to the button 

@@ -23,14 +23,33 @@ export type ObjectDetailsPanelBaseProps = {
     otherDetails?: DetailsContent;
 
     /**
+     * Access rule for the whole details page. Denied users see an empty panel
+     * (with close button), or the not-authorised error when `showUnauthorizedError`
+     * is set.
+     */
+    access?: AccessControl;
+
+    /**
+     * Access rule for the "other details" section.
+     */
+    otherDetailsAccess?: AccessControl;
+
+    /**
+     * Access rule for the old-API `generalDetails` section. (New-API general
+     * details is a tab — gate it via `DetailsPanelTab.access` instead.)
+     */
+    generalDetailsAccess?: AccessControl;
+
+    /**
      * Additional details tabs to display, each with its own content.
      */
     additionlDetails?: AdditionaDetails[];
 
     /**
-     * Object type identifier (e.g. "location", "asset"). When provided, tabs contributed
-     * by other apps via registerTabInjection() are automatically appended to
-     * additionlDetails. The host app does not need to know which tabs are injected.
+     * Object type identifier (e.g. "location", "asset"). When provided, tabs other apps
+     * declare for this object type in their bundle.json `objectTabs` (delivered
+     * deterministically at bootstrap) are automatically appended to `additionlDetails`.
+     * The host app does not need to know which tabs are injected.
      */
     objectType?: string;
 

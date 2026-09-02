@@ -16,6 +16,9 @@ interface IConfigurationViewProps {
     /** Configuration sections with sidebar links and content */
     sections: IConfigurationViewSection[];
 
+    /** Action buttons rendered on the right of the outer header (`multiple` mode) */
+    actions?: React.ReactNode;
+
     /** Selected section id (controlled mode) */
     selected?: string;
 

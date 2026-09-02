@@ -42,8 +42,10 @@ export interface ButtonComponentProps {
 
     /**
      * Callback invoked on error during the onClick execution.
+     * Receives the click event and the thrown error. Both are optional so existing
+     * one-argument handlers keep their exact meaning.
      */
-    onError?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    onError?: (e?: React.MouseEvent<HTMLButtonElement>, error?: unknown) => void;
 
     /**
      * If true, shows the button in a loading state.

@@ -20,6 +20,17 @@ export interface PillDropdownProps {
     expressionMatcher?: RegExp;
     /** Additional CSS classes */
     className?: string;
+    /**
+     * When true, the panel grows to fit its content — its internal `max-height`
+     * and scroll are removed and its own outer padding is zeroed, so the consumer's
+     * container owns both scrolling and spacing. Default `false` (self-contained
+     * scrolling panel, unchanged behaviour).
+     */
+    autoHeight?: boolean;
+    /**
+     * When `false`, the per-section header labels are not rendered. Default `true`.
+     */
+    showSectionHeaders?: boolean;
 }
 ```
 

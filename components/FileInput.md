@@ -32,6 +32,8 @@ const FileInput: React.ForwardRefExoticComponent<React.RefAttributes<IFileInputI
 |-|-|-|-|-|
 |value|File \| string|No|-|-|
 |onChange|(file: File, isValid: boolean) => void|Yes|-|-|
+|multiple|boolean|No|false|-|
+|onFilesChange|(files: File[], allValid: boolean) => void|No|-|-|
 |allowedTypes|string[]|No|-|-|
 |preview|{ showName?: boolean // default false showPreview?: boolean // default true }|No|-|-|
 |className|string|No|-|-|
@@ -42,6 +44,9 @@ const FileInput: React.ForwardRefExoticComponent<React.RefAttributes<IFileInputI
 |allowUrl|boolean|No|-|-|
 |urlPlaceholder|string|No|-|-|
 |onUrlChange|(url: string) => void|No|-|-|
+|suffix|React.ReactNode|No|-|-|
+|hidePrefixIcon|boolean|No|-|-|
+|onFieldClick|() => void|No|-|-|
 |previewObjectFit|React.CSSProperties['objectFit']|No|-|-|
 
 ## Ref Handlers

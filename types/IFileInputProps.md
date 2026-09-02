@@ -20,6 +20,19 @@ interface IFileInputProps extends InputSizeProps, InputStateProps {
     onChange: (file: File, isValid: boolean) => void
 
     /**
+     * Let the user pick several files at once.
+     * @default false
+     */
+    multiple?: boolean
+
+    /**
+     * Multi-select callback — every picked/dropped file, and whether all of
+     * them passed `allowedTypes`. Only used when `multiple` is set; without it
+     * a multi-pick falls back to `onChange` with the first file.
+     */
+    onFilesChange?: (files: File[], allValid: boolean) => void
+
+    /**
      * Array of allowed MIME types (e.g., ['image/*', 'application/pdf']) and/or
      * file extensions (e.g., ['.rpt', '.csv']) for formats without a standard
      * MIME type. Also used to filter the OS file picker (accept attribute).
@@ -79,6 +92,23 @@ interface IFileInputProps extends InputSizeProps, InputStateProps {
      * Fired as the user types into the URL input (only used when `allowUrl` is set).
      */
     onUrlChange?: (url: string) => void
+
+    /**
+     * Node rendered in a separator suffix slot at the end of the field
+     * (compact mode only) — e.g. a browse trigger.
+     */
+    suffix?: React.ReactNode
+
+    /**
+     * Omit the compact-mode prefix icon.
+     */
+    hidePrefixIcon?: boolean
+
+    /**
+     * Called when the field is clicked instead of opening the OS file picker.
+     * Drag-and-drop still applies.
+     */
+    onFieldClick?: () => void
 
     /**
      * How the image/video preview fits its box. Maps to CSS `object-fit`.

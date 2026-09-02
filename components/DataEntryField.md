@@ -48,6 +48,7 @@ tsx
 |icon|string|No|-|-|
 |children|(data: IFormData, onChange: (value: any) => void) => React.ReactNode|No|-|-|
 |show|(data: IFormData) => boolean|No|-|-|
+|dependsOn|string[]|No|-|-|
 |options|Array<{ label: string \| number; value: string \| number }> \| Array<any>|No|-|-|
 |getOptions|(data: IFormData) => (Array<{ label: string \| number; value: string \| number }> \| Array<any>)|No|-|-|
 |getPaginatedOptions|( data: IFormData, max: number, lastPageToken: string, args?: any ) => Promise<{ items: Array<any>; pageToken: string; total?: number }>|No|-|-|

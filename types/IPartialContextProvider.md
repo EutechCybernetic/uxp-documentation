@@ -80,6 +80,9 @@ export interface IPartialContextProvider {
     // object tab injections
     objectTabs?: Record<string, ObjectTab[]>
     setObjectTabs?: (tabs: Record<string, ObjectTab[]>) => void
+    /** App-declared injected tabs from bundle.json, keyed by objectType — deterministic
+     *  defaults delivered at bootstrap (admin objectTabs above override by contributionId). */
+    declaredObjectTabs?: Record<string, ObjectTab[]>
 }
 ```
 

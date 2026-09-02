@@ -24,6 +24,21 @@ interface ITrendChartProps {
     onClick?: (data: any) => JSX.Element
 
     /**
+     * Show the legend. Defaults to `true`; turn off for single-series charts.
+     */
+    showLegend?: boolean
+
+    /**
+     * Format the X-axis tick text (the series `time` value).
+     */
+    formatXAxis?: (value: string) => string
+
+    /**
+     * Draw faint horizontal gridlines. Defaults to `false`.
+     */
+    showGrid?: boolean
+
+    /**
      * Additional CSS classes for custom styling
      */
     className?: string

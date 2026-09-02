@@ -47,12 +47,15 @@ const { exportData, abortExport } = useExportData();
 
 - [ExportResponse](../types/ExportResponse.md)
 - [ExportDataConfig](../types/ExportDataConfig.md)
+- [ExportRowSource](../types/ExportRowSource.md)
 - [RowData](../types/RowData.md)
 - [Filters](../types/Filters.md)
 - [SimpleFilter](../types/SimpleFilter.md)
 - [Sort](../types/Sort.md)
 - [SortOrder](../types/SortOrder.md)
+- [ExportTotalSource](../types/ExportTotalSource.md)
 - [ExportColumn](../types/ExportColumn.md)
 - [ExportColumnFormatter](../types/ExportColumnFormatter.md)
 - [ExportProgress](../types/ExportProgress.md)
+- [ExportSheet](../types/ExportSheet.md)
 

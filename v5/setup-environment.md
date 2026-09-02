@@ -1,4 +1,4 @@
-# Step 1: Setup Development Environment
+# Setup Development Environment
 
 Setup your development environment for building v5 apps.
 
@@ -78,4 +78,4 @@ If you see the Location v5 app, framework setup is complete.
 
 Your development environment is ready. Continue to:
 
-- [Step 2: Migration Setup](./migration-setup.md) - Setup your app for migration
+- [Migration Setup](./migration-setup.md) - Setup your app for migration

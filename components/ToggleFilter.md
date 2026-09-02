@@ -35,6 +35,7 @@ const ToggleFilter: React.FunctionComponent<IToggleFilterProps>
 |value|string|Yes|-|-|
 |onChange|(newValue: string) => void|Yes|-|-|
 |className|string|No|-|-|
+|size|'small' \| 'medium' \| 'large'|No|'medium'|-|
 |renderAsDropdown|{ minWidth: number, renderAsPill?: { minWidth?: number, maxWidth?: number } }|No|-|-|
 
 ## Related Types

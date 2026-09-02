@@ -14,7 +14,7 @@ import { AutoCompleteInput } from 'uxp/components';
 ## Signature
 
 ```tsx
-const AutoCompleteInput: React.ForwardRefExoticComponent<React.RefAttributes<any> & any>
+const AutoCompleteInput: React.ForwardRefExoticComponent<React.RefAttributes<IAutoCompleteInputInstanceProps> & IAutoCompleteInputProps>
 ```
 
 ## Examples
@@ -48,4 +48,38 @@ function renderAutoFill() {
 
 <AutoCompleteInput value={val} onChange={setVal} autoFill={renderAutoFill} ref={inputRef} />
 ```
+
+## Properties
+
+|Name|Type|Mandatory|Default Value|Example Value|
+|-|-|-|-|-|
+|value|string|Yes|-|-|
+|onChange|(val: string) => void|Yes|-|-|
+|options|string[]|No|-|-|
+|autoFill|() => JSX.Element|No|-|* ```tsx|
+|onClear|() => void|No|-|-|
+|className|string|No|-|-|
+|placeholder|string|No|-|-|
+|tabIndex|number|No|-|-|
+|addNewValues|[IAddNewValues](../types/IAddNewValues.md)|No|-|* ```tsx|
+
+## Ref Handlers
+
+Available methods through ref:
+
+|Method|Type|Description|
+|-|-|-|
+|open|() => void|Opens the suggestion dropdown |
+|close|() => void|Closes the suggestion dropdown |
+|focus|() => void|Focuses the text input |
+|getInputElement|() => HTMLInputElement \| null|Returns the underlying `<input>` element |
+|appendAtCursor|(value: string) => void|Appends `value` at the current cursor position. If there is an active selection it is replaced by `value`. |
+
+## Related Types
+
+- [IAutoCompleteInputProps](../types/IAutoCompleteInputProps.md)
+- [InputSizeProps](../types/InputSizeProps.md)
+- [InputStateProps](../types/InputStateProps.md)
+- [IAddNewValues](../types/IAddNewValues.md)
+- [IAutoCompleteInputInstanceProps](../types/IAutoCompleteInputInstanceProps.md)
 

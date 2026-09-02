@@ -59,10 +59,13 @@ const { valid, error } = ref.current?.validate() ?? { valid: true, error: '' };
 |placeholder|string|No|-|-|
 |lineNumbers|boolean|No|-|-|
 |indentUnit|number|No|-|-|
+|fontSize|number|No|-|-|
 |extraLibs|{ content: string; filename: string }[]|No|-|-|
+|noBrowserGlobals|boolean|No|-|-|
 |autoHeight|boolean|No|-|-|
 |hideToolbar|boolean|No|-|-|
 |compactToolbar|boolean|No|-|-|
+|jsDiagnostics|'curated' \| 'all' \| 'off'|No|-|-|
 
 ## Ref Handlers
 
@@ -72,6 +75,10 @@ Available methods through ref:
 |-|-|-|
 |focus|() => void|Programmatically focus the editor |
 |validate|() => { valid: boolean; error: string; code: string }|Validate the current content. Returns validation result with valid flag, error message, and current code. |
+|wrapSelection|(before: string, after: string) => void|Wrap the current selection with `before`/`after`. When the selection is empty, inserts `before + after` at the cursor and places the caret between them. Markdown-agnostic — e.g. `wrapSelection('**','**')` for bold. |
+|insertAtCursor|(text: string) => void|Insert `text` at the cursor, replacing any active selection. |
+|toggleLinePrefix|(prefix: string) => void|Toggle a line prefix across every line the selection touches (or the cursor line). If ALL touched lines already start with `prefix` (after leading whitespace) the prefix is removed; otherwise it is added to the lines lacking it. Handles `# `, `- `, `> ` style prefixes. Special case: when `prefix` is `'1. '` any existing `^\s*\d+\. ` counts as "has prefix" (numbered lists), so toggling off removes whatever number is present. |
+|getSelectionText|() => string|Returns the currently selected text (empty string when nothing is selected). |
 
 ## Related Types
 

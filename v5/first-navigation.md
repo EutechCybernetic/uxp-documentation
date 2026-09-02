@@ -1,4 +1,4 @@
-# Step 4: Add Navigation and Validate
+# Add Navigation and Validate
 
 Configure routes in `Configuration.yml` and add your view to navigation.
 
@@ -134,4 +134,5 @@ You should see:
 
 Your first view is working! Continue to:
 
-- [Step 5: Understanding V5 Architecture](./architecture.md) - Learn how v5 works under the hood
+- [Understanding V5 Architecture](./architecture.md) - Learn how v5 works under the hood
+- [Building Pages & Dashboards](./building-pages.md) - Dashboards, embedded dashboards, and when a coded page isn't the answer

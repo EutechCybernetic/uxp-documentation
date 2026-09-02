@@ -1,4 +1,4 @@
-# Step 16: V4 to V5 Migration Guide
+# V4 to V5 Migration Guide
 
 Complete step-by-step guide for migrating iviva v4 XML-based views to v5 React components.
 
@@ -11,9 +11,9 @@ Complete step-by-step guide for migrating iviva v4 XML-based views to v5 React c
 This guide walks through the complete process of analyzing a v4 app and migrating it to v5, using the Location app as a reference example. After following this guide, you should be able to convert any v4 view to v5 without assistance.
 
 **Prerequisites:**
-- [Step 2: Migration Setup](./migration-setup.md) - Project initialization
-- [Step 7: Core Components Reference](./core-components.md) - Component documentation
-- [Step 8: Data Fetching](./data-fetching.md) - Service patterns
+- [Migration Setup](./migration-setup.md) - Project initialization
+- [Core Components Reference](./core-components.md) - Component documentation
+- [Data Fetching](./data-fetching.md) - Service patterns
 
 **Reference Implementation:** `/Location/5.0/Resources/views/` - Complete working v5 Location app
 

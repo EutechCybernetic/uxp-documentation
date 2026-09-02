@@ -78,6 +78,7 @@ const panelRef = useRef<SlideInPanelHandlers>(null);
 |children|ReactNode|Yes|-|-|
 |isOpen|boolean|Yes|-|-|
 |onClose|() => void|Yes|-|-|
+|beforeDismiss|(source: 'backdrop' \| 'escape') => boolean \| Promise<boolean>|No|-|-|
 |mode|[SlideInPanelMode](../types/SlideInPanelMode.md)|No|-|-|
 |direction|[SlideInPanelDirection](../types/SlideInPanelDirection.md)|No|-|-|
 |width|string|No|-|-|

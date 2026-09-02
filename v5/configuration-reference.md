@@ -315,4 +315,4 @@ These mistakes cause silent failures — the server skips the app with no visibl
 
 Let's check the components:
 
-- [Step 7: Components](./core-components.md) - Introduction to v5 components
+- [Components](./core-components.md) - Introduction to v5 components

@@ -76,7 +76,7 @@ const ButtonComponent: React.FunctionComponent<ButtonComponentProps>
 |rightIcon|[ButtonIcon](../types/ButtonIcon.md)|No|-|-|
 |className|string|No|-|-|
 |onClick|(e?: React.MouseEvent<HTMLButtonElement>) => void \| Promise<void>|No|-|-|
-|onError|(e: React.MouseEvent<HTMLButtonElement>) => void|No|-|-|
+|onError|(e?: React.MouseEvent<HTMLButtonElement>, error?: unknown) => void|No|-|-|
 |loading|boolean|No|-|-|
 |loadingTitle|string|No|-|-|
 |active|boolean|No|-|-|

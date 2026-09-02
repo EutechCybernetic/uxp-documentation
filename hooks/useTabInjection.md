@@ -1,13 +1,13 @@
 # useTabInjection
 
 
-Hook to declare a tab injection for a given objectType.
+Hook to register a tab injection for a given objectType, tied to the component lifecycle:
+mount → injection appears; unmount → injection is removed.
 
-Registration is tied to the component lifecycle: mount → injection appears;
-unmount → injection is removed.
-
-The `id` must be fully-qualified: `"bundleId/tabId"` (e.g. `"iviva-asset-app/location-assets"`).
-The `objectType` is normalised to lowercase automatically.
+This is the framework-level API and takes the fully merged tab (composite `bundleId/tabId`
+id + all metadata). App code should normally use the `registerTabInjection` wrapper from the
+app's own `uxp.ts` instead — it takes a partial id, merges the bundle.json `objectTabs`
+entry, and generates the composite id (same pattern as `registerComponent`).
 
 
 
@@ -34,7 +34,6 @@ function AssetAppRoot() {
         name: 'Assets',
         icon: 'fas boxes',
         components: [{ componentId: 'iviva-asset-app/asset-list', priority: 1 }],
-        appRoles: ['assets.viewer']
     });
     return null;
 }

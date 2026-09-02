@@ -38,6 +38,7 @@ const TextArea: React.ForwardRefExoticComponent<React.RefAttributes<ITextAreaIns
 |className|string|No|-|-|
 |style|React.CSSProperties|No|-|-|
 |tabIndex|number|No|-|-|
+|placeholder|string|No|-|-|
 |rows|number|No|-|-|
 |cols|number|No|-|-|
 |onClear|() => void|No|-|-|

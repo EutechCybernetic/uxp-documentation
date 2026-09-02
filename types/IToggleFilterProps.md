@@ -25,6 +25,13 @@ interface IToggleFilterProps extends InputSizeProps, InputStateProps {
     className?: string,
 
     /**
+     * Segment metrics. Matches the equivalent `Button` size so a toggle and a
+     * button of the same size line up.
+     * @default 'medium'
+     */
+    size?: 'small' | 'medium' | 'large',
+
+    /**
      * This will render the dropdown if the width is less than the min width
      */
     renderAsDropdown?: {

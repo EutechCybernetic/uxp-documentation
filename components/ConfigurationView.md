@@ -33,6 +33,7 @@ const ConfigurationView: React.FunctionComponent<IConfigurationViewProps>
 |uxpContext|[IContextProvider](../types/IContextProvider.md)|Yes|-|-|
 |title|string|No|-|-|
 |sections|[IConfigurationViewSection[]](../types/IConfigurationViewSection.md)|Yes|-|-|
+|actions|React.ReactNode|No|-|-|
 |selected|string|No|-|-|
 |onChangeSection|(id: string) => void|No|-|-|
 |mode|'single' \| 'multiple'|No|-|-|

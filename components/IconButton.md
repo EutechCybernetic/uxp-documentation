@@ -53,7 +53,7 @@ const IconButton: React.FunctionComponent<IIconButtonProps>
 |active|boolean|No|-|-|
 |disabled|boolean|No|-|-|
 |onClick|(e?: React.MouseEvent<HTMLButtonElement>) => void \| Promise<void>|No|-|-|
-|onError|(e: React.MouseEvent<HTMLButtonElement>) => void|No|-|-|
+|onError|(e?: React.MouseEvent<HTMLButtonElement>, error?: unknown) => void|No|-|-|
 |tooltip|string|No|-|-|
 |className|string|No|-|-|
 |borderless|boolean|No|-|-|

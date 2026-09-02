@@ -30,15 +30,20 @@ export interface AdditionaDetails {
 
     /**
      * Whether to show a refresh button in the tab header. Defaults to false.
-     * Injected tabs (registered via registerTabInjection) are refreshable by default.
+     * Injected tabs (declared in bundle.json `objectTabs`) are refreshable by default.
      */
     refreshable?: boolean;
 
     /**
      * Event names (fired via eventDispatcher) that automatically refresh this tab's content.
-     * Injected tabs can declare these in their TabInjection registration.
      */
     events?: string[];
+
+    /**
+     * Optional access rule for this tab. Denied users don't see the tab (or see
+     * the not-authorised error when `showUnauthorizedError` is set).
+     */
+    access?: AccessControl;
 }
 ```
 
@@ -52,4 +57,5 @@ import { AdditionaDetails } from 'uxp/components';
 
 - [DetailsContent](../types/DetailsContent.md)
 - [RowData](../types/RowData.md)
+- [AccessControl](../types/AccessControl.md)
 

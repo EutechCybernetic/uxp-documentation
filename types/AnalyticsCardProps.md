@@ -32,6 +32,21 @@ export interface AnalyticsCardProps {
      * Use small variant for compact display.
      */
     small?: boolean;
+
+    /**
+     * Optional element rendered beside the label (e.g. a Chip showing the change vs a previous period).
+     */
+    badge?: React.ReactNode;
+
+    /**
+     * Additional class name for the card root (for app-level style overrides).
+     */
+    className?: string;
+
+    /**
+     * Optional short line rendered under the label row (e.g. "of open time was active").
+     */
+    note?: string;
 }
 ```
 

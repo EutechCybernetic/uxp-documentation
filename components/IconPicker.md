@@ -50,10 +50,14 @@ tsx
 |compactMode|boolean|No|-|-|
 |placeholder|string|No|-|-|
 |onClear|() => void|No|-|-|
+|sources|Partial<Record<MediaPickerSource, boolean>>|No|-|-|
+|allowedTypes|string[]|No|-|-|
+|defaultSource|[MediaPickerSource](../types/MediaPickerSource.md)|No|'icons'|-|
 
 ## Related Types
 
 - [IconPickerProps](../types/IconPickerProps.md)
 - [InputSizeProps](../types/InputSizeProps.md)
 - [InputStateProps](../types/InputStateProps.md)
+- [MediaPickerSource](../types/MediaPickerSource.md)
 

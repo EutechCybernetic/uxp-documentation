@@ -64,4 +64,5 @@ import defaultConfig from './dashboards/equipment-default.json';
 |enableBackgroundConfig|boolean|No|-|-|
 |autoPassedProps|Record<string, any>|No|-|-|
 |globalDashboardSettings|UXPGlobalDashboardSettings \| null|No|-|-|
+|onFiltersChange|(filters: DashboardFilters) => void|No|-|-|
 

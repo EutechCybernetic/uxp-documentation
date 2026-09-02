@@ -39,6 +39,12 @@ export interface DetailsPanelTab {
      * Details content for this tab (mandatory).
      */
     details: ((item: RowData) => ObjectInfoCardProps) | DetailsContent;
+
+    /**
+     * Optional access rule for this tab. Denied users don't see the tab (or see
+     * the not-authorised error when `showUnauthorizedError` is set).
+     */
+    access?: AccessControl;
 }
 ```
 
@@ -56,4 +62,5 @@ import { DetailsPanelTab } from 'uxp/components';
 - [ObjectInfoCardProps](../types/ObjectInfoCardProps.md)
 - [ObjectField](../types/ObjectField.md)
 - [DetailsContent](../types/DetailsContent.md)
+- [AccessControl](../types/AccessControl.md)
 

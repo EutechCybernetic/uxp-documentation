@@ -1,4 +1,4 @@
-# Step 15: Best Practices
+# Best Practices
 
 Best practices for v5 app development based on the Location 5.0 app.
 

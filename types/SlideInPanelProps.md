@@ -24,6 +24,15 @@ export interface SlideInPanelProps {
     onClose: () => void;
 
     /**
+     * Optional guard consulted before a backdrop-click or Escape dismissal.
+     * Return `false` (or a promise resolving to `false`) to block the dismissal;
+     * return `true` to proceed with `onClose`. When omitted, both paths dismiss
+     * unconditionally (existing behaviour). Programmatic `close()` and any explicit
+     * Cancel/Save inside the panel are NOT gated by this.
+     */
+    beforeDismiss?: (source: 'backdrop' | 'escape') => boolean | Promise<boolean>;
+
+    /**
      * Rendering mode of the panel.
      * - `full`: fills the main content area (default)
      * - `modal`: centered overlay auto-sized to content

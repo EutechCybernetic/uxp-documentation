@@ -1,6 +1,6 @@
-# Step 3: Create Your First View
+# Create Your First View
 
-Create a React view component and register it as a UI component.
+Create a React view component and register it as a page.
 
 ---
 
@@ -116,80 +116,81 @@ This example uses React performance optimization patterns to prevent unnecessary
 
 ---
 
-## 2. Register the View as UI
+## 2. Register the View
 
-In `src/index.tsx`, register your view:
+In `src/index.tsx`, register your view as a component that can be used as a page:
 
 ```typescript
 // src/index.tsx
-import { enableLocalization } from './uxp';
+import { enableLocalization, registerComponent } from './uxp';
 import PortfolioView from './views/portfolio/PortfolioView';
 
-// Register as UI (RECOMMENDED for v5 views)
-registerUI({
+registerComponent({
     id: "portfolio-view",
-    component: PortfolioView
+    component: PortfolioView,
+    modes: ["ui"],          // a page — reachable at a URL
 });
-
 
 // Enable localization
 enableLocalization();
-
 ```
 
-### UI vs Widget Registration
+`registerComponent` is the one registry for everything your app contributes. What a component *is* comes
+from its `modes`, not from which function registered it:
 
-**Use `registerUI()` for views (pages):**
-```typescript
-registerUI({
-    id: "portfolio-view",
-    component: PortfolioView
-});
-```
+| Mode | Where it can be used |
+|---|---|
+| `ui` | A page. An admin routes a URL to it from `Configuration.yml`. |
+| `widget` | A tile. It appears in the dashboard widget drawer, to be placed on a grid. |
+| `background` | A surface rendered behind a dashboard's widgets. |
 
-**Use `registerWidget()` only for dashboard widgets:**
-```typescript
-registerWidget({
-    id: "stats-widget",
-    widget: StatsWidget,
-    moduleId: "com.yourapp.widgets"
-});
-```
+A component can declare more than one — `modes: ["widget", "ui"]` registers something usable both ways.
 
-**Why `registerUI()`?**
-- ✅ Designed for full-page views
-- ✅ Better for v5 architecture
-- ✅ Recommended by framework
-- ✅ To avoid clutter in widgets list.
+### Why a page is a `ui`, not a widget
+
+- **It decides where the component can be placed.** A `ui` is what a navigation link's `pageId` can
+  point at; a `widget` is what the dashboard drawer offers. Registering a page as a widget puts it in the
+  drawer, where someone will eventually drop a full page into a dashboard cell.
+- **It keeps the widget drawer honest.** The drawer should list tiles, not pages.
+- **It is what a full-page component is built for** — it receives the URL's params and query directly,
+  and it owns the whole content area rather than a grid cell.
+
+> **Coming from `registerUI` / `registerWidget`?** Both still work — they are thin adapters that call
+> `registerComponent` for you, mapping to `modes: ['ui']` and `modes: ['widget']` respectively. Prefer
+> `registerComponent` in new code: one function, explicit modes, and a component that needs to be both
+> stops being two registrations. See [Unified Component Registry](./unified-components.md) for the full
+> API and how to migrate an existing app.
 
 ---
 
 ## 3. Update bundle.json
 
-Add your UI component to `bundle.json`:
+Add your component to `bundle.json`:
 
 ```json
 {
-    "id": "iviva-<yourapp>-app", // ex: iviva-location-app
+    "id": "iviva-<yourapp>-app",
     "author": "",
-    "uis": [
+    "components": [
         {
             "id": "portfolio-view",
-            "label": "Portfolio View",
-            "description": "Portfolio listing page"
+            "name": "Portfolio View",
+            "description": "Portfolio listing page",
+            "modes": ["ui"],
+            "tags": [],
+            "icon": ""
         }
-    ],
-    "widgets": [],
-    "sidebarLinks": [],
-    "menuItems": []
+    ]
 }
 ```
 
 **Key Points:**
 - `id` - Bundle identifier (format: `iviva-<appname>-app`)
-- `uis` array - List all UI components registered with `registerUI()`
-- Each UI entry needs: `id`, `label`, `description`
-- The `id` must match the ID used in `registerUI()`
+- `components` array - every component you register, whatever its modes
+- The component `id` must match the one passed to `registerComponent()`
+- iviva reads `bundle.json` at upload time, **without running your code** — so anything serialisable
+  (`name`, `description`, `modes`, `icon`, `tags`, permissions) lives here and **wins** over the same
+  field passed in code. The React reference, `configs` and `defaultProps` can only live in code.
 
 ---
 
@@ -208,4 +209,5 @@ Your view is now compiled to `dist/main.js`.
 
 Your view is created but not yet accessible. Continue to:
 
-- [Step 4: Add Navigation](./first-navigation.md) - Configure routes and add to navigation
+- [Add Navigation](./first-navigation.md) - Configure routes and add to navigation
+- [Building Pages & Dashboards](./building-pages.md) - The other ways to build a page, and when to use each

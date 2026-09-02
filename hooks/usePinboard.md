@@ -14,6 +14,11 @@ import { usePinboard } from 'uxp/components';
 ## Signature
 
 ```tsx
-function usePinboard(objectType: string): { pins: PinnedObject[]; loading: boolean; load: () => Promise<void>; pin: (obj: PinnedObject) => Promise<void>; unpin: (obj: PinnedObject) => Promise<...>; isPinned: (key: string) => boolean; }
+function usePinboard(objectType: string): UsePinboardResult
 ```
+
+## Related Types
+
+- [UsePinboardResult](../types/UsePinboardResult.md)
+- [PinnedObject](../types/PinnedObject.md)
 

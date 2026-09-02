@@ -21,6 +21,8 @@ export interface DynamicFormHandlers {
     goToNext: () => void,
     goToPrevious: () => void,
     getWizardState: () => WizardState | null,
+    /** True when the current values differ from the seeded (initial) values. */
+    isDirty: () => boolean,
 }
 ```
 

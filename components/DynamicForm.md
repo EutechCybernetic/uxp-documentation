@@ -66,6 +66,7 @@ Available methods through ref:
 |goToNext|() => void|-|
 |goToPrevious|() => void|-|
 |getWizardState|() => WizardState \| null|-|
+|isDirty|() => boolean|True when the current values differ from the seeded (initial) values. |
 
 ## Related Types
 

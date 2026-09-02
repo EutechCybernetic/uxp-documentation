@@ -25,6 +25,11 @@ export interface BaseAction {
     icon?: string;
 
     /**
+     * Side the icon is rendered on. Defaults to 'left'.
+     */
+    iconPosition?: 'left' | 'right';
+
+    /**
      * Callback function triggered when the action is clicked, receiving the associated data item.
      */
     onClick: (item: any) => Promise<void> | void;

@@ -21,6 +21,21 @@ interface IPieChartProps {
     showLegend?: boolean,
 
     /**
+     * Inner radius for a donut: a number (px) or a percentage string such as `"67%"`. Omit for a solid pie.
+     */
+    innerRadius?: number | string,
+
+    /**
+     * Show the value label on each slice. Defaults to `true`.
+     */
+    showLabels?: boolean,
+
+    /**
+     * Content rendered centred over the chart (e.g. a total for a donut).
+     */
+    centerContent?: React.ReactNode,
+
+    /**
      * Additional CSS classes for custom styling
      */
     className?: string

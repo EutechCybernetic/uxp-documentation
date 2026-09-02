@@ -33,6 +33,12 @@ interface IDataGridProps {
     columns: number,
 
     /**
+     * How cells are outlined. `cells` (default) draws a border around every cell,
+     * `dividers` draws only a vertical divider between columns, `none` draws nothing.
+     */
+    borders?: 'cells' | 'dividers' | 'none'
+
+    /**
      * Any additional css class names to include in the component
      */
     className?: string

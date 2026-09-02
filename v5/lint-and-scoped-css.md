@@ -174,5 +174,5 @@ uxp-lint --ci
 
 ## Next Steps
 
-- [Step 12: Styling](./styling.md) - Theme system, CSS variables, SCSS structure
+- [Styling](./styling.md) - Theme system, CSS variables, SCSS structure
 - [Bundle Optimization](./bundle-optimization.md) - `uxp-lint optimise`: code-splitting & lazy loading to shrink the bundle

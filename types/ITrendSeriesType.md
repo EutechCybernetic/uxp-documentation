@@ -3,7 +3,7 @@
 ## Definition
 
 ```tsx
-type ITrendSeriesType = 'line' | 'area';
+type ITrendSeriesType = 'line' | 'area' | 'bar';
 ```
 
 ## Usage
