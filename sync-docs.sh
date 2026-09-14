@@ -28,9 +28,17 @@ git -C "$DOC_REPO" pull --ff-only origin v5
 echo "Generating docs in $UXP_REPO ..."
 ( cd "$UXP_REPO" && npm run build:docs )
 
+# 2b. Check links and SUMMARY.md in the fresh build; a failure stops the sync
+#     before anything is copied or pushed.
+echo "Checking docs in $UXP_REPO ..."
+( cd "$UXP_REPO" && sh check-docs.sh )
+
 # 3. Clear this repo (keep .git + this script) and copy the fresh docs in.
 echo "Syncing docs → $DOC_REPO ..."
 rsync -a --delete \
+  --exclude="/index.html" \
+  --exclude="/_sidebar.md" \
+  --exclude="/.nojekyll" \
   --exclude=".git" \
   --exclude="$SCRIPT_NAME" \
   "$UXP_REPO/docs/" "$DOC_REPO/"
