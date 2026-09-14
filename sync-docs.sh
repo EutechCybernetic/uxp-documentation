@@ -1,4 +1,6 @@
 #!/bin/bash
+# Manual fallback. Docs normally publish through the GitHub Action publish-docs.yml in lucy-platform/uxp
+# (runs on every docs-related push to v5); see internals/docs-publishing.md there.
 set -euo pipefail
 
 # This repo (the doc repo) = script location; uxp repo is its sibling.
