@@ -17,6 +17,12 @@ interface TreeNodeOptions {
     disableNode?: (item: any) => boolean,
 
     /**
+     * If true, this node cannot be dragged. Non-cascading and nothing else changes: the node is
+     * not greyed out, stays selectable and its children stay draggable.
+     */
+    disableDragNode?: (item: any) => boolean,
+
+    /**
      * If true, all child nodes will be disabled
      */
     disableChildNodes?: (item: any) => boolean,

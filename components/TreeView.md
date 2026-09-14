@@ -83,6 +83,7 @@ const TreeView: React.ForwardRefExoticComponent<React.RefAttributes<TreeViewHand
 |reorderLoading|boolean|No|-|-|
 |onReorder|(reorderedNodes: TreeNode[], draggedNode: TreeNode, newIndex: number, parentId?: string) => Promise<boolean>|No|-|-|
 |onHierarchyChange|(movedNode: TreeNode, newParentId: string \| null, newIndex: number) => void \| Promise<void>|No|-|-|
+|canDrop|(source: TreeNode, target: TreeNode, position: DropPosition) => boolean|No|-|-|
 |disableInternalDndContext|boolean|No|-|-|
 |externalDragState|[DragState](../types/DragState.md)|No|-|-|
 |idPrefixForComparison|string|No|-|-|
@@ -104,7 +105,7 @@ Available methods through ref:
 - [TreeViewStyles](../types/TreeViewStyles.md)
 - [ExtendedTreeNode](../types/ExtendedTreeNode.md)
 - [CustomActionButton](../types/CustomActionButton.md)
-- [DragState](../types/DragState.md)
 - [DropPosition](../types/DropPosition.md)
+- [DragState](../types/DragState.md)
 - [TreeViewHandle](../types/TreeViewHandle.md)
 

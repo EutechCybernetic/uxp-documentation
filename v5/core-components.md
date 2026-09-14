@@ -2,6 +2,11 @@
 
 Reference guide for core components, hooks, and types used in UXP v5 applications.
 
+> **The authoritative list is generated.** [Components](../components.md) and [Hooks](../hooks.md) are
+> built from the source on every docs build, and [Storybook](https://uxp-components.vercel.app) renders
+> each one live. Use this page as a categorized starting point; when the two disagree, the generated
+> reference is current.
+
 ---
 
 ## Overview
@@ -119,6 +124,7 @@ For complete type definitions, see the [Types Documentation](../types.md).
 | Component | Description |
 |-----------|-------------|
 | [ComponentRenderer](../components/ComponentRenderer.md) | Dynamically render components from other modules by moduleId and componentId. Essential for pluggable architecture. |
+| [ErrorState](../components/ErrorState.md) | Themed error/warning state in three sizes — `default` (centred card), `inline` (row), `indicator` (icon + dropdown). `mode` is a ceiling: it measures its container and degrades to fit, never upgrades. Renders without a UXP context, so it is safe inside error boundaries. |
 | [QRCodeComponent](../components/QRCodeComponent.md) | QR code generator with download and print support. |
 | [Icon](../components/Icon.md) | Icon component supporting FontAwesome, Phosphor, and image URLs. |
 | [ProfileImage](../components/ProfileImage.md) | User profile image/avatar component with fallback. |

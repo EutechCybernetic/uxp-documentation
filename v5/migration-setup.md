@@ -36,9 +36,13 @@ Resources/
     │   ├── utils.ts            # Utility functions
     │   └── index.tsx           # Registration entry point
     ├── dist/                   # Build output (created by build)
+    ├── .uxplint/               # Lint configuration (config.json)
     ├── bundle.json             # App metadata
     ├── webpack.config.js       # Webpack configuration
     ├── tsconfig.json           # TypeScript configuration
+    ├── uxp.d.ts                # Snapshot of the uxp library types
+    ├── designer.d.ts           # Widget designer types
+    ├── images.d.ts             # Image import declarations
     ├── localization.json       # Translations
     └── package.json            # Dependencies
 ```
@@ -110,7 +114,7 @@ Leave it empty for now - we'll populate it in the next step.
 | **URL Format** | `/apps/yourapp/...` | `/view/yourapp/...` |
 | **Navigation** | Sidebar | Sidebar/Header (Configurable) |
 | **Configuration** | XML files | `Configuration.yml` |
-| **Registration** | Automatic from XML | Explicit via `registerUI()` and `Configuration.yml` |
+| **Registration** | Automatic from XML | Explicit via `registerComponent` and `Configuration.yml` |
 
 ---
 
@@ -160,6 +164,12 @@ In the following steps, we'll:
 │       ├── dist/              # Build output
 │       │   └── main.js        # Compiled bundle
 │       │
+│       ├── .uxplint/          # Lint configuration
+│       │   └── config.json
+│       │
+│       ├── uxp.d.ts           # uxp library types (snapshot, regenerate when stale)
+│       ├── designer.d.ts      # Widget designer types
+│       ├── images.d.ts        # Image import declarations
 │       ├── bundle.json        # App metadata (Step 3)
 │       └── package.json       # Dependencies
 │

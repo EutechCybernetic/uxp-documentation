@@ -39,6 +39,7 @@ const ComponentRenderer: React.MemoExoticComponent<React.FunctionComponent<Compo
 |configNeededMessage|string \| React.ReactNode|No|-|-|
 |additionalProps|any|No|-|-|
 |notFoundMessage|string \| React.ReactNode|No|-|-|
+|loader|React.ReactNode|No|-|-|
 |isPreview|boolean|No|-|-|
 |onAddonInstalled|(instance: ComponentInstance) => void|No|-|-|
 |forceConfigView|boolean|No|-|-|

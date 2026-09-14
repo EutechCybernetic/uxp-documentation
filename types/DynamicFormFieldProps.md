@@ -23,9 +23,12 @@ export interface DynamicFormFieldProps {
 
     /**
      * Optional: Explicit list of field names this field depends on.
-     * If provided, field only re-renders when these fields change.
-     * If omitted, dependencies are auto-detected from show/getOptions/validate functions.
-     * Use this for performance optimization or when auto-detection fails.
+     * If provided, the field only re-renders when one of these fields changes.
+     * If omitted, dependencies are recorded at runtime from the keys the field's own
+     * callbacks (getOptions, renderField, selectedOptionLabel, validate.required, ...)
+     * actually read off `data` while rendering.
+     * Set it explicitly when an async getOptions reads `data` AFTER an await — reads that
+     * happen once the promise has resumed are not observed and will not trigger a re-render.
      */
     dependsOn?: string[]
 

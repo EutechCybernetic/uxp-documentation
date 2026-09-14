@@ -31,21 +31,30 @@ src/
 
 ## Component Patterns
 
-### Use `registerUI()` for Views
+### Register Views with `modes: ['ui']`
+
+`registerComponent` is the single registry. `modes` decides where the component can be used, so a page
+view registers as `'ui'` and only an analytics tile on a dashboard registers as `'widget'`.
 
 ```typescript
 // ✅ Good - for page views
-registerUI({
+registerComponent({
     id: "portfolio-view",
-    component: PortfolioView
+    component: PortfolioView,
+    modes: ['ui']
 });
 
 // ❌ Avoid - for page views
-registerWidget({
+registerComponent({
     id: "portfolio-widget",
-    widget: PortfolioView
+    component: PortfolioView,
+    modes: ['widget']
 });
 ```
+
+> `registerUI()` and `registerWidget()` still work as adapters over `registerComponent`, so existing
+> code keeps running. Write anything new with `registerComponent`. See
+> [Unified Component Registry](./unified-components.md).
 
 ### Centralize API Calls in services.ts
 
@@ -194,11 +203,11 @@ navigationLinks:
 
 ```typescript
 // ✅ Good - descriptive IDs
-registerUI({ id: "portfolio-view", component: PortfolioView });
-registerUI({ id: "details-view", component: DetailsView });
+registerComponent({ id: "portfolio-view", component: PortfolioView, modes: ['ui'] });
+registerComponent({ id: "details-view", component: DetailsView, modes: ['ui'] });
 
 // ❌ Avoid - generic IDs
-registerUI({ id: "view1", component: PortfolioView });
+registerComponent({ id: "view1", component: PortfolioView, modes: ['ui'] });
 ```
 
 ---
@@ -324,7 +333,7 @@ Before committing code:
 
 ## Common Pitfalls to Avoid
 
-❌ Using `registerWidget()` for pages
+❌ Registering a page with `modes: ['widget']` (or omitting `modes`, which defaults to `['widget']`)
 ❌ Hardcoding colors instead of theme variables
 ❌ Not handling loading/error states
 ❌ Hardcoded text without localization

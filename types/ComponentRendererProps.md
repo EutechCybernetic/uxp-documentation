@@ -22,6 +22,8 @@ export interface ComponentRendererProps {
     configNeededMessage?: string | React.ReactNode;
     additionalProps?: any;
     notFoundMessage?: string | React.ReactNode;
+    /** Rendered while the component resolves; defaults to a spinner. */
+    loader?: React.ReactNode;
     isPreview?: boolean;
     onAddonInstalled?: (instance: ComponentInstance) => void;
     forceConfigView?: boolean;

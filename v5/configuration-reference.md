@@ -26,6 +26,11 @@ bundleJsonPath: /Resources/views/bundle.json
 scripts:
   - "/Resources/views/dist/main.js"
 baseRoute: /location
+# Optional, at the app root: mark everything this app contributes — its navigationLinks AND its
+# otherRoutes — as system-managed. Usually left out: an app slotted under a flagged DefaultConfig
+# section inherits the flags anyway.
+# protected: true
+# lockAccess: true
 
 # Navigation Links
 navigationLinks:
@@ -144,6 +149,19 @@ otherRoutes:
 | `appRoles` | array | App roles allowed (empty = all) |
 | `title` | string | Page title, can use `:paramName` for dynamic values |
 | `redirectTo` | string | Redirect to another route |
+| `protected` | bool | The URL is system-managed: no custom route may serve it. Inherited from the app — set `false` to opt this route out, `true` to opt it in |
+| `lockAccess` | bool | Same reach as `protected`, for access: the URL is never made public |
+
+> `protected` / `lockAccess` on an `otherRoutes` entry are **inherited**: an app slotted under a
+> `DefaultConfig.yml` section that carries them (the whole System app under **Administration**, say),
+> or one that sets them at its own root, passes them to every route it defines. An entry only needs
+> to state a flag when it wants to differ. See
+> **[Navigation Configuration](./navigation.md#protected--cant-be-deleted)**.
+
+> **Unknown keys are ignored, not reported.** The whole file is parsed leniently so one stray key
+> cannot take the app's configuration down with it — which also means a **misspelling is silent**:
+> `protectd: true` simply does nothing. Check a flag actually took effect through the
+> `System.GetRoutesFromConfigurations` service rather than by re-reading the YML.
 
 ---
 
@@ -220,13 +238,13 @@ Reference registered components:
 ### UI Components
 
 ```yaml
-pageId: ui/portfolio-view  # References: registerUI({ id: "portfolio-view", ... })
+pageId: ui/portfolio-view  # References: registerComponent({ id: "portfolio-view", modes: ['ui'], ... })
 ```
 
 ### Widget Components
 
 ```yaml
-pageId: widget/stats-widget  # References: registerWidget({ id: "stats-widget", ... })
+pageId: widget/stats-widget  # References: registerComponent({ id: "stats-widget", modes: ['widget'], ... })
 ```
 
 ---
@@ -303,7 +321,7 @@ These mistakes cause silent failures — the server skips the app with no visibl
 | File placed inside `Resources/views/` | Server looks in app root, not here | Move to `<App>/<Version>/Configuration.yml` |
 | `appId` doesn't match folder name | App silently skipped | Use exact folder name, case-sensitive |
 | `bundleId` differs from `bundle.json` | Components not found, blank pages | Must be identical in both files |
-| `pageId` casing differs from `registerUI()` id | Blank page, no error | Use all-lowercase IDs everywhere |
+| `pageId` casing differs from the `registerComponent` id | Blank page, no error | Use all-lowercase IDs everywhere |
 | `otherRoutes:` present but with no value | YAML parse fails, entire config dropped | Use `otherRoutes: {}` if no routes needed |
 | `otherRoutes:` omitted entirely | YAML parse fails, entire config dropped | Always include `otherRoutes:` |
 

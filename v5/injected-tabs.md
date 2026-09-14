@@ -116,4 +116,4 @@ If either `appRoles` or `userGroups` match the current user, the tab is shown. B
 
 ## Module Removal
 
-If the contributing app is removed or its bundle is not loaded, the DB record is preserved but the tab silently disappears at runtime (the component is not found). No errors. Re-loading the bundle restores the tab.
+If the contributing app is removed, or it no longer registers the tab, the admin customisation stays in `AccountObjectTabs` but the tab is not rendered: a DB record only customises a code registration, it never stands in for one. No errors. An app registering that contribution id again restores the tab with its customisation.

@@ -14,6 +14,8 @@ export interface DragState {
     dropzoneNodeId?: string;
     /** position of the drop */
     dropPosition?: DropPosition
+    /** the hovered position was refused by `canDrop`: show it as an invalid target */
+    dropRefused?: boolean
 }
 ```
 

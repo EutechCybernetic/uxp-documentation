@@ -183,6 +183,16 @@ export interface TreeViewProps {
     onHierarchyChange?: (movedNode: TreeNode, newParentId: string | null, newIndex: number) => void | Promise<void>
 
     /**
+     * Veto a drop before it happens. Called while dragging - a refused position shows no drop
+     * indicator and marks the target invalid - and again as the hard gate in the drop itself, so
+     * a programmatic `triggerDrop` is covered too.
+     *  source - the node being dragged
+     *  target - the node being dropped onto
+     *  position - where, relative to target
+     */
+    canDrop?: (source: TreeNode, target: TreeNode, position: DropPosition) => boolean
+
+    /**
      * disable internal dnd context
      */
     disableInternalDndContext?: boolean
@@ -211,6 +221,6 @@ import { TreeViewProps } from 'uxp/components';
 - [TreeViewStyles](../types/TreeViewStyles.md)
 - [ExtendedTreeNode](../types/ExtendedTreeNode.md)
 - [CustomActionButton](../types/CustomActionButton.md)
-- [DragState](../types/DragState.md)
 - [DropPosition](../types/DropPosition.md)
+- [DragState](../types/DragState.md)
 

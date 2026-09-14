@@ -47,7 +47,9 @@ With the unified registry this works for all three types:
 | `window.Widgets` | `window.Components` filtered by mode | ✅ live getter shim |
 | `window.RenderUIItems` | `window.Components` filtered by mode | ✅ live getter shim |
 
-**New in V5:** `registerComponent` also introduces `modes: ['background-surface']` — a component type that did not exist before. See the [background surface section](#background-surface-with-props) below.
+**New in V5:** `registerComponent` also introduces `modes: ['background']` — a component type that did not exist before. See the [background surface section](#background-surface-with-props) below.
+
+> **The mode is spelled `'background'`.** The runtime `ComponentMode` type is `'widget' | 'ui' | 'background' | 'lucy-block'` (`src/types.ts:1105`), and the `registerBackgroundSurface` adapter maps to `modes: ['background']`. Older CLI templates and samples spell it `background-surface`; use `'background'` in anything new.
 
 **No immediate action is required.** The legacy functions are kept as thin adapters. Every call to `registerWidget` or `registerUI` writes into the unified registry through the same path as `registerComponent`. Existing projects work without any changes.
 
@@ -236,7 +238,7 @@ Background surfaces are a new component type introduced in V5. They render behin
     "id": "gradient-background",
     "name": "Gradient Background",
     "description": "Smooth animated gradient rendered behind the dashboard",
-    "modes": ["background-surface"],
+    "modes": ["background"],
     "tags": [],
     "vendor": "",
     "icon": "",
@@ -512,7 +514,7 @@ These fields are serialisable and read by the server at upload time. Keep them h
 | `id` | `string` | Identifier, unique within your bundle — must match the id passed to `registerComponent` |
 | `name` | `string` | Human-readable name shown in the widget drawer |
 | `description` | `string` | Short description shown in the widget drawer |
-| `modes` | `Array<'widget' \| 'ui' \| 'background-surface'>` | How this component can be used |
+| `modes` | `Array<'widget' \| 'ui' \| 'background' \| 'lucy-block'>` | How this component can be used |
 | `isTemplate` | `boolean` | Whether this component is a designer template |
 | `tags` | `string[]` | Tags for filtering in the widget drawer |
 | `vendor` | `string` | Publisher name shown in the widget drawer |
@@ -526,7 +528,7 @@ These fields cannot be serialised to JSON — they contain React references or f
 |---|---|---|---|
 | `id` | `string` | ✅ | Must match the `id` in bundle.json |
 | `component` | `React.FC` | ✅ | The React component to render |
-| `modes` | `Array<'widget' \| 'ui' \| 'background-surface'>` | | Optional — bundle.json wins if the same field is set there |
+| `modes` | `Array<'widget' \| 'ui' \| 'background' \| 'lucy-block'>` | | Optional — bundle.json wins if the same field is set there |
 | `configs.layout` | `ILayout` | | Default grid size (`w`, `h`, `minW`, `minH`, etc.) |
 | `configs.props` | `IWidgetPropConfig[]` | | Fields shown in the settings panel (may contain functions) |
 | `configs.configPanel` | `React.FC` | | Custom settings panel component |
@@ -540,7 +542,8 @@ A component can support more than one mode — register once, usable in multiple
 |---|---|
 | `'widget'` | Placed on a dashboard grid; receives `uxpContext` and configured props |
 | `'ui'` | Rendered as a full-page view when navigated to via a route |
-| `'background-surface'` | Rendered behind the dashboard canvas |
+| `'background'` | Rendered behind the dashboard canvas |
+| `'lucy-block'` | A Lucy model-designer block definition; never rendered through `ComponentRenderer` |
 
 ---
 

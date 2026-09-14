@@ -214,9 +214,10 @@ import './global.scss';
 import { enableLocalization } from './uxp';
 import PortfolioView from './views/portfolio/PortfolioView';
 
-registerUI({
+registerComponent({
     id: "portfolio-view",
-    component: PortfolioView
+    component: PortfolioView,
+    modes: ['ui']
 });
 
 enableLocalization();

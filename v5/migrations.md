@@ -1260,19 +1260,21 @@ otherRoutes:
 **File:** `src/index.tsx`
 
 ```typescript
-import { registerUI, enableLocalization } from './uxp';
+import { registerComponent, enableLocalization } from './uxp';
 import { PortfolioView } from './views/portfolio/PortfolioView';
 import { DetailsView } from './views/details/DetailsView';  // ← OPTIONAL
 import './global.scss';
 
-registerUI({
+registerComponent({
     id: "portfolio-view",
-    component: PortfolioView
+    component: PortfolioView,
+    modes: ['ui']
 });
 
-registerUI({                           // ← OPTIONAL
+registerComponent({                    // ← OPTIONAL
     id: "details-view",
-    component: DetailsView             // Wrapper that renders LocationDetailsComponent
+    component: DetailsView,            // Wrapper that renders LocationDetailsComponent
+    modes: ['ui']
 });
 
 enableLocalization();
@@ -1321,13 +1323,14 @@ Your final PortfolioView will have all these pieces working together:
 **File:** `src/index.tsx`
 
 ```typescript
-import { registerUI, enableLocalization } from './uxp';
+import { registerComponent, enableLocalization } from './uxp';
 import { PortfolioView } from './views/portfolio/PortfolioView';
 import './global.scss';
 
-registerUI({
+registerComponent({
     id: "portfolio-view",
-    component: PortfolioView
+    component: PortfolioView,
+    modes: ['ui']
 });
 
 enableLocalization();
@@ -1355,7 +1358,7 @@ navigationLinks:
   - label: "Portfolios"              # ← NEW: First navigation link added
     icon: "fas list"
     link: /portfolios
-    pageId: ui/portfolio-view        # Must match registerUI id
+    pageId: ui/portfolio-view        # Must match the registerComponent id
 
 otherRoutes: {}
 ```
@@ -1363,7 +1366,7 @@ otherRoutes: {}
 **What this does:**
 - Adds "Portfolios" link to sidebar
 - Makes view accessible at `/location/portfolios` (baseRoute + link)
-- `pageId` must match the `id` used in `registerUI()`
+- `pageId` must match the `id` used in `registerComponent`
 
 ---
 
@@ -1792,19 +1795,21 @@ export const LocationDetailsComponent: FunctionComponent<LocationDetailsComponen
 **File:** `src/index.tsx`
 
 ```typescript
-import { registerUI, enableLocalization } from './uxp';
+import { registerComponent, enableLocalization } from './uxp';
 import { PortfolioView } from './views/portfolio/PortfolioView';
 import { SettingsView } from './views/settings/SettingsView';  // ← NEW
 import './global.scss';
 
-registerUI({
+registerComponent({
     id: "portfolio-view",
-    component: PortfolioView
+    component: PortfolioView,
+    modes: ['ui']
 });
 
-registerUI({                           // ← NEW
+registerComponent({                    // ← NEW
     id: "settings-view",
-    component: SettingsView
+    component: SettingsView,
+    modes: ['ui']
 });
 
 enableLocalization();
@@ -1831,7 +1836,7 @@ navigationLinks:
   - label: "Settings"                 # ← NEW: Settings link added
     icon: "fas cog"
     link: /settings
-    pageId: ui/settings-view          # Must match registerUI id
+    pageId: ui/settings-view          # Must match the registerComponent id
 
 # Other Routes
 otherRoutes:

@@ -35,8 +35,8 @@ is opened; a skeleton shows while it loads.
 import { HomeView } from './views/home/HomeView';
 import { ReportsView } from './views/reports/ReportsView';
 
-registerUI({ id: 'home-view', component: HomeView });
-registerUI({ id: 'reports-view', component: ReportsView });
+registerComponent({ id: 'home-view', component: HomeView, modes: ['ui'] });
+registerComponent({ id: 'reports-view', component: ReportsView, modes: ['ui'] });
 ```
 
 **After** — each view is its own lazily-loaded chunk:
@@ -47,8 +47,8 @@ import { lazyView } from 'uxp/components';
 const HomeView = lazyView(() => import('./views/home/HomeView'), 'HomeView');
 const ReportsView = lazyView(() => import('./views/reports/ReportsView'), 'ReportsView');
 
-registerUI({ id: 'home-view', component: HomeView });
-registerUI({ id: 'reports-view', component: ReportsView });
+registerComponent({ id: 'home-view', component: HomeView, modes: ['ui'] });
+registerComponent({ id: 'reports-view', component: ReportsView, modes: ['ui'] });
 ```
 
 See [Lazy Views & Skeletons](./lazy-views.md) for the full `lazyView` reference —

@@ -26,6 +26,6 @@ import { TreeViewSelectInputProps } from 'uxp/components';
 - [TreeViewStyles](../types/TreeViewStyles.md)
 - [ExtendedTreeNode](../types/ExtendedTreeNode.md)
 - [CustomActionButton](../types/CustomActionButton.md)
-- [DragState](../types/DragState.md)
 - [DropPosition](../types/DropPosition.md)
+- [DragState](../types/DragState.md)
 

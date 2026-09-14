@@ -33,7 +33,7 @@ const TreeViewSelectInput: React.ForwardRefExoticComponent<React.RefAttributes<T
 - [TreeViewStyles](../types/TreeViewStyles.md)
 - [ExtendedTreeNode](../types/ExtendedTreeNode.md)
 - [CustomActionButton](../types/CustomActionButton.md)
-- [DragState](../types/DragState.md)
 - [DropPosition](../types/DropPosition.md)
+- [DragState](../types/DragState.md)
 - [TreeViewSelectInputInstanceProps](../types/TreeViewSelectInputInstanceProps.md)
 

@@ -42,7 +42,9 @@ export interface TreeNode {
      */
     getChildren?: ((node: TreeNode) => Promise<{ nodes: TreeNode[] }>) | TreeNode[],
     /**
-     * If true, the node will be expanded on load
+     * If true, the node will be expanded on load.
+     * Only applies to a node that is new to the tree - a node already in the tree keeps its
+     * current expanded state across item updates.
      */
     expandOnLoad?: boolean,
     /**
@@ -53,6 +55,11 @@ export interface TreeNode {
      * If true, this node will be disabled
      */
     disableNode?: boolean,
+    /**
+     * If true, this node cannot be dragged. Unlike `disableNode` this affects nothing else:
+     * the node is not greyed out, stays selectable and its children stay draggable.
+     */
+    disableDragNode?: boolean,
     /**
      * If true, all child nodes will be disabled
      */

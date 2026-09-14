@@ -154,7 +154,7 @@ The host can watch without owning:
 
 Page Views uses that to keep the drill-down panel's header KPIs in step with the filters set inside it.
 
-> **Embedded dashboards only.** `EmbeddedDashboard` is the only provider today, so in a standard `/dashboard/<id>` dashboard the hook returns an inert value — reading gives `{}`, writing does nothing, no error. Support there is planned.
+> **Works in both dashboard types.** `EmbeddedDashboard` and the standard `/dashboard/<id>` dashboard both provide this context. Outside a dashboard entirely the hook returns an inert value — reading gives `{}`, writing does nothing, no error.
 
 ---
 

@@ -223,7 +223,7 @@ The host can observe the filters without owning them:
 
 Use it to keep something outside the dashboard in step — a details-panel header, say — or to seed another dashboard with the same values. The dashboard remains the owner; this is a notification, not a handover.
 
-> **Embedded dashboards only.** `EmbeddedDashboard` is currently the only provider of this context. In a standard `/dashboard/<id>` dashboard the hook returns an inert value — reading gives `{}`, writing does nothing, and no error is raised. Support there is planned. Outside a dashboard entirely (a plain page component) the same inert value applies, so a widget can be reused anywhere without knowing where it is mounted.
+> **Works in both dashboard types.** `EmbeddedDashboard` and the standard `/dashboard/<id>` dashboard both provide this context — each dashboard instance owns its own filter state. Outside a dashboard entirely (a plain page component) the hook returns an inert value — reading gives `{}`, writing does nothing, and no error is raised — so a widget can be reused anywhere without knowing where it is mounted.
 
 ---
 

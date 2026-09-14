@@ -36,7 +36,7 @@ names below exactly. Only `protected` and `lockAccess` are aliases; everything e
 | YAML key | Type | Required | Default | Meaning |
 |---|---|---|---|---|
 | `label` | string | Yes* | `""` | Display text. |
-| `link` | string | — | `null` | Relative URL. Empty/`null` ⇒ a [grouping node](#grouping-nodes--replacechildrenwith). Combined with `baseRoute` into a full URL. |
+| `link` | string | — | `null` | Relative URL. Empty/`null` ⇒ a [grouping node](#grouping-nodes--replacechildrenwith). Combined with `baseRoute` into a full URL. May carry a query string (`/portfolios?view=map`): the **route is the path**, and the query is passed to the page as props. Prefer setting it from the UI (**Query parameters** on the link form) — it is a customisation of the link, not of the app. |
 | `pageId` | string | For rendered links | `null` | Component to render, `ui/<id>` or `widget/<id>`. Not needed for groupings/external links. |
 | `icon` | string | — | `""` | Icon class, e.g. `fas building` or `phl building` (FontAwesome or Phosphor). |
 | `type` | string | — | inferred | `view` \| `dashboard` \| `externalLink` \| `embeddedDashboard` \| `dynamic`. Usually [inferred](#link-types-type--inference). |
@@ -49,8 +49,8 @@ names below exactly. Only `protected` and `lockAccess` are aliases; everything e
 | `replaceChildrenWith` | string | — | `null` | App id whose `navigationLinks` are spliced in as this node's children. |
 | `metadata` | object | — | `null` | Free-form. Used by [`type: dynamic`](#type-dynamic-advanced) to hold the `dynamic.execute` config. |
 | `configuredProps` | object | — | `null` | Props passed to the rendered component. |
-| `protected` | bool | — | `null` | Link cannot be deleted from the master list; **cascades** to descendants. See [guardrails](#permissions--access-guardrails). |
-| `lockAccess` | bool | — | `null` | Access is **system-managed** (never public, roles/groups read-only); **cascades**. See [guardrails](#permissions--access-guardrails). |
+| `protected` | bool | — | inherited | Link cannot be deleted or modified from the master list; **cascades** to descendants, and is **inherited** from the section that slots the app (set `false` to opt out). See [guardrails](#permissions--access-guardrails). |
+| `lockAccess` | bool | — | inherited | Access is **system-managed** (never public, roles/groups read-only); **cascades** and is **inherited** the same way. See [guardrails](#permissions--access-guardrails). |
 
 \* `label` is required in practice for anything user-visible.
 
@@ -234,6 +234,50 @@ always exist (the Administration menu, core system tools).
 > **Configure at least one role or group on a locked link.** A locked link that has a URL but no
 > `userGroups` and no `appRoles` would be open to everyone — the sync logs a warning if it finds one.
 
+### Where the flags are set, and how to opt out
+
+Both flags are set **once, high up** — on the `DefaultConfig.yml` section that slots an app, or at
+the **root of an app's `Configuration.yml`** — and everything below inherits them: the app's
+`navigationLinks` *and* its `otherRoutes` alike. An app slotted under several sections takes the
+strongest (`true` wins).
+
+A single link or route can differ:
+
+- `protected: false` / `lockAccess: false` — **opt out** of a protected section.
+- `protected: true` / `lockAccess: true` — **opt in** under an unflagged one.
+- omitted — inherit.
+
+```yaml
+# an app root: everything this app contributes is system-managed
+appId: System
+baseRoute: /admin
+protected: true
+lockAccess: true
+
+otherRoutes:
+  "/public-status":
+    pageId: ui/status-view
+    protected: false      # ...except this one URL
+```
+
+### Order inside a protected section
+
+A custom link added under a protected section always sits **after** that section's YML links and
+cannot be dragged, reordered or reparented in front of them — the tree editor gives no drop
+indicator there and the server refuses the write with *"Custom links stay after the system links in
+a protected section."* A new custom link with no `Priority` of its own is parked at the end. This
+applies only inside a protected section: a protected link sitting among ordinary siblings does not
+pin them.
+
+### What else protection turns off
+
+- **Routes**: a `protected` / `lockAccess` URL cannot be served by a custom route, and no longer
+  appears in the "override an existing route" picker.
+- **Tree editor**: a protected node has no Edit, Delete or **Configure Page/Dashboard** action and
+  no drag handle. Adding a child is still allowed.
+- **Page configurator**: a protected page offers no "Edit page" pencil; opening it with
+  `?configurepage=1` shows a warning instead of the editor.
+
 Real master-menu example (both flags, cascading to the whole admin subtree):
 
 ```yaml
@@ -325,6 +369,12 @@ customize navigation (reorder, rename, adjust access, hide links) without editin
 - **Profiles** — a *navigation profile* is a custom sidebar assigned to one or more **user groups**,
   derived from the master list. Each user group belongs to at most one profile. Use profiles to give
   different groups different (usually narrower) menus.
+  - A profile only picks and arranges master links. Editing a link from a profile — its label, icon,
+    page or destination — edits the master link itself, so every profile using it sees the change.
+  - **Access is configured in Master Links only.** Public access, user groups and app roles belong to
+    the master link, not to a profile. The link form opened from a profile shows the current access
+    read-only and points you to Master Links to change it. To give one group a narrower menu, put
+    fewer links in its profile; to change who may reach a link at all, edit it in Master Links.
 
 ### Adding new links from YML
 
@@ -366,7 +416,7 @@ Navigation can be synced/managed from the CLI. Run against an account:
 
 Before shipping navigation, verify:
 
-- [ ] `pageId` casing matches the `registerUI()`/`registerWidget()` id **exactly** (blank page otherwise).
+- [ ] `pageId` casing matches the `registerComponent` id **exactly** (blank page otherwise).
 - [ ] Rendered links have a `pageId`; grouping nodes (`link: null`) don't need one.
 - [ ] All `link` and route paths start with `/`.
 - [ ] Locked links (`lockAccess: true`) have at least one `userGroups` or `appRoles` entry.

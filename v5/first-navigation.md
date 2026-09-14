@@ -76,9 +76,10 @@ pageId: ui/portfolio-view  # Format: ui/<id>
 
 **In src/index.tsx:**
 ```typescript
-registerUI({
+registerComponent({
     id: "portfolio-view",  // Must match!
-    component: PortfolioView
+    component: PortfolioView,
+    modes: ['ui']
 });
 ```
 
