@@ -2,21 +2,6 @@
 
 Architectural change: the backend now stores widgets and UIs in one unified component store (`UXPComponents`), 100% backward compatible. There is **no visual change — QA cannot test this directly**.
 
-# Widget Designer
-
-The Widgets link opens the widget designer.
-
-- **Widgets List:** A Widgets list view exists under **Platform > Experience > Widgets** (searchable list with icon avatars, full-screen designer with an unsaved-change guard). The link is **currently hidden and will be enabled in the 5.1 release** — documented here so it can be tested then.
-
-## Standalone Widget Page
-
-Renders one widget on its own page.
-
-- **URL:** `/view/widget/<name>`. The old v4 URL `/Apps/UXP/page/<name>` redirects here, keeping query parameters.
-- **Sizing:** `?embedded=1` fills the frame 100%; otherwise the widget renders at its designed size, centred.
-- **Anonymous Access:** Per-widget — "Allow anonymous access" in the widget designer's Share section. When off, anonymous visitors are redirected to login; access fails closed on any error.
-- **Testing Focus:** open a widget's page while logged in (with and without `?embedded=1`), open an old `/Apps/UXP/page/<name>?x=1` URL (lands on the new URL with `x=1`), then log out and open it with anonymous access off (login page) and on (widget renders).
-
 # Dashboard Roles
 
 Dashboard permissions are now enforced with three UXP roles — and enforced **server-side**, so direct service calls without the role are rejected, not just hidden in the UI.
@@ -49,4 +34,4 @@ A purpose-built filter widget can filter the dashboard it sits on. This is **not
 - **Explicit Trigger:** Only a widget written as a filter (calling `useDashboardFilters().setFilters`) changes the dashboard's filters — intended for a global/dashboard-level filter widget.
 - **Delivery:** The dashboard merges the current filter values into every widget's props at render time; a widget reacts only if it is built to read those props.
 - **Isolation:** With a details panel open over a page dashboard, each filters only itself — the panel's filters never leak to the page behind it, and vice versa.
-- **Where to Test:** Works on embedded and standard dashboards alike — the Page Views analytics page and its drill-down panels use it, and the Page Views widgets (with the filter widget) can be tested on any standard dashboard.
+- **Where to Test:** Works on embedded and standard dashboards alike — place a filter widget on a dashboard together with widgets that read the filter props.

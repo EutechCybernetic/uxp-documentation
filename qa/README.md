@@ -1,19 +1,7 @@
-# v5 Migration of Framework and Base Applications
+# QA Guide
 
-This document provides a comprehensive overview of the migration to v5 and the newly developed features, specifically tailored for the QA team to establish end-to-end testing guidelines.
+Testing guidelines for the v5 framework and base applications, written for the QA team to plan end-to-end tests. The guide is grouped by release: test a build against the pages for its release and every release before it.
 
-## Contents
-
-- [Authentication & Login Page](authentication.md)
-- [Navigation & Custom Routes](navigation.md)
-- [Theming & Branding](theming-branding.md)
-- [In-App Notifications](notifications.md)
-- [Notification Templates](notification-templates.md)
-- [App Migrations](migrated-apps.md)
-- [Page View Analytics (NEW)](page-view-analytics.md)
-- [Media Library (NEW)](media-library.md)
-- [Widgets & Dashboards](widgets-dashboards.md)
-- [Customization & Extensibility](customization.md)
-- [Bulk Import](bulk-import.md)
-- [Data Export](data-export.md)
-- [Point Configuration Tool](point-configuration.md)
+- [v5.0.0](v5.0.0/README.md): the v5 migration: authentication, navigation, theming, notifications, migrated apps, widgets and dashboards, customization, bulk import, data export and the point configuration tool.
+- [v5.0.1](v5.0.1/README.md): patch release bug fixes.
+- [v5.1.0](v5.1.0/README.md): new features: page view analytics, the media library and the widget designer.

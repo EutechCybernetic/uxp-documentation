@@ -6,10 +6,10 @@ Five apps have been fully migrated to the v5 architecture: **System, User, UXP, 
 
 Fully migrated with a completely new navigation structure. All v4 functionality is preserved, with the new v5 branding and navigation modules added.
 
-- **Administration Menu:** General Settings · Access and Security (User Groups, Roles and Permissions, API Keys, SSO, OAuth, Settings) · Governance · System Configuration (Bulk Uploads) · Notifications (Templates, Email/SMS Queues, Settings) · Branding (Branding, Themes, Login Page, Localisations) · Navigation (Profiles, Master Links, Custom Routes) · Monitoring (Service Monitor, Scheduled Tasks, Subsystem Logs, Page Views) · Advanced (Cache Management).
+- **Administration Menu:** General Settings · Access and Security (User Groups, Roles and Permissions, API Keys, SSO, OAuth, Settings) · Governance · System Configuration (Bulk Uploads) · Notifications (Templates, Email/SMS Queues, Settings) · Branding (Branding, Themes, Login Page, Localisations) · Navigation (Profiles, Master Links, Custom Routes) · Monitoring (Service Monitor, Scheduled Tasks, Subsystem Logs) · Advanced (Cache Management).
 - **Testing Focus:** Functional parity with v4 and verification of the new hierarchical structure.
   - User groups & Audit logs are now under system app - still they are accessible through User and AuditTrail apps as well
-- **See Also:** [Navigation](navigation.md), [Theming & Branding](theming-branding.md), [Notification Templates](notification-templates.md), [Page View Analytics](page-view-analytics.md), [Bulk Import](bulk-import.md).
+- **See Also:** [Navigation](navigation.md), [Theming & Branding](theming-branding.md), [Notification Templates](notification-templates.md), [Bulk Import](bulk-import.md).
 
 ## Roles & Permissions
 
@@ -45,8 +45,8 @@ Found under **Administration > Advanced > Cache Management**.
 
 # User App
 
-- **Menu:** Users · User Groups · Documents · Configuration · My Profile · My Inbox · My Media.
-- **See Also:** [User Inbox](notifications.md), [Media Library](media-library.md).
+- **Menu:** Users · User Groups · Documents · Configuration · My Profile · My Inbox.
+- **See Also:** [User Inbox](notifications.md).
 
 ## User Management
 
@@ -59,7 +59,7 @@ Found under **Administration > Advanced > Cache Management**.
 # UXP App
 
 - **Menu:** Dashboards · Settings (the app's root lands on Dashboards).
-- **See Also:** [Widgets & Dashboards](widgets-dashboards.md) — dashboard roles, dashboard filters, the widget designer (link hidden until 5.1) and the standalone widget page.
+- **See Also:** [Widgets & Dashboards](widgets-dashboards.md) — dashboard roles and dashboard filters.
 
 # Messaging Connector App
 

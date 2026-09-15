@@ -1,4 +1,4 @@
-# Media Library (NEW)
+# Media Library
 
 One media picker field across the platform for images, icons, documents, video and audio — plus a per-user library of everything uploaded through it.
 
