@@ -16,7 +16,7 @@ and who gets to see what.
 
 For developers building on iviva. It has three sections:
 
-- **Apps: what's new in v5 and migrating from v4**: building a v5 app end to end, and migrating a v4 app.
+- **Building iviva apps**: what changed in v5, building a v5 app end to end, and migrating a v4 app.
 - **Building UIs and widgets with uxp**: registering components, writing UI views and dashboard widgets,
   talking to Lucy, real-time messaging, bundles and publishing, and the `lucy-xp` CLI.
 - **Component reference**: the generated API reference for every component, hook, type and function exported

@@ -95,6 +95,37 @@ async function getData(max: number, last: string, args: any) {
 `uxpContext.fromLucyDataCollection(model, collection)` returns a function of exactly this shape, so a Lucy
 collection can be handed straight to `data`.
 
+## Grids of cards
+
+When the set is small and fixed — a launcher, a summary of mixed content, a set of shortcuts — `DataGrid`
+lays the items out in columns instead of rows, and `ItemCard` renders each one. Tell `ItemCard` which
+fields to read for the image, title, subtitle and name; any of them may be absent and the card adapts.
+
+```tsx
+const items = [
+    { icon: 'qr-code', title: 'Badge', subTitle: 'Scan your code' },
+    { name: 'Jane Doe', title: 'Assigned to', subTitle: 'No image, so the name is used' },
+    { title: 'Title only' }
+];
+
+<DataGrid
+    data={items}
+    renderItem={(item, key) => (
+        <ItemCard
+            key={key}
+            item={item}
+            imageField="icon"
+            titleField="title"
+            subTitleField="subTitle"
+            nameField="name"
+        />
+    )}
+    columns={2}
+/>
+```
+
+Use `DataList` instead when the set can grow: `DataGrid` lays out what you give it, `DataList` pages.
+
 ## Settings screens
 
 `ConfigurationView` gives a settings page its sidebar and its header. Each section has an id, a title, the

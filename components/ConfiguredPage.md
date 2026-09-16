@@ -32,6 +32,7 @@ const ConfiguredPage: React.MemoExoticComponent<React.FunctionComponent<Configur
 |additionalProps|any|No|-|-|
 |configuredProps|Record<string, any>|No|-|-|
 |notFoundMessage|string \| React.ReactNode|No|-|-|
+|disablePageEditor|boolean|No|-|-|
 
 ## Related Types
 

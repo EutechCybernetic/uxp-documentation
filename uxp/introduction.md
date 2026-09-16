@@ -1,4 +1,4 @@
-# Introduction
+# Building UIs and widgets with uxp
 
 uxp is the React component library and runtime that iviva's frontend is built on. You use it to build the
 screens your users work in: application pages, dashboards and the widgets placed on them.
