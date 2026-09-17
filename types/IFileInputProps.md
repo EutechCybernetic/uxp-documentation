@@ -40,6 +40,12 @@ interface IFileInputProps extends InputSizeProps, InputStateProps {
     allowedTypes?: string[]
 
     /**
+     * Largest file accepted, in MB. A file above this is rejected when picked,
+     * exactly like a disallowed type. 0 or omitted means no limit.
+     */
+    maxSizeMB?: number
+
+    /**
      * Preview configuration
      */
     preview?: {

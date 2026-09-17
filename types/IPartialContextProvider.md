@@ -64,6 +64,18 @@ export interface IPartialContextProvider {
 
     maxFileUploadSize?: number
 
+    /**
+     * File size in MB above which an upload switches to the chunked endpoint.
+     * 0 means never chunk. Comes from the LargeUploadFileSizeMB config key.
+     */
+    largeUploadFileSizeMB?: number
+
+    /**
+     * Chunk size in MB used by the chunked upload path.
+     * Comes from the MaxUploadChunkSizeMB config key.
+     */
+    uploadChunkSizeMB?: number
+
     // this is to track analytics
     trackAnalytics?: (event: string, data?: { [key: string]: any }) => void,
 

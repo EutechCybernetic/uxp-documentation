@@ -94,7 +94,7 @@ The context is also a bag of values about the session and the account.
 | `language`, `enabledLanguages`, `direction` | Language state, and `'rtl'` when the active language is right to left |
 | `themeName`, `theme`, `themeType` | The active theme |
 | `navigationLinks`, `routes`, `configuredPages` | The navigation and route tables the shell resolved for this user |
-| `maxFileUploadSize` | The account's upload limit, in bytes |
+| `maxFileUploadSize` | The account's single-request upload limit, in MB. 0 means no limit |
 | `isPublicSession` | `true` when the page was loaded without a real user session |
 
 Read `navigationLinks` and `routes` when you need to reason about what exists. To move the user, use

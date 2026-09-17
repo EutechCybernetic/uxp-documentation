@@ -1,31 +1,24 @@
-# uploadFile
+# getUploadSizeLimitMB
 
 
-Upload a file to the platform content store.
+Largest file a picker should accept, in MB. 0 means no limit.
 
-Small files are POSTed as multipart form data to
-`{lucyUrl}uploadcontent/{path}?filename={name}`. Files above the account's
-large-upload threshold are sent to the chunked endpoint instead, which is the
-only way past the server's single-request size limit. Callers do not choose:
-the size decides, and the result is the same either way.
-
-Either way the stored file is served from `{lucyUrl}content/{path}{name}`
-(returned as an absolute URL).
-
-Prefer the `useFileUpload` hook inside components; this function exists for
-non-hook contexts.
+The account's size cap applies to single-request uploads only. When chunking
+is switched on, anything above the chunk threshold is split across requests
+and the cap does not apply to it, so there is no size limit at all. This
+matches how v4 wired the same two settings.
 
 
 ## Installation
 
 ```tsx
-import { uploadFile } from 'uxp/components';
+import { getUploadSizeLimitMB } from 'uxp/components';
 ```
 
 ## Signature
 
 ```tsx
-function uploadFile(context: IContextProvider, file: File, options: IFileUploadOptions): Promise<IFileUploadResult>
+function getUploadSizeLimitMB(context: IContextProvider): number
 ```
 
 ## Related Types
@@ -56,5 +49,4 @@ function uploadFile(context: IContextProvider, file: File, options: IFileUploadO
 - [PublishNotificationParams](../types/PublishNotificationParams.md)
 - [NotificationSeverity](../types/NotificationSeverity.md)
 - [ResolveNotificationsFilters](../types/ResolveNotificationsFilters.md)
-- [IFileUploadOptions](../types/IFileUploadOptions.md)
 

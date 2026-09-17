@@ -35,6 +35,7 @@ const FileInput: React.ForwardRefExoticComponent<React.RefAttributes<IFileInputI
 |multiple|boolean|No|false|-|
 |onFilesChange|(files: File[], allValid: boolean) => void|No|-|-|
 |allowedTypes|string[]|No|-|-|
+|maxSizeMB|number|No|-|-|
 |preview|{ showName?: boolean // default false showPreview?: boolean // default true }|No|-|-|
 |className|string|No|-|-|
 |dropAreaIcon|IconProp|No|-|-|
