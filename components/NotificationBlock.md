@@ -1,14 +1,5 @@
 # NotificationBlock
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=notificationblock--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="NotificationBlock live demo"
-></iframe>
-
-
 ## Installation
 
 ```tsx
@@ -33,12 +24,22 @@ const NotificationBlock: React.FunctionComponent<INotificationProps>
  <NotificationBlock variant="warning" message="Permissions changed" action={<button onClick={reload}>Refresh</button>} />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=feedback-notificationblock--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="NotificationBlock live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|message|string|No|-|-|
-|title|string|No|-|-|
+|message|string|No|-|"Chiller 02 will be offline on 12 Aug from 09:00 to 11:00."|
+|title|string|No|-|"Scheduled maintenance"|
 |children|React.ReactNode|No|-|-|
 |variant|[NotificationVariant](../types/NotificationVariant.md)|No|-|-|
 |mode|[NotificationMode](../types/NotificationMode.md)|No|-|-|

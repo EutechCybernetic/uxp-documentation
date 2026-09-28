@@ -14,11 +14,13 @@ render through the shared `<Icon>` component.
 export interface MapMarkerProps {
     /**
      * Pin body colour — any CSS colour. Defaults to the theme accent colour.
+     * @example "#1e88e5"
      */
     color?: string;
     /**
      * Icon to show in the pin head instead of the dot — a uxp icon string,
      * e.g. 'fas bell', 'fal coffee', 'phb anchor'.
+     * @example "fas building"
      */
     icon?: string;
     /**

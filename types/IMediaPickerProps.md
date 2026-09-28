@@ -11,12 +11,14 @@ interface IMediaPickerProps extends InputSizeProps, InputStateProps {
     /**
      * Kinds of media this field accepts. `Icon` adds the font-icon source
      * (and image files from the library).
+     * @example ['Image']
      */
     mediaTypes: MediaType[]
 
     /**
      * The current value. Icon values are icon strings (`fas:bell`), everything
      * else is a usable URL. An array when `multiple` is set.
+     * @example "media/lobby.png"
      */
     value: string | string[]
 

@@ -1,13 +1,6 @@
 # PortalContainer
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=popups-portalcontainer--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="PortalContainer live demo"
-></iframe>
-
+> **Advanced.** Available for building custom components. Most apps do not need it.
 
 
 
@@ -49,12 +42,12 @@ const PortalContainer: React.FunctionComponent<IPortalContainerProps>
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|hasBackdrop|boolean|No|-|-|
+|hasBackdrop|boolean|No|-|true|
 |onClickBackdrop|(e?: React.MouseEvent<HTMLDivElement>) => void|No|-|-|
 |backdropStyles|any|No|-|-|
 |disableScroll|boolean|No|-|-|
 |className|string|No|-|-|
-|children|React.ReactNode|No|-|-|
+|children|React.ReactNode|No|-|Box <div style={{ padding: 24, background: 'var(--portalBGColor)' }}>Rendered i…|
 
 ## Related Types
 

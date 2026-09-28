@@ -49,19 +49,29 @@ function renderAutoFill() {
 <AutoCompleteInput value={val} onChange={setVal} autoFill={renderAutoFill} ref={inputRef} />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-selection-autocompleteinput--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="AutoCompleteInput live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|value|string|Yes|-|-|
+|value|string|Yes|-|"Sin"|
 |onChange|(val: string) => void|Yes|-|-|
-|options|string[]|No|-|-|
-|autoFill|() => JSX.Element|No|-|* ```tsx|
+|options|string[]|No|-|['Singapore', 'Sydney', 'Shanghai', 'Seoul', 'San Francisco']|
+|autoFill|() => JSX.Element|No|-|function renderAutoFill() { return ( <div> {results.map((r, i) => ( <div key={i…|
 |onClear|() => void|No|-|-|
 |className|string|No|-|-|
 |placeholder|string|No|-|-|
 |tabIndex|number|No|-|-|
-|addNewValues|[IAddNewValues](../types/IAddNewValues.md)|No|-|* ```tsx|
+|addNewValues|[IAddNewValues](../types/IAddNewValues.md)|No|-|// Scenario A — create from typed text on no-match <AutoCompleteInput value={va…|
 
 ## Ref Handlers
 

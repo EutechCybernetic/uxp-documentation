@@ -10,6 +10,13 @@ Props for the Breadcrumb component.
 export interface BreadcrumbProps {
     /**
      * Array of breadcrumb items to display.
+     * @example
+     * [
+     *   { label: 'Sites' },
+     *   { label: 'Head Office' },
+     *   { label: 'Level 1' },
+     *   { label: 'Plant room' },
+     * ]
      */
     items: BreadcrumbItem[];
 
@@ -65,6 +72,10 @@ export interface BreadcrumbProps {
 
     /**
      * Callback when a breadcrumb item is clicked.
+     * @example Log
+     * ```tsx
+     * onItemClick={(item, index) => console.log('crumb', index, item.label)}
+     * ```
      */
     onItemClick?: (item: BreadcrumbItem, index: number) => void;
 }

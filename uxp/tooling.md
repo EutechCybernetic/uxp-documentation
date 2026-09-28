@@ -50,12 +50,37 @@ in detail.
 ## Storybook
 
 Every component in the library has a live Storybook story at
-[uxp-components.vercel.app](https://uxp-components.vercel.app). Each page of the component reference embeds
-that component's story at the top, so you can see and interact with the real component while you read its
-props.
+[story.uxp.iviva.com](https://story.uxp.iviva.com). Each page of the component reference has a **Live
+preview** of that story after its examples, so you can see and interact with the real component while you
+read its props. Under **Variants**, each example that renders the component is shown live as well.
 
 Use it to check what a component looks like before you write the code around it, and to see which variant of
 a component you actually want.
+
+### Embedding a variant
+
+Each component page has a **Copy embed link** button. Set the props you want in the Properties panel, then
+click it. The link opens only the preview, with those props. Paste it as an iframe `src`.
+
+You can also write the link by hand:
+
+```
+https://story.uxp.iviva.com/iframe.html?id=<story-id>&viewMode=story&args=...&props=...&globals=...
+```
+
+| Parameter | Use it for | Example |
+|---|---|---|
+| `args` | Simple values: text with letters, digits, spaces, `_` and `-` only, numbers and booleans. Separate props with `;`. | `args=variant:danger;disabled:!true` |
+| `props` | Any value, as URL-encoded JSON: text with other characters, arrays and objects. | `props={"title":"Save & close"}` |
+| `globals` | The component theme: `Light`, `Dark`, `Glass Light` or `Glass Dark`. | `globals=theme:Dark` |
+
+`args` applies on top of `props`. Functions cannot be passed in a URL.
+
+The story id is the page's category and name in lowercase, joined with `-`, plus `--default`. For example,
+Buttons / ButtonComponent is `buttons-buttoncomponent--default`.
+
+An embed shows an **Open in playground** link. It opens the full page with the same props. The same `args`,
+`props` and `globals` parameters work on a playground page link.
 
 ## uxp.d.ts
 

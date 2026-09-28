@@ -1,5 +1,7 @@
 # ConfigurationViewContent
 
+> **Part of [ConfigurationView](ConfigurationView.md).** Usually used through ConfigurationView. Use it directly to build a custom layout.
+
 
 Content wrapper for a configuration section — applies the standard scroll and
 overflow behaviour (flex-grow, overflow-y: auto). Use alongside
@@ -30,11 +32,21 @@ tsx
 </ConfigurationViewContent>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=forms-configuration-view-configurationviewcontent--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ConfigurationViewContent live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|children|React.ReactNode|Yes|-|-|
+|children|React.ReactNode|Yes|-|Text <div>Account name, time zone and currency.</div>|
 
 ## Related Types
 

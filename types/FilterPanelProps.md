@@ -21,6 +21,10 @@ interface FilterPanelProps {
     /**
      * Called whenever the clear button on the panel is pressed
      * This button is available only when `enableClear` is set to `true`
+     * @example Log
+     * ```tsx
+     * onClear={() => console.log('cleared')}
+     * ```
      */
     onClear?: () => void;
 
@@ -57,6 +61,17 @@ interface FilterPanelProps {
      *     <Select options={options} selected={selected} onChange={setSelected} />
      *   </FormField>
      * </FilterPanel>
+     * ```
+     * @example Status filter
+     * ```tsx
+     * <FormField>
+     *     <Label>Status</Label>
+     *     <Select
+     *         options={[{ label: 'Running', value: 'Running' }, { label: 'Stopped', value: 'Stopped' }]}
+     *         selected="Running"
+     *         onChange={(value) => console.log('status', value)}
+     *     />
+     * </FormField>
      * ```
      */
     children?: React.ReactNode;

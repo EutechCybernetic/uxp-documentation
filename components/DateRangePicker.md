@@ -1,14 +1,5 @@
 # DateRangePicker
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-datetimepicker-daterangepicker--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="DateRangePicker live demo"
-></iframe>
-
-
 
 
 
@@ -39,13 +30,23 @@ const DateRangePicker: React.FunctionComponent<IDateRangePickerProps>
  />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-date-and-time-daterangepicker--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DateRangePicker live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |title|string|No|-|-|
-|startDate|string \| Date|Yes|-|-|
-|endDate|string \| Date|Yes|-|-|
+|startDate|string \| Date|Yes|-|"2026-09-01"|
+|endDate|string \| Date|Yes|-|"2026-09-28"|
 |preset|string|No|-|-|
 |onChange|(newStartDate: string \| Date, newEndDate: string \| Date, preset?: string) => void|Yes|-|-|
 |closeOnSelect|boolean|No|-|-|

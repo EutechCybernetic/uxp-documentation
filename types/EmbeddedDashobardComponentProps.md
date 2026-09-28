@@ -21,6 +21,7 @@ export interface EmbeddedDashobardComponentProps {
      *     { id: `ibms/equipment/${equipmentType}`, label: equipmentType },
      *     { id: "ibms/equipment", label: "Default" }
      *   ]}
+     * @example ['storybook-sample-dashboard']
      */
     ids: DashboardIdEntry[];
 

@@ -9,8 +9,23 @@ for triggers other than the default input.
 
 ```tsx
 interface IImagePickerModalProps {
+    /**
+     * @example true
+     */
     show: boolean
+    /**
+     * @example Log
+     * ```tsx
+     * onClose={() => console.log('closed')}
+     * ```
+     */
     onClose: () => void
+    /**
+     * @example Log
+     * ```tsx
+     * onSelect={(url) => console.log('selected', url)}
+     * ```
+     */
     onSelect: (url: string) => void
     uploadPath?: string
     searchParameters?: { [key: string]: any }

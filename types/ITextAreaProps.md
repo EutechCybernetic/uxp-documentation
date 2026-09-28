@@ -6,6 +6,7 @@
 interface ITextAreaProps extends InputSizeProps, InputStateProps {
     /**
     * The actual text
+     * @example "Replaced the filter and checked the belt tension."
     */
     value: string,
     /**

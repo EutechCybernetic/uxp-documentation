@@ -13,6 +13,7 @@ interface IDateTimePickerProps extends InputSizeProps, InputStateProps {
     title?: string,
     /**
     * The currently selected datetime. Either a Date object or an ISO8601 string representation of a date
+     * @example "2026-09-28T09:30:00"
     */
     datetime: string | Date,
     /**

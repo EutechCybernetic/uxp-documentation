@@ -59,6 +59,10 @@ interface PopoverProps {
      *      <button>Click me</button>
      *  </Popover>
      * ```
+     * @example Button
+     * ```tsx
+     * <Button title="Click me" />
+     * ```
      */
     children?: React.ReactNode;
 }

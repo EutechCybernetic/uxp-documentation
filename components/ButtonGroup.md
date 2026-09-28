@@ -1,14 +1,5 @@
 # ButtonGroup
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=buttons-buttongroup--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ButtonGroup live demo"
-></iframe>
-
-
 
 A component that renders a group of buttons with optional dropdown support.
 
@@ -65,16 +56,38 @@ const ButtonGroup: React.FunctionComponent<ButtonGroupProps>
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-buttongroup--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ButtonGroup live preview"
+></iframe>
+
+### Variants
+
+#### Example 1
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-buttongroup--default&amp;viewMode=story&amp;args=activeId%3Aadd&amp;props=%7B%22buttons%22%3A%5B%7B%22id%22%3A%22add%22%2C%22title%22%3A%22Add%22%2C%22leftIcon%22%3A%22fas+fa-plus%22%7D%2C%7B%22id%22%3A%22edit%22%2C%22title%22%3A%22Edit%22%2C%22leftIcon%22%3A%22fas+fa-edit%22%7D%5D%7D"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ButtonGroup: Example 1"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|buttons|[ButtonGroupItem[]](../types/ButtonGroupItem.md)|Yes|-|-|
-|activeId|string|No|-|-|
-|variant|[ButtonComponentVarient](../types/ButtonComponentVarient.md)|No|-|-|
+|buttons|[ButtonGroupItem[]](../types/ButtonGroupItem.md)|Yes|-|[ { id: 'day', title: 'Day' }, { id: 'week', title: 'Week' }, { id: 'month', ti…|
+|activeId|string|No|-|"week"|
+|variant|[ButtonComponentVarient](../types/ButtonComponentVarient.md)|No|'secondary'|-|
 |className|string|No|-|-|
 |styles|React.CSSProperties|No|-|-|
-|onButtonClick|(buttonId: string) => void|No|-|-|
+|onButtonClick|(buttonId: string) => void|No|-|Log the id onButtonClick={(buttonId) => console.log('clicked', buttonId)}|
 
 ## Related Types
 

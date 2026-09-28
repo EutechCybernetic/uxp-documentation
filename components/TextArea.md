@@ -1,16 +1,8 @@
 # TextArea
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-textarea--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="TextArea live demo"
-></iframe>
-
-
 
 A standard textarea (multi line text box)
+
 
 
 
@@ -26,11 +18,21 @@ import { TextArea } from 'uxp/components';
 const TextArea: React.ForwardRefExoticComponent<React.RefAttributes<ITextAreaInstanceProps> & ITextAreaProps>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-text-textarea--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="TextArea live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|value|string|Yes|-|-|
+|value|string|Yes|-|"Replaced the filter and checked the belt tension."|
 |onChange|(value: string) => void|Yes|-|-|
 |onFocus|() => void|No|-|-|
 |onBlur|(vale: string) => void|No|-|-|

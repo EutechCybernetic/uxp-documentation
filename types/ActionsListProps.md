@@ -10,6 +10,13 @@ Props for the ActionsListComponent.
 export interface ActionsListProps {
     /**
      * Array of actions or a function returning actions or a React node to render.
+     * @example Edit and delete
+     * ```tsx
+     * actions={[
+     *     { label: 'Edit', icon: 'fas pen', onClick: (item) => console.log('edit', item) },
+     *     { label: 'Delete', icon: 'fas trash', onClick: (item) => console.log('delete', item) },
+     * ]}
+     * ```
      */
     actions: Action[] | ((item?: any) => Action[] | React.ReactNode);
 

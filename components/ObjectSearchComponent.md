@@ -1,14 +1,5 @@
 # ObjectSearchComponent
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=list-tables-object-search-objectsearchcomponent--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ObjectSearchComponent live demo"
-></iframe>
-
-
 
 A component for searching, filtering, and displaying tabular data with support for pagination, views, and details panels.
 
@@ -63,25 +54,47 @@ const ObjectSearchComponent: React.MemoExoticComponent<React.ForwardRefExoticCom
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-object-search-objectsearchcomponent--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ObjectSearchComponent live preview"
+></iframe>
+
+### Variants
+
+#### Example 1
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-object-search-objectsearchcomponent--default&amp;viewMode=story&amp;args=title%3AUsers%3BpageSize%3A10%3Btotal%3A2%3BidField%3Aid%3BnameField%3A%21undefined%3Bsearch%3A%21undefined&amp;props=%7B%22data%22%3A%5B%7B%22id%22%3A%221%22%2C%22name%22%3A%22John%22%7D%2C%7B%22id%22%3A%222%22%2C%22name%22%3A%22Jane%22%7D%5D%2C%22columns%22%3A%5B%7B%22id%22%3A%22name%22%2C%22label%22%3A%22Name%22%7D%5D%7D"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ObjectSearchComponent: Example 1"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|title|string \| ReactNode|No|-|-|
+|title|string \| ReactNode|No|-|"Assets"|
 |filters|[FilterConfig](../types/FilterConfig.md)|No|-|-|
 |views|[ViewsConfig](../types/ViewsConfig.md)|No|-|-|
-|data|RowData[] \| ((page: number, pageSize: number, query?: string, filters?: Filters, sort?: Sort) => Promise<{ items: RowData[] }>)|Yes|-|-|
-|columns|[OSCColumn[]](../types/OSCColumn.md)|Yes|-|-|
+|data|RowData[] \| ((page: number, pageSize: number, query?: string, filters?: Filters, sort?: Sort) => Promise<{ items: RowData[] }>)|Yes|-|[ { id: 1, name: 'Chiller 01', status: 'Running', location: 'Level 1' }, { id: …|
+|columns|[OSCColumn[]](../types/OSCColumn.md)|Yes|-|[ { id: 'name', label: 'Name' }, { id: 'status', label: 'Status' }, { id: 'loca…|
 |defaultActionColumns|[DefaultActionColumnsConfig](../types/DefaultActionColumnsConfig.md)|No|-|-|
-|pageSize|number|Yes|-|-|
-|total|number \| ((query?: string, filters?: Filters) => Promise<number>)|Yes|-|-|
+|pageSize|number|Yes|-|5|
+|total|number \| ((query?: string, filters?: Filters) => Promise<number>)|Yes|-|7|
 |loading|boolean|No|-|-|
 |noItemsMessage|string \| ReactNode|No|-|-|
 |minCellWidth|number|No|-|-|
 |onClickRow|(e: MouseEvent<HTMLDivElement>, item: any) => void|No|-|-|
 |detailsPanel|DefaultDetailsPanelProps \| CustomDetailsPanelProps|No|-|-|
-|idField|string|Yes|-|-|
-|nameField|string|No|-|-|
+|idField|string|Yes|-|"id"|
+|nameField|string|No|-|"name"|
 |typeField|string|No|-|-|
 |actionButtons|ReactNode|No|-|-|
 |bulkActionButtons|ReactNode|No|-|-|
@@ -90,7 +103,7 @@ const ObjectSearchComponent: React.MemoExoticComponent<React.ForwardRefExoticCom
 |renderChildren|(childRows: RowData[], rowProps: TableRowBasicProps) => ReactNode|No|-|-|
 |renderCell|(row: RowData, column: ExtendedOSCColumn) => ReactNode|No|-|-|
 |summaryContent|ReactNode|No|-|-|
-|search|{ /** * Enables the search box. */ enable: boolean; /** * Fields in the data to use for text search (required for static data arrays). */ fields?: string[]; /** * If true, collapses the search box by default. */ collapsed?: boolean; }|No|-|-|
+|search|{ /** * Enables the search box. */ enable: boolean; /** * Fields in the data to use for text search (required for static data arrays). */ fields?: string[]; /** * If true, collapses the search box by default. */ collapsed?: boolean; }|No|-|{ enable: true, fields: ['name', 'location'] }|
 |collapsedWidth|string \| number|No|-|-|
 |appendToURL|boolean|No|-|-|
 |clearParamsOnSelect|string[]|No|-|-|

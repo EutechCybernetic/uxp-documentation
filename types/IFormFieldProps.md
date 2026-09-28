@@ -31,6 +31,15 @@ interface IFormFieldProps {
      * Remove all margins except bottom margin
      */
     marginBottomOnly?: boolean,
+    /**
+     * @example Label and input
+     * ```tsx
+     * <>
+     *     <Label>Asset name</Label>
+     *     <Input value="Chiller 01" onChange={(value) => console.log(value)} />
+     * </>
+     * ```
+     */
     children?: React.ReactNode;
 }
 ```

@@ -8,16 +8,42 @@ Props for the TableComponent.
 
 ```tsx
 export interface TableComponentProps {
-    /** Array of data objects or a function to fetch paginated data */
+    /**
+     * Array of data objects or a function to fetch paginated data
+     * @example
+     * [
+     *   { id: 1, name: 'Chiller 01', status: 'Running', location: 'Level 1' },
+     *   { id: 2, name: 'Chiller 02', status: 'Stopped', location: 'Level 1' },
+     *   { id: 3, name: 'AHU 01', status: 'Running', location: 'Level 2' },
+     *   { id: 4, name: 'AHU 02', status: 'Fault', location: 'Level 2' },
+     *   { id: 5, name: 'Pump 01', status: 'Running', location: 'Basement' },
+     *   { id: 6, name: 'Pump 02', status: 'Running', location: 'Basement' },
+     *   { id: 7, name: 'Boiler 01', status: 'Stopped', location: 'Roof' },
+     * ]
+     */
     data: RowData[] | ((page: number, pageSize: number, query?: string, filters?: Filters) => Promise<{ items: RowData[] }>);
 
-    /** List of columns to display */
+    /**
+     * List of columns to display
+     * @example
+     * [
+     *   { id: 'name', label: 'Name' },
+     *   { id: 'status', label: 'Status' },
+     *   { id: 'location', label: 'Location' },
+     * ]
+     */
     columns: TableColumn[];
 
-    /** Number of rows per page */
+    /**
+     * Number of rows per page
+     * @example 5
+     */
     pageSize: number;
 
-    /** Total number of items or a function returning the total */
+    /**
+     * Total number of items or a function returning the total
+     * @example 7
+     */
     total: number | ((query?: string, filters?: Filters) => Promise<number>);
 
     /** Loading state */
@@ -45,7 +71,10 @@ export interface TableComponentProps {
     /** Enable expandable rows — a chevron appears on any row whose data has a `children` array. */
     expandColumn?: { enable: boolean; label?: string; width?: number };
 
-    /** Minimum width for any table cell */
+    /**
+     * Minimum width for any table cell
+     * @default 100
+     */
     minCellWidth?: number;
 
     /** Callback when a row is clicked */

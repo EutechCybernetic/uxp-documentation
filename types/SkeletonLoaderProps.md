@@ -11,12 +11,14 @@ export interface SkeletonLoaderProps {
     /**
      * Width of the skeleton loader. Can be a CSS unit (e.g., '100%', '200px').
      * Defaults to '100%'.
+     * @example "240px"
      */
     width?: string;
 
     /**
      * Height of the skeleton loader. Can be a CSS unit (e.g., '1rem', '20px').
      * Defaults to '1rem'.
+     * @example "20px"
      */
     height?: string;
 

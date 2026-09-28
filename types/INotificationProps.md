@@ -6,10 +6,12 @@
 interface INotificationProps {
     /**
      * Message to show. Optional when `children` (or a card `title` + `children`) is provided.
+     * @example "Chiller 02 will be offline on 12 Aug from 09:00 to 11:00."
      */
     message?: string,
     /**
      * Optional card header. When set, the block renders as a card: `title` on top, body below.
+     * @example "Scheduled maintenance"
      */
     title?: string,
     /**

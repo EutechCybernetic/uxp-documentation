@@ -11,11 +11,18 @@ export interface InfoCardGroupInputProps {
     /**
      * List of available items to select from
      * Can be static array or dynamic data function
+     * @example
+     * [
+     *   { label: 'Alex Morgan', value: '1001' },
+     *   { label: 'Priya Nair', value: '1002' },
+     *   { label: 'Chen Wei', value: '1003' },
+     * ]
      */
     options: IOption[] | any[] | IDataFunction;
 
     /**
      * Array of currently selected values (not full objects, just values)
+     * @example ['1001', '1002']
      */
     selected: string[];
 

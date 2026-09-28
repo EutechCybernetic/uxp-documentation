@@ -10,11 +10,20 @@ Props for the InfoCardGroup component (display-only)
 export interface InfoCardGroupProps {
     /**
      * Array of items to display as profile images
+     * @example
+     * [
+     *   { name: 'Alex Morgan', email: 'alex.morgan@example.com' },
+     *   { name: 'Priya Nair', email: 'priya.nair@example.com' },
+     *   { name: 'Chen Wei', email: 'chen.wei@example.com' },
+     *   { name: 'Sam Carter', email: 'sam.carter@example.com' },
+     *   { name: 'Lena Fischer', email: 'lena.fischer@example.com' },
+     * ]
      */
     items: any[];
 
     /**
      * Field mappings for displaying image/name (maps data fields to image/name)
+     * @example { name: 'name', title: 'name', subtitle: 'email' }
      */
     fields?: InfoCardFields;
 
@@ -30,6 +39,7 @@ export interface InfoCardGroupProps {
     /**
      * Maximum number of profile images to display before showing "+N" badge
      * Defaults to 5
+     * @example 3
      */
     maxVisible?: number;
 

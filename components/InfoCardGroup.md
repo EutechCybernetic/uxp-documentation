@@ -1,14 +1,5 @@
 # InfoCardGroup
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=list-infocardgroup--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="InfoCardGroup live demo"
-></iframe>
-
-
 
 A component that displays a group of profile images stacked horizontally with overlap.
 Shows a "+N" badge for remaining items when maxVisible limit is reached.
@@ -63,14 +54,36 @@ const InfoCardGroup: React.FunctionComponent<InfoCardGroupProps>
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-cards-infocardgroup--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="InfoCardGroup live preview"
+></iframe>
+
+### Variants
+
+#### Basic usage:
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-cards-infocardgroup--default&amp;viewMode=story&amp;args=maxVisible%3A3&amp;props=%7B%22items%22%3A%5B%7B%22avatar%22%3A%22https%3A%2F%2Fexample.com%2F1.jpg%22%2C%22name%22%3A%22John+Doe%22%2C%22email%22%3A%22john%40example.com%22%7D%2C%7B%22avatar%22%3A%22https%3A%2F%2Fexample.com%2F2.jpg%22%2C%22name%22%3A%22Jane+Smith%22%2C%22email%22%3A%22jane%40example.com%22%7D%5D%2C%22fields%22%3A%7B%22image%22%3A%22avatar%22%2C%22name%22%3A%22name%22%2C%22title%22%3A%22name%22%2C%22subtitle%22%3A%22email%22%7D%7D"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="InfoCardGroup: Basic usage:"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|items|any[]|Yes|-|-|
-|fields|[InfoCardFields](../types/InfoCardFields.md)|No|-|-|
+|items|any[]|Yes|-|[ { name: 'Alex Morgan', email: 'alex.morgan@example.com' }, { name: 'Priya Nai…|
+|fields|[InfoCardFields](../types/InfoCardFields.md)|No|-|{ name: 'name', title: 'name', subtitle: 'email' }|
 |details|[InfoCardDetailsContent](../types/InfoCardDetailsContent.md)|No|-|-|
-|maxVisible|number|No|-|-|
+|maxVisible|number|No|-|3|
 |size|[Size](../types/Size.md)|No|-|-|
 |shape|[Shape](../types/Shape.md)|No|-|-|
 |dropdownPosition|[DropdownPosition](../types/DropdownPosition.md)|No|-|-|

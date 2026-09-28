@@ -1,14 +1,5 @@
 # TreeView
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=list-treeview--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="TreeView live demo"
-></iframe>
-
-
 
 
 
@@ -45,17 +36,27 @@ const TreeView: React.ForwardRefExoticComponent<React.RefAttributes<TreeViewHand
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-lists-tree-view-treeview--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="TreeView live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|items|[TreeNode[]](../types/TreeNode.md)|Yes|-|-|
+|items|[TreeNode[]](../types/TreeNode.md)|Yes|-|[ { id: 'hq', label: 'Head Office', icon: 'fas building', path: 'hq', expandOnL…|
 |noItemsMessage|string|No|-|-|
 |showPath|boolean|No|-|-|
 |renderRootNodesHorizontally|boolean|No|-|-|
 |multiSelect|boolean|No|-|-|
 |selected|TreeNode \| TreeNode[]|No|-|-|
-|onSelect|(selected: TreeNode \| TreeNode[]) => void|No|-|-|
+|onSelect|(selected: TreeNode \| TreeNode[]) => void|No|-|Log onSelect={(selected) => console.log('selected', selected)}|
 |styles|[TreeViewStyles](../types/TreeViewStyles.md)|No|-|-|
 |showHeader|boolean|No|-|-|
 |title|string \| React.ReactNode|No|-|-|

@@ -6,6 +6,7 @@
 interface IAutoCompleteInputProps extends InputSizeProps, InputStateProps {
     /**
      * Current text value of the input
+     * @example "Sin"
      */
     value: string
     /**
@@ -16,6 +17,7 @@ interface IAutoCompleteInputProps extends InputSizeProps, InputStateProps {
      * Static list of suggestion strings.
      * Filtered automatically against the current input value.
      * Keyboard navigation (↑ ↓ Enter) is handled internally.
+     * @example ['Singapore', 'Sydney', 'Shanghai', 'Seoul', 'San Francisco']
      */
     options?: string[]
     /**

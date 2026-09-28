@@ -10,6 +10,7 @@ Props for the TagInput component.
 interface TagInputProps extends InputSizeProps, InputStateProps {
     /**
      * Current list of tags
+     * @example ['HVAC', 'Critical']
      */
     value: string[];
 
@@ -21,6 +22,7 @@ interface TagInputProps extends InputSizeProps, InputStateProps {
     /**
      * Suggestions: static list or async resolver.
      * When provided, a dropdown of matching suggestions appears as the user types.
+     * @example ['HVAC', 'Lighting', 'Critical', 'Water', 'Fire safety']
      */
     options?: string[] | ((text: string) => Promise<string[]>);
 

@@ -14,17 +14,20 @@ export interface DataEntryFieldProps {
 
     /**
      * Field name - maps to the property name in the data object
+     * @example "name"
      */
     field: string;
 
     /**
      * Field label displayed to the user
+     * @example "Name"
      */
     title: string;
 
     /**
      * Field type - determines the input component to render
      * @default 'text'
+     * @example "text"
      */
     type?: 'text' | 'password' | 'number' | 'email' | 'checkbox' | 'toggle' | 'select' |
            'date' | 'time' | 'datetime' | 'daterange' | 'hidden' | 'textarea' | 'json' | 'readonly';

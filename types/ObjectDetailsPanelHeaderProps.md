@@ -10,16 +10,19 @@ Props for the ObjectDetailsPanelHeader component.
 export interface ObjectDetailsPanelHeaderProps {
     /**
      * Row data item. When provided, function-based props can use this data.
+     * @example { id: 1, name: 'Chiller 01', status: 'Running', location: 'Level 1' }
      */
     item?: RowData;
 
     /**
      * Breadcrumb items to display at the top. Can be static or a function that receives the item.
+     * @example [{ label: 'Assets' }, { label: 'Level 1' }, { label: 'Chiller 01' }]
      */
     breadcrumb?: BreadcrumbItem[] | ((item: RowData, loading?: boolean) => BreadcrumbItem[]);
 
     /**
      * Main title content (string or JSX). Can be static or a function that receives the item.
+     * @example "Chiller 01"
      */
     title: string | React.ReactNode | ((item: RowData, loading?: boolean) => React.ReactNode);
 
@@ -35,6 +38,11 @@ export interface ObjectDetailsPanelHeaderProps {
 
     /**
      * Array of analytics cards to display on the right side. Can be static or a function that receives the item.
+     * @example
+     * [
+     *   { icon: 'fas bolt', value: '72%', label: 'Load' },
+     *   { icon: 'fas temperature-half', value: '6.8 °C', label: 'Supply temp' },
+     * ]
      */
     analytics?: AnalyticsCardProps[] | ((item: RowData, loading?: boolean) => AnalyticsCardProps[]);
 

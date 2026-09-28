@@ -10,6 +10,7 @@ Props for the ButtonComponent.
 export interface ButtonComponentProps {
     /**
      * Caption for the button.
+     * @example "Save"
      */
     title?: string;
 
@@ -22,6 +23,7 @@ export interface ButtonComponentProps {
 
     /**
      * Left side icon - supports FontAwesome, Phosphor, image URL, text/emoji, or React element
+     * @example "fas save"
      */
     leftIcon?: ButtonIcon;
 
@@ -37,6 +39,17 @@ export interface ButtonComponentProps {
 
     /**
      * Callback invoked when the button is clicked, supports sync or async functions.
+     * While an async callback runs, the button shows its loading state.
+     * @example Sync handler
+     * ```tsx
+     * onClick={() => alert('Clicked')}
+     * ```
+     * @example Async handler
+     * ```tsx
+     * onClick={async () => {
+     *     await new Promise(resolve => setTimeout(resolve, 1500)); // e.g. save a record
+     * }}
+     * ```
      */
     onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>;
 
@@ -49,21 +62,25 @@ export interface ButtonComponentProps {
 
     /**
      * If true, shows the button in a loading state.
+     * @default false
      */
     loading?: boolean;
 
     /**
      * Caption to show when the button is in a loading state.
+     * @example "Saving..."
      */
     loadingTitle?: string;
 
     /**
      * If true, marks the button as active.
+     * @default false
      */
     active?: boolean;
 
     /**
      * If true, disables the button.
+     * @default false
      */
     disabled?: boolean;
 
@@ -83,33 +100,39 @@ export interface ButtonComponentProps {
     rightIconStyles?: React.CSSProperties;
 
     /**
-     * HTML button type. Defaults to 'button'.
+     * HTML button type.
+     * @default 'button'
      */
     type?: ButtonComponentType;
 
     /**
-     * Visual variant of the button. Defaults to 'primary'.
+     * Visual variant of the button.
+     * @default 'primary'
      */
     variant?: ButtonComponentVarient;
 
     /**
      * If true, renders the button in icon-only mode.
+     * @default false
      */
     iconOnly?: boolean;
 
     /**
-     * Size of the button. Defaults to 'medium'.
+     * Size of the button.
+     * @default 'medium'
      */
     size?: ButtonComponentSize;
 
     /**
-     * Rendering mode for icon-only buttons. Defaults to 'transparent'.
+     * Rendering mode for icon-only buttons.
      * Ignored when the button is not icon-only.
+     * @default 'transparent'
      */
     mode?: ButtonComponentMode;
 
     /**
-     * Casing applied to the label. Defaults to 'sentence'.
+     * Casing applied to the label.
+     * @default 'sentence'
      */
     textMode?: ButtonComponentTextMode;
 }

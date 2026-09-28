@@ -13,6 +13,7 @@ interface IProfileImageProps {
      * Any name to be displayed. This is used only if the image is empty.
      * 2 letters will be derived from the name (typically the first letter of the first 2 words in the name)
      * and a background color will be chosen. Background colors are random but consistent.
+     * @example "Alex Morgan"
      */
     name?: string;
 

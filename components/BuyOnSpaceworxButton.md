@@ -1,5 +1,7 @@
 # BuyOnSpaceworxButton
 
+> **Advanced.** Available for building custom components. Most apps do not need it.
+
 
 This component gives a styled button to go to the marketplace product pages
 Intend to use in the configuration panels and other place

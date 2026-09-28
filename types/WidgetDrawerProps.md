@@ -7,10 +7,31 @@
 
 ```tsx
 export interface WidgetDrawerProps {
+    /**
+     * @example true
+     */
     show: boolean
+    /**
+     * @example Log
+     * ```tsx
+     * onClose={() => console.log('closed')}
+     * ```
+     */
     onClose: () => void
+    /**
+     * @example []
+     */
     widgets: ComponentInstance[]
+    /**
+     * @example { lg: [] }
+     */
     layouts: ResponsiveLayouts
+    /**
+     * @example Accept the change
+     * ```tsx
+     * onChange={(event) => { console.log('drawer change', event); return true; }}
+     * ```
+     */
     onChange: (event: WidgetDrawerChangeEvent) => boolean | Promise<boolean>
     isBounded?: boolean
     maxColumns?: number

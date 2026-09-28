@@ -7,9 +7,44 @@
 
 ```tsx
 export interface DynamicFormProps {
+    /**
+     * @example
+     * [
+     *   {
+     *     title: 'Asset details',
+     *     columns: 2,
+     *     fields: [
+     *       { name: 'name', label: 'Name', type: 'text', placeholder: 'e.g. Chiller 03', validate: { required: true } },
+     *       { name: 'status', label: 'Status', type: 'select', options: [
+     *           { label: 'Running', value: 'Running' },
+     *           { label: 'Stopped', value: 'Stopped' },
+     *           { label: 'Fault', value: 'Fault' },
+     *         ] },
+     *       { name: 'location', label: 'Location', type: 'text' },
+     *       { name: 'commissioned', label: 'Commissioned on', type: 'date' },
+     *       { name: 'notes', label: 'Notes', type: 'textarea' },
+     *     ],
+     *   },
+     * ]
+     */
     formStructure: FormSectionProps[],
     beforeSubmit?: (data: IFormData) => Promise<IFormData>
+    /**
+     * @example Resolves after 1 s
+     * ```tsx
+     * onSubmit={async (data) => {
+     *     await new Promise(resolve => setTimeout(resolve, 1000));
+     *     console.log('submitted', data);
+     * }}
+     * ```
+     */
     onSubmit: (data: IFormData) => Promise<void>
+    /**
+     * @example Log
+     * ```tsx
+     * onCancel={() => console.log('cancelled')}
+     * ```
+     */
     onCancel?: () => void,
     submitButtonLabel?: string,
     submitButtonLoadingLabel?: string,

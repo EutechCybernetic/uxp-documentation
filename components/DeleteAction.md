@@ -1,14 +1,5 @@
 # DeleteAction
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=deleteaction--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="DeleteAction live demo"
-></iframe>
-
-
 
 Declarative component wrapper for delete actions
 
@@ -90,13 +81,23 @@ tsx
 </ActionList>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-deleteaction--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DeleteAction live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|model|string|Yes|-|-|
-|objectKey|string \| number|Yes|-|-|
-|children|(deleteHandler: () => Promise<void>) => React.ReactNode|Yes|-|-|
+|model|string|Yes|-|"Location.Location"|
+|objectKey|string \| number|Yes|-|"1001"|
+|children|(deleteHandler: () => Promise<void>) => React.ReactNode|Yes|-|Delete button (deleteHandler) => <Button title="Delete" icon="fas trash" onClic…|
 
 ## Related Types
 

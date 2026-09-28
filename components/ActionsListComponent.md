@@ -1,5 +1,7 @@
 # ActionsListComponent
 
+> **Part of [TableComponent](TableComponent.md).** Usually used through TableComponent. Use it directly to build a custom layout.
+
 
 A component that renders a list of actions with support for nested dropdowns and selected state.
 
@@ -59,11 +61,21 @@ const ActionsListComponent: React.FunctionComponent<ActionsListProps>
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-tables-actionslistcomponent--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ActionsListComponent live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|actions|Action[] \| ((item?: any) => Action[] \| React.ReactNode)|Yes|-|-|
+|actions|Action[] \| ((item?: any) => Action[] \| React.ReactNode)|Yes|-|Edit and delete actions={[ { label: 'Edit', icon: 'fas pen', onClick: (item) =>…|
 |item|any|No|-|-|
 |selectedValue|any|No|-|-|
 |className|string|No|-|-|

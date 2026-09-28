@@ -1,14 +1,5 @@
 # Button
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=buttons-button--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Button live demo"
-></iframe>
-
-
 
 This is a basic button component.
 
@@ -47,18 +38,40 @@ const Button: React.FunctionComponent<ButtonProps>
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-button--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Button live preview"
+></iframe>
+
+### Variants
+
+#### Example 1
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-button--default&amp;viewMode=story&amp;args=title%3AClick%3BloadingTitle%3A%21undefined%3Bicon%3A%21undefined"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Button: Example 1"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|title|string|No|-|-|
+|title|string|No|-|"Save"|
 |leftIcon|[ButtonIcon](../types/ButtonIcon.md)|No|-|-|
 |rightIcon|[ButtonIcon](../types/ButtonIcon.md)|No|-|-|
 |className|string|No|-|-|
-|onClick|(e?: React.MouseEvent<HTMLButtonElement>) => void \| Promise<void>|No|-|-|
+|onClick|(e?: React.MouseEvent<HTMLButtonElement>) => void \| Promise<void>|No|-|Sync handler onClick={() => alert('Clicked')}|
 |onError|(e?: React.MouseEvent<HTMLButtonElement>, error?: unknown) => void|No|-|-|
 |loading|boolean|No|-|-|
-|loadingTitle|string|No|-|-|
+|loadingTitle|string|No|-|"Saving..."|
 |active|boolean|No|-|-|
 |disabled|boolean|No|-|-|
 |styles|React.CSSProperties|No|-|-|
@@ -68,8 +81,8 @@ const Button: React.FunctionComponent<ButtonProps>
 |iconOnly|boolean|No|-|-|
 |size|[ButtonComponentSize](../types/ButtonComponentSize.md)|No|-|-|
 |textMode|[ButtonComponentTextMode](../types/ButtonComponentTextMode.md)|No|-|-|
-|icon|string|No|-|-|
-|iconPosition|'left' \| 'right'|No|-|-|
+|icon|string|No|-|"fas save"|
+|iconPosition|'left' \| 'right'|No|'left'|-|
 |useLoadingSpinner|boolean|No|-|-|
 
 ## Related Types

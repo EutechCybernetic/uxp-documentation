@@ -6,11 +6,18 @@
 interface IToggleFilterProps extends InputSizeProps, InputStateProps {
     /**
      * The list of possible options to choose from
+     * @example
+     * [
+     *   { label: 'Day', value: 'day' },
+     *   { label: 'Week', value: 'week' },
+     *   { label: 'Month', value: 'month' },
+     * ]
      */
     options: IToggleOption[],
 
     /**
      * The current value (selected item)
+     * @example "week"
      */
     value: string,
 

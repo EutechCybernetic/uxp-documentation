@@ -7,6 +7,9 @@
 
 ```tsx
 interface ILocalisationFormModalProps {
+    /**
+     * @example "uxp-core.text.changes-saved"
+     */
     code: string,
     useGoogleTranslate?: boolean,
     beforeOpen?: () => boolean

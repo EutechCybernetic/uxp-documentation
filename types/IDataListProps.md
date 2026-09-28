@@ -8,6 +8,15 @@ interface IDataListProps {
      * List of items to render. This can either be an array of objects or a function that will generate the array of objects.
      * If you supply a function then pagination will be supported. The function expects 2 parameters - `max` and `last` and returns a promise that will resolve to the list of objects.
      * `max` specifies the maximum number of items to be returned.
+     * @example
+     * [
+     *   { id: 1, name: 'Chiller 01', location: 'Level 1' },
+     *   { id: 2, name: 'Chiller 02', location: 'Level 1' },
+     *   { id: 3, name: 'AHU 01', location: 'Level 2' },
+     *   { id: 4, name: 'AHU 02', location: 'Level 2' },
+     *   { id: 5, name: 'Pump 01', location: 'Basement' },
+     *   { id: 6, name: 'Boiler 01', location: 'Roof' },
+     * ]
      */
     data: Array<any> | IDataFunction,
 
@@ -18,7 +27,7 @@ interface IDataListProps {
      * @example
      * 
      * ```
-     * renderItem={(item,key)=><div>{'Item:' + JSON.stringify(item)}}</div>}
+     * renderItem={(item,key)=><div>{'Item:' + JSON.stringify(item)}</div>}
      * ```
      * 
      * @example
@@ -30,6 +39,7 @@ interface IDataListProps {
 
     /**
      * The number of items to fetch in each page. This gets passed to the data function as the `max` parameter
+     * @example 10
      */
     pageSize: number,
 

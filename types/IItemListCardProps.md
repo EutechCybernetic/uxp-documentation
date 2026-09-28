@@ -4,7 +4,10 @@
 
 ```tsx
 interface IItemListCardProps {
-    /** The title to show on the card */
+    /**
+     * The title to show on the card
+     * @example "Chiller 01"
+     */
     title: string,
 
     /**
@@ -14,17 +17,23 @@ interface IItemListCardProps {
 
     /**
      * The object to render in the card
+     * @example { status: 'Running', location: 'Level 1 · Plant room', load: '72%' }
      */
     item: any,
 
     /**
      * The list of fields from within the object that should be shown.
      * For each field in this list - one line gets rendered on the card
+     * @example ['status', 'location', 'load']
      */
     fields: string[],
 
     /** An optional function to control rendering of each field. It takes the item as a parameter along with the name of the field being rendered.
      * You can choose to render whatever you want here
+     * @example Field and value
+     * ```tsx
+     * renderField={(object, field, key) => <div key={key}><b>{field}</b>: {object[field]}</div>}
+     * ```
      */
     renderField?: (object: any, field: string, key: number) => JSX.Element,
 

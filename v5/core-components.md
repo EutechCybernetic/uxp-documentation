@@ -3,7 +3,7 @@
 Reference guide for core components, hooks, and types used in UXP v5 applications.
 
 > **The authoritative list is generated.** [Components](../components.md) and [Hooks](../hooks.md) are
-> built from the source on every docs build, and [Storybook](https://uxp-components.vercel.app) renders
+> built from the source on every docs build, and [Storybook](https://story.uxp.iviva.com) renders
 > each one live. Use this page as a categorized starting point; when the two disagree, the generated
 > reference is current.
 

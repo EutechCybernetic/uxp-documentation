@@ -11,6 +11,7 @@ export type SlideInFormDataEntryProps<T = any> = SlideInFormBaseProps &
     Omit<DataEntryFormProps<T>, 'onSubmit' | 'onCancel'> & {
         /**
          * Form type - use 'data-entry' for JSX declarative API
+         * @example "dynamic"
          */
         formType: 'data-entry';
     };

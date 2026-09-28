@@ -12,6 +12,7 @@ All props are extracted by DataEntryForm and mapped to FormSectionProps.
 export interface DataEntrySectionProps {
     /**
      * Section title displayed above the fields
+     * @example "Asset details"
      */
     title?: string;
 
@@ -57,6 +58,13 @@ export interface DataEntrySectionProps {
 
     /**
      * DataEntryField or DataEntrySubSection components to render in this section
+     * @example Two fields
+     * ```tsx
+     * <>
+     *     <DataEntryField field="name" title="Name" type="text" />
+     *     <DataEntryField field="location" title="Location" type="text" />
+     * </>
+     * ```
      */
     children?: React.ReactNode;
 }

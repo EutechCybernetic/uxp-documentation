@@ -15,6 +15,7 @@ interface IDatePickerProps extends InputSizeProps, InputStateProps {
 
     /**
      * The currently selected date. Either a Date object or an ISO8601 string representation of a date
+     * @example "2026-09-28"
      */
     date: string | Date,
 

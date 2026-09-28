@@ -9,6 +9,7 @@
 export interface PasswordInputProps extends InputSizeProps, InputStateProps {
     /**
      * The current value of the input.
+     * @example "s3cret-pass"
      */
     value: string;
 

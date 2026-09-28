@@ -107,7 +107,7 @@ const context = useUXPContext();
 
 ## Step 4: Handling Errors
 
-`error` holds the message from the last failed upload. It is cleared when a new upload starts.
+`error` holds the message from the last failed upload. It is cleared when a new upload starts. The message is the server's own reason, such as a validation failure or the size limit, so you can show it to the user as it is.
 
 ```tsx
 const { upload, error } = useFileUpload();
@@ -131,6 +131,22 @@ Two failures you should expect:
 
 - **Too large.** If a file over the cap reaches the server, the request is rejected and the message names the limit. Checking at pick time with `getUploadSizeLimitMB` avoids this entirely.
 - **Type not allowed.** Administrators can restrict which file extensions an account accepts. The server rejects anything outside that list, whatever the upload path.
+
+---
+
+## Step 5: Sending Extra Parameters
+
+Some uploads are handled by a server-side upload event that needs more than the file. Pass those values in `params`. They are sent as form fields with the file, and with every chunk of a chunked upload.
+
+```tsx
+await upload(file, {
+    path: "profilepics",
+    fileName: file.name,
+    params: { event: "profilepic", ObjectKey: userKey, ObjectType: "User.User" },
+});
+```
+
+Values must be strings. Leave `params` out for a plain upload to the content store.
 
 ---
 

@@ -9,7 +9,10 @@ Config for the search-list modal, i.e. the ObjectSearchComponent props
 
 ```tsx
 export type SearchModalConfig = ForwardedObjectSearchProps & {
-    /** Modal title. Falls back to the OSC `title`. */
+    /**
+     * Modal title. Falls back to the OSC `title`.
+     * @example "Select an asset"
+     */
     modalTitle?: string;
 };
 ```

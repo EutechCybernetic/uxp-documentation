@@ -10,6 +10,7 @@ Props for the ObjectSearchComponent.
 interface ObjectSearchComponentProps {
     /**
      * Header text or component for the search component.
+     * @example "Assets"
      */
     title?: string | ReactNode;
 
@@ -25,11 +26,27 @@ interface ObjectSearchComponentProps {
 
     /**
      * Data source for the table, either a static array or a function for dynamic fetching with pagination and search.
+     * @example
+     * [
+     *   { id: 1, name: 'Chiller 01', status: 'Running', location: 'Level 1' },
+     *   { id: 2, name: 'Chiller 02', status: 'Stopped', location: 'Level 1' },
+     *   { id: 3, name: 'AHU 01', status: 'Running', location: 'Level 2' },
+     *   { id: 4, name: 'AHU 02', status: 'Fault', location: 'Level 2' },
+     *   { id: 5, name: 'Pump 01', status: 'Running', location: 'Basement' },
+     *   { id: 6, name: 'Pump 02', status: 'Running', location: 'Basement' },
+     *   { id: 7, name: 'Boiler 01', status: 'Stopped', location: 'Roof' },
+     * ]
      */
     data: RowData[] | ((page: number, pageSize: number, query?: string, filters?: Filters, sort?: Sort) => Promise<{ items: RowData[] }>);
 
     /**
      * Column definitions for the table.
+     * @example
+     * [
+     *   { id: 'name', label: 'Name' },
+     *   { id: 'status', label: 'Status' },
+     *   { id: 'location', label: 'Location' },
+     * ]
      */
     columns: OSCColumn[];
 
@@ -40,11 +57,13 @@ interface ObjectSearchComponentProps {
 
     /**
      * Number of items to display per page.
+     * @example 5
      */
     pageSize: number;
 
     /**
      * Total number of items, or a function to fetch this count dynamically.
+     * @example 7
      */
     total: number | ((query?: string, filters?: Filters) => Promise<number>);
 
@@ -75,6 +94,7 @@ interface ObjectSearchComponentProps {
 
     /**
      * Field in row data used as a unique identifier for each row.
+     * @example "id"
      */
     idField: string;
 
@@ -82,6 +102,7 @@ interface ObjectSearchComponentProps {
      * Optional field in row data whose value is appended to the URL as the `objectName` param
      * (or the custom name from `urlParams.name`) when a row is selected, and removed on close.
      * Useful when the details panel needs both the ID and a human-readable name for data fetching.
+     * @example "name"
      */
     nameField?: string;
 
@@ -129,6 +150,7 @@ interface ObjectSearchComponentProps {
 
     /**
      * Configuration for the search box, including fields for text search if data is a static array.
+     * @example { enable: true, fields: ['name', 'location'] }
      */
     search?: {
         /**

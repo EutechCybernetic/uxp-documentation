@@ -1,14 +1,5 @@
 # DataGrid
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=list-datagrid--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="DataGrid live demo"
-></iframe>
-
-
 
 
 Used to show data in a matrix or grid. You can give it a list of items and a function to render those items.
@@ -92,13 +83,23 @@ let GridData = [
  />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-lists-datagrid--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DataGrid live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|data|Array<any>|Yes|-|-|
-|renderItem|(item: any, key: number) => JSX.Element|Yes|-|*|
-|columns|number|Yes|-|-|
+|data|Array<any>|Yes|-|[ { id: 1, name: 'Chiller 01', location: 'Level 1' }, { id: 2, name: 'Chiller 0…|
+|renderItem|(item: any, key: number) => JSX.Element|Yes|-|renderItem={(item:any,key:number)=> <div>{'Key Is ' + key}</div>}|
+|columns|number|Yes|-|3|
 |borders|'cells' \| 'dividers' \| 'none'|No|-|-|
 |className|string|No|-|-|
 

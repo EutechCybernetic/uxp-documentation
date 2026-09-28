@@ -10,16 +10,25 @@ Props for the SlideInPanel component.
 export interface SlideInPanelProps {
     /**
      * Content to display inside the slide-in panel.
+     * @example Text
+     * ```tsx
+     * <div style={{ padding: 16 }}>Asset details slide in from the side.</div>
+     * ```
      */
     children: ReactNode;
 
     /**
      * Controls whether the panel is open (true) or closed (false).
+     * @example true
      */
     isOpen: boolean;
 
     /**
      * Callback triggered when the panel is closed, typically via backdrop click.
+     * @example Log
+     * ```tsx
+     * onClose={() => console.log('closed')}
+     * ```
      */
     onClose: () => void;
 

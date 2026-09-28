@@ -7,10 +7,16 @@ Props for the QRCodeComponent.
 
 ```tsx
 export interface QRCodeComponentProps {
-    /** The value (text or URL) to encode in the QR code. */
+    /**
+     * The value (text or URL) to encode in the QR code.
+     * @example "https://www.iviva.com"
+     */
     value: string;
 
-    /** The size (width/height) of the QR code in pixels. Default is 128. */
+    /**
+     * The size (width/height) of the QR code in pixels. Default is 128.
+     * @example 160
+     */
     size?: number;
 
     /** Background color of the QR code. Defaults to theme or white. */

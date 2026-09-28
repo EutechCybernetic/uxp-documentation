@@ -10,16 +10,23 @@ Props for the InfoCard component.
 export interface InfoCardProps {
     /**
      * Data source — either an ExecuteRequestConfig (InfoCard fetches data) or a plain object (data already fetched).
+     * @example { name: 'Chiller 01', location: 'Level 1 · Plant room' }
      */
     data: InfoCardData;
 
     /**
      * Field name mappings — tells InfoCard which property in `data` holds the image URL, title text, subtitle text, and name (for initials).
+     * @example { title: 'name', subtitle: 'location', name: 'name' }
      */
     fields?: InfoCardFields;
 
     /**
      * Extra stacked fields rendered below the subtitle. Each field has its own style.
+     * @example
+     * [
+     *   { value: 'Running', style: 'primary', icon: 'fas circle-check' },
+     *   { value: 'Serviced 12 Aug', style: 'muted', icon: 'fas wrench' },
+     * ]
      */
     extraFields?: InfoCardExtraField[];
 
@@ -65,6 +72,10 @@ export interface InfoCardProps {
 
     /**
      * Click handler for the title — also adds a pointer cursor and link colouring when combined with titleStyle='link'.
+     * @example Log
+     * ```tsx
+     * onTitleClick={() => console.log('title clicked')}
+     * ```
      */
     onTitleClick?: () => void;
 

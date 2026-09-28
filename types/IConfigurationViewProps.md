@@ -10,19 +10,40 @@ ConfigurationView component props
 interface IConfigurationViewProps {
     uxpContext: IContextProvider;
 
-    /** Settings panel title — used in `multiple` mode outer header */
+    /**
+     * Settings panel title — used in `multiple` mode outer header
+     * @example "Settings"
+     */
     title?: string;
 
-    /** Configuration sections with sidebar links and content */
+    /**
+     * Configuration sections with sidebar links and content
+     * @example Two sections
+     * ```tsx
+     * sections={[
+     *     { id: 'general', title: 'General', content: <div>Account name, time zone and currency.</div> },
+     *     { id: 'notifications', title: 'Notifications', content: <div>Email and SMS alerts.</div> },
+     * ]}
+     * ```
+     */
     sections: IConfigurationViewSection[];
 
     /** Action buttons rendered on the right of the outer header (`multiple` mode) */
     actions?: React.ReactNode;
 
-    /** Selected section id (controlled mode) */
+    /**
+     * Selected section id (controlled mode)
+     * @example "general"
+     */
     selected?: string;
 
-    /** Callback when section changes, receives section id */
+    /**
+     * Callback when section changes, receives section id
+     * @example Log
+     * ```tsx
+     * onChangeSection={(id) => console.log('section', id)}
+     * ```
+     */
     onChangeSection?: (id: string) => void;
 
     /**

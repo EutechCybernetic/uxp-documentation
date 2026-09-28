@@ -1,14 +1,5 @@
 # InfoCard
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=list-infocard--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="InfoCard live demo"
-></iframe>
-
-
 
 Renders a data item as a horizontal identity card with avatar, title, subtitle, extra fields, badges, and actions.
 Supports both data-fetching (via executeConfig) and pre-fetched data.
@@ -65,13 +56,23 @@ tsx
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-cards-infocard--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="InfoCard live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|data|[InfoCardData](../types/InfoCardData.md)|Yes|-|-|
-|fields|[InfoCardFields](../types/InfoCardFields.md)|No|-|-|
-|extraFields|[InfoCardExtraField[]](../types/InfoCardExtraField.md)|No|-|-|
+|data|[InfoCardData](../types/InfoCardData.md)|Yes|-|{ name: 'Chiller 01', location: 'Level 1 · Plant room' }|
+|fields|[InfoCardFields](../types/InfoCardFields.md)|No|-|{ title: 'name', subtitle: 'location', name: 'name' }|
+|extraFields|[InfoCardExtraField[]](../types/InfoCardExtraField.md)|No|-|[ { value: 'Running', style: 'primary', icon: 'fas circle-check' }, { value: 'S…|
 |details|[InfoCardDetailsContent](../types/InfoCardDetailsContent.md)|No|-|-|
 |variant|'card' \| 'avatar'|No|-|-|
 |size|[Size](../types/Size.md)|No|-|-|
@@ -79,7 +80,7 @@ tsx
 |dropdownPosition|[DropdownPosition](../types/DropdownPosition.md)|No|-|-|
 |layout|'default' \| 'collapsed'|No|-|-|
 |titleStyle|[InfoCardFieldStyle](../types/InfoCardFieldStyle.md)|No|-|-|
-|onTitleClick|() => void|No|-|-|
+|onTitleClick|() => void|No|-|Log onTitleClick={() => console.log('title clicked')}|
 |subtitleStyle|[InfoCardFieldStyle](../types/InfoCardFieldStyle.md)|No|-|-|
 |badges|React.ReactNode|No|-|-|
 |actions|React.ReactNode|No|-|-|

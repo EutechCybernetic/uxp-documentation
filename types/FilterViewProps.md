@@ -10,26 +10,51 @@ Props for the FilterView component
 interface FilterViewProps {
     /**
      * Whether the filter panel is open
+     * @example true
      */
     isOpen: boolean,
 
     /**
      * Callback to toggle the filter panel open/closed state
+     * @example Log
+     * ```tsx
+     * onToggle={() => console.log('toggle')}
+     * ```
      */
     onToggle: () => void,
 
     /**
      * Currently applied filters
+     * @example {}
      */
     appliedFilters: Filters,
 
     /**
      * Callback that gets executed whenever filters are changed
+     * @example Log
+     * ```tsx
+     * onChange={(filters) => console.log('filters', filters)}
+     * ```
      */
     onChange: (filters: Filters) => void,
 
     /**
      * Form field structure for rendering filter form
+     * @example
+     * [
+     *   {
+     *     title: '',
+     *     columns: 1,
+     *     fields: [
+     *       { name: 'status', label: 'Status', type: 'select', options: [
+     *           { label: 'Running', value: 'Running' },
+     *           { label: 'Stopped', value: 'Stopped' },
+     *           { label: 'Fault', value: 'Fault' },
+     *         ] },
+     *       { name: 'location', label: 'Location', type: 'text' },
+     *     ],
+     *   },
+     * ]
      */
     formFields: FormSectionProps[],
 

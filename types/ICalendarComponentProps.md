@@ -9,11 +9,16 @@
 interface ICalendarComponentProps {
     /**
      * array of dates
+     * @example [new Date('2026-09-10'), new Date('2026-09-18')]
      */
     dates: Date[]
     /**
      * callback to trigger on click date
      * ill return the clicked date
+     * @example Log
+     * ```tsx
+     * onSelectDate={(date) => console.log('date', date)}
+     * ```
      */
     onSelectDate: (date: Date) => void
     /**

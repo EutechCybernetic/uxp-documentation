@@ -19,6 +19,7 @@ interface TooltipProps {
      * ```tsx
      * <Tooltip content={() => <div>Custom JSX content</div>} />
      * ```
+     * @example "This is a tooltip"
      */
     content: string | (() => React.ReactNode);
 
@@ -41,6 +42,10 @@ interface TooltipProps {
      *  <Tooltip content="This is a tooltip">
      *      <button>Hover me</button>
      *  </Tooltip>
+     * ```
+     * @example Button
+     * ```tsx
+     * <Button title="Hover me" />
      * ```
      */
     children?: React.ReactNode;

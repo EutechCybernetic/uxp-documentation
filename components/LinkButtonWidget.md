@@ -1,12 +1,9 @@
 # LinkButtonWidget
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=other-linkbuttonwidget--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="LinkButtonWidget live demo"
-></iframe>
+> **Deprecated.** Do not use. There is no replacement.
+
+This widget will give a simple widget with configurable option to create a link button
+
 
 
 ## Installation
@@ -32,14 +29,36 @@ const LinkButtonWidget: React.FunctionComponent<ILinkButtonWidgetProps>
  />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-linkbuttonwidget--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="LinkButtonWidget live preview"
+></iframe>
+
+### Variants
+
+#### Example 1
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-linkbuttonwidget--default&amp;viewMode=story&amp;args=target%3A_blank%3Bicon%3Apath+to+your+icon%3Blabel%3AGo+to+Google&amp;props=%7B%22link%22%3A%22https%3A%2F%2Fgoogle.com%22%7D"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="LinkButtonWidget: Example 1"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|link|string|Yes|-|-|
-|target|"_self" \| "_blank" \| "_parent"|No|-|-|
-|icon|string|Yes|-|-|
-|label|string|Yes|-|-|
+|link|string|Yes|-|"https://www.iviva.com"|
+|target|"_self" \| "_blank" \| "_parent"|No|'_self'|"_blank"|
+|icon|string|Yes|-|"https://static.iviva.com/iviva-logo-light.png"|
+|label|string|Yes|-|"Visit iviva"|
 
 ## Related Types
 

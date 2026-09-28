@@ -1,9 +1,12 @@
 # MediaStripCard
 
+> **Advanced.** Available for building custom components. Most apps do not need it.
+
 
 One picked value: a fixed 4rem chip with a remove badge, shown under a field,
 above the upload drop-zone, or stacked in the browse dialog's selection
 column. `MediaThumb` decides how the value itself is drawn.
+
 
 
 ## Installation
@@ -22,10 +25,10 @@ const MediaStripCard: React.FunctionComponent<IMediaStripCardProps>
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|value|string|Yes|-|-|
+|value|string|Yes|-|"/content/media/chiller-01.png"|
 |name|string|No|-|-|
 |onRemove|() => void|No|-|-|
-|removeTitle|string|Yes|-|-|
+|removeTitle|string|Yes|-|"Remove"|
 
 ## Related Types
 

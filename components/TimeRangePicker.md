@@ -1,14 +1,5 @@
 # TimeRangePicker
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-datetimepicker-timerangepicker--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="TimeRangePicker live demo"
-></iframe>
-
-
 
 
 
@@ -38,13 +29,23 @@ const TimeRangePicker: React.FunctionComponent<ITimeRangePickerProps>
  />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-date-and-time-timerangepicker--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="TimeRangePicker live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|title|string|Yes|-|-|
-|startTime|string \| Date|Yes|-|-|
-|endTime|string \| Date|Yes|-|-|
+|title|string|Yes|-|"Working hours"|
+|startTime|string \| Date|Yes|-|"09:00"|
+|endTime|string \| Date|Yes|-|"18:00"|
 |onChange|(start: Date, end: Date) => void|Yes|-|-|
 |disableInput|boolean|No|-|-|
 |dropdownClassname|string|No|-|-|

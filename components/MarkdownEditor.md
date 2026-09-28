@@ -1,14 +1,5 @@
 # MarkdownEditor
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-markdowneditor--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="MarkdownEditor live demo"
-></iframe>
-
-
 
 A markdown editor. The value is always markdown (markdown in / markdown out).
 
@@ -41,11 +32,21 @@ tsx
 <MarkdownEditor mode="markdown" value={md} onChange={setMd} fullWidth />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-editors-markdowneditor--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="MarkdownEditor live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|value|string|Yes|-|-|
+|value|string|Yes|-|"## Maintenance notes\n\n- Filter replaced on **12 Aug**\n- Belt tension checke…|
 |onChange|(value: string) => void|Yes|-|-|
 |mode|'rich' \| 'markdown'|No|-|-|
 |className|string|No|-|-|

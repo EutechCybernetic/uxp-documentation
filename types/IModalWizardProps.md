@@ -10,22 +10,29 @@ interface IModalWizardProps {
 
     /**
      * Set this to true to show the dialog. False to hide it
+     * @example true
      */
     show: boolean;
 
     /**
      * Call this to close the dialog
+     * @example Log
+     * ```tsx
+     * onClose={() => console.log('closed')}
+     * ```
      */
     onClose: () => void;
 
     /**
      * The title to show on the top
+     * @example "Add asset"
      */
     title: string;
 
     /**
      * @deprecated Not used in v5 - Modal component doesn't support header icons
      * An optional icon to show
+     * @example "fas plus"
      */
     icon?: string;
 
@@ -37,11 +44,22 @@ interface IModalWizardProps {
 
     /**
      * The list of steps that this wizard consists of.
+     * @example Two steps
+     * ```tsx
+     * steps={[
+     *     { render: ({ next }) => <div>Enter the asset details. <Button title="Next" onClick={next} /></div>, renderStatus: () => <span>Details</span> },
+     *     { render: ({ prev }) => <div>Check and confirm. <Button title="Back" onClick={prev} /></div>, renderStatus: () => <span>Confirm</span> },
+     * ]}
+     * ```
      */
     steps: IModalWizardStep[];
 
     /**
      * This action executes after they hit 'next' on the final page.
+     * @example Resolves
+     * ```tsx
+     * onComplete={async () => console.log('complete')}
+     * ```
      */
     onComplete: () => Promise<any>;
 

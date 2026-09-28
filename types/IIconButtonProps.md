@@ -11,6 +11,7 @@ interface IIconButtonProps {
     icon?: ButtonIcon
     /**
      * button type (optional)
+     * @example "edit"
      */
     type?: IButtonType,
     /**
@@ -24,6 +25,10 @@ interface IIconButtonProps {
     /**
      * The callback that gets invoked when the button is clicked
      * Supports both sync and async functions
+     * @example Sync handler
+     * ```tsx
+     * onClick={() => alert('Clicked')}
+     * ```
      */
     onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>,
 
@@ -35,6 +40,7 @@ interface IIconButtonProps {
     /**
      * Native (HTML `title`) hover tooltip. Icon buttons have no visible caption,
      * so set this to describe the action; it is also used as the `aria-label`.
+     * @example "Edit"
      */
     tooltip?: string,
 

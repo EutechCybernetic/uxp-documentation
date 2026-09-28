@@ -1,13 +1,6 @@
 # WidgetDrawer
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=dashboard-widget-drawer-widgetdrawer--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="WidgetDrawer live demo"
-></iframe>
-
+> **Part of [Dashboard](Dashboard.md).** Usually used through Dashboard. Use it directly to build a custom layout.
 
 
 Widget drawer modal wrapper component that handles widget initialization internally
@@ -50,15 +43,25 @@ tsx
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=dashboard-widgetdrawer--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="WidgetDrawer live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|show|boolean|Yes|-|-|
-|onClose|() => void|Yes|-|-|
-|widgets|[ComponentInstance[]](../types/ComponentInstance.md)|Yes|-|-|
-|layouts|[ResponsiveLayouts](../types/ResponsiveLayouts.md)|Yes|-|-|
-|onChange|(event: WidgetDrawerChangeEvent) => boolean \| Promise<boolean>|Yes|-|-|
+|show|boolean|Yes|-|true|
+|onClose|() => void|Yes|-|Log onClose={() => console.log('closed')}|
+|widgets|[ComponentInstance[]](../types/ComponentInstance.md)|Yes|-|[]|
+|layouts|[ResponsiveLayouts](../types/ResponsiveLayouts.md)|Yes|-|{ lg: [] }|
+|onChange|(event: WidgetDrawerChangeEvent) => boolean \| Promise<boolean>|Yes|-|Accept the change onChange={(event) => { console.log('drawer change', event); r…|
 |isBounded|boolean|No|-|-|
 |maxColumns|number|No|-|-|
 |config|[WidgetDrawerConfig](../types/WidgetDrawerConfig.md)|No|-|-|

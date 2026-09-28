@@ -1,5 +1,7 @@
 # SpaceworxDescriptionTag
 
+> **Advanced.** Available for building custom components. Most apps do not need it.
+
 This gives a pre defined component to used in configuration panels where we need to explain what is spaceworx is
 
 

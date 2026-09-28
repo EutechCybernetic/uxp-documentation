@@ -6,6 +6,7 @@
 interface ICheckboxProps extends InputSizeProps, InputStateProps {
     /**
      * Get or set the current state of the checkbox
+     * @example true
      */
     checked: CheckboxState;
 
@@ -17,6 +18,7 @@ interface ICheckboxProps extends InputSizeProps, InputStateProps {
 
     /**
      * Any additional text to show next to the checkbox
+     * @example "Send email alerts"
      */
     label?: string | React.ReactNode;
 

@@ -11,6 +11,7 @@ interface InputProps extends InputSizeProps, InputStateProps {
 
     /**
      * The typed text value (controlled).
+     * @example "Chiller 01"
      */
     value: string,
 

@@ -44,6 +44,10 @@ interface IUploadViewProps {
 
     /**
      * Called with the URLs of the uploaded files
+     * @example Log
+     * ```tsx
+     * onUploaded={(urls) => console.log('uploaded', urls)}
+     * ```
      */
     onUploaded: (urls: string[]) => void
 }

@@ -10,6 +10,7 @@ interface ITimePickerProps extends InputSizeProps, InputStateProps {
     title?: string
     /**
      * The currently selected time. Either a Date object or an time string (Ex: 01:10:00 pm)
+     * @example "09:30"
      */
     time: string | Date,
     /**

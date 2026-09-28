@@ -10,6 +10,7 @@ Props for the DropdownIndicator component.
 interface DropdownIndicatorProps {
     /**
      * Indicates whether the dropdown is open, rotating the chevron icon accordingly.
+     * @example false
      */
     isOpen: boolean;
 

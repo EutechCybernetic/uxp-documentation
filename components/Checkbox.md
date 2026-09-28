@@ -1,14 +1,5 @@
 # Checkbox
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-checkbox--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Checkbox live demo"
-></iframe>
-
-
 
 A checkbox component that can render boolean and intermediate states in multiple visual styles.
 
@@ -45,13 +36,35 @@ const Checkbox: React.ForwardRefExoticComponent<React.RefAttributes<ICheckboxIns
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-selection-checkbox--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Checkbox live preview"
+></iframe>
+
+### Variants
+
+#### Example 2
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-selection-checkbox--default&amp;viewMode=story&amp;args=checked%3Aintermediate%3Blabel%3APartial+selection%3Btype%3Aswitch-box"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Checkbox: Example 2"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|checked|[CheckboxState](../types/CheckboxState.md)|Yes|-|-|
+|checked|[CheckboxState](../types/CheckboxState.md)|Yes|-|true|
 |onChange|(checked: boolean) => void|Yes|-|-|
-|label|string \| React.ReactNode|No|-|-|
+|label|string \| React.ReactNode|No|-|"Send email alerts"|
 |inputAttr|{ [key: string]: string \| boolean }|No|-|-|
 |type|[ICheckboxType](../types/ICheckboxType.md)|No|-|-|
 |className|string|No|-|-|

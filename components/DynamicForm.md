@@ -1,17 +1,9 @@
 # DynamicForm
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-dynamicform--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="DynamicForm live demo"
-></iframe>
-
-
 
 This component provides a dynamic form component
 Developer can pass a json structure and it will create a form component
+
 
 
 ## Installation
@@ -26,14 +18,24 @@ import { DynamicForm } from 'uxp/components';
 const DynamicForm: React.ForwardRefExoticComponent<React.RefAttributes<DynamicFormHandlers> & DynamicFormProps>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=forms-dynamic-form-dynamicform--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DynamicForm live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|formStructure|[FormSectionProps[]](../types/FormSectionProps.md)|Yes|-|-|
+|formStructure|[FormSectionProps[]](../types/FormSectionProps.md)|Yes|-|[ { title: 'Asset details', columns: 2, fields: [ { name: 'name', label: 'Name'…|
 |beforeSubmit|(data: IFormData) => Promise<IFormData>|No|-|-|
-|onSubmit|(data: IFormData) => Promise<void>|Yes|-|-|
-|onCancel|() => void|No|-|-|
+|onSubmit|(data: IFormData) => Promise<void>|Yes|-|Resolves after 1 s onSubmit={async (data) => { await new Promise(resolve => set…|
+|onCancel|() => void|No|-|Log onCancel={() => console.log('cancelled')}|
 |submitButtonLabel|string|No|-|-|
 |submitButtonLoadingLabel|string|No|-|-|
 |submitButtonIcon|string|No|-|-|

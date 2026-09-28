@@ -7,6 +7,9 @@
 
 ```tsx
 interface TreeViewSelectInputProps extends TreeViewProps {
+    /**
+     * @example "Select a location"
+     */
     placeholder?: string,
     showSelectedNodePath?: boolean
     showSelectedNodeDisplayPath?: boolean

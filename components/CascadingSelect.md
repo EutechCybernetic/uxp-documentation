@@ -1,14 +1,5 @@
 # CascadingSelect
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-cascadingselect--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="CascadingSelect live demo"
-></iframe>
-
-
 A two-level cascading select. Picking a value in the primary select (re)loads the
 secondary select's options — App → Role, Country → City, Site → Location and the like.
 
@@ -87,15 +78,25 @@ const [role, setRole] = useState('');
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-selection-cascadingselect--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="CascadingSelect live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|primary|[CascadePrimaryConfig](../types/CascadePrimaryConfig.md)|Yes|-|-|
-|secondary|[CascadeSecondaryConfig](../types/CascadeSecondaryConfig.md)|Yes|-|-|
-|selectedPrimary|string|No|-|-|
+|primary|[CascadePrimaryConfig](../types/CascadePrimaryConfig.md)|Yes|-|{ options: [ { label: 'Level 1', value: 'L1' }, { label: 'Level 2', value: 'L2'…|
+|secondary|[CascadeSecondaryConfig](../types/CascadeSecondaryConfig.md)|Yes|-|{ options: (primary) => primary === 'L1' ? [{ label: 'Lobby', value: 'L1-LOBBY'…|
+|selectedPrimary|string|No|-|"L1"|
 |selectedSecondary|string|No|-|-|
-|onChange|(primaryValue: string, secondaryValue: string, primaryOption?: any, secondaryOption?: any) => void|Yes|-|-|
+|onChange|(primaryValue: string, secondaryValue: string, primaryOption?: any, secondaryOption?: any) => void|Yes|-|Log onChange={(primaryValue, secondaryValue) => console.log(primaryValue, secon…|
 |className|string|No|-|-|
 |fullWidth|boolean|No|-|-|
 |unified|boolean|No|-|-|

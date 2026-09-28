@@ -10,6 +10,7 @@ It automatically applies:
 - System-defined formats (from context) OR your custom format strings.
 - Timezone conversion (site, browser, or custom offset).
 - Optional seconds in time outputs.
+- The site timezone abbreviation after datetimes (v4 parity; opt out with `includeTimezone: false`).
 
 
 
@@ -50,8 +51,14 @@ const time = formatDate(now, { type: 'time' });
 
 ```tsx
 tsx
-// Format as date + time
+// Format as date + time, with the site timezone abbreviation appended (e.g. "2026/9/23 09:23 (IST)")
 const dateTime = formatDate(now, { type: 'datetime' });
+```
+
+```tsx
+tsx
+// Date + time without the timezone abbreviation
+const noZone = formatDate(now, { type: 'datetime', includeTimezone: false });
 ```
 
 ```tsx

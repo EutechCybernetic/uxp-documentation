@@ -21,6 +21,12 @@ export interface FormatOptions {
         /** if provided this will be used  */
         offset?: number;
     };
+    /**
+     * append the user's site timezone abbreviation (e.g. `IST`) to a datetime, as v4's `datetimeformat` did.
+     * default true. Only applied to `type: 'datetime'` converted with the site timezone and the system format -
+     * never with `useBrowserTime`, a custom `offset` or a custom `format` string.
+     */
+    includeTimezone?: boolean;
 }
 ```
 

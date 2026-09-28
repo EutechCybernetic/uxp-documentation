@@ -1,13 +1,6 @@
 # SampleDataLabel
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=other-sampledatalabel--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="SampleDataLabel live demo"
-></iframe>
-
+> **Advanced.** Available for building custom components. Most apps do not need it.
 
 
 
@@ -39,7 +32,7 @@ const SampleDataLabel: React.FunctionComponent<ISampleDataLabelProps>
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|show|boolean|No|-|-|
+|show|boolean|No|false|true|
 
 ## Related Types
 

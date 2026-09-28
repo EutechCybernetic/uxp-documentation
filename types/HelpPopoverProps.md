@@ -8,9 +8,19 @@ Props for the HelpPopover component.
 
 ```tsx
 export interface HelpPopoverProps {
-    /** Popover panel title */
+    /**
+     * Popover panel title
+     * @example "Energy dashboard"
+     */
     title: string;
-    /** Ordered list of help sections (heading + body pairs) */
+    /**
+     * Ordered list of help sections (heading + body pairs)
+     * @example
+     * [
+     *   { heading: 'What it shows', body: 'Energy use per building, updated every 15 minutes.' },
+     *   { heading: 'How to filter', body: 'Pick a date range at the top right.' },
+     * ]
+     */
     sections: HelpSection[];
     /** Popover position relative to the trigger button (default: 'bottom-right') */
     position?: DropdownPosition;

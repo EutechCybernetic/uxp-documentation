@@ -50,6 +50,15 @@ interface IWidgetWrapperProps {
          */
         productIds?: string[]
     }
+    /**
+     * @example Title and content
+     * ```tsx
+     * <>
+     *     <TitleBar title="Energy today" icon="https://static.iviva.com/iviva-logo-light.png" />
+     *     <div style={{ padding: 16 }}>1,284 kWh</div>
+     * </>
+     * ```
+     */
     children?: React.ReactNode
 }
 ```

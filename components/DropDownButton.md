@@ -1,14 +1,5 @@
 # DropDownButton
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=popups-dropdownbutton--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="DropDownButton live demo"
-></iframe>
-
-
 This component wraps another component and shows a tooltip for the component it is wrapping, whenever the user moves the mouse over it.
 
 
@@ -71,13 +62,23 @@ Dropdown button example with forceClose
  </DropDownButton>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-dropdownbutton--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DropDownButton live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|content|() => JSX.Element|Yes|-|*|
+|content|() => JSX.Element|Yes|-|content={() => <div>Dropdown Content</div>}|
 |position|[IDropDownButtonPosition](../types/IDropDownButtonPosition.md)|No|-|-|
-|showOnHover|boolean|No|-|-|
+|showOnHover|boolean|No|false|-|
 |keepShowingOnHover|boolean|No|-|-|
 |className|string|No|-|-|
 |onOpen|() => void|No|-|-|
@@ -85,7 +86,7 @@ Dropdown button example with forceClose
 |forceClose|boolean|No|-|-|
 |disableScroll|boolean|No|-|-|
 |autoPosition|boolean|No|-|-|
-|children|React.ReactNode|No|-|-|
+|children|React.ReactNode|No|-|Button <Button title="Options" icon="fas chevron-down" iconPosition="right" />|
 
 ## Related Types
 

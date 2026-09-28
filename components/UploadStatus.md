@@ -1,8 +1,11 @@
 # UploadStatus
 
+> **Advanced.** Available for building custom components. Most apps do not need it.
+
 
 Progress and failure feedback for an upload. Rendered by the field and by the
 dialog's Upload source, which report the same thing in the same place.
+
 
 
 ## Installation
@@ -21,8 +24,8 @@ const UploadStatus: React.FunctionComponent<IUploadStatusProps>
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|isUploading|boolean|Yes|-|-|
-|progress|number|No|-|-|
+|isUploading|boolean|Yes|-|true|
+|progress|number|No|-|45|
 |uploadingIndex|number|No|-|-|
 |uploadingTotal|number|No|-|-|
 |error|string \| null|No|-|-|

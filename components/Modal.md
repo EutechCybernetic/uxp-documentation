@@ -1,14 +1,5 @@
 # Modal
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=popups-modal--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Modal live demo"
-></iframe>
-
-
 
 Display a modal dialog. The dialog will be placed in front of a invisible sheet above the main UI.
 
@@ -45,14 +36,24 @@ const Modal: React.FunctionComponent<IModalProps>
  </Modal>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=overlays-modal--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Modal live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|show|boolean|Yes|-|-|
+|show|boolean|Yes|-|true|
 |onOpen|() => void|No|-|-|
-|onClose|() => void|No|-|-|
-|title|string|No|-|-|
+|onClose|() => void|No|-|Log onClose={() => console.log('closed')}|
+|title|string|No|-|"Edit asset"|
 |closeButton|JSX.Element|No|-|-|
 |styles|React.CSSProperties|No|-|-|
 |className|string|No|-|-|
@@ -63,7 +64,7 @@ const Modal: React.FunctionComponent<IModalProps>
 |backdropStyles|React.CSSProperties|No|-|-|
 |renderAdditionalContent|() => JSX.Element|No|-|-|
 |autoSize|boolean|No|-|-|
-|children|React.ReactNode|No|-|-|
+|children|React.ReactNode|No|-|Text <div style={{ padding: 16 }}>Change the asset details here.</div>|
 
 ## Related Types
 

@@ -8,11 +8,17 @@ Props for the CodeEditor component.
 
 ```tsx
 export interface CodeEditorProps extends InputSizeProps, InputStateProps {
-    /** Current editor value */
+    /**
+     * Current editor value
+     * @example "function total(items) {\n    return items.reduce((sum, item) => sum + item.value, 0);\n}\n"
+     */
     value: string;
     /** Callback when the content changes */
     onChange: (value: string) => void;
-    /** Syntax highlighting language. Defaults to 'text'. */
+    /**
+     * Syntax highlighting language. Defaults to 'text'.
+     * @example "javascript"
+     */
     language?: CodeEditorLanguage;
     /** Callback on editor focus */
     onFocus?: () => void;

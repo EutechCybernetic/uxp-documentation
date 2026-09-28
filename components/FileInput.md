@@ -1,17 +1,9 @@
 # FileInput
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-fileinput--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="FileInput live demo"
-></iframe>
-
-
 
 FileInput component - Drag and drop file upload with preview
 Follows v5 input pattern with theme support and accessibility
+
 
 
 ## Installation
@@ -25,6 +17,16 @@ import { FileInput } from 'uxp/components';
 ```tsx
 const FileInput: React.ForwardRefExoticComponent<React.RefAttributes<IFileInputInstanceProps> & IFileInputProps>
 ```
+
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-pickers-fileinput--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="FileInput live preview"
+></iframe>
 
 ## Properties
 

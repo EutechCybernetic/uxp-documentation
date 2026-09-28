@@ -1,14 +1,5 @@
 # DateTimePicker
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-datetimepicker--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="DateTimePicker live demo"
-></iframe>
-
-
 
 
 
@@ -38,12 +29,22 @@ const DateTimePicker: React.FunctionComponent<IDateTimePickerProps>
  />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-date-and-time-datetimepicker--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DateTimePicker live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |title|string|No|-|-|
-|datetime|string \| Date|Yes|-|-|
+|datetime|string \| Date|Yes|-|"2026-09-28T09:30:00"|
 |onChange|(date: Date) => void|Yes|-|-|
 |disableInput|boolean|No|-|-|
 |options|[IDatePickerOptions](../types/IDatePickerOptions.md)|No|-|-|

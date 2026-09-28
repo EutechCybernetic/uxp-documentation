@@ -1,14 +1,5 @@
 # SlideInPanel
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=other-slideinpanel--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="SlideInPanel live demo"
-></iframe>
-
-
 
 A component that renders a slide-in panel with animated transitions and a backdrop.
 Supports two modes:
@@ -71,13 +62,23 @@ const panelRef = useRef<SlideInPanelHandlers>(null);
 </SlideInPanel>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=overlays-slideinpanel--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="SlideInPanel live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|children|ReactNode|Yes|-|-|
-|isOpen|boolean|Yes|-|-|
-|onClose|() => void|Yes|-|-|
+|children|ReactNode|Yes|-|Text <div style={{ padding: 16 }}>Asset details slide in from the side.</div>|
+|isOpen|boolean|Yes|-|true|
+|onClose|() => void|Yes|-|Log onClose={() => console.log('closed')}|
 |beforeDismiss|(source: 'backdrop' \| 'escape') => boolean \| Promise<boolean>|No|-|-|
 |mode|[SlideInPanelMode](../types/SlideInPanelMode.md)|No|-|-|
 |direction|[SlideInPanelDirection](../types/SlideInPanelDirection.md)|No|-|-|

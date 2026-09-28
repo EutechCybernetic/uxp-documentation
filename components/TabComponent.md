@@ -1,14 +1,5 @@
 # TabComponent
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=list-tabs-tabcomponent--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="TabComponent live demo"
-></iframe>
-
-
 
 
 
@@ -41,13 +32,23 @@ const TabComponent: React.FunctionComponent<TabComponentProps>
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=navigation-tabcomponent--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="TabComponent live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|tabs|[Tab[]](../types/Tab.md)|Yes|-|-|
-|selected|string|Yes|-|-|
-|onChangeTab|(tab: string) => void|Yes|-|-|
+|tabs|[Tab[]](../types/Tab.md)|Yes|-|[ { id: 'overview', label: 'Overview' }, { id: 'alarms', label: 'Alarms' }, { i…|
+|selected|string|Yes|-|"overview"|
+|onChangeTab|(tab: string) => void|Yes|-|Log onChangeTab={(tab) => console.log('tab', tab)}|
 |direction|'vertical' \| 'horizontal'|No|-|-|
 |position|'top' \| 'bottom' \| 'left' \| 'right'|No|-|-|
 |styles|[TabComponentStyles](../types/TabComponentStyles.md)|No|-|-|

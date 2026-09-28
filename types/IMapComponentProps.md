@@ -29,15 +29,13 @@ interface IMapComponentProps {
      * The static image consists of a url for the image and a width and height of the image.
      * Note that the width and height values should be relative - just that the ratio should be accurate.
      *
-     * @example
-     * ```
-     * staticImage={{url:'https://myserver/floor-plan.png',width:200,height:400}}
-     * ```
+     * For example: `staticImage={{url:'https://myserver/floor-plan.png',width:200,height:400}}`
      */
     staticImage?: IStaticImage,
 
     /**
      * Where the map is centered.
+     * @example { position: { latitude: 1.2834, longitude: 103.8607 } }
      */
     center?: { position: IMarker, renderMarker?: boolean },
 
@@ -45,6 +43,12 @@ interface IMapComponentProps {
      * A list of markers to render.
      * Each marker has a `latitude` `longitude` and `data` field.
      * The `data` field can store arbitrary data.
+     * @example
+     * [
+     *   { latitude: 1.2834, longitude: 103.8607, data: { name: 'Marina Tower' } },
+     *   { latitude: 1.2861, longitude: 103.8545, data: { name: 'Bayfront Hall' } },
+     *   { latitude: 1.2806, longitude: 103.8642, data: { name: 'Gardens Annex' } },
+     * ]
      */
     markers?: IMarker[],
 
@@ -52,6 +56,10 @@ interface IMapComponentProps {
      * This handler gets called whenever a marker is clicked on.
      * The first parameter represents the marker element that was clicked on.
      * The second parameter represents the data associated with the marker
+     * @example Log the marker
+     * ```tsx
+     * onMarkerClick={(el, data) => console.log('marker', data)}
+     * ```
      */
     onMarkerClick?: (el: any, data: any) => void
 
@@ -74,6 +82,8 @@ interface IMapComponentProps {
 
     /**
      * The default zoom level to show on the map
+     * @default 5
+     * @example 15
      */
     zoom?: number,
     /**

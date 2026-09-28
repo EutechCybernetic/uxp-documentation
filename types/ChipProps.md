@@ -10,12 +10,14 @@ Props for the Chip component
 interface ChipProps {
     /**
      * Optional icon identifier for the chip (e.g., FontAwesome icon name).
+     * @example "fas circle-check"
      */
     icon?: string;
 
     /**
      * The label content to display in the chip. Can be a string or a React node.
      * Omit or pass an empty string to render icon-only (circle) mode.
+     * @example "Running"
      */
     label?: string | ReactNode;
 

@@ -8,6 +8,12 @@ Props for the ConfigurationViewContent component.
 
 ```tsx
 export interface ConfigurationViewContentProps {
+    /**
+     * @example Text
+     * ```tsx
+     * <div>Account name, time zone and currency.</div>
+     * ```
+     */
     children: React.ReactNode;
 }
 ```

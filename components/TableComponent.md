@@ -1,14 +1,5 @@
 # TableComponent
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=list-tables-tablecomponent--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="TableComponent live demo"
-></iframe>
-
-
 
 TableComponent displays tabular data with optional pagination, search, filters,
 action buttons, edit/delete actions, and inline editing mode.
@@ -54,20 +45,42 @@ tsx
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-tables-tablecomponent--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="TableComponent live preview"
+></iframe>
+
+### Variants
+
+#### Example 1
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-tables-tablecomponent--default&amp;viewMode=story&amp;args=pageSize%3A10%3Btotal%3A1&amp;props=%7B%22data%22%3A%5B%7B%22id%22%3A1%2C%22name%22%3A%22Item+1%22%7D%5D%2C%22columns%22%3A%5B%7B%22id%22%3A%22name%22%2C%22label%22%3A%22Name%22%7D%5D%7D"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="TableComponent: Example 1"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|data|RowData[] \| ((page: number, pageSize: number, query?: string, filters?: Filters) => Promise<{ items: RowData[] }>)|Yes|-|-|
-|columns|[TableColumn[]](../types/TableColumn.md)|Yes|-|-|
-|pageSize|number|Yes|-|-|
-|total|number \| ((query?: string, filters?: Filters) => Promise<number>)|Yes|-|-|
+|data|RowData[] \| ((page: number, pageSize: number, query?: string, filters?: Filters) => Promise<{ items: RowData[] }>)|Yes|-|[ { id: 1, name: 'Chiller 01', status: 'Running', location: 'Level 1' }, { id: …|
+|columns|[TableColumn[]](../types/TableColumn.md)|Yes|-|[ { id: 'name', label: 'Name' }, { id: 'status', label: 'Status' }, { id: 'loca…|
+|pageSize|number|Yes|-|5|
+|total|number \| ((query?: string, filters?: Filters) => Promise<number>)|Yes|-|7|
 |loading|boolean|No|-|-|
 |noItemsMessage|string \| React.ReactNode|No|-|-|
 |editColumn|{ enable: boolean; label?: string; renderColumn?: (item: RowData) => React.ReactNode; onEdit?: (item: RowData) => void; }|No|-|-|
 |deleteColumn|{ enable: boolean; label?: string; renderColumn?: (item: RowData) => React.ReactNode; onDelete?: (item: RowData) => Promise<void>; }|No|-|-|
 |expandColumn|{ enable: boolean; label?: string; width?: number }|No|-|-|
-|minCellWidth|number|No|-|-|
+|minCellWidth|number|No|100|-|
 |onClickRow|(e: React.MouseEvent<HTMLDivElement>, item: RowData) => void|No|-|-|
 |onClickColumn|(e: React.MouseEvent<HTMLDivElement>, item: RowData, column: TableColumn) => void|No|-|-|
 |disablePagination|boolean|No|-|-|

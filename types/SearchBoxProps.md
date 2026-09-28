@@ -6,6 +6,7 @@
 interface SearchBoxProps extends InputSizeProps, InputStateProps {
     /**
      * Default value
+     * @example "chiller"
      */
     value: string,
     /**

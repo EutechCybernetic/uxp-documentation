@@ -9,6 +9,27 @@
 export interface TreeViewProps {
     /**
      * Array of root nodes in the tree
+     * @example
+     * [
+     *   {
+     *     id: 'hq', label: 'Head Office', icon: 'fas building', path: 'hq', expandOnLoad: true,
+     *     getChildren: [
+     *       {
+     *         id: 'l1', label: 'Level 1', icon: 'fas layer-group', path: 'hq/l1', expandOnLoad: true,
+     *         getChildren: [
+     *           { id: 'l1-lobby', label: 'Lobby', path: 'hq/l1/l1-lobby' },
+     *           { id: 'l1-plant', label: 'Plant room', path: 'hq/l1/l1-plant' },
+     *         ],
+     *       },
+     *       {
+     *         id: 'l2', label: 'Level 2', icon: 'fas layer-group', path: 'hq/l2',
+     *         getChildren: [
+     *           { id: 'l2-meeting', label: 'Meeting room A', path: 'hq/l2/l2-meeting' },
+     *         ],
+     *       },
+     *     ],
+     *   },
+     * ]
      */
     items: TreeNode[],
     /**
@@ -33,6 +54,10 @@ export interface TreeViewProps {
     selected?: TreeNode | TreeNode[],
     /**
      * Callback function triggered when a node is selected
+     * @example Log
+     * ```tsx
+     * onSelect={(selected) => console.log('selected', selected)}
+     * ```
      */
     onSelect?: (selected: TreeNode | TreeNode[]) => void,
     /**

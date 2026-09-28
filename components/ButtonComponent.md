@@ -1,14 +1,5 @@
 # ButtonComponent
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=buttons-buttoncomponent--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ButtonComponent live demo"
-></iframe>
-
-
 
 Enhanced Button component with multiple variants and icon support
 
@@ -66,30 +57,82 @@ const ButtonComponent: React.FunctionComponent<ButtonComponentProps>
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-buttoncomponent--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ButtonComponent live preview"
+></iframe>
+
+### Variants
+
+#### Basic button
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-buttoncomponent--default&amp;viewMode=story&amp;args=title%3AClick+me%3BleftIcon%3A%21undefined%3BloadingTitle%3A%21undefined"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ButtonComponent: Basic button"
+></iframe>
+
+#### Button with icons
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-buttoncomponent--default&amp;viewMode=story&amp;args=title%3ASave%3BloadingTitle%3A%21undefined&amp;props=%7B%22leftIcon%22%3A%22%F0%9F%92%BE%22%2C%22rightIcon%22%3A%22%E2%86%92%22%7D"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ButtonComponent: Button with icons"
+></iframe>
+
+#### Icon only button
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-buttoncomponent--default&amp;viewMode=story&amp;args=iconOnly%3A%21true%3Bvariant%3Adanger%3Btitle%3A%21undefined%3BloadingTitle%3A%21undefined&amp;props=%7B%22leftIcon%22%3A%22%C3%97%22%7D"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ButtonComponent: Icon only button"
+></iframe>
+
+#### Async button with loading
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=buttons-buttoncomponent--default&amp;viewMode=story&amp;args=title%3ASubmit%3BleftIcon%3A%21undefined&amp;props=%7B%22loadingTitle%22%3A%22Submitting...%22%7D"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ButtonComponent: Async button with loading"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|title|string|No|-|-|
+|title|string|No|-|"Save"|
 |tooltip|string|No|-|-|
-|leftIcon|[ButtonIcon](../types/ButtonIcon.md)|No|-|-|
+|leftIcon|[ButtonIcon](../types/ButtonIcon.md)|No|-|"fas save"|
 |rightIcon|[ButtonIcon](../types/ButtonIcon.md)|No|-|-|
 |className|string|No|-|-|
-|onClick|(e?: React.MouseEvent<HTMLButtonElement>) => void \| Promise<void>|No|-|-|
+|onClick|(e?: React.MouseEvent<HTMLButtonElement>) => void \| Promise<void>|No|-|Sync handler onClick={() => alert('Clicked')}|
 |onError|(e?: React.MouseEvent<HTMLButtonElement>, error?: unknown) => void|No|-|-|
-|loading|boolean|No|-|-|
-|loadingTitle|string|No|-|-|
-|active|boolean|No|-|-|
-|disabled|boolean|No|-|-|
+|loading|boolean|No|false|-|
+|loadingTitle|string|No|-|"Saving..."|
+|active|boolean|No|false|-|
+|disabled|boolean|No|false|-|
 |styles|React.CSSProperties|No|-|-|
 |leftIconStyles|React.CSSProperties|No|-|-|
 |rightIconStyles|React.CSSProperties|No|-|-|
-|type|[ButtonComponentType](../types/ButtonComponentType.md)|No|-|-|
-|variant|[ButtonComponentVarient](../types/ButtonComponentVarient.md)|No|-|-|
-|iconOnly|boolean|No|-|-|
-|size|[ButtonComponentSize](../types/ButtonComponentSize.md)|No|-|-|
-|mode|[ButtonComponentMode](../types/ButtonComponentMode.md)|No|-|-|
-|textMode|[ButtonComponentTextMode](../types/ButtonComponentTextMode.md)|No|-|-|
+|type|[ButtonComponentType](../types/ButtonComponentType.md)|No|'button'|-|
+|variant|[ButtonComponentVarient](../types/ButtonComponentVarient.md)|No|'primary'|-|
+|iconOnly|boolean|No|false|-|
+|size|[ButtonComponentSize](../types/ButtonComponentSize.md)|No|'medium'|-|
+|mode|[ButtonComponentMode](../types/ButtonComponentMode.md)|No|'transparent'|-|
+|textMode|[ButtonComponentTextMode](../types/ButtonComponentTextMode.md)|No|'sentence'|-|
 
 ## Related Types
 

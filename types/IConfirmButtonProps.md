@@ -6,6 +6,7 @@
 interface IConfirmButtonProps {
     /**
      * The caption for the button
+     * @example "Delete"
      */
     title: string,
 
@@ -26,10 +27,18 @@ interface IConfirmButtonProps {
 
     /**
      * The callback that gets invoked when the confirm button is clicked
+     * @example Resolves after 1 s
+     * ```tsx
+     * onConfirm={() => new Promise(resolve => setTimeout(resolve, 1000))}
+     * ```
      */
     onConfirm: () => Promise<any>,
     /**
      * The callback that gets invoked when the cancel button is clicked
+     * @example Log
+     * ```tsx
+     * onCancel={() => console.log('cancelled')}
+     * ```
      */
     onCancel: () => void,
 

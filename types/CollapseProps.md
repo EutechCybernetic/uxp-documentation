@@ -10,6 +10,7 @@ Props for the Collapse component
 export interface CollapseProps {
     /**
      * The title of the collapse panel. Can be a string or a React node.
+     * @example "Maintenance history"
      */
     title: string | React.ReactNode;
 
@@ -20,11 +21,16 @@ export interface CollapseProps {
 
     /**
      * Content to display inside the collapse panel when expanded.
+     * @example Text
+     * ```tsx
+     * <div>Filter replaced on 12 Aug. Belt tension checked on 3 Sep.</div>
+     * ```
      */
     children?: React.ReactNode;
 
     /**
      * Determines if the collapse panel is expanded by default. Defaults to true.
+     * @example true
      */
     defaultExpanded?: boolean;
 

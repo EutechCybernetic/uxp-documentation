@@ -10,6 +10,7 @@ ImagePicker component props
 interface IImagePickerProps {
     /**
      * The current image URL
+     * @example "/content/media/lobby.png"
      */
     value: string
 

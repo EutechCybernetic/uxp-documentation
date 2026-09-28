@@ -1,14 +1,5 @@
 # MapComponent
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=map-mapcomponent--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="MapComponent live demo"
-></iframe>
-
-
 A map widget that can show a pannable/zoomable map with markers
 
 
@@ -26,19 +17,29 @@ import { MapComponent } from 'uxp/components';
 const MapComponent: React.FunctionComponent<IMapComponentProps>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-map-mapcomponent--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="MapComponent live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|mapUrl|string|No|-|* ```|
-|staticImage|[IStaticImage](../types/IStaticImage.md)|No|-|* ```|
-|center|{ position: IMarker, renderMarker?: boolean }|No|-|-|
-|markers|[IMarker[]](../types/IMarker.md)|No|-|-|
-|onMarkerClick|(el: any, data: any) => void|No|-|-|
+|mapUrl|string|No|-|mapUrl="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"|
+|staticImage|[IStaticImage](../types/IStaticImage.md)|No|-|-|
+|center|{ position: IMarker, renderMarker?: boolean }|No|-|{ position: { latitude: 1.2834, longitude: 103.8607 } }|
+|markers|[IMarker[]](../types/IMarker.md)|No|-|[ { latitude: 1.2834, longitude: 103.8607, data: { name: 'Marina Tower' } }, { …|
+|onMarkerClick|(el: any, data: any) => void|No|-|Log the marker onMarkerClick={(el, data) => console.log('marker', data)}|
 |regions|[IRegion[]](../types/IRegion.md)|No|-|-|
 |onRegionClick|(event: any, data: any) => void|No|-|-|
 |heatmap|[IHeatmapConfiguration](../types/IHeatmapConfiguration.md)|No|-|-|
-|zoom|number|No|-|-|
+|zoom|number|No|5|15|
 |maxZoom|number|No|-|-|
 |minZoom|number|No|-|-|
 |zoomOnScroll|boolean|No|-|-|

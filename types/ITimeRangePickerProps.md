@@ -4,13 +4,18 @@
 
 ```tsx
 interface ITimeRangePickerProps extends InputSizeProps, InputStateProps {
+    /**
+     * @example "Working hours"
+     */
     title: string
     /**
      * Start time . Either a Date object or an time string (Ex: 01:10:00 pm)
+     * @example "09:00"
      */
     startTime: string | Date,
     /**
     * End time . Either a Date object or an time string (Ex: 01:10:00 pm)
+     * @example "18:00"
     */
     endTime: string | Date,
     /**

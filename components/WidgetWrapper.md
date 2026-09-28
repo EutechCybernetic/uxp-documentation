@@ -1,14 +1,5 @@
 # WidgetWrapper
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=other-widgetwrapper--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="WidgetWrapper live demo"
-></iframe>
-
-
 
 
 
@@ -60,6 +51,16 @@ then you can write css to make the widgets resposive
 	>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=layout-widgetwrapper--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="WidgetWrapper live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
@@ -68,7 +69,7 @@ then you can write css to make the widgets resposive
 |cssBreakPoints|{ width?: { default: string, [key: number]: string }, height?: { default: string, [key: number]: string } }|No|-|-|
 |instanceId|string|No|-|-|
 |sampleData|{ /** * toggle sample data label */ showLabel?: boolean, /** * this will be shown in the popup */ description?: string, /** * this is deprecated - use product ids instead * link to buy from spaceworx * if not provided button will not be shown */ link?: string, /** * prouct ids to show on spaceworx */ productIds?: string[] }|No|-|-|
-|children|React.ReactNode|No|-|-|
+|children|React.ReactNode|No|-|Title and content <> <TitleBar title="Energy today" icon="https://static.iviva.…|
 
 ## Related Types
 

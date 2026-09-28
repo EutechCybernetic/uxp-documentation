@@ -8,9 +8,27 @@ Props for the standalone PillDropdown panel.
 
 ```tsx
 export interface PillDropdownProps {
-    /** Available options grouped by sections */
+    /**
+     * Available options grouped by sections
+     * @example
+     * [
+     *   {
+     *     label: 'User',
+     *     fields: [
+     *       { label: 'Name', value: 'user.name' },
+     *       { label: 'Email', value: 'user.email' },
+     *     ],
+     *   },
+     * ]
+     */
     contextDataSections: ContextDatasection[];
-    /** Called when an option is clicked */
+    /**
+     * Called when an option is clicked
+     * @example Log
+     * ```tsx
+     * onSelect={(value, field) => console.log('picked', value, field)}
+     * ```
+     */
     onSelect: (value: string, field: PillOption) => void;
     /** Configuration for different pill types */
     pillConfiguration?: PillConfiguration;

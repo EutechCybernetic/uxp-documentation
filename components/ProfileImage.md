@@ -1,15 +1,7 @@
 # ProfileImage
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=other-profileimage--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ProfileImage live demo"
-></iframe>
-
-
 Display a profile picture. Supports images (URLs), icons (FontAwesome, Phosphor patterns), and initials.
+
 
 
 
@@ -26,12 +18,22 @@ import { ProfileImage } from 'uxp/components';
 const ProfileImage: React.FunctionComponent<IProfileImageProps>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-profileimage--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ProfileImage live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |image|string \| IconProp|No|-|-|
-|name|string|No|-|-|
+|name|string|No|-|"Alex Morgan"|
 |bgColor|string|No|-|-|
 |textColor|string|No|-|-|
 |className|string|No|-|-|

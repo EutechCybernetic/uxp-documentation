@@ -1,14 +1,5 @@
 # FilterPanel
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=popups-filterpanel--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="FilterPanel live demo"
-></iframe>
-
-
 
 Displays a filter button which, when clicked, opens a popup panel.
 Suitable for hiding filters for widgets or searches.
@@ -81,18 +72,28 @@ tsx
 </FilterPanel>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=overlays-filterpanel--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="FilterPanel live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |onOpen|() => void|No|-|-|
 |onClose|() => void|No|-|-|
-|onClear|() => void|No|-|-|
+|onClear|() => void|No|-|Log onClear={() => console.log('cleared')}|
 |position|[DropdownPosition](../types/DropdownPosition.md)|No|-|-|
 |className|string|No|-|-|
 |enableClear|boolean|No|-|-|
 |icon|string|No|-|-|
-|children|React.ReactNode|No|-|* ```tsx|
+|children|React.ReactNode|No|-|<FilterPanel enableClear={hasFilters} onClear={clearFilters}> <FormField> <Labe…|
 
 ## Related Types
 

@@ -11,12 +11,14 @@ interface IUploadStatusProps {
     /**
      * Whether an upload is running. While it is, the progress bar replaces any
      * error from the previous attempt.
+     * @example true
      */
     isUploading: boolean
 
     /**
      * Completion 0–100. Falsy means the transfer reports no progress, and the
      * bar runs indeterminate rather than sitting at zero.
+     * @example 45
      */
     progress?: number
 

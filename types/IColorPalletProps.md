@@ -8,6 +8,9 @@
 
 ```tsx
 interface IColorPalletProps {
+    /**
+     * @example "#1e88e5"
+     */
     color: string,
     onChange: (color: string) => void
 }

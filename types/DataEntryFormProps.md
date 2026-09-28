@@ -10,11 +10,19 @@ Props for the DataEntryForm component
 export interface DataEntryFormProps<T = any> extends Omit<DynamicFormProps, 'formStructure'> {
     /**
      * Current item data to populate form fields
+     * @example { name: 'Chiller 01', location: 'Level 1' }
      */
     item?: Partial<T>;
 
     /**
      * DataEntrySection components defining the form structure
+     * @example One section
+     * ```tsx
+     * <DataEntrySection title="Asset details" columns={2}>
+     *     <DataEntryField field="name" title="Name" type="text" />
+     *     <DataEntryField field="location" title="Location" type="text" />
+     * </DataEntrySection>
+     * ```
      */
     children?: React.ReactNode;
 }

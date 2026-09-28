@@ -10,12 +10,14 @@ Base props shared by all SlideInForm variants
 interface SlideInFormBaseProps {
     /**
      * Form title displayed in the header
+     * @example "New asset"
      */
     title: string;
 
     /**
      * Whether the form panel is open
      * @default false
+     * @example true
      */
     isOpen?: boolean;
 
@@ -27,11 +29,22 @@ interface SlideInFormBaseProps {
     /**
      * Callback when form is submitted successfully
      * @param data - The validated form data
+     * @example Resolves after 1 s
+     * ```tsx
+     * onSave={async (data) => {
+     *     await new Promise(resolve => setTimeout(resolve, 1000));
+     *     console.log('saved', data);
+     * }}
+     * ```
      */
     onSave: (data: any) => Promise<void>;
 
     /**
      * Callback when form is cancelled
+     * @example Log
+     * ```tsx
+     * onCancel={() => console.log('cancelled')}
+     * ```
      */
     onCancel: () => void;
 

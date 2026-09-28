@@ -1,13 +1,6 @@
 # TreeViewCompare
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=list-treeview-treeviewcompare--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="TreeViewCompare live demo"
-></iframe>
-
+> **Part of [TreeView](TreeView.md).** Usually used through TreeView. Use it directly to build a custom layout.
 
 
 
@@ -65,12 +58,22 @@ tsx
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-lists-tree-view-treeviewcompare--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="TreeViewCompare live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|leftItems|[TreeNode[]](../types/TreeNode.md)|Yes|-|-|
-|rightItems|[TreeNode[]](../types/TreeNode.md)|Yes|-|-|
+|leftItems|[TreeNode[]](../types/TreeNode.md)|Yes|-|[ { id: 'hq', label: 'Head Office', icon: 'fas building', path: 'hq', expandOnL…|
+|rightItems|[TreeNode[]](../types/TreeNode.md)|Yes|-|[ { id: 'zones', label: 'HVAC zones', icon: 'fas fan', path: 'zones', expandOnL…|
 |leftTitle|string \| React.ReactNode|No|-|-|
 |rightTitle|string \| React.ReactNode|No|-|-|
 |leftLoading|boolean|No|-|-|

@@ -1,11 +1,14 @@
 # UploadView
 
+> **Advanced.** Available for building custom components. Most apps do not need it.
+
 
 Drop-zone upload view: the user picks files and sees them as removable cards.
 Multi-select starts the upload from its own button beside the strip;
 single-select starts it from the host's header button, which also ends the
 dialog. Files go to the content store and, when enabled, are recorded in the
 user's media library.
+
 
 
 ## Installation
@@ -30,7 +33,7 @@ const UploadView: React.FunctionComponent<IUploadViewProps>
 |multiple|boolean|No|false|-|
 |onPendingFilesChange|(files: File[]) => void|No|-|-|
 |uploadRequestedAt|number|No|-|-|
-|onUploaded|(urls: string[]) => void|Yes|-|-|
+|onUploaded|(urls: string[]) => void|Yes|-|Log onUploaded={(urls) => console.log('uploaded', urls)}|
 
 ## Related Types
 

@@ -10,6 +10,7 @@ Props for the AppRoleInput component
 export interface AppRoleInputProps extends InputStateProps {
     /**
      * Comma-separated "App:Role" pairs, e.g. "System:Admin,Facilities:Manager"
+     * @example "System:admin"
      */
     value: string;
 

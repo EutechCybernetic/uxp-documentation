@@ -6,6 +6,7 @@
 interface IModalProps {
     /**
      * Set this to true to make the modal visible
+     * @example true
      */
     show: boolean;
     /**
@@ -14,11 +15,16 @@ interface IModalProps {
     onOpen?: () => void;
     /**
      * Called when the modal gets closed
+     * @example Log
+     * ```tsx
+     * onClose={() => console.log('closed')}
+     * ```
      */
     onClose?: () => void;
     /**
      * The title set in the title bar of the modal.
      * If the `headerContent` attribute is set, then this value will not be used.
+     * @example "Edit asset"
      */
     title?: string;
     /**
@@ -60,6 +66,12 @@ interface IModalProps {
      */
     renderAdditionalContent?: () => JSX.Element;
     autoSize?: boolean;
+    /**
+     * @example Text
+     * ```tsx
+     * <div style={{ padding: 16 }}>Change the asset details here.</div>
+     * ```
+     */
     children?: React.ReactNode;
 }
 ```

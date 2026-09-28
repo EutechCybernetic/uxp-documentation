@@ -11,6 +11,7 @@ export interface IMediaStripCardProps {
     /**
      * The value to render — a URL, an icon string, or an object URL for a file
      * that has not been uploaded yet.
+     * @example "/content/media/chiller-01.png"
      */
     value: string
 
@@ -22,6 +23,9 @@ export interface IMediaStripCardProps {
 
     onRemove?: () => void
 
+    /**
+     * @example "Remove"
+     */
     removeTitle: string
 }
 ```

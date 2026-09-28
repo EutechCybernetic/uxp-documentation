@@ -8,6 +8,13 @@ interface IDataTableProps {
      * List of items to render. This can either be an array of objects or a function that will generate the array of objects.
      * If you supply a function then pagination will be supported. The function expects 2 parameters - `max` and `last` and returns a promise that will resolve to the list of objects.
      * `max` specifies the maximum number of items to be returned.
+     * @example
+     * [
+     *   { requestId: 'REQ-1001', user: 'Alex Morgan' },
+     *   { requestId: 'REQ-1002', user: 'Priya Nair' },
+     *   { requestId: 'REQ-1003', user: 'Chen Wei' },
+     *   { requestId: 'REQ-1004', user: 'Sam Carter' },
+     * ]
      */
     data: Array<any> | IDataFunction,
 
@@ -20,7 +27,7 @@ interface IDataTableProps {
      *  @example
      * 
      * ```
-     *  renderColumn={(item,key)=><div>{'Item:' + JSON.stringify(item)}}</div>}
+     *  renderColumn={(item,key)=><div>{'Item:' + JSON.stringify(item)}</div>}
      * ```
      * @example
      * 
@@ -29,12 +36,12 @@ interface IDataTableProps {
      *  {
      *      title: "Request Id",
      *      width: "20%",
-     *      render: (item) => <div>{item.requestId} </div>
+     *      renderColumn: (item) => <div>{item.requestId} </div>
      *  },
      *  {
      *      title: "User",
      *      width: "10%",
-     *      render: (item) => <div>{item.user} </div>
+     *      renderColumn: (item) => <div>{item.user} </div>
      *  }
      * ]}
      * ```
@@ -43,6 +50,7 @@ interface IDataTableProps {
 
     /**
      * The number of items to fetch in each page. This gets passed to the data function as the `max` parameter
+     * @example 10
      */
     pageSize: number,
 

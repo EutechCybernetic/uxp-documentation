@@ -1,16 +1,10 @@
 # CalendarComponent
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-datetimepicker-calendarcomponent--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="CalendarComponent live demo"
-></iframe>
-
+> **Advanced.** Available for building custom components. Most apps do not need it.
 
 
 Calendar component so display range of dates
+
 
 
 ## Installation
@@ -29,8 +23,8 @@ const CalendarComponent: React.FunctionComponent<ICalendarComponentProps>
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|dates|Date[]|Yes|-|-|
-|onSelectDate|(date: Date) => void|Yes|-|-|
+|dates|Date[]|Yes|-|[new Date('2026-09-10'), new Date('2026-09-18')]|
+|onSelectDate|(date: Date) => void|Yes|-|Log onSelectDate={(date) => console.log('date', date)}|
 |disableWeekEnds|boolean|No|-|-|
 |disableDates|Array<Date>|No|-|-|
 |minDate|Date|No|-|-|

@@ -1,14 +1,5 @@
 # Popover
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=popups-popover--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Popover live demo"
-></iframe>
-
-
 
 A component that displays a popover with a title and content when clicking on its child element.
 Uses the Dropdown component internally for positioning and click handling.
@@ -71,15 +62,25 @@ tsx
 </Popover>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=overlays-popover--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Popover live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|title|string \| (() => React.ReactNode)|Yes|-|* ```tsx|
-|content|string \| (() => React.ReactNode)|Yes|-|* ```tsx|
+|title|string \| (() => React.ReactNode)|Yes|-|title="Popover Title"|
+|content|string \| (() => React.ReactNode)|Yes|-|content="Popover content here"|
 |position|[DropdownPosition](../types/DropdownPosition.md)|No|-|-|
 |showArrow|boolean|No|-|-|
-|children|React.ReactNode|No|-|* ```tsx|
+|children|React.ReactNode|No|-|<Popover title="Details" content="More information" > <button>Click me</button>…|
 
 ## Related Types
 

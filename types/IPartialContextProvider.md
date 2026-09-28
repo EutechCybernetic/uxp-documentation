@@ -32,6 +32,8 @@ export interface IPartialContextProvider {
     userDetails?: UserDetails;
     userSiteTimeZoneName?: string,
     userTimezoneCode?: string,
+    /** site timezone abbreviation (e.g. IST) appended to formatted datetimes */
+    userTimezoneAbbreviation?: string,
     userSiteTimeZoneOffsetInSeconds?: number,
     userSiteKey?: string,
     userSiteName?: string,

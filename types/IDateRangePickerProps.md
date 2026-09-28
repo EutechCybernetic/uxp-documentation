@@ -10,10 +10,12 @@ interface IDateRangePickerProps extends InputSizeProps, InputStateProps {
     title?: string,
     /**
      * start date of the range. Either a Date object or an ISO8601 string representation of a date
+     * @example "2026-09-01"
      */
     startDate: string | Date,
     /**
      * end date of the range. Either a Date object or an ISO8601 string representation of a date
+     * @example "2026-09-28"
      */
     endDate: string | Date,
 

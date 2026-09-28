@@ -1,14 +1,5 @@
 # Dropdown
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=popups-dropdown--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Dropdown live demo"
-></iframe>
-
-
 
 A component that displays a dropdown menu with customizable positioning and animation.
 
@@ -131,12 +122,22 @@ tsx
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=overlays-dropdown--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Dropdown live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|content|ReactNode|Yes|-|-|
-|trigger|ReactNode|No|-|-|
+|content|ReactNode|Yes|-|Menu content={<div style={{ padding: 8 }}><div>Edit</div><div>Duplicate</div><d…|
+|trigger|ReactNode|No|-|Button trigger={<Button title="Actions" icon="fas chevron-down" iconPosition="r…|
 |triggerElementRef|React.MutableRefObject<HTMLDivElement>|No|-|-|
 |externalTriggerRef|React.RefObject<HTMLElement>|No|-|-|
 |className|string|No|-|-|

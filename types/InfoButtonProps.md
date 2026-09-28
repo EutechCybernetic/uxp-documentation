@@ -12,6 +12,7 @@ export interface InfoButtonProps {
      * - `string`: rendered as plain text
      * - `string[]`: rendered as a bulleted list
      * - `ReactNode`: rendered as-is
+     * @example "Energy is measured by the main meter every 15 minutes."
      */
     content: string | React.ReactNode | string[]
 

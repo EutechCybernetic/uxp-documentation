@@ -10,11 +10,19 @@ Props for the ObjectInfoCard component.
 export interface ObjectInfoCardProps {
     /**
      * Array of fields to display in the card.
+     * @example
+     * [
+     *   { label: 'Status', value: 'Running', icon: 'fas circle-check' },
+     *   { label: 'Location', value: 'Level 1 · Plant room', icon: 'fas location-dot' },
+     *   { label: 'Capacity', value: '500 kW', icon: 'fas gauge' },
+     *   { label: 'Serviced', value: '12 Aug 2026', icon: 'fas wrench' },
+     * ]
      */
     fields: ObjectField[];
 
     /**
      * Number of columns for the grid layout (1, 2, 3, or 4). Defaults to 2.
+     * @example 2
      */
     columns?: 1 | 2 | 3 | 4;
 
@@ -41,6 +49,7 @@ export interface ObjectInfoCardProps {
 
     /**
      * An optional title for the card container
+     * @example "Details"
      */
     title?: string;
 }

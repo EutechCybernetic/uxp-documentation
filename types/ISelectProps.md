@@ -11,6 +11,13 @@ interface ISelectProps extends InputSizeProps, InputStateProps {
      * List of items to select from. 
      * Each option has a label which is displayed and a value which is what we actually select.
      * also you can pass any object as options, then specify the labelField, valueField props 
+     * @example
+     * [
+     *   { label: 'Chiller 01', value: 'CH-01' },
+     *   { label: 'Chiller 02', value: 'CH-02' },
+     *   { label: 'AHU 01', value: 'AHU-01' },
+     *   { label: 'Pump 01', value: 'P-01' },
+     * ]
      */
     options: IOption[] | any[] | IDataFunction,
     /**
@@ -30,6 +37,7 @@ interface ISelectProps extends InputSizeProps, InputStateProps {
     iconField?: string
     /**
      * The  currently selected value
+     * @example "CH-01"
      */
     selected: string,
 
@@ -70,12 +78,12 @@ interface ISelectProps extends InputSizeProps, InputStateProps {
      * @example
      * 
      * ```
-     * renderItem={(option,key)=><div>{option.label}</div>}
+     * renderOption={(option,key)=><div>{option.label}</div>}
      * ```
      * 
      * @example
      * ```
-     * renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
+     * renderOption={(option,key)=><ItemCard title={option.label} />}
      * ```
      */
     /**

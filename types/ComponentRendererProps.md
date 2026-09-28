@@ -8,7 +8,13 @@
 ```tsx
 export interface ComponentRendererProps {
     // Path A: by ID — resolves via lookupComponent + lazy script loading
+    /**
+     * @example "storybook"
+     */
     moduleId?: string;
+    /**
+     * @example "chiller-load"
+     */
     componentId?: string;
     type?: ComponentType;
 

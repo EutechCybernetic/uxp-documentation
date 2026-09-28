@@ -1,14 +1,5 @@
 # DynamicSelect
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-dynamicselect--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="DynamicSelect live demo"
-></iframe>
-
-
 
 
 
@@ -44,19 +35,29 @@ const DynamicSelect: React.FunctionComponent<IDynamicSelectProps>
  />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-selection-dynamicselect--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DynamicSelect live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|options|[IDynamicSelectDataFunction](../types/IDynamicSelectDataFunction.md)|Yes|-|-|
-|selected|string|Yes|-|-|
+|options|[IDynamicSelectDataFunction](../types/IDynamicSelectDataFunction.md)|Yes|-|Paged list options={async (max, lastPageToken) => { const all = ['Chiller 01', …|
+|selected|string|Yes|-|"Chiller 01"|
 |onChange|(value: any) => void|Yes|-|-|
 |placeholder|string|No|-|-|
 |className|string|No|-|-|
 |isValid|boolean|No|-|-|
 |pageSize|number|No|-|-|
-|renderOption|(item: any, key: number) => JSX.Element|No|-|*|
-|labelField|string|Yes|-|-|
+|renderOption|(item: any, key: number) => JSX.Element|No|-|renderOption={(option,key)=><div>{option.label}</div>}|
+|labelField|string|Yes|-|"name"|
 |iconField|string|No|-|-|
 |timeout|number|No|-|-|
 |type|"search-box" \| "select-box"|No|-|-|

@@ -8,7 +8,10 @@ Props for the MarkdownPreview component.
 
 ```tsx
 export interface MarkdownPreviewProps {
-    /** Markdown source string to render */
+    /**
+     * Markdown source string to render
+     * @example "## Maintenance notes\n\n- Filter replaced on **12 Aug**\n- Next check: [schedule](https://www.iviva.com)\n"
+     */
     value: string;
     /** Additional CSS class names */
     className?: string;

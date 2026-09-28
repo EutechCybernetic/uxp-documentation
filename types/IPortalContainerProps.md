@@ -10,6 +10,7 @@ Options that can be passed to a portal container component
 interface IPortalContainerProps {
     /**
      * create a backdrop if true
+     * @example true
      */
     hasBackdrop?: boolean,
 
@@ -29,6 +30,12 @@ interface IPortalContainerProps {
      */
     disableScroll?: boolean,
     className?: string;
+    /**
+     * @example Box
+     * ```tsx
+     * <div style={{ padding: 24, background: 'var(--portalBGColor)' }}>Rendered in a portal above the page.</div>
+     * ```
+     */
     children?: React.ReactNode;
 }
 ```

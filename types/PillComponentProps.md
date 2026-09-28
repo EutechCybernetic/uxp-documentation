@@ -7,11 +7,24 @@ Props for individual Pill component
 
 ```tsx
 interface PillComponentProps {
-    /** The pill's value */
+    /**
+     * The pill's value
+     * @example "{user.name}"
+     */
     value: string;
-    /** All available field options for context */
+    /**
+     * All available field options for context
+     * @example
+     * [
+     *   { label: 'Name', value: 'user.name' },
+     *   { label: 'Email', value: 'user.email' },
+     * ]
+     */
     allFields: PillOption[]
-    /** Regex to match pill expressions */
+    /**
+     * Regex to match pill expressions
+     * @example /{(.*?)}/
+     */
     expressionMatcher: RegExp;
     /** Configuration for pill rendering */
     pillConfiguration?: PillConfiguration;

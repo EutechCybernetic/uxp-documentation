@@ -1,13 +1,5 @@
 # Dashboard
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=dashboard--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Dashboard live demo"
-></iframe>
-
 
 
 
@@ -24,16 +16,26 @@ import { Dashboard } from 'uxp/components';
 const Dashboard: React.FunctionComponent<DashboardProps>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=dashboard-dashboard--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Dashboard live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|widgets|[ComponentInstance[]](../types/ComponentInstance.md)|Yes|-|-|
-|layouts|[ResponsiveLayouts](../types/ResponsiveLayouts.md)|No|-|-|
-|onSave|(widgets: ComponentInstance[], layouts: ResponsiveLayouts) => Promise<boolean>|Yes|-|-|
+|widgets|[ComponentInstance[]](../types/ComponentInstance.md)|Yes|-|[ { _id: 'w1', id: 'storybook/widget/energy-mix', key: 'w1', name: 'Energy mix'…|
+|layouts|[ResponsiveLayouts](../types/ResponsiveLayouts.md)|No|-|{ lg: [ { i: 'w1', x: 0, y: 0, w: 10, h: 12 }, { i: 'w2', x: 10, y: 0, w: 10, h…|
+|onSave|(widgets: ComponentInstance[], layouts: ResponsiveLayouts) => Promise<boolean>|Yes|-|Log the save onSave={async (widgets, layouts) => { console.log('saved', widgets…|
 |margin|[number, number]|No|-|-|
 |padding|[number, number]|No|-|-|
-|isEditing|boolean|Yes|-|-|
+|isEditing|boolean|Yes|-|false|
 |allowRearrange|boolean|No|-|-|
 |breakpoints|Record<string, BreakPoint>|No|-|-|
 |onChangeBreakPoint|(cols: number) => void|No|-|-|

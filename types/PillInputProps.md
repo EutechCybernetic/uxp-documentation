@@ -8,13 +8,28 @@ Props for the main PillInput component
 
 ```tsx
 export interface PillInputProps extends InputSizeProps, InputStateProps {
-    /** Current input value */
+    /**
+     * Current input value
+     * @example "Hello {user.name}, your work order is ready"
+     */
     value: string;
     /** Callback when value changes */
     onChange: (value: string) => void;
     /** Placeholder text for empty input */
     placeholder?: string;
-    /** Available options grouped by sections */
+    /**
+     * Available options grouped by sections
+     * @example
+     * [
+     *   {
+     *     label: 'User',
+     *     fields: [
+     *       { label: 'Name', value: 'user.name' },
+     *       { label: 'Email', value: 'user.email' },
+     *     ],
+     *   },
+     * ]
+     */
     contextDataSections: ContextDatasection[]
     /** Configuration for different pill types */
     pillConfiguration?: PillConfiguration;

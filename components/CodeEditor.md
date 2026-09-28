@@ -1,14 +1,5 @@
 # CodeEditor
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-codeeditor--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="CodeEditor live demo"
-></iframe>
-
-
 
 Monaco-backed code editor with syntax highlighting, a toolbar (Format,
 tab-size cycle, line numbers, fullscreen), and optional auto-grow.
@@ -46,13 +37,23 @@ const ref = useRef<CodeEditorHandlers>(null);
 const { valid, error } = ref.current?.validate() ?? { valid: true, error: '' };
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-editors-codeeditor--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="CodeEditor live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|value|string|Yes|-|-|
+|value|string|Yes|-|"function total(items) {\n return items.reduce((sum, item) => sum + item.value,…|
 |onChange|(value: string) => void|Yes|-|-|
-|language|[CodeEditorLanguage](../types/CodeEditorLanguage.md)|No|-|-|
+|language|[CodeEditorLanguage](../types/CodeEditorLanguage.md)|No|-|"javascript"|
 |onFocus|() => void|No|-|-|
 |onBlur|(value: string) => void|No|-|-|
 |className|string|No|-|-|

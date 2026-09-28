@@ -1,14 +1,5 @@
 # MultiSelect
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-multiselect--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="MultiSelect live demo"
-></iframe>
-
-
 
 A select control to select multiple items from a list of items
 
@@ -67,22 +58,32 @@ const MultiSelect: React.MemoExoticComponent<React.FunctionComponent<IMultiSelec
  />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-selection-multiselect--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="MultiSelect live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|options|IOption[] \| any[] \| IDataFunction|Yes|-|-|
+|options|IOption[] \| any[] \| IDataFunction|Yes|-|[ { label: 'Chiller 01', value: 'CH-01' }, { label: 'Chiller 02', value: 'CH-02…|
 |labelField|string|No|-|-|
 |valueField|string|No|-|-|
 |iconField|string|No|-|-|
-|selected|string[]|Yes|-|-|
+|selected|string[]|Yes|-|['CH-01', 'AHU-01']|
 |selectedLabels|string[] \| ((selected: string[]) => Promise<any[]>)|No|-|-|
 |onChange|(values: string[], options?: IOption[] \| any[]) => void|Yes|-|-|
 |placeholder|string|No|-|-|
 |className|string|No|-|-|
 |isValid|boolean|No|-|-|
 |showEndOfContent|boolean|No|-|-|
-|renderOption|(item: any, key: number, isHighlighted?: boolean, isSelected?: boolean) => JSX.Element|No|-|*|
+|renderOption|(item: any, key: number, isHighlighted?: boolean, isSelected?: boolean) => JSX.Element|No|-|renderOption={(option,key)=><div>{option.label}</div>}|
 |wrapSelectedItemsToOneLine|boolean|No|-|-|
 |selectAllOnLoad|boolean|No|-|-|
 |hideClearButton|boolean|No|-|-|

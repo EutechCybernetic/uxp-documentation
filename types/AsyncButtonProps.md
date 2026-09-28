@@ -6,6 +6,7 @@
 interface AsyncButtonProps {
     /**
      * The caption for the button
+     * @example "Submit"
      */
     title?: string,
 
@@ -28,6 +29,14 @@ interface AsyncButtonProps {
     /**
      * The callback that gets invoked when the button is clicked.
      * It must return a Promise
+     * @example Resolves after 1.5 s
+     * ```tsx
+     * onClick={() => new Promise(resolve => setTimeout(resolve, 1500))}
+     * ```
+     * @example Fails after 1 s
+     * ```tsx
+     * onClick={() => new Promise((_, reject) => setTimeout(() => reject(new Error('Could not submit')), 1000))}
+     * ```
      */
     onClick: () => Promise<any>,
 
@@ -43,11 +52,16 @@ interface AsyncButtonProps {
 
     /**
      * Text to show when in loading state
+     * @example "Submitting..."
      */
     loadingTitle?: string,
 
     /**
      * a callback function to call on error — receives the click event and the thrown error
+     * @example Show the error
+     * ```tsx
+     * onError={(e, error) => alert(String(error))}
+     * ```
      */
     onError?: (e?: React.MouseEvent<HTMLButtonElement>, error?: unknown) => void,
 
@@ -92,12 +106,14 @@ interface AsyncButtonProps {
      * 
      * Here is a example for using fontawesome icons 
      * icon={'fas save'}
+     * @example "fas paper-plane"
      */
     icon?: string,
 
     /**
      * @deprecated Use leftIcon or rightIcon instead
      * icon position
+     * @default 'left'
      */
     iconPosition?: 'left' | 'right',
 

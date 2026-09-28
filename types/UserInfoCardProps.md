@@ -10,6 +10,7 @@ Props for the UserInfoCard component
 export interface UserInfoCardProps {
     /**
      * User key to fetch user details
+     * @example "1001"
      */
     userKey: number | string;
 

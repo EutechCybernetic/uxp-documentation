@@ -10,6 +10,7 @@
 interface IColorPickerProps extends InputSizeProps, InputStateProps {
     /**
      *  default color
+     * @example "#1e88e5"
     */
     color: string,
     /**

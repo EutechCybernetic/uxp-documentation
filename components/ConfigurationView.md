@@ -1,17 +1,9 @@
 # ConfigurationView
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-configurationview--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ConfigurationView live demo"
-></iframe>
-
-
 
 Configuration view with sidebar navigation and section content.
 Use `mode='single'` for pages that have one section and need no sidebar.
+
 
 
 ## Installation
@@ -26,16 +18,26 @@ import { ConfigurationView } from 'uxp/components';
 const ConfigurationView: React.FunctionComponent<IConfigurationViewProps>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=forms-configuration-view-configurationview--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ConfigurationView live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |uxpContext|[IContextProvider](../types/IContextProvider.md)|Yes|-|-|
-|title|string|No|-|-|
-|sections|[IConfigurationViewSection[]](../types/IConfigurationViewSection.md)|Yes|-|-|
+|title|string|No|-|"Settings"|
+|sections|[IConfigurationViewSection[]](../types/IConfigurationViewSection.md)|Yes|-|Two sections sections={[ { id: 'general', title: 'General', content: <div>Accou…|
 |actions|React.ReactNode|No|-|-|
-|selected|string|No|-|-|
-|onChangeSection|(id: string) => void|No|-|-|
+|selected|string|No|-|"general"|
+|onChangeSection|(id: string) => void|No|-|Log onChangeSection={(id) => console.log('section', id)}|
 |mode|'single' \| 'multiple'|No|-|-|
 
 ## Related Types

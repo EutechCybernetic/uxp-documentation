@@ -6,6 +6,7 @@
 interface IWidgetTitleBarProps {
     /**
      * The title to show for the widget
+     * @example "Energy today"
      */
     title: string;
 
@@ -14,6 +15,12 @@ interface IWidgetTitleBarProps {
      */
     icon?: string;
     className?: string
+    /**
+     * @example Action button
+     * ```tsx
+     * <Button title="Refresh" icon="fas rotate" />
+     * ```
+     */
     children?: React.ReactNode
 }
 ```

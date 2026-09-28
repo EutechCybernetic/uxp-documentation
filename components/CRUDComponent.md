@@ -1,13 +1,8 @@
 # CRUDComponent
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=list-crud-crudcomponent--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="CRUDComponent live demo"
-></iframe>
+> **Deprecated.** Use SimpleConfigurationTable instead. CRUDComponent will be removed in a future release.
 
+CRUD component
 
 
 
@@ -24,17 +19,27 @@ import { CRUDComponent } from 'uxp/components';
 const CRUDComponent: React.ForwardRefExoticComponent<React.RefAttributes<CRUDComponentInstanceProps> & CRUDComponentProps>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-tables-crudcomponent--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="CRUDComponent live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|list|[ListProps](../types/ListProps.md)|Yes|-|-|
-|add|[FormProps](../types/FormProps.md)|No|-|-|
+|list|[ListProps](../types/ListProps.md)|Yes|-|{ title: 'Assets', columns: [ { id: 'name', label: 'Name' }, { id: 'status', la…|
+|add|[FormProps](../types/FormProps.md)|No|-|{ title: 'New asset', formStructure: [ { title: 'Asset details', columns: 2, fi…|
 |renderCustomAddView|[RenderCustomFormView](../types/RenderCustomFormView.md)|No|-|-|
 |edit|[ExtendedFormProps](../types/ExtendedFormProps.md)|No|-|-|
 |renderCustomEditView|[RenderCustomFormView](../types/RenderCustomFormView.md)|No|-|-|
 |disableViews|{ add?: boolean; edit?: boolean; delete?: boolean; }|No|-|-|
-|entityName|string|No|-|-|
+|entityName|string|No|-|"Asset"|
 |className|string|No|-|-|
 
 ## Ref Handlers

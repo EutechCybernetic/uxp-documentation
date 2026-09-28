@@ -10,6 +10,7 @@ Props for the ErrorState component.
 export interface ErrorStateProps {
     /**
      * Headline message, e.g. "Access Denied".
+     * @example "Could not load assets"
      */
     title?: string;
 

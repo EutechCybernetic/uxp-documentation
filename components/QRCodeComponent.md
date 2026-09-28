@@ -18,12 +18,22 @@ import { QRCodeComponent } from 'uxp/components';
 const QRCodeComponent: React.ForwardRefExoticComponent<React.RefAttributes<QRCodeComponentHandles> & QRCodeComponentProps>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-qrcodecomponent--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="QRCodeComponent live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|value|string|Yes|-|-|
-|size|number|No|-|-|
+|value|string|Yes|-|"https://www.iviva.com"|
+|size|number|No|-|160|
 |bgColor|string|No|-|-|
 |fgColor|string|No|-|-|
 |className|string|No|-|-|

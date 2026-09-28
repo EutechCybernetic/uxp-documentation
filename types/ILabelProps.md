@@ -9,6 +9,9 @@ interface ILabelProps {
     inline?: boolean,
     styles?: React.CSSProperties,
     icon?: string;
+    /**
+     * @example "Asset name"
+     */
     children?: React.ReactNode
 }
 ```

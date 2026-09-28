@@ -10,16 +10,24 @@ Props for the ButtonGroup component.
 interface ButtonGroupProps {
     /**
      * Array of button configurations to render.
+     * @example
+     * [
+     *   { id: 'day', title: 'Day' },
+     *   { id: 'week', title: 'Week' },
+     *   { id: 'month', title: 'Month' },
+     * ]
      */
     buttons: ButtonGroupItem[];
 
     /**
      * ID of the currently active button.
+     * @example "week"
      */
     activeId?: string;
 
     /**
      * Button variant applied to all buttons. Defaults to 'secondary'.
+     * @default 'secondary'
      */
     variant?: ButtonComponentVarient;
 
@@ -35,6 +43,10 @@ interface ButtonGroupProps {
 
     /**
      * Callback triggered when a button is clicked, receiving the button's ID.
+     * @example Log the id
+     * ```tsx
+     * onButtonClick={(buttonId) => console.log('clicked', buttonId)}
+     * ```
      */
     onButtonClick?: (buttonId: string) => void;
 }

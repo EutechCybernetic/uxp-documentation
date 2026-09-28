@@ -23,6 +23,12 @@ export interface IFileUploadOptions {
      * Called with 0-100 as the upload streams.
      */
     onProgress?: (percent: number) => void;
+
+    /**
+     * Extra request parameters sent with the file, e.g. an upload `event` and
+     * the fields its handler reads (`{ event: 'profilepic', ObjectKey, ObjectType }`).
+     */
+    params?: Record<string, string>;
 }
 ```
 

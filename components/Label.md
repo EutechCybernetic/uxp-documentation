@@ -1,14 +1,5 @@
 # Label
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-label--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Label live demo"
-></iframe>
-
-
 A simple label. Usually used in conjunction with a FormField
 
 
@@ -32,6 +23,16 @@ const Label: React.FunctionComponent<ILabelProps>
 <Label>Name</Label>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=forms-label--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="Label live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
@@ -41,7 +42,7 @@ const Label: React.FunctionComponent<ILabelProps>
 |inline|boolean|No|-|-|
 |styles|React.CSSProperties|No|-|-|
 |icon|string|No|-|-|
-|children|React.ReactNode|No|-|-|
+|children|React.ReactNode|No|-|"Asset name"|
 
 ## Related Types
 

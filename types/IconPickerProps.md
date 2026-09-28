@@ -6,6 +6,7 @@
 interface IconPickerProps extends InputSizeProps, InputStateProps {
     /**
      * The icon value in new format (e.g., 'fas:bell') or legacy format (e.g., 'addressBook')
+     * @example "fas building"
      */
     value?: string;
     /**

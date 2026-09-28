@@ -40,8 +40,17 @@ export interface IItemCardProps {
      * Using these, users/developers will be able to provide static values
      */
     image?: string,
+    /**
+     * @example "Chiller 01"
+     */
     name?: string,
+    /**
+     * @example "Chiller 01"
+     */
     title?: string,
+    /**
+     * @example "Level 1 · Plant room"
+     */
     subTitle?: string,
 
     /**

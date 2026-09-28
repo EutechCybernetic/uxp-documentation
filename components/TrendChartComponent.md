@@ -57,16 +57,26 @@ const TrendData: ITrendSeries[] = [
  />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=charts-trendchartcomponent--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="TrendChartComponent live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|data|[ITrendSeries[]](../types/ITrendSeries.md)|Yes|-|-|
-|onShowTooltip|(data: any) => JSX.Element|No|-|* onShowTooltip={(data)=><div>{`Temperature: ${data.temp}`}</div>}|
-|onClick|(data: any) => JSX.Element|No|-|-|
-|showLegend|boolean|No|-|-|
-|formatXAxis|(value: string) => string|No|-|-|
-|showGrid|boolean|No|-|-|
+|data|[ITrendSeries[]](../types/ITrendSeries.md)|Yes|-|[ { type: 'area', unit: 'kWh', data: [ { time: '2026-09-01', value: 420 }, { ti…|
+|onShowTooltip|(data: any) => JSX.Element|No|-|onShowTooltip={(data) => data.active && data.payload?.length ? <div style={{ ba…|
+|onClick|(data: any) => JSX.Element|No|-|Log the point onClick={(data) => { console.log('clicked', data); return null; }}|
+|showLegend|boolean|No|true|-|
+|formatXAxis|(value: string) => string|No|-|Short date formatXAxis={(value) => new Date(value).toLocaleDateString(undefined…|
+|showGrid|boolean|No|false|-|
 |className|string|No|-|-|
 
 ## Related Types

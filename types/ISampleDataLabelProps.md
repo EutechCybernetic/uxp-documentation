@@ -8,6 +8,10 @@
 
 ```tsx
 interface ISampleDataLabelProps {
+    /**
+     * @default false
+     * @example true
+     */
     show?: boolean;
     // info?: () => React.ReactElement;
 }

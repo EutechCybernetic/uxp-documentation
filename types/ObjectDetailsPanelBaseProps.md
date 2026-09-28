@@ -14,6 +14,12 @@ export type ObjectDetailsPanelBaseProps = {
      * - DetailsContent: Static content or function returning React.ReactNode
      * - ObjectDetailsPanelHeaderProps: Configuration for the default header component
      * - Function returning ObjectDetailsPanelHeaderProps: Dynamic header based on row data
+     * @example
+     * {
+     *   title: 'Chiller 01',
+     *   breadcrumb: [{ label: 'Assets' }, { label: 'Chiller 01' }],
+     *   analytics: [{ icon: 'fas bolt', value: '72%', label: 'Load' }],
+     * }
      */
     title: DetailsContent | ObjectDetailsPanelHeaderProps | ((item: RowData, loading?: boolean) => ObjectDetailsPanelHeaderProps);
 
@@ -50,11 +56,13 @@ export type ObjectDetailsPanelBaseProps = {
      * declare for this object type in their bundle.json `objectTabs` (delivered
      * deterministically at bootstrap) are automatically appended to `additionlDetails`.
      * The host app does not need to know which tabs are injected.
+     * @example "Asset"
      */
     objectType?: string;
 
     /**
      * Key of the object being viewed. Passed to all injected tab components as objectKey.
+     * @example "1"
      */
     objectKey?: string;
 
@@ -96,6 +104,17 @@ export type ObjectDetailsPanelBaseProps = {
              */
             tabs: DetailsPanelTab[];
             toolbarItems?: never;
+            /**
+             * @example
+             * (item) => ({
+             *   title: 'Details',
+             *   columns: 2,
+             *   fields: [
+             *     { label: 'Status', value: item?.status, icon: 'fas circle-check' },
+             *     { label: 'Location', value: item?.location, icon: 'fas location-dot' },
+             *   ],
+             * })
+             */
             generalDetails?: never;
         }
         // Old API: Use toolbarItems/generalDetails (cannot use tabs)

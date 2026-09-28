@@ -9,12 +9,25 @@ triggers other than the ones MediaPicker provides.
 
 ```tsx
 export interface IMediaPickerModalProps {
+    /**
+     * @example true
+     */
     show: boolean
+    /**
+     * @example Log
+     * ```tsx
+     * onClose={() => console.log('closed')}
+     * ```
+     */
     onClose: () => void
 
     /**
      * Single-select callback — fired with the picked value, after which the
      * dialog closes.
+     * @example Log
+     * ```tsx
+     * onSelect={(value) => console.log('selected', value)}
+     * ```
      */
     onSelect?: (value: string) => void
 
@@ -36,6 +49,7 @@ export interface IMediaPickerModalProps {
     /**
      * Kinds of media this picker deals with. Drives the default sources and
      * the upload restriction.
+     * @example ['Image']
      */
     mediaTypes: MediaType[]
 

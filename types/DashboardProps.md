@@ -10,16 +10,34 @@ Props for the Dashboard component
 export interface DashboardProps {
     /**
      * Array of widget instances to render
+     * @example
+     * [
+     *   { _id: 'w1', id: 'storybook/widget/energy-mix', key: 'w1', name: 'Energy mix' },
+     *   { _id: 'w2', id: 'storybook/widget/chiller-load', key: 'w2', name: 'Chiller load' },
+     *   { _id: 'w3', id: 'storybook/widget/energy-trend', key: 'w3', name: 'Daily energy' },
+     * ]
      */
     widgets: ComponentInstance[];
 
     /**
      * Optional responsive layout overrides for different breakpoints
+     * @example
+     * {
+     *   lg: [
+     *     { i: 'w1', x: 0, y: 0, w: 10, h: 12 },
+     *     { i: 'w2', x: 10, y: 0, w: 10, h: 12 },
+     *     { i: 'w3', x: 20, y: 0, w: 10, h: 12 },
+     *   ],
+     * }
      */
     layouts?: ResponsiveLayouts;
 
     /**
      * Callback to save dashboard state (called with processed widgets and layouts)
+     * @example Log the save
+     * ```tsx
+     * onSave={async (widgets, layouts) => { console.log('saved', widgets.length, 'widgets', layouts); }}
+     * ```
      */
     onSave: (widgets: ComponentInstance[], layouts: ResponsiveLayouts) => Promise<boolean>;
 
@@ -35,6 +53,7 @@ export interface DashboardProps {
 
     /**
      * Whether dashboard is in editing mode
+     * @example false
      */
     isEditing: boolean;
 

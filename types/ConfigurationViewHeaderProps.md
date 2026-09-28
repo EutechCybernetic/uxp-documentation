@@ -8,9 +8,18 @@ Props for the ConfigurationViewHeader component.
 
 ```tsx
 export interface ConfigurationViewHeaderProps {
-    /** Title text or any React node */
+    /**
+     * Title text or any React node
+     * @example "General settings"
+     */
     title: string | React.ReactNode;
-    /** Action buttons rendered on the right side */
+    /**
+     * Action buttons rendered on the right side
+     * @example Save button
+     * ```tsx
+     * actions={<Button title="Save" icon="fas save" />}
+     * ```
+     */
     actions?: React.ReactNode;
     /**
      * Visual variant:

@@ -8,7 +8,10 @@ Props for the MarkdownEditor component.
 
 ```tsx
 export interface MarkdownEditorProps extends InputSizeProps, InputStateProps {
-    /** Current markdown value */
+    /**
+     * Current markdown value
+     * @example "## Maintenance notes\n\n- Filter replaced on **12 Aug**\n- Belt tension checked\n"
+     */
     value: string;
     /** Callback when the content changes */
     onChange: (value: string) => void;

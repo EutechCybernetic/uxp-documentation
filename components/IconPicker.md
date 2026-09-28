@@ -1,14 +1,5 @@
 # IconPicker
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-inputs-iconpicker--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="IconPicker live demo"
-></iframe>
-
-
 
 IconPicker component - A form input for selecting FontAwesome and Phosphor icons
 
@@ -37,11 +28,33 @@ tsx
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-pickers-iconpicker--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="IconPicker live preview"
+></iframe>
+
+### Variants
+
+#### Example 1
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=inputs-pickers-iconpicker--default&amp;viewMode=story&amp;args=placeholder%3ASelect+an+icon&amp;props=%7B%22value%22%3A%22fas%3Abell%22%7D"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="IconPicker: Example 1"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|value|string|No|-|-|
+|value|string|No|-|"fas building"|
 |onChange|(value: string) => void|Yes|-|-|
 |label|string|No|-|-|
 |className|string|No|-|-|

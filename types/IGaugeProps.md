@@ -10,14 +10,17 @@ Options that can be passed to a date picker field
 interface IGaugeProps {
     /**
      * min value of the gauge 
+     * @example 0
      */
     min: number;
     /**
      * max value of the gauge 
+     * @example 100
      */
     max: number;
     /**
      * value of the gauge 
+     * @example 72
      */
     value: number;
 
@@ -27,11 +30,21 @@ interface IGaugeProps {
      * stopAt: length of color distribution. 
      * 
      * default is blue, green, yellow, red colors at equal length
+     * @example
+     * [
+     *   { color: '#4caf50', stopAt: 60 },
+     *   { color: '#ff9800', stopAt: 85 },
+     *   { color: '#f44336', stopAt: 100 },
+     * ]
      */
     colors?: Array<{ color: string, stopAt: number }>;
     /**
      * label
      * no default value
+     * @example Percentage
+     * ```tsx
+     * label={() => <div>72%</div>}
+     * ```
      */
     label?: () => JSX.Element,
     /**
@@ -74,6 +87,7 @@ interface IGaugeProps {
      * max value is 6 
      * 
      * if the given value is higher than the max value, max values will be used 
+     * @default 4
      */
     largeTick?: number,
     /**
@@ -83,6 +97,7 @@ interface IGaugeProps {
      * max values is 3
      * 
      * if the given values is higher than the max value, max values will be used
+     * @default 1
      */
     smallTick?: number
     /**

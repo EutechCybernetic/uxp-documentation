@@ -9,10 +9,19 @@ interface IDynamicSelectProps {
      * This a function that will generate the array of objects.
      * pagination will be supported. 
      * The function expects 2 parameters - max and last and returns a promise that will resolve to the list of objects. max specifies the maximum number of items to be returned.
+     * @example Paged list
+     * ```tsx
+     * options={async (max, lastPageToken) => {
+     *     const all = ['Chiller 01', 'Chiller 02', 'AHU 01', 'AHU 02', 'Pump 01', 'Boiler 01'].map((name) => ({ name }));
+     *     const start = Number(lastPageToken || 0);
+     *     return { items: all.slice(start, start + max), pageToken: String(start + max) };
+     * }}
+     * ```
      */
     options: IDynamicSelectDataFunction,
     /**
      * selected option label
+     * @example "Chiller 01"
      */
     selected: string,
     /**
@@ -41,17 +50,18 @@ interface IDynamicSelectProps {
      * @example
      * 
      * ```
-     * renderItem={(option,key)=><div>{option.label}</div>}
+     * renderOption={(option,key)=><div>{option.label}</div>}
      * ```
      * 
      * @example
      * ```
-     * renderItem={(option,key)=><ItemCard data={item} titleField='label' />}
+     * renderOption={(option,key)=><ItemCard title={option.label} />}
      * ```
      */
     renderOption?: (item: any, key: number) => JSX.Element,
     /**
      * name of the field to display
+     * @example "name"
      */
     labelField: string,
     /**

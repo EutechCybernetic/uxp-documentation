@@ -6,6 +6,7 @@
 interface ButtonProps {
     /**
      * The caption for the button
+     * @example "Save"
      */
     title?: string,
 
@@ -27,6 +28,16 @@ interface ButtonProps {
     /**
      * The callback that gets invoked when the button is clicked
      * Supports both sync and async functions
+     * @example Sync handler
+     * ```tsx
+     * onClick={() => alert('Clicked')}
+     * ```
+     * @example Async handler
+     * ```tsx
+     * onClick={async () => {
+     *     await new Promise(resolve => setTimeout(resolve, 1500)); // e.g. save a record
+     * }}
+     * ```
      */
     onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>,
 
@@ -42,6 +53,7 @@ interface ButtonProps {
 
     /**
      * The caption to show on the button when its in loading state
+     * @example "Saving..."
      */
     loadingTitle?: string,
 
@@ -102,12 +114,14 @@ interface ButtonProps {
      * 
      * Here is a example for using fontawesome icons 
      * icon={'fas save'}
+     * @example "fas save"
      */
     icon?: string,
 
     /**
      * @deprecated Use leftIcon or rightIcon instead
      * icon position
+     * @default 'left'
      */
     iconPosition?: 'left' | 'right',
 

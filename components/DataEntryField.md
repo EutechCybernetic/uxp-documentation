@@ -36,13 +36,35 @@ tsx
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=forms-dynamic-form-dataentryfield--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DataEntryField live preview"
+></iframe>
+
+### Variants
+
+#### Example 1
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=forms-dynamic-form-dataentryfield--default&amp;viewMode=story&amp;args=field%3Aemail%3Btitle%3AEmail+Address%3Btype%3Aemail%3Bicon%3Afas+at%3Brequired%3A%21true"
+  width="100%"
+  height="160"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DataEntryField: Example 1"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|field|string|Yes|-|-|
-|title|string|Yes|-|-|
-|type|'text' \| 'password' \| 'number' \| 'email' \| 'checkbox' \| 'toggle' \| 'select' \| 'date' \| 'time' \| 'datetime' \| 'daterange' \| 'hidden' \| 'textarea' \| 'json' \| 'readonly'|No|'text'|-|
+|field|string|Yes|-|"name"|
+|title|string|Yes|-|"Name"|
+|type|'text' \| 'password' \| 'number' \| 'email' \| 'checkbox' \| 'toggle' \| 'select' \| 'date' \| 'time' \| 'datetime' \| 'daterange' \| 'hidden' \| 'textarea' \| 'json' \| 'readonly'|No|'text'|"text"|
 |value|[FormValue](../types/FormValue.md)|No|-|-|
 |placeholder|string|No|-|-|
 |icon|string|No|-|-|

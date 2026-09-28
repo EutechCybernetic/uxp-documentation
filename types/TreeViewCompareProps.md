@@ -9,11 +9,42 @@
 export interface TreeViewCompareProps {
     /**
      * Items for the left tree (source or target)
+     * @example
+     * [
+     *   {
+     *     id: 'hq', label: 'Head Office', icon: 'fas building', path: 'hq', expandOnLoad: true,
+     *     getChildren: [
+     *       {
+     *         id: 'l1', label: 'Level 1', icon: 'fas layer-group', path: 'hq/l1', expandOnLoad: true,
+     *         getChildren: [
+     *           { id: 'l1-lobby', label: 'Lobby', path: 'hq/l1/l1-lobby' },
+     *           { id: 'l1-plant', label: 'Plant room', path: 'hq/l1/l1-plant' },
+     *         ],
+     *       },
+     *       {
+     *         id: 'l2', label: 'Level 2', icon: 'fas layer-group', path: 'hq/l2',
+     *         getChildren: [
+     *           { id: 'l2-meeting', label: 'Meeting room A', path: 'hq/l2/l2-meeting' },
+     *         ],
+     *       },
+     *     ],
+     *   },
+     * ]
      */
     leftItems: TreeNode[];
 
     /**
      * Items for the right tree (source or target)
+     * @example
+     * [
+     *   {
+     *     id: 'zones', label: 'HVAC zones', icon: 'fas fan', path: 'zones', expandOnLoad: true,
+     *     getChildren: [
+     *       { id: 'z1', label: 'Zone 1', path: 'zones/z1' },
+     *       { id: 'z2', label: 'Zone 2', path: 'zones/z2' },
+     *     ],
+     *   },
+     * ]
      */
     rightItems: TreeNode[];
 

@@ -7,7 +7,19 @@ Inline editing mode - mutually exclusive with row interaction
 
 ```tsx
 interface InlineEditingMode {
+    /**
+     * @example Succeeds
+     * ```tsx
+     * onUpdateItem={async (item) => ({ success: true })}
+     * ```
+     */
     onUpdateItem?: (item: RowData) => Promise<{ success: boolean, error?: string }>;
+    /**
+     * @example Succeeds
+     * ```tsx
+     * onDeleteItem={async (item) => ({ success: true })}
+     * ```
+     */
     onDeleteItem?: (item: RowData) => Promise<{ success: boolean, error?: string }>;
     onReorderItems?: (reorderedData: RowData[]) => Promise<{ success: boolean, error?: string }>;
     roles?: {

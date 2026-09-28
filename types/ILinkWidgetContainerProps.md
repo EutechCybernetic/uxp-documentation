@@ -6,6 +6,7 @@
 interface ILinkWidgetContainerProps {
     /**
      *  Set this to true to make the container visible
+     * @example true
      */
     show: boolean,
     /**
@@ -28,6 +29,12 @@ interface ILinkWidgetContainerProps {
     * Any custom content to include in the container toolbar.
     */
     toolbarContent?: any
+    /**
+     * @example Link button
+     * ```tsx
+     * <LinkButtonWidget link="https://www.iviva.com" icon="https://static.iviva.com/iviva-logo-light.png" label="Visit iviva" />
+     * ```
+     */
     children?: React.ReactNode
 }
 ```

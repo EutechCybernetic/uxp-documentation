@@ -1,14 +1,5 @@
 # DataList
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=list-datalist--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="DataList live demo"
-></iframe>
-
-
 
 A infinite-scrollable list that supports paging in of items
 
@@ -105,13 +96,23 @@ Using other props
  />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=data-display-lists-datalist--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DataList live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|data|Array<any> \| IDataFunction|Yes|-|-|
-|renderItem|(item: any, key: number) => JSX.Element|Yes|-|*|
-|pageSize|number|Yes|-|-|
+|data|Array<any> \| IDataFunction|Yes|-|[ { id: 1, name: 'Chiller 01', location: 'Level 1' }, { id: 2, name: 'Chiller 0…|
+|renderItem|(item: any, key: number) => JSX.Element|Yes|-|renderItem={(item,key)=><div>{'Item:' + JSON.stringify(item)}</div>}|
+|pageSize|number|Yes|-|10|
 |args|any|No|-|-|
 |renderLoading|() => JSX.Element|No|-|-|
 |className|string|No|-|-|

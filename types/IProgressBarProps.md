@@ -10,6 +10,7 @@ ProgressBar component props
 interface IProgressBarProps {
     /**
      * Completion 0-100. Ignored (and unnecessary) when `indeterminate`.
+     * @example 60
      */
     value?: number
 
@@ -35,6 +36,7 @@ interface IProgressBarProps {
 
     /**
      * Overrides the default `NN%` label text.
+     * @example "Uploading"
      */
     label?: string
 

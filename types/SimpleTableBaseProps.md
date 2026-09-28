@@ -4,7 +4,14 @@
 
 ```tsx
 interface SimpleTableBaseProps {
-    /** Columns for the table */
+    /**
+     * Columns for the table
+     * @example
+     * [
+     *   { id: 'name', label: 'Setting' },
+     *   { id: 'value', label: 'Value' },
+     * ]
+     */
     columns: TableColumn[];
 
     /** Text to display when there is no data */
@@ -41,7 +48,13 @@ interface SimpleTableBaseProps {
     /** Callback when "Add New" button is clicked (e.g., to open a form panel) */
     onClickAddNew?: () => void;
 
-    /** Callback for saving a new item added inline (returns success/error) */
+    /**
+     * Callback for saving a new item added inline (returns success/error)
+     * @example Succeeds
+     * ```tsx
+     * onAddItem={async (item) => ({ success: true })}
+     * ```
+     */
     onAddItem?: (item: RowData) => Promise<{ success: boolean, error?: string }>;
 
     /** Show/hide the default "Add New" button at bottom (default: true if onClickAddNew or onAddItem exists) */

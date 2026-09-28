@@ -43,18 +43,28 @@ tsx
 </DataEntrySection>
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=forms-dynamic-form-dataentrysection--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="DataEntrySection live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|title|string|No|-|-|
+|title|string|No|-|"Asset details"|
 |columns|1 \| 2 \| 3|No|1|-|
 |maxColumnWidth|string|No|-|maxColumnWidth="100%"|
 |separator|boolean|No|false|-|
 |show|(data: IFormData) => boolean|No|-|-|
 |collapsible|boolean|No|false|-|
 |defaultExpanded|boolean|No|true|-|
-|children|React.ReactNode|No|-|-|
+|children|React.ReactNode|No|-|Two fields <> <DataEntryField field="name" title="Name" type="text" /> <DataEnt…|
 
 ## Related Types
 

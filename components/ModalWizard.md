@@ -1,13 +1,6 @@
 # ModalWizard
 
-<iframe
-  src="https://uxp-components.vercel.app/iframe.html?id=forms-wizard-modalwizard--default&viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ModalWizard live demo"
-></iframe>
-
+> **Part of [Wizard](Wizard.md).** Usually used through Wizard. Use it directly to build a custom layout.
 
 This component is used to show a modal dialog that takes the user through a sequence of steps.
 You define how each step should render.
@@ -71,17 +64,27 @@ const ModalWizard: React.FunctionComponent<IModalWizardProps>
 />
 ```
 
+## Live preview
+
+<iframe
+  src="https://story.uxp.iviva.com/iframe.html?id=forms-wizard-modalwizard--default&amp;viewMode=story"
+  width="100%"
+  height="420"
+  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
+  title="ModalWizard live preview"
+></iframe>
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|show|boolean|Yes|-|-|
-|onClose|() => void|Yes|-|-|
-|title|string|Yes|-|-|
-|icon|string|No|-|-|
+|show|boolean|Yes|-|true|
+|onClose|() => void|Yes|-|Log onClose={() => console.log('closed')}|
+|title|string|Yes|-|"Add asset"|
+|icon|string|No|-|"fas plus"|
 |onRenderHeader|(currentStep: IModalWizardStepProps) => JSX.Element|No|-|-|
-|steps|[IModalWizardStep[]](../types/IModalWizardStep.md)|Yes|-|-|
-|onComplete|() => Promise<any>|Yes|-|-|
+|steps|[IModalWizardStep[]](../types/IModalWizardStep.md)|Yes|-|Two steps steps={[ { render: ({ next }) => <div>Enter the asset details. <Butto…|
+|onComplete|() => Promise<any>|Yes|-|Resolves onComplete={async () => console.log('complete')}|
 |completionText|string|No|-|-|
 |className|string|No|-|-|
 

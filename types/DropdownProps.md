@@ -10,12 +10,20 @@ Props for the Dropdown component.
 export interface DropdownProps {
     /**
      * Content to display inside the dropdown.
+     * @example Menu
+     * ```tsx
+     * content={<div style={{ padding: 8 }}><div>Edit</div><div>Duplicate</div><div>Delete</div></div>}
+     * ```
      */
     content: ReactNode;
 
     /**
      * Element or component that triggers the dropdown when clicked.
      * If externalTriggerRef is provided, this prop is optional (external trigger mode).
+     * @example Button
+     * ```tsx
+     * trigger={<Button title="Actions" icon="fas chevron-down" iconPosition="right" />}
+     * ```
      */
     trigger?: ReactNode;
 

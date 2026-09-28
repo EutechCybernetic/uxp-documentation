@@ -26,6 +26,7 @@ interface IDropDownButtonProps {
     /**
      * If this is true dropdown will show on mouse over & hide n mouse out
      * If this is false dropdown ill show on click
+     * @default false
      */
     showOnHover?: boolean
 
@@ -62,6 +63,12 @@ interface IDropDownButtonProps {
      * if enabled it will ignore the position param 
      */
     autoPosition?: boolean,
+    /**
+     * @example Button
+     * ```tsx
+     * <Button title="Options" icon="fas chevron-down" iconPosition="right" />
+     * ```
+     */
     children?: React.ReactNode;
 }
 ```

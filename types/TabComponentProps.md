@@ -9,14 +9,25 @@
 export interface TabComponentProps {
     /**
      * tabs 
+     * @example
+     * [
+     *   { id: 'overview', label: 'Overview' },
+     *   { id: 'alarms', label: 'Alarms' },
+     *   { id: 'history', label: 'History' },
+     * ]
      */
     tabs: Tab[]
     /**
      * selected tab id
+     * @example "overview"
      */
     selected: string,
     /**
      * on change tab 
+     * @example Log
+     * ```tsx
+     * onChangeTab={(tab) => console.log('tab', tab)}
+     * ```
      */
     onChangeTab: (tab: string) => void,
 
