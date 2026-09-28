@@ -40,25 +40,11 @@ const Button: React.FunctionComponent<ButtonProps>
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-button--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Button live preview"
-></iframe>
+[Open Button in the playground →](<https://story.uxp.iviva.com/?path=/docs/buttons-button--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-button--default&amp;viewMode=story&amp;args=title%3AClick%3BloadingTitle%3A%21undefined%3Bicon%3A%21undefined"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Button: Example 1"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/buttons-button--docs&args=title%3AClick%3BloadingTitle%3A%21undefined%3Bicon%3A%21undefined>)
 
 ## Properties
 

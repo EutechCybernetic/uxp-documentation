@@ -75,33 +75,10 @@ const Icon: React.FunctionComponent<IconProps>
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-icon--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Icon live preview"
-></iframe>
+[Open Icon in the playground →](<https://story.uxp.iviva.com/?path=/docs/data-display-icon--docs>)
 
 ### Variants
 
-#### FontAwesome with IconProp
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-icon--default&amp;viewMode=story&amp;args=size%3A2x%3Bspin%3A%21true&amp;props=%7B%22icon%22%3A%5B%22fas%22%2C%22save%22%5D%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Icon: FontAwesome with IconProp"
-></iframe>
-
-#### Phosphor with PHIconProp
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-icon--default&amp;viewMode=story&amp;args=size%3Alg&amp;props=%7B%22icon%22%3A%5B%22phb%22%2C%22house%22%5D%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Icon: Phosphor with PHIconProp"
-></iframe>
+- [FontAwesome with IconProp](<https://story.uxp.iviva.com/?path=/docs/data-display-icon--docs&args=size%3A2x%3Bspin%3A%21true&props=%7B%22icon%22%3A%5B%22fas%22%2C%22save%22%5D%7D>)
+- [Phosphor with PHIconProp](<https://story.uxp.iviva.com/?path=/docs/data-display-icon--docs&args=size%3Alg&props=%7B%22icon%22%3A%5B%22phb%22%2C%22house%22%5D%7D>)
 

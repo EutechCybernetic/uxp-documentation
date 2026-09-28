@@ -25,13 +25,7 @@ const ImagePickerModal: React.FunctionComponent<IImagePickerModalProps>
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=inputs-pickers-image-imagepickermodal--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ImagePickerModal live preview"
-></iframe>
+[Open ImagePickerModal in the playground →](<https://story.uxp.iviva.com/?path=/docs/inputs-pickers-image-imagepickermodal--docs>)
 
 ## Properties
 

@@ -40,25 +40,11 @@ tsx
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=overlays-helppopover--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="HelpPopover live preview"
-></iframe>
+[Open HelpPopover in the playground →](<https://story.uxp.iviva.com/?path=/docs/overlays-helppopover--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=overlays-helppopover--default&amp;viewMode=story&amp;args=title%3AHow+Navigation+Works&amp;props=%7B%22sections%22%3A%5B%7B%22heading%22%3A%22Master+Links%22%2C%22body%22%3A%22The+single+source+of+truth+for+all+navigation+items.%22%7D%2C%7B%22heading%22%3A%22Navigation+Profiles+vs+User+Groups%22%2C%22body%22%3A%22A+profile+is+a+curated+subset+of+master+links+for+a+user+group.%22%7D%5D%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="HelpPopover: Example 1"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/overlays-helppopover--docs&args=title%3AHow+Navigation+Works&props=%7B%22sections%22%3A%5B%7B%22heading%22%3A%22Master+Links%22%2C%22body%22%3A%22The+single+source+of+truth+for+all+navigation+items.%22%7D%2C%7B%22heading%22%3A%22Navigation+Profiles+vs+User+Groups%22%2C%22body%22%3A%22A+profile+is+a+curated+subset+of+master+links+for+a+user+group.%22%7D%5D%7D>)
 
 ## Properties
 

@@ -60,25 +60,11 @@ const ItemListCard: React.FunctionComponent<IItemListCardProps>
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-cards-itemlistcard--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ItemListCard live preview"
-></iframe>
+[Open ItemListCard in the playground →](<https://story.uxp.iviva.com/?path=/docs/data-display-cards-itemlistcard--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-cards-itemlistcard--default&amp;viewMode=story&amp;args=title%3ASystem&amp;props=%7B%22item%22%3A%7B%22hvac%22%3A%7B%22value%22%3A250%2C%22percentage%22%3A15%7D%2C%22lighting%22%3A%7B%22value%22%3A250%2C%22percentage%22%3A15%7D%2C%22elevators%22%3A%7B%22value%22%3A250%2C%22percentage%22%3A15%7D%2C%22fire+alarm%22%3A%7B%22value%22%3A250%2C%22percentage%22%3A15%7D%7D%2C%22fields%22%3A%5B%22hvac%22%2C%22lighting%22%2C%22elevators%22%2C%22fire+alarm%22%5D%2C%22backgroundColor%22%3A%22rgb%28209+148+250%29%22%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ItemListCard: Example 1"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/data-display-cards-itemlistcard--docs&args=title%3ASystem&props=%7B%22item%22%3A%7B%22hvac%22%3A%7B%22value%22%3A250%2C%22percentage%22%3A15%7D%2C%22lighting%22%3A%7B%22value%22%3A250%2C%22percentage%22%3A15%7D%2C%22elevators%22%3A%7B%22value%22%3A250%2C%22percentage%22%3A15%7D%2C%22fire+alarm%22%3A%7B%22value%22%3A250%2C%22percentage%22%3A15%7D%7D%2C%22fields%22%3A%5B%22hvac%22%2C%22lighting%22%2C%22elevators%22%2C%22fire+alarm%22%5D%2C%22backgroundColor%22%3A%22rgb%28209+148+250%29%22%7D>)
 
 ## Properties
 

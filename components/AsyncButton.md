@@ -32,25 +32,11 @@ const AsyncButton: React.FunctionComponent<AsyncButtonProps>
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-asyncbutton--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="AsyncButton live preview"
-></iframe>
+[Open AsyncButton in the playground →](<https://story.uxp.iviva.com/?path=/docs/buttons-asyncbutton--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-asyncbutton--default&amp;viewMode=story&amp;args=title%3ASubmit%3BclassName%3Acustom-css-class&amp;props=%7B%22icon%22%3A%22https%3A%2F%2Fstatic.iviva.com%2Fimages%2FAdani_UXP%2FQR_badge_icon.svg%22%2C%22loadingTitle%22%3A%22Submitting...%22%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="AsyncButton: Example 1"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/buttons-asyncbutton--docs&args=title%3ASubmit%3BclassName%3Acustom-css-class&props=%7B%22icon%22%3A%22https%3A%2F%2Fstatic.iviva.com%2Fimages%2FAdani_UXP%2FQR_badge_icon.svg%22%2C%22loadingTitle%22%3A%22Submitting...%22%7D>)
 
 ## Properties
 

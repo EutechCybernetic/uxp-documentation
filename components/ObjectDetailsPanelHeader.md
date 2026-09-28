@@ -49,25 +49,11 @@ tsx
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-object-search-details-panel-objectdetailspanelheader--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ObjectDetailsPanelHeader live preview"
-></iframe>
+[Open ObjectDetailsPanelHeader in the playground →](<https://story.uxp.iviva.com/?path=/docs/data-display-object-search-details-panel-objectdetailspanelheader--docs>)
 
 ### Variants
 
-#### Example 2
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-object-search-details-panel-objectdetailspanelheader--default&amp;viewMode=story&amp;args=title%3ASimple+Header%3Bsubtitle%3ANo+breadcrumb+or+analytics%3Bitem%3A%21undefined%3Bbreadcrumb%3A%21undefined%3Banalytics%3A%21undefined"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ObjectDetailsPanelHeader: Example 2"
-></iframe>
+- [Example 2](<https://story.uxp.iviva.com/?path=/docs/data-display-object-search-details-panel-objectdetailspanelheader--docs&args=title%3ASimple+Header%3Bsubtitle%3ANo+breadcrumb+or+analytics%3Bitem%3A%21undefined%3Bbreadcrumb%3A%21undefined%3Banalytics%3A%21undefined>)
 
 ## Properties
 

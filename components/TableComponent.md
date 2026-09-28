@@ -47,25 +47,11 @@ tsx
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-tables-tablecomponent--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="TableComponent live preview"
-></iframe>
+[Open TableComponent in the playground →](<https://story.uxp.iviva.com/?path=/docs/data-display-tables-tablecomponent--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-tables-tablecomponent--default&amp;viewMode=story&amp;args=pageSize%3A10%3Btotal%3A1&amp;props=%7B%22data%22%3A%5B%7B%22id%22%3A1%2C%22name%22%3A%22Item+1%22%7D%5D%2C%22columns%22%3A%5B%7B%22id%22%3A%22name%22%2C%22label%22%3A%22Name%22%7D%5D%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="TableComponent: Example 1"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/data-display-tables-tablecomponent--docs&args=pageSize%3A10%3Btotal%3A1&props=%7B%22data%22%3A%5B%7B%22id%22%3A1%2C%22name%22%3A%22Item+1%22%7D%5D%2C%22columns%22%3A%5B%7B%22id%22%3A%22name%22%2C%22label%22%3A%22Name%22%7D%5D%7D>)
 
 ## Properties
 

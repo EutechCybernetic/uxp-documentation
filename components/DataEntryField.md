@@ -38,25 +38,11 @@ tsx
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=forms-dynamic-form-dataentryfield--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="DataEntryField live preview"
-></iframe>
+[Open DataEntryField in the playground →](<https://story.uxp.iviva.com/?path=/docs/forms-dynamic-form-dataentryfield--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=forms-dynamic-form-dataentryfield--default&amp;viewMode=story&amp;args=field%3Aemail%3Btitle%3AEmail+Address%3Btype%3Aemail%3Bicon%3Afas+at%3Brequired%3A%21true"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="DataEntryField: Example 1"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/forms-dynamic-form-dataentryfield--docs&args=field%3Aemail%3Btitle%3AEmail+Address%3Btype%3Aemail%3Bicon%3Afas+at%3Brequired%3A%21true>)
 
 ## Properties
 

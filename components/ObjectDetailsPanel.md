@@ -57,23 +57,9 @@ Available methods through ref:
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-object-search-details-panel-objectdetailspanel--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ObjectDetailsPanel live preview"
-></iframe>
+[Open ObjectDetailsPanel in the playground →](<https://story.uxp.iviva.com/?path=/docs/data-display-object-search-details-panel-objectdetailspanel--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-object-search-details-panel-objectdetailspanel--default&amp;viewMode=story&amp;args=title%3AUser+Details%3BidField%3Aid%3BobjectType%3A%21undefined%3BobjectKey%3A%21undefined&amp;props=%7B%22data%22%3A%7B%22id%22%3A%221%22%2C%22name%22%3A%22John+Doe%22%7D%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ObjectDetailsPanel: Example 1"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/data-display-object-search-details-panel-objectdetailspanel--docs&args=title%3AUser+Details%3BidField%3Aid%3BobjectType%3A%21undefined%3BobjectKey%3A%21undefined&props=%7B%22data%22%3A%7B%22id%22%3A%221%22%2C%22name%22%3A%22John+Doe%22%7D%7D>)
 

@@ -41,35 +41,12 @@ tsx
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=overlays-infobutton--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="InfoButton live preview"
-></iframe>
+[Open InfoButton in the playground →](<https://story.uxp.iviva.com/?path=/docs/overlays-infobutton--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=overlays-infobutton--default&amp;viewMode=story&amp;props=%7B%22content%22%3A%22This+field+is+required.%22%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="InfoButton: Example 1"
-></iframe>
-
-#### Example 2
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=overlays-infobutton--default&amp;viewMode=story&amp;args=position%3Abottom-left&amp;props=%7B%22content%22%3A%5B%22Must+be+at+least+8+characters%22%2C%22No+spaces+allowed%22%5D%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="InfoButton: Example 2"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/overlays-infobutton--docs&props=%7B%22content%22%3A%22This+field+is+required.%22%7D>)
+- [Example 2](<https://story.uxp.iviva.com/?path=/docs/overlays-infobutton--docs&args=position%3Abottom-left&props=%7B%22content%22%3A%5B%22Must+be+at+least+8+characters%22%2C%22No+spaces+allowed%22%5D%7D>)
 
 ## Properties
 

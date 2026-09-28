@@ -30,25 +30,11 @@ tsx
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=inputs-pickers-iconpicker--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="IconPicker live preview"
-></iframe>
+[Open IconPicker in the playground →](<https://story.uxp.iviva.com/?path=/docs/inputs-pickers-iconpicker--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=inputs-pickers-iconpicker--default&amp;viewMode=story&amp;args=placeholder%3ASelect+an+icon&amp;props=%7B%22value%22%3A%22fas%3Abell%22%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="IconPicker: Example 1"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/inputs-pickers-iconpicker--docs&args=placeholder%3ASelect+an+icon&props=%7B%22value%22%3A%22fas%3Abell%22%7D>)
 
 ## Properties
 

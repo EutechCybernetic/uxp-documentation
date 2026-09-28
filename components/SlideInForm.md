@@ -67,11 +67,5 @@ const formRef = useRef<SlideInFormHandlers>(null);
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=forms-dynamic-form-slideinform--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="SlideInForm live preview"
-></iframe>
+[Open SlideInForm in the playground →](<https://story.uxp.iviva.com/?path=/docs/forms-dynamic-form-slideinform--docs>)
 

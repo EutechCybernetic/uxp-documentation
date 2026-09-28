@@ -40,13 +40,7 @@ const Transition: React.FunctionComponent<TransitionProps>
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=layout-transition--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Transition live preview"
-></iframe>
+[Open Transition in the playground →](<https://story.uxp.iviva.com/?path=/docs/layout-transition--docs>)
 
 ## Properties
 

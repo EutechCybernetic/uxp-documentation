@@ -33,25 +33,11 @@ const LocalizationFormModal: React.FunctionComponent<ILocalisationFormModalProps
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=forms-localization-localizationformmodal--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="LocalizationFormModal live preview"
-></iframe>
+[Open LocalizationFormModal in the playground →](<https://story.uxp.iviva.com/?path=/docs/forms-localization-localizationformmodal--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=forms-localization-localizationformmodal--default&amp;viewMode=story&amp;props=%7B%22code%22%3A%22uxp-core.text.save%22%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="LocalizationFormModal: Example 1"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/forms-localization-localizationformmodal--docs&props=%7B%22code%22%3A%22uxp-core.text.save%22%7D>)
 
 ## Properties
 

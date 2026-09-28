@@ -58,49 +58,15 @@ const ButtonComponent: React.FunctionComponent<ButtonComponentProps>
 ```
 
 ## Live preview
-{% embed url="https://story.uxp.iviva.com/iframe.html?id=buttons-buttoncomponent--default&viewMode=story" %}
+
+[Open ButtonComponent in the playground →](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs>)
 
 ### Variants
 
-#### Basic button
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-buttoncomponent--default&amp;viewMode=story&amp;args=title%3AClick+me%3BleftIcon%3A%21undefined%3BloadingTitle%3A%21undefined"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ButtonComponent: Basic button"
-></iframe>
-
-#### Button with icons
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-buttoncomponent--default&amp;viewMode=story&amp;args=title%3ASave%3BloadingTitle%3A%21undefined&amp;props=%7B%22leftIcon%22%3A%22%F0%9F%92%BE%22%2C%22rightIcon%22%3A%22%E2%86%92%22%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ButtonComponent: Button with icons"
-></iframe>
-
-#### Icon only button
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-buttoncomponent--default&amp;viewMode=story&amp;args=iconOnly%3A%21true%3Bvariant%3Adanger%3Btitle%3A%21undefined%3BloadingTitle%3A%21undefined&amp;props=%7B%22leftIcon%22%3A%22%C3%97%22%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ButtonComponent: Icon only button"
-></iframe>
-
-#### Async button with loading
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-buttoncomponent--default&amp;viewMode=story&amp;args=title%3ASubmit%3BleftIcon%3A%21undefined&amp;props=%7B%22loadingTitle%22%3A%22Submitting...%22%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ButtonComponent: Async button with loading"
-></iframe>
+- [Basic button](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs&args=title%3AClick+me%3BleftIcon%3A%21undefined%3BloadingTitle%3A%21undefined>)
+- [Button with icons](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs&args=title%3ASave%3BloadingTitle%3A%21undefined&props=%7B%22leftIcon%22%3A%22%F0%9F%92%BE%22%2C%22rightIcon%22%3A%22%E2%86%92%22%7D>)
+- [Icon only button](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs&args=iconOnly%3A%21true%3Bvariant%3Adanger%3Btitle%3A%21undefined%3BloadingTitle%3A%21undefined&props=%7B%22leftIcon%22%3A%22%C3%97%22%7D>)
+- [Async button with loading](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs&args=title%3ASubmit%3BleftIcon%3A%21undefined&props=%7B%22loadingTitle%22%3A%22Submitting...%22%7D>)
 
 ## Properties
 

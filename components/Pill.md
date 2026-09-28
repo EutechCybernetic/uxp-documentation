@@ -21,13 +21,7 @@ const Pill: React.FunctionComponent<PillComponentProps>
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=inputs-text-pill-input-pill--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="Pill live preview"
-></iframe>
+[Open Pill in the playground →](<https://story.uxp.iviva.com/?path=/docs/inputs-text-pill-input-pill--docs>)
 
 ## Properties
 

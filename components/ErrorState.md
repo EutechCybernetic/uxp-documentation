@@ -67,25 +67,11 @@ tsx
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=feedback-errorstate--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ErrorState live preview"
-></iframe>
+[Open ErrorState in the playground →](<https://story.uxp.iviva.com/?path=/docs/feedback-errorstate--docs>)
 
 ### Variants
 
-#### Inline notice inside a gated tab
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=feedback-errorstate--default&amp;viewMode=story&amp;args=mode%3Ainline%3Btitle%3AAccess+Denied%3Bdescription%3AYou+are+not+authorized+to+view+this+section%3BdescriptionDisplay%3Ainline&amp;props=%7B%22icon%22%3A%5B%22fas%22%2C%22lock%22%5D%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ErrorState: Inline notice inside a gated tab"
-></iframe>
+- [Inline notice inside a gated tab](<https://story.uxp.iviva.com/?path=/docs/feedback-errorstate--docs&args=mode%3Ainline%3Btitle%3AAccess+Denied%3Bdescription%3AYou+are+not+authorized+to+view+this+section%3BdescriptionDisplay%3Ainline&props=%7B%22icon%22%3A%5B%22fas%22%2C%22lock%22%5D%7D>)
 
 ## Properties
 

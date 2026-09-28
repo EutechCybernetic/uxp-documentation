@@ -44,25 +44,11 @@ const ObjectInfoCard: React.MemoExoticComponent<React.FunctionComponent<ObjectIn
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-object-search-details-panel-objectinfocard--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ObjectInfoCard live preview"
-></iframe>
+[Open ObjectInfoCard in the playground →](<https://story.uxp.iviva.com/?path=/docs/data-display-object-search-details-panel-objectinfocard--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-object-search-details-panel-objectinfocard--default&amp;viewMode=story&amp;args=columns%3A%21undefined%3Btitle%3A%21undefined&amp;props=%7B%22fields%22%3A%5B%7B%22label%22%3A%22Name%22%2C%22value%22%3A%22John+Doe%22%7D%2C%7B%22label%22%3A%22Email%22%2C%22value%22%3A%22john%40example.com%22%7D%5D%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="ObjectInfoCard: Example 1"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/data-display-object-search-details-panel-objectinfocard--docs&args=columns%3A%21undefined%3Btitle%3A%21undefined&props=%7B%22fields%22%3A%5B%7B%22label%22%3A%22Name%22%2C%22value%22%3A%22John+Doe%22%7D%2C%7B%22label%22%3A%22Email%22%2C%22value%22%3A%22john%40example.com%22%7D%5D%7D>)
 
 ## Properties
 

@@ -50,9 +50,9 @@ in detail.
 ## Storybook
 
 Every component in the library has a live Storybook story at
-[story.uxp.iviva.com](https://story.uxp.iviva.com). Each page of the component reference has a **Live
-preview** of that story after its examples, so you can see and interact with the real component while you
-read its props. Under **Variants**, each example that renders the component is shown live as well.
+[story.uxp.iviva.com](https://story.uxp.iviva.com). Each component page has a **Live preview** section
+after its examples. It has a link that opens the component in the Storybook playground. Under **Variants**
+there is one link per example. Each link opens the playground with that example's props.
 
 Use it to check what a component looks like before you write the code around it, and to see which variant of
 a component you actually want.

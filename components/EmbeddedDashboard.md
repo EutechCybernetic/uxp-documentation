@@ -43,35 +43,12 @@ import defaultConfig from './dashboards/equipment-default.json';
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=dashboard-embeddeddashboard--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="EmbeddedDashboard live preview"
-></iframe>
+[Open EmbeddedDashboard in the playground →](<https://story.uxp.iviva.com/?path=/docs/dashboard-embeddeddashboard--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=dashboard-embeddeddashboard--default&amp;viewMode=story&amp;props=%7B%22ids%22%3A%5B%22myapp%2Fdashboard%2Fmain%22%5D%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="EmbeddedDashboard: Example 1"
-></iframe>
-
-#### Example 3
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=dashboard-embeddeddashboard--default&amp;viewMode=story&amp;args=allowToConfigure%3A%21true%3BenableUserGroupLayouts%3A%21true%3BenableResponsiveLayouts%3A%21true&amp;props=%7B%22ids%22%3A%5B%22equipment%2Fdashboard%2Fchiller-123%22%2C%22equipment%2Fdashboard%2Fchiller%22%2C%22equipment%2Fdashboard%22%5D%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="EmbeddedDashboard: Example 3"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/dashboard-embeddeddashboard--docs&props=%7B%22ids%22%3A%5B%22myapp%2Fdashboard%2Fmain%22%5D%7D>)
+- [Example 3](<https://story.uxp.iviva.com/?path=/docs/dashboard-embeddeddashboard--docs&args=allowToConfigure%3A%21true%3BenableUserGroupLayouts%3A%21true%3BenableResponsiveLayouts%3A%21true&props=%7B%22ids%22%3A%5B%22equipment%2Fdashboard%2Fchiller-123%22%2C%22equipment%2Fdashboard%2Fchiller%22%2C%22equipment%2Fdashboard%22%5D%7D>)
 
 ## Properties
 

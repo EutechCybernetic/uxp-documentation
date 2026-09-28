@@ -53,13 +53,7 @@ then you can write css to make the widgets resposive
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=layout-widgetwrapper--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="WidgetWrapper live preview"
-></iframe>
+[Open WidgetWrapper in the playground →](<https://story.uxp.iviva.com/?path=/docs/layout-widgetwrapper--docs>)
 
 ## Properties
 

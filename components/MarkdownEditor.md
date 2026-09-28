@@ -34,13 +34,7 @@ tsx
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=inputs-editors-markdowneditor--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="MarkdownEditor live preview"
-></iframe>
+[Open MarkdownEditor in the playground →](<https://story.uxp.iviva.com/?path=/docs/inputs-editors-markdowneditor--docs>)
 
 ## Properties
 

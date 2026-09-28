@@ -31,25 +31,11 @@ const LinkButtonWidget: React.FunctionComponent<ILinkButtonWidgetProps>
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-linkbuttonwidget--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="LinkButtonWidget live preview"
-></iframe>
+[Open LinkButtonWidget in the playground →](<https://story.uxp.iviva.com/?path=/docs/buttons-linkbuttonwidget--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-linkbuttonwidget--default&amp;viewMode=story&amp;args=target%3A_blank%3Bicon%3Apath+to+your+icon%3Blabel%3AGo+to+Google&amp;props=%7B%22link%22%3A%22https%3A%2F%2Fgoogle.com%22%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="LinkButtonWidget: Example 1"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/buttons-linkbuttonwidget--docs&args=target%3A_blank%3Bicon%3Apath+to+your+icon%3Blabel%3AGo+to+Google&props=%7B%22link%22%3A%22https%3A%2F%2Fgoogle.com%22%7D>)
 
 ## Properties
 

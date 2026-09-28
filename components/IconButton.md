@@ -37,35 +37,12 @@ const IconButton: React.FunctionComponent<IIconButtonProps>
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-iconbutton--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="IconButton live preview"
-></iframe>
+[Open IconButton in the playground →](<https://story.uxp.iviva.com/?path=/docs/buttons-iconbutton--docs>)
 
 ### Variants
 
-#### Example 1
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-iconbutton--default&amp;viewMode=story&amp;args=type%3Asearch%3BclassName%3Acustom-css-class%3Btooltip%3A%21undefined"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="IconButton: Example 1"
-></iframe>
-
-#### Example 2
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=buttons-iconbutton--default&amp;viewMode=story&amp;args=icon%3Afas+search%3Btype%3A%21undefined%3Btooltip%3A%21undefined"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="IconButton: Example 2"
-></iframe>
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/buttons-iconbutton--docs&args=type%3Asearch%3BclassName%3Acustom-css-class%3Btooltip%3A%21undefined>)
+- [Example 2](<https://story.uxp.iviva.com/?path=/docs/buttons-iconbutton--docs&args=icon%3Afas+search%3Btype%3A%21undefined%3Btooltip%3A%21undefined>)
 
 ## Properties
 

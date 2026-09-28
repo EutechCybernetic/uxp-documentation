@@ -36,25 +36,11 @@ tsx
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=inputs-text-pill-input-pillinput--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="PillInput live preview"
-></iframe>
+[Open PillInput in the playground →](<https://story.uxp.iviva.com/?path=/docs/inputs-text-pill-input-pillinput--docs>)
 
 ### Variants
 
-#### Basic usage with field options
-
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=inputs-text-pill-input-pillinput--default&amp;viewMode=story&amp;props=%7B%22value%22%3A%22Hello+%7Buser.name%7D%21%22%2C%22contextDataSections%22%3A%5B%7B%22label%22%3A%22User%22%2C%22fields%22%3A%5B%7B%22label%22%3A%22Name%22%2C%22value%22%3A%22user.name%22%7D%5D%7D%5D%7D"
-  width="100%"
-  height="160"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="PillInput: Basic usage with field options"
-></iframe>
+- [Basic usage with field options](<https://story.uxp.iviva.com/?path=/docs/inputs-text-pill-input-pillinput--docs&props=%7B%22value%22%3A%22Hello+%7Buser.name%7D%21%22%2C%22contextDataSections%22%3A%5B%7B%22label%22%3A%22User%22%2C%22fields%22%3A%5B%7B%22label%22%3A%22Name%22%2C%22value%22%3A%22user.name%22%7D%5D%7D%5D%7D>)
 
 ## Properties
 

@@ -85,13 +85,7 @@ let GridData = [
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=data-display-lists-datagrid--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="DataGrid live preview"
-></iframe>
+[Open DataGrid in the playground →](<https://story.uxp.iviva.com/?path=/docs/data-display-lists-datagrid--docs>)
 
 ## Properties
 

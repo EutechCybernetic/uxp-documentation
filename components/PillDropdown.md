@@ -23,13 +23,7 @@ const PillDropdown: React.FunctionComponent<PillDropdownProps>
 
 ## Live preview
 
-<iframe
-  src="https://story.uxp.iviva.com/iframe.html?id=inputs-text-pill-input-pilldropdown--default&amp;viewMode=story"
-  width="100%"
-  height="420"
-  style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1.5rem;"
-  title="PillDropdown live preview"
-></iframe>
+[Open PillDropdown in the playground →](<https://story.uxp.iviva.com/?path=/docs/inputs-text-pill-input-pilldropdown--docs>)
 
 ## Properties
 
