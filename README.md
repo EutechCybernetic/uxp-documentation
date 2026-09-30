@@ -6,7 +6,6 @@ widgets are all uxp.
 
 This site documents v5. It is organised as three guides.
 
-
 ## User Guide
 
 For administrators and users who configure and run the platform. It starts with navigation and routing: how

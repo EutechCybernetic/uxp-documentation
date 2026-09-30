@@ -11,6 +11,8 @@
   - [Custom routes](user-guide/navigation/custom-routes.md)
   - [Who can see what](user-guide/navigation/access.md)
   - [Troubleshooting](user-guide/navigation/troubleshooting.md)
+- [Your media library](user-guide/media-library/overview.md)
+- [Page views](user-guide/page-views/overview.md)
 
 ## Developer Guide
 
@@ -28,6 +30,7 @@
     - [Unified Component Registry](v5/unified-components.md)
     - [Core UXP Components](v5/core-components.md)
     - [Media Picker](v5/media-picker.md)
+    - [The media library](v5/media-library.md)
   - [Pages & Dashboards](v5/pages-and-dashboards.md)
     - [Building Pages & Dashboards](v5/building-pages.md)
     - [Embedded Dashboard](v5/embedded-dashboard.md)
@@ -886,6 +889,7 @@
   - [Point Configuration Tool](qa/v5.0.0/point-configuration.md)
 - [v5.0.1](qa/v5.0.1/README.md)
 - [v5.0.2](qa/v5.0.2/README.md)
+- [v5.0.3](qa/v5.0.3/README.md)
 - [v5.1.0](qa/v5.1.0/README.md)
   - [Page View Analytics](qa/v5.1.0/page-view-analytics.md)
   - [Media Library](qa/v5.1.0/media-library.md)
@@ -895,3 +899,7 @@
   - [Navigation: Importing Keeps Your Place in the Tree](qa/v5.1.0/navigation-import-refresh.md)
   - [Large File Uploads](qa/v5.1.0/large-file-uploads.md)
   - [Storybook: Component Playground and Embeds](qa/v5.1.0/storybook.md)
+  - [Data Explorer](qa/v5.1.0/data-explorer.md)
+  - [Lucy: Model Designer and Connectors](qa/v5.1.0/lucy-model-designer.md)
+  - [Object Search Widget (Beta)](qa/v5.1.0/object-search-widget.md)
+  - [Digital Twin App](qa/v5.1.0/digital-twin.md)
