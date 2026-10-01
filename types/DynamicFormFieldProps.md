@@ -56,6 +56,8 @@ export interface DynamicFormFieldProps {
 
     validate?: {
         required?: boolean | ((data: IFormData) => boolean) // default is false
+        /** Shown instead of the generic required message when the field is empty and required. */
+        requiredMessage?: string | ((data: IFormData) => string)
         allowEmptyString?: boolean // trim value. only for string values
         minLength?: number
         maxLength?: number

@@ -87,6 +87,7 @@ The form is rendered by `DynamicForm`, the same engine used throughout the platf
 | `getOptions` | `(data) => Array<{label, value}>` | Compute options dynamically from the current form values |
 | `show` | `(data) => boolean` | Return `false` to hide this field based on other values |
 | `validate.required` | boolean | Must have a value before the settings panel can be saved |
+| `validate.requiredMessage` | string or `(data) => string` | Shown instead of the generic "This field is required" message when a required field is empty |
 | `validate.minVal` / `validate.maxVal` | number | Numeric range constraints |
 | `validate.customValidateFunction` | `(value, data) => {valid, error?}` | Custom validation, can be async |
 | `checkboxLabel` | string | Label shown beside a toggle or checkbox |

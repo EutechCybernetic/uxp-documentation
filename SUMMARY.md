@@ -351,6 +351,7 @@
       - [DashboardFloatingActionsControls](types/DashboardFloatingActionsControls.md)
       - [DashboardIdEntry](types/DashboardIdEntry.md)
       - [DashboardProps](types/DashboardProps.md)
+      - [DashboardSpecificSettings](types/DashboardSpecificSettings.md)
       - [DataEntryFieldProps](types/DataEntryFieldProps.md)
       - [DataEntryFormHandlers](types/DataEntryFormHandlers.md)
       - [DataEntryFormProps](types/DataEntryFormProps.md)

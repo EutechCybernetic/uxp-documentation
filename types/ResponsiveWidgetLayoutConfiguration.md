@@ -16,6 +16,8 @@ export interface ResponsiveWidgetLayoutConfiguration {
     };
     backgroundConfig?: BackgroundConfig;
     gridSettings?: GridSettings;
+    /** Per-dashboard behavior settings saved from the dashboard settings dialog */
+    __settings__?: DashboardSpecificSettings;
 }
 ```
 
@@ -43,4 +45,5 @@ import { ResponsiveWidgetLayoutConfiguration } from 'uxp/components';
 - [ILayout](../types/ILayout.md)
 - [BackgroundConfig](../types/BackgroundConfig.md)
 - [GridSettings](../types/GridSettings.md)
+- [DashboardSpecificSettings](../types/DashboardSpecificSettings.md)
 

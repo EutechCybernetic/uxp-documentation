@@ -111,6 +111,7 @@ import { EmbeddedDashobardComponentProps } from 'uxp/components';
 - [ILayout](../types/ILayout.md)
 - [BackgroundConfig](../types/BackgroundConfig.md)
 - [GridSettings](../types/GridSettings.md)
+- [DashboardSpecificSettings](../types/DashboardSpecificSettings.md)
 - [UXPGlobalDashboardSettings](../types/UXPGlobalDashboardSettings.md)
 - [DashboardFilters](../types/DashboardFilters.md)
 
