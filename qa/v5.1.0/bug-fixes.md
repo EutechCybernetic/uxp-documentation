@@ -1,6 +1,4 @@
-# v5.0.3
-
-Patch release: bug fixes on top of [v5.0.2](../v5.0.2/README.md). Everything in earlier releases still applies.
+# Bug Fixes
 
 Changes are grouped by app. Each entry says what was wrong and what changed, so tests can be planned from it.
 
@@ -17,7 +15,7 @@ Changes are grouped by app. Each entry says what was wrong and what changed, so 
 | **Also changed:** | These screens now follow the account format and zone. Before, they showed raw values or used browser formatting: **SMS Queue**; Monitoring > **Scheduled Tasks** (Last run, Next run) and **Subsystem Logs** (Time); Platform > **Reporting** (Uploaded on, now with the time); **Scheduled Reports** (Last Run, now with the time); System Configuration > **Bulk Uploads** (import date); Advanced > **Cache Management** (Cached at); **Documents** (Uploaded date, which used a fixed `yyyy-MM-dd hh:mm a` pattern); My Profile > **API Keys** (Generated). Screens that already used the account format now also show the zone, for example Users > Last Active, Inbox, and the Lucy logs, monitor and debugger. |
 | **By design:** | Date-only and time-only values have no zone. The **Run Time** of a scheduled report is shown exactly as it was entered, because it belongs to the schedule's own **Timezone** column. It is not converted to the user's zone. Relative times such as "5 minutes ago" in Lucy's execute history are unchanged; hover shows the full date. |
 | **Worth checking:** | Compare a time with the raw UTC value: it is shifted by the site's offset. Change a user's site to a location in another time zone, sign in again, and check that the times and the abbreviation both change. Try a site on UTC. Switch the user between 12-hour and 24-hour time. Sorting by a date column still orders by time. |
-| **Note:** | The abbreviation is the one set for the time zone in iviva, for example `IST` for India and `LK` for Sri Lanka. An instance whose server has not been updated to v5.0.3 shows the same times without the abbreviation. |
+| **Note:** | The abbreviation is the one set for the time zone in iviva, for example `IST` for India and `LK` for Sri Lanka. An instance whose server has not been updated to v5.1.0 shows the same times without the abbreviation. |
 
 ### Email Queue and SMS Queue: all messages listed, Send Email and Send SMS
 
@@ -41,5 +39,17 @@ Changes are grouped by app. Each entry says what was wrong and what changed, so 
 | **Issue:** | Recipient profile pictures did not show in the message details. In Sent Items the Visibility column was empty. After you applied the "Include hidden messages" filter, the Sent Items tab listed inbox messages instead of sent ones. That is why Visibility then showed values. Dates had no time zone. |
 | **Ticket:** | [LPVR-1006](https://eutech.atlassian.net/browse/LPVR-1006) |
 | **Fix:** | Recipients show their profile picture. A recipient without a picture shows initials. After you hide or unhide a message, the counter above the list updates straight away. The filter panel has a new **Folder** field (Inbox or Sent Items). Applying the filter keeps the folder you are in. Sent Items no longer has a Visibility column. Visibility belongs to each recipient, so a sent message has no single value. Dates use the user's site time zone with the abbreviation, from the LPVR-1000 change. |
-| **Known limitation:** | **Related to** is plain text. In v4 it opened the record's quick-info and linked to its page. This will be built as a feature in v5.1. |
+| **Known limitation:** | **Related to** is plain text. In v4 it opened the record's quick-info and linked to its page. Linking it to the record is planned as a separate feature. |
 | **Worth checking:** | Open a message sent to a user who has a profile picture, and one sent to a user who has none. In Sent Items, apply "Include hidden messages" and check that the list still shows sent messages. Change the Folder field in the filter and apply. In Inbox, hide a message, then check it is gone without the filter and listed with it. Check the Sent time, the list date, the header and the "Read" time show the zone abbreviation. |
+
+### Profile pictures: readable upload errors, v4 size message, Take a picture
+
+| | |
+|---|---|
+| **Where:** | My Profile (the avatar) and Users > a user > **Profile Image**. Validation is set in Administration > General Settings > **Profile Pictures**. |
+| **Issue:** | When an upload failed, for example a picture outside the Profile Picture Validation limits, the error showed as unreadable content instead of the reason. The size check used a fallback of 5MB and its own wording, not the v4 message. v4 had a **Take a picture** option. v5 did not. |
+| **Ticket:** | [LPVR-1007](https://eutech.atlassian.net/browse/LPVR-1007) |
+| **Fix:** | A failed upload now shows the server's reason, for example "The uploaded photo is too wide" followed by the allowed size or resolution. A file over the upload limit is refused as soon as it is picked, with the v4 message: "An error occurred while uploading. The file you specified is probably too large. It should be less than 2MB." The limit is `MaxUploadFileSizeMB` in the iviva config. Nothing is uploaded in that case. |
+| **New:** | **Take a picture.** On My Profile it is a video icon on the avatar, shown on hover. On the user page it is a button next to **Upload Image**; click **Change Image** first when a picture is already set. It opens the camera with **Capture**, then **Retake** or **Upload Image**. The captured picture goes through the same checks as a file, including Profile Picture Validation. The camera turns off when the dialog closes or a picture is captured. |
+| **By design:** | The camera only works on an https address, the same as v4. On http the dialog shows "Sorry - Your camera cannot be accessed right now because your connection isn't secure" and no camera. If the browser is denied camera access or has no camera, the dialog says so. Accepted formats are JPEG, PNG and GIF. WebP is no longer offered, because the server never accepted it. When chunked uploading is on (`LargeUploadFileSizeMB` above 0), large files are split instead of refused, so there is no size limit, the same as v4. When `MaxUploadFileSizeMB` is not set there is no limit. |
+| **Worth checking:** | Both screens. Files just under and just over the limit. Validation on with maximum width and height, and with minimum resolution. Pictures that pass validation still upload and replace the old one. Take a picture on https and on http. Deny camera permission in the browser. |

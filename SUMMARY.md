@@ -890,7 +890,6 @@
   - [Point Configuration Tool](qa/v5.0.0/point-configuration.md)
 - [v5.0.1](qa/v5.0.1/README.md)
 - [v5.0.2](qa/v5.0.2/README.md)
-- [v5.0.3](qa/v5.0.3/README.md)
 - [v5.1.0](qa/v5.1.0/README.md)
   - [Page View Analytics](qa/v5.1.0/page-view-analytics.md)
   - [Media Library](qa/v5.1.0/media-library.md)
@@ -904,3 +903,4 @@
   - [Lucy: Model Designer and Connectors](qa/v5.1.0/lucy-model-designer.md)
   - [Object Search Widget (Beta)](qa/v5.1.0/object-search-widget.md)
   - [Digital Twin App](qa/v5.1.0/digital-twin.md)
+  - [Bug Fixes](qa/v5.1.0/bug-fixes.md)

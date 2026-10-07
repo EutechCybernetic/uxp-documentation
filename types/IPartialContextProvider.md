@@ -78,6 +78,12 @@ export interface IPartialContextProvider {
      */
     uploadChunkSizeMB?: number
 
+    /**
+     * True when page-view tracking is on for the account.
+     * The host sets it at page load. An older host does not send it, and then no page view is sent.
+     */
+    pageViewTracking?: boolean
+
     // this is to track analytics
     trackAnalytics?: (event: string, data?: { [key: string]: any }) => void,
 
