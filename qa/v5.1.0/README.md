@@ -17,3 +17,4 @@ New features on top of [v5.0.0](../v5.0.0/README.md) and [v5.0.1](../v5.0.1/READ
 - [Object Search Widget (Beta)](object-search-widget.md)
 - [Digital Twin App](digital-twin.md)
 - [Bug Fixes](bug-fixes.md)
+- [Lucy: Model Designer Fixes](lucy-model-designer-fixes.md)

@@ -904,3 +904,4 @@
   - [Object Search Widget (Beta)](qa/v5.1.0/object-search-widget.md)
   - [Digital Twin App](qa/v5.1.0/digital-twin.md)
   - [Bug Fixes](qa/v5.1.0/bug-fixes.md)
+  - [Lucy: Model Designer Fixes](qa/v5.1.0/lucy-model-designer-fixes.md)
