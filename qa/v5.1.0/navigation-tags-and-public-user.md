@@ -7,8 +7,10 @@ Two changes: navigation links can carry tags such as Beta, and public pages can 
 # Navigation Link Tags (LPVR-1233)
 
 - **Location:** **Administration > Navigation > Master Links**, the link form's **Tags** field. Also `tags:` on a navigation link in an app's `Configuration.yml` or in `DefaultConfig.yml`.
-- **Format:** each tag is a word or `{ label, variant }`. `beta` (any case) is predefined: a "Beta" chip in orange. Any other word is a grey chip. An object can pick a chip colour: `primary`, `secondary`, `danger`, `warning`, `info`, `success`; an unknown one is grey.
+- **Format:** each tag is a word or `{ label, variant }`. `beta` (any case) is predefined: a "Beta" chip in blue (info). Its colour is fixed, so a colour set on Beta is ignored. Any other word is a grey chip. An object can pick a chip colour: `primary`, `secondary`, `danger`, `warning`, `info`, `success`; an unknown one is grey.
 - **Shown:** as small chips next to the link's label in the sidebar, the header navigation, its dropdowns and More menu, and in the Master Links tree (with a tag icon, beside the status chips).
+- **Placement:** in sidebar group rows and header menu items, the chips sit right after the text with a small gap, not at the far right. Two or three tags sit side by side. A long label is cut short and its tags stay visible.
+- **Known gap:** the Master Links tree still shows Beta in orange. It changes with the next core update.
 - **YAML sync:** `sdm <account> syncnavigation` writes the tags. Removing them from YAML removes them on the next sync, unless the link was edited in the UI.
 - **Packages:** navigation package export carries the tags. Import writes them the same way as YAML. A package from before this change has no tags and leaves a link's tags alone.
 - **Marked Beta:** Digital Twin, Data Explorer and My Media.

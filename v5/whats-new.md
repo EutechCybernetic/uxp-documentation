@@ -148,6 +148,23 @@ Start here:
 
 ---
 
+## File uploads: one hook
+
+Uploading a file no longer means building a form and posting it to `/uploadcontent/...` yourself. Use `useFileUpload` from `uxp/components`:
+
+```tsx
+const { upload, isUploading, progress, error } = useFileUpload();
+const { url } = await upload(file, { path: "notes/attachments/" });
+```
+
+- One call for any size. Large files are sent in chunks, based on the account's settings.
+- `progress` and `error` are ready for your UI.
+- Outside a component, use `uploadFile(context, file, { path })`.
+
+See [File Uploads](./file-upload.md) for size limits, errors and extra parameters.
+
+---
+
 ## What carried over unchanged
 
 | Carried over | Detail |

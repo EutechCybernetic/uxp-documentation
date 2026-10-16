@@ -62,6 +62,8 @@ To point a link at a dashboard:
 - Only External Link accepts a full web address. Anywhere else the form asks for a path instead.
 - An address may contain letters, numbers, `/`, `-`, `_` and `:parameters`, such as `/view/item/:id`. The characters `( ) [ ] { } + ! * ?` are refused, and a `:` must be followed by a parameter name.
 - A `?` never goes in the address. Put those values in **Query parameters**.
+- An address with capitals, underscores or accents shows a warning. It still saves. Lowercase letters, numbers and hyphens are the usual form, for example `/view/my-page`.
+- In a dashboard's **Links** tab, a section address is changed to that form as you type.
 
 ## Query parameters
 

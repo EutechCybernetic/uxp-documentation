@@ -20,6 +20,11 @@ export interface DynamicFormHandlers {
     isProcessing: () => boolean,
     goToNext: () => void,
     goToPrevious: () => void,
+    /**
+     * Open the step or tab at `index` (0-based). Every step before it is validated first: if one
+     * fails, the form stays put, shows the errors and resolves false. Resolves true once moved.
+     */
+    goToStep: (index: number) => Promise<boolean>,
     getWizardState: () => WizardState | null,
     /** True when the current values differ from the seeded (initial) values. */
     isDirty: () => boolean,

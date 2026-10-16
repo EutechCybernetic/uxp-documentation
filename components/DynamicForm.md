@@ -61,6 +61,7 @@ Available methods through ref:
 |isProcessing|() => boolean|-|
 |goToNext|() => void|-|
 |goToPrevious|() => void|-|
+|goToStep|(index: number) => Promise<boolean>|Open the step or tab at `index` (0-based). Every step before it is validated first: if one fails, the form stays put, shows the errors and resolves false. Resolves true once moved. |
 |getWizardState|() => WizardState \| null|-|
 |isDirty|() => boolean|True when the current values differ from the seeded (initial) values. |
 
