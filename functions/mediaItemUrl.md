@@ -28,6 +28,7 @@ function mediaItemUrl(context: IContextProvider, path: string): string
 - [ThemeType](../types/ThemeType.md)
 - [UserDetails](../types/UserDetails.md)
 - [NavigationLink](../types/NavigationLink.md)
+- [NavigationLinkTag](../types/NavigationLinkTag.md)
 - [Routes](../types/Routes.md)
 - [ConfiguredPage](../types/ConfiguredPage.md)
 - [ComponentType](../types/ComponentType.md)

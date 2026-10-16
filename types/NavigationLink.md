@@ -16,6 +16,8 @@ export interface NavigationLink {
     parentId?: string;
     /** Mark this link as publicly accessible without login. NOT inherited by children — each must be explicitly marked. */
     isPublic?: boolean;
+    /** Tags shown as chips next to the label (e.g. Beta). The server sends them normalised. */
+    tags?: NavigationLinkTag[];
 }
 ```
 
@@ -24,4 +26,8 @@ export interface NavigationLink {
 ```tsx
 import { NavigationLink } from 'uxp/components';
 ```
+
+## Related Types
+
+- [NavigationLinkTag](../types/NavigationLinkTag.md)
 

@@ -26,6 +26,11 @@ export interface IPartialContextProvider {
     userKey: string;
     /** True when the page was loaded without a real user session (public page). Immutable — not affected by setPublicCredentials. */
     isPublicSession?: boolean;
+    /**
+     * Init only: the account public user, sent only to a signed-out session. A public page or public
+     * dashboard with no user of its own runs as it (see setPublicCredentials). Not on the runtime context.
+     */
+    publicUser?: { userKey: string; apiKey: string } | null;
     loginType?: string,
     appRoles?: { [app: string]: string[] }
     enabledApps?: string[]
@@ -120,6 +125,7 @@ import { IPartialContextProvider } from 'uxp/components';
 - [ThemeType](../types/ThemeType.md)
 - [UserDetails](../types/UserDetails.md)
 - [NavigationLink](../types/NavigationLink.md)
+- [NavigationLinkTag](../types/NavigationLinkTag.md)
 - [Routes](../types/Routes.md)
 - [ConfiguredPage](../types/ConfiguredPage.md)
 - [ComponentType](../types/ComponentType.md)

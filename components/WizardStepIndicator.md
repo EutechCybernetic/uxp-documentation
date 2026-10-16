@@ -40,6 +40,14 @@ tsx
 />
 ```
 
+## Live preview
+
+[Open WizardStepIndicator in the playground →](<https://story.uxp.iviva.com/?path=/docs/forms-wizard-wizardstepindicator--docs>)
+
+### Variants
+
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/forms-wizard-wizardstepindicator--docs&args=currentStepId%3Astep2&props=%7B%22steps%22%3A%5B%7B%22id%22%3A%22step1%22%2C%22label%22%3A%22Upload+File%22%2C%22hasError%22%3Afalse%7D%2C%7B%22id%22%3A%22step2%22%2C%22label%22%3A%22Map+Fields%22%2C%22hasError%22%3Afalse%7D%2C%7B%22id%22%3A%22step3%22%2C%22label%22%3A%22Review%22%2C%22hasError%22%3Afalse%7D%5D%2C%22completedSteps%22%3A%5B%22step1%22%5D%7D>)
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|

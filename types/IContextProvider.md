@@ -7,7 +7,7 @@ The context available to each widget or UI. Provides the ability to get informat
 ## Definition
 
 ```tsx
-export interface IContextProvider extends Omit<IPartialContextProvider, "environment"> {
+export interface IContextProvider extends Omit<IPartialContextProvider, "environment" | "publicUser"> {
     environment: Environment,
     direction?: 'ltr' | 'rtl'
 
@@ -105,9 +105,10 @@ export interface IContextProvider extends Omit<IPartialContextProvider, "environ
     updateAPIKey: (token: string) => void;
 
     /**
-     * Swap credentials to a public user's apiKey/userKey (used by public dashboards so widgets
-     * make service calls on behalf of the public user rather than the anonymous visitor).
-     * Call with empty strings to restore anonymous state.
+     * Swap credentials to a public user's apiKey/userKey (used by public pages and dashboards so
+     * calls are made on behalf of the public user rather than the anonymous visitor).
+     * Call with empty strings for no user of its own: the account public user then applies, or the
+     * anonymous state when the account has none.
      */
     setPublicCredentials: (apiKey: string, userKey: string) => void;
 
@@ -170,6 +171,7 @@ import { IContextProvider } from 'uxp/components';
 - [ThemeType](../types/ThemeType.md)
 - [UserDetails](../types/UserDetails.md)
 - [NavigationLink](../types/NavigationLink.md)
+- [NavigationLinkTag](../types/NavigationLinkTag.md)
 - [Routes](../types/Routes.md)
 - [ConfiguredPage](../types/ConfiguredPage.md)
 - [ComponentType](../types/ComponentType.md)

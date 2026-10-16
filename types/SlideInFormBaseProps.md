@@ -111,6 +111,13 @@ interface SlideInFormBaseProps {
      * Rendered between instructions and save/cancel buttons
      */
     additionalHeaderActions?: React.ReactNode;
+
+    /**
+     * Hide the header buttons: Previous, Next, Save and Cancel. `additionalHeaderActions` still render.
+     * Use it while the form runs work the user must not interrupt, then offer your own button.
+     * @default false
+     */
+    hideActions?: boolean;
 }
 ```
 

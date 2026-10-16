@@ -18,3 +18,4 @@ New features on top of [v5.0.0](../v5.0.0/README.md) and [v5.0.1](../v5.0.1/READ
 - [Digital Twin App](digital-twin.md)
 - [Bug Fixes](bug-fixes.md)
 - [Lucy: Model Designer Fixes](lucy-model-designer-fixes.md)
+- [Navigation Tags and Public Users](navigation-tags-and-public-user.md)

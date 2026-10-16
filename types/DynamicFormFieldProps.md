@@ -9,7 +9,7 @@
 export interface DynamicFormFieldProps {
     name: string,
     label: string,
-    type: 'text' | 'password' | 'number' | 'email' | 'checkbox' | 'toggle' | 'select' | 'date' | 'time' | 'datetime' | 'daterange' | 'timerange' | 'timerangeslider' | 'hidden' | 'textarea' | 'json' | 'readonly' | 'spacer',
+    type: 'text' | 'password' | 'number' | 'email' | 'checkbox' | 'toggle' | 'radio' | 'select' | 'date' | 'time' | 'datetime' | 'daterange' | 'timerange' | 'timerangeslider' | 'hidden' | 'textarea' | 'json' | 'readonly' | 'spacer',
     value?: FormValue,
     placeholder?: string,
     icon?: string,

@@ -38,6 +38,7 @@ useMessageBus(props.uxpContext, "visitor-arrival", (payload, channel) => {
 - [ThemeType](../types/ThemeType.md)
 - [UserDetails](../types/UserDetails.md)
 - [NavigationLink](../types/NavigationLink.md)
+- [NavigationLinkTag](../types/NavigationLinkTag.md)
 - [Routes](../types/Routes.md)
 - [ConfiguredPage](../types/ConfiguredPage.md)
 - [ComponentType](../types/ComponentType.md)
