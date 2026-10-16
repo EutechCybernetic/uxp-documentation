@@ -83,6 +83,7 @@ tsx
 |code|string|No|-|-|
 |variant|[ErrorStateVariant](../types/ErrorStateVariant.md)|No|-|-|
 |mode|[ErrorStateMode](../types/ErrorStateMode.md)|No|-|-|
+|summary|React.ReactNode|No|-|-|
 |descriptionDisplay|[ErrorStateDescriptionDisplay](../types/ErrorStateDescriptionDisplay.md)|No|-|-|
 |action|React.ReactNode|No|-|-|
 |className|string|No|-|-|

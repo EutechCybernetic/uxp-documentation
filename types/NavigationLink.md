@@ -18,6 +18,8 @@ export interface NavigationLink {
     isPublic?: boolean;
     /** Tags shown as chips next to the label (e.g. Beta). The server sends them normalised. */
     tags?: NavigationLinkTag[];
+    /** The page a View link opens. Empty when none was chosen. */
+    pageId?: string;
 }
 ```
 

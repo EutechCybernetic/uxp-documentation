@@ -59,6 +59,16 @@ A link disappears from a user's sidebar for one of these reasons, and no other:
 
 The rule behind the list: a link that would end in Access denied may still be shown, but a link the user could open is never hidden. So if a user reports a missing entry, look for a certain denial first.
 
+## Who a public page runs as
+
+A visitor who is not logged in still needs a user behind the page. It is:
+
+- The page's own public user, if set.
+- Otherwise the account public user (**Administration > Account Settings > General**).
+- Otherwise no user, as before.
+
+The account public user cannot be removed while a public link, route or dashboard relies on it.
+
 ## Profiles configure nothing about access
 
 A profile decides what the sidebar shows and in what order, never what a user may open. A link the profile leaves out is still reachable at its address by anyone the permissions allow. To take access away, restrict the master link or the custom route that serves the address.

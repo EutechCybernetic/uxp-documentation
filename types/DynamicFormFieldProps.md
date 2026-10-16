@@ -71,6 +71,9 @@ export interface DynamicFormFieldProps {
 
     checkboxLabel?: string
 
+    /** Switch style of a `toggle` field. Defaults to 'switch-line'. */
+    toggleType?: 'switch-line' | 'switch-box'
+
     description?: string | React.ReactNode
 
     /**

@@ -43,6 +43,12 @@ export interface ErrorStateProps {
     mode?: ErrorStateMode;
 
     /**
+     * A one-line summary shown under the title in `inline` mode, in small text, when the
+     * description itself opens in the dropdown. Use it when the description is long.
+     */
+    summary?: React.ReactNode;
+
+    /**
      * Where the description goes in `inline` mode. Defaults to `'dropdown'`.
      * Ignored in the other modes, which always render the description.
      */

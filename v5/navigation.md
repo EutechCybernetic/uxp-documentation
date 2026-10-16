@@ -43,6 +43,7 @@ names below exactly. Only `protected` and `lockAccess` are aliases; everything e
 | `userGroups` | string[] | — | `[]` | User-group keys allowed to see the link. Empty = everyone. |
 | `appRoles` | string[] | — | `[]` | Qualified `App:role` strings required, e.g. `System:canopenapp`. Empty = everyone. |
 | `isPublic` | bool | — | `null` | Visible/reachable **without a session**. **Not inherited** — set on each link. |
+| `tags` | (string \| {label, variant})[] | — | `[]` | Chips shown next to the label in the sidebar, header and menus. `beta` is predefined (blue Beta chip). Any other word is a grey chip. An object picks a colour: `primary`, `secondary`, `danger`, `warning`, `info`, `success`. |
 | `children` | link[] | — | — | Nested links. |
 | `id` | string | — | auto | Stable node id. Omit and it's [derived deterministically](#ids--sync-churn). |
 | `priority` | int | — | assigned | Ordering. Normally assigned automatically during sync. |
@@ -68,6 +69,15 @@ navigationLinks:
     userGroups: []
     appRoles: []
     children: []
+```
+
+With tags:
+
+```yaml
+  - label: Digital Twin
+    link: /digital-twin
+    pageId: ui/digital-twin-view
+    tags: [beta, { label: New, variant: success }]
 ```
 
 ---
@@ -215,6 +225,9 @@ The service returns the child links, which are inserted under this node when the
 Set `isPublic: true` to make a link reachable **without logging in**. It is **not inherited** — each
 public link must set it explicitly. A [locked](#lockaccess--system-managed-access) link is never
 public regardless of this flag.
+
+A public page runs as a user: its own public user (set on the link or route in the UI), else the
+account public user (**Account Settings > General**), else no user. The public user is not set from YAML.
 
 ### `protected` — can't be deleted
 

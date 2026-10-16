@@ -52,6 +52,9 @@ two files, the `.js` and the `.json`, and confirming.
 This is the right path when whoever is deploying does not have the project checked out, and it is a quick way
 to confirm what is currently on an account.
 
+Deleting a bundle on that page removes its widgets and pages too, so it asks you to type `delete` to confirm.
+A bundle installed by an add-on is marked **Add-on** and cannot be deleted there: uninstall the add-on instead.
+
 ## Re-uploading
 
 Uploading a bundle whose `id` already exists on the account replaces it. That is how you ship an update:

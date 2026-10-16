@@ -28,7 +28,7 @@ Work through the same four checks as above. Remember that a section's restrictio
 **Cause** Nothing is configured at that address.
 
 - Check the address for a typo, including a missing or extra trailing part.
-- If the link has no page of its own, something else has to serve its address: an app route or a custom route. Add a [custom route](custom-routes.md), or give the link a page.
+- If a View link was saved before without a page, users who can customise pages see "Unable to find the view" with "This navigation link has no page.". Edit the link and pick a page. To point at an app route or a [custom route](custom-routes.md) instead, change the link to a Symlink or Redirect.
 - If you deleted a custom route, any address only it served answers 404 from then on.
 
 ## A change does not show up

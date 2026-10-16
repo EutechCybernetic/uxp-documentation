@@ -12,7 +12,7 @@ Apps define built-in routes of their own for addresses that are not menu entries
 - **An override of an app's route**, to point an existing address at a different page or a redirect, without changing the app.
 - **A landing address** you want to hand out, which simply redirects somewhere else.
 
-If the address should also appear in the sidebar, add a master link with no page pointing at the same address. The link shows in the menu, and the custom route serves the page.
+If the address should also appear in the sidebar, add a **Symlink** master link whose target is the custom route's address. The link shows in the menu, and the custom route's page opens at the link's address. A **Redirect** works too, and sends the user to the custom route's own address.
 
 ## Add a route
 
@@ -39,6 +39,10 @@ So a custom route overrides an app's route, and a navigation link overrides both
 ## Addresses you cannot claim
 
 An address that belongs to a protected or locked navigation link, or to a route an app marks as system-managed, cannot be served by a custom route. Saving one is refused with *This URL is protected and cannot be served by a custom route*, and those routes are not offered in the override picker. In practice this covers the whole Administration area. The same applies to a navigation link you point at a protected address.
+
+## Public routes
+
+Turn on **Public Access** to open a route to visitors who are not logged in. Choose a **Public user**, or leave it empty to use the account public user. **User Groups** and **App Roles** are hidden while a route is public. The list shows a **Public** chip.
 
 ## Working with the list
 

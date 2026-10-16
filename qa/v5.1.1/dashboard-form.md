@@ -39,6 +39,20 @@ The New Dashboard and Edit Dashboard forms fill the ID from the name, carry the 
 - **One message:** an error hides the warning.
 - **When:** the warning shows when the path is changed, or on save. Opening an existing link does not show it.
 
+# Dashboards List: Manage Role
+
+- **Who:** users without `UXP: canmanagedashboards`.
+- **Before:** the row menu showed **Edit** and **Delete**, and **New Dashboard** showed. The save or delete then failed.
+- **Now:** no row menu and no **New Dashboard**. A link with `?add=1` or `?edit=<key>` shows the list without the form.
+- **With the role:** **Edit**, **Export**, **Delete** and **New Dashboard**, as before.
+
+# Widget Saved Without a Position
+
+- **Before:** a dashboard with a widget that had no saved position showed "Aw, snap". Seen after importing an old dashboard file.
+- **Now:** the dashboard opens. The widget gets its default size and sits under the other widgets.
+- **Saved:** the new position is kept only when the dashboard is saved.
+- **Hard to test:** the UI never saves a widget without a position. It needs a hand-made old dashboard file. Development tested it on dev.
+
 # By Design (not bugs)
 
 - Opening an existing link with capitals shows no warning until the path is changed.
@@ -52,3 +66,4 @@ The New Dashboard and Edit Dashboard forms fill the ID from the name, carry the 
 - Edit a dashboard that has overlay mode on: it stays on.
 - Sub Dashboard section paths with capitals and spaces.
 - A navigation link and a custom route with `/view/My_Page`.
+- The Dashboards list as a user without the manage role, and with it.

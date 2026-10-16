@@ -20,13 +20,15 @@ To add a View link:
 |---|---|
 | **Label** | The text in the sidebar. Required. |
 | **Type** | What kind of destination this link has. See the table below. |
-| **Page** | The screen a View link opens. Pick it from the list of pages the installed apps provide. |
+| **Page** | The screen a View link opens. Pick it from the list of pages the installed apps provide. Required for a View link. |
 | **Dashboard** | For a Dashboard or Sub Dashboard link, the dashboard to open. The picker searches all dashboards on the account. |
 | **Link** | The address of the link. With a parent selected, tick **Use parent path** to keep the parent's address as the prefix and type only the last part. |
 | **Query parameters** | Defaults the link passes to the page. See below. |
 | **Icon** | The icon in the sidebar. Levels 4 and 5 sit in the header row, which draws no icon, so the field is hidden there. |
+| **Tags** | Small chips next to the label, such as Beta. Type a word and press Enter. Beta is always blue. Other words are grey. |
 | **Fill children from app** | Master Links only: hand this group's children to an app, refreshed on every sync. |
 | **Public Access** | *Allow public access (no login required)*. Off by default. |
+| **Public user** | Shown when **Public Access** is on. The user the page runs as for visitors who are not logged in. Empty: the account public user. Only administrators can set it. |
 | **User Groups** | Limit the link to these groups. Empty means no limit of its own. |
 | **App Roles** | Limit the link to users holding any of these roles. |
 
@@ -37,7 +39,6 @@ The parent is whatever node you clicked **+** on, or the node the link already s
 | Type | What you set | What clicking it does |
 |---|---|---|
 | **View** | A `/view/...` path and a **Page** | Opens that page at that address |
-| **View, no page** | A `/view/...` path only | Follows whatever route already serves that address. Use it to put an app's detail page or a custom route in the menu |
 | **Dashboard** | A dashboard from the picker | Opens the dashboard |
 | **Sub Dashboard** | A dashboard and a section of it | Opens that section of the dashboard |
 | **External Link** | A full web address | Opens that address |
@@ -46,6 +47,10 @@ The parent is whatever node you clicked **+** on, or the node the link already s
 | **Embedded Dashboard** | A `/view/...` path | Opens a dashboard canvas of its own at that address, arranged in place |
 | **Group / Label** | A label, and children under it | Opens the first child the user can see. With nothing visible under it, the group is hidden |
 | **Dynamic** | A service or model action, with parameters and a base route | The app produces the children when the menu is built |
+
+- To put another route in the menu, such as an app's detail page or a custom route, use a **Symlink** or a **Redirect**. A View link always needs a page.
+- A heading with links under it is a **Group / Label**.
+- A View link saved before without a page shows "Unable to find the view" with "This navigation link has no page." to users who can customise pages, and a 404 to everyone else. Edit it and pick a page, or change its type.
 
 ![The link form for a dashboard link](../../assets/user-guide/navigation/link-form-dashboard.png)
 
