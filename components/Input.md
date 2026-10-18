@@ -26,7 +26,7 @@ const Input: React.ForwardRefExoticComponent<React.RefAttributes<InputHandlers> 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |type|[InputType](../types/InputType.md)|No|-|-|
-|value|string|Yes|-|"Chiller 01"|
+|value|string|Yes|-|"B26"|
 |onChange|(value: string, prefix?: string, suffix?: string) => void|Yes|-|onChange={(val, prefix) => { setValue(val); if (prefix !== undefined) setCurren…|
 |onFocus|() => void|No|-|-|
 |onBlur|(value: string) => void|No|-|-|
@@ -41,6 +41,9 @@ const Input: React.ForwardRefExoticComponent<React.RefAttributes<InputHandlers> 
 |tabIndex|number|No|-|-|
 |onClear|() => void|No|-|-|
 |hideClear|boolean|No|-|-|
+|mask|string|No|-|"B{YY}{SEQ}"|
+|maskTokens|Record<string, InputMaskToken>|No|-|{ YY: { length: 2, pattern: /\d/, hint: 'YY' }, SEQ: { length: 2, pattern: /\d/…|
+|maskStrict|boolean|No|false|false|
 
 ## Ref Handlers
 
@@ -61,5 +64,6 @@ Available methods through ref:
 - [InputPrefixConfig](../types/InputPrefixConfig.md)
 - [InputAddonDropdown](../types/InputAddonDropdown.md)
 - [InputAddonOption](../types/InputAddonOption.md)
+- [InputMaskToken](../types/InputMaskToken.md)
 - [InputHandlers](../types/InputHandlers.md)
 

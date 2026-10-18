@@ -12,10 +12,18 @@ interface IDateTimePickerProps extends InputSizeProps, InputStateProps {
      */
     title?: string,
     /**
-    * The currently selected datetime. Either a Date object or an ISO8601 string representation of a date
+    * The currently selected datetime. Either a Date object or an ISO8601 string representation of a date.
+     * With no value, the picker shows today (or the nearest allowed day) at 00:00. Done saves it only with `saveDefaultOnDone`.
      * @example "2026-09-28T09:30:00"
     */
     datetime: string | Date,
+    /**
+    * When the field is empty, Done saves the date and time the picker shows. Off by default: Done only closes.
+    * Escape or a click outside never saves.
+    * @default false
+    * @example true
+    */
+    saveDefaultOnDone?: boolean,
     /**
      * Callback that gets executed whenever a datetime is selected/changed in the datetime picker
      */

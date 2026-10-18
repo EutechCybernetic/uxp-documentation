@@ -1,7 +1,7 @@
 # ProgressBar
 
 
-A determinate or indeterminate progress bar.
+A determinate or indeterminate progress bar, as a straight bar or a ring.
 
 
 
@@ -23,6 +23,8 @@ const ProgressBar: React.FunctionComponent<IProgressBarProps>
 tsx
 <ProgressBar value={uploadPercent} showLabel />
 <ProgressBar indeterminate variant="info" size="small" />
+<ProgressBar value={4} labelPosition="top" title="Setup" showLabel label="4 / 7" track="strong" />
+<ProgressBar value={57} shape="circular" size="large" centerContent={<span>4 / 7</span>} />
 ```
 
 ## Live preview
@@ -33,18 +35,26 @@ tsx
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|value|number|No|-|60|
-|indeterminate|boolean|No|-|-|
-|size|[ProgressBarSize](../types/ProgressBarSize.md)|No|'medium'|-|
-|variant|[ProgressBarVariant](../types/ProgressBarVariant.md)|No|'primary'|-|
-|showLabel|boolean|No|-|-|
-|label|string|No|-|"Uploading"|
+|value|number|No|-|57|
+|indeterminate|boolean|No|false|false|
+|size|[ProgressBarSize](../types/ProgressBarSize.md)|No|'medium'|"medium"|
+|variant|[ProgressBarVariant](../types/ProgressBarVariant.md)|No|'primary'|"primary"|
+|showLabel|boolean|No|false|true|
+|label|string|No|-|"4 / 7 steps"|
+|shape|[ProgressBarShape](../types/ProgressBarShape.md)|No|'linear'|"linear"|
+|centerContent|React.ReactNode|No|-|centerContent={<span>4 / 7</span>}|
+|labelPosition|[ProgressBarLabelPosition](../types/ProgressBarLabelPosition.md)|No|'end'|"top"|
+|title|React.ReactNode|No|-|"Account setup"|
+|track|[ProgressBarTrack](../types/ProgressBarTrack.md)|No|'subtle'|"strong"|
 |className|string|No|-|-|
-|style|React.CSSProperties|No|-|-|
+|style|React.CSSProperties|No|-|{ maxWidth: 360 }|
 
 ## Related Types
 
 - [IProgressBarProps](../types/IProgressBarProps.md)
 - [ProgressBarSize](../types/ProgressBarSize.md)
 - [ProgressBarVariant](../types/ProgressBarVariant.md)
+- [ProgressBarShape](../types/ProgressBarShape.md)
+- [ProgressBarLabelPosition](../types/ProgressBarLabelPosition.md)
+- [ProgressBarTrack](../types/ProgressBarTrack.md)
 

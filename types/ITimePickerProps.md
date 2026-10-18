@@ -9,10 +9,18 @@ interface ITimePickerProps extends InputSizeProps, InputStateProps {
     */
     title?: string
     /**
-     * The currently selected time. Either a Date object or an time string (Ex: 01:10:00 pm)
+     * The currently selected time. Either a Date object or an time string (Ex: 01:10:00 pm).
+     * With no value, the picker shows today at 00:00. Done saves it only with `saveDefaultOnDone`.
      * @example "09:30"
      */
     time: string | Date,
+    /**
+     * When the field is empty, Done saves the time the clock shows (today 00:00). Off by default: Done only closes.
+     * Escape or a click outside never saves.
+     * @default false
+     * @example true
+     */
+    saveDefaultOnDone?: boolean,
     /**
     * Callback that gets executed whenever a time is selected/changed in the time picker
     */

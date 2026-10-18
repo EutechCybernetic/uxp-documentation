@@ -39,6 +39,7 @@ const TimePicker: React.FunctionComponent<ITimePickerProps>
 |-|-|-|-|-|
 |title|string|No|-|-|
 |time|string \| Date|Yes|-|"09:30"|
+|saveDefaultOnDone|boolean|No|false|true|
 |onChange|(date: Date) => void|Yes|-|-|
 |disableInput|boolean|No|-|-|
 |hideLabels|boolean|No|-|-|

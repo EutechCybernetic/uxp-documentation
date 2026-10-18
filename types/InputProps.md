@@ -11,7 +11,7 @@ interface InputProps extends InputSizeProps, InputStateProps {
 
     /**
      * The typed text value (controlled).
-     * @example "Chiller 01"
+     * @example "B26"
      */
     value: string,
 
@@ -67,6 +67,29 @@ interface InputProps extends InputSizeProps, InputStateProps {
      * Hide the clear button entirely (e.g. for internal sub-inputs like Clock or ColorPicker hex field).
      */
     hideClear?: boolean,
+
+    /**
+     * A fill-in pattern: fixed text and `{TOKEN}` blanks. The input shows what is left to fill in a muted ghost
+     * after the typed text, adds the fixed text for you, and fills the blanks as the user types.
+     * Replaces `placeholder` while set.
+     * @example "B{YY}{SEQ}"
+     */
+    mask?: string,
+
+    /**
+     * The blanks of `mask`: per token, its length, the characters it accepts and its hint (default: the token name).
+     * A token with no length runs until the next fixed text.
+     * @example { YY: { length: 2, pattern: /\d/, hint: 'YY' }, SEQ: { length: 2, pattern: /\d/ } }
+     */
+    maskTokens?: Record<string, InputMaskToken>,
+
+    /**
+     * Enforce the mask. Off (default), the mask only guides: the user may type anything. On, characters that do not
+     * fit the next blank are ignored, fixed text cannot be removed and typing stops when the mask is full.
+     * @default false
+     * @example false
+     */
+    maskStrict?: boolean,
 }
 ```
 
@@ -85,4 +108,5 @@ import { InputProps } from 'uxp/components';
 - [InputPrefixConfig](../types/InputPrefixConfig.md)
 - [InputAddonDropdown](../types/InputAddonDropdown.md)
 - [InputAddonOption](../types/InputAddonOption.md)
+- [InputMaskToken](../types/InputMaskToken.md)
 

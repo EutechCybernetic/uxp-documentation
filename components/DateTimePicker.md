@@ -39,6 +39,7 @@ const DateTimePicker: React.FunctionComponent<IDateTimePickerProps>
 |-|-|-|-|-|
 |title|string|No|-|-|
 |datetime|string \| Date|Yes|-|"2026-09-28T09:30:00"|
+|saveDefaultOnDone|boolean|No|false|true|
 |onChange|(date: Date) => void|Yes|-|-|
 |disableInput|boolean|No|-|-|
 |options|[IDatePickerOptions](../types/IDatePickerOptions.md)|No|-|-|

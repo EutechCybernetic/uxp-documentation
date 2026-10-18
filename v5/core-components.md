@@ -32,6 +32,7 @@ For complete type definitions, see the [Types Documentation](../types.md).
 | [DataTable](../components/DataTable.md) | Basic table component for tabular data display. |
 | [DataGrid](../components/DataGrid.md) | Grid layout for displaying data in card format. |
 | [ItemCard](../components/ItemCard.md) | Card component for displaying individual items with actions. |
+| [DocumentViewer](../components/DocumentViewer.md) | Shows a PDF with continuous scroll, a page and zoom toolbar, and reports the current page and total pages. |
 
 ---
 
