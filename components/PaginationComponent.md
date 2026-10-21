@@ -49,6 +49,7 @@ const PaginationComponent: React.FunctionComponent<PaginationProps>
 |dataLength|number|No|0|10|
 |loading|boolean|No|-|-|
 |allowPageSizeChange|boolean|No|-|-|
+|onRefresh|() => void|No|-|Log onRefresh={() => console.log('refresh')}|
 
 ## Related Types
 

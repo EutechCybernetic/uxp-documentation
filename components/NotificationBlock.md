@@ -39,6 +39,8 @@ const NotificationBlock: React.FunctionComponent<INotificationProps>
 |mode|[NotificationMode](../types/NotificationMode.md)|No|-|-|
 |layout|[NotificationLayout](../types/NotificationLayout.md)|No|-|-|
 |action|React.ReactNode|No|-|-|
+|icon|boolean \| string|No|-|true|
+|lines|[INotificationLine[]](../types/INotificationLine.md)|No|-|[{ title: 'Alarm escalations', text: 'User groups not in this account.', chips:…|
 |class|string|No|-|-|
 |styles|any|No|-|-|
 
@@ -48,4 +50,6 @@ const NotificationBlock: React.FunctionComponent<INotificationProps>
 - [NotificationVariant](../types/NotificationVariant.md)
 - [NotificationMode](../types/NotificationMode.md)
 - [NotificationLayout](../types/NotificationLayout.md)
+- [INotificationLine](../types/INotificationLine.md)
+- [ChipVariant](../types/ChipVariant.md)
 

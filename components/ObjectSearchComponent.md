@@ -94,6 +94,7 @@ const ObjectSearchComponent: React.MemoExoticComponent<React.ForwardRefExoticCom
 |appendToURL|boolean|No|-|-|
 |clearParamsOnSelect|string[]|No|-|-|
 |allowPageSizeChange|boolean|No|-|-|
+|allowRefresh|boolean|No|-|-|
 |urlParams|[URLParamConfig](../types/URLParamConfig.md)|No|-|-|
 |className|string|No|-|-|
 |onFilterPanelToggle|(isOpen: boolean) => void|No|-|-|

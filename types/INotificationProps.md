@@ -36,6 +36,16 @@ interface INotificationProps {
      */
     action?: React.ReactNode,
     /**
+     * Leading icon. `true` shows the variant's icon (info, check, warning, cross); a string is a custom icon, as 'fas name'.
+     * @example true
+     */
+    icon?: boolean | string,
+    /**
+     * Lines shown under the message or title, each with an optional icon, title, text, chips and button.
+     * @example [{ title: 'Alarm escalations', text: 'User groups not in this account.', chips: [{ label: 'Night Shift', variant: 'warning' }] }]
+     */
+    lines?: INotificationLine[],
+    /**
      * Any extra css classes to apply
      */
     class?: string,
@@ -57,4 +67,6 @@ import { INotificationProps } from 'uxp/components';
 - [NotificationVariant](../types/NotificationVariant.md)
 - [NotificationMode](../types/NotificationMode.md)
 - [NotificationLayout](../types/NotificationLayout.md)
+- [INotificationLine](../types/INotificationLine.md)
+- [ChipVariant](../types/ChipVariant.md)
 

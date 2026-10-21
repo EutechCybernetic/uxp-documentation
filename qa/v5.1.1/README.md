@@ -12,3 +12,6 @@ New features on top of [v5.1.0](../v5.1.0/README.md); everything there still app
 - [Add-ons and Modules: Protected Add-on Modules, Safe Widget Preview](addons-and-modules.md)
 - [Lucy Connectors: Information Tab](connector-information-tab.md)
 - [Lucy: Real-Time Monitoring](real-time-monitoring.md)
+- [Lists: Refresh Button](list-refresh.md)
+- [Import and Export Wizards](configuration-packages.md)
+- [Offline Mode: OfflineResourcesPath, Replacing Files and Pages That Need Internet](offline-mode.md)

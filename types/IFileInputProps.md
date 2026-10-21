@@ -69,6 +69,19 @@ interface IFileInputProps extends InputSizeProps, InputStateProps {
     dropAreaLabel?: string
 
     /**
+     * Drop-zone look: dashed border, light fill and an upload icon in a round badge.
+     * Pair with `fullWidth` and `height` for a large drop area. Ignored in compact mode.
+     * @default false
+     */
+    dropzone?: boolean
+
+    /**
+     * A muted second line under the drop area label, e.g. the file type and size limit
+     * @example "Configuration package · up to 3.5 MB"
+     */
+    dropAreaHint?: string
+
+    /**
      * Compact mode — renders as a single input row (icon + label) instead of a tall drop-zone
      */
     compact?: boolean

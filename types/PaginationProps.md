@@ -61,6 +61,15 @@ interface PaginationProps {
      * Allow users to change page size via dropdown (default: true)
      */
     allowPageSizeChange?: boolean;
+
+    /**
+     * Shows a refresh button before the count. Called when it is clicked.
+     * @example Log
+     * ```tsx
+     * onRefresh={() => console.log('refresh')}
+     * ```
+     */
+    onRefresh?: () => void;
 }
 ```
 

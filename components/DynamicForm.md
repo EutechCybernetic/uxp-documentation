@@ -41,7 +41,7 @@ const DynamicForm: React.ForwardRefExoticComponent<React.RefAttributes<DynamicFo
 |isLoading|boolean|No|-|-|
 |formContainerStyles|React.CSSProperties|No|-|-|
 |onWizardStateChange|(state: WizardState \| null) => void|No|-|-|
-|renderOptions|{ renderStyle: 'standard' \| 'tabs' \| 'wizard', direction?: 'vertical' \| 'horizontal' // only applicable to tabs and wizard tabBackgroundColor?: string, tabTextColor?: string, activeTabBackgroundColor?: string, activeTabTextColor?: string, errorTabBackgroundColor?: string, errorTabTextColor?: string, disabledTabBackgroundColor?: string, disabledTabTextColor?: string, previousButtonLabel?: string, nextButtonLabel?: string }|No|-|-|
+|renderOptions|{ renderStyle: 'standard' \| 'tabs' \| 'wizard', direction?: 'vertical' \| 'horizontal' // only applicable to tabs and wizard tabBackgroundColor?: string, tabTextColor?: string, activeTabBackgroundColor?: string, activeTabTextColor?: string, errorTabBackgroundColor?: string, errorTabTextColor?: string, disabledTabBackgroundColor?: string, disabledTabTextColor?: string, previousButtonLabel?: string, nextButtonLabel?: string, /** * Wizard only: hide the step indicator, e.g. on a result screen once the steps are done. * @default false */ hideStepIndicator?: boolean }|No|-|-|
 
 ## Ref Handlers
 

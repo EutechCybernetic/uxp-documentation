@@ -75,6 +75,8 @@ tsx
 |filters|[FilterConfig](../types/FilterConfig.md)|No|-|-|
 |actionButtons|ReactNode|No|-|-|
 |addNewRow|ReactNode|No|-|-|
+|allowRefresh|boolean|No|-|-|
+|onRefresh|() => void|No|-|-|
 
 ## Related Types
 

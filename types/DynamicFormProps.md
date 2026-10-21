@@ -69,7 +69,12 @@ export interface DynamicFormProps {
         disabledTabBackgroundColor?: string,
         disabledTabTextColor?: string,
         previousButtonLabel?: string,
-        nextButtonLabel?: string
+        nextButtonLabel?: string,
+        /**
+         * Wizard only: hide the step indicator, e.g. on a result screen once the steps are done.
+         * @default false
+         */
+        hideStepIndicator?: boolean
     }
 }
 ```

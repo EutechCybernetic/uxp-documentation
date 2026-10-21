@@ -59,6 +59,8 @@ export interface IPartialContextProvider {
     routes: Routes,
     /** Path patterns of routes the backend filtered out for this user — used to show "not authorised" instead of 404 */
     restrictedRoutes?: string[],
+    /** Path patterns of routes this server turned off, with the reason — shows "not available" instead of the page */
+    unavailableRoutes?: Record<string, UnavailableReason>,
     configuredPages: ConfiguredPage[]
 
     isLoading?: boolean,
@@ -127,6 +129,7 @@ import { IPartialContextProvider } from 'uxp/components';
 - [NavigationLink](../types/NavigationLink.md)
 - [NavigationLinkTag](../types/NavigationLinkTag.md)
 - [Routes](../types/Routes.md)
+- [UnavailableReason](../types/UnavailableReason.md)
 - [ConfiguredPage](../types/ConfiguredPage.md)
 - [ComponentType](../types/ComponentType.md)
 - [IUXPFunctions](../types/IUXPFunctions.md)

@@ -36,6 +36,8 @@ const FileInput: React.ForwardRefExoticComponent<React.RefAttributes<IFileInputI
 |className|string|No|-|-|
 |dropAreaIcon|IconProp|No|-|-|
 |dropAreaLabel|string|No|-|-|
+|dropzone|boolean|No|false|-|
+|dropAreaHint|string|No|-|"Configuration package · up to 3.5 MB"|
 |compact|boolean|No|-|-|
 |hidden|boolean|No|-|-|
 |allowUrl|boolean|No|-|-|

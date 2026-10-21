@@ -104,6 +104,15 @@ export interface TableComponentProps {
 
     /** Content rendered as the last row inside the table card (e.g. "+ Add New") */
     addNewRow?: ReactNode;
+
+    /**
+     * Show a refresh button before the page count, or alone when pagination is off (default: true).
+     * Shown only when `data` is a function or `onRefresh` is given.
+     */
+    allowRefresh?: boolean;
+
+    /** Called by the refresh button instead of reloading `data`. For a parent that loads the rows itself. */
+    onRefresh?: () => void;
 }
 ```
 

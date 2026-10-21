@@ -62,6 +62,12 @@ interface SimpleTableBaseProps {
 
     /** Custom label for the "Add New" button (default: '+ Add New') */
     addButtonLabel?: string;
+
+    /**
+     * Show a refresh button that reloads the rows (default: true).
+     * Shown only when `data` is a function.
+     */
+    allowRefresh?: boolean;
 }
 ```
 

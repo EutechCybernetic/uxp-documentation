@@ -29,6 +29,7 @@ function saveLocalizations(uxpContext: IContextProvider, code: string, messages:
 - [NavigationLink](../types/NavigationLink.md)
 - [NavigationLinkTag](../types/NavigationLinkTag.md)
 - [Routes](../types/Routes.md)
+- [UnavailableReason](../types/UnavailableReason.md)
 - [ConfiguredPage](../types/ConfiguredPage.md)
 - [ComponentType](../types/ComponentType.md)
 - [IUXPFunctions](../types/IUXPFunctions.md)

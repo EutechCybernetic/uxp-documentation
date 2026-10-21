@@ -191,6 +191,12 @@ interface ObjectSearchComponentProps {
     allowPageSizeChange?: boolean;
 
     /**
+     * Show a refresh button before the page count to reload the current page (default: true).
+     * Shown only when `data` is a function or an advanced query is active.
+     */
+    allowRefresh?: boolean;
+
+    /**
      * Custom URL parameter names for this component instance. Useful for nested components to avoid param conflicts.
      */
     urlParams?: URLParamConfig;
