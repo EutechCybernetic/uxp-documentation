@@ -32,6 +32,10 @@ export interface IPartialContextProvider {
      */
     publicUser?: { userKey: string; apiKey: string } | null;
     loginType?: string,
+    /** Page a signed-out session is sent to. Defaults to /view/auth/login. A v4 host sends its own. */
+    loginUrl?: string,
+    /** Page that signs the user out. When set, logout goes here instead of calling /api/auth/logout. */
+    logoutUrl?: string,
     appRoles?: { [app: string]: string[] }
     enabledApps?: string[]
     userDetails?: UserDetails;
