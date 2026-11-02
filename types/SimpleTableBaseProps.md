@@ -68,6 +68,21 @@ interface SimpleTableBaseProps {
      * Shown only when `data` is a function.
      */
     allowRefresh?: boolean;
+
+    /**
+     * How the next page loads: 'pagination' (previous / next, default) or 'infinite' (more rows load
+     * as the table scrolls near its end). Ignored with `disablePagination`. With infinite paging, keep
+     * `data` the same function or array between renders (`useCallback` / `useMemo`): new data starts
+     * again from the first page.
+     * @default 'pagination'
+     */
+    paging?: 'pagination' | 'infinite';
+
+    /** Hide the column header row. It also hides by itself over a single column with no label */
+    hideHeader?: boolean;
+
+    /** Expandable rows: a chevron shows on any row whose data has a `children` array */
+    expandColumn?: { enable: boolean; label?: string; width?: number };
 }
 ```
 

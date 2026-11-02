@@ -21,16 +21,17 @@ For complete type definitions, see the [Types Documentation](../types.md).
 
 | Component | Description |
 |-----------|-------------|
-| [ObjectSearchComponent](../components/ObjectSearchComponent.md) | Advanced data table with search, filters, views, sorting, pagination, and bulk actions. Primary component for listing data. |
+| [ObjectSearchComponent](../components/ObjectSearchComponent.md) | The list component. Search, filters, views, sorting, paging or infinite scroll, cards, bulk actions. Also plain lists and feeds: one column, no toolbar. |
+| [SimpleConfigurationTable](../components/SimpleConfigurationTable.md) | Short lists the user edits in place: add, edit, delete and reorder rows. Read-only with no save callbacks. |
 | [ObjectDetailsPanel](../components/ObjectDetailsPanel.md) | Side panel for viewing object details. ObjectSearchComponent uses this internally when clicking on items. |
 | [ObjectInfoCard](../components/ObjectInfoCard.md) | Display object information in a card format with title, subtitle, and optional image/icon. |
 | [InfoCard](../components/InfoCard.md) | Display object information in a card format with customizable field mapping. |
 | [UserInfoCard](../components/UserInfoCard.md) | Display user information with avatar, name, and role. Auto-fetches user data. |
 | [InfoCardGroup](../components/InfoCardGroup.md) | Group multiple InfoCards together with consistent layout. |
 | [Chip](../components/Chip.md) | Status badge/tag for displaying categories or labels with icons and colors. |
-| [DataList](../components/DataList.md) | Simple list component for displaying data items. |
-| [DataTable](../components/DataTable.md) | Basic table component for tabular data display. |
 | [DataGrid](../components/DataGrid.md) | Grid layout for displaying data in card format. |
+
+`DataList`, `DataTable`, `TableComponent` and `CRUDComponent` are deprecated. See [Deprecated components](./deprecated-components.md).
 | [ItemCard](../components/ItemCard.md) | Card component for displaying individual items with actions. |
 | [DocumentViewer](../components/DocumentViewer.md) | Shows a PDF with continuous scroll, a page and zoom toolbar, and reports the current page and total pages. |
 
@@ -87,7 +88,7 @@ For complete type definitions, see the [Types Documentation](../types.md).
 |-----------|-------------|
 | [TabComponent](../components/TabComponent.md) | Tabs navigation for organizing content into switchable sections. |
 | [ConfigurationView](../components/ConfigurationView.md) | Settings/configuration page with searchable sections and navigation sidebar. |
-| [SimpleConfigurationTable](../components/SimpleConfigurationTable.md) | Drag-and-drop sortable table for managing configuration items (types, categories, etc). |
+| [SimpleConfigurationTable](../components/SimpleConfigurationTable.md) | Editable, drag-and-drop sortable table for configuration items (types, categories, etc). |
 | [Dashboard](../components/Dashboard.md) | Full-page responsive dashboard with widget management and configuration. |
 | [EmbeddedDashboard](../components/EmbeddedDashboard.md) | Embedded responsive dashboard for object dashboards with widget layouts. |
 | [Collapse](../components/Collapse.md) | Collapsible content container with expand/collapse animation. |

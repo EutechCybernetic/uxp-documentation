@@ -1,5 +1,8 @@
 # TableComponent
 
+> **Deprecated.** Use SimpleConfigurationTable (it has the same table, search, filters and paging; with no edit callbacks
+  it is read-only) or ObjectSearchComponent. TableComponent keeps working; it gets no new features. See docs/v5/deprecated-components.md.
+
 
 TableComponent displays tabular data with optional pagination, search, filters,
 action buttons, edit/delete actions, and inline editing mode.
@@ -57,7 +60,7 @@ tsx
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|data|RowData[] \| ((page: number, pageSize: number, query?: string, filters?: Filters) => Promise<{ items: RowData[] }>)|Yes|-|[ { id: 1, name: 'Chiller 01', status: 'Running', location: 'Level 1' }, { id: …|
+|data|RowData[] \| ((page: number, pageSize: number, query?: string, filters?: Filters, sort?: Sort) => Promise<{ items: RowData[] }>)|Yes|-|[ { id: 1, name: 'Chiller 01', status: 'Running', location: 'Level 1' }, { id: …|
 |columns|[TableColumn[]](../types/TableColumn.md)|Yes|-|[ { id: 'name', label: 'Name' }, { id: 'status', label: 'Status' }, { id: 'loca…|
 |pageSize|number|Yes|-|5|
 |total|number \| ((query?: string, filters?: Filters) => Promise<number>)|Yes|-|7|
@@ -65,6 +68,7 @@ tsx
 |noItemsMessage|string \| React.ReactNode|No|-|-|
 |editColumn|{ enable: boolean; label?: string; renderColumn?: (item: RowData) => React.ReactNode; onEdit?: (item: RowData) => void; }|No|-|-|
 |deleteColumn|{ enable: boolean; label?: string; renderColumn?: (item: RowData) => React.ReactNode; onDelete?: (item: RowData) => Promise<void>; }|No|-|-|
+|actionsColumn|{ enable: boolean; rowActions: Action[] \| ((item: RowData) => React.ReactNode \| Action[]); }|No|-|actionsColumn={{ enable: true, rowActions: [ { label: 'Edit', icon: 'fal pencil…|
 |expandColumn|{ enable: boolean; label?: string; width?: number }|No|-|-|
 |minCellWidth|number|No|100|-|
 |onClickRow|(e: React.MouseEvent<HTMLDivElement>, item: RowData) => void|No|-|-|
@@ -77,6 +81,10 @@ tsx
 |addNewRow|ReactNode|No|-|-|
 |allowRefresh|boolean|No|-|-|
 |onRefresh|() => void|No|-|-|
+|onAddNew|() => void|No|-|-|
+|paging|'pagination' \| 'infinite'|No|'pagination'|-|
+|hideHeader|boolean|No|-|-|
+|extraRows|[RowData[]](../types/RowData.md)|No|-|-|
 
 ## Related Types
 
@@ -84,8 +92,13 @@ tsx
 - [RowData](../types/RowData.md)
 - [Filters](../types/Filters.md)
 - [SimpleFilter](../types/SimpleFilter.md)
+- [Sort](../types/Sort.md)
+- [SortOrder](../types/SortOrder.md)
 - [TableColumn](../types/TableColumn.md)
 - [Column](../types/Column.md)
+- [Action](../types/Action.md)
+- [BaseAction](../types/BaseAction.md)
+- [ActionWithChildren](../types/ActionWithChildren.md)
 - [EditableConfig](../types/EditableConfig.md)
 - [FilterConfig](../types/FilterConfig.md)
 - [FormSectionProps](../types/FormSectionProps.md)

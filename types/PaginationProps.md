@@ -70,6 +70,17 @@ interface PaginationProps {
      * ```
      */
     onRefresh?: () => void;
+
+    /**
+     * Content before the refresh button (e.g. a list / cards toggle)
+     */
+    leading?: React.ReactNode;
+
+    /**
+     * Infinite scrolling: show how many are loaded ("48 of 132") instead of the page
+     * count and the previous / next buttons. `dataLength` is the number loaded.
+     */
+    countOnly?: boolean;
 }
 ```
 

@@ -1,9 +1,10 @@
 # CRUDComponent
 
-> **Deprecated.** Use SimpleConfigurationTable instead. CRUDComponent will be removed in a future release.
+> **Deprecated.** Use SimpleConfigurationTable instead. CRUDComponent keeps working; it gets no new features.
+  See docs/v5/deprecated-components.md.
+
 
 CRUD component
-
 
 
 

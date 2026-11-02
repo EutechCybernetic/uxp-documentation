@@ -23,4 +23,7 @@ import { SkeletonTableRowProps } from 'uxp/components';
 
 - [ExtendedColumn](../types/ExtendedColumn.md)
 - [Column](../types/Column.md)
+- [Action](../types/Action.md)
+- [BaseAction](../types/BaseAction.md)
+- [ActionWithChildren](../types/ActionWithChildren.md)
 

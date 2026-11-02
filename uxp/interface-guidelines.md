@@ -8,13 +8,15 @@ free, and it makes your screen look and behave like every other screen in the pr
 
 | Your screen is | Use | Why |
 |---|---|---|
-| An app's main list of one object type: work orders, assets, users | [`ObjectSearchComponent`](../components/ObjectSearchComponent.md) | The full list page: search, filters, saved views, sorting, column customization, selection, row actions, a details panel and export |
-| A table of rows with columns, inside a widget or a section of a page | [`DataTable`](../components/DataTable.md) | Columns with custom renderers, paging in as the user scrolls |
-| A list of items that are not a table: cards, rows with a custom layout | [`DataList`](../components/DataList.md) | You render each item; the component handles paging and scrolling |
+| An app's main list of one object type: work orders, assets, users | [`ObjectSearchComponent`](../components/ObjectSearchComponent.md) | The full list page: search, filters, saved views, sorting, column customization, selection, row actions, a details panel, cards and export |
+| A list inside a widget or a section of a page: a feed, rows with a custom layout, a scrolling table | [`ObjectSearchComponent`](../components/ObjectSearchComponent.md) with only the parts it needs | The same list with the toolbar turned off; one column draws a whole row |
+| A short configuration list the user edits in place | [`SimpleConfigurationTable`](../components/SimpleConfigurationTable.md) | Add, edit, delete and reorder rows inline |
 | A grid of cards of mixed content | [`DataGrid`](../components/DataGrid.md) with [`ItemCard`](../components/ItemCard.md) | A fixed number of items laid out in columns |
 | A settings screen | [`ConfigurationView`](../components/ConfigurationView.md) | Sidebar of sections, searchable, with a header and actions per section |
 
-Every one of these has a live demo on its reference page.
+Every one of these has a live demo on its reference page. `DataList`, `DataTable`, `TableComponent` and
+`CRUDComponent` are deprecated: they keep working, but new screens use the components above. See
+[Deprecated components](../v5/deprecated-components.md).
 
 ## App list pages
 
@@ -46,54 +48,77 @@ survives a refresh and the user can share the link. Column ids match the fields 
 Prefer the details panel over navigating away when the details are short; use a route when the details
 screen is a page in its own right.
 
-## Tables inside a page or widget
+## Lists inside a page or widget
 
-`DataTable` is the smaller table. You define the columns and how each cell renders; it pages in more rows as
-the user scrolls.
+Use the same `ObjectSearchComponent` and leave out what the list does not need.
+
+- `paging="infinite"` loads the next page as the user scrolls, instead of previous / next buttons.
+- `hidePaging` hides the page control and the count.
+- Leave out `title`, `search`, `filters` and `actionButtons`, and set `allowRefresh={false}`. The toolbar
+  rows are then not drawn at all.
+- One column with no `label` hides the column header. Its `renderColumn` draws the whole row, so the table
+  gives the padding and the row lines, and you only draw the content.
+- Add more columns when the content is a table. The header comes back when a column has a label.
+
+A feed, one row per item:
 
 ```tsx
-<DataTable
-    data={(max, last) => getDataItems(max, last)}
-    pageSize={10}
-    columns={[
-        { title: 'Request', width: '30%', renderColumn: (item) => <ItemCard item={item} subTitleField="request" /> },
-        { title: 'Status', renderColumn: (item) => <div>{item.status}</div> }
-    ]}
+<ObjectSearchComponent
+    idField="id"
+    data={async (page, pageSize) => ({ items: await loadActivity(page, pageSize) })}
+    total={async () => countActivity()}
+    columns={[{
+        id: 'item',
+        label: '',
+        renderColumn: (item) => <div className="myapp_activity__row">
+            <strong>{item.title}</strong>
+            <span>{item.when}</span>
+        </div>
+    }]}
+    pageSize={20}
+    paging="infinite"
+    hidePaging
+    allowRefresh={false}
+    noItemsMessage={uxpContext.$L('myapp.activity.empty')}
 />
 ```
 
-## Lists that are not tables
+A fixed array works too: give `data` the array and `total` its length.
 
-`DataList` handles the same paging, but you render each item however you like. That suits an activity feed,
-a list of cards, or anything with a layout a table cannot express.
-
-With a fixed array:
+A Lucy collection: `uxpContext.fromLucyDataCollection(model, collection)` returns a function that takes
+`(max, last, args)`, where `last` is how many rows to skip. Wrap it in a page function:
 
 ```tsx
-<DataList
-    data={items}
-    renderItem={(item, key) => <div key={key}>{item.name}</div>}
-    pageSize={10}
+const fromCollection = uxpContext.fromLucyDataCollection('WorkOrders', 'Requests');
+
+<ObjectSearchComponent
+    idField="_id"
+    data={async (page, pageSize) => ({ items: (await fromCollection(pageSize, String((page - 1) * pageSize))).items })}
+    total={0}
+    columns={[{ id: 'item', label: '', renderColumn: (item) => <RequestRow item={item} /> }]}
+    pageSize={20}
+    paging="infinite"
+    hidePaging
 />
 ```
 
-Paging from the backend, with a function that returns `{ items, pageToken }`:
+With `total={0}`, the list asks for more until a page comes back short.
+
+## Small editable tables
+
+`SimpleConfigurationTable` is for a short list the user edits in place: a list of options, accounts or
+mappings. It has search, filters, paging (`paging="infinite"` too) and sortable columns (`isSortable`).
+Give it the save callbacks and it edits rows inline; give it none and it is a read-only table.
 
 ```tsx
-async function getData(max: number, last: string, args: any) {
-    const { data } = await context.executeActionSafe('WorkOrder', 'List', { max, last, ...args });
-    return { items: data?.items ?? [], pageToken: data?.lastPageToken ?? last };
-}
-
-<DataList
-    data={(max, last, args) => getData(max, last, args)}
-    renderItem={(item, key) => <div key={key}>{item.name}</div>}
-    pageSize={10}
+<SimpleConfigurationTable
+    columns={[{ id: 'name', label: 'Name', isSortable: true }, { id: 'value', label: 'Value' }]}
+    data={settings}
+    onAddItem={async (item) => save(item)}
+    onUpdateItem={async (item) => save(item)}
+    onDeleteItem={async (item) => remove(item)}
 />
 ```
-
-`uxpContext.fromLucyDataCollection(model, collection)` returns a function of exactly this shape, so a Lucy
-collection can be handed straight to `data`.
 
 ## Grids of cards
 
@@ -124,7 +149,8 @@ const items = [
 />
 ```
 
-Use `DataList` instead when the set can grow: `DataGrid` lays out what you give it, `DataList` pages.
+Use `ObjectSearchComponent` in card mode (`display="cards"`) instead when the set can grow: `DataGrid` lays
+out what you give it, the list pages.
 
 ## Settings screens
 

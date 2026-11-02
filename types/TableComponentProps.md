@@ -21,7 +21,7 @@ export interface TableComponentProps {
      *   { id: 7, name: 'Boiler 01', status: 'Stopped', location: 'Roof' },
      * ]
      */
-    data: RowData[] | ((page: number, pageSize: number, query?: string, filters?: Filters) => Promise<{ items: RowData[] }>);
+    data: RowData[] | ((page: number, pageSize: number, query?: string, filters?: Filters, sort?: Sort) => Promise<{ items: RowData[] }>);
 
     /**
      * List of columns to display
@@ -66,6 +66,22 @@ export interface TableComponentProps {
         label?: string;
         renderColumn?: (item: RowData) => React.ReactNode;
         onDelete?: (item: RowData) => Promise<void>;
+    };
+
+    /**
+     * Row actions: a ⋯ menu on each row (on phones, the card's ⋯ and a swipe). Put a row's actions
+     * here rather than as buttons in its cells.
+     * @example
+     * ```tsx
+     * actionsColumn={{ enable: true, rowActions: [
+     *     { label: 'Edit', icon: 'fal pencil', onClick: (row) => edit(row) },
+     *     { label: 'Delete', icon: 'fal trash', onClick: (row) => remove(row) },
+     * ] }}
+     * ```
+     */
+    actionsColumn?: {
+        enable: boolean;
+        rowActions: Action[] | ((item: RowData) => React.ReactNode | Action[]);
     };
 
     /** Enable expandable rows — a chevron appears on any row whose data has a `children` array. */
@@ -113,6 +129,31 @@ export interface TableComponentProps {
 
     /** Called by the refresh button instead of reloading `data`. For a parent that loads the rows itself. */
     onRefresh?: () => void;
+
+    /**
+     * Phones: the toolbar's add button calls this (tables that open their own form). Tables with
+     * inline adding (`editable.onAddItem` and an `addNewRow`) get the add button by themselves:
+     * it opens the row form.
+     */
+    onAddNew?: () => void;
+
+    /**
+     * How the next page loads: 'pagination' (previous / next, default) or 'infinite' (more rows load
+     * as the table scrolls near its end). Ignored with `disablePagination`. With infinite paging, keep
+     * `data` the same function or array between renders (`useCallback` / `useMemo`): new data starts
+     * again from the first page.
+     * @default 'pagination'
+     */
+    paging?: 'pagination' | 'infinite';
+
+    /** Hide the column header row. It also hides by itself over a single column with no label */
+    hideHeader?: boolean;
+
+    /**
+     * Rows shown after the loaded rows, outside paging (SimpleConfigurationTable's row being added
+     * inline). Not counted in the total.
+     */
+    extraRows?: RowData[];
 }
 ```
 
@@ -127,8 +168,13 @@ import { TableComponentProps } from 'uxp/components';
 - [RowData](../types/RowData.md)
 - [Filters](../types/Filters.md)
 - [SimpleFilter](../types/SimpleFilter.md)
+- [Sort](../types/Sort.md)
+- [SortOrder](../types/SortOrder.md)
 - [TableColumn](../types/TableColumn.md)
 - [Column](../types/Column.md)
+- [Action](../types/Action.md)
+- [BaseAction](../types/BaseAction.md)
+- [ActionWithChildren](../types/ActionWithChildren.md)
 - [EditableConfig](../types/EditableConfig.md)
 - [FilterConfig](../types/FilterConfig.md)
 - [FormSectionProps](../types/FormSectionProps.md)

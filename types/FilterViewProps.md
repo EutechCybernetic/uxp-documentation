@@ -9,6 +9,12 @@ Props for the FilterView component
 ```tsx
 interface FilterViewProps {
     /**
+     * Shows the filter panel in a full-height sheet instead of a dropdown, with no trigger button
+     * (phones: the trigger lives in the bottom toolbar).
+     * @default false
+     */
+    asSheet?: boolean,
+    /**
      * Whether the filter panel is open
      * @example true
      */

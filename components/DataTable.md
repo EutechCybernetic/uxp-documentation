@@ -1,5 +1,8 @@
 # DataTable
 
+> **Deprecated.** Use ObjectSearchComponent (`paging="infinite"` for scrolling lists), or SimpleConfigurationTable for a
+  short static table. DataTable keeps working; it gets no new features. See docs/v5/deprecated-components.md.
+
 
 A infinite-scrollable list that supports paging in of items
 

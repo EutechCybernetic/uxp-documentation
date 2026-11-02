@@ -36,9 +36,21 @@ const TreeView: React.ForwardRefExoticComponent<React.RefAttributes<TreeViewHand
 />
 ```
 
+#### A node with `isLabel` is a group label: it is never selected, a click on its row expands or
+collapses it, and it reads as a heading (bold, secondary text colour, no fill).
+
+```tsx
+tsx
+<TreeView showPath items={[{ id: 'b1', label: 'IBMS 2026 · Intake A', icon: 'fal users', path: 'b1', isLabel: true, expandOnLoad: true, getChildren: [{ id: 'c1', label: 'Building Automation 101', icon: 'fal book', path: 'b1/c1', isLabel: true, expandOnLoad: true, getChildren: [{ id: 'cd', label: 'Course discussion', icon: 'fal comments', path: 'b1/c1/cd' }, { id: 'l1', label: 'Sensors', icon: 'fal file-lines', path: 'b1/c1/l1' }] }] }]} />
+```
+
 ## Live preview
 
 [Open TreeView in the playground →](<https://story.uxp.iviva.com/?path=/docs/data-display-lists-tree-view-treeview--docs>)
+
+### Variants
+
+- [Example 2](<https://story.uxp.iviva.com/?path=/docs/data-display-lists-tree-view-treeview--docs&args=showPath%3A%21true&props=%7B%22items%22%3A%5B%7B%22id%22%3A%22b1%22%2C%22label%22%3A%22IBMS+2026+%C2%B7+Intake+A%22%2C%22icon%22%3A%22fal+users%22%2C%22path%22%3A%22b1%22%2C%22isLabel%22%3Atrue%2C%22expandOnLoad%22%3Atrue%2C%22getChildren%22%3A%5B%7B%22id%22%3A%22c1%22%2C%22label%22%3A%22Building+Automation+101%22%2C%22icon%22%3A%22fal+book%22%2C%22path%22%3A%22b1%2Fc1%22%2C%22isLabel%22%3Atrue%2C%22expandOnLoad%22%3Atrue%2C%22getChildren%22%3A%5B%7B%22id%22%3A%22cd%22%2C%22label%22%3A%22Course+discussion%22%2C%22icon%22%3A%22fal+comments%22%2C%22path%22%3A%22b1%2Fc1%2Fcd%22%7D%2C%7B%22id%22%3A%22l1%22%2C%22label%22%3A%22Sensors%22%2C%22icon%22%3A%22fal+file-lines%22%2C%22path%22%3A%22b1%2Fc1%2Fl1%22%7D%5D%7D%5D%7D%5D%7D>)
 
 ## Properties
 

@@ -50,6 +50,11 @@ tsx
 |placeholder|string|No|-|-|
 |className|string|No|-|-|
 |searchParameters|{ [key: string]: any }|No|-|-|
+|onUpload|(file: File, source: 'upload' \| 'camera') => Promise<string>|No|-|-|
+|onPick|(pick: IMediaPickerPick) => Promise<string \| void>|No|-|-|
+|validate|(info: IMediaCheckInfo) => string \| undefined|No|-|-|
+|onRefreshRules|() => void \| Promise<void>|No|-|-|
+|cropRules|[IImageCropRules](../types/IImageCropRules.md)|No|-|-|
 
 ## Related Types
 
@@ -58,4 +63,8 @@ tsx
 - [InputStateProps](../types/InputStateProps.md)
 - [MediaType](../types/MediaType.md)
 - [MediaPickerSource](../types/MediaPickerSource.md)
+- [IMediaPickerPick](../types/IMediaPickerPick.md)
+- [IGalleryPickMeta](../types/IGalleryPickMeta.md)
+- [IMediaCheckInfo](../types/IMediaCheckInfo.md)
+- [IImageCropRules](../types/IImageCropRules.md)
 

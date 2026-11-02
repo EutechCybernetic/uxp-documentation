@@ -82,6 +82,38 @@ interface IMediaPickerProps extends InputSizeProps, InputStateProps {
      * (e.g. { orientation: 'landscape' })
      */
     searchParameters?: { [key: string]: any }
+
+    /**
+     * The host stores uploaded and camera files itself and returns the value to emit.
+     * Without it files go to the content store / media library (see MediaPickerModal).
+     */
+    onUpload?: (file: File, source: 'upload' | 'camera') => Promise<string>
+
+    /**
+     * The host handles a library, gallery, icon or link pick before it is emitted
+     * (see MediaPickerModal `onPick`).
+     */
+    onPick?: (pick: IMediaPickerPick) => Promise<string | void>
+
+    /**
+     * A check run on a value before it is used: a file dropped on the field, and
+     * in the dialog a previewed item, a typed link, a chosen file or a camera
+     * photo. Return a message to block it (line 1 the problem, line 2 after a
+     * newline a hint), or undefined when it is fine (see MediaPickerModal `validate`).
+     */
+    validate?: (info: IMediaCheckInfo) => string | undefined
+
+    /**
+     * Shows a refresh button in the dialog header. A click awaits this, then
+     * runs the checks again (see MediaPickerModal `onRefreshRules`).
+     */
+    onRefreshRules?: () => void | Promise<void>
+
+    /**
+     * Size and DPI rules for "Crop and resize" in the dialog: an image that fails `validate`
+     * offers it (see MediaPickerModal `cropRules`). Without it there is no crop button.
+     */
+    cropRules?: IImageCropRules
 }
 ```
 
@@ -97,4 +129,8 @@ import { IMediaPickerProps } from 'uxp/components';
 - [InputStateProps](../types/InputStateProps.md)
 - [MediaType](../types/MediaType.md)
 - [MediaPickerSource](../types/MediaPickerSource.md)
+- [IMediaPickerPick](../types/IMediaPickerPick.md)
+- [IGalleryPickMeta](../types/IGalleryPickMeta.md)
+- [IMediaCheckInfo](../types/IMediaCheckInfo.md)
+- [IImageCropRules](../types/IImageCropRules.md)
 

@@ -42,9 +42,9 @@ export interface Column {
      * ```
      */
     renderNewItem?: (item: any, update: (updatedItem: any) => void) => ReactNode;
-    /** Minimum width of the column in pixels */
+    /** Minimum width of the column in pixels at the 13px base font (1440 wide); scaled with the base font */
     minWidth?: number;
-    /** Maximum width of the column in pixels */
+    /** Maximum width of the column in pixels at the 13px base font (1440 wide); scaled with the base font */
     maxWidth?: number;
     /** Callback when a cell in this column is clicked */
     onClickColumn?: (e: React.MouseEvent<HTMLDivElement>, item: any, column: Column) => void;

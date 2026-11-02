@@ -60,6 +60,9 @@ tsx
 - [TableRowBasicProps](../types/TableRowBasicProps.md)
 - [ExtendedColumn](../types/ExtendedColumn.md)
 - [Column](../types/Column.md)
+- [Action](../types/Action.md)
+- [BaseAction](../types/BaseAction.md)
+- [ActionWithChildren](../types/ActionWithChildren.md)
 - [RowData](../types/RowData.md)
 - [EditableRowConfig](../types/EditableRowConfig.md)
 

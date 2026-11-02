@@ -22,6 +22,13 @@ export interface ButtonComponentProps {
     tooltip?: string;
 
     /**
+     * Label for an icon-only button without a hover tooltip: screen readers read it, and on
+     * touch screens pressing and holding the button shows it. Ignored when `tooltip` is set.
+     * @example "Close"
+     */
+    ariaLabel?: string;
+
+    /**
      * Left side icon - supports FontAwesome, Phosphor, image URL, text/emoji, or React element
      * @example "fas save"
      */

@@ -58,6 +58,7 @@ const FilterView: React.MemoExoticComponent<React.FunctionComponent<FilterViewPr
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
+|asSheet|boolean|No|false|-|
 |isOpen|boolean|Yes|-|true|
 |onToggle|() => void|Yes|-|Log onToggle={() => console.log('toggle')}|
 |appliedFilters|[Filters](../types/Filters.md)|Yes|-|{}|

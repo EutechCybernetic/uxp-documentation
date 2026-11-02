@@ -35,7 +35,7 @@ The full interface is `IContextProvider` (`src/types.ts:801-946`). The generated
 | `executeQuerySafe<T>(params)` | Run a Lucy query by key, id or name, returning a result object |
 | `executeMicroServiceSafe<T>(config, options?)` | Call a microservice REST endpoint. Supports caching |
 | `executeAPISafe<T>(config, options?)` | Call any HTTP API. Normalizes the URL, adds the authorization header, supports caching |
-| `fromLucyDataCollection(model, collection)` | Returns a paging function of the shape `DataList`, `DataTable` and `DynamicList` accept |
+| `fromLucyDataCollection(model, collection)` | Returns a paging function `(max, last, args)` for a Lucy collection. See [Paged lists](./lucy.md#paged-lists) |
 
 Prefer the `Safe` variants. They never throw, so a failed call is a branch rather than a `try`/`catch`, and
 the error message is already extracted for you. See [Talking to Lucy](./lucy.md).

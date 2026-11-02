@@ -45,6 +45,13 @@ interface IIconButtonProps {
     tooltip?: string,
 
     /**
+     * Label without a hover tooltip: screen readers read it, and on touch screens pressing and
+     * holding the button shows it. `type` buttons (close, delete, …) have one by default.
+     * @example "Close"
+     */
+    ariaLabel?: string,
+
+    /**
     * Any extra css classes to apply
     */
     className?: string,

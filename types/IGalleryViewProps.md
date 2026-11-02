@@ -24,7 +24,7 @@ interface IGalleryViewProps {
      * decides what a click means — preview in single mode, toggle in multiple
      * mode.
      */
-    onPick: (url: string) => void
+    onPick: (url: string, meta?: IGalleryPickMeta) => void
 
     /**
      * Multi-select support — return true to render the item as selected
@@ -32,8 +32,12 @@ interface IGalleryViewProps {
     isSelected?: (url: string) => boolean
 
     /**
-     * Supplied only in multiple mode, where a click toggles instead of
-     * previewing — renders the per-card expand button.
+     * Multiple mode: tick or untick a photo from its checkbox (a click previews it)
+     */
+    onToggle?: (url: string) => void
+
+    /**
+     * @deprecated A click previews now, in every mode; multiple mode ticks from the checkbox (`onToggle`)
      */
     onPreview?: (url: string) => void
 
@@ -41,6 +45,25 @@ interface IGalleryViewProps {
      * The value the host's preview column is currently showing.
      */
     activeValue?: string
+
+    /**
+     * Show the files as a grid of cards (nothing previewed yet). Without it they are compact
+     * cards in one column, beside the preview.
+     */
+    grid?: boolean
+
+    /**
+     * Search text, when the host owns it (phones put the search in the bottom toolbar).
+     * Without it the view keeps its own.
+     */
+    query?: string
+
+    onQueryChange?: (query: string) => void
+
+    /**
+     * Hide the search box: the host shows it elsewhere
+     */
+    hideSearch?: boolean
 }
 ```
 
@@ -49,4 +72,8 @@ interface IGalleryViewProps {
 ```tsx
 import { IGalleryViewProps } from 'uxp/components';
 ```
+
+## Related Types
+
+- [IGalleryPickMeta](../types/IGalleryPickMeta.md)
 

@@ -15,6 +15,8 @@ interface ProfileProps {
     className?: string
     /** Child components */
     children?: React.ReactNode
+    /** Called when the panel opens or closes (the mobile footer shows a Close bar while it is open) */
+    onOpenChange?: (open: boolean) => void
 }
 ```
 

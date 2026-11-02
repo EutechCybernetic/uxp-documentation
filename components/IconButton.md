@@ -55,6 +55,7 @@ const IconButton: React.FunctionComponent<IIconButtonProps>
 |onClick|(e?: React.MouseEvent<HTMLButtonElement>) => void \| Promise<void>|No|-|Sync handler onClick={() => alert('Clicked')}|
 |onError|(e?: React.MouseEvent<HTMLButtonElement>, error?: unknown) => void|No|-|-|
 |tooltip|string|No|-|"Edit"|
+|ariaLabel|string|No|-|"Close"|
 |className|string|No|-|-|
 |borderless|boolean|No|-|-|
 |buttonType|[ButtonComponentType](../types/ButtonComponentType.md)|No|-|-|

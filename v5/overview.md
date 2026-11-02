@@ -17,6 +17,7 @@ component API is the same; only the packaging and deployment differ.
 | [Pages & Dashboards](./pages-and-dashboards.md) | The four ways to put a page in front of a user, and the surfaces you can extend |
 | [Data & Services](./data-and-services.md) | Service configs and the hooks that run them, event synchronization, in-app notifications |
 | [Styling & Localization](./styling-and-localization.md) | Theme variables, SCSS conventions, font-weight tokens, translations and scoped CSS |
+| [Responsive layouts](./responsive/overview.md) | How pages adapt to phones and large screens, and the changes your app makes for them |
 | [Build & Performance](./build-and-performance.md) | Lazy views, bundle size and the build and deploy steps |
 | [Migration & reference](./migration-and-reference.md) | The v4 to v5 migration guide, best practices and troubleshooting |
 

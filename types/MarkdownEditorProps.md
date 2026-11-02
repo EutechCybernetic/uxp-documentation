@@ -52,6 +52,11 @@ export interface MarkdownEditorProps extends InputSizeProps, InputStateProps {
      */
     hideFormattingToolbar?: boolean;
     /**
+     * Only these tools in the formatting toolbar, in this order, with no group lines.
+     * Leave it out for the full toolbar. Use it for a short toolbar, e.g. the common tools on phones.
+     */
+    formattingTools?: MarkdownFormattingTool[];
+    /**
      * Content-store path for images uploaded via the rich-mode image picker.
      * Passed through to the ImagePickerModal (defaults to the modal's own path).
      */
@@ -70,4 +75,5 @@ import { MarkdownEditorProps } from 'uxp/components';
 - [InputSizeProps](../types/InputSizeProps.md)
 - [InputStateProps](../types/InputStateProps.md)
 - [MarkdownEditorTab](../types/MarkdownEditorTab.md)
+- [MarkdownFormattingTool](../types/MarkdownFormattingTool.md)
 

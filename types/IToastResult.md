@@ -14,7 +14,8 @@ interface IToastResult {
     warning: IToastFunction,
     info: IToastFunction,
     custom: IToastFunction,
-    remove: IRemoveFunction
+    remove: IRemoveFunction,
+    removeAll: IRemoveAllFunction
 }
 ```
 
@@ -30,4 +31,5 @@ import { IToastResult } from 'uxp/components';
 - [IPartialContent](../types/IPartialContent.md)
 - [IToastContent](../types/IToastContent.md)
 - [IRemoveFunction](../types/IRemoveFunction.md)
+- [IRemoveAllFunction](../types/IRemoveAllFunction.md)
 

@@ -54,6 +54,7 @@ tsx
 |hideToolbar|boolean|No|-|-|
 |compactToolbar|boolean|No|-|-|
 |hideFormattingToolbar|boolean|No|-|-|
+|formattingTools|[MarkdownFormattingTool[]](../types/MarkdownFormattingTool.md)|No|-|-|
 |imageUploadPath|string|No|-|-|
 
 ## Ref Handlers
@@ -73,5 +74,6 @@ Available methods through ref:
 - [InputSizeProps](../types/InputSizeProps.md)
 - [InputStateProps](../types/InputStateProps.md)
 - [MarkdownEditorTab](../types/MarkdownEditorTab.md)
+- [MarkdownFormattingTool](../types/MarkdownFormattingTool.md)
 - [MarkdownEditorHandlers](../types/MarkdownEditorHandlers.md)
 

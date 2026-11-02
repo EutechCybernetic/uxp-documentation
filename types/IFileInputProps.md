@@ -69,11 +69,10 @@ interface IFileInputProps extends InputSizeProps, InputStateProps {
     dropAreaLabel?: string
 
     /**
-     * Drop-zone look: dashed border, light fill and an upload icon in a round badge.
-     * Pair with `fullWidth` and `height` for a large drop area. Ignored in compact mode.
-     * @default false
+     * The drop-zone look. Every field that is not `compact` has it now, so this is no longer needed
+     * (kept so existing fields keep working).
      */
-    dropzone?: boolean
+        dropzone?: boolean
 
     /**
      * A muted second line under the drop area label, e.g. the file type and size limit
@@ -134,6 +133,32 @@ interface IFileInputProps extends InputSizeProps, InputStateProps {
      * Defaults to `'contain'` (whole image visible, letterboxed).
      */
     previewObjectFit?: React.CSSProperties['objectFit']
+
+    /**
+     * Drop-zone only: a delete button on the chosen file, which clears it (`onChange(null, false)`)
+     */
+    removable?: boolean
+
+    /**
+     * Drop-zone only: what the bar under the chosen file shows. Default: its name and size,
+     * and that a new drop replaces it
+     */
+    previewInfo?: React.ReactNode
+
+    /**
+     * Check the files before the field takes them: chosen or dropped files open a dialog (preview,
+     * strip, crop, delete) and the field gets only the files that passed, when the user confirms.
+     * Leave it out and files go straight to the field, as always.
+     * @example { title: 'Site photos', validate: (info) => info.width > 2000 ? 'Too wide\nUse 2000 px or less' : undefined }
+     */
+    review?: {
+        /** The dialog's title */
+        title?: string
+        /** The check per file: a message (line 1 the problem, line 2 a hint), or nothing when fine */
+        validate?: (info: IMediaCheckInfo) => string | undefined
+        /** Size and DPI rules for "Crop and resize" */
+        cropRules?: IImageCropRules
+    }
 }
 ```
 
@@ -147,4 +172,7 @@ import { IFileInputProps } from 'uxp/components';
 
 - [InputSizeProps](../types/InputSizeProps.md)
 - [InputStateProps](../types/InputStateProps.md)
+- [IMediaCheckInfo](../types/IMediaCheckInfo.md)
+- [Size](../types/Size.md)
+- [IImageCropRules](../types/IImageCropRules.md)
 

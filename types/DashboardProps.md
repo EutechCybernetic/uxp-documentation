@@ -42,12 +42,14 @@ export interface DashboardProps {
     onSave: (widgets: ComponentInstance[], layouts: ResponsiveLayouts) => Promise<boolean>;
 
     /**
-     * Grid margin [horizontal, vertical] in pixels (default: [10, 10])
+     * Grid margin [horizontal, vertical] in pixels at the 13px base font (default: [10, 10]).
+     * Scaled with the base font, so gaps grow on large screens.
      */
     margin?: [number, number];
 
     /**
-     * Grid padding [horizontal, vertical] in pixels (default: [10, 10])
+     * Grid padding [horizontal, vertical] in pixels at the 13px base font (default: [10, 10]).
+     * Scaled with the base font, like margin.
      */
     padding?: [number, number];
 

@@ -29,6 +29,7 @@ const MediaPreviewPanel: React.FunctionComponent<IMediaPreviewPanelProps>
 |onToggle|() => void|No|-|-|
 |onClose|() => void|No|-|-|
 |closeTitle|string|No|-|-|
+|notice|React.ReactNode|No|-|-|
 
 ## Related Types
 

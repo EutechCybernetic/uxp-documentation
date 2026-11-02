@@ -23,12 +23,18 @@ const GalleryView: React.FunctionComponent<IGalleryViewProps>
 |-|-|-|-|-|
 |show|boolean|Yes|-|-|
 |searchParameters|{ [key: string]: any }|No|-|-|
-|onPick|(url: string) => void|Yes|-|-|
+|onPick|(url: string, meta?: IGalleryPickMeta) => void|Yes|-|-|
 |isSelected|(url: string) => boolean|No|-|-|
+|onToggle|(url: string) => void|No|-|-|
 |onPreview|(url: string) => void|No|-|-|
 |activeValue|string|No|-|-|
+|grid|boolean|No|-|-|
+|query|string|No|-|-|
+|onQueryChange|(query: string) => void|No|-|-|
+|hideSearch|boolean|No|-|-|
 
 ## Related Types
 
 - [IGalleryViewProps](../types/IGalleryViewProps.md)
+- [IGalleryPickMeta](../types/IGalleryPickMeta.md)
 

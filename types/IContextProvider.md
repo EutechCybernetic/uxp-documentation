@@ -138,7 +138,7 @@ export interface IContextProvider extends Omit<IPartialContextProvider, "environ
      * Mark an in-app notification as resolved.
      * The notification will appear in the resolved section of the notification center.
      */
-    resolveNotification: (notificationId: string, objectType: string) => Promise<ExecutionResult<{ notificationID: string }>>;
+    resolveNotification: (notificationId: string, objectType?: string) => Promise<ExecutionResult<{ notificationID: string }>>;
 
     /**
      * Bulk-mark NEW notifications as resolved, filtered by any combination of

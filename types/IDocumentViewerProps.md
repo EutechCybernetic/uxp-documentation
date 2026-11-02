@@ -33,7 +33,7 @@ interface IDocumentViewerProps {
     /**
      * The height of the viewer. A number is pixels. Any CSS height works, for example "100%" inside a sized parent.
      * The pages scroll inside the viewer.
-     * @default 600
+     * @default "46.1538rem" (600px at 1440 wide, grows with the screen)
      */
     height?: number | string;
 

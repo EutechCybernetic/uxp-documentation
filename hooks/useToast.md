@@ -1,6 +1,10 @@
 # useToast
 
-This hook allows you to popup notifications on the bottom right corner of the screen
+This hook allows you to popup notifications at the top right of the screen, as a stack: the
+newest in front, older ones peeking behind. With a mouse over the stack it opens into the full
+list with Clear all, and nothing closes by itself. On phones the stack is full width at the top;
+a tap opens the list (Close and Clear all at the bottom), a sideways swipe dismisses one,
+swiping the stack up dismisses all. `removeAll()` removes every toast.
 (also known as toasts)
 
  
@@ -66,4 +70,5 @@ Custom toast example
 - [IPartialContent](../types/IPartialContent.md)
 - [IToastContent](../types/IToastContent.md)
 - [IRemoveFunction](../types/IRemoveFunction.md)
+- [IRemoveAllFunction](../types/IRemoveAllFunction.md)
 

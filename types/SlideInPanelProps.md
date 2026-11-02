@@ -33,6 +33,15 @@ export interface SlideInPanelProps {
     onClose: () => void;
 
     /**
+     * Phones: the panel's title. While the panel is open it shows in the app header, and the
+     * footer Close bar and the phone's Back close the panel. Without the mobile shell a back
+     * row with the title shows at the top. Leave it out when the content has its own header
+     * and close (e.g. `SlideInForm`).
+     * @example "notifications"
+     */
+    title?: string;
+
+    /**
      * Optional guard consulted before a backdrop-click or Escape dismissal.
      * Return `false` (or a promise resolving to `false`) to block the dismissal;
      * return `true` to proceed with `onClose`. When omitted, both paths dismiss

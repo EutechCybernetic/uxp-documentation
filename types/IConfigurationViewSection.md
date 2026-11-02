@@ -17,8 +17,11 @@ interface IConfigurationViewSection {
     /** Keywords for search filtering (title is searched by default) */
     keywords?: string[];
 
-    /** Section content rendered in main area */
-    content: React.ReactNode;
+    /**
+     * Section content rendered in main area. A function renders only while the section is open
+     * (nothing of a hidden section mounts or loads).
+     */
+    content: React.ReactNode | (() => React.ReactNode);
 
     /** Hides the header — content fills the full area */
     hideHeader?: boolean;

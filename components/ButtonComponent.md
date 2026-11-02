@@ -74,6 +74,7 @@ const ButtonComponent: React.FunctionComponent<ButtonComponentProps>
 |-|-|-|-|-|
 |title|string|No|-|"Save"|
 |tooltip|string|No|-|-|
+|ariaLabel|string|No|-|"Close"|
 |leftIcon|[ButtonIcon](../types/ButtonIcon.md)|No|-|"fas save"|
 |rightIcon|[ButtonIcon](../types/ButtonIcon.md)|No|-|-|
 |className|string|No|-|-|

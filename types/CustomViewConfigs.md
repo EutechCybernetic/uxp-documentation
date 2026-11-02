@@ -10,6 +10,8 @@ export interface CustomViewConfigs {
     pageSize?: number,
     filterMode?: 'simple' | 'advanced',
     advancedFilter?: AdvancedFilterState,
+    /** Object search card mode: how the view shows its rows */
+    display?: 'list' | 'cards',
 }
 ```
 

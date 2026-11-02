@@ -309,7 +309,7 @@ useEventSubscriber('user_ns', 'user_profile_image_changed', () => {
 | `objectKey` | `string` | **Yes** | — | Key of the object e.g. `'USER001'` |
 | `objectType` | `string` | **Yes** | — | Object type e.g. `'User.User'`. Model must have `has_image='true'` in XML |
 | `currentImageName` | `string` | No | — | Current `ProfileImageName` value from the object. Display URL is `/AccountResources/profilepics/{currentImageName}` |
-| `mode` | `'sidebar' \| 'avatar'` | No | `'sidebar'` | `sidebar` — rectangular drag-drop upload area. `avatar` — circular avatar with camera/trash overlay on hover |
+| `mode` | `'sidebar' \| 'avatar'` | No | `'sidebar'` | `sidebar` — rectangular drag-drop upload area. `avatar` — circular avatar with a camera badge; a tap opens Upload / Take a picture / Remove |
 | `avatarSize` | `'sm' \| 'md' \| 'lg'` | No | `'lg'` | Avatar size when `mode='avatar'`. `sm`=2.5rem, `md`=4.5rem, `lg`=7.5rem |
 | `displayName` | `string` | No | — | Full name used to derive initials in avatar mode. Falls back to `placeholderIcon` if omitted |
 | `placeholderIcon` | `string` | No | `'fal fa-user'` | FontAwesome class shown when no image and no `displayName` (avatar mode only) |

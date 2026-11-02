@@ -23,10 +23,14 @@ import { useLibraryUpload } from 'uxp/components';
 ## Signature
 
 ```tsx
-function useLibraryUpload(options?: ILibraryUploadOptions): { uploadToLibrary: (file: File) => Promise<string>; uploadAllToLibrary: (files: File[]) => Promise<{ urls: string[]; failed: string[]; }>; isUploading: boolean; progress: number; uploadingIndex: number; uploadingTotal: number; error: string; }
+function useLibraryUpload(options?: ILibraryUploadOptions): ILibraryUpload
 ```
 
 ## Related Types
 
 - [ILibraryUploadOptions](../types/ILibraryUploadOptions.md)
+- [ILibraryUpload](../types/ILibraryUpload.md)
+- [IUploadAllOptions](../types/IUploadAllOptions.md)
+- [IUploadAllResult](../types/IUploadAllResult.md)
+- [IUploadFailure](../types/IUploadFailure.md)
 

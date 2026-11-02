@@ -148,6 +148,15 @@ Users manage their own uploads at **My Media** (`/view/user/my-media`), reachabl
 
 > The account setting is read once per page load. An administrator changing it won't reach an already-open session until it reloads.
 
+### Inside the dialog
+
+- **Library toolbar.** A search box, then a chip per type (All + each type, shown when the field allows more than one type), then an **Upload** button that opens the Upload source.
+- **Phones.** The search and the type filter move to the bottom toolbar: a search button, and a filter button (with a dot while a type is chosen) that opens a sheet of types.
+- **Loading and empty.** Placeholder tiles show while the first page loads. An empty library shows "No files yet" with an **Upload a file** button. A search with no results says so.
+- **Details.** Previewing a library file shows its type, size, pixels (images) and the date it was added.
+- **Upload in two steps.** First choose files: a drop zone and a row per file with its size and Remove. Then upload: the drop zone goes and each row shows its own state (waiting, a progress bar, uploaded, or failed with the reason, **Try again** and **Remove**). Files that worked are selected even when others fail. **Add more files** returns to the first step.
+- **Errors.** One compact red block at the top of the pane, with the real reason when the server gives one. A library that fails to load offers **Try again**.
+
 Uploads land in `media-library/` in the content store. Override with `uploadPath` when a module wants its own folder.
 
 ### Older deployments
@@ -220,6 +229,92 @@ import { IconPicker } from "uxp/components";
 
 ---
 
+## Step 9: The Camera
+
+The `camera` source takes a photo with the device camera. It is off unless you turn it on.
+
+```tsx
+<MediaPicker mediaTypes={['Image']} value={photo} onChange={setPhoto} sources={{ camera: true }} />
+```
+
+- A live preview, **Capture**, **Retake** and **Use photo**. The photo is a JPEG.
+- Devices with more than one camera get a switch button.
+- When the camera can't be used, it says why: the page isn't on https, access is blocked, or there is no camera. It offers **Try again** and **Choose from this device**.
+- The photo uploads like a chosen file (or through `onUpload`).
+
+`CameraCapture` is the camera on its own, for other places that need a photo:
+
+```tsx
+import { CameraCapture } from 'uxp/components';
+
+<CameraCapture show={open} onClose={() => setOpen(false)} onCapture={async (file) => { await save(file); setOpen(false); }} />
+```
+
+It opens as a dialog (full screen on phones), or renders `inline` inside your own layout.
+
+## Step 10: Storing the Value Yourself
+
+By default uploads go to the content store and the field holds their URL. To store files your own way (an object's picture, an attachment), pass hooks:
+
+- `onUpload(file, source)`: uploaded and camera files come to you. Return the value the field should hold.
+- `onPick({ value, source, meta })`: a library, gallery, icon or link pick comes to you before it is committed. Return a value to hold instead, or nothing to keep the pick. A thrown error shows in the dialog and keeps it open. Gallery picks carry `meta` (`author`, `pageUrl`, `downloadLocation`).
+
+To turn a picked link into a file, use `importImageFromUrl(url)`. It downloads the image in the browser and redraws other image types as JPEG. Sites that block other sites from downloading their images (CORS) can't be imported; it throws an error with `code: 'blocked'`.
+
+```tsx
+import { importImageFromUrl } from 'uxp/components';
+
+<MediaPicker
+    mediaTypes={['Image']}
+    value={value}
+    onChange={setValue}
+    sources={{ camera: true }}
+    onUpload={async (file) => saveAsProfilePicture(file)}
+    onPick={async ({ value }) => saveAsProfilePicture(await importImageFromUrl(value))}
+/>
+```
+
+### Checking a value before it is used
+
+`validate` gets an `IMediaCheckInfo` (`value`, `name`, `mimeType`, `size`, `width`, `height`; pixels for images only). It runs on a previewed item or typed link, on each chosen file, on a camera photo and on a file dropped on the field. Return a message to block the value: line 1 is the problem, line 2 (after `\n`) a hint. The dialog shows it in a red block and disables the commit. Refused files stay out of the upload. Pass `onRefreshRules` to add a header button that reloads your rules and runs the checks again.
+
+```tsx
+<MediaPicker
+    mediaTypes={["Image"]}
+    value={logo}
+    onChange={(v) => setLogo(v as string)}
+    validate={(info) => info.width > 800 ? `Image is ${info.width} px wide\nUse one 800 px wide or less` : undefined}
+/>
+```
+
+### Crop and resize
+
+Pass `cropRules` to let people fix an image that fails `validate`. The red block then shows "Crop and resize". It opens the `ImageCropper` with the picture: move and resize the frame, zoom, rotate, pick a shape (Square, Original, Free), and set the size and DPI. The size starts at the largest the rules allow. The DPI starts at the picture's own, kept within the rules. The cropped file is checked again. A chosen file is replaced in the upload list. A previewed item, typed link or camera photo is uploaded like a chosen file and selected. Each rule is optional; 0 or missing means no limit. A previewed picture must allow CORS, or the crop shows an error.
+
+```tsx
+<MediaPicker
+    mediaTypes={["Image"]}
+    value={photo}
+    onChange={(v) => setPhoto(v as string)}
+    validate={(info) => info.width !== info.height ? `Image is not square\nCrop it to a square` : undefined}
+    cropRules={{ minWidth: 500, maxWidth: 1000, minHeight: 500, maxHeight: 1000, minDpi: 100, maxDpi: 200 }}
+/>
+```
+
+`ImageCropper` is exported on its own too. It takes `file` (or `src`), `rules`, `initialDpi`, `onApply(file)`, `onCancel()` and `onChooseAnother()`. It opens as a dialog, or renders `inline`. The result is a JPEG (PNG for a PNG source) with the DPI written into it. `setImageDpi(blob, dpi)` writes a DPI into any JPEG or PNG.
+
+```tsx
+<ImageCropper
+    show={!!file}
+    file={file}
+    rules={{ minWidth: 500, minHeight: 500 }}
+    onApply={async (cropped) => { await save(cropped); setFile(null); }}
+    onCancel={() => setFile(null)}
+/>
+```
+
+---
+
 ## MediaPicker Props
 
 | Prop | Type | Default | Description |
@@ -237,6 +332,11 @@ import { IconPicker } from "uxp/components";
 | `placeholder` | `string` | — | Empty-state text for the field |
 | `searchParameters` | `{ [key: string]: any }` | — | Extra parameters for the gallery search (e.g. `{ orientation: 'landscape' }`) |
 | `className` | `string` | — | Extra CSS class on the root |
+| `onUpload` | `(file, source: 'upload' \| 'camera') => Promise<string>` | — | Store uploaded and camera files yourself; return the value to hold |
+| `onPick` | `(pick: IMediaPickerPick) => Promise<string \| void>` | — | Handle a library, gallery, icon or link pick before it is committed |
+| `validate` | `(info: IMediaCheckInfo) => string \| undefined` | — | Check a value before it is used. Return a message to block it (line 1 problem, line 2 hint), or undefined |
+| `onRefreshRules` | `() => void \| Promise<void>` | — | Shows a refresh button in the dialog header; awaited, then the checks run again |
+| `cropRules` | `IImageCropRules` | — | Size and DPI rules for "Crop and resize" on an image that fails `validate`. No crop button without it |
 
 Standard `InputSizeProps` (`width`, `fullWidth`, `minWidth`, …) and `InputStateProps` (`disabled`, `readOnly`, `isValid`) apply as they do to every other input.
 
@@ -260,6 +360,9 @@ Standard `InputSizeProps` (`width`, `fullWidth`, `minWidth`, …) and `InputStat
 | `uploadPath` | `string` | `'media-library/'` | As above |
 | `searchParameters` | `{ [key: string]: any }` | — | As above |
 | `currentValue` | `string` | — | The value the field holds; the icon source badges it |
+| `validate` | `(info: IMediaCheckInfo) => string \| undefined` | — | As above |
+| `onRefreshRules` | `() => void \| Promise<void>` | — | As above |
+| `cropRules` | `IImageCropRules` | — | As above |
 
 ---
 

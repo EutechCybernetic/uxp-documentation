@@ -7,7 +7,7 @@ The places a media value can come from.
 ## Definition
 
 ```tsx
-export type MediaPickerSource = 'library' | 'upload' | 'url' | 'gallery' | 'icons'
+export type MediaPickerSource = 'library' | 'upload' | 'url' | 'gallery' | 'icons' | 'camera'
 ```
 
 ## Usage

@@ -154,6 +154,14 @@ Enable `enableResponsiveLayouts` to allow editors to configure separate widget p
 
 The built-in breakpoints cover common screen sizes (phone, tablet, laptop, desktop, 4K). The dashboard automatically responds to the browser's actual viewport width during normal use; the breakpoint selector in edit mode lets editors preview and configure each size independently.
 
+**Phones arrange widgets by themselves.** When a size has the same layout as the desktop, nobody designed it for phones. On phones (and upright tablets) the widgets then stack in reading order:
+
+- Small tiles (a quarter of the desktop width or less) sit two per row. Other widgets take the full width.
+- Each widget keeps its desktop shape. Heights stay between 8rem and about one screen.
+- Overlay dashboards and edit mode keep the normal grid.
+
+To control the phone look, design the Mobile size in the breakpoint selector. A designed layout always wins. Nothing is saved by the automatic arrangement.
+
 ---
 
 ## Step 7: Overlay Mode

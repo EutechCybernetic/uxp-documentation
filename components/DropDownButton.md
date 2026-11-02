@@ -1,9 +1,8 @@
 # DropDownButton
 
+> **Deprecated.** Use `Dropdown` instead (it opens as a bottom sheet on phones).
+
 This component wraps another component and shows a tooltip for the component it is wrapping, whenever the user moves the mouse over it.
-
-
-
 
 
 ## Installation

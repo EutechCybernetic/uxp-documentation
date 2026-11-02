@@ -32,7 +32,8 @@ interface IConfigurationViewProps {
     actions?: React.ReactNode;
 
     /**
-     * Selected section id (controlled mode)
+     * Selected section id (controlled mode). Pass the URL's value as is: undefined shows the
+     * first section on the web and the list of sections on phones.
      * @example "general"
      */
     selected?: string;
@@ -47,6 +48,16 @@ interface IConfigurationViewProps {
     onChangeSection?: (id: string) => void;
 
     /**
+     * Phones: called by the Close bar of an open section, to go back to the list.
+     * Clear the section from the URL here (controlled mode).
+     * @example Log
+     * ```tsx
+     * onCloseSection={() => console.log('back to the list')}
+     * ```
+     */
+    onCloseSection?: () => void;
+
+    /**
      * Layout mode:
      * - `'multiple'` (default) — sidebar navigation with multiple sections
      * - `'single'` — no sidebar; first section fills the page. The section's
@@ -54,6 +65,21 @@ interface IConfigurationViewProps {
      *   right. Use `hideHeader: true` on the section to skip the header entirely.
      */
     mode?: 'single' | 'multiple';
+
+    /**
+     * Keeps the open section in this URL value (e.g. `?section=general`): links and reloads open
+     * it, and on phones Close removes it, back to the section list. The view reads and writes it
+     * itself, so `selected` and `onCloseSection` are not needed (`onChangeSection` is still called).
+     * @example "section"
+     */
+    urlParam?: string;
+
+    /**
+     * With `urlParam`: other URL values that belong to the open section (e.g. its tab); they are
+     * cleared when the section changes or closes.
+     * @example ["tab"]
+     */
+    sectionParams?: string[];
 }
 ```
 

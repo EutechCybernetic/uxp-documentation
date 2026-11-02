@@ -1,0 +1,49 @@
+# fetchMediaTags
+
+
+The user's tags and the tags shared with them. Never throws.
+
+
+## Installation
+
+```tsx
+import { fetchMediaTags } from 'uxp/components';
+```
+
+## Signature
+
+```tsx
+function fetchMediaTags(context: IContextProvider): Promise<{ items: IMediaTag[], error?: any }>
+```
+
+## Related Types
+
+- [IContextProvider](../types/IContextProvider.md)
+- [IPartialContextProvider](../types/IPartialContextProvider.md)
+- [Language](../types/Language.md)
+- [ICustomThemes](../types/ICustomThemes.md)
+- [IThemeProps](../types/IThemeProps.md)
+- [ThemeType](../types/ThemeType.md)
+- [UserDetails](../types/UserDetails.md)
+- [NavigationLink](../types/NavigationLink.md)
+- [NavigationLinkTag](../types/NavigationLinkTag.md)
+- [Routes](../types/Routes.md)
+- [UnavailableReason](../types/UnavailableReason.md)
+- [ConfiguredPage](../types/ConfiguredPage.md)
+- [ComponentType](../types/ComponentType.md)
+- [IUXPFunctions](../types/IUXPFunctions.md)
+- [ViewOverride](../types/ViewOverride.md)
+- [ObjectTab](../types/ObjectTab.md)
+- [ObjectTabComponent](../types/ObjectTabComponent.md)
+- [Environment](../types/Environment.md)
+- [ExecutionOptions](../types/ExecutionOptions.md)
+- [CachingOptions](../types/CachingOptions.md)
+- [IDataFunction](../types/IDataFunction.md)
+- [QueryParams](../types/QueryParams.md)
+- [ExecutionResult](../types/ExecutionResult.md)
+- [ExecuteMicroserviceConfig](../types/ExecuteMicroserviceConfig.md)
+- [LucyQueryResult](../types/LucyQueryResult.md)
+- [PublishNotificationParams](../types/PublishNotificationParams.md)
+- [NotificationSeverity](../types/NotificationSeverity.md)
+- [ResolveNotificationsFilters](../types/ResolveNotificationsFilters.md)
+

@@ -93,6 +93,13 @@ interface ObjectSearchComponentProps {
     detailsPanel?: DefaultDetailsPanelProps | CustomDetailsPanelProps;
 
     /**
+     * Phones: the one column each row shows as, such as a collapsed `InfoCard`.
+     * Use it on lists without a details panel. Ignored on larger screens.
+     * Default: the details panel's `columns`, else a card built from the columns.
+     */
+    cardColumn?: OSCColumn;
+
+    /**
      * Field in row data used as a unique identifier for each row.
      * @example "id"
      */
@@ -170,7 +177,7 @@ interface ObjectSearchComponentProps {
     };
 
     /**
-     * Width of the list when the details panel is open. Accepts percentage string or pixels (15%-75%). Defaults to '50%'.
+     * Width of the list when the details panel is open. Accepts percentage string or pixels (15%-75%). Defaults to '25%'.
      */
     collapsedWidth?: string | number;
 
@@ -209,6 +216,50 @@ interface ObjectSearchComponentProps {
      * while the user is editing filters.
      */
     onFilterPanelToggle?: (isOpen: boolean) => void;
+
+    /**
+     * How rows show: 'list' (the table, default) or 'cards' (a grid of same-size cards).
+     * A saved view's own choice wins.
+     */
+    display?: 'list' | 'cards';
+
+    /**
+     * The ways users can switch between. With both, a List / Cards toggle shows before the
+     * refresh button (phones: in More), and the choice is saved with the view.
+     * @example ['list', 'cards']
+     */
+    displayModes?: ('list' | 'cards')[];
+
+    /**
+     * How the next page loads: 'pagination' (previous / next, default) or 'infinite'
+     * (the next page loads when the user scrolls near the end; `data` is called the same way,
+     * page 1, 2, 3…).
+     */
+    paging?: 'pagination' | 'infinite';
+
+    /**
+     * Hide the column header row. It also hides by itself over a single column with no label (a
+     * list drawn by one `renderColumn`), and on phones over the compact list column.
+     */
+    hideHeader?: boolean;
+
+    /**
+     * Hide the paging control (pages, page size and the "x of y" count). Refresh still shows when
+     * `allowRefresh` allows it. The search / paging row is left out when nothing is left in it.
+     */
+    hidePaging?: boolean;
+
+    /**
+     * Card mode: which row fields go on the card (title, description, image or icon, chips,
+     * badge), and its smallest width and shape.
+     * @example { title: 'Name', description: 'Location', image: 'ImageUrl', chips: 'Tags', minWidth: '13rem', aspect: '3 / 4' }
+     */
+    card?: OSCCardConfig;
+
+    /**
+     * Card mode: draw each card yourself (use ObjectCard to keep the look). Wins over `card`.
+     */
+    renderCard?: (row: RowData, state: OSCCardState) => ReactNode;
 }
 ```
 
@@ -267,4 +318,9 @@ import { ObjectSearchComponentProps } from 'uxp/components';
 - [EditableRowConfig](../types/EditableRowConfig.md)
 - [ExtendedOSCColumn](../types/ExtendedOSCColumn.md)
 - [URLParamConfig](../types/URLParamConfig.md)
+- [OSCCardConfig](../types/OSCCardConfig.md)
+- [OSCCardField](../types/OSCCardField.md)
+- [ObjectCardBadge](../types/ObjectCardBadge.md)
+- [ChipVariant](../types/ChipVariant.md)
+- [OSCCardState](../types/OSCCardState.md)
 

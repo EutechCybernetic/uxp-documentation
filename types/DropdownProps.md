@@ -94,6 +94,13 @@ export interface DropdownProps {
      * Maximum width for the dropdown. Can be number (px) or string (with units).
      */
     maxWidth?: number | string;
+
+    /**
+     * On phones the content opens in a bottom sheet instead of a popup next to the trigger.
+     * Set false to keep the popup.
+     * @default true
+     */
+    mobileSheet?: boolean;
 }
 ```
 

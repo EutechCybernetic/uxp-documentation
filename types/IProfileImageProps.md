@@ -62,6 +62,13 @@ interface IProfileImageProps {
      * Border width. Defaults to '3px'. Only applied when borderColor is provided.
      */
     borderWidth?: string;
+
+    /**
+     * A small round badge on the picture's lower right, e.g. a camera icon to say the picture
+     * can be changed. Secondary button colours.
+     * @example "fas camera"
+     */
+    badgeIcon?: string;
 }
 ```
 

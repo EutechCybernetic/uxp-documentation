@@ -21,6 +21,14 @@ interface RowInteractionMode {
         renderColumn?: (item: RowData) => React.ReactNode;
         onDelete?: (item: RowData) => Promise<void>;
     };
+    /**
+     * Row actions: a ⋯ menu on each row (on phones, the card's ⋯ and a swipe). Put a row's
+     * actions here rather than as buttons in its cells.
+     */
+    actionsColumn?: {
+        enable: boolean;
+        rowActions: Action[] | ((item: RowData) => React.ReactNode | Action[]);
+    };
     onUpdateItem?: never;
     onDeleteItem?: never;
     onReorderItems?: (reorderedData: RowData[]) => Promise<{ success: boolean, error?: string }>;
@@ -43,4 +51,7 @@ import { RowInteractionMode } from 'uxp/components';
 - [RowData](../types/RowData.md)
 - [TableColumn](../types/TableColumn.md)
 - [Column](../types/Column.md)
+- [Action](../types/Action.md)
+- [BaseAction](../types/BaseAction.md)
+- [ActionWithChildren](../types/ActionWithChildren.md)
 

@@ -88,6 +88,14 @@ export interface TreeNode {
      */
     enableDeleteNode?: boolean
 
+    /**
+     * A group label, e.g. a batch or a course that only groups the rows under it.
+     * It is never selected and never shows the selected fill. A click anywhere on the row
+     * expands or collapses it. It has its own look: bold text and icon in the secondary text
+     * colour, no hover fill and a small space above. Default false: a normal node.
+     */
+    isLabel?: boolean
+
     // for any arbitory data 
     [key: string]: any
 

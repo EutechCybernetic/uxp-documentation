@@ -40,6 +40,12 @@ export interface IMediaPreviewPanelProps {
     onClose?: () => void
 
     closeTitle?: string
+
+    /**
+     * Shown at the top of the column, above the title — e.g. why the value
+     * failed the field's check.
+     */
+    notice?: React.ReactNode
 }
 ```
 

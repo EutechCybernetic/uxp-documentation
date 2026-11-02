@@ -1,5 +1,8 @@
 # DataList
 
+> **Deprecated.** Use ObjectSearchComponent with one column (`renderColumn` draws the row, no `label`), `paging="infinite"`
+  and `hidePaging`. DataList keeps working; it gets no new features. See docs/v5/deprecated-components.md.
+
 
 A infinite-scrollable list that supports paging in of items
 

@@ -39,6 +39,11 @@ interface IToggleFilterProps extends InputSizeProps, InputStateProps {
     size?: 'small' | 'medium' | 'large',
 
     /**
+     * The toggle takes the full width; the options share it equally, their content at the left
+     */
+    fill?: boolean,
+
+    /**
      * This will render the dropdown if the width is less than the min width
      */
     renderAsDropdown?: {

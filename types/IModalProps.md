@@ -67,6 +67,12 @@ interface IModalProps {
     renderAdditionalContent?: () => JSX.Element;
     autoSize?: boolean;
     /**
+     * Panel width on the web (it never grows past the screen). Phones always show the modal full
+     * screen. Set this instead of a fixed width on the content inside.
+     * @example "40rem"
+     */
+    width?: string;
+    /**
      * @example Text
      * ```tsx
      * <div style={{ padding: 16 }}>Change the asset details here.</div>

@@ -73,6 +73,7 @@ const panelRef = useRef<SlideInPanelHandlers>(null);
 |children|ReactNode|Yes|-|Text <div style={{ padding: 16 }}>Asset details slide in from the side.</div>|
 |isOpen|boolean|Yes|-|true|
 |onClose|() => void|Yes|-|Log onClose={() => console.log('closed')}|
+|title|string|No|-|"notifications"|
 |beforeDismiss|(source: 'backdrop' \| 'escape') => boolean \| Promise<boolean>|No|-|-|
 |mode|[SlideInPanelMode](../types/SlideInPanelMode.md)|No|-|-|
 |direction|[SlideInPanelDirection](../types/SlideInPanelDirection.md)|No|-|-|

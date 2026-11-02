@@ -3,6 +3,7 @@
 
 Configuration view with sidebar navigation and section content.
 Use `mode='single'` for pages that have one section and need no sidebar.
+Give `urlParam` to keep the open section in the URL (links, reloads, and the phone section list).
 
 
 
@@ -16,6 +17,15 @@ import { ConfigurationView } from 'uxp/components';
 
 ```tsx
 const ConfigurationView: React.FunctionComponent<IConfigurationViewProps>
+```
+
+## Examples
+
+#### URL-driven
+
+```tsx
+tsx
+<ConfigurationView uxpContext={context} title="Settings" urlParam="section" sections={sections} />
 ```
 
 ## Live preview
@@ -32,7 +42,10 @@ const ConfigurationView: React.FunctionComponent<IConfigurationViewProps>
 |actions|React.ReactNode|No|-|-|
 |selected|string|No|-|"general"|
 |onChangeSection|(id: string) => void|No|-|Log onChangeSection={(id) => console.log('section', id)}|
+|onCloseSection|() => void|No|-|Log onCloseSection={() => console.log('back to the list')}|
 |mode|'single' \| 'multiple'|No|-|-|
+|urlParam|string|No|-|"section"|
+|sectionParams|string[]|No|-|["tab"]|
 
 ## Related Types
 

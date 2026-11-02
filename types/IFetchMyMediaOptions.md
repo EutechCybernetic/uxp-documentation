@@ -16,6 +16,12 @@ export interface IFetchMyMediaOptions {
     q?: string
     /** restrict to these media types */
     types?: MediaType[]
+    /** 'root' (my top level) or a folder key (mine or shared with me) */
+    folder?: string
+    /** a tag key (mine or shared with me) */
+    tag?: string
+    /** everything shared with me */
+    shared?: boolean
 }
 ```
 

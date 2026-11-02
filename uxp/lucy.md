@@ -68,16 +68,26 @@ the list you expect.
 
 ## Paged lists
 
-`fromLucyDataCollection(model, collection)` returns a paging function in exactly the shape `DataList`,
-`DataTable` and `DynamicList` take, so a long collection can be wired to a list with no glue code:
+`fromLucyDataCollection(model, collection)` returns a paging function that takes `(max, last, args)`, where
+`last` is how many rows to skip. Wrap it in a page function to feed `ObjectSearchComponent`:
 
 ```tsx
-<DataList
-    data={props.uxpContext.fromLucyDataCollection('WorkOrder', 'All')}
-    renderItem={renderItem}
+const fromCollection = props.uxpContext.fromLucyDataCollection('WorkOrder', 'All');
+
+<ObjectSearchComponent
+    idField="_id"
+    data={async (page, pageSize) => ({ items: (await fromCollection(pageSize, String((page - 1) * pageSize))).items })}
+    total={0}
+    columns={[{ id: 'item', label: '', renderColumn: renderItem }]}
     pageSize={20}
+    paging="infinite"
+    hidePaging
 />
 ```
+
+One column with no label draws a plain list; `paging="infinite"` loads more as the user scrolls. See
+[Interface guidelines](./interface-guidelines.md#lists-inside-a-page-or-widget). `DataList` and `DataTable`
+also take this function directly, but they are deprecated.
 
 ## In app code, use service configs
 

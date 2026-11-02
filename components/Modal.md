@@ -58,6 +58,7 @@ const Modal: React.FunctionComponent<IModalProps>
 |backdropStyles|React.CSSProperties|No|-|-|
 |renderAdditionalContent|() => JSX.Element|No|-|-|
 |autoSize|boolean|No|-|-|
+|width|string|No|-|"40rem"|
 |children|React.ReactNode|No|-|Text <div style={{ padding: 16 }}>Change the asset details here.</div>|
 
 ## Related Types

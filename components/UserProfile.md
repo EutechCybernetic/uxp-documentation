@@ -52,6 +52,7 @@ tsx
 |hideLogout|boolean|No|-|-|
 |className|string|No|-|-|
 |children|React.ReactNode|No|-|-|
+|onOpenChange|(open: boolean) => void|No|-|-|
 
 ## Related Types
 

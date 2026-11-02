@@ -145,6 +145,7 @@ tsx
 |matchTriggerWidth|boolean|No|-|-|
 |minWidth|number \| string|No|-|-|
 |maxWidth|number \| string|No|-|-|
+|mobileSheet|boolean|No|true|-|
 
 ## Ref Handlers
 

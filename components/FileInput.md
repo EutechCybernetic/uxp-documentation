@@ -36,7 +36,7 @@ const FileInput: React.ForwardRefExoticComponent<React.RefAttributes<IFileInputI
 |className|string|No|-|-|
 |dropAreaIcon|IconProp|No|-|-|
 |dropAreaLabel|string|No|-|-|
-|dropzone|boolean|No|false|-|
+|dropzone|boolean|No|-|-|
 |dropAreaHint|string|No|-|"Configuration package · up to 3.5 MB"|
 |compact|boolean|No|-|-|
 |hidden|boolean|No|-|-|
@@ -47,6 +47,9 @@ const FileInput: React.ForwardRefExoticComponent<React.RefAttributes<IFileInputI
 |hidePrefixIcon|boolean|No|-|-|
 |onFieldClick|() => void|No|-|-|
 |previewObjectFit|React.CSSProperties['objectFit']|No|-|-|
+|removable|boolean|No|-|-|
+|previewInfo|React.ReactNode|No|-|-|
+|review|{ /** The dialog's title */ title?: string /** The check per file: a message (line 1 the problem, line 2 a hint), or nothing when fine */ validate?: (info: IMediaCheckInfo) => string \| undefined /** Size and DPI rules for "Crop and resize" */ cropRules?: IImageCropRules }|No|-|{ title: 'Site photos', validate: (info) => info.width > 2000 ? 'Too wide\nUse …|
 
 ## Ref Handlers
 
@@ -61,5 +64,8 @@ Available methods through ref:
 - [IFileInputProps](../types/IFileInputProps.md)
 - [InputSizeProps](../types/InputSizeProps.md)
 - [InputStateProps](../types/InputStateProps.md)
+- [IMediaCheckInfo](../types/IMediaCheckInfo.md)
+- [Size](../types/Size.md)
+- [IImageCropRules](../types/IImageCropRules.md)
 - [IFileInputInstanceProps](../types/IFileInputInstanceProps.md)
 

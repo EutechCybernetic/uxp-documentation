@@ -71,7 +71,7 @@ const DocumentViewer: React.FunctionComponent<IDocumentViewerProps>
 |page|number|No|1|-|
 |zoom|[DocumentViewerZoom](../types/DocumentViewerZoom.md)|No|"fit-width"|-|
 |showToolbar|boolean|No|true|-|
-|height|number \| string|No|600|-|
+|height|number \| string|No|"46.1538rem" (600px at 1440 wide, grows with the screen)|-|
 |onLoad|(info: { totalPages: number }) => void|No|-|onLoad={({ totalPages }) => console.log('Pages', totalPages)}|
 |onPageChange|(page: number, totalPages: number) => void|No|-|onPageChange={(page, totalPages) => console.log(page, 'of', totalPages)}|
 |onError|(message: string) => void|No|-|onError={(message) => console.error(message)}|

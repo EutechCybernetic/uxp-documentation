@@ -79,6 +79,7 @@ const ObjectSearchComponent: React.MemoExoticComponent<React.ForwardRefExoticCom
 |minCellWidth|number|No|-|-|
 |onClickRow|(e: MouseEvent<HTMLDivElement>, item: any) => void|No|-|-|
 |detailsPanel|DefaultDetailsPanelProps \| CustomDetailsPanelProps|No|-|-|
+|cardColumn|[OSCColumn](../types/OSCColumn.md)|No|-|-|
 |idField|string|Yes|-|"id"|
 |nameField|string|No|-|"name"|
 |typeField|string|No|-|-|
@@ -98,6 +99,13 @@ const ObjectSearchComponent: React.MemoExoticComponent<React.ForwardRefExoticCom
 |urlParams|[URLParamConfig](../types/URLParamConfig.md)|No|-|-|
 |className|string|No|-|-|
 |onFilterPanelToggle|(isOpen: boolean) => void|No|-|-|
+|display|'list' \| 'cards'|No|-|-|
+|displayModes|('list' \| 'cards')[]|No|-|['list', 'cards']|
+|paging|'pagination' \| 'infinite'|No|-|-|
+|hideHeader|boolean|No|-|-|
+|hidePaging|boolean|No|-|-|
+|card|[OSCCardConfig](../types/OSCCardConfig.md)|No|-|{ title: 'Name', description: 'Location', image: 'ImageUrl', chips: 'Tags', min…|
+|renderCard|(row: RowData, state: OSCCardState) => ReactNode|No|-|-|
 
 ## Ref Handlers
 

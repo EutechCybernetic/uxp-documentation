@@ -37,6 +37,7 @@ const ProfileImage: React.FunctionComponent<IProfileImageProps>
 |skipAcronym|boolean|No|-|-|
 |borderColor|string|No|-|-|
 |borderWidth|string|No|-|-|
+|badgeIcon|string|No|-|"fas camera"|
 
 ## Related Types
 
