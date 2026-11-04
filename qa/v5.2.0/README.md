@@ -1,7 +1,10 @@
 # v5.2.0
 
-New features on top of [v5.1.1](../v5.1.1/README.md); everything there still applies.
+New features on top of [v5.1.2](../v5.1.2/README.md); everything there still applies.
 
 ## Contents
 
+- [Phones and Tablets](phones-and-tablets.md)
+- [Media Library: Folders, Tags and Sharing](media-library.md)
+- [App Lists: Info Cards and Row Actions](system-app-lists.md)
 - [Lists: Infinite Scroll, Header and Paging Options](list-components.md)
