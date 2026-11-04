@@ -114,6 +114,8 @@ export interface IPartialContextProvider {
     /** App-declared injected tabs from bundle.json, keyed by objectType — deterministic
      *  defaults delivered at bootstrap (admin objectTabs above override by contributionId). */
     declaredObjectTabs?: Record<string, ObjectTab[]>
+    /** App header buttons (Configuration.yml headerItems), already filtered for the user. */
+    headerItems?: HeaderItem[]
 }
 ```
 
@@ -140,4 +142,5 @@ import { IPartialContextProvider } from 'uxp/components';
 - [ViewOverride](../types/ViewOverride.md)
 - [ObjectTab](../types/ObjectTab.md)
 - [ObjectTabComponent](../types/ObjectTabComponent.md)
+- [HeaderItem](../types/HeaderItem.md)
 

@@ -15,6 +15,14 @@ interface ObjectSearchComponentProps {
     title?: string | ReactNode;
 
     /**
+     * What the list tells the page context (see usePageContext): by default the list's name, the search,
+     * the filters and the first 10 rows shown, as CSV with the shown columns.
+     * `false` adds nothing. A function returns your own entry from the search state and the rows shown.
+     * @example (details, rows) => ({ label: `Work orders · ${details.total}`, text: rows.slice(0, 10).map(r => `${r.ID}: ${r.Status}`).join('\n') })
+     */
+    pageContext?: false | ((details: ObjectSearchDetailsResponse, rows: RowData[]) => PageContextEntry);
+
+    /**
      * Configuration for the filter panel.
      */
     filters?: FilterConfig;
@@ -271,6 +279,16 @@ import { ObjectSearchComponentProps } from 'uxp/components';
 
 ## Related Types
 
+- [ObjectSearchDetailsResponse](../types/ObjectSearchDetailsResponse.md)
+- [View](../types/View.md)
+- [CustomViewConfigs](../types/CustomViewConfigs.md)
+- [Filters](../types/Filters.md)
+- [SimpleFilter](../types/SimpleFilter.md)
+- [Sort](../types/Sort.md)
+- [SortOrder](../types/SortOrder.md)
+- [AdvancedFilterState](../types/AdvancedFilterState.md)
+- [RowData](../types/RowData.md)
+- [PageContextEntry](../types/PageContextEntry.md)
 - [FilterConfig](../types/FilterConfig.md)
 - [FormSectionProps](../types/FormSectionProps.md)
 - [SubSectionProps](../types/SubSectionProps.md)
@@ -281,15 +299,7 @@ import { ObjectSearchComponentProps } from 'uxp/components';
 - [ForwardedObjectSearchProps](../types/ForwardedObjectSearchProps.md)
 - [CustomValidateResponse](../types/CustomValidateResponse.md)
 - [FilterCustomRender](../types/FilterCustomRender.md)
-- [Filters](../types/Filters.md)
-- [SimpleFilter](../types/SimpleFilter.md)
 - [ViewsConfig](../types/ViewsConfig.md)
-- [View](../types/View.md)
-- [CustomViewConfigs](../types/CustomViewConfigs.md)
-- [Sort](../types/Sort.md)
-- [SortOrder](../types/SortOrder.md)
-- [AdvancedFilterState](../types/AdvancedFilterState.md)
-- [RowData](../types/RowData.md)
 - [OSCColumn](../types/OSCColumn.md)
 - [Column](../types/Column.md)
 - [ExportColumnFormatter](../types/ExportColumnFormatter.md)

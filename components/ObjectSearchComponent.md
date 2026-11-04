@@ -67,6 +67,7 @@ const ObjectSearchComponent: React.MemoExoticComponent<React.ForwardRefExoticCom
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
 |title|string \| ReactNode|No|-|"Assets"|
+|pageContext|false \| ((details: ObjectSearchDetailsResponse, rows: RowData[]) => PageContextEntry)|No|-|(details, rows) => ({ label: `Work orders · ${details.total}`, text: rows.slice…|
 |filters|[FilterConfig](../types/FilterConfig.md)|No|-|-|
 |views|[ViewsConfig](../types/ViewsConfig.md)|No|-|-|
 |data|RowData[] \| ((page: number, pageSize: number, query?: string, filters?: Filters, sort?: Sort) => Promise<{ items: RowData[] }>)|Yes|-|[ { id: 1, name: 'Chiller 01', status: 'Running', location: 'Level 1' }, { id: …|

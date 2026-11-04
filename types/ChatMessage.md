@@ -33,6 +33,13 @@ export interface ChatMessage {
     note?: React.ReactNode
     /** The message was changed after it was sent: "(edited)" follows it */
     edited?: boolean
+    /**
+     * Drawn in place of the markdown text, e.g. cards, tables or a form.
+     * `text` is still what Copy copies.
+     */
+    content?: React.ReactNode
+    /** A line under the message, e.g. how long an answer took and its actions */
+    footer?: React.ReactNode
 }
 ```
 

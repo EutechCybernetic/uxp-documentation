@@ -117,6 +117,26 @@ export interface ChatComponentProps {
      * @default 'comfortable'
      */
     density?: 'comfortable' | 'compact'
+    /**
+     * 'fill' (the default): the rows use the whole width.
+     * 'page': the messages and the message box sit in a centred column, for a chat that fills a page.
+     * Phones always use the whole width.
+     * @default 'fill'
+     */
+    layout?: 'fill' | 'page'
+    /** Above the messages, e.g. the chat's title and buttons */
+    header?: React.ReactNode
+    /** Above the message box, e.g. what the next message is about */
+    inputHeader?: React.ReactNode
+    /**
+     * Under the message box, e.g. a note on the answers
+     * @example "Messages are kept for 30 days."
+     */
+    inputFooter?: React.ReactNode
+    /** Reply to a message. Defaults to true. */
+    allowReply?: boolean
+    /** The message box is greyed out, e.g. while an answer is on its way */
+    inputDisabled?: boolean
     className?: string
 }
 ```

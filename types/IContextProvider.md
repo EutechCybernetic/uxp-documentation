@@ -71,7 +71,7 @@ export interface IContextProvider extends Omit<IPartialContextProvider, "environ
      * Execute a microservice REST API call. Supports caching.
      * Returns ExecutionResult - no need for try/catch
      */
-    executeMicroServiceSafe: <T = any>(config: ExecuteMicroserviceConfig, options?: CachingOptions) => Promise<ExecutionResult<T>>;
+    executeMicroServiceSafe: <T = any>(config: MicroserviceRequest, options?: CachingOptions) => Promise<ExecutionResult<T>>;
 
     /**
      * Execute a Lucy query by key, id, or name (safe version - returns ExecutionResult)
@@ -125,6 +125,8 @@ export interface IContextProvider extends Omit<IPartialContextProvider, "environ
     /** App-declared injected tabs from bundle.json, keyed by objectType — deterministic
      *  defaults delivered at bootstrap (admin objectTabs above override by contributionId). */
     declaredObjectTabs?: Record<string, ObjectTab[]>
+    /** App header buttons (Configuration.yml headerItems), already filtered for the user. */
+    headerItems?: HeaderItem[]
     refreshObjectTabs: () => Promise<void>
 
     /**
@@ -180,13 +182,14 @@ import { IContextProvider } from 'uxp/components';
 - [ViewOverride](../types/ViewOverride.md)
 - [ObjectTab](../types/ObjectTab.md)
 - [ObjectTabComponent](../types/ObjectTabComponent.md)
+- [HeaderItem](../types/HeaderItem.md)
 - [Environment](../types/Environment.md)
 - [ExecutionOptions](../types/ExecutionOptions.md)
 - [CachingOptions](../types/CachingOptions.md)
 - [IDataFunction](../types/IDataFunction.md)
 - [QueryParams](../types/QueryParams.md)
 - [ExecutionResult](../types/ExecutionResult.md)
-- [ExecuteMicroserviceConfig](../types/ExecuteMicroserviceConfig.md)
+- [MicroserviceRequest](../types/MicroserviceRequest.md)
 - [LucyQueryResult](../types/LucyQueryResult.md)
 - [PublishNotificationParams](../types/PublishNotificationParams.md)
 - [NotificationSeverity](../types/NotificationSeverity.md)

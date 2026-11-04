@@ -26,8 +26,9 @@ props and a send goes out through `onSend`.
 - Files dropped anywhere on the chat queue in the message box. The drop area covers the list.
 - A send that fails stays in the list with "Not sent", Retry and Delete.
 - `readOnly` puts a notice in place of the message box.
-
-Give it a height (it fills its parent): the list scrolls, the message box stays at the bottom.
+- A message's `content` is drawn in place of its text (e.g. cards, tables or a form);
+  its `footer` is a line under it. `header` sits above the list, `inputHeader` above the box, `inputFooter` under it.
+- `layout="page"`: the messages and the box sit in a centred column, for a chat that fills a page.
 
 
 
@@ -44,6 +45,23 @@ const ChatComponent: React.FunctionComponent<ChatComponentProps>
 ```
 
 ## Examples
+
+```tsx
+tsx
+// Custom content: a message drawn by the caller, a line under it, no replies, the box off while busy
+<ChatComponent
+    layout="page"
+    messages={[...messages, { ...reportMessage, content: <ReportCard report={report} />, footer: <ReportInfo report={report} /> }]}
+    currentUserKey={context.userKey}
+    onSend={send}
+    allowReply={false}
+    inputDisabled={busy}
+    header={<ChatTitle />}
+    inputFooter="Messages are kept for 30 days."
+/>
+```
+
+#### Give it a height (it fills its parent): the list scrolls, the message box stays at the bottom.
 
 ```tsx
 tsx
@@ -93,6 +111,12 @@ tsx
 |allowedFileTypes|string[]|No|-|-|
 |uploadFile|[ChatUploadFile](../types/ChatUploadFile.md)|No|-|-|
 |density|'comfortable' \| 'compact'|No|'comfortable'|-|
+|layout|'fill' \| 'page'|No|'fill'|-|
+|header|React.ReactNode|No|-|-|
+|inputHeader|React.ReactNode|No|-|-|
+|inputFooter|React.ReactNode|No|-|"Messages are kept for 30 days."|
+|allowReply|boolean|No|-|-|
+|inputDisabled|boolean|No|-|-|
 |className|string|No|-|-|
 
 ## Related Types
