@@ -25,6 +25,10 @@ tsx
 if (!canView) return <NotAuthorized />;
 ```
 
+## Live preview
+
+[Open NotAuthorized in the playground →](<https://story.uxp.iviva.com/?path=/docs/feedback-notauthorized--docs>)
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|

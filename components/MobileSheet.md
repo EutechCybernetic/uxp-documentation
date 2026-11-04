@@ -54,6 +54,10 @@ tsx
 </div>
 ```
 
+## Live preview
+
+[Open MobileSheet in the playground →](<https://story.uxp.iviva.com/?path=/docs/overlays-mobilesheet--docs>)
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|

@@ -45,6 +45,8 @@ v5 screens now work on phones and tablets. On a phone the app has its own shell,
   - The OAuth and OIDC client panels, the Lucy connector install panel, the API key token dialog and the localisation sync dialog.
   - Page Views: drill-downs open and close, the KPI row scrolls sideways, the filter controls wrap.
 - **Large screens:** sizes are now in rem, so layouts scale with the screen. The model and catalog designer canvases zoom with the screen.
+  - The base font grows gently: 12px up to about 1100 wide, 12.5px at 1280, 13px at 1440 (same as 5.1), 14.4px at 1920, 16.3px at 2560, 20px at 3840.
+  - Phones and portrait tablets use 14px.
 - **Dark theme:** Reports, Navigation profiles, Welcome, Notification categories, Inbox, Data explorer, Queries, the model designer property panel and the roles permission grid now use the theme colours.
 - **By Design (not bugs):**
   - Saved views on phones: pick, favourite, rename and delete only. Creating a view and saving filter, sort or column changes are web only.

@@ -1,10 +1,13 @@
 # MediaLibraryTree
 
+> **Advanced.** Available for building custom components. Most apps do not need it.
+
 
 The media library's folders and tags (My Media, and the picker's Library tab) in two
 sections: "My media" (my folders; Private first) and "Shared with me" (what others share,
 by owner). Add, edit and delete show on my own folders and tags when the host handles them;
 the Private folder can't be changed.
+
 
 
 ## Installation

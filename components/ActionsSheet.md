@@ -30,6 +30,10 @@ tsx
 </ActionsSheet>
 ```
 
+## Live preview
+
+[Open ActionsSheet in the playground →](<https://story.uxp.iviva.com/?path=/docs/overlays-actionssheet--docs>)
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|

@@ -60,7 +60,7 @@ const ObjectSearchComponent: React.MemoExoticComponent<React.ForwardRefExoticCom
 
 ### Variants
 
-- [Example 1](<https://story.uxp.iviva.com/?path=/docs/data-display-object-search-objectsearchcomponent--docs&args=title%3AUsers%3BpageSize%3A10%3Btotal%3A2%3BidField%3Aid%3BnameField%3A%21undefined%3Bsearch%3A%21undefined&props=%7B%22data%22%3A%5B%7B%22id%22%3A%221%22%2C%22name%22%3A%22John%22%7D%2C%7B%22id%22%3A%222%22%2C%22name%22%3A%22Jane%22%7D%5D%2C%22columns%22%3A%5B%7B%22id%22%3A%22name%22%2C%22label%22%3A%22Name%22%7D%5D%7D>)
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/data-display-object-search-objectsearchcomponent--docs&args=title%3AUsers%3BpageSize%3A10%3Btotal%3A2%3BidField%3Aid%3BnameField%3A%21undefined%3Bsearch%3A%21undefined%3BdisplayModes%3A%21undefined%3Bcard%3A%21undefined&props=%7B%22data%22%3A%5B%7B%22id%22%3A%221%22%2C%22name%22%3A%22John%22%7D%2C%7B%22id%22%3A%222%22%2C%22name%22%3A%22Jane%22%7D%5D%2C%22columns%22%3A%5B%7B%22id%22%3A%22name%22%2C%22label%22%3A%22Name%22%7D%5D%7D>)
 
 ## Properties
 

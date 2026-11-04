@@ -1,5 +1,7 @@
 # MediaPreview
 
+> **Advanced.** Available for building custom components. Most apps do not need it.
+
 
 The large, single preview of a media value: a picture or icon through
 MediaThumb, a video's first frame, a PDF in a frame, a small text file as
@@ -9,6 +11,7 @@ Deliberately separate from MediaThumb, which draws every tile of a grid: a
 `<video>`, an `<iframe>` or a `fetch` in that component would mean one per
 tile. This one is rendered once, by MediaPreviewPanel, and hands the cases
 MediaThumb already covers straight back to it.
+
 
 
 ## Installation

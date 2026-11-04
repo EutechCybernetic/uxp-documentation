@@ -63,10 +63,10 @@ const ButtonComponent: React.FunctionComponent<ButtonComponentProps>
 
 ### Variants
 
-- [Basic button](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs&args=title%3AClick+me%3BleftIcon%3A%21undefined%3BloadingTitle%3A%21undefined>)
-- [Button with icons](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs&args=title%3ASave%3BloadingTitle%3A%21undefined&props=%7B%22leftIcon%22%3A%22%F0%9F%92%BE%22%2C%22rightIcon%22%3A%22%E2%86%92%22%7D>)
-- [Icon only button](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs&args=iconOnly%3A%21true%3Bvariant%3Adanger%3Btitle%3A%21undefined%3BloadingTitle%3A%21undefined&props=%7B%22leftIcon%22%3A%22%C3%97%22%7D>)
-- [Async button with loading](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs&args=title%3ASubmit%3BleftIcon%3A%21undefined&props=%7B%22loadingTitle%22%3A%22Submitting...%22%7D>)
+- [Basic button](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs&args=title%3AClick+me%3BariaLabel%3A%21undefined%3BleftIcon%3A%21undefined%3BloadingTitle%3A%21undefined>)
+- [Button with icons](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs&args=title%3ASave%3BariaLabel%3A%21undefined%3BloadingTitle%3A%21undefined&props=%7B%22leftIcon%22%3A%22%F0%9F%92%BE%22%2C%22rightIcon%22%3A%22%E2%86%92%22%7D>)
+- [Icon only button](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs&args=iconOnly%3A%21true%3Bvariant%3Adanger%3Btitle%3A%21undefined%3BariaLabel%3A%21undefined%3BloadingTitle%3A%21undefined&props=%7B%22leftIcon%22%3A%22%C3%97%22%7D>)
+- [Async button with loading](<https://story.uxp.iviva.com/?path=/docs/buttons-buttoncomponent--docs&args=title%3ASubmit%3BariaLabel%3A%21undefined%3BleftIcon%3A%21undefined&props=%7B%22loadingTitle%22%3A%22Submitting...%22%7D>)
 
 ## Properties
 

@@ -36,6 +36,10 @@ tsx
     onApply={async (cropped) => { await upload(cropped); setFile(null); }} onCancel={() => setFile(null)} />
 ```
 
+## Live preview
+
+[Open ImageCropper in the playground →](<https://story.uxp.iviva.com/?path=/docs/inputs-pickers-media-imagecropper--docs>)
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|

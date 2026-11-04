@@ -1,5 +1,7 @@
 # DesktopOnly
 
+> **Advanced.** Available for building custom components. Most apps do not need it.
+
 
 Shows its children on larger screens. On phones it shows "This page needs a larger screen"
 instead. Use it for an editor that opens over a page that works on phones (from a URL

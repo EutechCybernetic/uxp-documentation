@@ -41,8 +41,8 @@ const IconButton: React.FunctionComponent<IIconButtonProps>
 
 ### Variants
 
-- [Example 1](<https://story.uxp.iviva.com/?path=/docs/buttons-iconbutton--docs&args=type%3Asearch%3BclassName%3Acustom-css-class%3Btooltip%3A%21undefined>)
-- [Example 2](<https://story.uxp.iviva.com/?path=/docs/buttons-iconbutton--docs&args=icon%3Afas+search%3Btype%3A%21undefined%3Btooltip%3A%21undefined>)
+- [Example 1](<https://story.uxp.iviva.com/?path=/docs/buttons-iconbutton--docs&args=type%3Asearch%3BclassName%3Acustom-css-class%3Btooltip%3A%21undefined%3BariaLabel%3A%21undefined>)
+- [Example 2](<https://story.uxp.iviva.com/?path=/docs/buttons-iconbutton--docs&args=icon%3Afas+search%3Btype%3A%21undefined%3Btooltip%3A%21undefined%3BariaLabel%3A%21undefined>)
 
 ## Properties
 

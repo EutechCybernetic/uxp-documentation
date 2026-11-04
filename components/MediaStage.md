@@ -25,6 +25,10 @@ tsx
 <MediaStage value={url} info={<><b>lobby.png</b> · PNG · 800 × 800 px</>} />
 ```
 
+## Live preview
+
+[Open MediaStage in the playground →](<https://story.uxp.iviva.com/?path=/docs/inputs-pickers-mediastage--docs>)
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|

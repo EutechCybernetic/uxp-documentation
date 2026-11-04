@@ -30,6 +30,10 @@ tsx
 </> }]} selected={tab} onChangeTab={setTab} />
 ```
 
+## Live preview
+
+[Open TabSectionHeader in the playground →](<https://story.uxp.iviva.com/?path=/docs/navigation-tabsectionheader--docs>)
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|

@@ -41,6 +41,14 @@ tsx
 <ListItemCard title="System Administrator" name="System Administrator" />
 ```
 
+## Live preview
+
+[Open ListItemCard in the playground →](<https://story.uxp.iviva.com/?path=/docs/lists-listitemcard--docs>)
+
+### Variants
+
+- [Name only](<https://story.uxp.iviva.com/?path=/docs/lists-listitemcard--docs&args=title%3ASystem+Administrator%3Bname%3ASystem+Administrator%3Bsubtitle%3A%21undefined%3Bmeta%3A%21undefined>)
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|

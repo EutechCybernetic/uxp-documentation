@@ -52,10 +52,10 @@ tsx
 
 |Name|Type|Mandatory|Default Value|Example Value|
 |-|-|-|-|-|
-|steps|[WizardStep[]](../types/WizardStep.md)|Yes|-|-|
-|currentStepId|string|Yes|-|-|
+|steps|[WizardStep[]](../types/WizardStep.md)|Yes|-|[{ id: 'step1', label: 'Upload File', hasError: false }, { id: 'step2', label: …|
+|currentStepId|string|Yes|-|'step2'|
 |onStepClick|(stepId: string) => void|No|-|-|
-|completedSteps|string[]|No|-|-|
+|completedSteps|string[]|No|-|['step1']|
 |disableAutoScroll|boolean|No|-|-|
 
 ## Related Types

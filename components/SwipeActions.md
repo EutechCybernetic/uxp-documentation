@@ -36,6 +36,10 @@ tsx
 </SwipeActions>
 ```
 
+## Live preview
+
+[Open SwipeActions in the playground →](<https://story.uxp.iviva.com/?path=/docs/layout-swipeactions--docs>)
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|

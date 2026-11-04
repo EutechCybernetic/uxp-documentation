@@ -25,6 +25,10 @@ tsx
 if (!item) return <NotFound description="This location was deleted." />;
 ```
 
+## Live preview
+
+[Open NotFound in the playground →](<https://story.uxp.iviva.com/?path=/docs/feedback-notfound--docs>)
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|

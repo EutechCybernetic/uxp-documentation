@@ -31,6 +31,10 @@ tsx
 <CameraCapture show={open} onClose={() => setOpen(false)} onCapture={async (file) => { await upload(file); setOpen(false); }} />
 ```
 
+## Live preview
+
+[Open CameraCapture in the playground →](<https://story.uxp.iviva.com/?path=/docs/inputs-pickers-media-cameracapture--docs>)
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|

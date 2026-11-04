@@ -40,6 +40,10 @@ const [filtersOpen, setFiltersOpen] = useState(false);
 />
 ```
 
+## Live preview
+
+[Open MobileToolbar in the playground →](<https://story.uxp.iviva.com/?path=/docs/navigation-mobiletoolbar--docs>)
+
 ## Properties
 
 |Name|Type|Mandatory|Default Value|Example Value|

@@ -10,11 +10,13 @@ Props for the WizardStepIndicator component
 export interface WizardStepIndicatorProps {
     /**
      * Array of steps to display
+     * @example [{ id: 'step1', label: 'Upload File', hasError: false }, { id: 'step2', label: 'Map Fields', hasError: false }, { id: 'step3', label: 'Review', hasError: false }]
      */
     steps: WizardStep[];
 
     /**
      * ID of the currently active step
+     * @example 'step2'
      */
     currentStepId: string;
 
@@ -27,6 +29,7 @@ export interface WizardStepIndicatorProps {
     /**
      * Optional array of step IDs that are completed
      * Completed steps show a checkmark icon
+     * @example ['step1']
      */
     completedSteps?: string[];
 
