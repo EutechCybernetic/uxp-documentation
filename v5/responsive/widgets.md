@@ -1,6 +1,6 @@
 # Responsive widgets
 
-Dashboards run on laptops and on large displays (4K screens in control centres). The base font grows gently with the screen, so the whole UI scales a little on large displays. Your widget scales with it if it follows these steps.
+Dashboards run on laptops and on large displays (4K screens in control centres). The base font is 13px up to 1920 wide and grows on larger displays, so the whole UI scales there. Your widget scales with it if it follows these steps.
 
 ## Steps
 
@@ -9,7 +9,7 @@ Dashboards run on laptops and on large displays (4K screens in control centres).
 3. **Change the layout by card size, not screen size.** Put `container-type: inline-size` on the widget root and use `@container` rules. Browsers older than 2023 ignore `@container`. Write the wide layout as the normal rule, so those browsers still show a working widget.
 4. **Chart libraries and canvas need px numbers.** Use `useRemToPx()` so they grow too.
 5. **Use `__width__` and `__height__` for logic only**, not for text sizes.
-6. **Test** in Chrome device mode at 1440, 1920, 2560 and 3840. The widget should keep its layout, just a little bigger.
+6. **Test** in Chrome device mode at 1440, 1920, 2560 and 3840. The widget should keep its layout, just bigger above 1920.
 
 ## Examples
 
@@ -53,6 +53,6 @@ const toPx = useRemToPx();
 
 ## What the framework does for you
 
-- The base font size grows gently with the screen width (12.5px at 1280, 13px at 1440, 14.4px at 1920, 16.3px at 2560, 20px at 3840, 14px on phones).
+- The base font size is 13px up to 1920 wide, then grows with the screen width (15.3px at 2560, 20px at 3840). Phones use 14px.
 - Dashboard gaps (margin and padding) scale the same way.
 - Widget chrome (title bar, buttons, tables, pagination, loaders) is in rem.
