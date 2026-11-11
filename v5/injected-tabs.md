@@ -104,6 +104,25 @@ Changes are saved to `AccountObjectTabs` in the database and apply to all users 
 
 ---
 
+## Tabs Added by Admins
+
+Admins can add a tab that no app registers. In the Detail Tabs editor, **Add tab** asks for a name, an icon and one UI picked from the widget drawer.
+
+- The tab is stored in `AccountObjectTabs` with a `contributionId` of `custom.<uuid>`.
+- Such a row is a whole tab on its own. It does not need a registration.
+- The tab shows the UI by its id. Updates to that UI reach the tab. If the UI is removed, the tab shows the not-found state.
+- Added tabs show an **Added** chip and can be deleted. App tabs can only be turned off.
+
+### Order
+
+Drag rows in the editor to reorder. The details panel shows tabs with a stored row by `priority`, then the remaining app tabs in registration order.
+
+To hold its place, every tab in the list gets a stored row on reorder. Turning an app tab back on also keeps its row.
+
+> A stored row wins over the app's registration. It keeps its own name, icon, roles and list of UI ids. It also always refreshes, and it does not use the app's `refreshable` or `events`. So after a reorder or an off/on, later app changes to those fields do not reach that tab. Changes to the UIs' own code still do. **Reset** removes the row, and the tab follows the app again.
+
+---
+
 ## Authorization
 
 Access to an injected tab is controlled by:

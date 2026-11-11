@@ -14,6 +14,8 @@ Lists and tables now come down to two components: the main list (object search) 
 - **Sorting in configuration tables:** a column marked sortable can now be sorted by clicking its header.
 - **Header and paging options:** a list can hide its column header and its paging control. A list with only one unlabeled column hides the header by itself.
 - **Empty toolbar rows:** when a list has nothing to show in a toolbar row (no search, paging or buttons), the row is no longer drawn.
+- **Feed lists without a total:** a list that loads on scroll and has no total no longer shows a row count. It shows a refresh button instead.
+- **Lists in a details panel side tab:** a configuration table inside a tab of the details panel side strip no longer has a second frame padding. It lines up with the tab's own edges, as on phones.
 - **Older list components:** DataList, DataTable, TableComponent and CRUDComponent still work exactly as before. Only their code moved, so their look and behavior must not change.
 
 # Testing Focus
@@ -26,6 +28,8 @@ Lists and tables now come down to two components: the main list (object search) 
 - **Failure:** stop the network after the first page and scroll down. "Try again" shows. Turn the network back on and press it. The page loads.
 - **Configuration table:** a configuration table with infinite scroll on, inside a page that scrolls. Scrolling the page to the table's end loads more rows. "+ Add New" still adds a row, and edit and delete still work.
 - **Sorting:** a configuration table with a sortable column. Clicking the header sorts the rows, and clicking again reverses them.
+- **Feed list:** the **Activity Log** and **Documents** tabs in a details panel side strip, for example on a location. No count shows, and the refresh button reloads the list.
+- **Tab list padding:** the same **Activity Log** and **Documents** tabs. The list lines up with the tab edges, with no extra gap.
 - **Regression, lists:** **Users**, **User Groups**, **My Media** and the Lucy lists look and page as before: header, search, paging, refresh, details panel, swipe actions on phones.
 - **Regression, older components:** screens that use the older components still look and behave as before. For example the **Page Views** monitor widgets, the **Activity Log** and **Documents** tabs, the Lucy model designer side panels, and every **Select** and **Multi Select** dropdown (search, paging on scroll, arrow keys, Enter).
 - **Regression, notifications:** the notification center list still loads, pages on scroll and filters.

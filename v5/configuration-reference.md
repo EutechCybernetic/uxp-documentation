@@ -165,6 +165,41 @@ otherRoutes:
 
 ---
 
+## Header Items
+
+Buttons an app adds to the shell header, before the bell. Needs core 5.2.0. An older core sends none, and the header does not change.
+
+```yaml
+headerItems:
+  - id: agent-chat              # Unique in the app
+    label: Chat                 # Tooltip and phone label
+    icon: "fas sparkles"
+    panel: ui/chat-panel        # Opens this UI in a right sidebar
+    userGroups: []
+    appRoles: []
+```
+
+### Header Item Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `id` | string | Item id, unique in the app (required) |
+| `label` | string | Tooltip on web, label in the phone bottom bar |
+| `icon` | string | Icon, same format as navigation links |
+| `link` | string | Page to open on click, with the same URL rules as a navigation link (relative to the app's base route). Use `link` or `panel` |
+| `panel` | string | UI shown in a right sidebar, `ui/<id>` |
+| `widget` | string | Optional small UI drawn in place of the icon, `ui/<id>`. Web only. Phones show the icon |
+| `userGroups` | array | User groups allowed (empty = all) |
+| `appRoles` | array | App roles allowed (empty = all) |
+
+- The open sidebar is the `?panel=<bundleId>.<id>` URL param, so a reload or a shared link opens it again.
+- The sidebar UI gets `HeaderPanelProps`: `onClose`, and on web `expanded` and `onToggleExpand` for wide mode. It draws its own top bar.
+- A header widget gets `HeaderWidgetProps`. The shell handles the click.
+- Public sessions show no header items.
+- Admins can reorder, turn off, edit and add items in **Administration > Navigation > Header items**. Admin changes are stored apart from the YML, so app updates still reach items an admin has not changed. **Revert** brings back the app version.
+
+---
+
 ## Dynamic Route Parameters
 
 Use `:paramName` syntax:
