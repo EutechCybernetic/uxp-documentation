@@ -1368,6 +1368,8 @@ otherRoutes: {}
 - Makes view accessible at `/location/portfolios` (baseRoute + link)
 - `pageId` must match the `id` used in `registerComponent`
 
+**Notification templates:** v4 links such as `notificationtemplates?ObjectType=X` do not move to `Configuration.yml`. Declare each `X` in `Configuration.xml` instead. See [Notification Template Object Types](notification-object-types.md).
+
 ---
 
 ### 4.8 Add Root Redirect

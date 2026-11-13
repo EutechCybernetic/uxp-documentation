@@ -48,6 +48,8 @@
     - [File Uploads](v5/file-upload.md)
     - [Events and Synchronization](v5/events.md)
     - [In-App Notifications](v5/notifications.md)
+    - [Notification Template Object Types](v5/notification-object-types.md)
+    - [Lucy Blocks from Your App](v5/lucy-blocks.md)
   - [Styling & Localization](v5/styling-and-localization.md)
     - [Styling & Theming](v5/styling.md)
     - [Font Weights](v5/font-weights.md)
