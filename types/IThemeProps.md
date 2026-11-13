@@ -19,6 +19,9 @@ export interface IThemeProps {
      */
     portalHeaderBGColor: string,
     portalHeaderTextColor: string,
+    /** Details panel title: tint over the image, and the text on it. Optional, the styles fall back to navy and the header text color. */
+    detailsHeaderBGColor?: string,
+    detailsHeaderTextColor?: string,
     portalSidebarHoverBGColor: string,
     portalSidebarSelectedBGColor: string,
 
